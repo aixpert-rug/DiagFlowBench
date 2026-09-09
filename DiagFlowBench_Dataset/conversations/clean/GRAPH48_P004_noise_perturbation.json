@@ -1,0 +1,229 @@
+{
+  "conversation_id": "GRAPH48_P004_noise_perturbation",
+  "graph_id": "GRAPH48",
+  "path_id": "GRAPH48_P004",
+  "regime": "clean",
+  "variant": "noise_perturbation",
+  "robustness_axis": "noise_perturbation",
+  "turns": [
+    {
+      "node_id": "box_0",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Starting clamping unit diagnostic procedure.",
+      "edge_label_to_next": null,
+      "turn_index": 0,
+      "ground_truth": {
+        "node_id": "box_0",
+        "node_type": "terminator",
+        "node_text": "Start"
+      }
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Please complete the following checks on the clamping unit. First, inspect the clamping arm bodies for any cracks or bending deformation. Next, check each pivot pin boss for looseness by attempting to rock the arm. Finally, inspect the clamping pad faces for wear beyond the minimum thickness.",
+      "edge_label_to_next": null,
+      "turn_index": 1,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Inspect the clamping arm bodies for cracks or bending deformation. 2. Check each pivot pin boss for looseness by attempting to rock the arm. 3. Inspect the clamping pad faces for wear beyond the minimum thickness."
+      }
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "completed all three checks arm bodies look good pivot pins are secrue and pad faces within acceptable wear limits",
+      "edge_label_to_next": null,
+      "turn_index": 2,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Inspect the clamping arm bodies for cracks or bending deformation. 2. Check each pivot pin boss for looseness by attempting to rock the arm. 3. Inspect the clamping pad faces for wear beyond the minimum thickness."
+      }
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Cracks, deformation or severe wear on clamping arms?",
+      "edge_label_to_next": null,
+      "turn_index": 3,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Cracks, deformation or severe wear on clamping arms?"
+      }
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no didnt find any cracks deformation or severe wear on the clamping arms",
+      "edge_label_to_next": "No",
+      "turn_index": 4,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Cracks, deformation or severe wear on clamping arms?"
+      }
+    },
+    {
+      "node_id": "box_6",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Clamping force within plus or minus 5% of rated value?",
+      "edge_label_to_next": null,
+      "turn_index": 5,
+      "ground_truth": {
+        "node_id": "box_6",
+        "node_type": "decision",
+        "node_text": "Clamping force within ±5% of rated value?"
+      }
+    },
+    {
+      "node_id": "box_6",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no the clamping force readings are outside acceptable range several stations showing forces below min spec",
+      "edge_label_to_next": "No",
+      "turn_index": 6,
+      "ground_truth": {
+        "node_id": "box_6",
+        "node_type": "decision",
+        "node_text": "Clamping force within ±5% of rated value?"
+      }
+    },
+    {
+      "node_id": "box_7",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Replace the return springs and check the actuator seals for any signs of leakage or degradation.",
+      "edge_label_to_next": null,
+      "turn_index": 7,
+      "ground_truth": {
+        "node_id": "box_7",
+        "node_type": "process",
+        "node_text": "Replace return springs and check actuator seals"
+      }
+    },
+    {
+      "node_id": "box_7",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "ok so replaced the return springs and checked actuator seals seals appear intcat",
+      "edge_label_to_next": null,
+      "turn_index": 8,
+      "ground_truth": {
+        "node_id": "box_7",
+        "node_type": "process",
+        "node_text": "Replace return springs and check actuator seals"
+      }
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Reverify clamping force after spring replacement.",
+      "edge_label_to_next": null,
+      "turn_index": 9,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "decision",
+        "node_text": "Reverify clamping force after spring replacement"
+      }
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yeah rechecked clamping force after replacing springs second time but readings still not improving force remains unrecovrable",
+      "edge_label_to_next": "Unresolvable after second attempt",
+      "turn_index": 10,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "decision",
+        "node_text": "Reverify clamping force after spring replacement"
+      }
+    },
+    {
+      "node_id": "box_34",
+      "node_type": "document",
+      "speaker": "system",
+      "utterance": "Please refer to the fixture datum and locating diagnostic procedure, graph 44, for further troubleshooting steps.",
+      "edge_label_to_next": null,
+      "turn_index": 11,
+      "ground_truth": {
+        "node_id": "box_34",
+        "node_type": "document",
+        "node_text": "Fixture datum and locating diagnostic (GRAPH 44)"
+      }
+    },
+    {
+      "node_id": "box_34",
+      "node_type": "document",
+      "speaker": "operator",
+      "utterance": "understood ill consult graph 44 for the datum and locating diagnostic",
+      "edge_label_to_next": null,
+      "turn_index": 12,
+      "ground_truth": {
+        "node_id": "box_34",
+        "node_type": "document",
+        "node_text": "Fixture datum and locating diagnostic (GRAPH 44)"
+      }
+    }
+  ],
+  "metadata": {
+    "depth": 7,
+    "num_decisions": 3,
+    "num_processes": 2,
+    "num_documents": 1,
+    "terminator_type": "procedure_complete",
+    "terminator_text": "Fixture datum and locating diagnostic (GRAPH 44)",
+    "true_terminator": false,
+    "node_sequence": [
+      "box_0",
+      "box_1",
+      "box_2",
+      "box_6",
+      "box_7",
+      "box_8",
+      "box_34"
+    ],
+    "edge_labels": [
+      null,
+      null,
+      null,
+      "No",
+      "No",
+      null,
+      "Unresolvable after second attempt"
+    ],
+    "decision_points": [
+      {
+        "node": "box_2",
+        "label": "No",
+        "question": "Cracks, deformation or severe wear on clamping arms?"
+      },
+      {
+        "node": "box_6",
+        "label": "No",
+        "question": "Clamping force within ±5% of rated value?"
+      },
+      {
+        "node": "box_8",
+        "label": "Unresolvable after second attempt",
+        "question": "Reverify clamping force after spring replacement"
+      }
+    ],
+    "generation_model": "anthropic/claude-sonnet-4-5",
+    "verification": {
+      "variant_of": "base",
+      "base_verified": false,
+      "note": "surface-form variant; not independently verified"
+    }
+  }
+}

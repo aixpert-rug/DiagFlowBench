@@ -1,0 +1,676 @@
+{
+  "conversation_id": "GRAPH34_P002_base_mixed",
+  "graph_id": "GRAPH34",
+  "path_id": "GRAPH34_P002",
+  "regime": "mixed",
+  "variant": "base",
+  "robustness_axis": null,
+  "turns": [
+    {
+      "node_id": "box_0",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Starting vacuum gripper diagnostic procedure.",
+      "edge_label_to_next": null,
+      "turn_index": 0,
+      "ground_truth": {
+        "node_id": "box_0",
+        "node_type": "terminator",
+        "node_text": "Start"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Please complete the following checks: First, inspect the suction cup sealing face for cuts, abrasion, or permanent set. Second, check the bellows body for cracks or delamination. Third, inspect the cup mounting thread for cross threading or stripping.",
+      "edge_label_to_next": null,
+      "turn_index": 1,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Inspect the suction cup sealing face for cuts, abrasion, or permanent set. 2. Check the bellows body for cracks or delamination. 3. Inspect the cup mounting thread for cross threading or stripping."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "The suction cup looks fine, but I'm noticing the vacuum line fitting itself has some corrosion buildup around the threads that might be affecting the seal.",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "coverage_gap",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "All three checks completed. The sealing face looks clean, bellows are intact, and the threads are in good condition.",
+      "edge_label_to_next": null,
+      "turn_index": 2,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Inspect the suction cup sealing face for cuts, abrasion, or permanent set. 2. Check the bellows body for cracks or delamination. 3. Inspect the cup mounting thread for cross threading or stripping."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_3",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the cup structural integrity acceptable?",
+      "edge_label_to_next": null,
+      "turn_index": 3,
+      "ground_truth": {
+        "node_id": "box_3",
+        "node_type": "decision",
+        "node_text": "Cup structural integrity acceptable?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_3",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, the cup structure is acceptable. No damage or deformation detected.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 4,
+      "ground_truth": {
+        "node_id": "box_3",
+        "node_type": "decision",
+        "node_text": "Cup structural integrity acceptable?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_7",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the vacuum holding level within specification?",
+      "edge_label_to_next": null,
+      "turn_index": 5,
+      "ground_truth": {
+        "node_id": "box_7",
+        "node_type": "decision",
+        "node_text": "Vacuum holding level within specification?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_7",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, the vacuum level is holding at specification. The gauge shows we're well within the rated range.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 6,
+      "ground_truth": {
+        "node_id": "box_7",
+        "node_type": "decision",
+        "node_text": "Vacuum holding level within specification?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_13",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the vacuum flow rate within the rated range?",
+      "edge_label_to_next": null,
+      "turn_index": 7,
+      "ground_truth": {
+        "node_id": "box_13",
+        "node_type": "decision",
+        "node_text": "Vacuum flow rate within rated range?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_13",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "The vacuum gauge is reading in range, but I'm noticing the relief valve is leaking steam and there's a loud whistling sound coming from it.",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "undocumented_malfunction",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_13",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "No, the flow rate is reading below the minimum rated value. We're about fifteen percent under spec.",
+      "edge_label_to_next": "No",
+      "turn_index": 8,
+      "ground_truth": {
+        "node_id": "box_13",
+        "node_type": "decision",
+        "node_text": "Vacuum flow rate within rated range?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_14",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Clean or replace the flow restrictor fitting.",
+      "edge_label_to_next": null,
+      "turn_index": 9,
+      "ground_truth": {
+        "node_id": "box_14",
+        "node_type": "process",
+        "node_text": "Clean or replace flow restrictor fitting"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_14",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Flow restrictor fitting has been cleaned and reinstalled.",
+      "edge_label_to_next": "",
+      "turn_index": 10,
+      "ground_truth": {
+        "node_id": "box_14",
+        "node_type": "process",
+        "node_text": "Clean or replace flow restrictor fitting"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_15",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Using a photoelectric sensor or stopwatch triggered from the solenoid valve signal, measure the elapsed time from blow off command to part clear of the cup. Record the release time and compare it against the maximum permitted release time in the cycle specification.",
+      "edge_label_to_next": null,
+      "turn_index": 11,
+      "ground_truth": {
+        "node_id": "box_15",
+        "node_type": "process",
+        "node_text": "Using a photoelectric sensor or a stopwatch triggered from the solenoid valve signal, measure the elapsed time from blow off command to part clear of the cup. Record the release time and compare against the maximum permitted release time in the cycle specification. Unusually long release times indicate cup face contamination or low blow off flow."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_15",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Hey, before I continue with this timing test, do you know if we're supposed to fill out a separate work order for the pneumatic system inspection that's due next week, or does that get bundled with this PM?",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "unrelated_question",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_15",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Release time measured and recorded. The part is clearing within the acceptable time window.",
+      "edge_label_to_next": null,
+      "turn_index": 12,
+      "ground_truth": {
+        "node_id": "box_15",
+        "node_type": "process",
+        "node_text": "Using a photoelectric sensor or a stopwatch triggered from the solenoid valve signal, measure the elapsed time from blow off command to part clear of the cup. Record the release time and compare against the maximum permitted release time in the cycle specification. Unusually long release times indicate cup face contamination or low blow off flow."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_16",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Were ten consecutive picks successful in the part release cycle?",
+      "edge_label_to_next": null,
+      "turn_index": 13,
+      "ground_truth": {
+        "node_id": "box_16",
+        "node_type": "decision",
+        "node_text": "Part release cycle, 10 consecutive picks successful?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_16",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, all ten consecutive picks were successful. No failures or delays observed.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 14,
+      "ground_truth": {
+        "node_id": "box_16",
+        "node_type": "decision",
+        "node_text": "Part release cycle, 10 consecutive picks successful?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_19",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the blow off pressure within range?",
+      "edge_label_to_next": null,
+      "turn_index": 15,
+      "ground_truth": {
+        "node_id": "box_19",
+        "node_type": "decision",
+        "node_text": "Blow off pressure within range?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_19",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "No, the blow off pressure is reading slightly low on the gauge. It's just under the minimum threshold.",
+      "edge_label_to_next": "No",
+      "turn_index": 16,
+      "ground_truth": {
+        "node_id": "box_19",
+        "node_type": "decision",
+        "node_text": "Blow off pressure within range?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_20",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Adjust the blow off pressure regulator to bring it within specification.",
+      "edge_label_to_next": null,
+      "turn_index": 17,
+      "ground_truth": {
+        "node_id": "box_20",
+        "node_type": "process",
+        "node_text": "Adjust blow off pressure regulator"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_20",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Blow off pressure regulator adjusted. Pressure is now reading in the correct range.",
+      "edge_label_to_next": null,
+      "turn_index": 18,
+      "ground_truth": {
+        "node_id": "box_20",
+        "node_type": "process",
+        "node_text": "Adjust blow off pressure regulator"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_21",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Log the test results and update the maintenance record.",
+      "edge_label_to_next": null,
+      "turn_index": 19,
+      "ground_truth": {
+        "node_id": "box_21",
+        "node_type": "process",
+        "node_text": "Log test results and update maintenance record"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_21",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Test results logged and maintenance record updated.",
+      "edge_label_to_next": null,
+      "turn_index": 20,
+      "ground_truth": {
+        "node_id": "box_21",
+        "node_type": "process",
+        "node_text": "Log test results and update maintenance record"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_22",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Procedure complete. The vacuum gripper has been successfully diagnosed and adjusted. You may return the system to production service.",
+      "edge_label_to_next": null,
+      "turn_index": 21,
+      "ground_truth": {
+        "node_id": "box_22",
+        "node_type": "terminator",
+        "node_text": "End, Procedure complete"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_22",
+      "node_type": "terminator",
+      "speaker": "operator",
+      "utterance": "Understood, returning the system to service now.",
+      "edge_label_to_next": null,
+      "turn_index": 22,
+      "ground_truth": {
+        "node_id": "box_22",
+        "node_type": "terminator",
+        "node_text": "End, Procedure complete"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    }
+  ],
+  "metadata": {
+    "depth": 12,
+    "num_decisions": 5,
+    "num_processes": 5,
+    "num_documents": 0,
+    "terminator_type": "procedure_complete",
+    "terminator_text": "End, Procedure complete",
+    "true_terminator": true,
+    "node_sequence": [
+      "box_0",
+      "box_1",
+      "box_3",
+      "box_7",
+      "box_13",
+      "box_14",
+      "box_15",
+      "box_16",
+      "box_19",
+      "box_20",
+      "box_21",
+      "box_22"
+    ],
+    "edge_labels": [
+      null,
+      null,
+      null,
+      "Yes",
+      "Yes",
+      "No",
+      "",
+      null,
+      "Yes",
+      "No",
+      null,
+      null
+    ],
+    "decision_points": [
+      {
+        "node": "box_3",
+        "label": "Yes",
+        "question": "Cup structural integrity acceptable?"
+      },
+      {
+        "node": "box_7",
+        "label": "Yes",
+        "question": "Vacuum holding level within specification?"
+      },
+      {
+        "node": "box_13",
+        "label": "No",
+        "question": "Vacuum flow rate within rated range?"
+      },
+      {
+        "node": "box_16",
+        "label": "Yes",
+        "question": "Part release cycle, 10 consecutive picks successful?"
+      },
+      {
+        "node": "box_19",
+        "label": "No",
+        "question": "Blow off pressure within range?"
+      }
+    ],
+    "generation_model": "anthropic/claude-sonnet-4-5",
+    "verification": {
+      "verified": true,
+      "issues": [],
+      "corrected_turns": [
+        {
+          "node_id": "box_0",
+          "node_type": "terminator",
+          "speaker": "system",
+          "utterance": "Starting vacuum gripper diagnostic procedure.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_1",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Please complete the following checks: First, inspect the suction cup sealing face for cuts, abrasion, or permanent set. Second, check the bellows body for cracks or delamination. Third, inspect the cup mounting thread for cross threading or stripping.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_1",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "All three checks completed. The sealing face looks clean, bellows are intact, and the threads are in good condition.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_3",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is the cup structural integrity acceptable?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_3",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Yes, the cup structure is acceptable. No damage or deformation detected.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_7",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is the vacuum holding level within specification?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_7",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Yes, the vacuum level is holding at specification. The gauge shows we're well within the rated range.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_13",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is the vacuum flow rate within the rated range?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_13",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "No, the flow rate is reading below the minimum rated value. We're about fifteen percent under spec.",
+          "edge_label_to_next": "No"
+        },
+        {
+          "node_id": "box_14",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Clean or replace the flow restrictor fitting.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_14",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "Flow restrictor fitting has been cleaned and reinstalled.",
+          "edge_label_to_next": ""
+        },
+        {
+          "node_id": "box_15",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Using a photoelectric sensor or stopwatch triggered from the solenoid valve signal, measure the elapsed time from blow off command to part clear of the cup. Record the release time and compare it against the maximum permitted release time in the cycle specification.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_15",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "Release time measured and recorded. The part is clearing within the acceptable time window.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_16",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Were ten consecutive picks successful in the part release cycle?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_16",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Yes, all ten consecutive picks were successful. No failures or delays observed.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_19",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is the blow off pressure within range?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_19",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "No, the blow off pressure is reading slightly low on the gauge. It's just under the minimum threshold.",
+          "edge_label_to_next": "No"
+        },
+        {
+          "node_id": "box_20",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Adjust the blow off pressure regulator to bring it within specification.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_20",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "Blow off pressure regulator adjusted. Pressure is now reading in the correct range.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_21",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Log the test results and update the maintenance record.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_21",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "Test results logged and maintenance record updated.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_22",
+          "node_type": "terminator",
+          "speaker": "system",
+          "utterance": "Procedure complete. The vacuum gripper has been successfully diagnosed and adjusted. You may return the system to production service.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_22",
+          "node_type": "terminator",
+          "speaker": "operator",
+          "utterance": "Understood, returning the system to service now.",
+          "edge_label_to_next": null
+        }
+      ]
+    },
+    "injection_count": 3
+  },
+  "injection_log": [
+    {
+      "position": 2,
+      "node_id": "box_1",
+      "node_text": "Complete the following checks: 1. Inspect the suction cup sealing face for cuts, abrasion, or permanent set. 2. Check the bellows body for cracks or delamination. 3. Inspect the cup mounting thread for cross threading or stripping.",
+      "edge_labels": [],
+      "category": "coverage_gap",
+      "utterance": "The suction cup looks fine, but I'm noticing the vacuum line fitting itself has some corrosion buildup around the threads that might be affecting the seal.",
+      "injection_rate": null,
+      "num_candidates": null
+    },
+    {
+      "position": 8,
+      "node_id": "box_13",
+      "node_text": "Vacuum flow rate within rated range?",
+      "edge_labels": [
+        "No",
+        "Yes"
+      ],
+      "category": "undocumented_malfunction",
+      "utterance": "The vacuum gauge is reading in range, but I'm noticing the relief valve is leaking steam and there's a loud whistling sound coming from it.",
+      "injection_rate": null,
+      "num_candidates": null
+    },
+    {
+      "position": 12,
+      "node_id": "box_15",
+      "node_text": "Using a photoelectric sensor or a stopwatch triggered from the solenoid valve signal, measure the elapsed time from blow off command to part clear of the cup. Record the release time and compare against the maximum permitted release time in the cycle specification. Unusually long release times indicate cup face contamination or low blow off flow.",
+      "edge_labels": [],
+      "category": "unrelated_question",
+      "utterance": "Hey, before I continue with this timing test, do you know if we're supposed to fill out a separate work order for the pneumatic system inspection that's due next week, or does that get bundled with this PM?",
+      "injection_rate": null,
+      "num_candidates": null
+    }
+  ]
+}

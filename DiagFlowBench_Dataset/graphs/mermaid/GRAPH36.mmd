@@ -1,0 +1,116 @@
+flowchart TD
+    box_0(["Start"])
+    box_1["Complete the following checks: 1. Inspect the belt<br/>surface for cuts, gouges, or embedded debris. 2.<br/>Check the splice joint for separation or edge<br/>lifting. 3. Inspect both pulley faces for grooving<br/>or material buildup."]
+    box_2{"Belt damage assessment, splice failure or deep cuts?"}
+    box_3(["End, Escalate: belt replacement required, production<br/>hold"])
+    box_4["Run the conveyor belt at normal operating speed with<br/>no product load. Observe belt tracking from the<br/>drive end across the full belt width. Record whether<br/>the belt drifts toward the drive side, the idler<br/>side, or remains centred. Mark any sections where<br/>the belt edge contacts the frame or guide flange."]
+    box_5[/"Refer to the belt tracking specification."/]
+    box_6{"Belt tracking within ±5 mm of centreline?"}
+    box_7["Adjust tracking via tail roller tilt, half turn<br/>increments"]
+    box_8{"Reverify belt tracking after tail roller adjustment"}
+    box_9(["End, Escalate: chronic tracking fault, frame<br/>alignment check required"])
+    box_10["Stop the belt and locate the measurement point at<br/>the centre span between the two middle idler<br/>rollers. Apply a calibrated force perpendicular to<br/>the belt surface equal to the value in the belt<br/>specification and measure the resulting deflection<br/>with a steel rule. Compare the measured deflection<br/>against the allowable range and record both figures<br/>in the maintenance log."]
+    box_11[/"Refer to the belt tension specification."/]
+    box_12{"Belt tension within specified deflection range?"}
+    box_13["Adjust take up tensioner to correct belt deflection"]
+    box_14{"Reverify belt tension after take up adjustment"}
+    box_15(["End, Escalate: take up travel exhausted, belt<br/>stretch limit reached"])
+    box_16["Spin each roller by hand and listen for roughness,<br/>rumbling, or intermittent drag indicating bearing<br/>wear. Using a dial test indicator on a magnetic<br/>base, measure radial runout at the roller face at<br/>three positions along the length. Note any rollers<br/>that show surface damage, flat spots, or material<br/>build up that could cause belt scrubbing."]
+    box_17{"All idler rollers rotate freely with no flat spots?"}
+    box_18["Replace seized or worn idler rollers"]
+    box_19["With the motor running at operating speed under<br/>normal belt load, hold an infrared thermometer<br/>approximately 50 millimetres from the drive motor<br/>end cap and record the surface temperature. Wait<br/>five minutes and repeat at the opposite end cap.<br/>Compare both readings against the maximum rated<br/>housing temperature on the motor nameplate."]
+    box_20{"Drive motor temperature within rated limit?"}
+    box_21(["End, Escalate: motor overtemperature, check cooling<br/>and load"])
+    box_22["Stop the drive and hang a plumb line from a fixed<br/>pin through two corresponding link plates, then<br/>measure vertical sag at the mid span. Calculate<br/>percentage elongation against the nominal pitch<br/>length from the chain specification. Inspect the<br/>side plates for cracks and the roller surfaces for<br/>pitting, then verify that the chain is coated in the<br/>correct lubricant grade."]
+    box_23[/"Refer to the drive chain wear limit."/]
+    box_24{"Drive chain elongation within wear limit?"}
+    box_25["Replace drive chain and retension to specification"]
+    box_26["Jog the conveyor slowly until a reference part<br/>reaches the end of line sensor and observe the<br/>sensor indicator light. Measure the distance from<br/>the part leading edge to the sensor face at the<br/>trigger point using a steel rule. Compare against<br/>the setpoint distance specified on the sensor setup<br/>drawing and adjust the bracket position if the<br/>trigger point is outside tolerance."]
+    box_27{"End of line sensor trigger point within ±2 mm<br/>tolerance?"}
+    box_28["Reposition sensor bracket and reteach trigger point"]
+    box_29["Load test, run 50 parts through conveyor at<br/>production speed"]
+    box_30{"Load test passed, no tracking deviation or jams?"}
+    box_31["Log all measurements and update conveyor service<br/>record"]
+    box_32(["End, Procedure complete"])
+    box_33["Secondary belt tracking correction: slacken the tail<br/>roller locking bolts and adjust the roller end that<br/>is opposite to the direction of belt drift in 2<br/>millimetre increments. Run the belt for two minutes<br/>between each adjustment to allow the tracking<br/>response to stabilise. Check frame squareness with a<br/>precision square before returning to the belt<br/>tracking observation step."]
+
+    box_0 --> box_1
+    box_1 --> box_2
+    box_2 -->|"Yes"| box_3
+    box_2 -->|"No"| box_6
+    box_4 --> box_6
+    box_5 --> box_6
+    box_6 -->|"No"| box_7
+    box_7 --> box_8
+    box_8 -->|"OK"| box_12
+    box_6 -->|"Yes"| box_12
+    box_10 --> box_12
+    box_11 --> box_12
+    box_12 -->|"No"| box_13
+    box_13 --> box_14
+    box_14 -->|"Still out of range"| box_15
+    box_14 -->|"OK"| box_17
+    box_12 -->|"Yes"| box_17
+    box_16 --> box_17
+    box_17 -->|"No"| box_18
+    box_18 --> box_19
+    box_17 -->|"Yes"| box_20
+    box_19 --> box_20
+    box_20 -->|"No"| box_21
+    box_20 -->|"Yes"| box_24
+    box_22 --> box_24
+    box_23 --> box_24
+    box_24 -->|"No"| box_25
+    box_25 --> box_26
+    box_24 -->|"Yes"| box_27
+    box_26 --> box_27
+    box_27 -->|"No"| box_28
+    box_28 --> box_29
+    box_27 -->|"Yes"| box_29
+    box_29 --> box_30
+    box_30 -->|"Yes"| box_31
+    box_30 -->|"No"| box_31
+    box_31 --> box_32
+    box_8 -->|"Still off-centre"| box_33
+    box_33 --> box_8
+    box_8 -->|"Unresolvable after second attempt"| box_9
+
+    class box_0 terminator
+    class box_1 process
+    class box_2 decision
+    class box_3 terminator
+    class box_4 process
+    class box_5 document
+    class box_6 decision
+    class box_7 process
+    class box_8 decision
+    class box_9 terminator
+    class box_10 process
+    class box_11 document
+    class box_12 decision
+    class box_13 process
+    class box_14 decision
+    class box_15 terminator
+    class box_16 process
+    class box_17 decision
+    class box_18 process
+    class box_19 process
+    class box_20 decision
+    class box_21 terminator
+    class box_22 process
+    class box_23 document
+    class box_24 decision
+    class box_25 process
+    class box_26 process
+    class box_27 decision
+    class box_28 process
+    class box_29 process
+    class box_30 decision
+    class box_31 process
+    class box_32 terminator
+    class box_33 process
+
+    classDef terminator fill:#2d4a6e,stroke:#1a3050,color:#ffffff,font-weight:bold
+    classDef process    fill:#f0f4ff,stroke:#4a6fa5,color:#1a1a2e
+    classDef decision   fill:#fff8e6,stroke:#c8922a,color:#1a1a2e
+    classDef document   fill:#f0fff4,stroke:#3a8a4a,color:#1a1a2e

@@ -1,0 +1,95 @@
+flowchart TD
+    box_0(["Start"])
+    box_1["Complete the following checks: 1. Inspect each dowel<br/>pin nose for gouging, abrasion, or corrosion<br/>deposits. 2. Check each bore entry for raised<br/>material or swarf from previous fits. 3. Inspect the<br/>pin body for bending by rolling it on a flat<br/>surface."]
+    box_2{"Severe pin damage, gouging, bending or corrosion?"}
+    box_3(["End, Escalate: replace fixture, severe pin damage"])
+    box_4["Using a calibrated digital micrometer, measure the<br/>pin diameter at three axial positions along the<br/>working length and record the minimum and maximum<br/>values. Inspect the pin surface under a magnifier<br/>for scoring, pitting, or burring that could cause<br/>interference fit variation. Compare the minimum<br/>measured diameter against the minimum serviceable<br/>diameter specified on the pin replacement schedule."]
+    box_5[/"Refer to the dowel pin tolerance specification."/]
+    box_6{"Pin diameter within H7/p6 tolerance?"}
+    box_7["Replace out of tolerance dowel pins"]
+    box_8{"Reverify pin diameter after replacement"}
+    box_9(["End, Escalate: bore reaming required, non standard<br/>pin diameter"])
+    box_10["Measure the bore diameter at three axial positions<br/>and two perpendicular orientations at each position<br/>using a calibrated bore gauge or an air gauge.<br/>Record the maximum and minimum readings to calculate<br/>roundness error. Inspect the bore surface using a<br/>bore scope or a surface roughness probe for<br/>fretting, corrosion, or scoring that could cause<br/>uneven bearing load."]
+    box_11{"Bore condition acceptable, no fretting or<br/>elongation?"}
+    box_12["Complete the following steps: 1. Select the correct<br/>reamer size for the target bore diameter. 2. Apply<br/>cutting fluid and ream the bore at the specified<br/>cutting speed. 3. Clean the bore and measure the<br/>diameter at three axial positions."]
+    box_13["Insert the pin into the bore by hand under no<br/>lubrication and record whether entry is possible by<br/>hand force alone. Connect a push pull gauge to the<br/>pin and measure the force required to extract the<br/>pin axially at a steady 5 millimetres per second.<br/>Compare both insertion and extraction forces against<br/>the minimum and maximum fit force range in the<br/>assembly specification."]
+    box_14{"Insertion and extraction force within specified<br/>range?"}
+    box_15["Lightly lap pin or bore to achieve correct fit"]
+    box_16["Mount the pin in the bore assembly with its full<br/>engagement length engaged. Clamp a dial test<br/>indicator against the pin tip and apply a lateral<br/>force perpendicular to the pin axis in two<br/>orthogonal directions. Record the deflection under<br/>each direction of loading and calculate the angular<br/>deviation at the pin tip. Compare the result against<br/>the perpendicularity tolerance in the assembly<br/>drawing."]
+    box_17[/"Refer to the pin perpendicularity tolerance."/]
+    box_18{"Pin perpendicularity within 0.01 mm per 100 mm?"}
+    box_19(["End, Escalate: fixture plate perpendicularity error,<br/>coordinate measuring machine check required"])
+    box_20["Remove the pin and examine the reference seating<br/>surface at the pin entry for burrs, raised material,<br/>or coolant deposits using a flat scraper and a<br/>magnifier. Use a fine flat file to remove any raised<br/>burrs, working parallel to the surface and removing<br/>only the minimum necessary material. Clean the<br/>surface with an isopropyl alcohol wipe before<br/>reinserting the pin for measurement."]
+    box_21{"All pins seat flush to reference surface?"}
+    box_22["Reseat pins and apply correct installation torque"]
+    box_23["Functional fit trial, mount reference workpiece"]
+    box_24["Log measurements and update fixture service record"]
+    box_25(["End, Procedure complete"])
+    box_26["Secondary pin fitting attempt: remeasure the bore<br/>diameter at three axial positions to confirm whether<br/>the bore itself is within specification. Select a<br/>pin from the next size band in the pin set to<br/>achieve a closer fit. Clean the bore thoroughly with<br/>an isopropyl alcohol wipe and allow to dry fully<br/>before fitting the new pin and returning to the<br/>diameter measurement step."]
+    box_27[/"Fixture datum and locating diagnostic (GRAPH 44)"/]
+
+    box_0 --> box_1
+    box_1 --> box_2
+    box_2 -->|"Yes"| box_3
+    box_2 -->|"No"| box_6
+    box_4 --> box_6
+    box_5 --> box_6
+    box_6 -->|"No"| box_7
+    box_7 --> box_8
+    box_8 -->|"OK"| box_11
+    box_6 -->|"Yes"| box_11
+    box_10 --> box_11
+    box_11 -->|"No"| box_12
+    box_12 --> box_13
+    box_11 -->|"Yes"| box_14
+    box_13 --> box_14
+    box_14 -->|"No"| box_15
+    box_15 --> box_16
+    box_14 -->|"Yes"| box_18
+    box_16 --> box_18
+    box_17 --> box_18
+    box_18 -->|"No"| box_27
+    box_18 -->|"Yes"| box_21
+    box_20 --> box_21
+    box_21 -->|"No"| box_22
+    box_22 --> box_23
+    box_21 -->|"Yes"| box_23
+    box_23 --> box_24
+    box_24 --> box_25
+    box_8 -->|"Still out of spec"| box_26
+    box_26 --> box_8
+    box_8 -->|"Unresolvable after second attempt"| box_9
+
+    class box_0 terminator
+    class box_1 process
+    class box_2 decision
+    class box_3 terminator
+    class box_4 process
+    class box_5 document
+    class box_6 decision
+    class box_7 process
+    class box_8 decision
+    class box_9 terminator
+    class box_10 process
+    class box_11 decision
+    class box_12 process
+    class box_13 process
+    class box_14 decision
+    class box_15 process
+    class box_16 process
+    class box_17 document
+    class box_18 decision
+    class box_19 terminator
+    class box_20 process
+    class box_21 decision
+    class box_22 process
+    class box_23 process
+    class box_24 process
+    class box_25 terminator
+    class box_26 process
+    class box_27 document
+
+    classDef terminator fill:#2d4a6e,stroke:#1a3050,color:#ffffff,font-weight:bold
+    classDef process    fill:#f0f4ff,stroke:#4a6fa5,color:#1a1a2e
+    classDef decision   fill:#fff8e6,stroke:#c8922a,color:#1a1a2e
+    classDef document   fill:#f0fff4,stroke:#3a8a4a,color:#1a1a2e

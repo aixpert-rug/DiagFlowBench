@@ -1,0 +1,369 @@
+{
+  "id": "GRAPH40",
+  "description": "Coolant system concentration, flow and contamination check — PROC-62",
+  "graph": {
+    "nodes": {
+      "box_0": {
+        "type": "terminator",
+        "text": "Start"
+      },
+      "box_1": {
+        "type": "process",
+        "text": "Complete the following checks: 1. Check the coolant level against the tank minimum and maximum marks. 2. Assess coolant colour and odour for signs of contamination. 3. Check refractometer reading against the specified concentration range."
+      },
+      "box_2": {
+        "type": "decision",
+        "text": "Severe contamination: tramp oil, biological growth or discolouration?"
+      },
+      "box_3": {
+        "type": "terminator",
+        "text": "End, Drain and replace coolant: severe contamination, hazardous substance disposal"
+      },
+      "box_4": {
+        "type": "process",
+        "text": "Draw a 10 millilitre sample of coolant from the sump using a clean pipette and place two drops on the refractometer prism. Close the cover and read the coolant concentration from the refractometer scale under a light source. Multiply the reading by the specific correction factor for this coolant brand and compare the calculated concentration against the target range in the coolant specification."
+      },
+      "box_5": {
+        "type": "document",
+        "text": "Refer to the coolant concentration specification."
+      },
+      "box_6": {
+        "type": "decision",
+        "text": "Concentration within specified Brix range?"
+      },
+      "box_7": {
+        "type": "process",
+        "text": "Top up with concentrate or deionised water to correct concentration"
+      },
+      "box_8": {
+        "type": "decision",
+        "text": "Reverify concentration after top up"
+      },
+      "box_9": {
+        "type": "terminator",
+        "text": "End, Escalate: concentration drift rate excessive, check mixing system"
+      },
+      "box_10": {
+        "type": "process",
+        "text": "Immerse the calibrated pH meter probe in the coolant sump to a depth of at least 50 millimetres and wait for the reading to stabilise for 30 seconds. Record the pH value. Coolant pH below 8.5 indicates accelerated corrosion risk; above 9.5 indicates risk of skin sensitisation and requires immediate corrective dilution or biocide treatment."
+      },
+      "box_11": {
+        "type": "document",
+        "text": "Refer to the coolant pH specification."
+      },
+      "box_12": {
+        "type": "decision",
+        "text": "pH within acceptable range?"
+      },
+      "box_13": {
+        "type": "process",
+        "text": "Add pH correction agent per dosing table"
+      },
+      "box_14": {
+        "type": "process",
+        "text": "Read the inline flow meter display with the coolant pump running at normal operating speed. Record the flow rate in litres per minute and compare against the minimum required flow rate for the machine specification. If no inline meter is fitted, use the timed bucket method at the main return line and calculate flow rate from volume and elapsed time."
+      },
+      "box_15": {
+        "type": "document",
+        "text": "Refer to the coolant flow rate specification."
+      },
+      "box_16": {
+        "type": "decision",
+        "text": "Coolant flow rate within specified range?"
+      },
+      "box_17": {
+        "type": "process",
+        "text": "Replace coolant filter element and clean strainer basket"
+      },
+      "box_18": {
+        "type": "decision",
+        "text": "Reverify flow rate after filter replacement"
+      },
+      "box_19": {
+        "type": "terminator",
+        "text": "End, Escalate: pump cavitation or blockage suspected"
+      },
+      "box_20": {
+        "type": "process",
+        "text": "Immerse a calibrated thermocouple probe or a calibrated thermometer in the main coolant return line at the sump entry point after the machine has been running under cutting load for at least 15 minutes. Record the coolant temperature and compare against the maximum permitted sump temperature in the machine specification; temperatures above 35 degrees Celsius degrade coolant life and reduce cutting performance."
+      },
+      "box_21": {
+        "type": "decision",
+        "text": "Coolant return temperature within operating range?"
+      },
+      "box_22": {
+        "type": "process",
+        "text": "Complete the following checks: 1. Inspect the heat exchanger coil surfaces for dust or scale deposits. 2. Check the coolant pump outlet pressure against the rated value. 3. Verify all coolant nozzles are unobstructed and correctly directed."
+      },
+      "box_23": {
+        "type": "process",
+        "text": "Shut off coolant flow and remove each nozzle from the manifold. Hold each nozzle against a light source and inspect the orifice for swarf blockage or mineral deposits. Blocked nozzles should be soaked in descaler for 10 minutes then cleared with a wire of the correct gauge. Replace nozzles where the orifice shows erosion or enlargement beyond the nominal drill size."
+      },
+      "box_24": {
+        "type": "decision",
+        "text": "All coolant nozzles unobstructed and correctly directed?"
+      },
+      "box_25": {
+        "type": "process",
+        "text": "Unblock or replace blocked coolant nozzles"
+      },
+      "box_26": {
+        "type": "process",
+        "text": "With the coolant pump running, observe the chip conveyor return flow inlet at the sump end. Coolant should be flowing visibly back to the sump through the return channel. Absence of return flow indicates a blocked return strainer or a conveyor drive fault; check the return strainer basket and clear any accumulated chip material."
+      },
+      "box_27": {
+        "type": "decision",
+        "text": "Coolant recovery from chip conveyor operating correctly?"
+      },
+      "box_28": {
+        "type": "process",
+        "text": "Clear chip conveyor return tray and check drain ports"
+      },
+      "box_29": {
+        "type": "process",
+        "text": "Use a clean dipstick or graduated probe to measure the depth of settled sediment at three points in the sump: near the pump inlet, at the centre, and at the far end from the pump. Record the maximum reading and compare against the maximum permitted sediment depth in the sump cleaning schedule. Sediment exceeding 25 millimetres requires immediate sump pump out and cleaning."
+      },
+      "box_30": {
+        "type": "decision",
+        "text": "Sump sediment depth below 20 mm?"
+      },
+      "box_31": {
+        "type": "process",
+        "text": "Schedule sump clean, drain, scrub and refill"
+      },
+      "box_32": {
+        "type": "process",
+        "text": "System function test, run machine cycle, verify coolant delivery"
+      },
+      "box_33": {
+        "type": "process",
+        "text": "Log coolant data, refractometer reading and update service record"
+      },
+      "box_34": {
+        "type": "terminator",
+        "text": "End, Procedure complete"
+      },
+      "box_35": {
+        "type": "process",
+        "text": "Secondary coolant correction: drain 20% of the sump volume using the sump pump and discard the drained coolant. Refill the sump with clean water to the previous level, then add the calculated volume of coolant concentrate to reach the target concentration. Run the circulation pump for 5 minutes to mix thoroughly before returning to the refractometer concentration measurement step."
+      }
+    },
+    "edges": [
+      {
+        "source": "box_0",
+        "target": "box_1",
+        "label": null
+      },
+      {
+        "source": "box_1",
+        "target": "box_2",
+        "label": null
+      },
+      {
+        "source": "box_2",
+        "target": "box_3",
+        "label": "Yes"
+      },
+      {
+        "source": "box_2",
+        "target": "box_6",
+        "label": "No"
+      },
+      {
+        "source": "box_4",
+        "target": "box_6",
+        "label": null
+      },
+      {
+        "source": "box_5",
+        "target": "box_6",
+        "label": null
+      },
+      {
+        "source": "box_6",
+        "target": "box_7",
+        "label": "No"
+      },
+      {
+        "source": "box_7",
+        "target": "box_8",
+        "label": null
+      },
+      {
+        "source": "box_8",
+        "target": "box_12",
+        "label": "OK"
+      },
+      {
+        "source": "box_6",
+        "target": "box_12",
+        "label": "Yes"
+      },
+      {
+        "source": "box_10",
+        "target": "box_12",
+        "label": null
+      },
+      {
+        "source": "box_11",
+        "target": "box_12",
+        "label": null
+      },
+      {
+        "source": "box_12",
+        "target": "box_13",
+        "label": "No"
+      },
+      {
+        "source": "box_13",
+        "target": "box_14",
+        "label": ""
+      },
+      {
+        "source": "box_12",
+        "target": "box_16",
+        "label": "Yes"
+      },
+      {
+        "source": "box_14",
+        "target": "box_16",
+        "label": null
+      },
+      {
+        "source": "box_15",
+        "target": "box_16",
+        "label": null
+      },
+      {
+        "source": "box_16",
+        "target": "box_17",
+        "label": "No"
+      },
+      {
+        "source": "box_17",
+        "target": "box_18",
+        "label": null
+      },
+      {
+        "source": "box_18",
+        "target": "box_19",
+        "label": "Still low"
+      },
+      {
+        "source": "box_18",
+        "target": "box_21",
+        "label": "OK"
+      },
+      {
+        "source": "box_16",
+        "target": "box_21",
+        "label": "Yes"
+      },
+      {
+        "source": "box_20",
+        "target": "box_21",
+        "label": null
+      },
+      {
+        "source": "box_21",
+        "target": "box_22",
+        "label": "No"
+      },
+      {
+        "source": "box_22",
+        "target": "box_23",
+        "label": ""
+      },
+      {
+        "source": "box_21",
+        "target": "box_24",
+        "label": "Yes"
+      },
+      {
+        "source": "box_23",
+        "target": "box_24",
+        "label": null
+      },
+      {
+        "source": "box_24",
+        "target": "box_25",
+        "label": "No"
+      },
+      {
+        "source": "box_25",
+        "target": "box_26",
+        "label": ""
+      },
+      {
+        "source": "box_24",
+        "target": "box_27",
+        "label": "Yes"
+      },
+      {
+        "source": "box_26",
+        "target": "box_27",
+        "label": null
+      },
+      {
+        "source": "box_27",
+        "target": "box_28",
+        "label": "No"
+      },
+      {
+        "source": "box_28",
+        "target": "box_29",
+        "label": ""
+      },
+      {
+        "source": "box_27",
+        "target": "box_30",
+        "label": "Yes"
+      },
+      {
+        "source": "box_29",
+        "target": "box_30",
+        "label": null
+      },
+      {
+        "source": "box_30",
+        "target": "box_31",
+        "label": "No"
+      },
+      {
+        "source": "box_31",
+        "target": "box_32",
+        "label": null
+      },
+      {
+        "source": "box_30",
+        "target": "box_32",
+        "label": "Yes"
+      },
+      {
+        "source": "box_32",
+        "target": "box_33",
+        "label": null
+      },
+      {
+        "source": "box_33",
+        "target": "box_34",
+        "label": null
+      },
+      {
+        "source": "box_8",
+        "target": "box_35",
+        "label": "Still out of range"
+      },
+      {
+        "source": "box_35",
+        "target": "box_8",
+        "label": null
+      },
+      {
+        "source": "box_8",
+        "target": "box_9",
+        "label": "Unresolvable after second attempt"
+      }
+    ]
+  }
+}

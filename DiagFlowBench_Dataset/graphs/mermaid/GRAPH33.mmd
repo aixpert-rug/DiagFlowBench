@@ -1,0 +1,87 @@
+flowchart TD
+    box_0(["Start"])
+    box_1["Complete the following checks: 1. Inspect the<br/>gripper body for cracks, dents, or deformation at<br/>jaw mounting faces. 2. Check the actuator housing<br/>for impact damage or distortion. 3. Inspect the jaw<br/>slide channel for scoring or material loss."]
+    box_2{"Structural damage present on gripper body?"}
+    box_3(["End, Escalate: structural damage, station offline"])
+    box_4["Using a calibrated depth gauge or digital<br/>micrometer, measure jaw insert thickness at three<br/>equally spaced points along the contact face. Record<br/>the minimum value and compare it against the minimum<br/>serviceable thickness in the jaw service<br/>specification. Note whether wear is concentrated at<br/>the part contact zone or distributed evenly, as<br/>concentrated wear indicates jaw misalignment during<br/>clamping."]
+    box_5{"Jaw insert wear within tolerance?"}
+    box_6["Replace jaw inserts, symmetric replacement, both<br/>jaws"]
+    box_7{"Reverify jaw geometry after insert replacement"}
+    box_8(["End, Part rejected: jaw geometry non conforming<br/>after replacement"])
+    box_9["Mount a calibrated dynamometer between the closed<br/>jaw faces with the instrument aligned along the grip<br/>axis. Command the chuck to apply nominal clamping<br/>pressure and record the force reading. Repeat the<br/>test at 50% and 100% of the programmed grip<br/>pressure, then compare both readings against the<br/>minimum and maximum grip force values in the fixture<br/>specification."]
+    box_10{"Gripping force within rated range?"}
+    box_11["Adjust gripper actuator pressure to rated value"]
+    box_12{"Reverify gripping force after pressure adjustment"}
+    box_13(["End, Escalate: gripper actuator replacement required"])
+    box_14["Load the designated reference part into the fixture<br/>under normal clamping pressure. Using a dial test<br/>indicator, measure part position at the primary<br/>datum face and at the two secondary locating<br/>surfaces. Record all three readings and compare<br/>against the permitted positional tolerance stated in<br/>the fixture qualification record."]
+    box_15[/"Refer to the jaw positional tolerance specification."/]
+    box_16{"Jaw alignment within positional tolerance?"}
+    box_17["Realign jaw mounting using precision alignment jig"]
+    box_18["With the fixture open, visually inspect the jaw<br/>pivot pins and guide rails for dry running,<br/>corrosion, or swarf accumulation. Apply a thin film<br/>of the specified grease to each pivot pin and run<br/>the jaw through three full open and close cycles to<br/>distribute lubricant evenly. Wipe away any excess<br/>from the part contact surfaces."]
+    box_19[/"Refer to the gripper lubrication specification."/]
+    box_20{"Lubrication level and condition adequate?"}
+    box_21["Apply lubricant to pivot pins per lubrication chart"]
+    box_22["Log maintenance and update maintenance management<br/>system service record"]
+    box_23(["End, Procedure complete"])
+    box_24["Second jaw alignment attempt: adjust the jaw<br/>mounting screws in quarter turn increments in the<br/>direction that reduces the measured error. Run the<br/>jaw through three full open and close cycles to<br/>allow the inserts to seat, then remeasure jaw<br/>geometry at all three measurement points with the<br/>depth gauge before returning to the geometry<br/>verification step."]
+
+    box_0 --> box_1
+    box_1 --> box_2
+    box_2 -->|"Yes"| box_3
+    box_2 -->|"No"| box_5
+    box_4 --> box_5
+    box_5 -->|"No"| box_6
+    box_6 --> box_7
+    box_7 -->|"Within spec"| box_10
+    box_5 -->|"Yes"| box_10
+    box_9 --> box_10
+    box_10 -->|"No"| box_11
+    box_11 --> box_12
+    box_12 -->|"Still low"| box_13
+    box_12 -->|"OK"| box_16
+    box_10 -->|"Yes"| box_16
+    box_14 --> box_16
+    box_15 --> box_16
+    box_16 -->|"No"| box_17
+    box_17 --> box_18
+    box_16 -->|"Yes"| box_20
+    box_18 --> box_20
+    box_19 --> box_20
+    box_20 -->|"No"| box_21
+    box_21 --> box_22
+    box_20 -->|"Yes"| box_22
+    box_22 --> box_23
+    box_7 -->|"Still out of spec"| box_24
+    box_24 --> box_7
+    box_7 -->|"Unresolvable after second attempt"| box_8
+
+    class box_0 terminator
+    class box_1 process
+    class box_2 decision
+    class box_3 terminator
+    class box_4 process
+    class box_5 decision
+    class box_6 process
+    class box_7 decision
+    class box_8 terminator
+    class box_9 process
+    class box_10 decision
+    class box_11 process
+    class box_12 decision
+    class box_13 terminator
+    class box_14 process
+    class box_15 document
+    class box_16 decision
+    class box_17 process
+    class box_18 process
+    class box_19 document
+    class box_20 decision
+    class box_21 process
+    class box_22 process
+    class box_23 terminator
+    class box_24 process
+
+    classDef terminator fill:#2d4a6e,stroke:#1a3050,color:#ffffff,font-weight:bold
+    classDef process    fill:#f0f4ff,stroke:#4a6fa5,color:#1a1a2e
+    classDef decision   fill:#fff8e6,stroke:#c8922a,color:#1a1a2e
+    classDef document   fill:#f0fff4,stroke:#3a8a4a,color:#1a1a2e

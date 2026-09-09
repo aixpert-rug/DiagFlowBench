@@ -1,0 +1,49 @@
+flowchart TD
+    box_0(["Start"])
+    box_1["Record the batch number of the marked parts and the<br/>measured engagement force."]
+    box_2{"Is the insertion depth still within specification?"}
+    box_3["Take a sample of insertion depth"]
+    box_4["Adjust the press depth setting and repress the part<br/>to achieve the specified insertion depth."]
+    box_5{"Is the reduced engagement force present at multiple<br/>positions?"}
+    box_6["Have maintenance team check the part<br/>placement/pressing station (e.g. part placement<br/>positions, or air pressure)"]
+    box_7["Try a different batch of marked parts."]
+    box_8{"Does the pressed marked part contain visual defects?"}
+    box_9["Check the pin of the pressed marked part."]
+    box_10["No visual defects detected, proceed to inspect the<br/>press fit interface for dimensional deviations."]
+    box_11{"Does the press fit interface contain dimensional<br/>deviations?"}
+    box_12["Inspect the press fit interface for dimensional<br/>deviations."]
+    box_13(["End, Notify maintenance team"])
+
+    box_0 --> box_1
+    box_1 --> box_2
+    box_3 --> box_2
+    box_2 -->|"No"| box_4
+    box_2 -->|"Yes"| box_5
+    box_5 -->|"No"| box_6
+    box_5 -->|"Yes"| box_7
+    box_7 --> box_8
+    box_9 --> box_8
+    box_8 -->|"No"| box_10
+    box_8 -->|"Yes"| box_11
+    box_12 --> box_11
+    box_11 --> box_13
+
+    class box_0 terminator
+    class box_1 process
+    class box_2 decision
+    class box_3 process
+    class box_4 process
+    class box_5 decision
+    class box_6 process
+    class box_7 process
+    class box_8 decision
+    class box_9 process
+    class box_10 process
+    class box_11 decision
+    class box_12 process
+    class box_13 terminator
+
+    classDef terminator fill:#2d4a6e,stroke:#1a3050,color:#ffffff,font-weight:bold
+    classDef process    fill:#f0f4ff,stroke:#4a6fa5,color:#1a1a2e
+    classDef decision   fill:#fff8e6,stroke:#c8922a,color:#1a1a2e
+    classDef document   fill:#f0fff4,stroke:#3a8a4a,color:#1a1a2e

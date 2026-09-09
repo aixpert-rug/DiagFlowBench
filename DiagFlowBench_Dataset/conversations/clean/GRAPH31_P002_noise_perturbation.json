@@ -1,0 +1,440 @@
+{
+  "conversation_id": "GRAPH31_P002_noise_perturbation",
+  "graph_id": "GRAPH31",
+  "path_id": "GRAPH31_P002",
+  "regime": "clean",
+  "variant": "noise_perturbation",
+  "robustness_axis": "noise_perturbation",
+  "turns": [
+    {
+      "node_id": "box_0",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Starting burr detection diagnostic procedure.",
+      "edge_label_to_next": null,
+      "turn_index": 0,
+      "ground_truth": {
+        "node_id": "box_0",
+        "node_type": "terminator",
+        "node_text": "Start"
+      }
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Collect five parts with detected burrs and inspect the burr location and orientation using a magnifier. Determine whether the burr is at the insertion lead chamfer or on the cylindrical press fit surface.",
+      "edge_label_to_next": null,
+      "turn_index": 1,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Collect five parts with detected burrs. Inspect the burr location and orientation using a magnifier to determine whether it is at the insertion lead chamfer or on the cylindrical press fit surface."
+      }
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "collected five burred parts and inspectd them under magnification, burrs are on the cylindircal press fit surface",
+      "edge_label_to_next": "",
+      "turn_index": 2,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Collect five parts with detected burrs. Inspect the burr location and orientation using a magnifier to determine whether it is at the insertion lead chamfer or on the cylindrical press fit surface."
+      }
+    },
+    {
+      "node_id": "box_3",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Inspect parts from the supply conveyor input side before they reach the assembly station to confirm whether the burr is present in the incoming material.",
+      "edge_label_to_next": null,
+      "turn_index": 3,
+      "ground_truth": {
+        "node_id": "box_3",
+        "node_type": "process",
+        "node_text": "Inspect parts from the supply conveyor input side before they reach the assembly station to confirm the burr is present in the incoming material."
+      }
+    },
+    {
+      "node_id": "box_3",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "ok inspected parts from input conveyor check complete",
+      "edge_label_to_next": null,
+      "turn_index": 4,
+      "ground_truth": {
+        "node_id": "box_3",
+        "node_type": "process",
+        "node_text": "Inspect parts from the supply conveyor input side before they reach the assembly station to confirm the burr is present in the incoming material."
+      }
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the burr present on parts before they enter the assembly process?",
+      "edge_label_to_next": null,
+      "turn_index": 5,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Is the burr present on parts before they enter the assembly process (incoming material defect)?"
+      }
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "incoming parts from conveyor are clean no burrs present, burr being created during our assembly process",
+      "edge_label_to_next": "No",
+      "turn_index": 6,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Is the burr present on parts before they enter the assembly process (incoming material defect)?"
+      }
+    },
+    {
+      "node_id": "box_5",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the burr present on all processed parts or only on parts from a specific pressing cycle?",
+      "edge_label_to_next": null,
+      "turn_index": 7,
+      "ground_truth": {
+        "node_id": "box_5",
+        "node_type": "decision",
+        "node_text": "Is the burr present on all processed parts or only on parts from a specific pressing cycle?"
+      }
+    },
+    {
+      "node_id": "box_5",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yeah every single part coming out of press has the burr consistent across all cycles",
+      "edge_label_to_next": "Yes",
+      "turn_index": 8,
+      "ground_truth": {
+        "node_id": "box_5",
+        "node_type": "decision",
+        "node_text": "Is the burr present on all processed parts or only on parts from a specific pressing cycle?"
+      }
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Does the pressing head edge have an acceptable chamfer condition with no sharp edge or chipping?",
+      "edge_label_to_next": null,
+      "turn_index": 9,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "decision",
+        "node_text": "Does the pressing head edge have an acceptable chamfer condition (no sharp edge or chipping)?"
+      }
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "can see visible chipping on pressing head edge under magnifcation chamfer is damaged",
+      "edge_label_to_next": "No",
+      "turn_index": 10,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "decision",
+        "node_text": "Does the pressing head edge have an acceptable chamfer condition (no sharp edge or chipping)?"
+      }
+    },
+    {
+      "node_id": "box_10",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Replace the pressing head or have the edge repolished to the specified chamfer radius. Verify the edge condition before resuming.",
+      "edge_label_to_next": null,
+      "turn_index": 11,
+      "ground_truth": {
+        "node_id": "box_10",
+        "node_type": "process",
+        "node_text": "Replace the pressing head or have the edge repolished to the specified chamfer radius. Verify the edge condition before resuming."
+      }
+    },
+    {
+      "node_id": "box_10",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "replaced pressing head with new one verified chamfer radius meets spec",
+      "edge_label_to_next": "",
+      "turn_index": 12,
+      "ground_truth": {
+        "node_id": "box_10",
+        "node_type": "process",
+        "node_text": "Replace the pressing head or have the edge repolished to the specified chamfer radius. Verify the edge condition before resuming."
+      }
+    },
+    {
+      "node_id": "box_12",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Check the lateral clearance of the pressing head in the guide bushing. Verify that the pressing head moves without radial contact against the guide wall during descent.",
+      "edge_label_to_next": null,
+      "turn_index": 13,
+      "ground_truth": {
+        "node_id": "box_12",
+        "node_type": "process",
+        "node_text": "Check the lateral clearance of the pressing head in the guide bushing. Verify that the pressing head moves without radial contact against the guide wall during descent."
+      }
+    },
+    {
+      "node_id": "box_12",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "checked lateral clearance and verified pressing head movment",
+      "edge_label_to_next": null,
+      "turn_index": 14,
+      "ground_truth": {
+        "node_id": "box_12",
+        "node_type": "process",
+        "node_text": "Check the lateral clearance of the pressing head in the guide bushing. Verify that the pressing head moves without radial contact against the guide wall during descent."
+      }
+    },
+    {
+      "node_id": "box_11",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the press guide alignment free of lateral offset with no side loading of the pressing head against the part?",
+      "edge_label_to_next": null,
+      "turn_index": 15,
+      "ground_truth": {
+        "node_id": "box_11",
+        "node_type": "decision",
+        "node_text": "Is the press guide alignment free of lateral offset (no side loading of the pressing head against the part)?"
+      }
+    },
+    {
+      "node_id": "box_11",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "theres noticeable lateral offset pressing head making contact with guide wall during descent",
+      "edge_label_to_next": "No",
+      "turn_index": 16,
+      "ground_truth": {
+        "node_id": "box_11",
+        "node_type": "decision",
+        "node_text": "Is the press guide alignment free of lateral offset (no side loading of the pressing head against the part)?"
+      }
+    },
+    {
+      "node_id": "box_13",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Realign the press guide bushing to eliminate lateral offset. Verify alignment with a test pressing cycle before resuming production.",
+      "edge_label_to_next": null,
+      "turn_index": 17,
+      "ground_truth": {
+        "node_id": "box_13",
+        "node_type": "process",
+        "node_text": "Realign the press guide bushing to eliminate lateral offset. Verify alignment with a test pressing cycle before resuming production."
+      }
+    },
+    {
+      "node_id": "box_13",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "ok so realigned guide bushing and ran test cycle alignment now correct no lateral contact",
+      "edge_label_to_next": null,
+      "turn_index": 18,
+      "ground_truth": {
+        "node_id": "box_13",
+        "node_type": "process",
+        "node_text": "Realign the press guide bushing to eliminate lateral offset. Verify alignment with a test pressing cycle before resuming production."
+      }
+    },
+    {
+      "node_id": "box_14",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Quarantine all affected parts and record the root cause and corrective action in the quality log. Notify the quality assurance team with sample parts for disposition.",
+      "edge_label_to_next": null,
+      "turn_index": 19,
+      "ground_truth": {
+        "node_id": "box_14",
+        "node_type": "process",
+        "node_text": "Quarantine all affected parts and record the root cause and corrective action in the quality log. Notify quality assurance team with sample parts for disposition."
+      }
+    },
+    {
+      "node_id": "box_14",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "all affected parts quarantined logged root cause as damaged pressing head with misaligned guide quality assurance notified with samples",
+      "edge_label_to_next": null,
+      "turn_index": 20,
+      "ground_truth": {
+        "node_id": "box_14",
+        "node_type": "process",
+        "node_text": "Quarantine all affected parts and record the root cause and corrective action in the quality log. Notify quality assurance team with sample parts for disposition."
+      }
+    },
+    {
+      "node_id": "box_15",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the root cause of the burr an incoming material defect requiring a supplier corrective action?",
+      "edge_label_to_next": null,
+      "turn_index": 21,
+      "ground_truth": {
+        "node_id": "box_15",
+        "node_type": "decision",
+        "node_text": "Is the root cause of the burr an incoming material defect requiring a supplier corrective action?"
+      }
+    },
+    {
+      "node_id": "box_15",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no root cause was our damaged pressing head and misaligned guide not supplier issue",
+      "edge_label_to_next": "No",
+      "turn_index": 22,
+      "ground_truth": {
+        "node_id": "box_15",
+        "node_type": "decision",
+        "node_text": "Is the root cause of the burr an incoming material defect requiring a supplier corrective action?"
+      }
+    },
+    {
+      "node_id": "box_18",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Were any burred parts released to downstream assembly or shipped before detection?",
+      "edge_label_to_next": null,
+      "turn_index": 23,
+      "ground_truth": {
+        "node_id": "box_18",
+        "node_type": "decision",
+        "node_text": "Were any burred parts released to downstream assembly or shipped before detection?"
+      }
+    },
+    {
+      "node_id": "box_18",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no we caught issue immediately all burred parts contained before they left station",
+      "edge_label_to_next": "No",
+      "turn_index": 24,
+      "ground_truth": {
+        "node_id": "box_18",
+        "node_type": "decision",
+        "node_text": "Were any burred parts released to downstream assembly or shipped before detection?"
+      }
+    },
+    {
+      "node_id": "box_22",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Notify the quality assurance team and maintenance team. The procedure is complete.",
+      "edge_label_to_next": null,
+      "turn_index": 25,
+      "ground_truth": {
+        "node_id": "box_22",
+        "node_type": "terminator",
+        "node_text": "End, Notify quality assurance team and maintenance team. Procedure complete."
+      }
+    },
+    {
+      "node_id": "box_22",
+      "node_type": "terminator",
+      "speaker": "operator",
+      "utterance": "understood will notify both teams now",
+      "edge_label_to_next": null,
+      "turn_index": 26,
+      "ground_truth": {
+        "node_id": "box_22",
+        "node_type": "terminator",
+        "node_text": "End, Notify quality assurance team and maintenance team. Procedure complete."
+      }
+    }
+  ],
+  "metadata": {
+    "depth": 14,
+    "num_decisions": 6,
+    "num_processes": 6,
+    "num_documents": 0,
+    "terminator_type": "procedure_complete",
+    "terminator_text": "End, Notify quality assurance team and maintenance team. Procedure complete.",
+    "true_terminator": true,
+    "node_sequence": [
+      "box_0",
+      "box_1",
+      "box_3",
+      "box_2",
+      "box_5",
+      "box_8",
+      "box_10",
+      "box_12",
+      "box_11",
+      "box_13",
+      "box_14",
+      "box_15",
+      "box_18",
+      "box_22"
+    ],
+    "edge_labels": [
+      null,
+      null,
+      "",
+      null,
+      "No",
+      "Yes",
+      "No",
+      "",
+      null,
+      "No",
+      null,
+      null,
+      "No",
+      "No"
+    ],
+    "decision_points": [
+      {
+        "node": "box_2",
+        "label": "No",
+        "question": "Is the burr present on parts before they enter the assembly process (incoming material defect)?"
+      },
+      {
+        "node": "box_5",
+        "label": "Yes",
+        "question": "Is the burr present on all processed parts or only on parts from a specific pressing cycle?"
+      },
+      {
+        "node": "box_8",
+        "label": "No",
+        "question": "Does the pressing head edge have an acceptable chamfer condition (no sharp edge or chipping)?"
+      },
+      {
+        "node": "box_11",
+        "label": "No",
+        "question": "Is the press guide alignment free of lateral offset (no side loading of the pressing head against the part)?"
+      },
+      {
+        "node": "box_15",
+        "label": "No",
+        "question": "Is the root cause of the burr an incoming material defect requiring a supplier corrective action?"
+      },
+      {
+        "node": "box_18",
+        "label": "No",
+        "question": "Were any burred parts released to downstream assembly or shipped before detection?"
+      }
+    ],
+    "generation_model": "anthropic/claude-sonnet-4-5",
+    "verification": {
+      "variant_of": "base",
+      "base_verified": true,
+      "note": "surface-form variant; not independently verified"
+    }
+  }
+}

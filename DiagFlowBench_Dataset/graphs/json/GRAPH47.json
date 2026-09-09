@@ -1,0 +1,269 @@
+{
+  "id": "GRAPH47",
+  "description": "Drive belt tension and pulley condition inspection — PROC-57",
+  "graph": {
+    "nodes": {
+      "box_0": {
+        "type": "terminator",
+        "text": "Start"
+      },
+      "box_1": {
+        "type": "process",
+        "text": "Complete the following checks: 1. Inspect the belt inner drive face and outer face for cracking or cord exposure. 2. Check both pulley faces for grooving, glazing, or material buildup. 3. Inspect the tensioner body for cracking or seized pivot."
+      },
+      "box_2": {
+        "type": "decision",
+        "text": "Severe belt damage, cracking, fraying or delamination?"
+      },
+      "box_3": {
+        "type": "terminator",
+        "text": "End, Replace belt: structural failure detected"
+      },
+      "box_4": {
+        "type": "process",
+        "text": "Touch a vibration meter probe against the belt at the midspan position between the two nearest support pulleys. Pluck the belt lightly perpendicular to the run and read the natural frequency from the meter display. Convert the frequency to belt tension using the conversion formula for the belt mass per unit length and span length; compare against the target tension range in the belt drive specification."
+      },
+      "box_5": {
+        "type": "document",
+        "text": "Refer to the belt tension specification."
+      },
+      "box_6": {
+        "type": "decision",
+        "text": "Belt tension within specified frequency range?"
+      },
+      "box_7": {
+        "type": "process",
+        "text": "Adjust belt tension via tensioner bolt to specification"
+      },
+      "box_8": {
+        "type": "decision",
+        "text": "Reverify belt tension after adjustment"
+      },
+      "box_9": {
+        "type": "terminator",
+        "text": "End, Escalate: tensioner mechanism worn, replace"
+      },
+      "box_10": {
+        "type": "process",
+        "text": "Place a long straight edge across the faces of both pulleys in the same plane, resting on the highest point of each pulley face. Use feeler gauges to check the gap between the straight edge and each pulley face at both ends of the straight edge. A gap on one pulley indicates angular or axial misalignment; record the maximum gap dimension and the location."
+      },
+      "box_11": {
+        "type": "decision",
+        "text": "Belt tracking aligned, no lateral drift?"
+      },
+      "box_12": {
+        "type": "process",
+        "text": "Adjust pulley alignment, loosen and retorque mounting"
+      },
+      "box_13": {
+        "type": "process",
+        "text": "Spin each pulley by hand and observe the running surface for wobble, which indicates hub or bore wear. Mount a dial test indicator against the pulley rim and rotate slowly through one full revolution to measure radial runout. Inspect the belt contact surface for ridges, corrosion, or material transfer from the belt that could cause uneven belt wear."
+      },
+      "box_14": {
+        "type": "decision",
+        "text": "Pulley runout within 0.05 mm total indicator reading?"
+      },
+      "box_15": {
+        "type": "process",
+        "text": "Replace worn pulley or remachine flange"
+      },
+      "box_16": {
+        "type": "process",
+        "text": "Using a vernier caliper with a depth blade, measure the groove depth at three circumferential positions on each pulley that contacts the belt. Record the minimum groove depth and compare against the minimum serviceable depth in the drive specification. Inspect the belt edges for cracking, fraying, or cord exposure that would indicate belt replacement is required regardless of tension."
+      },
+      "box_17": {
+        "type": "document",
+        "text": "Refer to the belt wear limit table."
+      },
+      "box_18": {
+        "type": "decision",
+        "text": "Belt wear within remaining service life limit?"
+      },
+      "box_19": {
+        "type": "process",
+        "text": "Replace belt and reset service interval counter"
+      },
+      "box_20": {
+        "type": "process",
+        "text": "Complete the following checks: 1. Run the drive under load for five minutes and check for abnormal heat radiation. 2. Listen for squealing, rumbling, or slapping noise from the belt drive. 3. Check pulley alignment with a straight edge across both pulley faces."
+      },
+      "box_21": {
+        "type": "decision",
+        "text": "No abnormal noise or temperature rise observed?"
+      },
+      "box_22": {
+        "type": "process",
+        "text": "Log belt service data and update maintenance management system"
+      },
+      "box_23": {
+        "type": "terminator",
+        "text": "End, Procedure complete"
+      },
+      "box_24": {
+        "type": "process",
+        "text": "Secondary tension correction: release the tensioner adjustment screw completely and retension the belt from zero load using the vibration frequency method to set the correct natural frequency incrementally. Verify pulley alignment with the straight edge after retensioning to confirm that adjustment has not introduced misalignment before returning to the belt tension measurement step."
+      },
+      "box_25": {
+        "type": "document",
+        "text": "Belt conveyor tracking diagnostic (GRAPH 36)"
+      }
+    },
+    "edges": [
+      {
+        "source": "box_0",
+        "target": "box_1",
+        "label": null
+      },
+      {
+        "source": "box_1",
+        "target": "box_2",
+        "label": null
+      },
+      {
+        "source": "box_2",
+        "target": "box_3",
+        "label": "Yes"
+      },
+      {
+        "source": "box_2",
+        "target": "box_6",
+        "label": "No"
+      },
+      {
+        "source": "box_4",
+        "target": "box_6",
+        "label": null
+      },
+      {
+        "source": "box_5",
+        "target": "box_6",
+        "label": null
+      },
+      {
+        "source": "box_6",
+        "target": "box_7",
+        "label": "No"
+      },
+      {
+        "source": "box_7",
+        "target": "box_8",
+        "label": null
+      },
+      {
+        "source": "box_8",
+        "target": "box_11",
+        "label": "OK"
+      },
+      {
+        "source": "box_6",
+        "target": "box_11",
+        "label": "Yes"
+      },
+      {
+        "source": "box_10",
+        "target": "box_11",
+        "label": null
+      },
+      {
+        "source": "box_11",
+        "target": "box_12",
+        "label": "No"
+      },
+      {
+        "source": "box_12",
+        "target": "box_13",
+        "label": ""
+      },
+      {
+        "source": "box_11",
+        "target": "box_14",
+        "label": "Yes"
+      },
+      {
+        "source": "box_13",
+        "target": "box_14",
+        "label": null
+      },
+      {
+        "source": "box_14",
+        "target": "box_15",
+        "label": "No"
+      },
+      {
+        "source": "box_15",
+        "target": "box_16",
+        "label": ""
+      },
+      {
+        "source": "box_14",
+        "target": "box_18",
+        "label": "Yes"
+      },
+      {
+        "source": "box_16",
+        "target": "box_18",
+        "label": null
+      },
+      {
+        "source": "box_17",
+        "target": "box_18",
+        "label": null
+      },
+      {
+        "source": "box_18",
+        "target": "box_19",
+        "label": "No"
+      },
+      {
+        "source": "box_19",
+        "target": "box_20",
+        "label": null
+      },
+      {
+        "source": "box_18",
+        "target": "box_20",
+        "label": "Yes"
+      },
+      {
+        "source": "box_20",
+        "target": "box_21",
+        "label": null
+      },
+      {
+        "source": "box_21",
+        "target": "box_22",
+        "label": "Yes"
+      },
+      {
+        "source": "box_21",
+        "target": "box_22",
+        "label": "No"
+      },
+      {
+        "source": "box_22",
+        "target": "box_23",
+        "label": null
+      },
+      {
+        "source": "box_8",
+        "target": "box_24",
+        "label": "Still out of range"
+      },
+      {
+        "source": "box_24",
+        "target": "box_8",
+        "label": null
+      },
+      {
+        "source": "box_8",
+        "target": "box_9",
+        "label": "Unresolvable after second attempt"
+      },
+      {
+        "source": "box_11",
+        "target": "box_25",
+        "label": "No, if persistent drift"
+      }
+    ]
+  }
+}

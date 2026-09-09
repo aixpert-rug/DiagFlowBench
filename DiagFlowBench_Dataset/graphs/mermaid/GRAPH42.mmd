@@ -1,0 +1,180 @@
+flowchart TD
+    box_0(["Start"])
+    box_1["Complete the following checks: 1. Inspect magazine<br/>pockets for deformation, cracking, or swarf<br/>accumulation. 2. Check gripper arm fingers for<br/>bending, cracking, or worn contact faces. 3. Inspect<br/>the magazine drive mechanism for seized bearings or<br/>loose fasteners."]
+    box_2{"Magazine deformation, cracked pockets or broken<br/>gripper fingers?"}
+    box_3(["End, Escalate: magazine structural damage, station<br/>offline"])
+    box_4["Measure the spread distance between opposing gripper<br/>finger tips with a digital caliper and compare<br/>against the nominal jaw opening in the tool changer<br/>specification. Test the return spring force by<br/>compressing each finger by hand and confirming the<br/>return is positive with no sticking. Replace any<br/>finger whose spread dimension exceeds the maximum<br/>worn limit or whose spring shows free play."]
+    box_5[/"Refer to the gripper finger specification."/]
+    box_6{"Gripper finger spread within retention force<br/>tolerance?"}
+    box_7["Replace worn gripper fingers, both fingers per<br/>pocket"]
+    box_8["Measure the diameter of each locating pin at the<br/>shank and at the nose using a calibrated digital<br/>micrometer. Compare against the nominal pin diameter<br/>and the minimum serviceable diameter in the fixture<br/>drawing. Inspect the pin surface under a magnifier<br/>for chipping, burring, or scoring; any pin showing<br/>surface damage at the locating nose should be<br/>replaced."]
+    box_9[/"Refer to the locating pin tolerance specification."/]
+    box_10{"Locating pin diameter within H6/h5 fit tolerance?"}
+    box_11["Replace worn locating pins, verify with go/no go<br/>gauge after fitting"]
+    box_12["Load a standard toolholder into the spindle and<br/>attach the pull gauge to the retention knob. Apply a<br/>steady axial pull and record the peak force at<br/>drawbar release. Compare the reading against the<br/>minimum drawbar retention force in the machine<br/>specification. Retention force below the minimum<br/>indicates disc spring pack degradation and requires<br/>drawbar inspection."]
+    box_13[/"Refer to the tool retention force specification."/]
+    box_14{"Tool retention force within rated range for all<br/>tested pockets?"}
+    box_15["Adjust drawbar clamping pressure or replace<br/>Belleville washers"]
+    box_16{"Reverify tool retention force after adjustment"}
+    box_17(["End, Escalate: retention force unrecoverable,<br/>spindle drawbar service"])
+    box_18["Command the magazine to index through all pocket<br/>positions from the machine control panel. Monitor<br/>the magazine motion for smooth deceleration at each<br/>pocket position and absence of mechanical shock.<br/>Record the time for a full rotation cycle and<br/>compare against the nominal cycle time; a<br/>significant increase indicates bearing drag or<br/>encoder slip."]
+    box_19[/"Refer to the magazine rotation cycle time<br/>specification."/]
+    box_20{"All magazine positions indexed within ±0.3 s of<br/>nominal?"}
+    box_21(["End, Escalate: magazine rotation fault, check cam<br/>and drive belt"])
+    box_22["Mount a dial test indicator on a magnetic base with<br/>the probe contacting the inner face of the reference<br/>pocket stop. Index the magazine through one complete<br/>rotation and return to the reference pocket. Record<br/>the indicator displacement at each return to verify<br/>repeatability. Compare the worst case deviation<br/>against the maximum pocket positioning tolerance in<br/>the magazine specification."]
+    box_23[/"Refer to the magazine position accuracy<br/>specification."/]
+    box_24{"Magazine positioning accuracy within ±0.1 mm at all<br/>pockets?"}
+    box_25["Adjust index home offset parameter in tool changer<br/>controller"]
+    box_26{"Reverify positioning accuracy after offset<br/>adjustment"}
+    box_27(["End, Escalate: systematic positioning error, cam<br/>follower wear"])
+    box_28["Step the magazine to each pocket position<br/>individually and observe the pocket sensor indicator<br/>on the machine control display. Verify that the<br/>sensor signal goes active when a toolholder is<br/>present and inactive when the pocket is empty. Use a<br/>steel rule to check the distance from sensor face to<br/>toolholder flange and confirm it is within the<br/>sensor sensing range."]
+    box_29{"All tool present sensors trigger correctly with tool<br/>loaded?"}
+    box_30["Reposition or replace faulty tool present sensors"]
+    box_31["Open the tool changer guard door and confirm that<br/>the machine control panel shows a door open fault<br/>preventing spindle and magazine motion. Close the<br/>door and confirm the fault clears. Inspect the door<br/>interlock switch actuator for damage and verify that<br/>the locking solenoid engages before motion is<br/>commanded."]
+    box_32{"Tool changer safety interlocks function correctly?"}
+    box_33["Complete the following steps: 1. Access the safety<br/>controller configuration using the maintenance<br/>password. 2. Navigate to the tool changer door<br/>sensor position parameter. 3. Read the current<br/>parameter value and compare against the reference<br/>setting."]
+    box_34["Connect a stopwatch or use the machine cycle time<br/>display to measure the duration from arm extend<br/>command to arm retracted and locked confirmation<br/>signal. Record the measured time and compare against<br/>the target arm swing time in the machine parameter<br/>record. A time increase of more than 20% above<br/>target suggests hydraulic pressure loss or<br/>mechanical binding."]
+    box_35[/"Refer to the tool changer arm speed specification."/]
+    box_36{"Arm swing speed within specified range?"}
+    box_37["Adjust hydraulic or pneumatic flow control on tool<br/>changer arm"]
+    box_38["Command ten consecutive automatic tool changes using<br/>two adjacent pockets, cycling T1 to T2 and back.<br/>Observe each change for smooth arm swing, positive<br/>tool seating in the spindle, and absence of<br/>toolholder drop or misalignment. Record any change<br/>cycle that generates an alarm or requires a retry;<br/>more than one fault in ten cycles requires<br/>investigation before production release."]
+    box_39{"All 10 tool changes completed without fault or<br/>alarm?"}
+    box_40["Complete the following checks: 1. Access the alarm<br/>log and filter by tool changer related alarm codes.<br/>2. Record the tool number, pocket number, and alarm<br/>description. 3. Check whether the alarm pattern<br/>correlates with a specific pocket or tool."]
+    box_41{"Reverify tool changer cycle after fault<br/>investigation"}
+    box_42(["End, Escalate: persistent tool changer cycle fault,<br/>maintenance engineer"])
+    box_43["Load the reference tool into the spindle and measure<br/>the tool length from the spindle gauge line to the<br/>tool tip using the machine probing cycle or a<br/>presetter. Compare the measured offset against the<br/>stored tool length offset in the controller tool<br/>table. A discrepancy greater than 0.02 millimetres<br/>requires offset correction and investigation of the<br/>drawbar retention result."]
+    box_44[/"Refer to the tool length offset tolerance."/]
+    box_45{"Tool length measurement within ±0.01 mm of stored<br/>offset?"}
+    box_46["Complete the following steps: 1. Load the reference<br/>tool and run the tool length measurement probing<br/>cycle. 2. Read the measured tool length offset from<br/>the probing cycle result screen. 3. Compare the<br/>measured offset against the reference value in the<br/>tool library."]
+    box_47["Apply the specified grease type to the cam follower<br/>roller and to the guide rail surfaces using a clean<br/>grease gun with the correct nozzle. Cycle the arm<br/>through three full extend and retract cycles to<br/>distribute the lubricant. Wipe away excess grease<br/>from the arm contact surfaces to prevent transfer to<br/>toolholder tapers."]
+    box_48[/"Refer to the tool changer lubrication specification."/]
+    box_49{"All lubrication points serviced per specification?"}
+    box_50["Apply missing grease, refer to lubrication diagram"]
+    box_51["Log all tool changer measurements and update service<br/>record"]
+    box_52(["End, Procedure complete"])
+    box_53["Secondary drawbar overhaul: extend the drawbar to<br/>expose the disc spring stack and inspect each spring<br/>for cracking, deformation, or dimensional out of<br/>specification. Replace the complete spring stack<br/>with new springs from the correct part number kit.<br/>Reset the drawbar preload to the specification value<br/>using a compression gauge before returning to the<br/>tool retention force measurement step."]
+
+    box_0 --> box_1
+    box_1 --> box_2
+    box_2 -->|"Yes"| box_3
+    box_2 -->|"No"| box_6
+    box_4 --> box_6
+    box_5 --> box_6
+    box_6 -->|"No"| box_7
+    box_7 --> box_8
+    box_6 -->|"Yes"| box_10
+    box_8 --> box_10
+    box_9 --> box_10
+    box_10 -->|"No"| box_11
+    box_11 --> box_12
+    box_10 -->|"Yes"| box_14
+    box_12 --> box_14
+    box_13 --> box_14
+    box_14 -->|"No"| box_15
+    box_15 --> box_16
+    box_16 -->|"OK"| box_20
+    box_14 -->|"Yes"| box_20
+    box_18 --> box_20
+    box_19 --> box_20
+    box_20 -->|"No"| box_21
+    box_20 -->|"Yes"| box_24
+    box_22 --> box_24
+    box_23 --> box_24
+    box_24 -->|"No"| box_25
+    box_25 --> box_26
+    box_26 -->|"Still out of spec"| box_27
+    box_26 -->|"OK"| box_29
+    box_24 -->|"Yes"| box_29
+    box_28 --> box_29
+    box_29 -->|"No"| box_30
+    box_30 --> box_31
+    box_29 -->|"Yes"| box_32
+    box_31 --> box_32
+    box_32 -->|"No"| box_33
+    box_33 --> box_34
+    box_32 -->|"Yes"| box_36
+    box_34 --> box_36
+    box_35 --> box_36
+    box_36 -->|"No"| box_37
+    box_37 --> box_38
+    box_36 -->|"Yes"| box_39
+    box_38 --> box_39
+    box_39 -->|"No"| box_40
+    box_40 --> box_41
+    box_41 -->|"Still failing"| box_42
+    box_41 -->|"OK"| box_45
+    box_39 -->|"Yes"| box_45
+    box_43 --> box_45
+    box_44 --> box_45
+    box_45 -->|"No"| box_46
+    box_46 --> box_47
+    box_45 -->|"Yes"| box_49
+    box_47 --> box_49
+    box_48 --> box_49
+    box_49 -->|"No"| box_50
+    box_50 --> box_51
+    box_49 -->|"Yes"| box_51
+    box_51 --> box_52
+    box_16 -->|"Still low"| box_53
+    box_53 --> box_16
+    box_16 -->|"Unresolvable after second attempt"| box_17
+
+    class box_0 terminator
+    class box_1 process
+    class box_2 decision
+    class box_3 terminator
+    class box_4 process
+    class box_5 document
+    class box_6 decision
+    class box_7 process
+    class box_8 process
+    class box_9 document
+    class box_10 decision
+    class box_11 process
+    class box_12 process
+    class box_13 document
+    class box_14 decision
+    class box_15 process
+    class box_16 decision
+    class box_17 terminator
+    class box_18 process
+    class box_19 document
+    class box_20 decision
+    class box_21 terminator
+    class box_22 process
+    class box_23 document
+    class box_24 decision
+    class box_25 process
+    class box_26 decision
+    class box_27 terminator
+    class box_28 process
+    class box_29 decision
+    class box_30 process
+    class box_31 process
+    class box_32 decision
+    class box_33 process
+    class box_34 process
+    class box_35 document
+    class box_36 decision
+    class box_37 process
+    class box_38 process
+    class box_39 decision
+    class box_40 process
+    class box_41 decision
+    class box_42 terminator
+    class box_43 process
+    class box_44 document
+    class box_45 decision
+    class box_46 process
+    class box_47 process
+    class box_48 document
+    class box_49 decision
+    class box_50 process
+    class box_51 process
+    class box_52 terminator
+    class box_53 process
+
+    classDef terminator fill:#2d4a6e,stroke:#1a3050,color:#ffffff,font-weight:bold
+    classDef process    fill:#f0f4ff,stroke:#4a6fa5,color:#1a1a2e
+    classDef decision   fill:#fff8e6,stroke:#c8922a,color:#1a1a2e
+    classDef document   fill:#f0fff4,stroke:#3a8a4a,color:#1a1a2e

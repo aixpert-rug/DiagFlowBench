@@ -1,0 +1,82 @@
+flowchart TD
+    box_0(["Start"])
+    box_1["Note the position in the transfer cycle at which<br/>parts are dropped and whether the dropout is<br/>occurring on every cycle or intermittently. Collect<br/>the dropped part if undamaged for inspection."]
+    box_2{"Is the vacuum pressure at the end effector within<br/>the specified holding range during the transfer<br/>phase?"}
+    box_3["Check the vacuum pressure gauge reading at the end<br/>effector connection point. Verify that the pressure<br/>holds steady during the full transfer cycle using<br/>the operator control interface diagnostic screen."]
+    box_4["Complete the following checks: 1. Read the vacuum<br/>generator output pressure from the inline gauge. 2.<br/>Compare against the setpoint on the pneumatic<br/>circuit schematic. 3. Check the vacuum filter for<br/>blockage or excessive pressure drop."]
+    box_5{"Is the vacuum cup sealing surface clean and free of<br/>contamination?"}
+    box_6["Inspect the vacuum cup contact surface for oil,<br/>dust, or part material deposits. Check whether the<br/>cup lip is intact and evenly seated."]
+    box_7["Clean the vacuum cup contact surface with a lint<br/>free cloth. If the cup lip is damaged or permanently<br/>deformed, replace the vacuum cup."]
+    box_8{"Is the vacuum filter element clean and within its<br/>replacement interval?"}
+    box_9["Remove and inspect the vacuum filter element. Check<br/>the contamination level and compare the maintenance<br/>log to the filter replacement interval."]
+    box_10["Replace the vacuum filter element and retest the<br/>vacuum pressure at the end effector to confirm<br/>adequate holding force."]
+    box_11{"Is the part pick up position correctly centred under<br/>the vacuum cup (no lateral offset at pick up)?"}
+    box_12["Complete the following steps: 1. Jog the robot to<br/>the nominal pickup position in slow jog mode. 2.<br/>Place a reference part on the supply conveyor and<br/>verify centring. 3. Record the positional offset and<br/>compare against the acceptance tolerance."]
+    box_13["Reteach the pick up position to centre the vacuum<br/>cup correctly over the part. Verify with five<br/>consecutive slow test cycles."]
+    box_14{"Is the transfer acceleration and deceleration<br/>profile within the specified limits?"}
+    box_15["Check the motion profile settings on the robot<br/>controller for the transfer axis. Compare the<br/>maximum acceleration and deceleration values against<br/>the specification for the current part type."]
+    box_16["Reduce the transfer acceleration or deceleration to<br/>within specification. retest with ten consecutive<br/>full speed cycles before resuming normal production."]
+    box_17{"Has the dropout fault been eliminated after<br/>corrective action?"}
+    box_18["Escalate to the maintenance team: part dropout<br/>persists after all standard corrective actions;<br/>investigate robot axis mechanical condition and<br/>vacuum system integrity."]
+    box_19["Record the root cause and corrective action in the<br/>quality log. Notify quality assurance team."]
+    box_20(["End, resume production."])
+    box_21{"Is the rate of parts dropped from the vacuum<br/>effector sufficient to indicate a system failure<br/>posing a safety hazard or causing contamination of<br/>the work cell?"}
+    box_22(["End, production stopped immediately: vacuum effector<br/>failure critical, clear work cell, quarantine<br/>dropped parts, and escalate to maintenance engineer"])
+
+    box_1 --> box_3
+    box_3 --> box_2
+    box_2 -->|"No"| box_4
+    box_2 -->|"Yes"| box_5
+    box_4 --> box_6
+    box_6 --> box_5
+    box_5 -->|"No"| box_7
+    box_5 -->|"Yes"| box_8
+    box_7 --> box_9
+    box_9 --> box_8
+    box_8 -->|"No"| box_10
+    box_8 -->|"Yes"| box_11
+    box_10 --> box_12
+    box_12 --> box_11
+    box_11 -->|"No"| box_13
+    box_11 -->|"Yes"| box_14
+    box_13 --> box_15
+    box_15 --> box_14
+    box_14 -->|"No"| box_16
+    box_14 -->|"Yes"| box_17
+    box_16 --> box_17
+    box_17 -->|"No"| box_18
+    box_17 -->|"Yes"| box_19
+    box_18 --> box_19
+    box_19 --> box_20
+    box_0 --> box_21
+    box_21 -->|"Critical, immediate stop required"| box_22
+    box_21 -->|"Standard fault, continue diagnosis"| box_1
+
+    class box_0 terminator
+    class box_1 process
+    class box_2 decision
+    class box_3 process
+    class box_4 process
+    class box_5 decision
+    class box_6 process
+    class box_7 process
+    class box_8 decision
+    class box_9 process
+    class box_10 process
+    class box_11 decision
+    class box_12 process
+    class box_13 process
+    class box_14 decision
+    class box_15 process
+    class box_16 process
+    class box_17 decision
+    class box_18 process
+    class box_19 process
+    class box_20 terminator
+    class box_21 decision
+    class box_22 terminator
+
+    classDef terminator fill:#2d4a6e,stroke:#1a3050,color:#ffffff,font-weight:bold
+    classDef process    fill:#f0f4ff,stroke:#4a6fa5,color:#1a1a2e
+    classDef decision   fill:#fff8e6,stroke:#c8922a,color:#1a1a2e
+    classDef document   fill:#f0fff4,stroke:#3a8a4a,color:#1a1a2e

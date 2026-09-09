@@ -1,0 +1,229 @@
+{
+  "conversation_id": "GRAPH34_P007_base_mixed",
+  "graph_id": "GRAPH34",
+  "path_id": "GRAPH34_P007",
+  "regime": "mixed",
+  "variant": "base",
+  "robustness_axis": null,
+  "turns": [
+    {
+      "node_id": "box_0",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Starting vacuum gripper diagnostic procedure.",
+      "edge_label_to_next": null,
+      "turn_index": 0,
+      "ground_truth": {
+        "node_id": "box_0",
+        "node_type": "terminator",
+        "node_text": "Start"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Please complete the following checks: First, inspect the suction cup sealing face for any cuts, abrasion, or permanent set. Next, check the bellows body for cracks or delamination. Finally, inspect the cup mounting thread for cross threading or stripping.",
+      "edge_label_to_next": null,
+      "turn_index": 1,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Inspect the suction cup sealing face for cuts, abrasion, or permanent set. 2. Check the bellows body for cracks or delamination. 3. Inspect the cup mounting thread for cross threading or stripping."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "The suction cup looks fine, but I'm noticing the vacuum line fitting itself has some corrosion buildup around the threads that might be affecting the seal.",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "coverage_gap",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "I've completed all three checks on the suction cup assembly.",
+      "edge_label_to_next": null,
+      "turn_index": 2,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Inspect the suction cup sealing face for cuts, abrasion, or permanent set. 2. Check the bellows body for cracks or delamination. 3. Inspect the cup mounting thread for cross threading or stripping."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_3",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the cup structural integrity acceptable?",
+      "edge_label_to_next": null,
+      "turn_index": 3,
+      "ground_truth": {
+        "node_id": "box_3",
+        "node_type": "decision",
+        "node_text": "Cup structural integrity acceptable?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_3",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "No, I'm seeing visible cracking in the bellows body and some deformation on the sealing face.",
+      "edge_label_to_next": "No",
+      "turn_index": 4,
+      "ground_truth": {
+        "node_id": "box_3",
+        "node_type": "decision",
+        "node_text": "Cup structural integrity acceptable?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_4",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Procedure complete. Replace the cups immediately as cracking or deformation has been detected. Remove the gripper from service until replacement is completed.",
+      "edge_label_to_next": null,
+      "turn_index": 5,
+      "ground_truth": {
+        "node_id": "box_4",
+        "node_type": "terminator",
+        "node_text": "End, Replace cups: cracking or deformation detected"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_4",
+      "node_type": "terminator",
+      "speaker": "operator",
+      "utterance": "Understood, I'll replace the cups and keep the gripper offline until the work is done.",
+      "edge_label_to_next": null,
+      "turn_index": 6,
+      "ground_truth": {
+        "node_id": "box_4",
+        "node_type": "terminator",
+        "node_text": "End, Replace cups: cracking or deformation detected"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    }
+  ],
+  "metadata": {
+    "depth": 4,
+    "num_decisions": 1,
+    "num_processes": 1,
+    "num_documents": 0,
+    "terminator_type": "procedure_complete",
+    "terminator_text": "End, Replace cups: cracking or deformation detected",
+    "true_terminator": true,
+    "node_sequence": [
+      "box_0",
+      "box_1",
+      "box_3",
+      "box_4"
+    ],
+    "edge_labels": [
+      null,
+      null,
+      null,
+      "No"
+    ],
+    "decision_points": [
+      {
+        "node": "box_3",
+        "label": "No",
+        "question": "Cup structural integrity acceptable?"
+      }
+    ],
+    "generation_model": "anthropic/claude-sonnet-4-5",
+    "verification": {
+      "verified": true,
+      "issues": [],
+      "corrected_turns": [
+        {
+          "node_id": "box_0",
+          "node_type": "terminator",
+          "speaker": "system",
+          "utterance": "Starting vacuum gripper diagnostic procedure.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_1",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Please complete the following checks: First, inspect the suction cup sealing face for any cuts, abrasion, or permanent set. Next, check the bellows body for cracks or delamination. Finally, inspect the cup mounting thread for cross threading or stripping.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_1",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "I've completed all three checks on the suction cup assembly.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_3",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is the cup structural integrity acceptable?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_3",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "No, I'm seeing visible cracking in the bellows body and some deformation on the sealing face.",
+          "edge_label_to_next": "No"
+        },
+        {
+          "node_id": "box_4",
+          "node_type": "terminator",
+          "speaker": "system",
+          "utterance": "Procedure complete. Replace the cups immediately as cracking or deformation has been detected. Remove the gripper from service until replacement is completed.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_4",
+          "node_type": "terminator",
+          "speaker": "operator",
+          "utterance": "Understood, I'll replace the cups and keep the gripper offline until the work is done.",
+          "edge_label_to_next": null
+        }
+      ]
+    },
+    "injection_count": 1
+  },
+  "injection_log": [
+    {
+      "position": 2,
+      "node_id": "box_1",
+      "node_text": "Complete the following checks: 1. Inspect the suction cup sealing face for cuts, abrasion, or permanent set. 2. Check the bellows body for cracks or delamination. 3. Inspect the cup mounting thread for cross threading or stripping.",
+      "edge_labels": [],
+      "category": "coverage_gap",
+      "utterance": "The suction cup looks fine, but I'm noticing the vacuum line fitting itself has some corrosion buildup around the threads that might be affecting the seal.",
+      "injection_rate": null,
+      "num_candidates": null
+    }
+  ]
+}

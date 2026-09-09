@@ -1,0 +1,242 @@
+{
+  "id": "GRAPH26",
+  "description": "Troubleshooting flowchart for anomalous or spiking force readings at the pressing station during insert press-fit, covering part dimensional consistency, press head alignment, speed, and force sensor calibration.",
+  "graph": {
+    "nodes": {
+      "box_0": {
+        "type": "terminator",
+        "text": "Start"
+      },
+      "box_1": {
+        "type": "process",
+        "text": "Record the force profile (peak force, force at insertion start, spike timing) from the operator control interface trend display. Note whether the anomaly occurs on every cycle or intermittently."
+      },
+      "box_2": {
+        "type": "decision",
+        "text": "Is the force spike intermittent (not present on every pressing cycle)?"
+      },
+      "box_3": {
+        "type": "process",
+        "text": "Complete the following checks: 1. Sample five consecutive parts for dimensional conformance. 2. Check whether the force spike correlates with a specific table position."
+      },
+      "box_4": {
+        "type": "process",
+        "text": "Identify whether the anomaly is part dimension related (reject the non conforming parts) or position related (inspect that nest) and apply the relevant corrective action."
+      },
+      "box_5": {
+        "type": "decision",
+        "text": "Is the insertion depth of parts at the press station within specification before pressing begins?"
+      },
+      "box_6": {
+        "type": "process",
+        "text": "Complete the following checks: 1. Measure the part insertion depth with the station depth gauge. 2. Compare the measured depth against the nominal value on the drawing. 3. Check for part-to-fixture misalignment or contamination on locating surfaces."
+      },
+      "box_7": {
+        "type": "process",
+        "text": "Adjust the part placement height at the preceding station so that parts arrive at the press station at the correct pre press insertion depth."
+      },
+      "box_8": {
+        "type": "decision",
+        "text": "Is the pressing head concentrically aligned with the part axis (no lateral offset)?"
+      },
+      "box_9": {
+        "type": "process",
+        "text": "Use the alignment gauge to check the lateral offset of the pressing head contact surface relative to the part centreline at the lower pressing position."
+      },
+      "box_10": {
+        "type": "process",
+        "text": "Realign the pressing head to the part centreline. Tighten all fasteners and reverify alignment before resuming."
+      },
+      "box_11": {
+        "type": "decision",
+        "text": "Is the pressing speed set to the specified value for this product type?"
+      },
+      "box_12": {
+        "type": "process",
+        "text": "Complete the following checks: 1. Read the programmed pressing speed from the press axis parameter screen. 2. Compare against the specified speed on the validated process sheet. 3. Check whether the speed setting was modified since the last good run."
+      },
+      "box_13": {
+        "type": "process",
+        "text": "Adjust the flow control valve to bring the pressing speed to the specified value for the current product type."
+      },
+      "box_14": {
+        "type": "decision",
+        "text": "Is the force sensor zeroed and within its calibration interval?"
+      },
+      "box_15": {
+        "type": "process",
+        "text": "Check the zero load force reading and compare the calibration date against the calibration interval for this sensor. Verify that the sensor mounting is secure."
+      },
+      "box_16": {
+        "type": "process",
+        "text": "Rezero the force sensor and perform a span calibration using the reference load. If the sensor is outside the calibration interval, arrange recalibration."
+      },
+      "box_17": {
+        "type": "decision",
+        "text": "Has the force spike been eliminated after all corrective actions?"
+      },
+      "box_18": {
+        "type": "process",
+        "text": "Escalate to the maintenance team: the force anomaly persists; inspect the pressing station mechanical components, guide alignment, and force sensor integrity."
+      },
+      "box_19": {
+        "type": "process",
+        "text": "Record all measurements and corrective actions taken. Notify quality assurance team and update the maintenance log."
+      },
+      "box_20": {
+        "type": "terminator",
+        "text": "End, notify maintenance team."
+      },
+      "box_21": {
+        "type": "decision",
+        "text": "Does the recorded force profile indicate a potential fixture collision or tooling failure requiring an immediate machine stop before further parts are damaged?"
+      },
+      "box_22": {
+        "type": "terminator",
+        "text": "End, machine stopped immediately: force spike indicates collision or tooling failure, do not restart until fixture and tooling have been inspected and cleared"
+      }
+    },
+    "edges": [
+      {
+        "source": "box_1",
+        "target": "box_3",
+        "label": ""
+      },
+      {
+        "source": "box_3",
+        "target": "box_2",
+        "label": null
+      },
+      {
+        "source": "box_2",
+        "target": "box_4",
+        "label": "Yes"
+      },
+      {
+        "source": "box_2",
+        "target": "box_5",
+        "label": "No"
+      },
+      {
+        "source": "box_4",
+        "target": "box_6",
+        "label": ""
+      },
+      {
+        "source": "box_6",
+        "target": "box_5",
+        "label": null
+      },
+      {
+        "source": "box_5",
+        "target": "box_7",
+        "label": "No"
+      },
+      {
+        "source": "box_5",
+        "target": "box_8",
+        "label": "Yes"
+      },
+      {
+        "source": "box_7",
+        "target": "box_9",
+        "label": ""
+      },
+      {
+        "source": "box_9",
+        "target": "box_8",
+        "label": null
+      },
+      {
+        "source": "box_8",
+        "target": "box_10",
+        "label": "No"
+      },
+      {
+        "source": "box_8",
+        "target": "box_11",
+        "label": "Yes"
+      },
+      {
+        "source": "box_10",
+        "target": "box_12",
+        "label": ""
+      },
+      {
+        "source": "box_12",
+        "target": "box_11",
+        "label": null
+      },
+      {
+        "source": "box_11",
+        "target": "box_13",
+        "label": "No"
+      },
+      {
+        "source": "box_11",
+        "target": "box_14",
+        "label": "Yes"
+      },
+      {
+        "source": "box_13",
+        "target": "box_15",
+        "label": ""
+      },
+      {
+        "source": "box_15",
+        "target": "box_14",
+        "label": null
+      },
+      {
+        "source": "box_14",
+        "target": "box_16",
+        "label": "No"
+      },
+      {
+        "source": "box_14",
+        "target": "box_17",
+        "label": "Yes"
+      },
+      {
+        "source": "box_16",
+        "target": "box_17",
+        "label": null
+      },
+      {
+        "source": "box_17",
+        "target": "box_18",
+        "label": "No"
+      },
+      {
+        "source": "box_17",
+        "target": "box_19",
+        "label": "Yes"
+      },
+      {
+        "source": "box_18",
+        "target": "box_19",
+        "label": null
+      },
+      {
+        "source": "box_19",
+        "target": "box_20",
+        "label": null
+      },
+      {
+        "source": "box_0",
+        "target": "box_21",
+        "label": null
+      },
+      {
+        "source": "box_21",
+        "target": "box_22",
+        "label": "Critical, immediate stop required"
+      },
+      {
+        "source": "box_21",
+        "target": "box_1",
+        "label": "Standard fault, continue diagnosis"
+      }
+    ]
+  }
+}

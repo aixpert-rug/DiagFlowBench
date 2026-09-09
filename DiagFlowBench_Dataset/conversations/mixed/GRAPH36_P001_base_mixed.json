@@ -1,0 +1,982 @@
+{
+  "conversation_id": "GRAPH36_P001_base_mixed",
+  "graph_id": "GRAPH36",
+  "path_id": "GRAPH36_P001",
+  "regime": "mixed",
+  "variant": "base",
+  "robustness_axis": null,
+  "turns": [
+    {
+      "node_id": "box_0",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Starting conveyor belt diagnostic procedure.",
+      "edge_label_to_next": null,
+      "turn_index": 0,
+      "ground_truth": {
+        "node_id": "box_0",
+        "node_type": "terminator",
+        "node_text": "Start"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Please complete the following visual checks: inspect the belt surface for cuts, gouges, or embedded debris; check the splice joint for separation or edge lifting; and inspect both pulley faces for grooving or material buildup.",
+      "edge_label_to_next": null,
+      "turn_index": 1,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Inspect the belt surface for cuts, gouges, or embedded debris. 2. Check the splice joint for separation or edge lifting. 3. Inspect both pulley faces for grooving or material buildup."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "I've completed all three inspections. The belt surface looks clean, the splice is intact, and both pulleys are in good condition.",
+      "edge_label_to_next": null,
+      "turn_index": 2,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Inspect the belt surface for cuts, gouges, or embedded debris. 2. Check the splice joint for separation or edge lifting. 3. Inspect both pulley faces for grooving or material buildup."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Belt damage assessment: do you observe splice failure or deep cuts?",
+      "edge_label_to_next": null,
+      "turn_index": 3,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Belt damage assessment, splice failure or deep cuts?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "No, there's no splice failure and no deep cuts present.",
+      "edge_label_to_next": "No",
+      "turn_index": 4,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Belt damage assessment, splice failure or deep cuts?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_6",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the belt tracking within plus or minus 5 millimetres of centreline?",
+      "edge_label_to_next": null,
+      "turn_index": 5,
+      "ground_truth": {
+        "node_id": "box_6",
+        "node_type": "decision",
+        "node_text": "Belt tracking within ±5 mm of centreline?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_6",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, the belt is staying centered within tolerance across the full width.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 6,
+      "ground_truth": {
+        "node_id": "box_6",
+        "node_type": "decision",
+        "node_text": "Belt tracking within ±5 mm of centreline?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_12",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the belt tension within the specified deflection range?",
+      "edge_label_to_next": null,
+      "turn_index": 7,
+      "ground_truth": {
+        "node_id": "box_12",
+        "node_type": "decision",
+        "node_text": "Belt tension within specified deflection range?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_12",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, the measured deflection is within the allowable range according to the specification.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 8,
+      "ground_truth": {
+        "node_id": "box_12",
+        "node_type": "decision",
+        "node_text": "Belt tension within specified deflection range?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_17",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Do all idler rollers rotate freely with no flat spots?",
+      "edge_label_to_next": null,
+      "turn_index": 9,
+      "ground_truth": {
+        "node_id": "box_17",
+        "node_type": "decision",
+        "node_text": "All idler rollers rotate freely with no flat spots?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_17",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "The rollers spin okay, but I'm noticing the belt itself has some pretty significant fraying along the edges on the return side.",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "coverage_gap",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_17",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "No, I found two rollers with roughness and one showing a flat spot on the surface.",
+      "edge_label_to_next": "No",
+      "turn_index": 10,
+      "ground_truth": {
+        "node_id": "box_17",
+        "node_type": "decision",
+        "node_text": "All idler rollers rotate freely with no flat spots?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_18",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Replace the seized or worn idler rollers that you identified.",
+      "edge_label_to_next": null,
+      "turn_index": 11,
+      "ground_truth": {
+        "node_id": "box_18",
+        "node_type": "process",
+        "node_text": "Replace seized or worn idler rollers"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_18",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Rollers replaced and remounted. All idlers are now spinning freely.",
+      "edge_label_to_next": "",
+      "turn_index": 12,
+      "ground_truth": {
+        "node_id": "box_18",
+        "node_type": "process",
+        "node_text": "Replace seized or worn idler rollers"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_19",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Run the motor at operating speed under normal belt load. Use an infrared thermometer to record the surface temperature at both end caps, waiting five minutes between readings, and compare against the motor nameplate maximum.",
+      "edge_label_to_next": null,
+      "turn_index": 13,
+      "ground_truth": {
+        "node_id": "box_19",
+        "node_type": "process",
+        "node_text": "With the motor running at operating speed under normal belt load, hold an infrared thermometer approximately 50 millimetres from the drive motor end cap and record the surface temperature. Wait five minutes and repeat at the opposite end cap. Compare both readings against the maximum rated housing temperature on the motor nameplate."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_19",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Temperature readings taken at both end caps. Both are below the rated limit on the nameplate.",
+      "edge_label_to_next": null,
+      "turn_index": 14,
+      "ground_truth": {
+        "node_id": "box_19",
+        "node_type": "process",
+        "node_text": "With the motor running at operating speed under normal belt load, hold an infrared thermometer approximately 50 millimetres from the drive motor end cap and record the surface temperature. Wait five minutes and repeat at the opposite end cap. Compare both readings against the maximum rated housing temperature on the motor nameplate."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_20",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the drive motor temperature within the rated limit?",
+      "edge_label_to_next": null,
+      "turn_index": 15,
+      "ground_truth": {
+        "node_id": "box_20",
+        "node_type": "decision",
+        "node_text": "Drive motor temperature within rated limit?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_20",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, both end cap temperatures are well within the acceptable range.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 16,
+      "ground_truth": {
+        "node_id": "box_20",
+        "node_type": "decision",
+        "node_text": "Drive motor temperature within rated limit?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_24",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the drive chain elongation within the wear limit?",
+      "edge_label_to_next": null,
+      "turn_index": 17,
+      "ground_truth": {
+        "node_id": "box_24",
+        "node_type": "decision",
+        "node_text": "Drive chain elongation within wear limit?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_24",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "The chain looks okay, but I'm seeing the sprocket teeth are completely worn down on one side—they're almost shark-finned. That's not one of the options here.",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "undocumented_malfunction",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_24",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "No, the calculated elongation exceeds the wear limit specified in the reference document.",
+      "edge_label_to_next": "No",
+      "turn_index": 18,
+      "ground_truth": {
+        "node_id": "box_24",
+        "node_type": "decision",
+        "node_text": "Drive chain elongation within wear limit?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_25",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Replace the drive chain and retension it to specification.",
+      "edge_label_to_next": null,
+      "turn_index": 19,
+      "ground_truth": {
+        "node_id": "box_25",
+        "node_type": "process",
+        "node_text": "Replace drive chain and retension to specification"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_25",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Drive chain replaced and tensioned to spec. The new chain is properly seated and lubricated.",
+      "edge_label_to_next": "",
+      "turn_index": 20,
+      "ground_truth": {
+        "node_id": "box_25",
+        "node_type": "process",
+        "node_text": "Replace drive chain and retension to specification"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_26",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Jog the conveyor slowly until a reference part reaches the end of line sensor. Measure the trigger point distance from the part leading edge to the sensor face and compare it against the setpoint on the sensor setup drawing.",
+      "edge_label_to_next": null,
+      "turn_index": 21,
+      "ground_truth": {
+        "node_id": "box_26",
+        "node_type": "process",
+        "node_text": "Jog the conveyor slowly until a reference part reaches the end of line sensor and observe the sensor indicator light. Measure the distance from the part leading edge to the sensor face at the trigger point using a steel rule. Compare against the setpoint distance specified on the sensor setup drawing and adjust the bracket position if the trigger point is outside tolerance."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_26",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Hey, before I continue with this, do you know if we're supposed to fill out a separate work order for the lubrication service on the transfer line, or does that get bundled into this PM?",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "unrelated_question",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_26",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Measurement complete. I've recorded the trigger distance and compared it to the drawing.",
+      "edge_label_to_next": null,
+      "turn_index": 22,
+      "ground_truth": {
+        "node_id": "box_26",
+        "node_type": "process",
+        "node_text": "Jog the conveyor slowly until a reference part reaches the end of line sensor and observe the sensor indicator light. Measure the distance from the part leading edge to the sensor face at the trigger point using a steel rule. Compare against the setpoint distance specified on the sensor setup drawing and adjust the bracket position if the trigger point is outside tolerance."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_27",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the end of line sensor trigger point within plus or minus 2 millimetre tolerance?",
+      "edge_label_to_next": null,
+      "turn_index": 23,
+      "ground_truth": {
+        "node_id": "box_27",
+        "node_type": "decision",
+        "node_text": "End of line sensor trigger point within ±2 mm tolerance?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_27",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "No, the trigger point is about 3 millimetres off from the setpoint.",
+      "edge_label_to_next": "No",
+      "turn_index": 24,
+      "ground_truth": {
+        "node_id": "box_27",
+        "node_type": "decision",
+        "node_text": "End of line sensor trigger point within ±2 mm tolerance?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_28",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Reposition the sensor bracket and reteach the trigger point to bring it within tolerance.",
+      "edge_label_to_next": null,
+      "turn_index": 25,
+      "ground_truth": {
+        "node_id": "box_28",
+        "node_type": "process",
+        "node_text": "Reposition sensor bracket and reteach trigger point"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_28",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Sensor bracket repositioned and trigger point retaught. It's now reading correctly.",
+      "edge_label_to_next": null,
+      "turn_index": 26,
+      "ground_truth": {
+        "node_id": "box_28",
+        "node_type": "process",
+        "node_text": "Reposition sensor bracket and reteach trigger point"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_29",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Run a load test by passing 50 parts through the conveyor at production speed.",
+      "edge_label_to_next": null,
+      "turn_index": 27,
+      "ground_truth": {
+        "node_id": "box_29",
+        "node_type": "process",
+        "node_text": "Load test, run 50 parts through conveyor at production speed"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_29",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Load test complete. All 50 parts ran through successfully.",
+      "edge_label_to_next": null,
+      "turn_index": 28,
+      "ground_truth": {
+        "node_id": "box_29",
+        "node_type": "process",
+        "node_text": "Load test, run 50 parts through conveyor at production speed"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_30",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Did the load test pass with no tracking deviation or jams?",
+      "edge_label_to_next": null,
+      "turn_index": 29,
+      "ground_truth": {
+        "node_id": "box_30",
+        "node_type": "decision",
+        "node_text": "Load test passed, no tracking deviation or jams?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_30",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, no tracking issues and no jams occurred during the test run.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 30,
+      "ground_truth": {
+        "node_id": "box_30",
+        "node_type": "decision",
+        "node_text": "Load test passed, no tracking deviation or jams?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_31",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Log all measurements and update the conveyor service record with today's findings.",
+      "edge_label_to_next": null,
+      "turn_index": 31,
+      "ground_truth": {
+        "node_id": "box_31",
+        "node_type": "process",
+        "node_text": "Log all measurements and update conveyor service record"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_31",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "All measurements logged and the service record has been updated.",
+      "edge_label_to_next": null,
+      "turn_index": 32,
+      "ground_truth": {
+        "node_id": "box_31",
+        "node_type": "process",
+        "node_text": "Log all measurements and update conveyor service record"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_32",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Procedure complete. The conveyor has passed all diagnostic checks and is cleared for production.",
+      "edge_label_to_next": null,
+      "turn_index": 33,
+      "ground_truth": {
+        "node_id": "box_32",
+        "node_type": "terminator",
+        "node_text": "End, Procedure complete"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_32",
+      "node_type": "terminator",
+      "speaker": "operator",
+      "utterance": "Understood, conveyor is ready for operation.",
+      "edge_label_to_next": null,
+      "turn_index": 34,
+      "ground_truth": {
+        "node_id": "box_32",
+        "node_type": "terminator",
+        "node_text": "End, Procedure complete"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    }
+  ],
+  "metadata": {
+    "depth": 18,
+    "num_decisions": 8,
+    "num_processes": 8,
+    "num_documents": 0,
+    "terminator_type": "procedure_complete",
+    "terminator_text": "End, Procedure complete",
+    "true_terminator": true,
+    "node_sequence": [
+      "box_0",
+      "box_1",
+      "box_2",
+      "box_6",
+      "box_12",
+      "box_17",
+      "box_18",
+      "box_19",
+      "box_20",
+      "box_24",
+      "box_25",
+      "box_26",
+      "box_27",
+      "box_28",
+      "box_29",
+      "box_30",
+      "box_31",
+      "box_32"
+    ],
+    "edge_labels": [
+      null,
+      null,
+      null,
+      "No",
+      "Yes",
+      "Yes",
+      "No",
+      "",
+      null,
+      "Yes",
+      "No",
+      "",
+      null,
+      "No",
+      null,
+      null,
+      "Yes",
+      null
+    ],
+    "decision_points": [
+      {
+        "node": "box_2",
+        "label": "No",
+        "question": "Belt damage assessment, splice failure or deep cuts?"
+      },
+      {
+        "node": "box_6",
+        "label": "Yes",
+        "question": "Belt tracking within ±5 mm of centreline?"
+      },
+      {
+        "node": "box_12",
+        "label": "Yes",
+        "question": "Belt tension within specified deflection range?"
+      },
+      {
+        "node": "box_17",
+        "label": "No",
+        "question": "All idler rollers rotate freely with no flat spots?"
+      },
+      {
+        "node": "box_20",
+        "label": "Yes",
+        "question": "Drive motor temperature within rated limit?"
+      },
+      {
+        "node": "box_24",
+        "label": "No",
+        "question": "Drive chain elongation within wear limit?"
+      },
+      {
+        "node": "box_27",
+        "label": "No",
+        "question": "End of line sensor trigger point within ±2 mm tolerance?"
+      },
+      {
+        "node": "box_30",
+        "label": "Yes",
+        "question": "Load test passed, no tracking deviation or jams?"
+      }
+    ],
+    "generation_model": "anthropic/claude-sonnet-4-5",
+    "verification": {
+      "verified": true,
+      "issues": [],
+      "corrected_turns": [
+        {
+          "node_id": "box_0",
+          "node_type": "terminator",
+          "speaker": "system",
+          "utterance": "Starting conveyor belt diagnostic procedure.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_1",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Please complete the following visual checks: inspect the belt surface for cuts, gouges, or embedded debris; check the splice joint for separation or edge lifting; and inspect both pulley faces for grooving or material buildup.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_1",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "I've completed all three inspections. The belt surface looks clean, the splice is intact, and both pulleys are in good condition.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_2",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Belt damage assessment: do you observe splice failure or deep cuts?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_2",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "No, there's no splice failure and no deep cuts present.",
+          "edge_label_to_next": "No"
+        },
+        {
+          "node_id": "box_6",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is the belt tracking within plus or minus 5 millimetres of centreline?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_6",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Yes, the belt is staying centered within tolerance across the full width.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_12",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is the belt tension within the specified deflection range?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_12",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Yes, the measured deflection is within the allowable range according to the specification.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_17",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Do all idler rollers rotate freely with no flat spots?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_17",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "No, I found two rollers with roughness and one showing a flat spot on the surface.",
+          "edge_label_to_next": "No"
+        },
+        {
+          "node_id": "box_18",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Replace the seized or worn idler rollers that you identified.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_18",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "Rollers replaced and remounted. All idlers are now spinning freely.",
+          "edge_label_to_next": ""
+        },
+        {
+          "node_id": "box_19",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Run the motor at operating speed under normal belt load. Use an infrared thermometer to record the surface temperature at both end caps, waiting five minutes between readings, and compare against the motor nameplate maximum.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_19",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "Temperature readings taken at both end caps. Both are below the rated limit on the nameplate.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_20",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is the drive motor temperature within the rated limit?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_20",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Yes, both end cap temperatures are well within the acceptable range.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_24",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is the drive chain elongation within the wear limit?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_24",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "No, the calculated elongation exceeds the wear limit specified in the reference document.",
+          "edge_label_to_next": "No"
+        },
+        {
+          "node_id": "box_25",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Replace the drive chain and retension it to specification.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_25",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "Drive chain replaced and tensioned to spec. The new chain is properly seated and lubricated.",
+          "edge_label_to_next": ""
+        },
+        {
+          "node_id": "box_26",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Jog the conveyor slowly until a reference part reaches the end of line sensor. Measure the trigger point distance from the part leading edge to the sensor face and compare it against the setpoint on the sensor setup drawing.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_26",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "Measurement complete. I've recorded the trigger distance and compared it to the drawing.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_27",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is the end of line sensor trigger point within plus or minus 2 millimetre tolerance?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_27",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "No, the trigger point is about 3 millimetres off from the setpoint.",
+          "edge_label_to_next": "No"
+        },
+        {
+          "node_id": "box_28",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Reposition the sensor bracket and reteach the trigger point to bring it within tolerance.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_28",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "Sensor bracket repositioned and trigger point retaught. It's now reading correctly.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_29",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Run a load test by passing 50 parts through the conveyor at production speed.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_29",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "Load test complete. All 50 parts ran through successfully.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_30",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Did the load test pass with no tracking deviation or jams?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_30",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Yes, no tracking issues and no jams occurred during the test run.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_31",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Log all measurements and update the conveyor service record with today's findings.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_31",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "All measurements logged and the service record has been updated.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_32",
+          "node_type": "terminator",
+          "speaker": "system",
+          "utterance": "Procedure complete. The conveyor has passed all diagnostic checks and is cleared for production.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_32",
+          "node_type": "terminator",
+          "speaker": "operator",
+          "utterance": "Understood, conveyor is ready for operation.",
+          "edge_label_to_next": null
+        }
+      ]
+    },
+    "injection_count": 3
+  },
+  "injection_log": [
+    {
+      "position": 10,
+      "node_id": "box_17",
+      "node_text": "All idler rollers rotate freely with no flat spots?",
+      "edge_labels": [
+        "No",
+        "Yes"
+      ],
+      "category": "coverage_gap",
+      "utterance": "The rollers spin okay, but I'm noticing the belt itself has some pretty significant fraying along the edges on the return side.",
+      "injection_rate": null,
+      "num_candidates": null
+    },
+    {
+      "position": 18,
+      "node_id": "box_24",
+      "node_text": "Drive chain elongation within wear limit?",
+      "edge_labels": [
+        "No",
+        "Yes"
+      ],
+      "category": "undocumented_malfunction",
+      "utterance": "The chain looks okay, but I'm seeing the sprocket teeth are completely worn down on one side—they're almost shark-finned. That's not one of the options here.",
+      "injection_rate": null,
+      "num_candidates": null
+    },
+    {
+      "position": 22,
+      "node_id": "box_26",
+      "node_text": "Jog the conveyor slowly until a reference part reaches the end of line sensor and observe the sensor indicator light. Measure the distance from the part leading edge to the sensor face at the trigger point using a steel rule. Compare against the setpoint distance specified on the sensor setup drawing and adjust the bracket position if the trigger point is outside tolerance.",
+      "edge_labels": [],
+      "category": "unrelated_question",
+      "utterance": "Hey, before I continue with this, do you know if we're supposed to fill out a separate work order for the lubrication service on the transfer line, or does that get bundled into this PM?",
+      "injection_rate": null,
+      "num_candidates": null
+    }
+  ]
+}

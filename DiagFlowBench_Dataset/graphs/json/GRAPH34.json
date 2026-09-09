@@ -1,0 +1,246 @@
+{
+  "id": "GRAPH34",
+  "description": "Suction cup condition and vacuum level check — PROC-54",
+  "graph": {
+    "nodes": {
+      "box_0": {
+        "type": "terminator",
+        "text": "Start"
+      },
+      "box_1": {
+        "type": "process",
+        "text": "Complete the following checks: 1. Inspect the suction cup sealing face for cuts, abrasion, or permanent set. 2. Check the bellows body for cracks or delamination. 3. Inspect the cup mounting thread for cross threading or stripping."
+      },
+      "box_2": {
+        "type": "document",
+        "text": "Refer to the cup replacement interval schedule."
+      },
+      "box_3": {
+        "type": "decision",
+        "text": "Cup structural integrity acceptable?"
+      },
+      "box_4": {
+        "type": "terminator",
+        "text": "End, Replace cups: cracking or deformation detected"
+      },
+      "box_5": {
+        "type": "process",
+        "text": "With the vacuum system de energised, physically inspect every push to connect fitting and compression nut on the suction circuit from the generator to the cup ports. Tighten any loose fittings by hand plus a quarter turn. Check all tubing for kinks, cuts, or heat distortion that could cause partial flow restriction."
+      },
+      "box_6": {
+        "type": "process",
+        "text": "Press the suction cup firmly against a clean flat reference surface and start the vacuum generator. Using a calibrated vacuum gauge connected at the cup port, read the steady state vacuum level after five seconds. Record the value and compare against the minimum rated holding vacuum in the gripper specification. Note the time taken to reach steady state as an indicator of circuit leakage."
+      },
+      "box_7": {
+        "type": "decision",
+        "text": "Vacuum holding level within specification?"
+      },
+      "box_8": {
+        "type": "process",
+        "text": "Clean cup seating face and replace cup seal"
+      },
+      "box_9": {
+        "type": "decision",
+        "text": "Reverify vacuum level after seal replacement"
+      },
+      "box_10": {
+        "type": "terminator",
+        "text": "End, Escalate: vacuum generator fault suspected"
+      },
+      "box_11": {
+        "type": "process",
+        "text": "Connect a calibrated inline flow meter to the blow off supply upstream of the solenoid valve. Trigger a single blow off cycle and record peak flow rate in litres per minute. Compare the reading against the rated flow at the supply pressure shown on the regulator gauge. Repeat three times and average the results."
+      },
+      "box_12": {
+        "type": "document",
+        "text": "Refer to the vacuum system flow specification."
+      },
+      "box_13": {
+        "type": "decision",
+        "text": "Vacuum flow rate within rated range?"
+      },
+      "box_14": {
+        "type": "process",
+        "text": "Clean or replace flow restrictor fitting"
+      },
+      "box_15": {
+        "type": "process",
+        "text": "Using a photoelectric sensor or a stopwatch triggered from the solenoid valve signal, measure the elapsed time from blow off command to part clear of the cup. Record the release time and compare against the maximum permitted release time in the cycle specification. Unusually long release times indicate cup face contamination or low blow off flow."
+      },
+      "box_16": {
+        "type": "decision",
+        "text": "Part release cycle, 10 consecutive picks successful?"
+      },
+      "box_17": {
+        "type": "process",
+        "text": "Adjust pick cycle parameters, dwell time and vacuum delay"
+      },
+      "box_18": {
+        "type": "process",
+        "text": "Remove the blow off nozzle from the cup assembly and inspect the orifice for coolant deposits, swarf, or corrosion scaling. Soak the nozzle in warm detergent solution for five minutes, then clear the orifice with a wire of the correct gauge. Reinstall and test blow off flow before returning to service."
+      },
+      "box_19": {
+        "type": "decision",
+        "text": "Blow off pressure within range?"
+      },
+      "box_20": {
+        "type": "process",
+        "text": "Adjust blow off pressure regulator"
+      },
+      "box_21": {
+        "type": "process",
+        "text": "Log test results and update maintenance record"
+      },
+      "box_22": {
+        "type": "terminator",
+        "text": "End, Procedure complete"
+      },
+      "box_23": {
+        "type": "process",
+        "text": "Second seal replacement attempt: remove the suction cup body completely and replace the cup seal, the body O ring, and all push to connect fitting O rings in the vacuum circuit with new parts from a sealed service kit. Reconnect all fittings to the correct torque value and verify that no fitting is cross threaded before repeating the vacuum level test."
+      }
+    },
+    "edges": [
+      {
+        "source": "box_0",
+        "target": "box_1",
+        "label": null
+      },
+      {
+        "source": "box_1",
+        "target": "box_3",
+        "label": null
+      },
+      {
+        "source": "box_2",
+        "target": "box_3",
+        "label": null
+      },
+      {
+        "source": "box_3",
+        "target": "box_4",
+        "label": "No"
+      },
+      {
+        "source": "box_3",
+        "target": "box_7",
+        "label": "Yes"
+      },
+      {
+        "source": "box_5",
+        "target": "box_7",
+        "label": null
+      },
+      {
+        "source": "box_6",
+        "target": "box_7",
+        "label": null
+      },
+      {
+        "source": "box_7",
+        "target": "box_8",
+        "label": "No"
+      },
+      {
+        "source": "box_8",
+        "target": "box_9",
+        "label": null
+      },
+      {
+        "source": "box_9",
+        "target": "box_13",
+        "label": "OK"
+      },
+      {
+        "source": "box_7",
+        "target": "box_13",
+        "label": "Yes"
+      },
+      {
+        "source": "box_11",
+        "target": "box_13",
+        "label": null
+      },
+      {
+        "source": "box_12",
+        "target": "box_13",
+        "label": null
+      },
+      {
+        "source": "box_13",
+        "target": "box_14",
+        "label": "No"
+      },
+      {
+        "source": "box_14",
+        "target": "box_15",
+        "label": ""
+      },
+      {
+        "source": "box_13",
+        "target": "box_16",
+        "label": "Yes"
+      },
+      {
+        "source": "box_15",
+        "target": "box_16",
+        "label": null
+      },
+      {
+        "source": "box_16",
+        "target": "box_17",
+        "label": "No"
+      },
+      {
+        "source": "box_17",
+        "target": "box_21",
+        "label": null
+      },
+      {
+        "source": "box_16",
+        "target": "box_19",
+        "label": "Yes"
+      },
+      {
+        "source": "box_18",
+        "target": "box_19",
+        "label": null
+      },
+      {
+        "source": "box_19",
+        "target": "box_20",
+        "label": "No"
+      },
+      {
+        "source": "box_20",
+        "target": "box_21",
+        "label": null
+      },
+      {
+        "source": "box_19",
+        "target": "box_21",
+        "label": "Yes"
+      },
+      {
+        "source": "box_21",
+        "target": "box_22",
+        "label": null
+      },
+      {
+        "source": "box_9",
+        "target": "box_23",
+        "label": "Still low"
+      },
+      {
+        "source": "box_23",
+        "target": "box_9",
+        "label": null
+      },
+      {
+        "source": "box_9",
+        "target": "box_10",
+        "label": "Unresolvable after second attempt"
+      }
+    ]
+  }
+}

@@ -1,0 +1,396 @@
+{
+  "conversation_id": "GRAPH11_P017_base_mixed",
+  "graph_id": "GRAPH11",
+  "path_id": "GRAPH11_P017",
+  "regime": "mixed",
+  "variant": "base",
+  "robustness_axis": null,
+  "turns": [
+    {
+      "node_id": "box_0",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Starting pressing station diagnostic procedure.",
+      "edge_label_to_next": null,
+      "turn_index": 0,
+      "ground_truth": {
+        "node_id": "box_0",
+        "node_type": "terminator",
+        "node_text": "Start"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Does the input material meet quality specification?",
+      "edge_label_to_next": null,
+      "turn_index": 1,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "decision",
+        "node_text": "Does the input material meet quality specification?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, I've inspected the input material and it meets all quality specifications.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 2,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "decision",
+        "node_text": "Does the input material meet quality specification?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_4",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the indexing table correctly positioned?",
+      "edge_label_to_next": null,
+      "turn_index": 3,
+      "ground_truth": {
+        "node_id": "box_4",
+        "node_type": "decision",
+        "node_text": "Is the indexing table correctly positioned?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_4",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "The indexing table is correctly positioned relative to the part mounting inserts, no over-rotation detected.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 4,
+      "ground_truth": {
+        "node_id": "box_4",
+        "node_type": "decision",
+        "node_text": "Is the indexing table correctly positioned?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_7",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the part correctly placed on the insert?",
+      "edge_label_to_next": null,
+      "turn_index": 5,
+      "ground_truth": {
+        "node_id": "box_7",
+        "node_type": "decision",
+        "node_text": "Is the part correctly placed on the insert?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_7",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, the part is lightly pressed into the insert and seated properly without any looseness or tilt.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 6,
+      "ground_truth": {
+        "node_id": "box_7",
+        "node_type": "decision",
+        "node_text": "Is the part correctly placed on the insert?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_10",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is part mounting correct?",
+      "edge_label_to_next": null,
+      "turn_index": 7,
+      "ground_truth": {
+        "node_id": "box_10",
+        "node_type": "decision",
+        "node_text": "Is part mounting correct?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_10",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "The mounting looks okay, but I'm seeing some unusual scoring marks on the shaft bearing surface that aren't mentioned in any of the checks here.",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "undocumented_malfunction",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_10",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, the part is mounted straight and at the correct height, not tilted on the fixture or resting in the indexing table.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 8,
+      "ground_truth": {
+        "node_id": "box_10",
+        "node_type": "decision",
+        "node_text": "Is part mounting correct?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_13",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the vacuum detection tilted part control functioning correctly?",
+      "edge_label_to_next": null,
+      "turn_index": 9,
+      "ground_truth": {
+        "node_id": "box_13",
+        "node_type": "decision",
+        "node_text": "Is the vacuum detection \"tilted part control\" functioning correctly?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_13",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "The vacuum isn't holding the part securely, and the suction force appears to be insufficient.",
+      "edge_label_to_next": "No",
+      "turn_index": 10,
+      "ground_truth": {
+        "node_id": "box_13",
+        "node_type": "decision",
+        "node_text": "Is the vacuum detection \"tilted part control\" functioning correctly?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_15",
+      "node_type": "document",
+      "speaker": "system",
+      "utterance": "Please consult the vacuum part present detection diagnostic document.",
+      "edge_label_to_next": null,
+      "turn_index": 11,
+      "ground_truth": {
+        "node_id": "box_15",
+        "node_type": "document",
+        "node_text": "Vacuum part present detection diagnostic"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_15",
+      "node_type": "document",
+      "speaker": "operator",
+      "utterance": "I've reviewed the vacuum part present detection diagnostic document.",
+      "edge_label_to_next": null,
+      "turn_index": 12,
+      "ground_truth": {
+        "node_id": "box_15",
+        "node_type": "document",
+        "node_text": "Vacuum part present detection diagnostic"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    }
+  ],
+  "metadata": {
+    "depth": 7,
+    "num_decisions": 5,
+    "num_processes": 0,
+    "num_documents": 1,
+    "terminator_type": "procedure_complete",
+    "terminator_text": "Vacuum part present detection diagnostic",
+    "true_terminator": false,
+    "node_sequence": [
+      "box_0",
+      "box_1",
+      "box_4",
+      "box_7",
+      "box_10",
+      "box_13",
+      "box_15"
+    ],
+    "edge_labels": [
+      null,
+      null,
+      "Yes",
+      "Yes",
+      "Yes",
+      "Yes",
+      "No"
+    ],
+    "decision_points": [
+      {
+        "node": "box_1",
+        "label": "Yes",
+        "question": "Does the input material meet quality specification?"
+      },
+      {
+        "node": "box_4",
+        "label": "Yes",
+        "question": "Is the indexing table correctly positioned?"
+      },
+      {
+        "node": "box_7",
+        "label": "Yes",
+        "question": "Is the part correctly placed on the insert?"
+      },
+      {
+        "node": "box_10",
+        "label": "Yes",
+        "question": "Is part mounting correct?"
+      },
+      {
+        "node": "box_13",
+        "label": "No",
+        "question": "Is the vacuum detection \"tilted part control\" functioning correctly?"
+      }
+    ],
+    "generation_model": "anthropic/claude-sonnet-4-5",
+    "verification": {
+      "verified": true,
+      "issues": [],
+      "corrected_turns": [
+        {
+          "node_id": "box_0",
+          "node_type": "terminator",
+          "speaker": "system",
+          "utterance": "Starting pressing station diagnostic procedure.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_1",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Does the input material meet quality specification?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_1",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Yes, I've inspected the input material and it meets all quality specifications.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_4",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is the indexing table correctly positioned?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_4",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "The indexing table is correctly positioned relative to the part mounting inserts, no over-rotation detected.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_7",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is the part correctly placed on the insert?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_7",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Yes, the part is lightly pressed into the insert and seated properly without any looseness or tilt.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_10",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is part mounting correct?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_10",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Yes, the part is mounted straight and at the correct height, not tilted on the fixture or resting in the indexing table.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_13",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is the vacuum detection tilted part control functioning correctly?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_13",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "The vacuum isn't holding the part securely, and the suction force appears to be insufficient.",
+          "edge_label_to_next": "No"
+        },
+        {
+          "node_id": "box_15",
+          "node_type": "document",
+          "speaker": "system",
+          "utterance": "Please consult the vacuum part present detection diagnostic document.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_15",
+          "node_type": "document",
+          "speaker": "operator",
+          "utterance": "I've reviewed the vacuum part present detection diagnostic document.",
+          "edge_label_to_next": null
+        }
+      ]
+    },
+    "injection_count": 1
+  },
+  "injection_log": [
+    {
+      "position": 8,
+      "node_id": "box_10",
+      "node_text": "Is part mounting correct?",
+      "edge_labels": [
+        "No",
+        "Yes"
+      ],
+      "category": "undocumented_malfunction",
+      "utterance": "The mounting looks okay, but I'm seeing some unusual scoring marks on the shaft bearing surface that aren't mentioned in any of the checks here.",
+      "injection_rate": null,
+      "num_candidates": null
+    }
+  ]
+}

@@ -1,0 +1,320 @@
+{
+  "id": "GRAPH19",
+  "description": "Diagnostic flowchart for faults when placing a part into a reorientation mechanism.",
+  "graph": {
+    "nodes": {
+      "box_0": {
+        "type": "terminator",
+        "text": "Start"
+      },
+      "box_1": {
+        "type": "decision",
+        "text": "Does the product meet quality specification?"
+      },
+      "box_2": {
+        "type": "process",
+        "text": "Check the input part for correct shape and absence of burrs."
+      },
+      "box_3": {
+        "type": "process",
+        "text": "Remove the non conforming input batch and reload with parts that meet the required quality specification."
+      },
+      "box_4": {
+        "type": "decision",
+        "text": "Is picking up part from tray correct?"
+      },
+      "box_5": {
+        "type": "process",
+        "text": "Follow the input slide pickup diagnostic (GRAPH 17)."
+      },
+      "box_6": {
+        "type": "document",
+        "text": "Input slide pickup diagnostic (GRAPH 17)"
+      },
+      "box_7": {
+        "type": "decision",
+        "text": "Is picking up part from puck correct?"
+      },
+      "box_8": {
+        "type": "process",
+        "text": "Follow the part pickup from carrier puck diagnostic procedure."
+      },
+      "box_9": {
+        "type": "document",
+        "text": "Part pickup from carrier puck: diagnostic procedure reference."
+      },
+      "box_10": {
+        "type": "decision",
+        "text": "Are there contaminated parts?"
+      },
+      "box_11": {
+        "type": "process",
+        "text": "Complete the following checks: 1. Check the guide, fixtures, and optical sensor of the part transfer holder. 2. Check the rotation mechanism, bearings, fixtures, and vacuum system of the reorientation mechanism."
+      },
+      "box_12": {
+        "type": "process",
+        "text": "Clean the contaminated parts and lubricate the actuator guide"
+      },
+      "box_13": {
+        "type": "decision",
+        "text": "Are there electrical defects?"
+      },
+      "box_14": {
+        "type": "process",
+        "text": "Complete the following checks: 1. Check the height proximity sensor and vacuum valve of the reorientation mechanism. 2. Check the height proximity sensor, mounting cylinder valve, and part present proximity sensor of the part transfer holder. 3. Check the position indicators of the reversing actuator."
+      },
+      "box_15": {
+        "type": "process",
+        "text": "Adjust or replace the defective electrical component identified in the inspection (proximity sensor, valve, or position indicator)."
+      },
+      "box_16": {
+        "type": "decision",
+        "text": "Are there worn parts?"
+      },
+      "box_17": {
+        "type": "process",
+        "text": "Complete the following checks: 1. Check the rotation mechanism, rotation actuator, and associated valve of the reorientation mechanism. 2. Check the mounting actuator and its valve. 3. Check the fixtures of the part transfer holder and the reorientation mechanism."
+      },
+      "box_18": {
+        "type": "process",
+        "text": "Replace the worn components identified in the inspection (rotation mechanism, rotation actuator, mounting actuator, and/or fixture)."
+      },
+      "box_19": {
+        "type": "decision",
+        "text": "Are the stops of the reorientation mechanism correctly adjusted?"
+      },
+      "box_20": {
+        "type": "document",
+        "text": "Refer to the reorientation mechanism stop adjustment for variant A machines (small format parts)."
+      },
+      "box_21": {
+        "type": "document",
+        "text": "Refer to the reorientation mechanism stop adjustment for variant B machines (medium format parts)."
+      },
+      "box_22": {
+        "type": "document",
+        "text": "Refer to the reorientation mechanism stop adjustment for variant C machines (large format parts)."
+      },
+      "box_23": {
+        "type": "decision",
+        "text": "Are the stops of the reorientation mechanism correctly adjusted?"
+      },
+      "box_24": {
+        "type": "document",
+        "text": "Refer to the reorientation mechanism stop adjustment for variant A machines (small format parts)."
+      },
+      "box_25": {
+        "type": "document",
+        "text": "Refer to the reorientation mechanism stop adjustment for variant B machines (medium format parts)."
+      },
+      "box_26": {
+        "type": "document",
+        "text": "Refer to the reorientation mechanism stop adjustment for variant C machines (large format parts)."
+      },
+      "box_27": {
+        "type": "process",
+        "text": "Adjust the stops of the reorientation mechanism to the correct position per the process specification for the current machine variant."
+      },
+      "box_28": {
+        "type": "decision",
+        "text": "Are the stops of the part transfer holder correctly adjusted?"
+      },
+      "box_29": {
+        "type": "document",
+        "text": "Refer to the part transfer holder stop adjustment for variant A machines (small format parts)."
+      },
+      "box_30": {
+        "type": "document",
+        "text": "Refer to the part transfer holder stop adjustment for variant B machines (medium format parts)."
+      },
+      "box_31": {
+        "type": "document",
+        "text": "Refer to the part transfer holder stop adjustment for variant C machines (large format parts)."
+      },
+      "box_32": {
+        "type": "process",
+        "text": "Adjust the stops of the part transfer holder to the correct position per the process specification for the current machine variant."
+      },
+      "box_33": {
+        "type": "process",
+        "text": "Verify that parts are picked up centred under the vacuum end effectors and are not dropped during transport."
+      },
+      "box_34": {
+        "type": "terminator",
+        "text": "Placing part in reorientation mechanism (input) is correct"
+      }
+    },
+    "edges": [
+      {
+        "source": "box_0",
+        "target": "box_1",
+        "label": null
+      },
+      {
+        "source": "box_2",
+        "target": "box_1",
+        "label": null
+      },
+      {
+        "source": "box_1",
+        "target": "box_3",
+        "label": "No"
+      },
+      {
+        "source": "box_1",
+        "target": "box_4",
+        "label": "Yes"
+      },
+      {
+        "source": "box_5",
+        "target": "box_4",
+        "label": null
+      },
+      {
+        "source": "box_4",
+        "target": "box_6",
+        "label": "No"
+      },
+      {
+        "source": "box_4",
+        "target": "box_7",
+        "label": "Yes"
+      },
+      {
+        "source": "box_8",
+        "target": "box_7",
+        "label": null
+      },
+      {
+        "source": "box_7",
+        "target": "box_9",
+        "label": "No"
+      },
+      {
+        "source": "box_7",
+        "target": "box_10",
+        "label": "Yes"
+      },
+      {
+        "source": "box_11",
+        "target": "box_10",
+        "label": null
+      },
+      {
+        "source": "box_10",
+        "target": "box_12",
+        "label": "Yes"
+      },
+      {
+        "source": "box_10",
+        "target": "box_13",
+        "label": "No"
+      },
+      {
+        "source": "box_14",
+        "target": "box_13",
+        "label": null
+      },
+      {
+        "source": "box_13",
+        "target": "box_15",
+        "label": "Yes"
+      },
+      {
+        "source": "box_13",
+        "target": "box_16",
+        "label": "No"
+      },
+      {
+        "source": "box_17",
+        "target": "box_16",
+        "label": null
+      },
+      {
+        "source": "box_16",
+        "target": "box_18",
+        "label": "Yes"
+      },
+      {
+        "source": "box_16",
+        "target": "box_19",
+        "label": "No"
+      },
+      {
+        "source": "box_20",
+        "target": "box_19",
+        "label": null
+      },
+      {
+        "source": "box_21",
+        "target": "box_19",
+        "label": null
+      },
+      {
+        "source": "box_22",
+        "target": "box_19",
+        "label": null
+      },
+      {
+        "source": "box_24",
+        "target": "box_23",
+        "label": null
+      },
+      {
+        "source": "box_25",
+        "target": "box_23",
+        "label": null
+      },
+      {
+        "source": "box_26",
+        "target": "box_23",
+        "label": null
+      },
+      {
+        "source": "box_23",
+        "target": "box_27",
+        "label": null
+      },
+      {
+        "source": "box_23",
+        "target": "box_28",
+        "label": "Yes"
+      },
+      {
+        "source": "box_29",
+        "target": "box_28",
+        "label": null
+      },
+      {
+        "source": "box_30",
+        "target": "box_28",
+        "label": null
+      },
+      {
+        "source": "box_31",
+        "target": "box_28",
+        "label": null
+      },
+      {
+        "source": "box_28",
+        "target": "box_32",
+        "label": null
+      },
+      {
+        "source": "box_28",
+        "target": "box_34",
+        "label": null
+      },
+      {
+        "source": "box_33",
+        "target": "box_34",
+        "label": null
+      },
+      {
+        "source": "box_19",
+        "target": "box_23",
+        "label": null
+      }
+    ]
+  }
+}

@@ -1,0 +1,717 @@
+{
+  "conversation_id": "GRAPH41_P001_noise_perturbation",
+  "graph_id": "GRAPH41",
+  "path_id": "GRAPH41_P001",
+  "regime": "clean",
+  "variant": "noise_perturbation",
+  "robustness_axis": "noise_perturbation",
+  "turns": [
+    {
+      "node_id": "box_0",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Starting laser marking system diagnostic procedure.",
+      "edge_label_to_next": null,
+      "turn_index": 0,
+      "ground_truth": {
+        "node_id": "box_0",
+        "node_type": "terminator",
+        "node_text": "Start"
+      }
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Please complete the following checks: First, inspect the protective window and lens for spatter pitting or residue. Second, check the beam path enclosure for damage or contamination ingress. Third, inspect the lens mounting ring for looseness or mechanical damage.",
+      "edge_label_to_next": null,
+      "turn_index": 1,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Inspect the protective window and lens for spatter pitting or residue. 2. Check the beam path enclosure for damage or contamination ingress. 3. Inspect the lens mounting ring for looseness or mechanical damage."
+      }
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "all three checks done. protective window and lens clear, beam path enclosure intact, mounting ring secure",
+      "edge_label_to_next": null,
+      "turn_index": 2,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Inspect the protective window and lens for spatter pitting or residue. 2. Check the beam path enclosure for damage or contamination ingress. 3. Inspect the lens mounting ring for looseness or mechanical damage."
+      }
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the lens or beam path window scratched, chipped or contaminated?",
+      "edge_label_to_next": null,
+      "turn_index": 3,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Lens or beam path window scratched, chipped or contaminated?"
+      }
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no both lens and window good condition no scratches chips or contaminaton",
+      "edge_label_to_next": "No",
+      "turn_index": 4,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Lens or beam path window scratched, chipped or contaminated?"
+      }
+    },
+    {
+      "node_id": "box_7",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the laser head temperature within the rated operating range?",
+      "edge_label_to_next": null,
+      "turn_index": 5,
+      "ground_truth": {
+        "node_id": "box_7",
+        "node_type": "decision",
+        "node_text": "Laser head temperature within rated operating range?"
+      }
+    },
+    {
+      "node_id": "box_7",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yeah thermal sensor readings show laser head temp within spec range",
+      "edge_label_to_next": "Yes",
+      "turn_index": 6,
+      "ground_truth": {
+        "node_id": "box_7",
+        "node_type": "decision",
+        "node_text": "Laser head temperature within rated operating range?"
+      }
+    },
+    {
+      "node_id": "box_11",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the beam centred within 0.1 mm of field centre?",
+      "edge_label_to_next": null,
+      "turn_index": 7,
+      "ground_truth": {
+        "node_id": "box_11",
+        "node_type": "decision",
+        "node_text": "Beam centred within 0.1 mm of field centre?"
+      }
+    },
+    {
+      "node_id": "box_11",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yes burn mark on thermal paper well centered within tolerance of ref point",
+      "edge_label_to_next": "Yes",
+      "turn_index": 8,
+      "ground_truth": {
+        "node_id": "box_11",
+        "node_type": "decision",
+        "node_text": "Beam centred within 0.1 mm of field centre?"
+      }
+    },
+    {
+      "node_id": "box_17",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the output power within ±5% of rated value at 100% duty cycle?",
+      "edge_label_to_next": null,
+      "turn_index": 9,
+      "ground_truth": {
+        "node_id": "box_17",
+        "node_type": "decision",
+        "node_text": "Output power within ±5% of rated value at 100% duty cycle?"
+      }
+    },
+    {
+      "node_id": "box_17",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yes power meter reading within spec only 2% below rated value",
+      "edge_label_to_next": "Yes",
+      "turn_index": 10,
+      "ground_truth": {
+        "node_id": "box_17",
+        "node_type": "decision",
+        "node_text": "Output power within ±5% of rated value at 100% duty cycle?"
+      }
+    },
+    {
+      "node_id": "box_23",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the pulse frequency stable at all programmed values?",
+      "edge_label_to_next": null,
+      "turn_index": 11,
+      "ground_truth": {
+        "node_id": "box_23",
+        "node_type": "decision",
+        "node_text": "Pulse frequency stable at all programmed values?"
+      }
+    },
+    {
+      "node_id": "box_23",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yeah scope shows stable trigger pulses with freq deviation well under 0.5%",
+      "edge_label_to_next": "Yes",
+      "turn_index": 12,
+      "ground_truth": {
+        "node_id": "box_23",
+        "node_type": "decision",
+        "node_text": "Pulse frequency stable at all programmed values?"
+      }
+    },
+    {
+      "node_id": "box_27",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the focal point at the correct working distance ±0.2 mm?",
+      "edge_label_to_next": null,
+      "turn_index": 13,
+      "ground_truth": {
+        "node_id": "box_27",
+        "node_type": "decision",
+        "node_text": "Focal point at correct working distance ±0.2 mm?"
+      }
+    },
+    {
+      "node_id": "box_27",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no optimal focus offset by approx 0.4mm from stored paramter value",
+      "edge_label_to_next": "No",
+      "turn_index": 14,
+      "ground_truth": {
+        "node_id": "box_27",
+        "node_type": "decision",
+        "node_text": "Focal point at correct working distance ±0.2 mm?"
+      }
+    },
+    {
+      "node_id": "box_28",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Please adjust the z axis focus offset in the marking controller to correct the focal position.",
+      "edge_label_to_next": null,
+      "turn_index": 15,
+      "ground_truth": {
+        "node_id": "box_28",
+        "node_type": "process",
+        "node_text": "Adjust z axis focus offset in marking controller"
+      }
+    },
+    {
+      "node_id": "box_28",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "focus offset adjusted and saved in controller",
+      "edge_label_to_next": "",
+      "turn_index": 16,
+      "ground_truth": {
+        "node_id": "box_28",
+        "node_type": "process",
+        "node_text": "Adjust z axis focus offset in marking controller"
+      }
+    },
+    {
+      "node_id": "box_29",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Hold a calibrated anemometer probe at the extraction port inlet while the extraction unit is running. Record the air velocity and calculate the volumetric flow rate from the duct cross sectional area, then compare it against the minimum specified for this laser power class.",
+      "edge_label_to_next": null,
+      "turn_index": 17,
+      "ground_truth": {
+        "node_id": "box_29",
+        "node_type": "process",
+        "node_text": "Hold a calibrated anemometer probe at the extraction port inlet while the extraction unit is running at the operating duty cycle. Record the air velocity in metres per second and calculate volumetric flow rate from the duct cross sectional area. Compare against the minimum extraction flow rate specified for this laser power class in the safety datasheet."
+      }
+    },
+    {
+      "node_id": "box_29",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "air velocity measured and flow rate calculated recorded the values for comparison",
+      "edge_label_to_next": null,
+      "turn_index": 18,
+      "ground_truth": {
+        "node_id": "box_29",
+        "node_type": "process",
+        "node_text": "Hold a calibrated anemometer probe at the extraction port inlet while the extraction unit is running at the operating duty cycle. Record the air velocity in metres per second and calculate volumetric flow rate from the duct cross sectional area. Compare against the minimum extraction flow rate specified for this laser power class in the safety datasheet."
+      }
+    },
+    {
+      "node_id": "box_31",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the extraction flow rate above the minimum required value?",
+      "edge_label_to_next": null,
+      "turn_index": 19,
+      "ground_truth": {
+        "node_id": "box_31",
+        "node_type": "decision",
+        "node_text": "Extraction flow rate above minimum required value?"
+      }
+    },
+    {
+      "node_id": "box_31",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no flow rate below minimum looks like filter may be clogged",
+      "edge_label_to_next": "No",
+      "turn_index": 20,
+      "ground_truth": {
+        "node_id": "box_31",
+        "node_type": "decision",
+        "node_text": "Extraction flow rate above minimum required value?"
+      }
+    },
+    {
+      "node_id": "box_32",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Replace the extraction filter cartridge and recheck the flow rate.",
+      "edge_label_to_next": null,
+      "turn_index": 21,
+      "ground_truth": {
+        "node_id": "box_32",
+        "node_type": "process",
+        "node_text": "Replace extraction filter cartridge and recheck flow"
+      }
+    },
+    {
+      "node_id": "box_32",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "filter cartrdige replaced and flow rechecked flow rate now acceptable",
+      "edge_label_to_next": "",
+      "turn_index": 22,
+      "ground_truth": {
+        "node_id": "box_32",
+        "node_type": "process",
+        "node_text": "Replace extraction filter cartridge and recheck flow"
+      }
+    },
+    {
+      "node_id": "box_33",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Remove the scan head cover and inspect each galvo mirror surface under a torch at grazing incidence for dust, spatter deposits, or surface oxidation. Blow clean with dry compressed air through the scan head purge port. Do not touch the mirror surfaces.",
+      "edge_label_to_next": null,
+      "turn_index": 23,
+      "ground_truth": {
+        "node_id": "box_33",
+        "node_type": "process",
+        "node_text": "Remove the scan head cover and inspect each galvo mirror surface under a torch at grazing incidence for dust, spatter deposits, or surface oxidation. Blow clean with dry compressed air through the scan head purge port. Do not touch mirror surfaces; if spatter deposits are found that cannot be cleared by air, log the condition and schedule mirror replacement at the next planned maintenance window."
+      }
+    },
+    {
+      "node_id": "box_33",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "scan head cover removed mirrors inspected and cleaned with compressed air",
+      "edge_label_to_next": null,
+      "turn_index": 24,
+      "ground_truth": {
+        "node_id": "box_33",
+        "node_type": "process",
+        "node_text": "Remove the scan head cover and inspect each galvo mirror surface under a torch at grazing incidence for dust, spatter deposits, or surface oxidation. Blow clean with dry compressed air through the scan head purge port. Do not touch mirror surfaces; if spatter deposits are found that cannot be cleared by air, log the condition and schedule mirror replacement at the next planned maintenance window."
+      }
+    },
+    {
+      "node_id": "box_34",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Are the galvo mirror surfaces clean and undamaged?",
+      "edge_label_to_next": null,
+      "turn_index": 25,
+      "ground_truth": {
+        "node_id": "box_34",
+        "node_type": "decision",
+        "node_text": "Galvo mirror surfaces clean and undamaged?"
+      }
+    },
+    {
+      "node_id": "box_34",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no can still see some spatter deposits on mirrors didnt come off with compressed air",
+      "edge_label_to_next": "No",
+      "turn_index": 26,
+      "ground_truth": {
+        "node_id": "box_34",
+        "node_type": "decision",
+        "node_text": "Galvo mirror surfaces clean and undamaged?"
+      }
+    },
+    {
+      "node_id": "box_35",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Clean the galvo mirrors using the specialist mirror cleaning procedure.",
+      "edge_label_to_next": null,
+      "turn_index": 27,
+      "ground_truth": {
+        "node_id": "box_35",
+        "node_type": "process",
+        "node_text": "Clean galvo mirrors using specialist mirror cleaning procedure"
+      }
+    },
+    {
+      "node_id": "box_35",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "ok so mirrors cleaned using specialist procedure now clear and free of deposits",
+      "edge_label_to_next": "",
+      "turn_index": 28,
+      "ground_truth": {
+        "node_id": "box_35",
+        "node_type": "process",
+        "node_text": "Clean galvo mirrors using specialist mirror cleaning procedure"
+      }
+    },
+    {
+      "node_id": "box_36",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Load the standard reference substrate into the marking fixture and run the standard test mark program. Inspect the produced marks under a reference illumination source and confirm that line width, depth, and contrast meet specification. Document the substrate lot number and test result in the laser log.",
+      "edge_label_to_next": null,
+      "turn_index": 29,
+      "ground_truth": {
+        "node_id": "box_36",
+        "node_type": "process",
+        "node_text": "Load the standard reference substrate into the marking fixture and run the standard test mark program. Inspect the produced marks under a reference illumination source and confirm that line width, depth, and contrast are within the limits recorded on the product mark quality standard. Document the substrate lot number and the test result in the laser log."
+      }
+    },
+    {
+      "node_id": "box_36",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "test marks completed and inspected all parameters look good logged results with substrate lot number",
+      "edge_label_to_next": null,
+      "turn_index": 30,
+      "ground_truth": {
+        "node_id": "box_36",
+        "node_type": "process",
+        "node_text": "Load the standard reference substrate into the marking fixture and run the standard test mark program. Inspect the produced marks under a reference illumination source and confirm that line width, depth, and contrast are within the limits recorded on the product mark quality standard. Document the substrate lot number and the test result in the laser log."
+      }
+    },
+    {
+      "node_id": "box_38",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Are all 10 test marks within depth, width and contrast specification?",
+      "edge_label_to_next": null,
+      "turn_index": 31,
+      "ground_truth": {
+        "node_id": "box_38",
+        "node_type": "decision",
+        "node_text": "All 10 test marks within depth, width and contrast specification?"
+      }
+    },
+    {
+      "node_id": "box_38",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yeah all ten marks within spec for depth width and contrast",
+      "edge_label_to_next": "Yes",
+      "turn_index": 32,
+      "ground_truth": {
+        "node_id": "box_38",
+        "node_type": "decision",
+        "node_text": "All 10 test marks within depth, width and contrast specification?"
+      }
+    },
+    {
+      "node_id": "box_44",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Are all 9 calibration grid points within ±0.05 mm of nominal?",
+      "edge_label_to_next": null,
+      "turn_index": 33,
+      "ground_truth": {
+        "node_id": "box_44",
+        "node_type": "decision",
+        "node_text": "All 9 calibration grid points within ±0.05 mm of nominal?"
+      }
+    },
+    {
+      "node_id": "box_44",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no several grid points showing residual errors exceeding the 0.05mm tolerance",
+      "edge_label_to_next": "No",
+      "turn_index": 34,
+      "ground_truth": {
+        "node_id": "box_44",
+        "node_type": "decision",
+        "node_text": "All 9 calibration grid points within ±0.05 mm of nominal?"
+      }
+    },
+    {
+      "node_id": "box_45",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Navigate to the field distortion correction menu in the marking software. Place the field calibration target on the work surface at nominal focal distance, then run the correction routine and verify the residual field error is within tolerance.",
+      "edge_label_to_next": null,
+      "turn_index": 35,
+      "ground_truth": {
+        "node_id": "box_45",
+        "node_type": "process",
+        "node_text": "Complete the following steps: 1. Navigate to the field distortion correction menu in the marking software. 2. Place the field calibration target on the work surface at nominal focal distance. 3. Run the correction routine and verify residual field error is within tolerance."
+      }
+    },
+    {
+      "node_id": "box_45",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "field distortion correction routine completed residual errors now within tolerance",
+      "edge_label_to_next": "",
+      "turn_index": 36,
+      "ground_truth": {
+        "node_id": "box_45",
+        "node_type": "process",
+        "node_text": "Complete the following steps: 1. Navigate to the field distortion correction menu in the marking software. 2. Place the field calibration target on the work surface at nominal focal distance. 3. Run the correction routine and verify residual field error is within tolerance."
+      }
+    },
+    {
+      "node_id": "box_46",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Load five consecutive production parts and run the production marking program at normal production parameters. Inspect each mark immediately after completion for completeness, position, contrast, and absence of spatter. Record the part serial numbers and pass or fail result for each.",
+      "edge_label_to_next": null,
+      "turn_index": 37,
+      "ground_truth": {
+        "node_id": "box_46",
+        "node_type": "process",
+        "node_text": "Load five consecutive production parts and run the production marking program at normal production parameters. Inspect each mark immediately after completion for completeness, position, contrast, and absence of spatter. Record the part serial numbers and the pass or fail result for each; any fail at this stage requires recalibration before production release."
+      }
+    },
+    {
+      "node_id": "box_46",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "all five production parts marked and inspected serial numbers and results recorded",
+      "edge_label_to_next": null,
+      "turn_index": 38,
+      "ground_truth": {
+        "node_id": "box_46",
+        "node_type": "process",
+        "node_text": "Load five consecutive production parts and run the production marking program at normal production parameters. Inspect each mark immediately after completion for completeness, position, contrast, and absence of spatter. Record the part serial numbers and the pass or fail result for each; any fail at this stage requires recalibration before production release."
+      }
+    },
+    {
+      "node_id": "box_47",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Do the production samples meet the drawing marking requirements?",
+      "edge_label_to_next": null,
+      "turn_index": 39,
+      "ground_truth": {
+        "node_id": "box_47",
+        "node_type": "decision",
+        "node_text": "Production samples meet drawing marking requirements?"
+      }
+    },
+    {
+      "node_id": "box_47",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yes all five samples meet drawing requirements marks complete properly positioned and good contrast",
+      "edge_label_to_next": "Yes",
+      "turn_index": 40,
+      "ground_truth": {
+        "node_id": "box_47",
+        "node_type": "decision",
+        "node_text": "Production samples meet drawing marking requirements?"
+      }
+    },
+    {
+      "node_id": "box_48",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Please log all power, alignment and calibration data in the maintenance record.",
+      "edge_label_to_next": null,
+      "turn_index": 41,
+      "ground_truth": {
+        "node_id": "box_48",
+        "node_type": "process",
+        "node_text": "Log all power, alignment and calibration data"
+      }
+    },
+    {
+      "node_id": "box_48",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "all data logged in maintenace system",
+      "edge_label_to_next": null,
+      "turn_index": 42,
+      "ground_truth": {
+        "node_id": "box_48",
+        "node_type": "process",
+        "node_text": "Log all power, alignment and calibration data"
+      }
+    },
+    {
+      "node_id": "box_49",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Diagnostic procedure complete. The laser marking system has passed all checks and is cleared for production.",
+      "edge_label_to_next": null,
+      "turn_index": 43,
+      "ground_truth": {
+        "node_id": "box_49",
+        "node_type": "terminator",
+        "node_text": "End, Procedure complete"
+      }
+    },
+    {
+      "node_id": "box_49",
+      "node_type": "terminator",
+      "speaker": "operator",
+      "utterance": "understood system ready for production",
+      "edge_label_to_next": null,
+      "turn_index": 44,
+      "ground_truth": {
+        "node_id": "box_49",
+        "node_type": "terminator",
+        "node_text": "End, Procedure complete"
+      }
+    }
+  ],
+  "metadata": {
+    "depth": 23,
+    "num_decisions": 11,
+    "num_processes": 10,
+    "num_documents": 0,
+    "terminator_type": "procedure_complete",
+    "terminator_text": "End, Procedure complete",
+    "true_terminator": true,
+    "node_sequence": [
+      "box_0",
+      "box_1",
+      "box_2",
+      "box_7",
+      "box_11",
+      "box_17",
+      "box_23",
+      "box_27",
+      "box_28",
+      "box_29",
+      "box_31",
+      "box_32",
+      "box_33",
+      "box_34",
+      "box_35",
+      "box_36",
+      "box_38",
+      "box_44",
+      "box_45",
+      "box_46",
+      "box_47",
+      "box_48",
+      "box_49"
+    ],
+    "edge_labels": [
+      null,
+      null,
+      null,
+      "No",
+      "Yes",
+      "Yes",
+      "Yes",
+      "Yes",
+      "No",
+      "",
+      null,
+      "No",
+      "",
+      null,
+      "No",
+      "",
+      null,
+      "Yes",
+      "No",
+      "",
+      null,
+      "Yes",
+      null
+    ],
+    "decision_points": [
+      {
+        "node": "box_2",
+        "label": "No",
+        "question": "Lens or beam path window scratched, chipped or contaminated?"
+      },
+      {
+        "node": "box_7",
+        "label": "Yes",
+        "question": "Laser head temperature within rated operating range?"
+      },
+      {
+        "node": "box_11",
+        "label": "Yes",
+        "question": "Beam centred within 0.1 mm of field centre?"
+      },
+      {
+        "node": "box_17",
+        "label": "Yes",
+        "question": "Output power within ±5% of rated value at 100% duty cycle?"
+      },
+      {
+        "node": "box_23",
+        "label": "Yes",
+        "question": "Pulse frequency stable at all programmed values?"
+      },
+      {
+        "node": "box_27",
+        "label": "No",
+        "question": "Focal point at correct working distance ±0.2 mm?"
+      },
+      {
+        "node": "box_31",
+        "label": "No",
+        "question": "Extraction flow rate above minimum required value?"
+      },
+      {
+        "node": "box_34",
+        "label": "No",
+        "question": "Galvo mirror surfaces clean and undamaged?"
+      },
+      {
+        "node": "box_38",
+        "label": "Yes",
+        "question": "All 10 test marks within depth, width and contrast specification?"
+      },
+      {
+        "node": "box_44",
+        "label": "No",
+        "question": "All 9 calibration grid points within ±0.05 mm of nominal?"
+      },
+      {
+        "node": "box_47",
+        "label": "Yes",
+        "question": "Production samples meet drawing marking requirements?"
+      }
+    ],
+    "generation_model": "anthropic/claude-sonnet-4-5",
+    "verification": {
+      "variant_of": "base",
+      "base_verified": true,
+      "note": "surface-form variant; not independently verified"
+    }
+  }
+}

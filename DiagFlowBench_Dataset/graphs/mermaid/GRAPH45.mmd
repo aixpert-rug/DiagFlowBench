@@ -1,0 +1,85 @@
+flowchart TD
+    box_0(["Start"])
+    box_1{"Is the marking controller powered on and in the<br/>ready state (no active fault or interlock)?"}
+    box_2["Complete the following checks: 1. Read the marking<br/>controller status display and confirm the power<br/>indicator is lit. 2. Note any fault codes and cross-<br/>reference each against the fault code index. 3.<br/>Check the controller display for communication or<br/>interlock warnings."]
+    box_3["Power cycle the marking controller following the<br/>shutdown and startup procedure. Wait for the full<br/>startup sequence to complete before reattempting<br/>communication."]
+    box_4[/"Refer to the marking controller startup procedure."/]
+    box_5{"Is the network or serial communication cable<br/>physically connected at both ends (marking<br/>controller and machine programmable controller)?"}
+    box_6["Physically inspect the communication cable<br/>connectors at the marking controller port and at the<br/>machine programmable controller interface port.<br/>Check that both connectors are fully seated and the<br/>locking mechanism is engaged."]
+    box_7["Reseat both connectors. If the cable is visibly<br/>damaged (kinked, crushed, or connector pins bent),<br/>replace the communication cable."]
+    box_8{"Are there contaminated connector pins or ventilation<br/>slots on the marking controller or programmable<br/>controller interface card?"}
+    box_9["Inspect the communication port connector pins on<br/>both devices for corrosion, dust build up, or bent<br/>pins. Check the controller ventilation slots for<br/>blockage."]
+    box_10["Clean connector pins with a dry contact cleaner<br/>spray. Clear blocked ventilation slots with<br/>compressed air. Do not use abrasive tools on<br/>connector pins."]
+    box_11{"Are there electrical defects in the network<br/>interface card, power supply, or ground connection?"}
+    box_12["Complete the following checks: 1. Check the network<br/>interface card for fault indicator lights. 2. Check<br/>the marking controller internal power supply output<br/>voltage. 3. Verify that the controller fan and<br/>ventilation slots are unobstructed."]
+    box_13["Replace the defective component identified (network<br/>interface card or power supply module). Ensure the<br/>earth ground connection is secure before power on."]
+    box_14{"Are the communication protocol parameters (baud<br/>rate, IP address, or port number) correctly<br/>configured on both the marking controller and the<br/>machine programmable controller?"}
+    box_15["Compare the communication parameter settings on the<br/>marking controller against the machine programmable<br/>controller configuration record. Check baud rate (or<br/>IP address and port for Ethernet), data bits, stop<br/>bits, and parity settings."]
+    box_16["Correct any mismatched communication parameters on<br/>either device. Cycle the communication interface<br/>after making parameter changes."]
+    box_17{"Has the communication link been restored and is the<br/>marking controller receiving and executing marking<br/>commands correctly?"}
+    box_18["Send a test marking command from the machine<br/>programmable controller to the marking controller<br/>and verify that the marking controller acknowledges<br/>the command and executes the test mark."]
+    box_19["Escalate to the maintenance team and marking<br/>controller supplier: the communication fault cannot<br/>be resolved through standard corrective actions."]
+    box_20["Record all corrective actions, parameter settings,<br/>and the final communication test result in the<br/>maintenance log. Notify quality assurance team."]
+    box_21(["Marking controller communication is restored. End."])
+    box_22{"Is the marking controller completely unresponsive,<br/>preventing any part marking and requiring an<br/>immediate production line stop to preserve part<br/>traceability?"}
+    box_23(["End, production line stopped immediately: marking<br/>controller unresponsive, no parts may proceed<br/>without marking, escalate to maintenance engineer<br/>and notify production supervisor"])
+
+    box_2 --> box_1
+    box_1 -->|"No"| box_3
+    box_1 -->|"Yes"| box_5
+    box_3 --> box_6
+    box_4 --> box_3
+    box_6 --> box_5
+    box_5 -->|"No"| box_7
+    box_5 -->|"Yes"| box_8
+    box_7 --> box_9
+    box_9 --> box_8
+    box_8 -->|"Yes"| box_10
+    box_8 -->|"No"| box_11
+    box_10 --> box_12
+    box_12 --> box_11
+    box_11 -->|"Yes"| box_13
+    box_11 -->|"No"| box_14
+    box_13 --> box_15
+    box_15 --> box_14
+    box_14 -->|"No"| box_16
+    box_14 -->|"Yes"| box_17
+    box_16 --> box_18
+    box_18 --> box_17
+    box_17 -->|"No"| box_19
+    box_17 -->|"Yes"| box_20
+    box_19 --> box_20
+    box_20 --> box_21
+    box_0 --> box_22
+    box_22 -->|"Critical, immediate stop required"| box_23
+    box_22 -->|"Standard fault, continue diagnosis"| box_1
+
+    class box_0 terminator
+    class box_1 decision
+    class box_2 process
+    class box_3 process
+    class box_4 document
+    class box_5 decision
+    class box_6 process
+    class box_7 process
+    class box_8 decision
+    class box_9 process
+    class box_10 process
+    class box_11 decision
+    class box_12 process
+    class box_13 process
+    class box_14 decision
+    class box_15 process
+    class box_16 process
+    class box_17 decision
+    class box_18 process
+    class box_19 process
+    class box_20 process
+    class box_21 terminator
+    class box_22 decision
+    class box_23 terminator
+
+    classDef terminator fill:#2d4a6e,stroke:#1a3050,color:#ffffff,font-weight:bold
+    classDef process    fill:#f0f4ff,stroke:#4a6fa5,color:#1a1a2e
+    classDef decision   fill:#fff8e6,stroke:#c8922a,color:#1a1a2e
+    classDef document   fill:#f0fff4,stroke:#3a8a4a,color:#1a1a2e

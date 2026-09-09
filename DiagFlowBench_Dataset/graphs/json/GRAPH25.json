@@ -1,0 +1,242 @@
+{
+  "id": "GRAPH25",
+  "description": "Troubleshooting procedure for parts lost from the vacuum end-effector during robotic transfer, covering vacuum pressure, cup condition, filter contamination, pick-up position, and transfer speed.",
+  "graph": {
+    "nodes": {
+      "box_0": {
+        "type": "terminator",
+        "text": "Start"
+      },
+      "box_1": {
+        "type": "process",
+        "text": "Note the position in the transfer cycle at which parts are dropped and whether the dropout is occurring on every cycle or intermittently. Collect the dropped part if undamaged for inspection."
+      },
+      "box_2": {
+        "type": "decision",
+        "text": "Is the vacuum pressure at the end effector within the specified holding range during the transfer phase?"
+      },
+      "box_3": {
+        "type": "process",
+        "text": "Check the vacuum pressure gauge reading at the end effector connection point. Verify that the pressure holds steady during the full transfer cycle using the operator control interface diagnostic screen."
+      },
+      "box_4": {
+        "type": "process",
+        "text": "Complete the following checks: 1. Read the vacuum generator output pressure from the inline gauge. 2. Compare against the setpoint on the pneumatic circuit schematic. 3. Check the vacuum filter for blockage or excessive pressure drop."
+      },
+      "box_5": {
+        "type": "decision",
+        "text": "Is the vacuum cup sealing surface clean and free of contamination?"
+      },
+      "box_6": {
+        "type": "process",
+        "text": "Inspect the vacuum cup contact surface for oil, dust, or part material deposits. Check whether the cup lip is intact and evenly seated."
+      },
+      "box_7": {
+        "type": "process",
+        "text": "Clean the vacuum cup contact surface with a lint free cloth. If the cup lip is damaged or permanently deformed, replace the vacuum cup."
+      },
+      "box_8": {
+        "type": "decision",
+        "text": "Is the vacuum filter element clean and within its replacement interval?"
+      },
+      "box_9": {
+        "type": "process",
+        "text": "Remove and inspect the vacuum filter element. Check the contamination level and compare the maintenance log to the filter replacement interval."
+      },
+      "box_10": {
+        "type": "process",
+        "text": "Replace the vacuum filter element and retest the vacuum pressure at the end effector to confirm adequate holding force."
+      },
+      "box_11": {
+        "type": "decision",
+        "text": "Is the part pick up position correctly centred under the vacuum cup (no lateral offset at pick up)?"
+      },
+      "box_12": {
+        "type": "process",
+        "text": "Complete the following steps: 1. Jog the robot to the nominal pickup position in slow jog mode. 2. Place a reference part on the supply conveyor and verify centring. 3. Record the positional offset and compare against the acceptance tolerance."
+      },
+      "box_13": {
+        "type": "process",
+        "text": "Reteach the pick up position to centre the vacuum cup correctly over the part. Verify with five consecutive slow test cycles."
+      },
+      "box_14": {
+        "type": "decision",
+        "text": "Is the transfer acceleration and deceleration profile within the specified limits?"
+      },
+      "box_15": {
+        "type": "process",
+        "text": "Check the motion profile settings on the robot controller for the transfer axis. Compare the maximum acceleration and deceleration values against the specification for the current part type."
+      },
+      "box_16": {
+        "type": "process",
+        "text": "Reduce the transfer acceleration or deceleration to within specification. retest with ten consecutive full speed cycles before resuming normal production."
+      },
+      "box_17": {
+        "type": "decision",
+        "text": "Has the dropout fault been eliminated after corrective action?"
+      },
+      "box_18": {
+        "type": "process",
+        "text": "Escalate to the maintenance team: part dropout persists after all standard corrective actions; investigate robot axis mechanical condition and vacuum system integrity."
+      },
+      "box_19": {
+        "type": "process",
+        "text": "Record the root cause and corrective action in the quality log. Notify quality assurance team."
+      },
+      "box_20": {
+        "type": "terminator",
+        "text": "End, resume production."
+      },
+      "box_21": {
+        "type": "decision",
+        "text": "Is the rate of parts dropped from the vacuum effector sufficient to indicate a system failure posing a safety hazard or causing contamination of the work cell?"
+      },
+      "box_22": {
+        "type": "terminator",
+        "text": "End, production stopped immediately: vacuum effector failure critical, clear work cell, quarantine dropped parts, and escalate to maintenance engineer"
+      }
+    },
+    "edges": [
+      {
+        "source": "box_1",
+        "target": "box_3",
+        "label": ""
+      },
+      {
+        "source": "box_3",
+        "target": "box_2",
+        "label": null
+      },
+      {
+        "source": "box_2",
+        "target": "box_4",
+        "label": "No"
+      },
+      {
+        "source": "box_2",
+        "target": "box_5",
+        "label": "Yes"
+      },
+      {
+        "source": "box_4",
+        "target": "box_6",
+        "label": ""
+      },
+      {
+        "source": "box_6",
+        "target": "box_5",
+        "label": null
+      },
+      {
+        "source": "box_5",
+        "target": "box_7",
+        "label": "No"
+      },
+      {
+        "source": "box_5",
+        "target": "box_8",
+        "label": "Yes"
+      },
+      {
+        "source": "box_7",
+        "target": "box_9",
+        "label": ""
+      },
+      {
+        "source": "box_9",
+        "target": "box_8",
+        "label": null
+      },
+      {
+        "source": "box_8",
+        "target": "box_10",
+        "label": "No"
+      },
+      {
+        "source": "box_8",
+        "target": "box_11",
+        "label": "Yes"
+      },
+      {
+        "source": "box_10",
+        "target": "box_12",
+        "label": ""
+      },
+      {
+        "source": "box_12",
+        "target": "box_11",
+        "label": null
+      },
+      {
+        "source": "box_11",
+        "target": "box_13",
+        "label": "No"
+      },
+      {
+        "source": "box_11",
+        "target": "box_14",
+        "label": "Yes"
+      },
+      {
+        "source": "box_13",
+        "target": "box_15",
+        "label": ""
+      },
+      {
+        "source": "box_15",
+        "target": "box_14",
+        "label": null
+      },
+      {
+        "source": "box_14",
+        "target": "box_16",
+        "label": "No"
+      },
+      {
+        "source": "box_14",
+        "target": "box_17",
+        "label": "Yes"
+      },
+      {
+        "source": "box_16",
+        "target": "box_17",
+        "label": null
+      },
+      {
+        "source": "box_17",
+        "target": "box_18",
+        "label": "No"
+      },
+      {
+        "source": "box_17",
+        "target": "box_19",
+        "label": "Yes"
+      },
+      {
+        "source": "box_18",
+        "target": "box_19",
+        "label": null
+      },
+      {
+        "source": "box_19",
+        "target": "box_20",
+        "label": null
+      },
+      {
+        "source": "box_0",
+        "target": "box_21",
+        "label": null
+      },
+      {
+        "source": "box_21",
+        "target": "box_22",
+        "label": "Critical, immediate stop required"
+      },
+      {
+        "source": "box_21",
+        "target": "box_1",
+        "label": "Standard fault, continue diagnosis"
+      }
+    ]
+  }
+}

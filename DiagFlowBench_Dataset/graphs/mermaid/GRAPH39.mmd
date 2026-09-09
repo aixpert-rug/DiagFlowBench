@@ -1,0 +1,119 @@
+flowchart TD
+    box_0(["Start"])
+    box_1["Complete the following checks: 1. Inspect the rod<br/>surface for scoring, pitting, or corrosion along<br/>full stroke. 2. Check the rod seal and wiper for<br/>extrusion or deformation. 3. Inspect the cylinder<br/>end caps and port fittings for leakage."]
+    box_2{"Rod scoring, buckling or seal extrusion visible?"}
+    box_3(["End, Replace cylinder: rod or body damage confirmed"])
+    box_4["Connect a calibrated pressure gauge to the Schrader<br/>test port at the cylinder inlet port with the<br/>pneumatic circuit energised. Read the supply<br/>pressure at rest and during extension and retraction<br/>strokes. Compare both dynamic readings against the<br/>nominal operating pressure range on the pneumatic<br/>circuit drawing and note any drop exceeding 10% of<br/>supply pressure during stroke."]
+    box_5[/"Refer to the pneumatic system pressure<br/>specification."/]
+    box_6{"Supply pressure within specified range?"}
+    box_7(["End, Escalate: pressure supply fault, check filter<br/>regulator lubricator unit"])
+    box_8["Close the supply isolation valve to the cylinder and<br/>monitor the inlet pressure gauge over a two minute<br/>period. Note the pressure decay in bar per minute.<br/>Repeat with the circuit pressurised on the rod side.<br/>A decay rate greater than 0.1 bar per minute<br/>indicates a piston seal leak and requires cylinder<br/>disassembly for inspection."]
+    box_9{"Pressure decay within 0.05 bar per minute limit?"}
+    box_10["Repack rod seal and replace O rings"]
+    box_11{"Reverify leak down after seal repacking"}
+    box_12(["End, Replace cylinder: leak down unrecoverable after<br/>repack"])
+    box_13["With the cylinder fully retracted against its stop,<br/>zero a steel rule or measuring tape at the rear end<br/>cap face. Extend the cylinder to the forward<br/>mechanical stop and record the total stroke length.<br/>Compare the measured stroke against the nominal<br/>stroke on the cylinder datasheet and confirm that<br/>end of stroke contact is square with no misalignment<br/>binding."]
+    box_14[/"Refer to the cylinder stroke specification."/]
+    box_15{"Stroke length within ±0.5 mm of nominal?"}
+    box_16["Adjust mechanical stops to correct stroke length"]
+    box_17["With the cylinder extending under normal load, turn<br/>the cushion needle valve clockwise in quarter turn<br/>increments until the deceleration profile is smooth<br/>with no impact or bounce at the end of stroke.<br/>Repeat the adjustment on the retraction cushion.<br/>Record the final needle valve position in turns from<br/>fully closed for future reference in the maintenance<br/>log."]
+    box_18{"Deceleration cushion distance within spec?"}
+    box_19["Adjust cushion needle valves, one eighth turn<br/>increments"]
+    box_20{"Reverify cushion profile after valve adjustment"}
+    box_21(["End, Escalate: cushion adjustment range exhausted"])
+    box_22["Time ten consecutive extension and retraction cycles<br/>using a stopwatch or PLC timer readout. Record the<br/>mean cycle time and compare against the target cycle<br/>time from the line timing specification. Note<br/>whether extension and retraction times are balanced;<br/>an imbalance greater than 15% indicates a flow<br/>control valve may need adjustment."]
+    box_23[/"Refer to the cylinder speed specification."/]
+    box_24{"Extend and retract times within specified range?"}
+    box_25["Adjust flow control valves, both directions<br/>independently"]
+    box_26["Move the cylinder to its fully extended position and<br/>verify that the extension proximity switch indicator<br/>light is on. Retract the cylinder fully and confirm<br/>the retract proximity switch activates. Use a<br/>digital caliper to measure the gap between the<br/>sensor face and the trigger flag at each position<br/>and compare against the sensor manufacturer's rated<br/>sensing distance."]
+    box_27{"End position sensors trigger at correct rod<br/>positions?"}
+    box_28["Reposition proximity switch brackets and reteach"]
+    box_29["Cycling endurance test, 100 consecutive cycles"]
+    box_30{"No leaks, correct stroke or timing faults after 100<br/>cycles?"}
+    box_31["Investigate fault symptom and repeat relevant<br/>section"]
+    box_32["Log all measurements and update pneumatics<br/>maintenance record"]
+    box_33(["End, Procedure complete"])
+    box_34["Secondary cylinder seal overhaul: fully disassemble<br/>the cylinder and replace both the piston seal set<br/>and the rod seal set with new parts from a sealed<br/>replacement kit of the correct bore diameter.<br/>Lubricate all new seals with pneumatic cylinder oil<br/>before assembly. Allow 5 minutes running time after<br/>repressurisation for the new seals to seat before<br/>returning to the leak down test step."]
+
+    box_0 --> box_1
+    box_1 --> box_2
+    box_2 -->|"Yes"| box_3
+    box_2 -->|"No"| box_6
+    box_4 --> box_6
+    box_5 --> box_6
+    box_6 -->|"No"| box_7
+    box_6 -->|"Yes"| box_9
+    box_8 --> box_9
+    box_9 -->|"No"| box_10
+    box_10 --> box_11
+    box_11 -->|"OK"| box_15
+    box_9 -->|"Yes"| box_15
+    box_13 --> box_15
+    box_14 --> box_15
+    box_15 -->|"No"| box_16
+    box_16 --> box_17
+    box_15 -->|"Yes"| box_18
+    box_17 --> box_18
+    box_18 -->|"No"| box_19
+    box_19 --> box_20
+    box_20 -->|"Still out of spec"| box_21
+    box_20 -->|"OK"| box_24
+    box_18 -->|"Yes"| box_24
+    box_22 --> box_24
+    box_23 --> box_24
+    box_24 -->|"No"| box_25
+    box_25 --> box_26
+    box_24 -->|"Yes"| box_27
+    box_26 --> box_27
+    box_27 -->|"No"| box_28
+    box_28 --> box_29
+    box_27 -->|"Yes"| box_29
+    box_29 --> box_30
+    box_30 -->|"No"| box_31
+    box_31 --> box_32
+    box_30 -->|"Yes"| box_32
+    box_32 --> box_33
+    box_11 -->|"Still failing"| box_34
+    box_34 --> box_11
+    box_11 -->|"Unresolvable after second attempt"| box_12
+
+    class box_0 terminator
+    class box_1 process
+    class box_2 decision
+    class box_3 terminator
+    class box_4 process
+    class box_5 document
+    class box_6 decision
+    class box_7 terminator
+    class box_8 process
+    class box_9 decision
+    class box_10 process
+    class box_11 decision
+    class box_12 terminator
+    class box_13 process
+    class box_14 document
+    class box_15 decision
+    class box_16 process
+    class box_17 process
+    class box_18 decision
+    class box_19 process
+    class box_20 decision
+    class box_21 terminator
+    class box_22 process
+    class box_23 document
+    class box_24 decision
+    class box_25 process
+    class box_26 process
+    class box_27 decision
+    class box_28 process
+    class box_29 process
+    class box_30 decision
+    class box_31 process
+    class box_32 process
+    class box_33 terminator
+    class box_34 process
+
+    classDef terminator fill:#2d4a6e,stroke:#1a3050,color:#ffffff,font-weight:bold
+    classDef process    fill:#f0f4ff,stroke:#4a6fa5,color:#1a1a2e
+    classDef decision   fill:#fff8e6,stroke:#c8922a,color:#1a1a2e
+    classDef document   fill:#f0fff4,stroke:#3a8a4a,color:#1a1a2e

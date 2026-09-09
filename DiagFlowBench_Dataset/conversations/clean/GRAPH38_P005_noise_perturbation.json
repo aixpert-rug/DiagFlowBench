@@ -1,0 +1,351 @@
+{
+  "conversation_id": "GRAPH38_P005_noise_perturbation",
+  "graph_id": "GRAPH38",
+  "path_id": "GRAPH38_P005",
+  "regime": "clean",
+  "variant": "noise_perturbation",
+  "robustness_axis": "noise_perturbation",
+  "turns": [
+    {
+      "node_id": "box_0",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Starting spindle diagnostic procedure.",
+      "edge_label_to_next": null,
+      "turn_index": 0,
+      "ground_truth": {
+        "node_id": "box_0",
+        "node_type": "terminator",
+        "node_text": "Start"
+      }
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Begin with a warm-up run. Bring the spindle up to 50% speed and let it run for 10 minutes.",
+      "edge_label_to_next": null,
+      "turn_index": 1,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Warm up run, spindle at 50% speed for 10 minutes"
+      }
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "warmup complete spindle been running at 50% speed for full 10 min",
+      "edge_label_to_next": "",
+      "turn_index": 2,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Warm up run, spindle at 50% speed for 10 minutes"
+      }
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Mount a calibrated accelerometer on the front bearing housing using a flat washer stud or magnetic base. Run the spindle at 3000 RPM with no toolholder fitted and record the RMS vibration velocity in millimeters per second. Then repeat at maximum rated speed and compare both readings against the ISO 10816 zone limits for this machine class.",
+      "edge_label_to_next": null,
+      "turn_index": 3,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "process",
+        "node_text": "Mount a calibrated accelerometer on the front bearing housing with a flat washer stud or magnetic base. Run the spindle at 3000 revolutions per minute with no toolholder fitted and record the root mean square vibration velocity in millimetres per second. Repeat at the maximum rated speed and compare both readings against the ISO 10816 zone limits for this machine class."
+      }
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "ok so acceleromter mounted and readings taken at 3000 rpm getting 1.8 mm/s and at max speed its 2.1 mm/s both within ISO zone limits",
+      "edge_label_to_next": null,
+      "turn_index": 4,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "process",
+        "node_text": "Mount a calibrated accelerometer on the front bearing housing with a flat washer stud or magnetic base. Run the spindle at 3000 revolutions per minute with no toolholder fitted and record the root mean square vibration velocity in millimetres per second. Repeat at the maximum rated speed and compare both readings against the ISO 10816 zone limits for this machine class."
+      }
+    },
+    {
+      "node_id": "box_4",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the vibration level below the alarm limit?",
+      "edge_label_to_next": null,
+      "turn_index": 5,
+      "ground_truth": {
+        "node_id": "box_4",
+        "node_type": "decision",
+        "node_text": "Vibration level below alarm limit?"
+      }
+    },
+    {
+      "node_id": "box_4",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yeah both readings well below alarm threshhold were in the acceptable zone",
+      "edge_label_to_next": "Yes",
+      "turn_index": 6,
+      "ground_truth": {
+        "node_id": "box_4",
+        "node_type": "decision",
+        "node_text": "Vibration level below alarm limit?"
+      }
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the bearing temperature within the rated operating limit?",
+      "edge_label_to_next": null,
+      "turn_index": 7,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "decision",
+        "node_text": "Bearing temperature within rated operating limit?"
+      }
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "temp is good front bearing at 18 deg above ambient and rear at 20 deg both well under the 25 deg rise limit",
+      "edge_label_to_next": "Yes",
+      "turn_index": 8,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "decision",
+        "node_text": "Bearing temperature within rated operating limit?"
+      }
+    },
+    {
+      "node_id": "box_12",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the radial runout within 2 micrometer tolerance?",
+      "edge_label_to_next": null,
+      "turn_index": 9,
+      "ground_truth": {
+        "node_id": "box_12",
+        "node_type": "decision",
+        "node_text": "Radial runout within 2 µm tolerance?"
+      }
+    },
+    {
+      "node_id": "box_12",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no reading 3.2 micrometers total indicater reading on spindle nose thats over the 2 micrometer spec",
+      "edge_label_to_next": "No",
+      "turn_index": 10,
+      "ground_truth": {
+        "node_id": "box_12",
+        "node_type": "decision",
+        "node_text": "Radial runout within 2 µm tolerance?"
+      }
+    },
+    {
+      "node_id": "box_13",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Adjust the bearing preload via the locknut in quarter-turn increments.",
+      "edge_label_to_next": null,
+      "turn_index": 11,
+      "ground_truth": {
+        "node_id": "box_13",
+        "node_type": "process",
+        "node_text": "Adjust bearing pre load via locknut, quarter turn increments"
+      }
+    },
+    {
+      "node_id": "box_13",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "preload adjusted tightened the locknut quarter turn and checked the feel",
+      "edge_label_to_next": null,
+      "turn_index": 12,
+      "ground_truth": {
+        "node_id": "box_13",
+        "node_type": "process",
+        "node_text": "Adjust bearing pre load via locknut, quarter turn increments"
+      }
+    },
+    {
+      "node_id": "box_14",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Reverify the radial runout after the preload adjustment.",
+      "edge_label_to_next": null,
+      "turn_index": 13,
+      "ground_truth": {
+        "node_id": "box_14",
+        "node_type": "decision",
+        "node_text": "Reverify radial runout after pre load adjustment"
+      }
+    },
+    {
+      "node_id": "box_14",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "still showing 2.9 micrometers adjustmnet helped a bit but still out of spec",
+      "edge_label_to_next": "Still out of spec",
+      "turn_index": 14,
+      "ground_truth": {
+        "node_id": "box_14",
+        "node_type": "decision",
+        "node_text": "Reverify radial runout after pre load adjustment"
+      }
+    },
+    {
+      "node_id": "box_38",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Perform supplementary bearing preload correction. Disassemble the spindle nose bearing housing, remove the preload spacer, and replace it with a spacer from the next shim increment in the bearing service kit. Reassemble to the specified torque and run the spindle at 1000 RPM for 10 minutes to allow the bearings to seat.",
+      "edge_label_to_next": null,
+      "turn_index": 15,
+      "ground_truth": {
+        "node_id": "box_38",
+        "node_type": "process",
+        "node_text": "Supplementary bearing preload correction: disassemble the spindle nose bearing housing, remove the preload spacer, and replace it with a spacer from the next shim increment in the bearing service kit. Reassemble the housing to the specified torque and run the spindle at 1000 revolutions per minute for 10 minutes to allow bearings to seat before returning to the runout measurement step."
+      }
+    },
+    {
+      "node_id": "box_38",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "housing disassmebled spacer replaced with next increment and reassembled to torque spec ran it at 1000 rpm for 10 min bearings have seated",
+      "edge_label_to_next": null,
+      "turn_index": 16,
+      "ground_truth": {
+        "node_id": "box_38",
+        "node_type": "process",
+        "node_text": "Supplementary bearing preload correction: disassemble the spindle nose bearing housing, remove the preload spacer, and replace it with a spacer from the next shim increment in the bearing service kit. Reassemble the housing to the specified torque and run the spindle at 1000 revolutions per minute for 10 minutes to allow bearings to seat before returning to the runout measurement step."
+      }
+    },
+    {
+      "node_id": "box_14",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Reverify the radial runout after the preload adjustment.",
+      "edge_label_to_next": null,
+      "turn_index": 17,
+      "ground_truth": {
+        "node_id": "box_14",
+        "node_type": "decision",
+        "node_text": "Reverify radial runout after pre load adjustment"
+      }
+    },
+    {
+      "node_id": "box_14",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "looks like still reading 2.7 micrometers after the second attempt with shim replacement were still above tolerance",
+      "edge_label_to_next": "Unresolvable after second attempt",
+      "turn_index": 18,
+      "ground_truth": {
+        "node_id": "box_14",
+        "node_type": "decision",
+        "node_text": "Reverify radial runout after pre load adjustment"
+      }
+    },
+    {
+      "node_id": "box_15",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Procedure complete. Escalate immediately: runout is unrecoverable and bearing replacement is required. Take the spindle offline and notify the maintenance team for bearing service.",
+      "edge_label_to_next": null,
+      "turn_index": 19,
+      "ground_truth": {
+        "node_id": "box_15",
+        "node_type": "terminator",
+        "node_text": "End, Escalate: runout unrecoverable, bearing replacement required"
+      }
+    },
+    {
+      "node_id": "box_15",
+      "node_type": "terminator",
+      "speaker": "operator",
+      "utterance": "understood ill tag the machine out and escalate to bearing service team right away",
+      "edge_label_to_next": null,
+      "turn_index": 20,
+      "ground_truth": {
+        "node_id": "box_15",
+        "node_type": "terminator",
+        "node_text": "End, Escalate: runout unrecoverable, bearing replacement required"
+      }
+    }
+  ],
+  "metadata": {
+    "depth": 11,
+    "num_decisions": 5,
+    "num_processes": 4,
+    "num_documents": 0,
+    "terminator_type": "escalate",
+    "terminator_text": "End, Escalate: runout unrecoverable, bearing replacement required",
+    "true_terminator": true,
+    "node_sequence": [
+      "box_0",
+      "box_1",
+      "box_2",
+      "box_4",
+      "box_8",
+      "box_12",
+      "box_13",
+      "box_14",
+      "box_38",
+      "box_14",
+      "box_15"
+    ],
+    "edge_labels": [
+      null,
+      null,
+      "",
+      null,
+      "Yes",
+      "Yes",
+      "No",
+      null,
+      "Still out of spec",
+      null,
+      "Unresolvable after second attempt"
+    ],
+    "decision_points": [
+      {
+        "node": "box_4",
+        "label": "Yes",
+        "question": "Vibration level below alarm limit?"
+      },
+      {
+        "node": "box_8",
+        "label": "Yes",
+        "question": "Bearing temperature within rated operating limit?"
+      },
+      {
+        "node": "box_12",
+        "label": "No",
+        "question": "Radial runout within 2 µm tolerance?"
+      },
+      {
+        "node": "box_14",
+        "label": "Still out of spec",
+        "question": "Reverify radial runout after pre load adjustment"
+      },
+      {
+        "node": "box_14",
+        "label": "Unresolvable after second attempt",
+        "question": "Reverify radial runout after pre load adjustment"
+      }
+    ],
+    "generation_model": "anthropic/claude-sonnet-4-5",
+    "verification": {
+      "variant_of": "base",
+      "base_verified": true,
+      "note": "surface-form variant; not independently verified"
+    }
+  }
+}

@@ -1,0 +1,64 @@
+flowchart TD
+    box_0(["Start"])
+    box_1{"Input material quality of parts OK?"}
+    box_2["Complete the following checks: 1. Check whether<br/>different part types are mixed on the supply<br/>conveyor. 2. Check parts for material deformation,<br/>stains, damage, or injection molding defects."]
+    box_3["Empty the supply conveyor(s), fill with the correct<br/>part type, create a non conformance record, and load<br/>a new batch."]
+    box_4{"Positional deviation OK?"}
+    box_5["Check the positional deviation by means of the<br/>positional deviation meter"]
+    box_6["Adjust the positional deviation, if outside the<br/>specifications, create a non conformance record."]
+    box_7{"Part height OK?"}
+    box_8["Check the insertion depth by means of the depth<br/>gauge"]
+    box_9["Have the line operator adjust the part height, if<br/>outside the specifications, create a non conformance<br/>record."]
+    box_10{"Correct marking pattern?"}
+    box_11["Check whether the correct program is loaded on the<br/>operator control interface and compare it with the<br/>marking controller."]
+    box_12["Switch the machine to the correct product and<br/>restart the marking controller."]
+    box_13{"Color / brightness of the marking unit text OK?"}
+    box_14["Complete the following checks: 1. Verify that the<br/>parts are within specification norms. 2. Check the<br/>process fluid level of the marking unit."]
+    box_15["If parts are outside norm, create a non conformance<br/>record. Then complete the following steps: 1. Clean<br/>the fume extraction unit (fume extraction cleaning<br/>procedure). 2. Have the line operator top up the<br/>marking unit with process fluid. 3. Have the line<br/>operator clean the filtration unit (filtration unit<br/>cleaning procedure)."]
+    box_16{"Problem solved?"}
+    box_17["Escalate to the maintenance team: the marking<br/>problem could not be resolved through operator level<br/>troubleshooting."]
+    box_18(["End"])
+
+    box_0 --> box_1
+    box_2 --> box_1
+    box_1 -->|"No"| box_3
+    box_1 -->|"Yes"| box_4
+    box_5 --> box_4
+    box_4 -->|"No"| box_6
+    box_4 -->|"Yes"| box_7
+    box_8 --> box_7
+    box_7 -->|"No"| box_9
+    box_7 -->|"Yes"| box_10
+    box_11 --> box_10
+    box_10 -->|"No"| box_12
+    box_10 -->|"Yes"| box_13
+    box_14 --> box_13
+    box_13 -->|"No"| box_15
+    box_13 -->|"Yes"| box_16
+    box_16 -->|"No"| box_17
+    box_16 -->|"Yes"| box_18
+
+    class box_0 terminator
+    class box_1 decision
+    class box_2 process
+    class box_3 process
+    class box_4 decision
+    class box_5 process
+    class box_6 process
+    class box_7 decision
+    class box_8 process
+    class box_9 process
+    class box_10 decision
+    class box_11 process
+    class box_12 process
+    class box_13 decision
+    class box_14 process
+    class box_15 process
+    class box_16 decision
+    class box_17 process
+    class box_18 terminator
+
+    classDef terminator fill:#2d4a6e,stroke:#1a3050,color:#ffffff,font-weight:bold
+    classDef process    fill:#f0f4ff,stroke:#4a6fa5,color:#1a1a2e
+    classDef decision   fill:#fff8e6,stroke:#c8922a,color:#1a1a2e
+    classDef document   fill:#f0fff4,stroke:#3a8a4a,color:#1a1a2e

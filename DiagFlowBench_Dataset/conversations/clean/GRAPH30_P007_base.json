@@ -1,0 +1,971 @@
+{
+  "conversation_id": "GRAPH30_P007_base",
+  "graph_id": "GRAPH30",
+  "path_id": "GRAPH30_P007",
+  "regime": "clean",
+  "variant": "base",
+  "robustness_axis": null,
+  "turns": [
+    {
+      "node_id": "box_0",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Starting insertion depth diagnostic procedure.",
+      "edge_label_to_next": null,
+      "turn_index": 0,
+      "ground_truth": {
+        "node_id": "box_0",
+        "node_type": "terminator",
+        "node_text": "Start"
+      }
+    },
+    {
+      "node_id": "box_21",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the insertion depth deviation large enough to indicate a part to fixture mismatch or a tooling failure that would cause damaged parts if production continues?",
+      "edge_label_to_next": null,
+      "turn_index": 1,
+      "ground_truth": {
+        "node_id": "box_21",
+        "node_type": "decision",
+        "node_text": "Is the insertion depth deviation large enough to indicate a part to fixture mismatch or a tooling failure that would cause damaged parts if production continues?"
+      }
+    },
+    {
+      "node_id": "box_21",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "The deviation is noticeable but not critical. Parts aren't being damaged, so we can proceed with standard troubleshooting.",
+      "edge_label_to_next": "Standard fault, continue diagnosis",
+      "turn_index": 2,
+      "ground_truth": {
+        "node_id": "box_21",
+        "node_type": "decision",
+        "node_text": "Is the insertion depth deviation large enough to indicate a part to fixture mismatch or a tooling failure that would cause damaged parts if production continues?"
+      }
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Record the measured insertion depth values, the direction of deviation, and the batch number. Collect five representative parts for reference.",
+      "edge_label_to_next": null,
+      "turn_index": 3,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Record the measured insertion depth values, the direction of deviation (too shallow or too deep), and the batch number. Collect five representative parts for reference."
+      }
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Done. I've logged the depth readings showing they're running shallow, noted batch number B4792, and pulled five sample parts.",
+      "edge_label_to_next": "",
+      "turn_index": 4,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Record the measured insertion depth values, the direction of deviation (too shallow or too deep), and the batch number. Collect five representative parts for reference."
+      }
+    },
+    {
+      "node_id": "box_3",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Record insertion depth readings for ten consecutive parts, calculate the mean depth and compare against the nominal target, then check whether the deviation is consistent or varies between parts.",
+      "edge_label_to_next": null,
+      "turn_index": 5,
+      "ground_truth": {
+        "node_id": "box_3",
+        "node_type": "process",
+        "node_text": "Complete the following steps: 1. Record insertion depth readings for ten consecutive parts. 2. Calculate the mean depth and compare against the nominal target. 3. Check whether the deviation is consistent or varies between parts."
+      }
+    },
+    {
+      "node_id": "box_3",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Measurements complete. The mean is 0.8 millimeters below target, and I'm seeing variation part to part.",
+      "edge_label_to_next": null,
+      "turn_index": 6,
+      "ground_truth": {
+        "node_id": "box_3",
+        "node_type": "process",
+        "node_text": "Complete the following steps: 1. Record insertion depth readings for ten consecutive parts. 2. Calculate the mean depth and compare against the nominal target. 3. Check whether the deviation is consistent or varies between parts."
+      }
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the insertion depth deviation consistent and in one direction, either all too shallow or all too deep?",
+      "edge_label_to_next": null,
+      "turn_index": 7,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Is the insertion depth deviation consistent and in one direction (all too shallow or all too deep)?"
+      }
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "No, the deviation is random. Some parts are shallow, some are deeper, there's no consistent pattern.",
+      "edge_label_to_next": "No",
+      "turn_index": 8,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Is the insertion depth deviation consistent and in one direction (all too shallow or all too deep)?"
+      }
+    },
+    {
+      "node_id": "box_4",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Check part to part dimensional variation in the batch. Sample five parts for dimensional measurement.",
+      "edge_label_to_next": null,
+      "turn_index": 9,
+      "ground_truth": {
+        "node_id": "box_4",
+        "node_type": "process",
+        "node_text": "If the depth deviation is random, check part to part dimensional variation in the batch. Sample five parts for dimensional measurement."
+      }
+    },
+    {
+      "node_id": "box_4",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "I've pulled five parts and they're ready for dimensional checks.",
+      "edge_label_to_next": "",
+      "turn_index": 10,
+      "ground_truth": {
+        "node_id": "box_4",
+        "node_type": "process",
+        "node_text": "If the depth deviation is random, check part to part dimensional variation in the batch. Sample five parts for dimensional measurement."
+      }
+    },
+    {
+      "node_id": "box_6",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Measure the outer diameter and top surface geometry of five parts from the current batch and compare against the incoming material specification.",
+      "edge_label_to_next": null,
+      "turn_index": 11,
+      "ground_truth": {
+        "node_id": "box_6",
+        "node_type": "process",
+        "node_text": "Measure the outer diameter and top surface geometry of five parts from the current batch and compare against the incoming material specification."
+      }
+    },
+    {
+      "node_id": "box_6",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Measurements done. I've compared them to the incoming spec sheet.",
+      "edge_label_to_next": null,
+      "turn_index": 12,
+      "ground_truth": {
+        "node_id": "box_6",
+        "node_type": "process",
+        "node_text": "Measure the outer diameter and top surface geometry of five parts from the current batch and compare against the incoming material specification."
+      }
+    },
+    {
+      "node_id": "box_5",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the part material batch dimensionally within the specification for this product type?",
+      "edge_label_to_next": null,
+      "turn_index": 13,
+      "ground_truth": {
+        "node_id": "box_5",
+        "node_type": "decision",
+        "node_text": "Is the part material batch dimensionally within the specification for this product type?"
+      }
+    },
+    {
+      "node_id": "box_5",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "No, the outer diameter measurements are outside tolerance. The parts are undersized compared to spec.",
+      "edge_label_to_next": "No",
+      "turn_index": 14,
+      "ground_truth": {
+        "node_id": "box_5",
+        "node_type": "decision",
+        "node_text": "Is the part material batch dimensionally within the specification for this product type?"
+      }
+    },
+    {
+      "node_id": "box_7",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Reject the current batch as dimensionally non-conforming. Reload from a batch with confirmed dimensional conformance and create a non-conformance record.",
+      "edge_label_to_next": null,
+      "turn_index": 15,
+      "ground_truth": {
+        "node_id": "box_7",
+        "node_type": "process",
+        "node_text": "Reject the current batch as dimensionally non conforming. Reload from a batch with confirmed dimensional conformance. Create a non conformance record."
+      }
+    },
+    {
+      "node_id": "box_7",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Batch B4792 has been rejected and tagged. I've loaded batch C1205 which passed incoming inspection, and I've filed the non-conformance report.",
+      "edge_label_to_next": "",
+      "turn_index": 16,
+      "ground_truth": {
+        "node_id": "box_7",
+        "node_type": "process",
+        "node_text": "Reject the current batch as dimensionally non conforming. Reload from a batch with confirmed dimensional conformance. Create a non conformance record."
+      }
+    },
+    {
+      "node_id": "box_9",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Read the lower position setpoint from the press depth parameter screen, compare the stored setpoint against the value on the validated process sheet, and check whether the setpoint was changed since the last confirmed good run.",
+      "edge_label_to_next": null,
+      "turn_index": 17,
+      "ground_truth": {
+        "node_id": "box_9",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Read the lower position setpoint from the press depth parameter screen. 2. Compare the stored setpoint against the value on the validated process sheet. 3. Check whether the setpoint was changed since the last confirmed good run."
+      }
+    },
+    {
+      "node_id": "box_9",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "I've pulled up the parameters and compared them to the process sheet. The setpoint looks off.",
+      "edge_label_to_next": null,
+      "turn_index": 18,
+      "ground_truth": {
+        "node_id": "box_9",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Read the lower position setpoint from the press depth parameter screen. 2. Compare the stored setpoint against the value on the validated process sheet. 3. Check whether the setpoint was changed since the last confirmed good run."
+      }
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the press depth setting, the lower position setpoint, correct for this product type?",
+      "edge_label_to_next": null,
+      "turn_index": 19,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "decision",
+        "node_text": "Is the press depth setting (lower position setpoint) correct for this product type?"
+      }
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "No, the setpoint is 12.5 millimeters but the process sheet calls for 11.8 millimeters.",
+      "edge_label_to_next": "No",
+      "turn_index": 20,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "decision",
+        "node_text": "Is the press depth setting (lower position setpoint) correct for this product type?"
+      }
+    },
+    {
+      "node_id": "box_10",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Adjust the press depth setting to the specified value for this product type and rerun a test pressing cycle. Verify the corrected depth.",
+      "edge_label_to_next": null,
+      "turn_index": 21,
+      "ground_truth": {
+        "node_id": "box_10",
+        "node_type": "process",
+        "node_text": "Adjust the press depth setting to the specified value for this product type and rerun a test pressing cycle. Verify the corrected depth."
+      }
+    },
+    {
+      "node_id": "box_10",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "I've adjusted the setpoint to 11.8 millimeters and ran a test cycle. Depth is improved but still needs verification.",
+      "edge_label_to_next": "",
+      "turn_index": 22,
+      "ground_truth": {
+        "node_id": "box_10",
+        "node_type": "process",
+        "node_text": "Adjust the press depth setting to the specified value for this product type and rerun a test pressing cycle. Verify the corrected depth."
+      }
+    },
+    {
+      "node_id": "box_12",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Jog the pressing head to the lower position and visually inspect the contact between the pressing head face and the part top surface. Check for tilt or partial contact.",
+      "edge_label_to_next": null,
+      "turn_index": 23,
+      "ground_truth": {
+        "node_id": "box_12",
+        "node_type": "process",
+        "node_text": "Jog the pressing head to the lower position and visually inspect the contact between the pressing head face and the part top surface. Check for tilt or partial contact."
+      }
+    },
+    {
+      "node_id": "box_12",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "I've jogged it down and I can see the contact pattern now.",
+      "edge_label_to_next": null,
+      "turn_index": 24,
+      "ground_truth": {
+        "node_id": "box_12",
+        "node_type": "process",
+        "node_text": "Jog the pressing head to the lower position and visually inspect the contact between the pressing head face and the part top surface. Check for tilt or partial contact."
+      }
+    },
+    {
+      "node_id": "box_11",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the pressing head making full, flat contact with the top surface of the part at the lower position?",
+      "edge_label_to_next": null,
+      "turn_index": 25,
+      "ground_truth": {
+        "node_id": "box_11",
+        "node_type": "decision",
+        "node_text": "Is the pressing head making full, flat contact with the top surface of the part at the lower position?"
+      }
+    },
+    {
+      "node_id": "box_11",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "No, there's a visible gap on one side. The head is tilted slightly and only making partial contact.",
+      "edge_label_to_next": "No",
+      "turn_index": 26,
+      "ground_truth": {
+        "node_id": "box_11",
+        "node_type": "decision",
+        "node_text": "Is the pressing head making full, flat contact with the top surface of the part at the lower position?"
+      }
+    },
+    {
+      "node_id": "box_13",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Realign the pressing head perpendicular to the part axis and verify that full flat contact is achieved across the entire contact surface.",
+      "edge_label_to_next": null,
+      "turn_index": 27,
+      "ground_truth": {
+        "node_id": "box_13",
+        "node_type": "process",
+        "node_text": "Realign the pressing head perpendicular to the part axis and verify that full flat contact is achieved across the entire contact surface."
+      }
+    },
+    {
+      "node_id": "box_13",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "I've realigned the head and checked the contact. It's now making full, even contact across the entire surface.",
+      "edge_label_to_next": "",
+      "turn_index": 28,
+      "ground_truth": {
+        "node_id": "box_13",
+        "node_type": "process",
+        "node_text": "Realign the pressing head perpendicular to the part axis and verify that full flat contact is achieved across the entire contact surface."
+      }
+    },
+    {
+      "node_id": "box_15",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Place the reference calibration block under the depth gauge and verify that the readout matches the reference block value within the specified gauge tolerance.",
+      "edge_label_to_next": null,
+      "turn_index": 29,
+      "ground_truth": {
+        "node_id": "box_15",
+        "node_type": "process",
+        "node_text": "Place the reference calibration block under the depth gauge and verify that the readout matches the reference block value within the specified gauge tolerance."
+      }
+    },
+    {
+      "node_id": "box_15",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "I've placed the calibration block under the gauge and checked the reading.",
+      "edge_label_to_next": null,
+      "turn_index": 30,
+      "ground_truth": {
+        "node_id": "box_15",
+        "node_type": "process",
+        "node_text": "Place the reference calibration block under the depth gauge and verify that the readout matches the reference block value within the specified gauge tolerance."
+      }
+    },
+    {
+      "node_id": "box_14",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the depth measurement gauge reading correctly when validated against the reference block?",
+      "edge_label_to_next": null,
+      "turn_index": 31,
+      "ground_truth": {
+        "node_id": "box_14",
+        "node_type": "decision",
+        "node_text": "Is the depth measurement gauge reading correctly (validated against the reference block)?"
+      }
+    },
+    {
+      "node_id": "box_14",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "No, the gauge is reading 0.15 millimeters high compared to the reference block value.",
+      "edge_label_to_next": "No",
+      "turn_index": 32,
+      "ground_truth": {
+        "node_id": "box_14",
+        "node_type": "decision",
+        "node_text": "Is the depth measurement gauge reading correctly (validated against the reference block)?"
+      }
+    },
+    {
+      "node_id": "box_16",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Rezero the depth gauge using the reference block and repeat the calibration check. Replace the depth gauge if the offset exceeds the acceptable correction range.",
+      "edge_label_to_next": null,
+      "turn_index": 33,
+      "ground_truth": {
+        "node_id": "box_16",
+        "node_type": "process",
+        "node_text": "Rezero the depth gauge using the reference block and repeat the calibration check. Replace the depth gauge if the offset exceeds the acceptable correction range."
+      }
+    },
+    {
+      "node_id": "box_16",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "I've rezeroed the gauge with the reference block and the calibration check now passes. The offset was within the correction range.",
+      "edge_label_to_next": null,
+      "turn_index": 34,
+      "ground_truth": {
+        "node_id": "box_16",
+        "node_type": "process",
+        "node_text": "Rezero the depth gauge using the reference block and repeat the calibration check. Replace the depth gauge if the offset exceeds the acceptable correction range."
+      }
+    },
+    {
+      "node_id": "box_17",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the insertion depth within specification after all corrections?",
+      "edge_label_to_next": null,
+      "turn_index": 35,
+      "ground_truth": {
+        "node_id": "box_17",
+        "node_type": "decision",
+        "node_text": "Is the insertion depth within specification after all corrections?"
+      }
+    },
+    {
+      "node_id": "box_17",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "No, I'm still seeing depths outside the specification limits even after all the corrections we've made.",
+      "edge_label_to_next": "No",
+      "turn_index": 36,
+      "ground_truth": {
+        "node_id": "box_17",
+        "node_type": "decision",
+        "node_text": "Is the insertion depth within specification after all corrections?"
+      }
+    },
+    {
+      "node_id": "box_18",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Escalate to the maintenance team. The insertion depth is outside specification despite all standard corrective actions. They need to inspect the pressing station mechanical stops and actuator condition.",
+      "edge_label_to_next": null,
+      "turn_index": 37,
+      "ground_truth": {
+        "node_id": "box_18",
+        "node_type": "process",
+        "node_text": "Escalate to the maintenance team: insertion depth is outside specification despite all standard corrective actions; inspect the pressing station mechanical stops and actuator condition."
+      }
+    },
+    {
+      "node_id": "box_18",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "I've contacted maintenance and briefed them on the situation. They're coming to inspect the mechanical stops and actuator.",
+      "edge_label_to_next": null,
+      "turn_index": 38,
+      "ground_truth": {
+        "node_id": "box_18",
+        "node_type": "process",
+        "node_text": "Escalate to the maintenance team: insertion depth is outside specification despite all standard corrective actions; inspect the pressing station mechanical stops and actuator condition."
+      }
+    },
+    {
+      "node_id": "box_19",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Record corrective actions and the verified insertion depth measurements in the quality log. Notify quality assurance team.",
+      "edge_label_to_next": null,
+      "turn_index": 39,
+      "ground_truth": {
+        "node_id": "box_19",
+        "node_type": "process",
+        "node_text": "Record corrective actions and the verified insertion depth measurements in the quality log. Notify quality assurance team."
+      }
+    },
+    {
+      "node_id": "box_19",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "All corrective actions and measurements have been logged, and I've notified quality assurance.",
+      "edge_label_to_next": null,
+      "turn_index": 40,
+      "ground_truth": {
+        "node_id": "box_19",
+        "node_type": "process",
+        "node_text": "Record corrective actions and the verified insertion depth measurements in the quality log. Notify quality assurance team."
+      }
+    },
+    {
+      "node_id": "box_20",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Procedure complete. The quality assurance team has been notified and will follow up on the escalation to maintenance.",
+      "edge_label_to_next": null,
+      "turn_index": 41,
+      "ground_truth": {
+        "node_id": "box_20",
+        "node_type": "terminator",
+        "node_text": "End, notify quality assurance team."
+      }
+    },
+    {
+      "node_id": "box_20",
+      "node_type": "terminator",
+      "speaker": "operator",
+      "utterance": "Understood, standing by for quality assurance and maintenance follow-up.",
+      "edge_label_to_next": null,
+      "turn_index": 42,
+      "ground_truth": {
+        "node_id": "box_20",
+        "node_type": "terminator",
+        "node_text": "End, notify quality assurance team."
+      }
+    }
+  ],
+  "metadata": {
+    "depth": 22,
+    "num_decisions": 7,
+    "num_processes": 13,
+    "num_documents": 0,
+    "terminator_type": "procedure_complete",
+    "terminator_text": "End, notify quality assurance team.",
+    "true_terminator": true,
+    "node_sequence": [
+      "box_0",
+      "box_21",
+      "box_1",
+      "box_3",
+      "box_2",
+      "box_4",
+      "box_6",
+      "box_5",
+      "box_7",
+      "box_9",
+      "box_8",
+      "box_10",
+      "box_12",
+      "box_11",
+      "box_13",
+      "box_15",
+      "box_14",
+      "box_16",
+      "box_17",
+      "box_18",
+      "box_19",
+      "box_20"
+    ],
+    "edge_labels": [
+      null,
+      null,
+      "Standard fault, continue diagnosis",
+      "",
+      null,
+      "No",
+      "",
+      null,
+      "No",
+      "",
+      null,
+      "No",
+      "",
+      null,
+      "No",
+      "",
+      null,
+      "No",
+      null,
+      "No",
+      null,
+      null
+    ],
+    "decision_points": [
+      {
+        "node": "box_21",
+        "label": "Standard fault, continue diagnosis",
+        "question": "Is the insertion depth deviation large enough to indicate a part to fixture mismatch or a tooling failure that would cause damaged parts if production continues?"
+      },
+      {
+        "node": "box_2",
+        "label": "No",
+        "question": "Is the insertion depth deviation consistent and in one direction (all too shallow or all too deep)?"
+      },
+      {
+        "node": "box_5",
+        "label": "No",
+        "question": "Is the part material batch dimensionally within the specification for this product type?"
+      },
+      {
+        "node": "box_8",
+        "label": "No",
+        "question": "Is the press depth setting (lower position setpoint) correct for this product type?"
+      },
+      {
+        "node": "box_11",
+        "label": "No",
+        "question": "Is the pressing head making full, flat contact with the top surface of the part at the lower position?"
+      },
+      {
+        "node": "box_14",
+        "label": "No",
+        "question": "Is the depth measurement gauge reading correctly (validated against the reference block)?"
+      },
+      {
+        "node": "box_17",
+        "label": "No",
+        "question": "Is the insertion depth within specification after all corrections?"
+      }
+    ],
+    "generation_model": "anthropic/claude-sonnet-4-5",
+    "verification": {
+      "verified": true,
+      "issues": [],
+      "corrected_turns": [
+        {
+          "node_id": "box_0",
+          "node_type": "terminator",
+          "speaker": "system",
+          "utterance": "Starting insertion depth diagnostic procedure.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_21",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is the insertion depth deviation large enough to indicate a part to fixture mismatch or a tooling failure that would cause damaged parts if production continues?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_21",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "The deviation is noticeable but not critical. Parts aren't being damaged, so we can proceed with standard troubleshooting.",
+          "edge_label_to_next": "Standard fault, continue diagnosis"
+        },
+        {
+          "node_id": "box_1",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Record the measured insertion depth values, the direction of deviation, and the batch number. Collect five representative parts for reference.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_1",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "Done. I've logged the depth readings showing they're running shallow, noted batch number B4792, and pulled five sample parts.",
+          "edge_label_to_next": ""
+        },
+        {
+          "node_id": "box_3",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Record insertion depth readings for ten consecutive parts, calculate the mean depth and compare against the nominal target, then check whether the deviation is consistent or varies between parts.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_3",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "Measurements complete. The mean is 0.8 millimeters below target, and I'm seeing variation part to part.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_2",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is the insertion depth deviation consistent and in one direction, either all too shallow or all too deep?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_2",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "No, the deviation is random. Some parts are shallow, some are deeper, there's no consistent pattern.",
+          "edge_label_to_next": "No"
+        },
+        {
+          "node_id": "box_4",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Check part to part dimensional variation in the batch. Sample five parts for dimensional measurement.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_4",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "I've pulled five parts and they're ready for dimensional checks.",
+          "edge_label_to_next": ""
+        },
+        {
+          "node_id": "box_6",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Measure the outer diameter and top surface geometry of five parts from the current batch and compare against the incoming material specification.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_6",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "Measurements done. I've compared them to the incoming spec sheet.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_5",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is the part material batch dimensionally within the specification for this product type?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_5",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "No, the outer diameter measurements are outside tolerance. The parts are undersized compared to spec.",
+          "edge_label_to_next": "No"
+        },
+        {
+          "node_id": "box_7",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Reject the current batch as dimensionally non-conforming. Reload from a batch with confirmed dimensional conformance and create a non-conformance record.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_7",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "Batch B4792 has been rejected and tagged. I've loaded batch C1205 which passed incoming inspection, and I've filed the non-conformance report.",
+          "edge_label_to_next": ""
+        },
+        {
+          "node_id": "box_9",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Read the lower position setpoint from the press depth parameter screen, compare the stored setpoint against the value on the validated process sheet, and check whether the setpoint was changed since the last confirmed good run.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_9",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "I've pulled up the parameters and compared them to the process sheet. The setpoint looks off.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_8",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is the press depth setting, the lower position setpoint, correct for this product type?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_8",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "No, the setpoint is 12.5 millimeters but the process sheet calls for 11.8 millimeters.",
+          "edge_label_to_next": "No"
+        },
+        {
+          "node_id": "box_10",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Adjust the press depth setting to the specified value for this product type and rerun a test pressing cycle. Verify the corrected depth.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_10",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "I've adjusted the setpoint to 11.8 millimeters and ran a test cycle. Depth is improved but still needs verification.",
+          "edge_label_to_next": ""
+        },
+        {
+          "node_id": "box_12",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Jog the pressing head to the lower position and visually inspect the contact between the pressing head face and the part top surface. Check for tilt or partial contact.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_12",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "I've jogged it down and I can see the contact pattern now.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_11",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is the pressing head making full, flat contact with the top surface of the part at the lower position?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_11",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "No, there's a visible gap on one side. The head is tilted slightly and only making partial contact.",
+          "edge_label_to_next": "No"
+        },
+        {
+          "node_id": "box_13",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Realign the pressing head perpendicular to the part axis and verify that full flat contact is achieved across the entire contact surface.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_13",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "I've realigned the head and checked the contact. It's now making full, even contact across the entire surface.",
+          "edge_label_to_next": ""
+        },
+        {
+          "node_id": "box_15",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Place the reference calibration block under the depth gauge and verify that the readout matches the reference block value within the specified gauge tolerance.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_15",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "I've placed the calibration block under the gauge and checked the reading.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_14",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is the depth measurement gauge reading correctly when validated against the reference block?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_14",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "No, the gauge is reading 0.15 millimeters high compared to the reference block value.",
+          "edge_label_to_next": "No"
+        },
+        {
+          "node_id": "box_16",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Rezero the depth gauge using the reference block and repeat the calibration check. Replace the depth gauge if the offset exceeds the acceptable correction range.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_16",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "I've rezeroed the gauge with the reference block and the calibration check now passes. The offset was within the correction range.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_17",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is the insertion depth within specification after all corrections?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_17",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "No, I'm still seeing depths outside the specification limits even after all the corrections we've made.",
+          "edge_label_to_next": "No"
+        },
+        {
+          "node_id": "box_18",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Escalate to the maintenance team. The insertion depth is outside specification despite all standard corrective actions. They need to inspect the pressing station mechanical stops and actuator condition.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_18",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "I've contacted maintenance and briefed them on the situation. They're coming to inspect the mechanical stops and actuator.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_19",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Record corrective actions and the verified insertion depth measurements in the quality log. Notify quality assurance team.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_19",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "All corrective actions and measurements have been logged, and I've notified quality assurance.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_20",
+          "node_type": "terminator",
+          "speaker": "system",
+          "utterance": "Procedure complete. The quality assurance team has been notified and will follow up on the escalation to maintenance.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_20",
+          "node_type": "terminator",
+          "speaker": "operator",
+          "utterance": "Understood, standing by for quality assurance and maintenance follow-up.",
+          "edge_label_to_next": null
+        }
+      ]
+    }
+  }
+}

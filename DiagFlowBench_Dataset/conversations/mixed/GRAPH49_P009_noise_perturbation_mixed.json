@@ -1,0 +1,947 @@
+{
+  "conversation_id": "GRAPH49_P009_noise_perturbation_mixed",
+  "graph_id": "GRAPH49",
+  "path_id": "GRAPH49_P009",
+  "regime": "mixed",
+  "variant": "noise_perturbation",
+  "robustness_axis": "noise_perturbation",
+  "turns": [
+    {
+      "node_id": "box_0",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Starting servo axis diagnostic procedure.",
+      "edge_label_to_next": null,
+      "turn_index": 0,
+      "ground_truth": {
+        "node_id": "box_0",
+        "node_type": "terminator",
+        "node_text": "Start"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Complete the following checks: First, inspect the drive amplifier heatsink fins for dust or blocked ventilation slots. Second, check the motor body for abnormal surface temperature with a contact thermometer. Third, inspect the drive amplifier display for thermal warning or fault codes.",
+      "edge_label_to_next": null,
+      "turn_index": 1,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Inspect the drive amplifier heatsink fins for dust or blocked ventilation slots. 2. Check the motor body for abnormal surface temperature with a contact thermometer. 3. Inspect the drive amplifier display for thermal warning or fault codes."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "checks complete heatsink fins are clear motor temp is normal and no thermal fualts displayed",
+      "edge_label_to_next": "",
+      "turn_index": 2,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Inspect the drive amplifier heatsink fins for dust or blocked ventilation slots. 2. Check the motor body for abnormal surface temperature with a contact thermometer. 3. Inspect the drive amplifier display for thermal warning or fault codes."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Hold a calibrated infrared thermometer or contact thermocouple probe against the drive amplifier heatsink surface after the axis has been running under normal load for twenty minutes. Record the heatsink temperature and compare it against the maximum permitted temperature stated in the drive amplifier datasheet.",
+      "edge_label_to_next": null,
+      "turn_index": 3,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "process",
+        "node_text": "Hold a calibrated infrared thermometer or a contact thermocouple probe against the drive amplifier heatsink surface after the axis has been running under normal load for 20 minutes. Record the heatsink temperature and compare against the maximum permitted heatsink temperature stated in the drive amplifier datasheet. An overtemperature condition with normal ambient temperature indicates a failed cooling fan or blocked heatsink fins."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "temp measurement complete heatsink reading 58 degrees celsius well below datasheet limit",
+      "edge_label_to_next": null,
+      "turn_index": 4,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "process",
+        "node_text": "Hold a calibrated infrared thermometer or a contact thermocouple probe against the drive amplifier heatsink surface after the axis has been running under normal load for 20 minutes. Record the heatsink temperature and compare against the maximum permitted heatsink temperature stated in the drive amplifier datasheet. An overtemperature condition with normal ambient temperature indicates a failed cooling fan or blocked heatsink fins."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_4",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the drive heatsink temperature within the rated continuous limit?",
+      "edge_label_to_next": null,
+      "turn_index": 5,
+      "ground_truth": {
+        "node_id": "box_4",
+        "node_type": "decision",
+        "node_text": "Drive heatsink temperature within rated continuous limit?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_4",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yeah heatsink temp is within rated limit",
+      "edge_label_to_next": "Yes",
+      "turn_index": 6,
+      "ground_truth": {
+        "node_id": "box_4",
+        "node_type": "decision",
+        "node_text": "Drive heatsink temperature within rated continuous limit?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_7",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the winding resistance balanced within 2% across all phases?",
+      "edge_label_to_next": null,
+      "turn_index": 7,
+      "ground_truth": {
+        "node_id": "box_7",
+        "node_type": "decision",
+        "node_text": "Winding resistance balanced within 2% across all phases?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_7",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no seeing variance about 3.5% betwene phase a and phase c",
+      "edge_label_to_next": "No",
+      "turn_index": 8,
+      "ground_truth": {
+        "node_id": "box_7",
+        "node_type": "decision",
+        "node_text": "Winding resistance balanced within 2% across all phases?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Inspect the motor terminal block, tighten all connections, and check the insulation.",
+      "edge_label_to_next": null,
+      "turn_index": 9,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "process",
+        "node_text": "Inspect motor terminal block, tighten connections, check insulation"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "terminal block inspected connections tightened insulation looks good",
+      "edge_label_to_next": "",
+      "turn_index": 10,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "process",
+        "node_text": "Inspect motor terminal block, tighten connections, check insulation"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_9",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Inspect the encoder read head status indicator light on the motor body or drive amplifier. Check the encoder cable continuity at both the motor connector and the drive connector using a continuity tester on each signal wire. Also inspect the cable route for crush damage, sharp bends, or contact with hot or moving surfaces.",
+      "edge_label_to_next": null,
+      "turn_index": 11,
+      "ground_truth": {
+        "node_id": "box_9",
+        "node_type": "process",
+        "node_text": "Inspect the encoder read head status indicator light on the motor body or drive amplifier; green indicates a valid signal and red or flashing indicates a fault. Check the encoder cable continuity at both the motor connector and the drive connector using a continuity tester on each signal wire. Inspect the cable route for crush damage, sharp bends, or contact with hot or moving surfaces."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_9",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "The encoder light is showing amber instead of green or red, and it's been steady like that for the past ten minutes. I've never seen this color before on this model.",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "coverage_gap",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_9",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "ok so encoder inspection complete status light green all signal wires show good continuity cable route clear no visible damage",
+      "edge_label_to_next": null,
+      "turn_index": 12,
+      "ground_truth": {
+        "node_id": "box_9",
+        "node_type": "process",
+        "node_text": "Inspect the encoder read head status indicator light on the motor body or drive amplifier; green indicates a valid signal and red or flashing indicates a fault. Check the encoder cable continuity at both the motor connector and the drive connector using a continuity tester on each signal wire. Inspect the cable route for crush damage, sharp bends, or contact with hot or moving surfaces."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_10",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the encoder hardware status normal with no fault flags in the drive?",
+      "edge_label_to_next": null,
+      "turn_index": 13,
+      "ground_truth": {
+        "node_id": "box_10",
+        "node_type": "decision",
+        "node_text": "Encoder hardware status normal, no fault flags in drive?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_10",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yeah encoder hardware showing normal status no fault flags",
+      "edge_label_to_next": "Yes",
+      "turn_index": 14,
+      "ground_truth": {
+        "node_id": "box_10",
+        "node_type": "decision",
+        "node_text": "Encoder hardware status normal, no fault flags in drive?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_14",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the following error within the specified limit at all three speeds?",
+      "edge_label_to_next": null,
+      "turn_index": 15,
+      "ground_truth": {
+        "node_id": "box_14",
+        "node_type": "decision",
+        "node_text": "Following error within specified limit at all three speeds?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_14",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no following error exceeding limit at 50% and 90% traverse rates",
+      "edge_label_to_next": "No",
+      "turn_index": 16,
+      "ground_truth": {
+        "node_id": "box_14",
+        "node_type": "decision",
+        "node_text": "Following error within specified limit at all three speeds?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_15",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Adjust the servo gain parameters Kp and Ki within the drive tuning limits.",
+      "edge_label_to_next": null,
+      "turn_index": 17,
+      "ground_truth": {
+        "node_id": "box_15",
+        "node_type": "process",
+        "node_text": "Adjust servo gain parameters, Kp, Ki within drive tuning limits"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_15",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "servo gain params adjusted increased kp by 8% and ki by 5%",
+      "edge_label_to_next": null,
+      "turn_index": 18,
+      "ground_truth": {
+        "node_id": "box_15",
+        "node_type": "process",
+        "node_text": "Adjust servo gain parameters, Kp, Ki within drive tuning limits"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_16",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Reverify the following error after the gain adjustment.",
+      "edge_label_to_next": null,
+      "turn_index": 19,
+      "ground_truth": {
+        "node_id": "box_16",
+        "node_type": "decision",
+        "node_text": "Reverify following error after gain adjustment"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_16",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "following error now within limits at all three test speeds",
+      "edge_label_to_next": "OK",
+      "turn_index": 20,
+      "ground_truth": {
+        "node_id": "box_16",
+        "node_type": "decision",
+        "node_text": "Reverify following error after gain adjustment"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_20",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the position accuracy within plus or minus 0.005 millimeters at all reference positions?",
+      "edge_label_to_next": null,
+      "turn_index": 21,
+      "ground_truth": {
+        "node_id": "box_20",
+        "node_type": "decision",
+        "node_text": "Position accuracy within ±0.005 mm at all reference positions?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_20",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "The position readings are jumping around erratically by about 0.2 mm every few seconds, even when the axis isn't moving. I think the encoder feedback cable might be damaged or loose.",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "undocumented_malfunction",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_20",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no seeing errors up to 0.008mm at three of the refernce positions",
+      "edge_label_to_next": "No",
+      "turn_index": 22,
+      "ground_truth": {
+        "node_id": "box_20",
+        "node_type": "decision",
+        "node_text": "Position accuracy within ±0.005 mm at all reference positions?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_21",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Complete the encoder calibration procedure: Access the encoder calibration menu via the service laptop, select the encoder calibration routine and follow the on-screen procedure, then record the calibration result and confirm the residual error is within tolerance.",
+      "edge_label_to_next": null,
+      "turn_index": 23,
+      "ground_truth": {
+        "node_id": "box_21",
+        "node_type": "process",
+        "node_text": "Complete the following steps: 1. Access the encoder calibration menu via the service laptop. 2. Select the encoder calibration routine and follow the on-screen procedure. 3. Record the calibration result and confirm the residual error is within tolerance."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_21",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "encoder recalibration complete residual error now 0.002mm within tolerance",
+      "edge_label_to_next": null,
+      "turn_index": 24,
+      "ground_truth": {
+        "node_id": "box_21",
+        "node_type": "process",
+        "node_text": "Complete the following steps: 1. Access the encoder calibration menu via the service laptop. 2. Select the encoder calibration routine and follow the on-screen procedure. 3. Record the calibration result and confirm the residual error is within tolerance."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_22",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Reverify the position accuracy after encoder recalibration.",
+      "edge_label_to_next": null,
+      "turn_index": 25,
+      "ground_truth": {
+        "node_id": "box_22",
+        "node_type": "decision",
+        "node_text": "Reverify position accuracy after encoder recalibration"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_22",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "position accuracy now within spec at all reference positions",
+      "edge_label_to_next": "OK",
+      "turn_index": 26,
+      "ground_truth": {
+        "node_id": "box_22",
+        "node_type": "decision",
+        "node_text": "Reverify position accuracy after encoder recalibration"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_26",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the brake holding torque within the rated value?",
+      "edge_label_to_next": null,
+      "turn_index": 27,
+      "ground_truth": {
+        "node_id": "box_26",
+        "node_type": "decision",
+        "node_text": "Brake holding torque within rated value?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_26",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no measured holding torque only 12 newton meters below the rated 18 newton meters",
+      "edge_label_to_next": "No",
+      "turn_index": 28,
+      "ground_truth": {
+        "node_id": "box_26",
+        "node_type": "decision",
+        "node_text": "Brake holding torque within rated value?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_27",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Replace the motor brake or adjust the air gap.",
+      "edge_label_to_next": null,
+      "turn_index": 29,
+      "ground_truth": {
+        "node_id": "box_27",
+        "node_type": "process",
+        "node_text": "Replace motor brake or adjust air gap"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_27",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "air gap adjusted to spec brake now holding properly",
+      "edge_label_to_next": "",
+      "turn_index": 30,
+      "ground_truth": {
+        "node_id": "box_27",
+        "node_type": "process",
+        "node_text": "Replace motor brake or adjust air gap"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_28",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Mount a dial test indicator against the axis slide with the probe oriented along the axis direction. Command a series of small reversals across a 5 millimeter range at slow feed rate. Read the indicator displacement at each reversal and record the maximum lost motion observed.",
+      "edge_label_to_next": null,
+      "turn_index": 31,
+      "ground_truth": {
+        "node_id": "box_28",
+        "node_type": "process",
+        "node_text": "Mount a dial test indicator against the axis slide with the probe oriented along the axis direction. Command a series of small reversals across a 5 millimetre range at slow feed rate. Read the indicator displacement at each reversal and record the maximum lost motion observed. Compare against the maximum permitted backlash value in the axis specification; if exceeded the ballscrew nut preload requires adjustment or replacement."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_28",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "backlash test complete max lost motion recorded is 0.012mm",
+      "edge_label_to_next": null,
+      "turn_index": 32,
+      "ground_truth": {
+        "node_id": "box_28",
+        "node_type": "process",
+        "node_text": "Mount a dial test indicator against the axis slide with the probe oriented along the axis direction. Command a series of small reversals across a 5 millimetre range at slow feed rate. Read the indicator displacement at each reversal and record the maximum lost motion observed. Compare against the maximum permitted backlash value in the axis specification; if exceeded the ballscrew nut preload requires adjustment or replacement."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_29",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the axis backlash within the 0.008 millimeter limit?",
+      "edge_label_to_next": null,
+      "turn_index": 33,
+      "ground_truth": {
+        "node_id": "box_29",
+        "node_type": "decision",
+        "node_text": "Axis backlash within 0.008 mm limit?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_29",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no backlash is 0.012mm exceeds the limit",
+      "edge_label_to_next": "No",
+      "turn_index": 34,
+      "ground_truth": {
+        "node_id": "box_29",
+        "node_type": "decision",
+        "node_text": "Axis backlash within 0.008 mm limit?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_30",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Adjust the coupling preload or replace the worn coupling element.",
+      "edge_label_to_next": null,
+      "turn_index": 35,
+      "ground_truth": {
+        "node_id": "box_30",
+        "node_type": "process",
+        "node_text": "Adjust coupling preload or replace worn coupling element"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_30",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Before I do that, can you tell me where I'm supposed to log these maintenance hours in the new system? I can't find the right form.",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "unrelated_question",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_30",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "coupling prelaod adjusted backlash now within spec",
+      "edge_label_to_next": "",
+      "turn_index": 36,
+      "ground_truth": {
+        "node_id": "box_30",
+        "node_type": "process",
+        "node_text": "Adjust coupling preload or replace worn coupling element"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_31",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Command the axis to run continuously at rated speed for one minute while recording the velocity feedback signal. Perform a frequency spectrum analysis on the velocity trace and identify any peak above 5% of the mean velocity in the 10 to 500 hertz range.",
+      "edge_label_to_next": null,
+      "turn_index": 37,
+      "ground_truth": {
+        "node_id": "box_31",
+        "node_type": "process",
+        "node_text": "Command the axis to run continuously at rated speed for one minute while recording the velocity feedback signal from the drive diagnostic output. Perform a frequency spectrum analysis on the velocity trace using the drive oscilloscope function or external data acquisition. Identify any peak above 5% of the mean velocity in the 10 to 500 hertz range and compare against the baseline spectrum recorded during the previous service."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_31",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "velocity spectrum analysis complete all frequency peaks below the 5% threshhold",
+      "edge_label_to_next": null,
+      "turn_index": 38,
+      "ground_truth": {
+        "node_id": "box_31",
+        "node_type": "process",
+        "node_text": "Command the axis to run continuously at rated speed for one minute while recording the velocity feedback signal from the drive diagnostic output. Perform a frequency spectrum analysis on the velocity trace using the drive oscilloscope function or external data acquisition. Identify any peak above 5% of the mean velocity in the 10 to 500 hertz range and compare against the baseline spectrum recorded during the previous service."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_32",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Are there no significant harmonic peaks in the velocity frequency spectrum?",
+      "edge_label_to_next": null,
+      "turn_index": 39,
+      "ground_truth": {
+        "node_id": "box_32",
+        "node_type": "decision",
+        "node_text": "No significant harmonic peaks in velocity frequency spectrum?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_32",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "correct no significant harmonic peaks detected in spectrum",
+      "edge_label_to_next": "Yes",
+      "turn_index": 40,
+      "ground_truth": {
+        "node_id": "box_32",
+        "node_type": "decision",
+        "node_text": "No significant harmonic peaks in velocity frequency spectrum?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_34",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Log all drive parameters and test data.",
+      "edge_label_to_next": null,
+      "turn_index": 41,
+      "ground_truth": {
+        "node_id": "box_34",
+        "node_type": "process",
+        "node_text": "Log all drive parameters and test data"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_34",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "all drive params and test data logged",
+      "edge_label_to_next": null,
+      "turn_index": 42,
+      "ground_truth": {
+        "node_id": "box_34",
+        "node_type": "process",
+        "node_text": "Log all drive parameters and test data"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_35",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Update the drive parameter backup and maintenance management system service record.",
+      "edge_label_to_next": null,
+      "turn_index": 43,
+      "ground_truth": {
+        "node_id": "box_35",
+        "node_type": "process",
+        "node_text": "Update drive parameter backup and maintenance management system service record"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_35",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "param backup and service record updated in maintenace system",
+      "edge_label_to_next": null,
+      "turn_index": 44,
+      "ground_truth": {
+        "node_id": "box_35",
+        "node_type": "process",
+        "node_text": "Update drive parameter backup and maintenance management system service record"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_36",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Procedure complete. All diagnostics have been successfully completed and documented.",
+      "edge_label_to_next": null,
+      "turn_index": 45,
+      "ground_truth": {
+        "node_id": "box_36",
+        "node_type": "terminator",
+        "node_text": "End, Procedure complete"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_36",
+      "node_type": "terminator",
+      "speaker": "operator",
+      "utterance": "acknowledged procedure complete",
+      "edge_label_to_next": null,
+      "turn_index": 46,
+      "ground_truth": {
+        "node_id": "box_36",
+        "node_type": "terminator",
+        "node_text": "End, Procedure complete"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    }
+  ],
+  "metadata": {
+    "depth": 24,
+    "num_decisions": 10,
+    "num_processes": 12,
+    "num_documents": 0,
+    "terminator_type": "procedure_complete",
+    "terminator_text": "End, Procedure complete",
+    "true_terminator": true,
+    "node_sequence": [
+      "box_0",
+      "box_1",
+      "box_2",
+      "box_4",
+      "box_7",
+      "box_8",
+      "box_9",
+      "box_10",
+      "box_14",
+      "box_15",
+      "box_16",
+      "box_20",
+      "box_21",
+      "box_22",
+      "box_26",
+      "box_27",
+      "box_28",
+      "box_29",
+      "box_30",
+      "box_31",
+      "box_32",
+      "box_34",
+      "box_35",
+      "box_36"
+    ],
+    "edge_labels": [
+      null,
+      null,
+      "",
+      null,
+      "Yes",
+      "No",
+      "",
+      null,
+      "Yes",
+      "No",
+      null,
+      "OK",
+      "No",
+      null,
+      "OK",
+      "No",
+      "",
+      null,
+      "No",
+      "",
+      null,
+      "Yes",
+      null,
+      null
+    ],
+    "decision_points": [
+      {
+        "node": "box_4",
+        "label": "Yes",
+        "question": "Drive heatsink temperature within rated continuous limit?"
+      },
+      {
+        "node": "box_7",
+        "label": "No",
+        "question": "Winding resistance balanced within 2% across all phases?"
+      },
+      {
+        "node": "box_10",
+        "label": "Yes",
+        "question": "Encoder hardware status normal, no fault flags in drive?"
+      },
+      {
+        "node": "box_14",
+        "label": "No",
+        "question": "Following error within specified limit at all three speeds?"
+      },
+      {
+        "node": "box_16",
+        "label": "OK",
+        "question": "Reverify following error after gain adjustment"
+      },
+      {
+        "node": "box_20",
+        "label": "No",
+        "question": "Position accuracy within ±0.005 mm at all reference positions?"
+      },
+      {
+        "node": "box_22",
+        "label": "OK",
+        "question": "Reverify position accuracy after encoder recalibration"
+      },
+      {
+        "node": "box_26",
+        "label": "No",
+        "question": "Brake holding torque within rated value?"
+      },
+      {
+        "node": "box_29",
+        "label": "No",
+        "question": "Axis backlash within 0.008 mm limit?"
+      },
+      {
+        "node": "box_32",
+        "label": "Yes",
+        "question": "No significant harmonic peaks in velocity frequency spectrum?"
+      }
+    ],
+    "generation_model": "anthropic/claude-sonnet-4-5",
+    "verification": {
+      "variant_of": "base",
+      "base_verified": true,
+      "note": "surface-form variant; not independently verified"
+    },
+    "injection_count": 3
+  },
+  "injection_log": [
+    {
+      "position": 12,
+      "node_id": "box_9",
+      "node_text": "Inspect the encoder read head status indicator light on the motor body or drive amplifier; green indicates a valid signal and red or flashing indicates a fault. Check the encoder cable continuity at both the motor connector and the drive connector using a continuity tester on each signal wire. Inspect the cable route for crush damage, sharp bends, or contact with hot or moving surfaces.",
+      "edge_labels": [],
+      "category": "coverage_gap",
+      "utterance": "The encoder light is showing amber instead of green or red, and it's been steady like that for the past ten minutes. I've never seen this color before on this model.",
+      "injection_rate": null,
+      "num_candidates": null
+    },
+    {
+      "position": 22,
+      "node_id": "box_20",
+      "node_text": "Position accuracy within ±0.005 mm at all reference positions?",
+      "edge_labels": [
+        "No",
+        "Yes"
+      ],
+      "category": "undocumented_malfunction",
+      "utterance": "The position readings are jumping around erratically by about 0.2 mm every few seconds, even when the axis isn't moving. I think the encoder feedback cable might be damaged or loose.",
+      "injection_rate": null,
+      "num_candidates": null
+    },
+    {
+      "position": 36,
+      "node_id": "box_30",
+      "node_text": "Adjust coupling preload or replace worn coupling element",
+      "edge_labels": [],
+      "category": "unrelated_question",
+      "utterance": "Before I do that, can you tell me where I'm supposed to log these maintenance hours in the new system? I can't find the right form.",
+      "injection_rate": null,
+      "num_candidates": null
+    }
+  ]
+}

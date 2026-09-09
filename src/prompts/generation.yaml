@@ -1,0 +1,184 @@
+pass1_system: |
+  You are generating scripted operator turns for a diagnostic troubleshooting
+  benchmark. You will be given:
+  1. A directed graph representing a diagnostic troubleshooting procedure.
+  2. A specific root-to-terminator path through that graph.
+
+  For each node on the path, you must generate the appropriate turn(s) as
+  described below. Turns must:
+  - Sound like natural speech from a maintenance technician and a guidance system.
+  - NOT mention or narrate any downstream steps or future graph structure.
+  - NOT refer to node IDs, edge labels, or any graph metadata.
+
+  Node-type rules:
+
+  Every operator turn must be preceded by a system turn. Never produce two
+  operator turns in a row.
+
+  START TERMINATOR (the first node, text = "Start"):
+    Generate exactly ONE system turn announcing the start of the procedure.
+    No operator response needed.
+    Example: {"node_id": "...", "node_type": "terminator", "speaker": "system",
+              "utterance": "Starting [procedure name] diagnostic procedure.",
+              "edge_label_to_next": null}
+
+  PROCESS nodes:
+    Generate TWO consecutive turns sharing the same node_id:
+    1. A "system" turn instructing the operator to carry out the action
+       (1-2 sentences, derived from the node text). edge_label_to_next: null.
+    2. An "operator" turn confirming completion or reporting the result
+       (1-2 sentences). Carries the edge_label_to_next for this node.
+
+  DECISION nodes:
+    Generate TWO consecutive turns sharing the same node_id:
+    1. A "system" turn asking the decision question (quote the node text naturally).
+       edge_label_to_next: null.
+    2. An "operator" turn answering with an observation that matches the outgoing
+       edge label. The answer must clearly imply the correct branch without
+       mentioning the label text verbatim. Carries the edge_label_to_next.
+
+  DOCUMENT nodes:
+    Generate TWO consecutive turns sharing the same node_id:
+    1. A "system" turn directing the operator to consult the document.
+       edge_label_to_next: null.
+    2. An "operator" turn confirming they have consulted it (1 sentence).
+       Carries the edge_label_to_next for this node.
+
+  END TERMINATOR (the final node):
+    Generate TWO consecutive turns sharing the same node_id:
+    1. A "system" turn announcing the procedure outcome and the required
+       closing action (notify team, place on production hold, escalate, etc.).
+       edge_label_to_next: null.
+    2. An "operator" turn acknowledging the instruction (1 sentence).
+       edge_label_to_next: null.
+
+  Edge label constraint:
+    Each utterance must be consistent with the edge label on the path. If
+    "edge_label_from_prev" is null, the node is the entry point and has no
+    incoming edge; no edge consistency constraint applies for that node.
+
+  Return a JSON array of objects, one per turn (decision nodes produce two
+  objects with the same node_id). Each object:
+  {
+    "node_id": "<box_N>",
+    "node_type": "<type>",
+    "speaker": "operator" | "system",
+    "utterance": "<natural language>",
+    "edge_label_to_next": "<outgoing label or null>"
+  }
+
+pass2_system: |
+  You are a quality reviewer for a diagnostic troubleshooting benchmark. You will be given:
+  1. A directed graph representing a diagnostic troubleshooting procedure.
+  2. A specific path through that graph.
+  3. A generated conversation (operator and system turns for each step on the path).
+
+  Your task is to verify each OPERATOR turn and flag any issues:
+  - EDGE INCONSISTENCY: The utterance does not match the edge label that determines this branch.
+  - STEP LEAKAGE: The utterance mentions or implies knowledge of downstream steps that haven't been reached yet.
+  - UNNATURALNESS: The utterance sounds robotic, uses graph terminology, or doesn't sound like a real maintenance technician.
+  - INFORMATION LEAK: The utterance reveals the graph structure, node IDs, or internal metadata.
+
+  Do NOT flag system turns — they are derived directly from the procedure graph
+  and are intentionally formal. Only evaluate operator turns.
+
+  For each flagged operator utterance, provide a corrected version.
+
+  Return JSON:
+  {
+    "verified": true/false,
+    "issues": [
+      {
+        "turn_index": <int>,
+        "issue_type": "<type>",
+        "original": "<original utterance>",
+        "corrected": "<fixed utterance>",
+        "explanation": "<why this was flagged>"
+      }
+    ],
+    "corrected_turns": [<full list of ALL turns with corrections applied>]
+  }
+
+  Always include "corrected_turns" in your response, even when there are no issues
+  (return the original list unchanged in that case).
+
+robustness_system: |
+  You are creating linguistic variants of operator utterances for a diagnostic
+  troubleshooting benchmark. You will be given a base conversation between an
+  operator and a system. Create a variant applying the specified transformation
+  while preserving the EXACT same semantic content and edge-label consistency.
+
+  Transformation: {transformation}
+
+  Rules:
+  - The meaning must be IDENTICAL — same observations, same answers to questions.
+  - The variant must remain graph-consistent (same path through the procedure).
+  - Only the surface form changes, not the information content.
+  - Only transform OPERATOR turns. Leave system turns completely unchanged —
+    they are derived directly from the procedure graph and must not be altered.
+
+  Return the modified conversation as a JSON array of turn objects with the
+  same structure as the input.
+
+injection_system: |
+  You are generating a single off-procedure operator utterance for a diagnostic
+  troubleshooting benchmark. The operator is currently at a specific node in a
+  diagnostic procedure. You must generate one operator turn that reports something
+  the procedure does NOT handle.
+
+  You will be given:
+  - current_node_text: what the procedure is currently asking or instructing
+  - outgoing_edge_labels: the only observations that are valid at this node
+  - failure_category: what kind of off-procedure input to generate
+
+  Failure categories:
+  - coverage_gap: A symptom or observation that the procedure does not address.
+    The operator notices something real about the equipment but the algorithm
+    has no branch for it.
+  - undocumented_malfunction: A specific fault condition that is not listed as
+    any branch condition at this node. More concrete than coverage_gap — the
+    operator names a specific part or reading that the procedure doesn't cover.
+  - unrelated_question: A question entirely unrelated to the current diagnostic
+    step (e.g. about a different system, safety protocol, scheduling, or
+    documentation) that the operator asks mid-procedure.
+
+  The generated utterance MUST:
+  - Sound like natural speech from a maintenance technician (1-2 sentences).
+  - NOT entail or imply any of the outgoing_edge_labels listed.
+  - NOT refer to node IDs, edge labels, or any graph metadata.
+  - Be plausible given the industrial maintenance context.
+
+  Return JSON: {"utterance": "<the off-procedure operator turn>"}
+
+injection_verifier_system: |
+  You are verifying that an operator utterance does NOT entail any outgoing edge
+  of the current node in a diagnostic procedure.
+
+  You will be given:
+  - current_node_text: what the procedure is asking at this node
+  - outgoing_edge_labels: the only valid observations at this node
+  - utterance: the turn to verify
+
+  An utterance "entails" an edge label if a reasonable person reading it would
+  conclude that the operator is reporting that specific observation or confirming
+  that specific condition. Paraphrases, synonyms, and clear implications count.
+
+  Return JSON: {"valid": true/false, "reason": "<brief explanation if invalid>"}
+
+transformations:
+  # Only noise_perturbation is retained (Liu et al., 2021 taxonomy).
+  # language_variety (paraphrasing) is not discriminative in this benchmark:
+  # system turns already contain verbatim node text, so lexical diversity in
+  # operator replies does not add signal for the off-procedure failure-mode task.
+  # noise_perturbation directly reflects the dominant input modality for
+  # industrial operators (tablet/radio input under time pressure).
+  noise_perturbation: >
+    Rewrite operator utterances to mimic how a technician types quickly on a
+    tablet or radio interface. Apply a mix of the following — not all at once,
+    but enough to feel clearly informal: lowercase or no opening capitalisation,
+    missing punctuation, 2-3 realistic typos (transposed or dropped letters),
+    telegraphic phrasing ('insertion depth ok' instead of 'the insertion depth
+    is within specification'), abbreviated units and terms ('temp', 'spec',
+    'engmt force', 'dim deviation'), filler words ('yeah', 'ok so', 'looks
+    like'), and occasional run-on sentences without commas. The utterance must
+    remain clearly understandable and semantically identical to the original.

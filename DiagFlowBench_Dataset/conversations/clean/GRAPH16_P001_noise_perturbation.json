@@ -1,0 +1,371 @@
+{
+  "conversation_id": "GRAPH16_P001_noise_perturbation",
+  "graph_id": "GRAPH16",
+  "path_id": "GRAPH16_P001",
+  "regime": "clean",
+  "variant": "noise_perturbation",
+  "robustness_axis": "noise_perturbation",
+  "turns": [
+    {
+      "node_id": "box_0",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Starting diagnostic procedure for placing four parts in the reorientation unit.",
+      "edge_label_to_next": null,
+      "turn_index": 0,
+      "ground_truth": {
+        "node_id": "box_0",
+        "node_type": "terminator",
+        "node_text": "Start"
+      }
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Does the part meet quality assurance team product specifications?",
+      "edge_label_to_next": null,
+      "turn_index": 1,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "decision",
+        "node_text": "Does the part meet quality assurance team product specifications?"
+      }
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yeah verified the parts they meet all qa specs",
+      "edge_label_to_next": "Yes",
+      "turn_index": 2,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "decision",
+        "node_text": "Does the part meet quality assurance team product specifications?"
+      }
+    },
+    {
+      "node_id": "box_4",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is transferring part from reorientation mechanism to output holder rack correct?",
+      "edge_label_to_next": null,
+      "turn_index": 3,
+      "ground_truth": {
+        "node_id": "box_4",
+        "node_type": "decision",
+        "node_text": "Is transferring part from reorientation mechanism to output holder rack correct?"
+      }
+    },
+    {
+      "node_id": "box_4",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yes transfer working correctly parts movign smooth from reorientation mech to output holder rack",
+      "edge_label_to_next": "Yes",
+      "turn_index": 4,
+      "ground_truth": {
+        "node_id": "box_4",
+        "node_type": "decision",
+        "node_text": "Is transferring part from reorientation mechanism to output holder rack correct?"
+      }
+    },
+    {
+      "node_id": "box_7",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the lowering of the output holder rack correct?",
+      "edge_label_to_next": null,
+      "turn_index": 5,
+      "ground_truth": {
+        "node_id": "box_7",
+        "node_type": "decision",
+        "node_text": "Is the lowering of the output holder rack correct?"
+      }
+    },
+    {
+      "node_id": "box_7",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yes output holder rack lowering properly even descent both sides",
+      "edge_label_to_next": "Yes",
+      "turn_index": 6,
+      "ground_truth": {
+        "node_id": "box_7",
+        "node_type": "decision",
+        "node_text": "Is the lowering of the output holder rack correct?"
+      }
+    },
+    {
+      "node_id": "box_10",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Are there contaminated parts?",
+      "edge_label_to_next": null,
+      "turn_index": 7,
+      "ground_truth": {
+        "node_id": "box_10",
+        "node_type": "decision",
+        "node_text": "Are there contaminated parts?"
+      }
+    },
+    {
+      "node_id": "box_10",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no dont see any contamination on parts or componetns",
+      "edge_label_to_next": "No",
+      "turn_index": 8,
+      "ground_truth": {
+        "node_id": "box_10",
+        "node_type": "decision",
+        "node_text": "Are there contaminated parts?"
+      }
+    },
+    {
+      "node_id": "box_17",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Are there electrical defects?",
+      "edge_label_to_next": null,
+      "turn_index": 9,
+      "ground_truth": {
+        "node_id": "box_17",
+        "node_type": "decision",
+        "node_text": "Are there electrical defects?"
+      }
+    },
+    {
+      "node_id": "box_17",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no all electrical components functioning normally cabling sensors and valves working as expected",
+      "edge_label_to_next": "No",
+      "turn_index": 10,
+      "ground_truth": {
+        "node_id": "box_17",
+        "node_type": "decision",
+        "node_text": "Are there electrical defects?"
+      }
+    },
+    {
+      "node_id": "box_20",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Are there worn parts?",
+      "edge_label_to_next": null,
+      "turn_index": 11,
+      "ground_truth": {
+        "node_id": "box_20",
+        "node_type": "decision",
+        "node_text": "Are there worn parts?"
+      }
+    },
+    {
+      "node_id": "box_20",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no inspectd all components no significant wear on any of them",
+      "edge_label_to_next": "No",
+      "turn_index": 12,
+      "ground_truth": {
+        "node_id": "box_20",
+        "node_type": "decision",
+        "node_text": "Are there worn parts?"
+      }
+    },
+    {
+      "node_id": "box_24",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Are the vacuum end effectors at equal height in the lower position?",
+      "edge_label_to_next": null,
+      "turn_index": 13,
+      "ground_truth": {
+        "node_id": "box_24",
+        "node_type": "decision",
+        "node_text": "Are the vacuum end effectors at equal height in the lower position?"
+      }
+    },
+    {
+      "node_id": "box_24",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yeah all four vacuum end effectors at equal height in lower position",
+      "edge_label_to_next": "Yes",
+      "turn_index": 14,
+      "ground_truth": {
+        "node_id": "box_24",
+        "node_type": "decision",
+        "node_text": "Are the vacuum end effectors at equal height in the lower position?"
+      }
+    },
+    {
+      "node_id": "box_29",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the center to center dimension of four vacuum end effectors relative to each other correct?",
+      "edge_label_to_next": null,
+      "turn_index": 15,
+      "ground_truth": {
+        "node_id": "box_29",
+        "node_type": "decision",
+        "node_text": "Is the center to center dimension of 4x vacuum end effectors relative to each other correct?"
+      }
+    },
+    {
+      "node_id": "box_29",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yes center to center spacing between all four vacuum end effectors within spec",
+      "edge_label_to_next": "Yes",
+      "turn_index": 16,
+      "ground_truth": {
+        "node_id": "box_29",
+        "node_type": "decision",
+        "node_text": "Is the center to center dimension of 4x vacuum end effectors relative to each other correct?"
+      }
+    },
+    {
+      "node_id": "box_34",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the pick up position of four parts from part holder correct?",
+      "edge_label_to_next": null,
+      "turn_index": 17,
+      "ground_truth": {
+        "node_id": "box_34",
+        "node_type": "decision",
+        "node_text": "Is the pick up position of 4x part from part holder correct?"
+      }
+    },
+    {
+      "node_id": "box_34",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no pickup position appears off vacuum end effectors arent aligning properly with parts in holder",
+      "edge_label_to_next": "No",
+      "turn_index": 18,
+      "ground_truth": {
+        "node_id": "box_34",
+        "node_type": "decision",
+        "node_text": "Is the pick up position of 4x part from part holder correct?"
+      }
+    },
+    {
+      "node_id": "box_38",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Perform assembly robot calibrations to correct the Z height and XY pick up position from the part holder.",
+      "edge_label_to_next": null,
+      "turn_index": 19,
+      "ground_truth": {
+        "node_id": "box_38",
+        "node_type": "process",
+        "node_text": "Perform assembly robot calibrations to correct the Z height and XY pick up position from the part holder."
+      }
+    },
+    {
+      "node_id": "box_38",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "ok so calibration complete adjusted z height and xy positioning for assembly robot",
+      "edge_label_to_next": null,
+      "turn_index": 20,
+      "ground_truth": {
+        "node_id": "box_38",
+        "node_type": "process",
+        "node_text": "Perform assembly robot calibrations to correct the Z height and XY pick up position from the part holder."
+      }
+    }
+  ],
+  "metadata": {
+    "depth": 11,
+    "num_decisions": 9,
+    "num_processes": 1,
+    "num_documents": 0,
+    "terminator_type": "production_hold",
+    "terminator_text": "Perform assembly robot calibrations to correct the Z height and XY pick up position from the part holder.",
+    "true_terminator": false,
+    "node_sequence": [
+      "box_0",
+      "box_1",
+      "box_4",
+      "box_7",
+      "box_10",
+      "box_17",
+      "box_20",
+      "box_24",
+      "box_29",
+      "box_34",
+      "box_38"
+    ],
+    "edge_labels": [
+      null,
+      null,
+      "Yes",
+      "Yes",
+      "Yes",
+      "No",
+      "No",
+      "No",
+      "Yes",
+      "Yes",
+      "No"
+    ],
+    "decision_points": [
+      {
+        "node": "box_1",
+        "label": "Yes",
+        "question": "Does the part meet quality assurance team product specifications?"
+      },
+      {
+        "node": "box_4",
+        "label": "Yes",
+        "question": "Is transferring part from reorientation mechanism to output holder rack correct?"
+      },
+      {
+        "node": "box_7",
+        "label": "Yes",
+        "question": "Is the lowering of the output holder rack correct?"
+      },
+      {
+        "node": "box_10",
+        "label": "No",
+        "question": "Are there contaminated parts?"
+      },
+      {
+        "node": "box_17",
+        "label": "No",
+        "question": "Are there electrical defects?"
+      },
+      {
+        "node": "box_20",
+        "label": "No",
+        "question": "Are there worn parts?"
+      },
+      {
+        "node": "box_24",
+        "label": "Yes",
+        "question": "Are the vacuum end effectors at equal height in the lower position?"
+      },
+      {
+        "node": "box_29",
+        "label": "Yes",
+        "question": "Is the center to center dimension of 4x vacuum end effectors relative to each other correct?"
+      },
+      {
+        "node": "box_34",
+        "label": "No",
+        "question": "Is the pick up position of 4x part from part holder correct?"
+      }
+    ],
+    "generation_model": "anthropic/claude-sonnet-4-5",
+    "verification": {
+      "variant_of": "base",
+      "base_verified": true,
+      "note": "surface-form variant; not independently verified"
+    }
+  }
+}

@@ -1,0 +1,484 @@
+{
+  "conversation_id": "GRAPH18_P001_noise_perturbation_mixed",
+  "graph_id": "GRAPH18",
+  "path_id": "GRAPH18_P001",
+  "regime": "mixed",
+  "variant": "noise_perturbation",
+  "robustness_axis": "noise_perturbation",
+  "turns": [
+    {
+      "node_id": "box_0",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Starting indexing table part placement diagnostic procedure.",
+      "edge_label_to_next": null,
+      "turn_index": 0,
+      "ground_truth": {
+        "node_id": "box_0",
+        "node_type": "terminator",
+        "node_text": "Start"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Does the part meet quality assurance team product specifications?",
+      "edge_label_to_next": null,
+      "turn_index": 1,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "decision",
+        "node_text": "Does the part meet quality assurance team product specifications?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yeah verified the part and it meets all qa specs",
+      "edge_label_to_next": "Yes",
+      "turn_index": 2,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "decision",
+        "node_text": "Does the part meet quality assurance team product specifications?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_4",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is picking up part from input slide correct?",
+      "edge_label_to_next": null,
+      "turn_index": 3,
+      "ground_truth": {
+        "node_id": "box_4",
+        "node_type": "decision",
+        "node_text": "Is picking up part from input slide correct?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_4",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yes parts being picked up correctly from input slide centered under vacuum end effectors no droping during transport",
+      "edge_label_to_next": "Yes",
+      "turn_index": 4,
+      "ground_truth": {
+        "node_id": "box_4",
+        "node_type": "decision",
+        "node_text": "Is picking up part from input slide correct?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_7",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is picking up part from reorientation mechanism correct?",
+      "edge_label_to_next": null,
+      "turn_index": 5,
+      "ground_truth": {
+        "node_id": "box_7",
+        "node_type": "decision",
+        "node_text": "Is picking up part from reorientation mechanism correct?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_7",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yeah pickup from reorient mechanism working properly parts centered and secure during transprot",
+      "edge_label_to_next": "Yes",
+      "turn_index": 6,
+      "ground_truth": {
+        "node_id": "box_7",
+        "node_type": "decision",
+        "node_text": "Is picking up part from reorientation mechanism correct?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_10",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the setup of the indexing table correct?",
+      "edge_label_to_next": null,
+      "turn_index": 7,
+      "ground_truth": {
+        "node_id": "box_10",
+        "node_type": "decision",
+        "node_text": "Is the setup of the indexing table correct?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_10",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yes indexing table setup looks good no play between setup tool and table during mounting",
+      "edge_label_to_next": "Yes",
+      "turn_index": 8,
+      "ground_truth": {
+        "node_id": "box_10",
+        "node_type": "decision",
+        "node_text": "Is the setup of the indexing table correct?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_13",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Are there contaminated parts?",
+      "edge_label_to_next": null,
+      "turn_index": 9,
+      "ground_truth": {
+        "node_id": "box_13",
+        "node_type": "decision",
+        "node_text": "Are there contaminated parts?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_13",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no dont see any contamination on parts vacuum end effectors filters or robot axes",
+      "edge_label_to_next": "No",
+      "turn_index": 10,
+      "ground_truth": {
+        "node_id": "box_13",
+        "node_type": "decision",
+        "node_text": "Are there contaminated parts?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_18",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Are there electrical defects?",
+      "edge_label_to_next": null,
+      "turn_index": 11,
+      "ground_truth": {
+        "node_id": "box_18",
+        "node_type": "decision",
+        "node_text": "Are there electrical defects?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_18",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no all electrical components check out fine cabling displacement sensors vacuum switches valve and system setings all working correctly",
+      "edge_label_to_next": "No",
+      "turn_index": 12,
+      "ground_truth": {
+        "node_id": "box_18",
+        "node_type": "decision",
+        "node_text": "Are there electrical defects?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_21",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Are there worn parts?",
+      "edge_label_to_next": null,
+      "turn_index": 13,
+      "ground_truth": {
+        "node_id": "box_21",
+        "node_type": "decision",
+        "node_text": "Are there worn parts?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_21",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "The bearing housing has stress cracks around the mounting flange, but the parts themselves don't look worn.",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "undocumented_malfunction",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_21",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no inspected vacuum end effectors actuator grippers gripper pin and robot axes none show signs of wear",
+      "edge_label_to_next": "No",
+      "turn_index": 14,
+      "ground_truth": {
+        "node_id": "box_21",
+        "node_type": "decision",
+        "node_text": "Are there worn parts?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_25",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the z parallelism of the lower position of 4x gripper relative to each other correct?",
+      "edge_label_to_next": null,
+      "turn_index": 15,
+      "ground_truth": {
+        "node_id": "box_25",
+        "node_type": "decision",
+        "node_text": "Is the z parallelism of the lower position of 4x gripper relative to each other correct?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_25",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Hey, before I check that, do you know where I can find the updated maintenance schedule for the coolant system? My supervisor was asking about it earlier.",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "unrelated_question",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_25",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yes z parallelism measurements for all four grippers within spec tolerance",
+      "edge_label_to_next": "Yes",
+      "turn_index": 16,
+      "ground_truth": {
+        "node_id": "box_25",
+        "node_type": "decision",
+        "node_text": "Is the z parallelism of the lower position of 4x gripper relative to each other correct?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_30",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the part placement position in the indexing table correct?",
+      "edge_label_to_next": null,
+      "turn_index": 17,
+      "ground_truth": {
+        "node_id": "box_30",
+        "node_type": "decision",
+        "node_text": "Is the part placement position in the indexing table correct?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_30",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no placement position is off z height and xy position arent meeting required specs",
+      "edge_label_to_next": "No",
+      "turn_index": 18,
+      "ground_truth": {
+        "node_id": "box_30",
+        "node_type": "decision",
+        "node_text": "Is the part placement position in the indexing table correct?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_35",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Perform assembly robot calibrations to correct the Z height and XY placement position into the indexing table fixture.",
+      "edge_label_to_next": null,
+      "turn_index": 19,
+      "ground_truth": {
+        "node_id": "box_35",
+        "node_type": "process",
+        "node_text": "Perform assembly robot calibrations to correct the Z height and XY placement position into the indexing table fixture."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_35",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "ok so calibrations complete adjusted assembly robot to correct z height and xy placement postion",
+      "edge_label_to_next": null,
+      "turn_index": 20,
+      "ground_truth": {
+        "node_id": "box_35",
+        "node_type": "process",
+        "node_text": "Perform assembly robot calibrations to correct the Z height and XY placement position into the indexing table fixture."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    }
+  ],
+  "metadata": {
+    "depth": 11,
+    "num_decisions": 9,
+    "num_processes": 1,
+    "num_documents": 0,
+    "terminator_type": "procedure_complete",
+    "terminator_text": "Perform assembly robot calibrations to correct the Z height and XY placement position into the indexing table fixture.",
+    "true_terminator": false,
+    "node_sequence": [
+      "box_0",
+      "box_1",
+      "box_4",
+      "box_7",
+      "box_10",
+      "box_13",
+      "box_18",
+      "box_21",
+      "box_25",
+      "box_30",
+      "box_35"
+    ],
+    "edge_labels": [
+      null,
+      null,
+      "Yes",
+      "Yes",
+      "Yes",
+      "Yes",
+      "No",
+      "No",
+      "No",
+      "Yes",
+      "No"
+    ],
+    "decision_points": [
+      {
+        "node": "box_1",
+        "label": "Yes",
+        "question": "Does the part meet quality assurance team product specifications?"
+      },
+      {
+        "node": "box_4",
+        "label": "Yes",
+        "question": "Is picking up part from input slide correct?"
+      },
+      {
+        "node": "box_7",
+        "label": "Yes",
+        "question": "Is picking up part from reorientation mechanism correct?"
+      },
+      {
+        "node": "box_10",
+        "label": "Yes",
+        "question": "Is the setup of the indexing table correct?"
+      },
+      {
+        "node": "box_13",
+        "label": "No",
+        "question": "Are there contaminated parts?"
+      },
+      {
+        "node": "box_18",
+        "label": "No",
+        "question": "Are there electrical defects?"
+      },
+      {
+        "node": "box_21",
+        "label": "No",
+        "question": "Are there worn parts?"
+      },
+      {
+        "node": "box_25",
+        "label": "Yes",
+        "question": "Is the z parallelism of the lower position of 4x gripper relative to each other correct?"
+      },
+      {
+        "node": "box_30",
+        "label": "No",
+        "question": "Is the part placement position in the indexing table correct?"
+      }
+    ],
+    "generation_model": "anthropic/claude-sonnet-4-5",
+    "verification": {
+      "variant_of": "base",
+      "base_verified": true,
+      "note": "surface-form variant; not independently verified"
+    },
+    "injection_count": 2
+  },
+  "injection_log": [
+    {
+      "position": 14,
+      "node_id": "box_21",
+      "node_text": "Are there worn parts?",
+      "edge_labels": [
+        "Yes",
+        "Yes",
+        "No"
+      ],
+      "category": "undocumented_malfunction",
+      "utterance": "The bearing housing has stress cracks around the mounting flange, but the parts themselves don't look worn.",
+      "injection_rate": null,
+      "num_candidates": null
+    },
+    {
+      "position": 16,
+      "node_id": "box_25",
+      "node_text": "Is the z parallelism of the lower position of 4x gripper relative to each other correct?",
+      "edge_labels": [
+        "No",
+        "Yes"
+      ],
+      "category": "unrelated_question",
+      "utterance": "Hey, before I check that, do you know where I can find the updated maintenance schedule for the coolant system? My supervisor was asking about it earlier.",
+      "injection_rate": null,
+      "num_candidates": null
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+flowchart TD
+    box_0(["Start"])
+    box_1{"Were the parts with the wrong marking pattern made<br/>during regular production?"}
+    box_2["Read out the part ID code of the relevant parts."]
+    box_3["Notify the quality assurance team and remove all<br/>parts with the wrong marking pattern if necessary."]
+    box_4{"Is the vision inspection system on?"}
+    box_5["Check in the deselection menu on the operator<br/>control interface whether the vision inspection<br/>system is still enabled."]
+    box_6["Turn on vision inspection system."]
+    box_7{"Is the vision inspection system still properly set?"}
+    box_8["Have maintenance team check the vision inspection<br/>system for pattern recognition"]
+    box_9["Have maintenance team retrain the inspection model."]
+    box_10(["Notify quality assurance team and engineering team"])
+    box_11["Proceed with the non conformance notification<br/>procedure."]
+
+    box_0 --> box_1
+    box_2 --> box_1
+    box_1 -->|"Yes"| box_4
+    box_1 -->|"No"| box_3
+    box_5 --> box_4
+    box_4 -->|"Yes"| box_7
+    box_4 -->|"No"| box_6
+    box_8 --> box_7
+    box_7 -->|"No"| box_9
+    box_7 -->|"Yes"| box_11
+    box_11 --> box_10
+
+    class box_0 terminator
+    class box_1 decision
+    class box_2 process
+    class box_3 process
+    class box_4 decision
+    class box_5 process
+    class box_6 process
+    class box_7 decision
+    class box_8 process
+    class box_9 process
+    class box_10 terminator
+    class box_11 process
+
+    classDef terminator fill:#2d4a6e,stroke:#1a3050,color:#ffffff,font-weight:bold
+    classDef process    fill:#f0f4ff,stroke:#4a6fa5,color:#1a1a2e
+    classDef decision   fill:#fff8e6,stroke:#c8922a,color:#1a1a2e
+    classDef document   fill:#f0fff4,stroke:#3a8a4a,color:#1a1a2e

@@ -1,0 +1,383 @@
+{
+  "id": "GRAPH12",
+  "description": "Troubleshooting procedure for out-of-specification height measurements at the part seating surface inspection station.",
+  "graph": {
+    "nodes": {
+      "box_0": {
+        "type": "terminator",
+        "text": "Start: height measurement of contact surface fixture"
+      },
+      "box_1": {
+        "type": "decision",
+        "text": "Does the product meet quality assurance team specifications?"
+      },
+      "box_2": {
+        "type": "process",
+        "text": "Note that the product thickness is outside specification, which will directly affect the height measurement reading."
+      },
+      "box_3": {
+        "type": "process",
+        "text": "Remove the non conforming products and reload with the correct product type before restarting the height measurement."
+      },
+      "box_4": {
+        "type": "decision",
+        "text": "Is the control for part lying flat (vacuum) functioning?"
+      },
+      "box_5": {
+        "type": "process",
+        "text": "Verify that the vacuum system correctly pulls and seats the part against the fixture."
+      },
+      "box_6": {
+        "type": "document",
+        "text": "Vacuum part present detection diagnostic"
+      },
+      "box_7": {
+        "type": "decision",
+        "text": "Is placing part on insert correct?"
+      },
+      "box_8": {
+        "type": "process",
+        "text": "Verify that the part is mounted straight on the insert and is not tilted."
+      },
+      "box_9": {
+        "type": "document",
+        "text": "Insert placement diagnostic (GRAPH 10)"
+      },
+      "box_10": {
+        "type": "decision",
+        "text": "Is the pressing part process functioning?"
+      },
+      "box_11": {
+        "type": "process",
+        "text": "Verify that the part is pressed at the correct stable speed straight into the insert, with no gap remaining."
+      },
+      "box_12": {
+        "type": "document",
+        "text": "Insert pressing diagnostic (GRAPH 11)"
+      },
+      "box_13": {
+        "type": "decision",
+        "text": "Are the contact surfaces clean?"
+      },
+      "box_14": {
+        "type": "process",
+        "text": "Check the contact surfaces where the gauge touches in the lowest position of the pressing mechanism"
+      },
+      "box_15": {
+        "type": "process",
+        "text": "Clean the contact surfaces, including the gauge head."
+      },
+      "box_16": {
+        "type": "decision",
+        "text": "Is there a cable break or damage?"
+      },
+      "box_17": {
+        "type": "process",
+        "text": "Complete the following steps: 1. Carefully move the cables and check whether the reading on the operator control interface remains stable. 2. Physically inspect the cable for damage. 3. Replace the signal cable between gauge and amplifier if damaged."
+      },
+      "box_18": {
+        "type": "process",
+        "text": "Replace the damaged signal cable between the gauge and the amplifier."
+      },
+      "box_19": {
+        "type": "decision",
+        "text": "Is the amplifier correct?"
+      },
+      "box_20": {
+        "type": "process",
+        "text": "Inspect the amplifier unit for faults or damage."
+      },
+      "box_21": {
+        "type": "process",
+        "text": "Replace the faulty amplifier unit."
+      },
+      "box_22": {
+        "type": "decision",
+        "text": "Does the gauge move smoothly?"
+      },
+      "box_23": {
+        "type": "process",
+        "text": "Press the gauge and check for smooth movement without play"
+      },
+      "box_24": {
+        "type": "process",
+        "text": "Replace the gauge with a new one that moves smoothly and without play."
+      },
+      "box_25": {
+        "type": "decision",
+        "text": "Is the green accordion rubber damaged?"
+      },
+      "box_26": {
+        "type": "process",
+        "text": "Inspect the accordion rubber seal on the gauge for visible cracks or tears."
+      },
+      "box_27": {
+        "type": "process",
+        "text": "Replace the gauge assembly: the accordion rubber seal is damaged and cannot be repaired."
+      },
+      "box_28": {
+        "type": "decision",
+        "text": "Is the contact probe defective?"
+      },
+      "box_29": {
+        "type": "process",
+        "text": "Check contact probe for damage or looseness"
+      },
+      "box_30": {
+        "type": "process",
+        "text": "Replace contact probe or fasten it securely"
+      },
+      "box_31": {
+        "type": "decision",
+        "text": "Is the gauge loose?"
+      },
+      "box_32": {
+        "type": "process",
+        "text": "Check the clamping collar that clamps the gauge"
+      },
+      "box_33": {
+        "type": "process",
+        "text": "Fasten the clamping collar to secure the gauge in its correct position."
+      },
+      "box_34": {
+        "type": "decision",
+        "text": "Is the gauge correctly adjusted?"
+      },
+      "box_35": {
+        "type": "process",
+        "text": "Complete the following steps: 1. Move the gauge downward and the part fixture upward. 2. Place a gauge block of the specified thickness between them and check the indicated value on the operator control interface."
+      },
+      "box_36": {
+        "type": "document",
+        "text": "Refer to the gauge adjustment specification for variant A machines (small format parts)."
+      },
+      "box_37": {
+        "type": "document",
+        "text": "Refer to the gauge adjustment specification for variant B machines (medium format parts)."
+      },
+      "box_38": {
+        "type": "document",
+        "text": "Refer to the gauge adjustment specification for variant C machines (large format parts)."
+      },
+      "box_39": {
+        "type": "document",
+        "text": "Gauge zeroing and adjustment procedure at pressing station"
+      },
+      "box_40": {
+        "type": "process",
+        "text": "Measured values must correspond to the insertion depth value"
+      },
+      "box_41": {
+        "type": "terminator",
+        "text": "The gauge is working correctly"
+      }
+    },
+    "edges": [
+      {
+        "source": "box_0",
+        "target": "box_1",
+        "label": null
+      },
+      {
+        "source": "box_2",
+        "target": "box_1",
+        "label": null
+      },
+      {
+        "source": "box_1",
+        "target": "box_3",
+        "label": "No"
+      },
+      {
+        "source": "box_1",
+        "target": "box_4",
+        "label": "Yes"
+      },
+      {
+        "source": "box_5",
+        "target": "box_4",
+        "label": null
+      },
+      {
+        "source": "box_4",
+        "target": "box_6",
+        "label": "No"
+      },
+      {
+        "source": "box_4",
+        "target": "box_7",
+        "label": "Yes"
+      },
+      {
+        "source": "box_8",
+        "target": "box_7",
+        "label": null
+      },
+      {
+        "source": "box_7",
+        "target": "box_9",
+        "label": "No"
+      },
+      {
+        "source": "box_7",
+        "target": "box_10",
+        "label": "Yes"
+      },
+      {
+        "source": "box_11",
+        "target": "box_10",
+        "label": null
+      },
+      {
+        "source": "box_10",
+        "target": "box_12",
+        "label": "No"
+      },
+      {
+        "source": "box_10",
+        "target": "box_13",
+        "label": "Yes"
+      },
+      {
+        "source": "box_14",
+        "target": "box_13",
+        "label": null
+      },
+      {
+        "source": "box_13",
+        "target": "box_15",
+        "label": "No"
+      },
+      {
+        "source": "box_13",
+        "target": "box_16",
+        "label": "Yes"
+      },
+      {
+        "source": "box_17",
+        "target": "box_16",
+        "label": null
+      },
+      {
+        "source": "box_16",
+        "target": "box_18",
+        "label": "No"
+      },
+      {
+        "source": "box_16",
+        "target": "box_19",
+        "label": "Yes"
+      },
+      {
+        "source": "box_20",
+        "target": "box_19",
+        "label": null
+      },
+      {
+        "source": "box_19",
+        "target": "box_21",
+        "label": "No"
+      },
+      {
+        "source": "box_19",
+        "target": "box_22",
+        "label": "Yes"
+      },
+      {
+        "source": "box_23",
+        "target": "box_22",
+        "label": null
+      },
+      {
+        "source": "box_22",
+        "target": "box_24",
+        "label": "No"
+      },
+      {
+        "source": "box_22",
+        "target": "box_25",
+        "label": "Yes"
+      },
+      {
+        "source": "box_26",
+        "target": "box_25",
+        "label": null
+      },
+      {
+        "source": "box_25",
+        "target": "box_27",
+        "label": "Yes"
+      },
+      {
+        "source": "box_25",
+        "target": "box_28",
+        "label": "No"
+      },
+      {
+        "source": "box_29",
+        "target": "box_28",
+        "label": null
+      },
+      {
+        "source": "box_28",
+        "target": "box_30",
+        "label": "Yes"
+      },
+      {
+        "source": "box_28",
+        "target": "box_31",
+        "label": "No"
+      },
+      {
+        "source": "box_32",
+        "target": "box_31",
+        "label": null
+      },
+      {
+        "source": "box_31",
+        "target": "box_33",
+        "label": "Yes"
+      },
+      {
+        "source": "box_31",
+        "target": "box_34",
+        "label": "No"
+      },
+      {
+        "source": "box_35",
+        "target": "box_34",
+        "label": null
+      },
+      {
+        "source": "box_36",
+        "target": "box_34",
+        "label": null
+      },
+      {
+        "source": "box_37",
+        "target": "box_34",
+        "label": null
+      },
+      {
+        "source": "box_38",
+        "target": "box_34",
+        "label": null
+      },
+      {
+        "source": "box_34",
+        "target": "box_39",
+        "label": "No"
+      },
+      {
+        "source": "box_34",
+        "target": "box_41",
+        "label": "Yes"
+      },
+      {
+        "source": "box_40",
+        "target": "box_41",
+        "label": null
+      }
+    ]
+  }
+}

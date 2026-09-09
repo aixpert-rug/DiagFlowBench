@@ -1,0 +1,85 @@
+flowchart TD
+    box_0(["Start"])
+    box_1["Stop the machine immediately. Manually remove the<br/>jammed part without forcing. Inspect the part and<br/>the reorientation unit interior for damage or<br/>debris. Note the jam location."]
+    box_2{"Is the jammed part dimensionally non conforming<br/>(outside the accepted dimensional range for this<br/>product type)?"}
+    box_3["Measure the jammed part on the metrology station.<br/>Record dimensions."]
+    box_4["Reject the current batch and reload from a<br/>dimensionally confirmed batch. Notify quality<br/>assurance team and create a non conformance record."]
+    box_5{"Is there contamination or debris in the<br/>reorientation unit that could obstruct part<br/>movement?"}
+    box_6["Inspect the reorientation unit interior, guide<br/>channels, and gripper faces for dust accumulation,<br/>adhesive residue, or foreign material."]
+    box_7["Clean the reorientation unit interior and gripper<br/>faces with a lint free cloth and compressed air.<br/>Verify that all guide channels are clear."]
+    box_8{"Is the gripper jaw opening width correctly set for<br/>this part diameter?"}
+    box_9["Complete the following checks: 1. Measure gripper<br/>jaw opening width with a digital caliper. 2. Compare<br/>the measured width against the specified value for<br/>this part type. 3. Check whether the jaw stop<br/>adjuster is secure and correctly positioned."]
+    box_10["Adjust the gripper jaw opening to the specified<br/>clearance for the current product type. reverify<br/>with a manual jog cycle before resuming."]
+    box_11{"Is the reorientation cycle completing within the<br/>specified cycle time?"}
+    box_12["Time three consecutive reorientation cycles using<br/>the cycle timer on the operator control interface<br/>and compare against the maximum cycle time<br/>specification."]
+    box_13["Check the reorientation drive motor current and<br/>servomotor settings for the rotation axis. Reduce<br/>speed or increase torque limit if the drive is not<br/>completing the cycle within the specification."]
+    box_14{"Has the jam fault been eliminated and ten<br/>consecutive jam free cycles confirmed?"}
+    box_15["Escalate to the maintenance team: repeated jams in<br/>the reorientation unit indicate a mechanical fault<br/>requiring detailed inspection of the rotation<br/>bearing and drive mechanism."]
+    box_16["Record the jam event, root cause, and corrective<br/>action in the quality log. Notify quality assurance<br/>team."]
+    box_17["Run 20 cycle production speed verification, monitor<br/>reorientation unit for jam recurrence."]
+    box_18[/"Refer to the reorientation unit cycle verification<br/>criteria."/]
+    box_19{"All 20 cycles completed without jam or cycle<br/>timeout?"}
+    box_20(["End, Escalate: jam recurring in verification run,<br/>mechanical inspection required"])
+    box_21{"Was the jammed part damaged, could it have been<br/>released downstream before jam detection?"}
+    box_22["Trace and quarantine any parts from the fault window<br/>in downstream stations."]
+    box_23(["End, Procedure complete. Production resumed."])
+
+    box_0 --> box_1
+    box_1 --> box_3
+    box_3 --> box_2
+    box_2 -->|"Yes"| box_4
+    box_2 -->|"No"| box_5
+    box_4 --> box_6
+    box_6 --> box_5
+    box_5 -->|"Yes"| box_7
+    box_5 -->|"No"| box_8
+    box_7 --> box_9
+    box_9 --> box_8
+    box_8 -->|"No"| box_10
+    box_8 -->|"Yes"| box_11
+    box_10 --> box_12
+    box_12 --> box_11
+    box_11 -->|"No"| box_13
+    box_11 -->|"Yes"| box_14
+    box_13 --> box_14
+    box_14 -->|"No"| box_15
+    box_14 -->|"Yes"| box_16
+    box_15 --> box_16
+    box_16 --> box_17
+    box_18 --> box_19
+    box_17 --> box_19
+    box_19 -->|"No"| box_20
+    box_19 -->|"Yes"| box_21
+    box_21 -->|"Yes"| box_22
+    box_21 -->|"No"| box_23
+    box_22 --> box_23
+
+    class box_0 terminator
+    class box_1 process
+    class box_2 decision
+    class box_3 process
+    class box_4 process
+    class box_5 decision
+    class box_6 process
+    class box_7 process
+    class box_8 decision
+    class box_9 process
+    class box_10 process
+    class box_11 decision
+    class box_12 process
+    class box_13 process
+    class box_14 decision
+    class box_15 process
+    class box_16 process
+    class box_17 process
+    class box_18 document
+    class box_19 decision
+    class box_20 terminator
+    class box_21 decision
+    class box_22 process
+    class box_23 terminator
+
+    classDef terminator fill:#2d4a6e,stroke:#1a3050,color:#ffffff,font-weight:bold
+    classDef process    fill:#f0f4ff,stroke:#4a6fa5,color:#1a1a2e
+    classDef decision   fill:#fff8e6,stroke:#c8922a,color:#1a1a2e
+    classDef document   fill:#f0fff4,stroke:#3a8a4a,color:#1a1a2e

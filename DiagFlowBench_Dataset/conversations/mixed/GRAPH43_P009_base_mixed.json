@@ -1,0 +1,1107 @@
+{
+  "conversation_id": "GRAPH43_P009_base_mixed",
+  "graph_id": "GRAPH43",
+  "path_id": "GRAPH43_P009",
+  "regime": "mixed",
+  "variant": "base",
+  "robustness_axis": null,
+  "turns": [
+    {
+      "node_id": "box_0",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Starting resistance welding electrode diagnostic procedure.",
+      "edge_label_to_next": null,
+      "turn_index": 0,
+      "ground_truth": {
+        "node_id": "box_0",
+        "node_type": "terminator",
+        "node_text": "Start"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Complete the following checks: First, inspect the electrode cap faces for pitting deeper than one millimeter or mushrooming. Second, check the cap shank contact surface for corrosion or mechanical damage. Third, inspect the coolant port on each electrode arm for blockage.",
+      "edge_label_to_next": null,
+      "turn_index": 1,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Inspect electrode cap faces for pitting deeper than 1 mm or mushrooming. 2. Check the cap shank contact surface for corrosion or mechanical damage. 3. Inspect the coolant port on each electrode arm for blockage."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "I've completed all three checks. The electrode faces show some minor wear but nothing deeper than one millimeter, the shank surfaces are clean, and the coolant ports are clear.",
+      "edge_label_to_next": null,
+      "turn_index": 2,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Inspect electrode cap faces for pitting deeper than 1 mm or mushrooming. 2. Check the cap shank contact surface for corrosion or mechanical damage. 3. Inspect the coolant port on each electrode arm for blockage."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Electrode cap damage, severe pitting, mushrooming or cracking?",
+      "edge_label_to_next": null,
+      "turn_index": 3,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Electrode cap damage, severe pitting, mushrooming or cracking?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "No, the caps are in acceptable condition. I don't see any severe damage, deep pitting, or cracks.",
+      "edge_label_to_next": "No",
+      "turn_index": 4,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Electrode cap damage, severe pitting, mushrooming or cracking?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_6",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Electrode face diameter within wear limit?",
+      "edge_label_to_next": null,
+      "turn_index": 5,
+      "ground_truth": {
+        "node_id": "box_6",
+        "node_type": "decision",
+        "node_text": "Electrode face diameter within wear limit?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_6",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, the face diameter is still within the serviceable range according to the specification.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 6,
+      "ground_truth": {
+        "node_id": "box_6",
+        "node_type": "decision",
+        "node_text": "Electrode face diameter within wear limit?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_10",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Cooling water flow rate above minimum at both electrodes?",
+      "edge_label_to_next": null,
+      "turn_index": 7,
+      "ground_truth": {
+        "node_id": "box_10",
+        "node_type": "decision",
+        "node_text": "Cooling water flow rate above minimum at both electrodes?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_10",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, both electrodes are showing flow rates above the minimum threshold. The cooling circuit is functioning properly.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 8,
+      "ground_truth": {
+        "node_id": "box_10",
+        "node_type": "decision",
+        "node_text": "Cooling water flow rate above minimum at both electrodes?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_14",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Electrode force within plus or minus five percent of programmed schedule value?",
+      "edge_label_to_next": null,
+      "turn_index": 9,
+      "ground_truth": {
+        "node_id": "box_14",
+        "node_type": "decision",
+        "node_text": "Electrode force within ±5% of programmed schedule value?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_14",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "No, the measured force is reading about eight percent low. It's outside the tolerance band.",
+      "edge_label_to_next": "No",
+      "turn_index": 10,
+      "ground_truth": {
+        "node_id": "box_14",
+        "node_type": "decision",
+        "node_text": "Electrode force within ±5% of programmed schedule value?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_15",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Adjust the pneumatic pressure regulator on the electrode arm to bring the force back within specification.",
+      "edge_label_to_next": null,
+      "turn_index": 11,
+      "ground_truth": {
+        "node_id": "box_15",
+        "node_type": "process",
+        "node_text": "Adjust pneumatic pressure regulator on electrode arm"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_15",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "I've adjusted the regulator and increased the pneumatic pressure.",
+      "edge_label_to_next": null,
+      "turn_index": 12,
+      "ground_truth": {
+        "node_id": "box_15",
+        "node_type": "process",
+        "node_text": "Adjust pneumatic pressure regulator on electrode arm"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_16",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Reverify electrode force after regulator adjustment.",
+      "edge_label_to_next": null,
+      "turn_index": 13,
+      "ground_truth": {
+        "node_id": "box_16",
+        "node_type": "decision",
+        "node_text": "Reverify electrode force after regulator adjustment"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_16",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "The force is now reading within tolerance. The adjustment brought it back into range.",
+      "edge_label_to_next": "OK",
+      "turn_index": 14,
+      "ground_truth": {
+        "node_id": "box_16",
+        "node_type": "decision",
+        "node_text": "Reverify electrode force after regulator adjustment"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_20",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Measured weld current within plus or minus three percent of scheduled value?",
+      "edge_label_to_next": null,
+      "turn_index": 15,
+      "ground_truth": {
+        "node_id": "box_20",
+        "node_type": "decision",
+        "node_text": "Measured weld current within ±3% of scheduled value?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_20",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "No, the peak current is running about four and a half percent below the scheduled value.",
+      "edge_label_to_next": "No",
+      "turn_index": 16,
+      "ground_truth": {
+        "node_id": "box_20",
+        "node_type": "decision",
+        "node_text": "Measured weld current within ±3% of scheduled value?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_21",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Access the weld controller parameter menu using the maintenance password, read the current correction factor for the affected welding schedule, and compare the stored factor against the reference value for this material stack.",
+      "edge_label_to_next": null,
+      "turn_index": 17,
+      "ground_truth": {
+        "node_id": "box_21",
+        "node_type": "process",
+        "node_text": "Complete the following steps: 1. Access the weld controller parameter menu using the maintenance password. 2. Read the current correction factor for the affected welding schedule. 3. Compare the stored factor against the reference value for this material stack."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_21",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "I've accessed the controller and checked the correction factor. I can see it needs adjustment to match the reference.",
+      "edge_label_to_next": null,
+      "turn_index": 18,
+      "ground_truth": {
+        "node_id": "box_21",
+        "node_type": "process",
+        "node_text": "Complete the following steps: 1. Access the weld controller parameter menu using the maintenance password. 2. Read the current correction factor for the affected welding schedule. 3. Compare the stored factor against the reference value for this material stack."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_22",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Reverify weld current after controller correction.",
+      "edge_label_to_next": null,
+      "turn_index": 19,
+      "ground_truth": {
+        "node_id": "box_22",
+        "node_type": "decision",
+        "node_text": "Reverify weld current after controller correction"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_22",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "The current is now within specification. The correction brought it into the three percent window.",
+      "edge_label_to_next": "OK",
+      "turn_index": 20,
+      "ground_truth": {
+        "node_id": "box_22",
+        "node_type": "decision",
+        "node_text": "Reverify weld current after controller correction"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_26",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Weld time within plus or minus one cycle of scheduled value?",
+      "edge_label_to_next": null,
+      "turn_index": 21,
+      "ground_truth": {
+        "node_id": "box_26",
+        "node_type": "decision",
+        "node_text": "Weld time within ±1 cycle of scheduled value?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_26",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "No, the measured weld time is off by about two cycles. It's running longer than programmed.",
+      "edge_label_to_next": "No",
+      "turn_index": 22,
+      "ground_truth": {
+        "node_id": "box_26",
+        "node_type": "decision",
+        "node_text": "Weld time within ±1 cycle of scheduled value?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_27",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Adjust the weld timer setting in the controller schedule to correct the timing deviation.",
+      "edge_label_to_next": null,
+      "turn_index": 23,
+      "ground_truth": {
+        "node_id": "box_27",
+        "node_type": "process",
+        "node_text": "Adjust weld timer setting in controller schedule"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_27",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "I've adjusted the timer setting, but I'm noticing the weld nugget diameter is still undersized even though the heat input should be correct now.",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "coverage_gap",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_27",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "I've adjusted the timer setting in the schedule.",
+      "edge_label_to_next": "",
+      "turn_index": 24,
+      "ground_truth": {
+        "node_id": "box_27",
+        "node_type": "process",
+        "node_text": "Adjust weld timer setting in controller schedule"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_28",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Clean both electrode faces and place a sheet of carbon transfer paper between them. Close the electrodes at twenty-five percent of the programmed force setting and open. Inspect the carbon transfer pattern on each face for concentricity and full coverage.",
+      "edge_label_to_next": null,
+      "turn_index": 25,
+      "ground_truth": {
+        "node_id": "box_28",
+        "node_type": "process",
+        "node_text": "Clean both electrode faces and place a sheet of carbon transfer paper between them. Close the electrodes at 25% of the programmed force setting and open. Inspect the carbon transfer pattern on each face; the contact impression should be concentric and cover the full electrode face area uniformly. An off centre or crescent shaped pattern indicates electrode misalignment requiring mechanical correction."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_28",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "I've completed the carbon transfer test. The pattern shows good contact but it's slightly off-center on one side.",
+      "edge_label_to_next": null,
+      "turn_index": 26,
+      "ground_truth": {
+        "node_id": "box_28",
+        "node_type": "process",
+        "node_text": "Clean both electrode faces and place a sheet of carbon transfer paper between them. Close the electrodes at 25% of the programmed force setting and open. Inspect the carbon transfer pattern on each face; the contact impression should be concentric and cover the full electrode face area uniformly. An off centre or crescent shaped pattern indicates electrode misalignment requiring mechanical correction."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_29",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Electrode faces parallel, contact pattern above ninety percent of face area?",
+      "edge_label_to_next": null,
+      "turn_index": 27,
+      "ground_truth": {
+        "node_id": "box_29",
+        "node_type": "decision",
+        "node_text": "Electrode faces parallel, contact pattern above 90% of face area?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_29",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "No, the contact pattern is only covering about eighty-five percent of the face area. The alignment needs correction.",
+      "edge_label_to_next": "No",
+      "turn_index": 28,
+      "ground_truth": {
+        "node_id": "box_29",
+        "node_type": "decision",
+        "node_text": "Electrode faces parallel, contact pattern above 90% of face area?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_30",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Adjust the electrode arm tilt to achieve parallel contact between the electrode faces.",
+      "edge_label_to_next": null,
+      "turn_index": 29,
+      "ground_truth": {
+        "node_id": "box_30",
+        "node_type": "process",
+        "node_text": "Adjust electrode arm tilt to achieve parallel contact"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_30",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "I've adjusted the arm tilt. The electrodes should now be properly aligned.",
+      "edge_label_to_next": "",
+      "turn_index": 30,
+      "ground_truth": {
+        "node_id": "box_30",
+        "node_type": "process",
+        "node_text": "Adjust electrode arm tilt to achieve parallel contact"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_31",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Prepare five test specimens cut from the production material stack with the correct number of layers and thickness. Weld each specimen at the nominal schedule settings, label them, and measure the weld nugget diameter. Record the results in the pilot weld log.",
+      "edge_label_to_next": null,
+      "turn_index": 31,
+      "ground_truth": {
+        "node_id": "box_31",
+        "node_type": "process",
+        "node_text": "Prepare five test specimens cut from the production material stack with the correct number of layers and thickness. Weld each specimen at the nominal schedule settings and label each with the weld number and machine setting used. Measure the weld nugget diameter visually or by ultrasonic means and record the result in the pilot weld log before proceeding to non destructive testing."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_31",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "I'm getting an error code E47 on the ultrasonic measurement device and it won't calibrate properly - this isn't covered in the procedure but I can't get accurate nugget diameter readings.",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "undocumented_malfunction",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_31",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "I've completed all five pilot welds and logged the nugget measurements. The specimens are ready for inspection.",
+      "edge_label_to_next": null,
+      "turn_index": 32,
+      "ground_truth": {
+        "node_id": "box_31",
+        "node_type": "process",
+        "node_text": "Prepare five test specimens cut from the production material stack with the correct number of layers and thickness. Weld each specimen at the nominal schedule settings and label each with the weld number and machine setting used. Measure the weld nugget diameter visually or by ultrasonic means and record the result in the pilot weld log before proceeding to non destructive testing."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_33",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Pilot weld appearance, no spatter, expulsion or surface cracks?",
+      "edge_label_to_next": null,
+      "turn_index": 33,
+      "ground_truth": {
+        "node_id": "box_33",
+        "node_type": "decision",
+        "node_text": "Pilot weld appearance, no spatter, expulsion or surface cracks?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_33",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Hey, before I check that, do you know where I can find the updated lockout-tagout procedure for this line? Someone mentioned it changed last week.",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "unrelated_question",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_33",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "No, I'm seeing some minor spatter on two of the specimens. The surface quality isn't quite where it should be.",
+      "edge_label_to_next": "No",
+      "turn_index": 34,
+      "ground_truth": {
+        "node_id": "box_33",
+        "node_type": "decision",
+        "node_text": "Pilot weld appearance, no spatter, expulsion or surface cracks?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_34",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Adjust the weld schedule by modifying the current and force parameters for this material batch to eliminate the spatter.",
+      "edge_label_to_next": null,
+      "turn_index": 35,
+      "ground_truth": {
+        "node_id": "box_34",
+        "node_type": "process",
+        "node_text": "Adjust weld schedule, modify current and force for material batch"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_34",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "I've reduced the current slightly and fine-tuned the force setting for the material batch.",
+      "edge_label_to_next": "",
+      "turn_index": 36,
+      "ground_truth": {
+        "node_id": "box_34",
+        "node_type": "process",
+        "node_text": "Adjust weld schedule, modify current and force for material batch"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_35",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Apply ultrasonic couplant to the electrode face side of each pilot weld coupon and scan the weld zone using an A-scan ultrasonic probe. Record the signal amplitude and back wall echo attenuation, identify the nugget boundary, and measure the diameter. Compare against the minimum specification.",
+      "edge_label_to_next": null,
+      "turn_index": 37,
+      "ground_truth": {
+        "node_id": "box_35",
+        "node_type": "process",
+        "node_text": "Apply ultrasonic couplant to the electrode face side of each pilot weld coupon and scan the weld zone using an A scan ultrasonic probe. Record the reflected signal amplitude and the back wall echo attenuation. Identify the nugget boundary and measure the nugget diameter from the scan image. Compare against the minimum nugget diameter in the weld quality specification."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_35",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "I've completed the ultrasonic scanning on all five coupons and recorded the measurements. The nugget boundaries are clear.",
+      "edge_label_to_next": null,
+      "turn_index": 38,
+      "ground_truth": {
+        "node_id": "box_35",
+        "node_type": "process",
+        "node_text": "Apply ultrasonic couplant to the electrode face side of each pilot weld coupon and scan the weld zone using an A scan ultrasonic probe. Record the reflected signal amplitude and the back wall echo attenuation. Identify the nugget boundary and measure the nugget diameter from the scan image. Compare against the minimum nugget diameter in the weld quality specification."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_37",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Weld nugget diameter meets minimum for material thickness?",
+      "edge_label_to_next": null,
+      "turn_index": 39,
+      "ground_truth": {
+        "node_id": "box_37",
+        "node_type": "decision",
+        "node_text": "Weld nugget diameter meets minimum for material thickness?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_37",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, all five nuggets are measuring above the minimum diameter requirement for this material thickness.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 40,
+      "ground_truth": {
+        "node_id": "box_37",
+        "node_type": "decision",
+        "node_text": "Weld nugget diameter meets minimum for material thickness?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_40",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Peel test shows button pull failure mode, no interfacial fracture?",
+      "edge_label_to_next": null,
+      "turn_index": 41,
+      "ground_truth": {
+        "node_id": "box_40",
+        "node_type": "decision",
+        "node_text": "Peel test shows button pull failure mode, no interfacial fracture?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_40",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, all the peel tests show clean button pull. The nuggets are pulling out completely with no signs of interfacial failure.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 42,
+      "ground_truth": {
+        "node_id": "box_40",
+        "node_type": "decision",
+        "node_text": "Peel test shows button pull failure mode, no interfacial fracture?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_46",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Weld controller backup completed successfully?",
+      "edge_label_to_next": null,
+      "turn_index": 43,
+      "ground_truth": {
+        "node_id": "box_46",
+        "node_type": "decision",
+        "node_text": "Weld controller backup completed successfully?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_46",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "No, the backup transfer failed. I'm getting an error on the network connection.",
+      "edge_label_to_next": "No",
+      "turn_index": 44,
+      "ground_truth": {
+        "node_id": "box_46",
+        "node_type": "decision",
+        "node_text": "Weld controller backup completed successfully?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_47",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Verify the marking controller is connected to the factory network, navigate to the archive menu and check that the last record was written successfully, and confirm the archive path and file permissions are correctly configured.",
+      "edge_label_to_next": null,
+      "turn_index": 45,
+      "ground_truth": {
+        "node_id": "box_47",
+        "node_type": "process",
+        "node_text": "Complete the following steps: 1. Verify the marking controller is connected to the factory network. 2. Navigate to the archive menu and check that the last record was written successfully. 3. Confirm the archive path and file permissions are correctly configured."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_47",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "I've verified the network connection and corrected the archive path permissions.",
+      "edge_label_to_next": "",
+      "turn_index": 46,
+      "ground_truth": {
+        "node_id": "box_47",
+        "node_type": "process",
+        "node_text": "Complete the following steps: 1. Verify the marking controller is connected to the factory network. 2. Navigate to the archive menu and check that the last record was written successfully. 3. Confirm the archive path and file permissions are correctly configured."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_48",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Immerse a calibrated thermocouple probe in the cooling water return line at the point closest to the electrode holder exit. Allow the machine to complete twenty welds at production rate and record the return line temperature at steady state. Compare against the maximum allowable temperature.",
+      "edge_label_to_next": null,
+      "turn_index": 47,
+      "ground_truth": {
+        "node_id": "box_48",
+        "node_type": "process",
+        "node_text": "Immerse a calibrated thermocouple probe in the cooling water return line at the point closest to the electrode holder exit. Allow the machine to complete 20 welds at production rate and record the return line temperature at steady state. Compare against the maximum allowable return temperature in the cooling system specification; excessive temperature indicates inadequate cooling flow or fouled heat exchanger plates."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_48",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "I've monitored the cooling water temperature through twenty welds and recorded the steady state reading.",
+      "edge_label_to_next": null,
+      "turn_index": 48,
+      "ground_truth": {
+        "node_id": "box_48",
+        "node_type": "process",
+        "node_text": "Immerse a calibrated thermocouple probe in the cooling water return line at the point closest to the electrode holder exit. Allow the machine to complete 20 welds at production rate and record the return line temperature at steady state. Compare against the maximum allowable return temperature in the cooling system specification; excessive temperature indicates inadequate cooling flow or fouled heat exchanger plates."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_49",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Coolant return temperature within rated range?",
+      "edge_label_to_next": null,
+      "turn_index": 49,
+      "ground_truth": {
+        "node_id": "box_49",
+        "node_type": "decision",
+        "node_text": "Coolant return temperature within rated range?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_49",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, the return temperature is well within the rated range. The cooling system is performing normally.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 50,
+      "ground_truth": {
+        "node_id": "box_49",
+        "node_type": "decision",
+        "node_text": "Coolant return temperature within rated range?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_52",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "All production qualification welds within specification?",
+      "edge_label_to_next": null,
+      "turn_index": 51,
+      "ground_truth": {
+        "node_id": "box_52",
+        "node_type": "decision",
+        "node_text": "All production qualification welds within specification?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_52",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "No, I'm seeing inconsistency in the final qualification welds. Two of the spots are showing undersized buttons.",
+      "edge_label_to_next": "No",
+      "turn_index": 52,
+      "ground_truth": {
+        "node_id": "box_52",
+        "node_type": "decision",
+        "node_text": "All production qualification welds within specification?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_43",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Escalate: peel test failure persistent, metallurgical review required. Do not release this machine to production. Contact the weld engineering team for a complete metallurgical assessment.",
+      "edge_label_to_next": null,
+      "turn_index": 53,
+      "ground_truth": {
+        "node_id": "box_43",
+        "node_type": "terminator",
+        "node_text": "End, Escalate: peel test failure persistent, metallurgical review"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_43",
+      "node_type": "terminator",
+      "speaker": "operator",
+      "utterance": "Understood. I'll escalate to the weld engineering team immediately.",
+      "edge_label_to_next": null,
+      "turn_index": 54,
+      "ground_truth": {
+        "node_id": "box_43",
+        "node_type": "terminator",
+        "node_text": "End, Escalate: peel test failure persistent, metallurgical review"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    }
+  ],
+  "metadata": {
+    "depth": 28,
+    "num_decisions": 15,
+    "num_processes": 11,
+    "num_documents": 0,
+    "terminator_type": "escalate",
+    "terminator_text": "End, Escalate: peel test failure persistent, metallurgical review",
+    "true_terminator": true,
+    "node_sequence": [
+      "box_0",
+      "box_1",
+      "box_2",
+      "box_6",
+      "box_10",
+      "box_14",
+      "box_15",
+      "box_16",
+      "box_20",
+      "box_21",
+      "box_22",
+      "box_26",
+      "box_27",
+      "box_28",
+      "box_29",
+      "box_30",
+      "box_31",
+      "box_33",
+      "box_34",
+      "box_35",
+      "box_37",
+      "box_40",
+      "box_46",
+      "box_47",
+      "box_48",
+      "box_49",
+      "box_52",
+      "box_43"
+    ],
+    "edge_labels": [
+      null,
+      null,
+      null,
+      "No",
+      "Yes",
+      "Yes",
+      "No",
+      null,
+      "OK",
+      "No",
+      null,
+      "OK",
+      "No",
+      "",
+      null,
+      "No",
+      "",
+      null,
+      "No",
+      "",
+      null,
+      "Yes",
+      "Yes",
+      "No",
+      "",
+      null,
+      "Yes",
+      "No"
+    ],
+    "decision_points": [
+      {
+        "node": "box_2",
+        "label": "No",
+        "question": "Electrode cap damage, severe pitting, mushrooming or cracking?"
+      },
+      {
+        "node": "box_6",
+        "label": "Yes",
+        "question": "Electrode face diameter within wear limit?"
+      },
+      {
+        "node": "box_10",
+        "label": "Yes",
+        "question": "Cooling water flow rate above minimum at both electrodes?"
+      },
+      {
+        "node": "box_14",
+        "label": "No",
+        "question": "Electrode force within ±5% of programmed schedule value?"
+      },
+      {
+        "node": "box_16",
+        "label": "OK",
+        "question": "Reverify electrode force after regulator adjustment"
+      },
+      {
+        "node": "box_20",
+        "label": "No",
+        "question": "Measured weld current within ±3% of scheduled value?"
+      },
+      {
+        "node": "box_22",
+        "label": "OK",
+        "question": "Reverify weld current after controller correction"
+      },
+      {
+        "node": "box_26",
+        "label": "No",
+        "question": "Weld time within ±1 cycle of scheduled value?"
+      },
+      {
+        "node": "box_29",
+        "label": "No",
+        "question": "Electrode faces parallel, contact pattern above 90% of face area?"
+      },
+      {
+        "node": "box_33",
+        "label": "No",
+        "question": "Pilot weld appearance, no spatter, expulsion or surface cracks?"
+      },
+      {
+        "node": "box_37",
+        "label": "Yes",
+        "question": "Weld nugget diameter meets minimum for material thickness?"
+      },
+      {
+        "node": "box_40",
+        "label": "Yes",
+        "question": "Peel test shows button pull failure mode, no interfacial fracture?"
+      },
+      {
+        "node": "box_46",
+        "label": "No",
+        "question": "Weld controller backup completed successfully?"
+      },
+      {
+        "node": "box_49",
+        "label": "Yes",
+        "question": "Coolant return temperature within rated range?"
+      },
+      {
+        "node": "box_52",
+        "label": "No",
+        "question": "All production qualification welds within specification?"
+      }
+    ],
+    "generation_model": "anthropic/claude-sonnet-4-5",
+    "verification": {
+      "verified": true,
+      "issues": []
+    },
+    "injection_count": 3
+  },
+  "injection_log": [
+    {
+      "position": 24,
+      "node_id": "box_27",
+      "node_text": "Adjust weld timer setting in controller schedule",
+      "edge_labels": [],
+      "category": "coverage_gap",
+      "utterance": "I've adjusted the timer setting, but I'm noticing the weld nugget diameter is still undersized even though the heat input should be correct now.",
+      "injection_rate": null,
+      "num_candidates": null
+    },
+    {
+      "position": 32,
+      "node_id": "box_31",
+      "node_text": "Prepare five test specimens cut from the production material stack with the correct number of layers and thickness. Weld each specimen at the nominal schedule settings and label each with the weld number and machine setting used. Measure the weld nugget diameter visually or by ultrasonic means and record the result in the pilot weld log before proceeding to non destructive testing.",
+      "edge_labels": [],
+      "category": "undocumented_malfunction",
+      "utterance": "I'm getting an error code E47 on the ultrasonic measurement device and it won't calibrate properly - this isn't covered in the procedure but I can't get accurate nugget diameter readings.",
+      "injection_rate": null,
+      "num_candidates": null
+    },
+    {
+      "position": 34,
+      "node_id": "box_33",
+      "node_text": "Pilot weld appearance, no spatter, expulsion or surface cracks?",
+      "edge_labels": [
+        "No",
+        "Yes"
+      ],
+      "category": "unrelated_question",
+      "utterance": "Hey, before I check that, do you know where I can find the updated lockout-tagout procedure for this line? Someone mentioned it changed last week.",
+      "injection_rate": null,
+      "num_candidates": null
+    }
+  ]
+}

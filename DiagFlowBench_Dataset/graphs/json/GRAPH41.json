@@ -1,0 +1,500 @@
+{
+  "id": "GRAPH41",
+  "description": "Laser marking head full optical and power diagnostic — PROC-65",
+  "graph": {
+    "nodes": {
+      "box_0": {
+        "type": "terminator",
+        "text": "Start"
+      },
+      "box_1": {
+        "type": "process",
+        "text": "Complete the following checks: 1. Inspect the protective window and lens for spatter pitting or residue. 2. Check the beam path enclosure for damage or contamination ingress. 3. Inspect the lens mounting ring for looseness or mechanical damage."
+      },
+      "box_2": {
+        "type": "decision",
+        "text": "Lens or beam path window scratched, chipped or contaminated?"
+      },
+      "box_3": {
+        "type": "terminator",
+        "text": "End, Replace optics: lens or window damage detected, station offline"
+      },
+      "box_4": {
+        "type": "process",
+        "text": "With the laser shut off, blow dry compressed air at the protective window from the clean side to remove loose debris. Apply one drop of optical cleaning fluid to a lint free applicator and wipe the inner surface using a single stroke in one direction. Inspect the window under a torch at oblique incidence; replace the window if spatter pitting or scratch damage covers more than 10% of the clear aperture."
+      },
+      "box_5": {
+        "type": "process",
+        "text": "Access the laser head cooling circuit status display or read the thermal sensor value from the laser controller diagnostic menu. Record the coolant inlet and outlet temperatures at the laser head block. A difference greater than 5 degrees Celsius between inlet and outlet at idle indicates a flow restriction; compare both values against the rated operating temperature range in the laser system specification."
+      },
+      "box_6": {
+        "type": "document",
+        "text": "Refer to the laser head thermal operating limits."
+      },
+      "box_7": {
+        "type": "decision",
+        "text": "Laser head temperature within rated operating range?"
+      },
+      "box_8": {
+        "type": "terminator",
+        "text": "End, Escalate: laser head overtemperature, check chiller circuit"
+      },
+      "box_9": {
+        "type": "process",
+        "text": "Insert a sheet of thermal paper at the nominal focal plane with no workpiece present. Fire a single low power alignment pulse and inspect the burn mark position and shape. The burn mark should be centred within 0.5 millimetres of the nominal beam centre reference point marked on the alignment jig. An elliptical burn pattern indicates astigmatism or a tilted beam delivery optic."
+      },
+      "box_10": {
+        "type": "document",
+        "text": "Refer to the beam alignment specification."
+      },
+      "box_11": {
+        "type": "decision",
+        "text": "Beam centred within 0.1 mm of field centre?"
+      },
+      "box_12": {
+        "type": "process",
+        "text": "Adjust beam steering mirror, tilt and pan micro adjusters"
+      },
+      "box_13": {
+        "type": "decision",
+        "text": "Reverify beam alignment after mirror adjustment"
+      },
+      "box_14": {
+        "type": "terminator",
+        "text": "End, Escalate: beam misalignment unrecoverable, optical bench check"
+      },
+      "box_15": {
+        "type": "process",
+        "text": "Connect a calibrated photodetector power meter to the laser beam path using the external power measurement tap or by directing the beam at the detector through the standard safety aperture. Command the laser to its nominal output power setting and record the measured power. Compare the reading against the power specification tolerance and investigate if the reading is more than 5% below the specification floor."
+      },
+      "box_16": {
+        "type": "document",
+        "text": "Refer to the laser power output specification."
+      },
+      "box_17": {
+        "type": "decision",
+        "text": "Output power within ±5% of rated value at 100% duty cycle?"
+      },
+      "box_18": {
+        "type": "process",
+        "text": "Complete the following steps: 1. Navigate to the laser power calibration menu in the marking software. 2. Place the calibrated power meter at the focal plane and follow the on-screen sequence. 3. Record the measured output power and confirm it meets the specification."
+      },
+      "box_19": {
+        "type": "decision",
+        "text": "Reverify output power after calibration routine"
+      },
+      "box_20": {
+        "type": "terminator",
+        "text": "End, Escalate: laser power unrecoverable, source degradation suspected"
+      },
+      "box_21": {
+        "type": "process",
+        "text": "Connect an oscilloscope to the Q switch trigger signal output at the laser controller. Command the laser to the standard pulse frequency used for the production marking program. Measure the period between successive trigger pulses and calculate the actual frequency. Compare against the programmed frequency and confirm the deviation is within 0.5% of the commanded value."
+      },
+      "box_22": {
+        "type": "document",
+        "text": "Refer to the laser pulse frequency specification."
+      },
+      "box_23": {
+        "type": "decision",
+        "text": "Pulse frequency stable at all programmed values?"
+      },
+      "box_24": {
+        "type": "process",
+        "text": "Inspect Q switch driver board connections and clean circuit board"
+      },
+      "box_25": {
+        "type": "process",
+        "text": "Mount the graduated focal test sample in the marking fixture at the nominal standoff distance. Mark a line across the full graduation range while stepping focus in 0.5 millimetre increments per segment. Inspect the marked line under a magnifier and identify the segment with the narrowest, cleanest line width; record the corresponding focus offset and compare against the value stored in the machine setup parameter table."
+      },
+      "box_26": {
+        "type": "document",
+        "text": "Refer to the focal length specification."
+      },
+      "box_27": {
+        "type": "decision",
+        "text": "Focal point at correct working distance ±0.2 mm?"
+      },
+      "box_28": {
+        "type": "process",
+        "text": "Adjust z axis focus offset in marking controller"
+      },
+      "box_29": {
+        "type": "process",
+        "text": "Hold a calibrated anemometer probe at the extraction port inlet while the extraction unit is running at the operating duty cycle. Record the air velocity in metres per second and calculate volumetric flow rate from the duct cross sectional area. Compare against the minimum extraction flow rate specified for this laser power class in the safety datasheet."
+      },
+      "box_30": {
+        "type": "document",
+        "text": "Refer to the exhaust extraction flow specification."
+      },
+      "box_31": {
+        "type": "decision",
+        "text": "Extraction flow rate above minimum required value?"
+      },
+      "box_32": {
+        "type": "process",
+        "text": "Replace extraction filter cartridge and recheck flow"
+      },
+      "box_33": {
+        "type": "process",
+        "text": "Remove the scan head cover and inspect each galvo mirror surface under a torch at grazing incidence for dust, spatter deposits, or surface oxidation. Blow clean with dry compressed air through the scan head purge port. Do not touch mirror surfaces; if spatter deposits are found that cannot be cleared by air, log the condition and schedule mirror replacement at the next planned maintenance window."
+      },
+      "box_34": {
+        "type": "decision",
+        "text": "Galvo mirror surfaces clean and undamaged?"
+      },
+      "box_35": {
+        "type": "process",
+        "text": "Clean galvo mirrors using specialist mirror cleaning procedure"
+      },
+      "box_36": {
+        "type": "process",
+        "text": "Load the standard reference substrate into the marking fixture and run the standard test mark program. Inspect the produced marks under a reference illumination source and confirm that line width, depth, and contrast are within the limits recorded on the product mark quality standard. Document the substrate lot number and the test result in the laser log."
+      },
+      "box_37": {
+        "type": "document",
+        "text": "Refer to the test mark quality acceptance criteria."
+      },
+      "box_38": {
+        "type": "decision",
+        "text": "All 10 test marks within depth, width and contrast specification?"
+      },
+      "box_39": {
+        "type": "process",
+        "text": "Adjust mark speed and power for substrate batch compensation"
+      },
+      "box_40": {
+        "type": "decision",
+        "text": "Reverify test mark quality after parameter adjustment"
+      },
+      "box_41": {
+        "type": "terminator",
+        "text": "End, Escalate: mark quality unrecoverable, process engineering review"
+      },
+      "box_42": {
+        "type": "process",
+        "text": "Place the field calibration target on the work surface and run the nine point calibration routine from the laser controller software menu. The routine commands a calibration mark at each of the nine grid positions and compares the measured mark positions against the reference grid dimensions. Record the residual error at each calibration point and confirm the maximum residual is below the marking accuracy tolerance."
+      },
+      "box_43": {
+        "type": "document",
+        "text": "Refer to the field distortion tolerance."
+      },
+      "box_44": {
+        "type": "decision",
+        "text": "All 9 calibration grid points within ±0.05 mm of nominal?"
+      },
+      "box_45": {
+        "type": "process",
+        "text": "Complete the following steps: 1. Navigate to the field distortion correction menu in the marking software. 2. Place the field calibration target on the work surface at nominal focal distance. 3. Run the correction routine and verify residual field error is within tolerance."
+      },
+      "box_46": {
+        "type": "process",
+        "text": "Load five consecutive production parts and run the production marking program at normal production parameters. Inspect each mark immediately after completion for completeness, position, contrast, and absence of spatter. Record the part serial numbers and the pass or fail result for each; any fail at this stage requires recalibration before production release."
+      },
+      "box_47": {
+        "type": "decision",
+        "text": "Production samples meet drawing marking requirements?"
+      },
+      "box_48": {
+        "type": "process",
+        "text": "Log all power, alignment and calibration data"
+      },
+      "box_49": {
+        "type": "terminator",
+        "text": "End, Procedure complete"
+      }
+    },
+    "edges": [
+      {
+        "source": "box_0",
+        "target": "box_1",
+        "label": null
+      },
+      {
+        "source": "box_1",
+        "target": "box_2",
+        "label": null
+      },
+      {
+        "source": "box_2",
+        "target": "box_3",
+        "label": "Yes"
+      },
+      {
+        "source": "box_2",
+        "target": "box_7",
+        "label": "No"
+      },
+      {
+        "source": "box_4",
+        "target": "box_7",
+        "label": null
+      },
+      {
+        "source": "box_5",
+        "target": "box_7",
+        "label": null
+      },
+      {
+        "source": "box_6",
+        "target": "box_7",
+        "label": null
+      },
+      {
+        "source": "box_7",
+        "target": "box_8",
+        "label": "No"
+      },
+      {
+        "source": "box_7",
+        "target": "box_11",
+        "label": "Yes"
+      },
+      {
+        "source": "box_9",
+        "target": "box_11",
+        "label": null
+      },
+      {
+        "source": "box_10",
+        "target": "box_11",
+        "label": null
+      },
+      {
+        "source": "box_11",
+        "target": "box_12",
+        "label": "No"
+      },
+      {
+        "source": "box_12",
+        "target": "box_13",
+        "label": null
+      },
+      {
+        "source": "box_13",
+        "target": "box_14",
+        "label": "Still misaligned"
+      },
+      {
+        "source": "box_13",
+        "target": "box_17",
+        "label": "OK"
+      },
+      {
+        "source": "box_11",
+        "target": "box_17",
+        "label": "Yes"
+      },
+      {
+        "source": "box_15",
+        "target": "box_17",
+        "label": null
+      },
+      {
+        "source": "box_16",
+        "target": "box_17",
+        "label": null
+      },
+      {
+        "source": "box_17",
+        "target": "box_18",
+        "label": "No"
+      },
+      {
+        "source": "box_18",
+        "target": "box_19",
+        "label": null
+      },
+      {
+        "source": "box_19",
+        "target": "box_20",
+        "label": "Still low"
+      },
+      {
+        "source": "box_19",
+        "target": "box_23",
+        "label": "OK"
+      },
+      {
+        "source": "box_17",
+        "target": "box_23",
+        "label": "Yes"
+      },
+      {
+        "source": "box_21",
+        "target": "box_23",
+        "label": null
+      },
+      {
+        "source": "box_22",
+        "target": "box_23",
+        "label": null
+      },
+      {
+        "source": "box_23",
+        "target": "box_24",
+        "label": "No"
+      },
+      {
+        "source": "box_24",
+        "target": "box_25",
+        "label": ""
+      },
+      {
+        "source": "box_23",
+        "target": "box_27",
+        "label": "Yes"
+      },
+      {
+        "source": "box_25",
+        "target": "box_27",
+        "label": null
+      },
+      {
+        "source": "box_26",
+        "target": "box_27",
+        "label": null
+      },
+      {
+        "source": "box_27",
+        "target": "box_28",
+        "label": "No"
+      },
+      {
+        "source": "box_28",
+        "target": "box_29",
+        "label": ""
+      },
+      {
+        "source": "box_27",
+        "target": "box_31",
+        "label": "Yes"
+      },
+      {
+        "source": "box_29",
+        "target": "box_31",
+        "label": null
+      },
+      {
+        "source": "box_30",
+        "target": "box_31",
+        "label": null
+      },
+      {
+        "source": "box_31",
+        "target": "box_32",
+        "label": "No"
+      },
+      {
+        "source": "box_32",
+        "target": "box_33",
+        "label": ""
+      },
+      {
+        "source": "box_31",
+        "target": "box_34",
+        "label": "Yes"
+      },
+      {
+        "source": "box_33",
+        "target": "box_34",
+        "label": null
+      },
+      {
+        "source": "box_34",
+        "target": "box_35",
+        "label": "No"
+      },
+      {
+        "source": "box_35",
+        "target": "box_36",
+        "label": ""
+      },
+      {
+        "source": "box_34",
+        "target": "box_38",
+        "label": "Yes"
+      },
+      {
+        "source": "box_36",
+        "target": "box_38",
+        "label": null
+      },
+      {
+        "source": "box_37",
+        "target": "box_38",
+        "label": null
+      },
+      {
+        "source": "box_38",
+        "target": "box_39",
+        "label": "No"
+      },
+      {
+        "source": "box_39",
+        "target": "box_40",
+        "label": null
+      },
+      {
+        "source": "box_40",
+        "target": "box_41",
+        "label": "Still failing"
+      },
+      {
+        "source": "box_40",
+        "target": "box_44",
+        "label": "OK"
+      },
+      {
+        "source": "box_38",
+        "target": "box_44",
+        "label": "Yes"
+      },
+      {
+        "source": "box_42",
+        "target": "box_44",
+        "label": null
+      },
+      {
+        "source": "box_43",
+        "target": "box_44",
+        "label": null
+      },
+      {
+        "source": "box_44",
+        "target": "box_45",
+        "label": "No"
+      },
+      {
+        "source": "box_45",
+        "target": "box_46",
+        "label": ""
+      },
+      {
+        "source": "box_44",
+        "target": "box_47",
+        "label": "Yes"
+      },
+      {
+        "source": "box_46",
+        "target": "box_47",
+        "label": null
+      },
+      {
+        "source": "box_47",
+        "target": "box_48",
+        "label": "Yes"
+      },
+      {
+        "source": "box_47",
+        "target": "box_41",
+        "label": "No"
+      },
+      {
+        "source": "box_48",
+        "target": "box_49",
+        "label": null
+      }
+    ]
+  }
+}

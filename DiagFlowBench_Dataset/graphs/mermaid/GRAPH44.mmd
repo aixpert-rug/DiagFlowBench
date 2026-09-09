@@ -1,0 +1,164 @@
+flowchart TD
+    box_0(["Start"])
+    box_1["Complete the following checks: 1. Inspect the<br/>fixture base plate for cracks or surface distortion.<br/>2. Check locating surfaces, dowel holes, and<br/>mounting pad faces for damage. 3. Inspect each clamp<br/>body for deformation or cracked pivot pins."]
+    box_2{"Base plate cracks, distortion or damaged mounting<br/>surfaces?"}
+    box_3(["End, Escalate: fixture base plate replacement<br/>required"])
+    box_4["With the fixture mounted in the machine, remove all<br/>tooling and use an air line to blow chips and<br/>coolant from all locating surfaces, clamp pads, and<br/>bore surfaces. Wipe all datum faces with a clean<br/>lint free cloth. Inspect the clamp mechanisms for<br/>embedded swarf or coolant deposits that could affect<br/>subsequent measurement accuracy."]
+    box_5["Using a dial gauge on a height stand or the machine<br/>probing cycle, measure the primary datum A surface<br/>height at four symmetrically distributed points.<br/>Record the maximum height variation across the four<br/>points and compare against the flatness tolerance<br/>for datum A in the fixture qualification record. Any<br/>reading outside tolerance requires investigation of<br/>the datum seat for swarf inclusion or surface<br/>damage."]
+    box_6[/"Refer to the fixture datum tolerance specification."/]
+    box_7{"Datum A surface within flatness tolerance of 0.02<br/>mm?"}
+    box_8["Scrape or regrind datum A surface to restore<br/>flatness"]
+    box_9["Locate the probe stylus against the primary locating<br/>pin at three heights along the pin axis. Record the<br/>pin position in X and Y relative to the fixture<br/>datum origin. Compare the measured position against<br/>the nominal position on the fixture design drawing;<br/>deviation greater than the tolerance stated in the<br/>process control plan requires fixture withdrawal for<br/>repair."]
+    box_10[/"Refer to the locating pin position specification."/]
+    box_11{"Primary locating pins within ±0.01 mm of nominal<br/>position?"}
+    box_12["Adjust pin bore plugs and reream to correct datum"]
+    box_13{"Reverify primary pin positions after bore adjustment"}
+    box_14(["End, Escalate: primary datum shift exceeds<br/>correction range, coordinate measuring machine<br/>review"])
+    box_15["Move the machine probe to the secondary locating pin<br/>and measure the pin position in the axis<br/>perpendicular to the primary locating direction.<br/>Record the offset from nominal and compare against<br/>the positional tolerance in the fixture<br/>qualification drawing. Check the pin for looseness<br/>by attempting to deflect it by hand; any detectable<br/>movement indicates a failed retention mechanism."]
+    box_16{"Secondary locating pins within ±0.015 mm of nominal?"}
+    box_17["Complete the following steps: 1. Identify the<br/>secondary locating pin bore that is out of position.<br/>2. Loosen the bore insert retention screws and use<br/>an adjusting tool to shift the bore. 3. Retorque the<br/>retention screws and remeasure the bore position."]
+    box_18["Using a calibrated height gauge on the machine table<br/>surface plate, measure the height of each of the<br/>four reference pads relative to the fixture base.<br/>Record all four values and calculate the height<br/>variation. A variation exceeding the flatness<br/>tolerance on the fixture drawing indicates that one<br/>or more pads has been contaminated, damaged, or that<br/>the fixture base has distorted."]
+    box_19[/"Refer to the z height reference specification."/]
+    box_20{"All Z height reference pads within ±0.01 mm of each<br/>other?"}
+    box_21["Regrind or shim low reference pads to restore<br/>coplanarity"]
+    box_22["Place a precision spirit level on the angular datum<br/>face and record the displayed deviation from level.<br/>Set up a sine bar at the nominal fixture angle and<br/>verify the angular datum contacts the sine bar face<br/>flush with no rocking. Record the angular deviation<br/>and compare against the angular tolerance in the<br/>fixture specification."]
+    box_23[/"Refer to the angular datum specification."/]
+    box_24{"Angular datum within 0.005 mm per 100 mm tolerance?"}
+    box_25["Adjust angular datum block shims to correct<br/>inclination"]
+    box_26["Insert a load cell between the clamping pad face and<br/>the reference surface at each clamping point in<br/>turn. Command the clamp to close at the production<br/>clamping pressure and record the force from the load<br/>cell amplifier display. Compare each reading against<br/>the minimum required clamp force in the fixturing<br/>specification and note any station that falls below<br/>the minimum."]
+    box_27[/"Refer to the clamping force specification."/]
+    box_28{"All clamping forces within ±8% of nominal?"}
+    box_29["Replace return springs and adjust clamp travel stops"]
+    box_30{"Reverify clamp forces after spring replacement"}
+    box_31(["End, Escalate: clamp force non conformance after<br/>service, actuator check"])
+    box_32["Allow the fixture to stabilise at production<br/>operating temperature by running the machine under<br/>cutting load for 30 minutes with a representative<br/>part fixtured. Reprobe the primary datum surface and<br/>primary locating pin at the same measurement points<br/>used during the cold measurement. Record the<br/>positional change and compare against the thermal<br/>growth allowance in the fixture thermal<br/>qualification record."]
+    box_33{"Thermal expansion datum shift within model<br/>prediction ±0.01 mm?"}
+    box_34["Complete the following steps: 1. Read the thermal<br/>compensation model coefficients from the controller.<br/>2. Compare the stored values against the reference<br/>calibration record. 3. Check the guide rail<br/>straightness and compare against the 0.01 mm per 300<br/>mm limit."]
+    box_35["Slide a precision straight edge along the full<br/>length of each guide rail and use feeler gauges to<br/>measure any gap between the straight edge and the<br/>rail surface. Record the maximum gap at any point.<br/>Inspect the rail surface under a magnifier for<br/>pitting, fretting, or embedded swarf; any surface<br/>defect in the running zone requires assessment<br/>against the surface finish specification."]
+    box_36[/"Refer to the guide rail straightness specification."/]
+    box_37{"Guide rail straightness within 0.01 mm per 300 mm?"}
+    box_38["Realign guide rail and recheck straightness with<br/>precision level"]
+    box_39["Apply the specified grease to each linear bearing<br/>block through the grease nipple using a grease gun;<br/>apply two strokes per bearing. Apply grease to each<br/>pivot pin through its dedicated lubrication point.<br/>Cycle the moving elements through their full range<br/>three times to distribute the lubricant before<br/>wiping away any excess from part contact faces."]
+    box_40[/"Refer to the fixture lubrication specification."/]
+    box_41{"All lubrication points serviced per schedule?"}
+    box_42["Apply grease to missed lubrication points"]
+    box_43["Load the designated reference part into the fixture<br/>under normal production clamping force. Probe the<br/>part at the primary datum contact, the two secondary<br/>contact points, and the Z height reference surface<br/>using the machine probing cycle. Record all four<br/>measured values and compare against the reference<br/>part qualification certificate values; deviations<br/>outside tolerance indicate fixture datum shift<br/>requiring root cause investigation."]
+    box_44{"Reference part positioned within ±0.02 mm of nominal<br/>at all datums?"}
+    box_45(["End, Escalate: functional trial failed, datum<br/>incompatibility"])
+    box_46["Log coordinate measuring machine data, clamp forces<br/>and service details"]
+    box_47(["End, Procedure complete"])
+    box_48["Secondary fixture datum correction: slacken the<br/>primary locating pin retaining screws to allow fine<br/>positional adjustment. Use a precision adjusting<br/>screw to shift the pin toward the nominal position<br/>by half the measured error. Retorque the retaining<br/>screws in the prescribed sequence and allow the<br/>fixture to settle for 2 minutes under full clamping<br/>load before returning to the primary locating pin<br/>measurement step."]
+
+    box_0 --> box_1
+    box_1 --> box_2
+    box_2 -->|"Yes"| box_3
+    box_2 -->|"No"| box_7
+    box_4 --> box_7
+    box_5 --> box_7
+    box_6 --> box_7
+    box_7 -->|"No"| box_8
+    box_8 --> box_9
+    box_7 -->|"Yes"| box_11
+    box_9 --> box_11
+    box_10 --> box_11
+    box_11 -->|"No"| box_12
+    box_12 --> box_13
+    box_13 -->|"OK"| box_16
+    box_11 -->|"Yes"| box_16
+    box_15 --> box_16
+    box_16 -->|"No"| box_17
+    box_17 --> box_18
+    box_16 -->|"Yes"| box_20
+    box_18 --> box_20
+    box_19 --> box_20
+    box_20 -->|"No"| box_21
+    box_21 --> box_22
+    box_20 -->|"Yes"| box_24
+    box_22 --> box_24
+    box_23 --> box_24
+    box_24 -->|"No"| box_25
+    box_25 --> box_26
+    box_24 -->|"Yes"| box_28
+    box_26 --> box_28
+    box_27 --> box_28
+    box_28 -->|"No"| box_29
+    box_29 --> box_30
+    box_30 -->|"Still failing"| box_31
+    box_30 -->|"OK"| box_33
+    box_28 -->|"Yes"| box_33
+    box_32 --> box_33
+    box_33 -->|"No"| box_34
+    box_34 --> box_35
+    box_33 -->|"Yes"| box_37
+    box_35 --> box_37
+    box_36 --> box_37
+    box_37 -->|"No"| box_38
+    box_38 --> box_39
+    box_37 -->|"Yes"| box_41
+    box_39 --> box_41
+    box_40 --> box_41
+    box_41 -->|"No"| box_42
+    box_42 --> box_43
+    box_41 -->|"Yes"| box_44
+    box_43 --> box_44
+    box_44 -->|"No"| box_45
+    box_44 -->|"Yes"| box_46
+    box_46 --> box_47
+    box_13 -->|"Still out of spec"| box_48
+    box_48 --> box_13
+    box_13 -->|"Unresolvable after second attempt"| box_14
+
+    class box_0 terminator
+    class box_1 process
+    class box_2 decision
+    class box_3 terminator
+    class box_4 process
+    class box_5 process
+    class box_6 document
+    class box_7 decision
+    class box_8 process
+    class box_9 process
+    class box_10 document
+    class box_11 decision
+    class box_12 process
+    class box_13 decision
+    class box_14 terminator
+    class box_15 process
+    class box_16 decision
+    class box_17 process
+    class box_18 process
+    class box_19 document
+    class box_20 decision
+    class box_21 process
+    class box_22 process
+    class box_23 document
+    class box_24 decision
+    class box_25 process
+    class box_26 process
+    class box_27 document
+    class box_28 decision
+    class box_29 process
+    class box_30 decision
+    class box_31 terminator
+    class box_32 process
+    class box_33 decision
+    class box_34 process
+    class box_35 process
+    class box_36 document
+    class box_37 decision
+    class box_38 process
+    class box_39 process
+    class box_40 document
+    class box_41 decision
+    class box_42 process
+    class box_43 process
+    class box_44 decision
+    class box_45 terminator
+    class box_46 process
+    class box_47 terminator
+    class box_48 process
+
+    classDef terminator fill:#2d4a6e,stroke:#1a3050,color:#ffffff,font-weight:bold
+    classDef process    fill:#f0f4ff,stroke:#4a6fa5,color:#1a1a2e
+    classDef decision   fill:#fff8e6,stroke:#c8922a,color:#1a1a2e
+    classDef document   fill:#f0fff4,stroke:#3a8a4a,color:#1a1a2e

@@ -1,0 +1,566 @@
+{
+  "conversation_id": "GRAPH14_P000_base",
+  "graph_id": "GRAPH14",
+  "path_id": "GRAPH14_P000",
+  "regime": "clean",
+  "variant": "base",
+  "robustness_axis": null,
+  "turns": [
+    {
+      "node_id": "box_0",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Starting the diagnostic procedure for picking up 4x part from indexing table.",
+      "edge_label_to_next": null,
+      "turn_index": 0,
+      "ground_truth": {
+        "node_id": "box_0",
+        "node_type": "terminator",
+        "node_text": "Start"
+      }
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Does the part meet product specifications?",
+      "edge_label_to_next": null,
+      "turn_index": 1,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "decision",
+        "node_text": "Does the part meet product specifications?"
+      }
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, I've inspected the part and it meets all product specifications.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 2,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "decision",
+        "node_text": "Does the part meet product specifications?"
+      }
+    },
+    {
+      "node_id": "box_4",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the setup of the indexing table correct?",
+      "edge_label_to_next": null,
+      "turn_index": 3,
+      "ground_truth": {
+        "node_id": "box_4",
+        "node_type": "decision",
+        "node_text": "Is the setup of the indexing table correct?"
+      }
+    },
+    {
+      "node_id": "box_4",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "The indexing table setup looks correct to me.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 4,
+      "ground_truth": {
+        "node_id": "box_4",
+        "node_type": "decision",
+        "node_text": "Is the setup of the indexing table correct?"
+      }
+    },
+    {
+      "node_id": "box_9",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Are there contaminated parts?",
+      "edge_label_to_next": null,
+      "turn_index": 5,
+      "ground_truth": {
+        "node_id": "box_9",
+        "node_type": "decision",
+        "node_text": "Are there contaminated parts?"
+      }
+    },
+    {
+      "node_id": "box_9",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "No, I don't see any contamination on the parts or components.",
+      "edge_label_to_next": "No",
+      "turn_index": 6,
+      "ground_truth": {
+        "node_id": "box_9",
+        "node_type": "decision",
+        "node_text": "Are there contaminated parts?"
+      }
+    },
+    {
+      "node_id": "box_15",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Are there electrical defects?",
+      "edge_label_to_next": null,
+      "turn_index": 7,
+      "ground_truth": {
+        "node_id": "box_15",
+        "node_type": "decision",
+        "node_text": "Are there electrical defects?"
+      }
+    },
+    {
+      "node_id": "box_15",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "No electrical defects detected. All cabling, sensors, and valves appear to be functioning properly.",
+      "edge_label_to_next": "No",
+      "turn_index": 8,
+      "ground_truth": {
+        "node_id": "box_15",
+        "node_type": "decision",
+        "node_text": "Are there electrical defects?"
+      }
+    },
+    {
+      "node_id": "box_21",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Are there worn parts?",
+      "edge_label_to_next": null,
+      "turn_index": 9,
+      "ground_truth": {
+        "node_id": "box_21",
+        "node_type": "decision",
+        "node_text": "Are there worn parts?"
+      }
+    },
+    {
+      "node_id": "box_21",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "No, I've checked the vacuum end effectors, actuator grippers, gripper pin, and robot axes. There's no significant wear on any of these components.",
+      "edge_label_to_next": "No",
+      "turn_index": 10,
+      "ground_truth": {
+        "node_id": "box_21",
+        "node_type": "decision",
+        "node_text": "Are there worn parts?"
+      }
+    },
+    {
+      "node_id": "box_25",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the part lying correctly in the holder?",
+      "edge_label_to_next": null,
+      "turn_index": 11,
+      "ground_truth": {
+        "node_id": "box_25",
+        "node_type": "decision",
+        "node_text": "Is the part lying correctly in the holder?"
+      }
+    },
+    {
+      "node_id": "box_25",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, the part is positioned correctly in the holder.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 12,
+      "ground_truth": {
+        "node_id": "box_25",
+        "node_type": "decision",
+        "node_text": "Is the part lying correctly in the holder?"
+      }
+    },
+    {
+      "node_id": "box_28",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the Z parallelism of the lower position of 4x gripper correct?",
+      "edge_label_to_next": null,
+      "turn_index": 13,
+      "ground_truth": {
+        "node_id": "box_28",
+        "node_type": "decision",
+        "node_text": "Is the Z parallelism of the lower position of 4x gripper correct?"
+      }
+    },
+    {
+      "node_id": "box_28",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, the Z parallelism is within specification for the gripper lower positions.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 14,
+      "ground_truth": {
+        "node_id": "box_28",
+        "node_type": "decision",
+        "node_text": "Is the Z parallelism of the lower position of 4x gripper correct?"
+      }
+    },
+    {
+      "node_id": "box_33",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the center to center dimension of 4x gripper relative to each other correct?",
+      "edge_label_to_next": null,
+      "turn_index": 15,
+      "ground_truth": {
+        "node_id": "box_33",
+        "node_type": "decision",
+        "node_text": "Is the center to center dimension of 4x gripper relative to each other correct?"
+      }
+    },
+    {
+      "node_id": "box_33",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, the center to center spacing between the grippers is correct.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 16,
+      "ground_truth": {
+        "node_id": "box_33",
+        "node_type": "decision",
+        "node_text": "Is the center to center dimension of 4x gripper relative to each other correct?"
+      }
+    },
+    {
+      "node_id": "box_38",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the Z height correct?",
+      "edge_label_to_next": null,
+      "turn_index": 17,
+      "ground_truth": {
+        "node_id": "box_38",
+        "node_type": "decision",
+        "node_text": "Is the Z height correct?"
+      }
+    },
+    {
+      "node_id": "box_38",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, the Z height of the gripper assembly is correct.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 18,
+      "ground_truth": {
+        "node_id": "box_38",
+        "node_type": "decision",
+        "node_text": "Is the Z height correct?"
+      }
+    },
+    {
+      "node_id": "box_43",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the XY pick up position of part from indexing table correct?",
+      "edge_label_to_next": null,
+      "turn_index": 19,
+      "ground_truth": {
+        "node_id": "box_43",
+        "node_type": "decision",
+        "node_text": "Is the XY pick up position of part from indexing table correct?"
+      }
+    },
+    {
+      "node_id": "box_43",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, the XY pick up position is accurate and aligned properly.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 20,
+      "ground_truth": {
+        "node_id": "box_43",
+        "node_type": "decision",
+        "node_text": "Is the XY pick up position of part from indexing table correct?"
+      }
+    },
+    {
+      "node_id": "box_50",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "The diagnostic procedure is complete. The picking up of 4x part from indexing table is correct and the system is operating within specifications.",
+      "edge_label_to_next": null,
+      "turn_index": 21,
+      "ground_truth": {
+        "node_id": "box_50",
+        "node_type": "terminator",
+        "node_text": "Picking up 4x part from indexing table is correct"
+      }
+    },
+    {
+      "node_id": "box_50",
+      "node_type": "terminator",
+      "speaker": "operator",
+      "utterance": "Understood, the system is verified and ready for production.",
+      "edge_label_to_next": null,
+      "turn_index": 22,
+      "ground_truth": {
+        "node_id": "box_50",
+        "node_type": "terminator",
+        "node_text": "Picking up 4x part from indexing table is correct"
+      }
+    }
+  ],
+  "metadata": {
+    "depth": 12,
+    "num_decisions": 10,
+    "num_processes": 0,
+    "num_documents": 0,
+    "terminator_type": "procedure_complete",
+    "terminator_text": "Picking up 4x part from indexing table is correct",
+    "true_terminator": true,
+    "node_sequence": [
+      "box_0",
+      "box_1",
+      "box_4",
+      "box_9",
+      "box_15",
+      "box_21",
+      "box_25",
+      "box_28",
+      "box_33",
+      "box_38",
+      "box_43",
+      "box_50"
+    ],
+    "edge_labels": [
+      null,
+      null,
+      "Yes",
+      "Yes",
+      "No",
+      "No",
+      "No",
+      "Yes",
+      "Yes",
+      "Yes",
+      "Yes",
+      "Yes"
+    ],
+    "decision_points": [
+      {
+        "node": "box_1",
+        "label": "Yes",
+        "question": "Does the part meet product specifications?"
+      },
+      {
+        "node": "box_4",
+        "label": "Yes",
+        "question": "Is the setup of the indexing table correct?"
+      },
+      {
+        "node": "box_9",
+        "label": "No",
+        "question": "Are there contaminated parts?"
+      },
+      {
+        "node": "box_15",
+        "label": "No",
+        "question": "Are there electrical defects?"
+      },
+      {
+        "node": "box_21",
+        "label": "No",
+        "question": "Are there worn parts?"
+      },
+      {
+        "node": "box_25",
+        "label": "Yes",
+        "question": "Is the part lying correctly in the holder?"
+      },
+      {
+        "node": "box_28",
+        "label": "Yes",
+        "question": "Is the Z parallelism of the lower position of 4x gripper correct?"
+      },
+      {
+        "node": "box_33",
+        "label": "Yes",
+        "question": "Is the center to center dimension of 4x gripper relative to each other correct?"
+      },
+      {
+        "node": "box_38",
+        "label": "Yes",
+        "question": "Is the Z height correct?"
+      },
+      {
+        "node": "box_43",
+        "label": "Yes",
+        "question": "Is the XY pick up position of part from indexing table correct?"
+      }
+    ],
+    "generation_model": "anthropic/claude-sonnet-4-5",
+    "verification": {
+      "verified": true,
+      "issues": [],
+      "corrected_turns": [
+        {
+          "node_id": "box_0",
+          "node_type": "terminator",
+          "speaker": "system",
+          "utterance": "Starting the diagnostic procedure for picking up 4x part from indexing table.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_1",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Does the part meet product specifications?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_1",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Yes, I've inspected the part and it meets all product specifications.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_4",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is the setup of the indexing table correct?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_4",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "The indexing table setup looks correct to me.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_9",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Are there contaminated parts?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_9",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "No, I don't see any contamination on the parts or components.",
+          "edge_label_to_next": "No"
+        },
+        {
+          "node_id": "box_15",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Are there electrical defects?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_15",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "No electrical defects detected. All cabling, sensors, and valves appear to be functioning properly.",
+          "edge_label_to_next": "No"
+        },
+        {
+          "node_id": "box_21",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Are there worn parts?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_21",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "No, I've checked the vacuum end effectors, actuator grippers, gripper pin, and robot axes. There's no significant wear on any of these components.",
+          "edge_label_to_next": "No"
+        },
+        {
+          "node_id": "box_25",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is the part lying correctly in the holder?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_25",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Yes, the part is positioned correctly in the holder.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_28",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is the Z parallelism of the lower position of 4x gripper correct?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_28",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Yes, the Z parallelism is within specification for the gripper lower positions.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_33",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is the center to center dimension of 4x gripper relative to each other correct?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_33",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Yes, the center to center spacing between the grippers is correct.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_38",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is the Z height correct?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_38",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Yes, the Z height of the gripper assembly is correct.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_43",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is the XY pick up position of part from indexing table correct?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_43",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Yes, the XY pick up position is accurate and aligned properly.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_50",
+          "node_type": "terminator",
+          "speaker": "system",
+          "utterance": "The diagnostic procedure is complete. The picking up of 4x part from indexing table is correct and the system is operating within specifications.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_50",
+          "node_type": "terminator",
+          "speaker": "operator",
+          "utterance": "Understood, the system is verified and ready for production.",
+          "edge_label_to_next": null
+        }
+      ]
+    }
+  }
+}

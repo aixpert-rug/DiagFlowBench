@@ -1,0 +1,1136 @@
+{
+  "conversation_id": "GRAPH38_P009_base_mixed",
+  "graph_id": "GRAPH38",
+  "path_id": "GRAPH38_P009",
+  "regime": "mixed",
+  "variant": "base",
+  "robustness_axis": null,
+  "turns": [
+    {
+      "node_id": "box_0",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Starting spindle diagnostic procedure.",
+      "edge_label_to_next": null,
+      "turn_index": 0,
+      "ground_truth": {
+        "node_id": "box_0",
+        "node_type": "terminator",
+        "node_text": "Start"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Begin with a warm-up run. Set the spindle to fifty percent speed and let it run for ten minutes.",
+      "edge_label_to_next": null,
+      "turn_index": 1,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Warm up run, spindle at 50% speed for 10 minutes"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Warm-up complete. Spindle has been running at fifty percent for ten minutes.",
+      "edge_label_to_next": "",
+      "turn_index": 2,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Warm up run, spindle at 50% speed for 10 minutes"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Mount a calibrated accelerometer on the front bearing housing using a flat washer stud or magnetic base. Run the spindle at three thousand RPM with no toolholder fitted and record the RMS vibration velocity in millimeters per second. Then repeat the measurement at maximum rated speed and compare both readings against the ISO ten eight one six zone limits for this machine class.",
+      "edge_label_to_next": null,
+      "turn_index": 3,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "process",
+        "node_text": "Mount a calibrated accelerometer on the front bearing housing with a flat washer stud or magnetic base. Run the spindle at 3000 revolutions per minute with no toolholder fitted and record the root mean square vibration velocity in millimetres per second. Repeat at the maximum rated speed and compare both readings against the ISO 10816 zone limits for this machine class."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Accelerometer mounted and measurements taken at both speeds. I've recorded the vibration velocity values and compared them to the ISO limits.",
+      "edge_label_to_next": null,
+      "turn_index": 4,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "process",
+        "node_text": "Mount a calibrated accelerometer on the front bearing housing with a flat washer stud or magnetic base. Run the spindle at 3000 revolutions per minute with no toolholder fitted and record the root mean square vibration velocity in millimetres per second. Repeat at the maximum rated speed and compare both readings against the ISO 10816 zone limits for this machine class."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_4",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the vibration level below the alarm limit?",
+      "edge_label_to_next": null,
+      "turn_index": 5,
+      "ground_truth": {
+        "node_id": "box_4",
+        "node_type": "decision",
+        "node_text": "Vibration level below alarm limit?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_4",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, both readings are well within acceptable limits, below the alarm threshold.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 6,
+      "ground_truth": {
+        "node_id": "box_4",
+        "node_type": "decision",
+        "node_text": "Vibration level below alarm limit?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the bearing temperature within the rated operating limit?",
+      "edge_label_to_next": null,
+      "turn_index": 7,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "decision",
+        "node_text": "Bearing temperature within rated operating limit?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, bearing temperatures are within normal range. The temperature rise is under twenty-five degrees Celsius above ambient.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 8,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "decision",
+        "node_text": "Bearing temperature within rated operating limit?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_12",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the radial runout within two micrometer tolerance?",
+      "edge_label_to_next": null,
+      "turn_index": 9,
+      "ground_truth": {
+        "node_id": "box_12",
+        "node_type": "decision",
+        "node_text": "Radial runout within 2 µm tolerance?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_12",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "The runout measurement itself is fine, but I'm seeing significant axial play in the bearing assembly that wasn't there before.",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "coverage_gap",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_12",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "No, the total indicator reading shows runout exceeding two micrometers. It's out of spec.",
+      "edge_label_to_next": "No",
+      "turn_index": 10,
+      "ground_truth": {
+        "node_id": "box_12",
+        "node_type": "decision",
+        "node_text": "Radial runout within 2 µm tolerance?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_13",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Adjust the bearing preload via the locknut in quarter-turn increments.",
+      "edge_label_to_next": null,
+      "turn_index": 11,
+      "ground_truth": {
+        "node_id": "box_13",
+        "node_type": "process",
+        "node_text": "Adjust bearing pre load via locknut, quarter turn increments"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_13",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Preload adjustment completed. I've turned the locknut a quarter turn.",
+      "edge_label_to_next": null,
+      "turn_index": 12,
+      "ground_truth": {
+        "node_id": "box_13",
+        "node_type": "process",
+        "node_text": "Adjust bearing pre load via locknut, quarter turn increments"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_14",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Reverify the radial runout after the preload adjustment.",
+      "edge_label_to_next": null,
+      "turn_index": 13,
+      "ground_truth": {
+        "node_id": "box_14",
+        "node_type": "decision",
+        "node_text": "Reverify radial runout after pre load adjustment"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_14",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "The runout is still out of specification after the locknut adjustment. It hasn't improved enough.",
+      "edge_label_to_next": "Still out of spec",
+      "turn_index": 14,
+      "ground_truth": {
+        "node_id": "box_14",
+        "node_type": "decision",
+        "node_text": "Reverify radial runout after pre load adjustment"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_38",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Perform supplementary bearing preload correction. Disassemble the spindle nose bearing housing, remove the preload spacer, and replace it with a spacer from the next shim increment in the bearing service kit. Reassemble the housing to the specified torque and run the spindle at one thousand RPM for ten minutes to allow the bearings to seat before returning to the runout measurement.",
+      "edge_label_to_next": null,
+      "turn_index": 15,
+      "ground_truth": {
+        "node_id": "box_38",
+        "node_type": "process",
+        "node_text": "Supplementary bearing preload correction: disassemble the spindle nose bearing housing, remove the preload spacer, and replace it with a spacer from the next shim increment in the bearing service kit. Reassemble the housing to the specified torque and run the spindle at 1000 revolutions per minute for 10 minutes to allow bearings to seat before returning to the runout measurement step."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_38",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Housing disassembled, spacer replaced with the next increment shim, and reassembled to spec. I've run the spindle at one thousand RPM for ten minutes to seat the bearings.",
+      "edge_label_to_next": null,
+      "turn_index": 16,
+      "ground_truth": {
+        "node_id": "box_38",
+        "node_type": "process",
+        "node_text": "Supplementary bearing preload correction: disassemble the spindle nose bearing housing, remove the preload spacer, and replace it with a spacer from the next shim increment in the bearing service kit. Reassemble the housing to the specified torque and run the spindle at 1000 revolutions per minute for 10 minutes to allow bearings to seat before returning to the runout measurement step."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_14",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Reverify the radial runout after the preload adjustment.",
+      "edge_label_to_next": null,
+      "turn_index": 17,
+      "ground_truth": {
+        "node_id": "box_14",
+        "node_type": "decision",
+        "node_text": "Reverify radial runout after pre load adjustment"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_14",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Good news. The runout is now within tolerance after the spacer replacement.",
+      "edge_label_to_next": "OK",
+      "turn_index": 18,
+      "ground_truth": {
+        "node_id": "box_14",
+        "node_type": "decision",
+        "node_text": "Reverify radial runout after pre load adjustment"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_17",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the axial play within three micrometer tolerance?",
+      "edge_label_to_next": null,
+      "turn_index": 19,
+      "ground_truth": {
+        "node_id": "box_17",
+        "node_type": "decision",
+        "node_text": "Axial play within 3 µm tolerance?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_17",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "No, the averaged axial deflection exceeds three micrometers. The play is too high.",
+      "edge_label_to_next": "No",
+      "turn_index": 20,
+      "ground_truth": {
+        "node_id": "box_17",
+        "node_type": "decision",
+        "node_text": "Axial play within 3 µm tolerance?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_18",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Adjust the preload spacer or shim to reduce the axial play.",
+      "edge_label_to_next": null,
+      "turn_index": 21,
+      "ground_truth": {
+        "node_id": "box_18",
+        "node_type": "process",
+        "node_text": "Adjust pre load spacer or shim to reduce axial play"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_18",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "I'm seeing metal shavings coming out of the bearing housing along with the oil, looks like the bearing race itself might be damaged or worn through.",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "undocumented_malfunction",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_18",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Spacer adjusted to reduce axial play. The shim has been replaced.",
+      "edge_label_to_next": "",
+      "turn_index": 22,
+      "ground_truth": {
+        "node_id": "box_18",
+        "node_type": "process",
+        "node_text": "Adjust pre load spacer or shim to reduce axial play"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_19",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Apply a thin, even coat of engineer's blue to a clean test arbor with the correct taper angle. Insert the arbor, rotate by hand under moderate axial load, then withdraw and inspect the contact pattern. The blue should transfer uniformly over at least seventy percent of the taper length.",
+      "edge_label_to_next": null,
+      "turn_index": 23,
+      "ground_truth": {
+        "node_id": "box_19",
+        "node_type": "process",
+        "node_text": "Apply a thin even coat of engineer's blue to a clean test arbor with the correct taper angle for this spindle. Insert the arbor, rotate by hand under moderate axial load, then withdraw and inspect the contact pattern. The blue should transfer uniformly over at least 70% of the taper length; a spotted or narrow band pattern indicates taper bore damage or swarf contamination."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_19",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Test arbor inserted and rotated under load. I've withdrawn it and inspected the blue transfer pattern.",
+      "edge_label_to_next": null,
+      "turn_index": 24,
+      "ground_truth": {
+        "node_id": "box_19",
+        "node_type": "process",
+        "node_text": "Apply a thin even coat of engineer's blue to a clean test arbor with the correct taper angle for this spindle. Insert the arbor, rotate by hand under moderate axial load, then withdraw and inspect the contact pattern. The blue should transfer uniformly over at least 70% of the taper length; a spotted or narrow band pattern indicates taper bore damage or swarf contamination."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_20",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the taper contact pattern above eighty-five percent bearing area?",
+      "edge_label_to_next": null,
+      "turn_index": 25,
+      "ground_truth": {
+        "node_id": "box_20",
+        "node_type": "decision",
+        "node_text": "Taper contact pattern above 85% bearing area?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_20",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, the blue has transferred uniformly. The contact pattern shows well over eighty-five percent coverage.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 26,
+      "ground_truth": {
+        "node_id": "box_20",
+        "node_type": "decision",
+        "node_text": "Taper contact pattern above 85% bearing area?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_24",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the drawbar retention force within the rated range?",
+      "edge_label_to_next": null,
+      "turn_index": 27,
+      "ground_truth": {
+        "node_id": "box_24",
+        "node_type": "decision",
+        "node_text": "Drawbar retention force within rated range?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_24",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "No, the peak extraction force is below the minimum specification. The drawbar force is too low.",
+      "edge_label_to_next": "No",
+      "turn_index": 28,
+      "ground_truth": {
+        "node_id": "box_24",
+        "node_type": "decision",
+        "node_text": "Drawbar retention force within rated range?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_25",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Adjust the drawbar spring stack or replace the disc springs.",
+      "edge_label_to_next": null,
+      "turn_index": 29,
+      "ground_truth": {
+        "node_id": "box_25",
+        "node_type": "process",
+        "node_text": "Adjust drawbar spring stack or replace disc springs"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_25",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Disc springs replaced and spring stack adjusted. The drawbar assembly is reassembled.",
+      "edge_label_to_next": "",
+      "turn_index": 30,
+      "ground_truth": {
+        "node_id": "box_25",
+        "node_type": "process",
+        "node_text": "Adjust drawbar spring stack or replace disc springs"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_26",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Mount a dial test indicator against the reference artefact clamped in the spindle at cold start. Zero the indicator and allow the spindle to run at operating speed for thirty minutes. Record the indicator displacement at ten-minute intervals and note the total thermal growth value at stabilization, then compare against the growth compensation value stored in the machine thermal compensation table.",
+      "edge_label_to_next": null,
+      "turn_index": 31,
+      "ground_truth": {
+        "node_id": "box_26",
+        "node_type": "process",
+        "node_text": "Mount a dial test indicator against the reference artefact clamped in the spindle at cold start. Zero the indicator and allow the spindle to run at operating speed for 30 minutes. Record the indicator displacement at 10 minute intervals and note the total thermal growth value at stabilisation; compare against the growth compensation value stored in the machine thermal compensation table."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_26",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Indicator zeroed at cold start and I've monitored thermal growth over thirty minutes. The stabilized growth value has been recorded and compared to the compensation table.",
+      "edge_label_to_next": null,
+      "turn_index": 32,
+      "ground_truth": {
+        "node_id": "box_26",
+        "node_type": "process",
+        "node_text": "Mount a dial test indicator against the reference artefact clamped in the spindle at cold start. Zero the indicator and allow the spindle to run at operating speed for 30 minutes. Record the indicator displacement at 10 minute intervals and note the total thermal growth value at stabilisation; compare against the growth compensation value stored in the machine thermal compensation table."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_27",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the thermal growth within the compensation model tolerance?",
+      "edge_label_to_next": null,
+      "turn_index": 33,
+      "ground_truth": {
+        "node_id": "box_27",
+        "node_type": "decision",
+        "node_text": "Thermal growth within compensation model tolerance?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_27",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "No, the measured thermal growth deviates from the stored compensation model. It's outside tolerance.",
+      "edge_label_to_next": "No",
+      "turn_index": 34,
+      "ground_truth": {
+        "node_id": "box_27",
+        "node_type": "decision",
+        "node_text": "Thermal growth within compensation model tolerance?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_28",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Complete the following checks: Read the thermal compensation growth coefficient from the controller, compare the stored values against the reference values for this spindle, and check whether the compensation parameters were modified since the last service.",
+      "edge_label_to_next": null,
+      "turn_index": 35,
+      "ground_truth": {
+        "node_id": "box_28",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Read the thermal compensation growth coefficient from the controller. 2. Compare the stored values against the reference values for this spindle. 3. Check whether the compensation parameters were modified since last service."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_28",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Controller parameters reviewed. I've compared the coefficients to reference values and checked the modification history.",
+      "edge_label_to_next": null,
+      "turn_index": 36,
+      "ground_truth": {
+        "node_id": "box_28",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Read the thermal compensation growth coefficient from the controller. 2. Compare the stored values against the reference values for this spindle. 3. Check whether the compensation parameters were modified since last service."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_29",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Reverify the thermal compensation after the parameter update.",
+      "edge_label_to_next": null,
+      "turn_index": 37,
+      "ground_truth": {
+        "node_id": "box_29",
+        "node_type": "decision",
+        "node_text": "Reverify thermal compensation after parameter update"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_29",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Hey, before I continue, do you know if we're supposed to log these parameter changes in the new maintenance tracking system or still use the old paper forms?",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "unrelated_question",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_29",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "The thermal model is still diverging even after checking the parameters. The growth pattern doesn't match.",
+      "edge_label_to_next": "Still diverging",
+      "turn_index": 38,
+      "ground_truth": {
+        "node_id": "box_29",
+        "node_type": "decision",
+        "node_text": "Reverify thermal compensation after parameter update"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_30",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Procedure complete. Escalate immediately: thermal model divergence detected, metrology review required. Do not release this spindle to production until the thermal compensation has been validated by the metrology team.",
+      "edge_label_to_next": null,
+      "turn_index": 39,
+      "ground_truth": {
+        "node_id": "box_30",
+        "node_type": "terminator",
+        "node_text": "End, Escalate: thermal model divergence, metrology review"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_30",
+      "node_type": "terminator",
+      "speaker": "operator",
+      "utterance": "Understood. I'll escalate to metrology for thermal model review.",
+      "edge_label_to_next": null,
+      "turn_index": 40,
+      "ground_truth": {
+        "node_id": "box_30",
+        "node_type": "terminator",
+        "node_text": "End, Escalate: thermal model divergence, metrology review"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    }
+  ],
+  "metadata": {
+    "depth": 21,
+    "num_decisions": 10,
+    "num_processes": 9,
+    "num_documents": 0,
+    "terminator_type": "escalate",
+    "terminator_text": "End, Escalate: thermal model divergence, metrology review",
+    "true_terminator": true,
+    "node_sequence": [
+      "box_0",
+      "box_1",
+      "box_2",
+      "box_4",
+      "box_8",
+      "box_12",
+      "box_13",
+      "box_14",
+      "box_38",
+      "box_14",
+      "box_17",
+      "box_18",
+      "box_19",
+      "box_20",
+      "box_24",
+      "box_25",
+      "box_26",
+      "box_27",
+      "box_28",
+      "box_29",
+      "box_30"
+    ],
+    "edge_labels": [
+      null,
+      null,
+      "",
+      null,
+      "Yes",
+      "Yes",
+      "No",
+      null,
+      "Still out of spec",
+      null,
+      "OK",
+      "No",
+      "",
+      null,
+      "Yes",
+      "No",
+      "",
+      null,
+      "No",
+      null,
+      "Still diverging"
+    ],
+    "decision_points": [
+      {
+        "node": "box_4",
+        "label": "Yes",
+        "question": "Vibration level below alarm limit?"
+      },
+      {
+        "node": "box_8",
+        "label": "Yes",
+        "question": "Bearing temperature within rated operating limit?"
+      },
+      {
+        "node": "box_12",
+        "label": "No",
+        "question": "Radial runout within 2 µm tolerance?"
+      },
+      {
+        "node": "box_14",
+        "label": "Still out of spec",
+        "question": "Reverify radial runout after pre load adjustment"
+      },
+      {
+        "node": "box_14",
+        "label": "OK",
+        "question": "Reverify radial runout after pre load adjustment"
+      },
+      {
+        "node": "box_17",
+        "label": "No",
+        "question": "Axial play within 3 µm tolerance?"
+      },
+      {
+        "node": "box_20",
+        "label": "Yes",
+        "question": "Taper contact pattern above 85% bearing area?"
+      },
+      {
+        "node": "box_24",
+        "label": "No",
+        "question": "Drawbar retention force within rated range?"
+      },
+      {
+        "node": "box_27",
+        "label": "No",
+        "question": "Thermal growth within compensation model tolerance?"
+      },
+      {
+        "node": "box_29",
+        "label": "Still diverging",
+        "question": "Reverify thermal compensation after parameter update"
+      }
+    ],
+    "generation_model": "anthropic/claude-sonnet-4-5",
+    "verification": {
+      "verified": true,
+      "issues": [],
+      "corrected_turns": [
+        {
+          "node_id": "box_0",
+          "node_type": "terminator",
+          "speaker": "system",
+          "utterance": "Starting spindle diagnostic procedure.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_1",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Begin with a warm-up run. Set the spindle to fifty percent speed and let it run for ten minutes.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_1",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "Warm-up complete. Spindle has been running at fifty percent for ten minutes.",
+          "edge_label_to_next": ""
+        },
+        {
+          "node_id": "box_2",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Mount a calibrated accelerometer on the front bearing housing using a flat washer stud or magnetic base. Run the spindle at three thousand RPM with no toolholder fitted and record the RMS vibration velocity in millimeters per second. Then repeat the measurement at maximum rated speed and compare both readings against the ISO ten eight one six zone limits for this machine class.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_2",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "Accelerometer mounted and measurements taken at both speeds. I've recorded the vibration velocity values and compared them to the ISO limits.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_4",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is the vibration level below the alarm limit?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_4",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Yes, both readings are well within acceptable limits, below the alarm threshold.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_8",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is the bearing temperature within the rated operating limit?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_8",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Yes, bearing temperatures are within normal range. The temperature rise is under twenty-five degrees Celsius above ambient.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_12",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is the radial runout within two micrometer tolerance?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_12",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "No, the total indicator reading shows runout exceeding two micrometers. It's out of spec.",
+          "edge_label_to_next": "No"
+        },
+        {
+          "node_id": "box_13",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Adjust the bearing preload via the locknut in quarter-turn increments.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_13",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "Preload adjustment completed. I've turned the locknut a quarter turn.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_14",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Reverify the radial runout after the preload adjustment.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_14",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "The runout is still out of specification after the locknut adjustment. It hasn't improved enough.",
+          "edge_label_to_next": "Still out of spec"
+        },
+        {
+          "node_id": "box_38",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Perform supplementary bearing preload correction. Disassemble the spindle nose bearing housing, remove the preload spacer, and replace it with a spacer from the next shim increment in the bearing service kit. Reassemble the housing to the specified torque and run the spindle at one thousand RPM for ten minutes to allow the bearings to seat before returning to the runout measurement.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_38",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "Housing disassembled, spacer replaced with the next increment shim, and reassembled to spec. I've run the spindle at one thousand RPM for ten minutes to seat the bearings.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_14",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Reverify the radial runout after the preload adjustment.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_14",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Good news. The runout is now within tolerance after the spacer replacement.",
+          "edge_label_to_next": "OK"
+        },
+        {
+          "node_id": "box_17",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is the axial play within three micrometer tolerance?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_17",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "No, the averaged axial deflection exceeds three micrometers. The play is too high.",
+          "edge_label_to_next": "No"
+        },
+        {
+          "node_id": "box_18",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Adjust the preload spacer or shim to reduce the axial play.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_18",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "Spacer adjusted to reduce axial play. The shim has been replaced.",
+          "edge_label_to_next": ""
+        },
+        {
+          "node_id": "box_19",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Apply a thin, even coat of engineer's blue to a clean test arbor with the correct taper angle. Insert the arbor, rotate by hand under moderate axial load, then withdraw and inspect the contact pattern. The blue should transfer uniformly over at least seventy percent of the taper length.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_19",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "Test arbor inserted and rotated under load. I've withdrawn it and inspected the blue transfer pattern.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_20",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is the taper contact pattern above eighty-five percent bearing area?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_20",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Yes, the blue has transferred uniformly. The contact pattern shows well over eighty-five percent coverage.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_24",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is the drawbar retention force within the rated range?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_24",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "No, the peak extraction force is below the minimum specification. The drawbar force is too low.",
+          "edge_label_to_next": "No"
+        },
+        {
+          "node_id": "box_25",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Adjust the drawbar spring stack or replace the disc springs.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_25",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "Disc springs replaced and spring stack adjusted. The drawbar assembly is reassembled.",
+          "edge_label_to_next": ""
+        },
+        {
+          "node_id": "box_26",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Mount a dial test indicator against the reference artefact clamped in the spindle at cold start. Zero the indicator and allow the spindle to run at operating speed for thirty minutes. Record the indicator displacement at ten-minute intervals and note the total thermal growth value at stabilization, then compare against the growth compensation value stored in the machine thermal compensation table.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_26",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "Indicator zeroed at cold start and I've monitored thermal growth over thirty minutes. The stabilized growth value has been recorded and compared to the compensation table.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_27",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is the thermal growth within the compensation model tolerance?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_27",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "No, the measured thermal growth deviates from the stored compensation model. It's outside tolerance.",
+          "edge_label_to_next": "No"
+        },
+        {
+          "node_id": "box_28",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Complete the following checks: Read the thermal compensation growth coefficient from the controller, compare the stored values against the reference values for this spindle, and check whether the compensation parameters were modified since the last service.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_28",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "Controller parameters reviewed. I've compared the coefficients to reference values and checked the modification history.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_29",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Reverify the thermal compensation after the parameter update.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_29",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "The thermal model is still diverging even after checking the parameters. The growth pattern doesn't match.",
+          "edge_label_to_next": "Still diverging"
+        },
+        {
+          "node_id": "box_30",
+          "node_type": "terminator",
+          "speaker": "system",
+          "utterance": "Procedure complete. Escalate immediately: thermal model divergence detected, metrology review required. Do not release this spindle to production until the thermal compensation has been validated by the metrology team.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_30",
+          "node_type": "terminator",
+          "speaker": "operator",
+          "utterance": "Understood. I'll escalate to metrology for thermal model review.",
+          "edge_label_to_next": null
+        }
+      ]
+    },
+    "injection_count": 3
+  },
+  "injection_log": [
+    {
+      "position": 10,
+      "node_id": "box_12",
+      "node_text": "Radial runout within 2 µm tolerance?",
+      "edge_labels": [
+        "No",
+        "Yes"
+      ],
+      "category": "coverage_gap",
+      "utterance": "The runout measurement itself is fine, but I'm seeing significant axial play in the bearing assembly that wasn't there before.",
+      "injection_rate": null,
+      "num_candidates": null
+    },
+    {
+      "position": 22,
+      "node_id": "box_18",
+      "node_text": "Adjust pre load spacer or shim to reduce axial play",
+      "edge_labels": [],
+      "category": "undocumented_malfunction",
+      "utterance": "I'm seeing metal shavings coming out of the bearing housing along with the oil, looks like the bearing race itself might be damaged or worn through.",
+      "injection_rate": null,
+      "num_candidates": null
+    },
+    {
+      "position": 38,
+      "node_id": "box_29",
+      "node_text": "Reverify thermal compensation after parameter update",
+      "edge_labels": [
+        "Still diverging",
+        "OK"
+      ],
+      "category": "unrelated_question",
+      "utterance": "Hey, before I continue, do you know if we're supposed to log these parameter changes in the new maintenance tracking system or still use the old paper forms?",
+      "injection_rate": null,
+      "num_candidates": null
+    }
+  ]
+}

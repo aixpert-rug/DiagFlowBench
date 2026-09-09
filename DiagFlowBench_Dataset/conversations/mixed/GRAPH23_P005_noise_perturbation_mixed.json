@@ -1,0 +1,728 @@
+{
+  "conversation_id": "GRAPH23_P005_noise_perturbation_mixed",
+  "graph_id": "GRAPH23",
+  "path_id": "GRAPH23_P005",
+  "regime": "mixed",
+  "variant": "noise_perturbation",
+  "robustness_axis": "noise_perturbation",
+  "turns": [
+    {
+      "node_id": "box_0",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Starting laser marking darkness diagnostic procedure.",
+      "edge_label_to_next": null,
+      "turn_index": 0,
+      "ground_truth": {
+        "node_id": "box_0",
+        "node_type": "terminator",
+        "node_text": "Start"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_21",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the marking defect rate high enough across the current batch to indicate a systematic process failure requiring immediate production halt?",
+      "edge_label_to_next": null,
+      "turn_index": 1,
+      "ground_truth": {
+        "node_id": "box_21",
+        "node_type": "decision",
+        "node_text": "Is the marking defect rate high enough across the current batch to indicate a systematic process failure requiring immediate production halt?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_21",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "defect rate elevated but not critical, looks like standard fault we can diagnose while continuing",
+      "edge_label_to_next": "Standard fault, continue diagnosis",
+      "turn_index": 2,
+      "ground_truth": {
+        "node_id": "box_21",
+        "node_type": "decision",
+        "node_text": "Is the marking defect rate high enough across the current batch to indicate a systematic process failure requiring immediate production halt?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Record the batch number, marking darkness level, and number of affected parts. Collect three representative samples for quality assurance team reference.",
+      "edge_label_to_next": null,
+      "turn_index": 3,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Record the batch number, marking darkness level, and number of affected parts. Collect three representative samples for quality assurance team reference."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "documented batch number and darkness levels, collected three sample parts for qa",
+      "edge_label_to_next": "",
+      "turn_index": 4,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Record the batch number, marking darkness level, and number of affected parts. Collect three representative samples for quality assurance team reference."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_3",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Complete the following checks: verify that parts are from the correct material batch, and check the surface finish specification for the current product type.",
+      "edge_label_to_next": null,
+      "turn_index": 5,
+      "ground_truth": {
+        "node_id": "box_3",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Verify that parts are from the correct material batch. 2. Check the surface finish specification for the current product type."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_3",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "confirmed material batch matches work order and verified surface finish spec for this product",
+      "edge_label_to_next": null,
+      "turn_index": 6,
+      "ground_truth": {
+        "node_id": "box_3",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Verify that parts are from the correct material batch. 2. Check the surface finish specification for the current product type."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the input material surface finish within specification, with no unusual reflectivity or coating variation?",
+      "edge_label_to_next": null,
+      "turn_index": 7,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Is the input material surface finish within specification (no unusual reflectivity or coating variation)?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "surface finish looks good no unusual reflectivty or coating issues detected",
+      "edge_label_to_next": "Yes",
+      "turn_index": 8,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Is the input material surface finish within specification (no unusual reflectivity or coating variation)?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_5",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the laser power level at the correct setpoint for this product type?",
+      "edge_label_to_next": null,
+      "turn_index": 9,
+      "ground_truth": {
+        "node_id": "box_5",
+        "node_type": "decision",
+        "node_text": "Is the laser power level at the correct setpoint for this product type?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_5",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "The power level reads correct, but I'm seeing intermittent beam divergence on the alignment sensor that's causing quality issues on every third part.",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "coverage_gap",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_5",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yeah checked the controller laser power at correct setpoint no drift since calibration",
+      "edge_label_to_next": "Yes",
+      "turn_index": 10,
+      "ground_truth": {
+        "node_id": "box_5",
+        "node_type": "decision",
+        "node_text": "Is the laser power level at the correct setpoint for this product type?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the marking speed within specification for this product type?",
+      "edge_label_to_next": null,
+      "turn_index": 11,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "decision",
+        "node_text": "Is the marking speed within specification for this product type?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "marking speed below spec range, running too slow which would increase energy deposition",
+      "edge_label_to_next": "No",
+      "turn_index": 12,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "decision",
+        "node_text": "Is the marking speed within specification for this product type?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_10",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Increase the marking speed to the specified value to reduce energy deposition per unit area. Rerun a test mark and compare with the reference sample.",
+      "edge_label_to_next": null,
+      "turn_index": 13,
+      "ground_truth": {
+        "node_id": "box_10",
+        "node_type": "process",
+        "node_text": "Increase the marking speed to the specified value to reduce energy deposition per unit area. rerun a test mark and compare with the reference sample."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_10",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "speed adjusted to spec and test mark completed, comparing against reference now",
+      "edge_label_to_next": "",
+      "turn_index": 14,
+      "ground_truth": {
+        "node_id": "box_10",
+        "node_type": "process",
+        "node_text": "Increase the marking speed to the specified value to reduce energy deposition per unit area. rerun a test mark and compare with the reference sample."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_12",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Complete the following checks: measure the distance from the marking head reference face to the part surface, compare against the focal distance on the laser system datasheet, and check the focal distance adjustment mechanism for play or slippage.",
+      "edge_label_to_next": null,
+      "turn_index": 15,
+      "ground_truth": {
+        "node_id": "box_12",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Measure the distance from the marking head reference face to the part surface. 2. Compare against the focal distance specified on the laser system datasheet. 3. Check the focal distance adjustment mechanism for play or slippage."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_12",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "measured focal distance and checked adjustment mechansim for any issues",
+      "edge_label_to_next": null,
+      "turn_index": 16,
+      "ground_truth": {
+        "node_id": "box_12",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Measure the distance from the marking head reference face to the part surface. 2. Compare against the focal distance specified on the laser system datasheet. 3. Check the focal distance adjustment mechanism for play or slippage."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_11",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the laser focal distance correct for the current part height?",
+      "edge_label_to_next": null,
+      "turn_index": 17,
+      "ground_truth": {
+        "node_id": "box_11",
+        "node_type": "decision",
+        "node_text": "Is the laser focal distance correct for the current part height?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_11",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "ok so focal distance is off, marking head not at correct height for these parts",
+      "edge_label_to_next": "No",
+      "turn_index": 18,
+      "ground_truth": {
+        "node_id": "box_11",
+        "node_type": "decision",
+        "node_text": "Is the laser focal distance correct for the current part height?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_13",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Adjust the marking head height to achieve the specified focal distance. Rerun a test mark and verify darkness level.",
+      "edge_label_to_next": null,
+      "turn_index": 19,
+      "ground_truth": {
+        "node_id": "box_13",
+        "node_type": "process",
+        "node_text": "Adjust the marking head height to achieve the specified focal distance. rerun a test mark and verify darkness level."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_13",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "marking head adjusted to correct focal distance and test mark completed",
+      "edge_label_to_next": "",
+      "turn_index": 20,
+      "ground_truth": {
+        "node_id": "box_13",
+        "node_type": "process",
+        "node_text": "Adjust the marking head height to achieve the specified focal distance. rerun a test mark and verify darkness level."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_15",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Complete the following checks: inspect the fume extraction filter cartridge for color and loading, measure air velocity at the extraction inlet with an anemometer, and compare volumetric flow rate against the minimum specification.",
+      "edge_label_to_next": null,
+      "turn_index": 21,
+      "ground_truth": {
+        "node_id": "box_15",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Inspect the fume extraction filter cartridge for colour and loading. 2. Measure air velocity at the extraction inlet with an anemometer. 3. Compare volumetric flow rate against the minimum specification."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_15",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "I'm getting a reading here, but the anemometer itself keeps flickering and showing error code E7 — I think the sensor probe might be damaged or the calibration is way off.",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "undocumented_malfunction",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_15",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "inspected filter and measured airflow with anemomter",
+      "edge_label_to_next": null,
+      "turn_index": 22,
+      "ground_truth": {
+        "node_id": "box_15",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Inspect the fume extraction filter cartridge for colour and loading. 2. Measure air velocity at the extraction inlet with an anemometer. 3. Compare volumetric flow rate against the minimum specification."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_14",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the fume extraction unit clean and operating at the correct airflow rate?",
+      "edge_label_to_next": null,
+      "turn_index": 23,
+      "ground_truth": {
+        "node_id": "box_14",
+        "node_type": "decision",
+        "node_text": "Is the fume extraction unit clean and operating at the correct airflow rate?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_14",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "filter heavily loaded and airflow below spec",
+      "edge_label_to_next": "No",
+      "turn_index": 24,
+      "ground_truth": {
+        "node_id": "box_14",
+        "node_type": "decision",
+        "node_text": "Is the fume extraction unit clean and operating at the correct airflow rate?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_16",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Clean or replace the fume extraction filter and verify airflow returns to specification. Excessive fume buildup can cause secondary marking darkening.",
+      "edge_label_to_next": null,
+      "turn_index": 25,
+      "ground_truth": {
+        "node_id": "box_16",
+        "node_type": "process",
+        "node_text": "Clean or replace the fume extraction filter and verify airflow returns to specification. Excessive fume build up can cause secondary marking darkening."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_16",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "filter replaced and airflow verified back to spec",
+      "edge_label_to_next": null,
+      "turn_index": 26,
+      "ground_truth": {
+        "node_id": "box_16",
+        "node_type": "process",
+        "node_text": "Clean or replace the fume extraction filter and verify airflow returns to specification. Excessive fume build up can cause secondary marking darkening."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_17",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the marking darkness within specification after all corrections?",
+      "edge_label_to_next": null,
+      "turn_index": 27,
+      "ground_truth": {
+        "node_id": "box_17",
+        "node_type": "decision",
+        "node_text": "Is the marking darkness within specification after all corrections?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_17",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "marking darkness still too dark even after all the adjustmens we've made",
+      "edge_label_to_next": "No",
+      "turn_index": 28,
+      "ground_truth": {
+        "node_id": "box_17",
+        "node_type": "decision",
+        "node_text": "Is the marking darkness within specification after all corrections?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_18",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Escalate to the maintenance team. The marking darkness cannot be corrected through operating adjustments, so they need to inspect the laser optics and galvo mirror calibration.",
+      "edge_label_to_next": null,
+      "turn_index": 29,
+      "ground_truth": {
+        "node_id": "box_18",
+        "node_type": "process",
+        "node_text": "Escalate to the maintenance team: marking darkness cannot be corrected through operating adjustments; inspect laser optics and galvo mirror calibration."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_18",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Before I escalate this, can you tell me where I'm supposed to log the PM hours for last week's conveyor belt maintenance? I can't find the right form in the system.",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "unrelated_question",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_18",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "understood escalating to maintenance for optics and mirror inspection",
+      "edge_label_to_next": null,
+      "turn_index": 30,
+      "ground_truth": {
+        "node_id": "box_18",
+        "node_type": "process",
+        "node_text": "Escalate to the maintenance team: marking darkness cannot be corrected through operating adjustments; inspect laser optics and galvo mirror calibration."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_19",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Create a non-conformance record for the affected batch and record all corrective actions in the quality log.",
+      "edge_label_to_next": null,
+      "turn_index": 31,
+      "ground_truth": {
+        "node_id": "box_19",
+        "node_type": "process",
+        "node_text": "Create a non conformance record for the affected batch and record all corrective actions in the quality log."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_19",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "non-conformance record created and all corrective actions logged",
+      "edge_label_to_next": null,
+      "turn_index": 32,
+      "ground_truth": {
+        "node_id": "box_19",
+        "node_type": "process",
+        "node_text": "Create a non conformance record for the affected batch and record all corrective actions in the quality log."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_20",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Procedure complete. Notify the quality assurance team of the outcome and escalation.",
+      "edge_label_to_next": null,
+      "turn_index": 33,
+      "ground_truth": {
+        "node_id": "box_20",
+        "node_type": "terminator",
+        "node_text": "End, notify quality assurance team."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_20",
+      "node_type": "terminator",
+      "speaker": "operator",
+      "utterance": "will do notifying qa now",
+      "edge_label_to_next": null,
+      "turn_index": 34,
+      "ground_truth": {
+        "node_id": "box_20",
+        "node_type": "terminator",
+        "node_text": "End, notify quality assurance team."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    }
+  ],
+  "metadata": {
+    "depth": 18,
+    "num_decisions": 7,
+    "num_processes": 9,
+    "num_documents": 0,
+    "terminator_type": "procedure_complete",
+    "terminator_text": "End, notify quality assurance team.",
+    "true_terminator": true,
+    "node_sequence": [
+      "box_0",
+      "box_21",
+      "box_1",
+      "box_3",
+      "box_2",
+      "box_5",
+      "box_8",
+      "box_10",
+      "box_12",
+      "box_11",
+      "box_13",
+      "box_15",
+      "box_14",
+      "box_16",
+      "box_17",
+      "box_18",
+      "box_19",
+      "box_20"
+    ],
+    "edge_labels": [
+      null,
+      null,
+      "Standard fault, continue diagnosis",
+      "",
+      null,
+      "Yes",
+      "Yes",
+      "No",
+      "",
+      null,
+      "No",
+      "",
+      null,
+      "No",
+      null,
+      "No",
+      null,
+      null
+    ],
+    "decision_points": [
+      {
+        "node": "box_21",
+        "label": "Standard fault, continue diagnosis",
+        "question": "Is the marking defect rate high enough across the current batch to indicate a systematic process failure requiring immediate production halt?"
+      },
+      {
+        "node": "box_2",
+        "label": "Yes",
+        "question": "Is the input material surface finish within specification (no unusual reflectivity or coating variation)?"
+      },
+      {
+        "node": "box_5",
+        "label": "Yes",
+        "question": "Is the laser power level at the correct setpoint for this product type?"
+      },
+      {
+        "node": "box_8",
+        "label": "No",
+        "question": "Is the marking speed within specification for this product type?"
+      },
+      {
+        "node": "box_11",
+        "label": "No",
+        "question": "Is the laser focal distance correct for the current part height?"
+      },
+      {
+        "node": "box_14",
+        "label": "No",
+        "question": "Is the fume extraction unit clean and operating at the correct airflow rate?"
+      },
+      {
+        "node": "box_17",
+        "label": "No",
+        "question": "Is the marking darkness within specification after all corrections?"
+      }
+    ],
+    "generation_model": "anthropic/claude-sonnet-4-5",
+    "verification": {
+      "variant_of": "base",
+      "base_verified": true,
+      "note": "surface-form variant; not independently verified"
+    },
+    "injection_count": 3
+  },
+  "injection_log": [
+    {
+      "position": 10,
+      "node_id": "box_5",
+      "node_text": "Is the laser power level at the correct setpoint for this product type?",
+      "edge_labels": [
+        "No",
+        "Yes"
+      ],
+      "category": "coverage_gap",
+      "utterance": "The power level reads correct, but I'm seeing intermittent beam divergence on the alignment sensor that's causing quality issues on every third part.",
+      "injection_rate": null,
+      "num_candidates": null
+    },
+    {
+      "position": 22,
+      "node_id": "box_15",
+      "node_text": "Complete the following checks: 1. Inspect the fume extraction filter cartridge for colour and loading. 2. Measure air velocity at the extraction inlet with an anemometer. 3. Compare volumetric flow rate against the minimum specification.",
+      "edge_labels": [],
+      "category": "undocumented_malfunction",
+      "utterance": "I'm getting a reading here, but the anemometer itself keeps flickering and showing error code E7 — I think the sensor probe might be damaged or the calibration is way off.",
+      "injection_rate": null,
+      "num_candidates": null
+    },
+    {
+      "position": 30,
+      "node_id": "box_18",
+      "node_text": "Escalate to the maintenance team: marking darkness cannot be corrected through operating adjustments; inspect laser optics and galvo mirror calibration.",
+      "edge_labels": [],
+      "category": "unrelated_question",
+      "utterance": "Before I escalate this, can you tell me where I'm supposed to log the PM hours for last week's conveyor belt maintenance? I can't find the right form in the system.",
+      "injection_rate": null,
+      "num_candidates": null
+    }
+  ]
+}

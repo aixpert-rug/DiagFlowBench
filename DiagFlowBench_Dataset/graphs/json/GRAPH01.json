@@ -1,0 +1,131 @@
+{
+  "id": "GRAPH01",
+  "description": "Troubleshooting flowchart for diagnosing out-of-specification engagement force during a small-part assembly operation.",
+  "graph": {
+    "nodes": {
+      "box_0": {
+        "type": "terminator",
+        "text": "Start"
+      },
+      "box_1": {
+        "type": "process",
+        "text": "Record the batch number of the marked parts and the measured engagement force."
+      },
+      "box_2": {
+        "type": "decision",
+        "text": "Is the insertion depth still within specification?"
+      },
+      "box_3": {
+        "type": "process",
+        "text": "Take a sample of insertion depth"
+      },
+      "box_4": {
+        "type": "process",
+        "text": "Adjust the press depth setting and repress the part to achieve the specified insertion depth."
+      },
+      "box_5": {
+        "type": "decision",
+        "text": "Is the reduced engagement force present at multiple positions?"
+      },
+      "box_6": {
+        "type": "process",
+        "text": "Have maintenance team check the part placement/pressing station (e.g. part placement positions, or air pressure)"
+      },
+      "box_7": {
+        "type": "process",
+        "text": "Try a different batch of marked parts."
+      },
+      "box_8": {
+        "type": "decision",
+        "text": "Does the pressed marked part contain visual defects?"
+      },
+      "box_9": {
+        "type": "process",
+        "text": "Check the pin of the pressed marked part."
+      },
+      "box_10": {
+        "type": "process",
+        "text": "No visual defects detected, proceed to inspect the press fit interface for dimensional deviations."
+      },
+      "box_11": {
+        "type": "decision",
+        "text": "Does the press fit interface contain dimensional deviations?"
+      },
+      "box_12": {
+        "type": "process",
+        "text": "Inspect the press fit interface for dimensional deviations."
+      },
+      "box_13": {
+        "type": "terminator",
+        "text": "End, Notify maintenance team"
+      }
+    },
+    "edges": [
+      {
+        "source": "box_0",
+        "target": "box_1",
+        "label": null
+      },
+      {
+        "source": "box_1",
+        "target": "box_2",
+        "label": null
+      },
+      {
+        "source": "box_3",
+        "target": "box_2",
+        "label": null
+      },
+      {
+        "source": "box_2",
+        "target": "box_4",
+        "label": "No"
+      },
+      {
+        "source": "box_2",
+        "target": "box_5",
+        "label": "Yes"
+      },
+      {
+        "source": "box_5",
+        "target": "box_6",
+        "label": "No"
+      },
+      {
+        "source": "box_5",
+        "target": "box_7",
+        "label": "Yes"
+      },
+      {
+        "source": "box_7",
+        "target": "box_8",
+        "label": null
+      },
+      {
+        "source": "box_9",
+        "target": "box_8",
+        "label": null
+      },
+      {
+        "source": "box_8",
+        "target": "box_10",
+        "label": "No"
+      },
+      {
+        "source": "box_8",
+        "target": "box_11",
+        "label": "Yes"
+      },
+      {
+        "source": "box_12",
+        "target": "box_11",
+        "label": null
+      },
+      {
+        "source": "box_11",
+        "target": "box_13",
+        "label": null
+      }
+    ]
+  }
+}

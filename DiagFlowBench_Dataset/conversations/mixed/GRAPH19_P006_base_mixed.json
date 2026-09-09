@@ -1,0 +1,290 @@
+{
+  "conversation_id": "GRAPH19_P006_base_mixed",
+  "graph_id": "GRAPH19",
+  "path_id": "GRAPH19_P006",
+  "regime": "mixed",
+  "variant": "base",
+  "robustness_axis": null,
+  "turns": [
+    {
+      "node_id": "box_0",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Starting reorientation mechanism input diagnostic procedure.",
+      "edge_label_to_next": null,
+      "turn_index": 0,
+      "ground_truth": {
+        "node_id": "box_0",
+        "node_type": "terminator",
+        "node_text": "Start"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Does the product meet quality specification?",
+      "edge_label_to_next": null,
+      "turn_index": 1,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "decision",
+        "node_text": "Does the product meet quality specification?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "The product is within spec on dimensions and surface finish, but I'm seeing some discoloration on about 30% of the parts that isn't mentioned in the quality criteria.",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "coverage_gap",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, the product meets quality specification.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 2,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "decision",
+        "node_text": "Does the product meet quality specification?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_4",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is picking up part from tray correct?",
+      "edge_label_to_next": null,
+      "turn_index": 3,
+      "ground_truth": {
+        "node_id": "box_4",
+        "node_type": "decision",
+        "node_text": "Is picking up part from tray correct?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_4",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, the part is being picked up correctly from the tray.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 4,
+      "ground_truth": {
+        "node_id": "box_4",
+        "node_type": "decision",
+        "node_text": "Is picking up part from tray correct?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_7",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is picking up part from puck correct?",
+      "edge_label_to_next": null,
+      "turn_index": 5,
+      "ground_truth": {
+        "node_id": "box_7",
+        "node_type": "decision",
+        "node_text": "Is picking up part from puck correct?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_7",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "No, the pickup from the carrier puck is not correct.",
+      "edge_label_to_next": "No",
+      "turn_index": 6,
+      "ground_truth": {
+        "node_id": "box_7",
+        "node_type": "decision",
+        "node_text": "Is picking up part from puck correct?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_9",
+      "node_type": "document",
+      "speaker": "system",
+      "utterance": "Please consult the part pickup from carrier puck diagnostic procedure reference.",
+      "edge_label_to_next": null,
+      "turn_index": 7,
+      "ground_truth": {
+        "node_id": "box_9",
+        "node_type": "document",
+        "node_text": "Part pickup from carrier puck: diagnostic procedure reference."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_9",
+      "node_type": "document",
+      "speaker": "operator",
+      "utterance": "I've reviewed the reference document.",
+      "edge_label_to_next": null,
+      "turn_index": 8,
+      "ground_truth": {
+        "node_id": "box_9",
+        "node_type": "document",
+        "node_text": "Part pickup from carrier puck: diagnostic procedure reference."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    }
+  ],
+  "metadata": {
+    "depth": 5,
+    "num_decisions": 3,
+    "num_processes": 0,
+    "num_documents": 1,
+    "terminator_type": "procedure_complete",
+    "terminator_text": "Part pickup from carrier puck: diagnostic procedure reference.",
+    "true_terminator": false,
+    "node_sequence": [
+      "box_0",
+      "box_1",
+      "box_4",
+      "box_7",
+      "box_9"
+    ],
+    "edge_labels": [
+      null,
+      null,
+      "Yes",
+      "Yes",
+      "No"
+    ],
+    "decision_points": [
+      {
+        "node": "box_1",
+        "label": "Yes",
+        "question": "Does the product meet quality specification?"
+      },
+      {
+        "node": "box_4",
+        "label": "Yes",
+        "question": "Is picking up part from tray correct?"
+      },
+      {
+        "node": "box_7",
+        "label": "No",
+        "question": "Is picking up part from puck correct?"
+      }
+    ],
+    "generation_model": "anthropic/claude-sonnet-4-5",
+    "verification": {
+      "verified": true,
+      "issues": [],
+      "corrected_turns": [
+        {
+          "node_id": "box_0",
+          "node_type": "terminator",
+          "speaker": "system",
+          "utterance": "Starting reorientation mechanism input diagnostic procedure.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_1",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Does the product meet quality specification?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_1",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Yes, the product meets quality specification.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_4",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is picking up part from tray correct?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_4",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Yes, the part is being picked up correctly from the tray.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_7",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is picking up part from puck correct?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_7",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "No, the pickup from the carrier puck is not correct.",
+          "edge_label_to_next": "No"
+        },
+        {
+          "node_id": "box_9",
+          "node_type": "document",
+          "speaker": "system",
+          "utterance": "Please consult the part pickup from carrier puck diagnostic procedure reference.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_9",
+          "node_type": "document",
+          "speaker": "operator",
+          "utterance": "I've reviewed the reference document.",
+          "edge_label_to_next": null
+        }
+      ]
+    },
+    "injection_count": 1
+  },
+  "injection_log": [
+    {
+      "position": 2,
+      "node_id": "box_1",
+      "node_text": "Does the product meet quality specification?",
+      "edge_labels": [
+        "No",
+        "Yes"
+      ],
+      "category": "coverage_gap",
+      "utterance": "The product is within spec on dimensions and surface finish, but I'm seeing some discoloration on about 30% of the parts that isn't mentioned in the quality criteria.",
+      "injection_rate": null,
+      "num_candidates": null
+    }
+  ]
+}

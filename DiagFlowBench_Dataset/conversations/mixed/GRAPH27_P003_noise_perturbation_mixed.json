@@ -1,0 +1,663 @@
+{
+  "conversation_id": "GRAPH27_P003_noise_perturbation_mixed",
+  "graph_id": "GRAPH27",
+  "path_id": "GRAPH27_P003",
+  "regime": "mixed",
+  "variant": "noise_perturbation",
+  "robustness_axis": "noise_perturbation",
+  "turns": [
+    {
+      "node_id": "box_0",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Starting code reader diagnostic troubleshooting procedure.",
+      "edge_label_to_next": null,
+      "turn_index": 0,
+      "ground_truth": {
+        "node_id": "box_0",
+        "node_type": "terminator",
+        "node_text": "Start"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_21",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the code read failure rate so high that part traceability cannot be maintained, requiring an immediate production stop and traceability audit?",
+      "edge_label_to_next": null,
+      "turn_index": 1,
+      "ground_truth": {
+        "node_id": "box_21",
+        "node_type": "decision",
+        "node_text": "Is the code read failure rate so high that part traceability cannot be maintained, requiring an immediate production stop and traceability audit?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_21",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "The codes are reading intermittently, but what's really concerning is the scanner is making a loud grinding noise from the motor assembly that I haven't heard before.",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "coverage_gap",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_21",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "failure rate elevated but we can still maintian traceability looks like standard fault situation",
+      "edge_label_to_next": "Standard fault, continue diagnosis",
+      "turn_index": 2,
+      "ground_truth": {
+        "node_id": "box_21",
+        "node_type": "decision",
+        "node_text": "Is the code read failure rate so high that part traceability cannot be maintained, requiring an immediate production stop and traceability audit?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Please record the read failure rate, including the number of failed reads per hundred parts, the error type displayed on the operator control interface, and the batch number of the affected parts.",
+      "edge_label_to_next": null,
+      "turn_index": 3,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Record the read failure rate (number of failed reads per hundred parts), the error type shown on the operator control interface, and the batch number of the affected parts."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "ok documented failure rate at twelve per hundred parts error type shows low contrast warning batch number LX-4892",
+      "edge_label_to_next": "",
+      "turn_index": 4,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Record the read failure rate (number of failed reads per hundred parts), the error type shown on the operator control interface, and the batch number of the affected parts."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_3",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Complete the following checks: inspect five failed parts for inconsistent marking contrast, and compare them with a successfully read part from the same batch.",
+      "edge_label_to_next": null,
+      "turn_index": 5,
+      "ground_truth": {
+        "node_id": "box_3",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Inspect five failed parts for inconsistent marking contrast. 2. Compare with a successfully read part from the same batch."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_3",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "inspected five failed parts compared to good one yeah failed parts definitley have lower marking contrast",
+      "edge_label_to_next": null,
+      "turn_index": 6,
+      "ground_truth": {
+        "node_id": "box_3",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Inspect five failed parts for inconsistent marking contrast. 2. Compare with a successfully read part from the same batch."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the read failure occurring on all parts or only on a fraction of the batch?",
+      "edge_label_to_next": null,
+      "turn_index": 7,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Is the read failure occurring on all parts or only on a fraction of the batch?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "every single part in this batch showing read failures affecting entire batch",
+      "edge_label_to_next": "Yes",
+      "turn_index": 8,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Is the read failure occurring on all parts or only on a fraction of the batch?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_5",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the marking contrast on the affected parts within the minimum contrast specification?",
+      "edge_label_to_next": null,
+      "turn_index": 9,
+      "ground_truth": {
+        "node_id": "box_5",
+        "node_type": "decision",
+        "node_text": "Is the marking contrast on the affected parts within the minimum contrast specification?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_5",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "contrast below min spec markings too faint to meet requirments",
+      "edge_label_to_next": "No",
+      "turn_index": 10,
+      "ground_truth": {
+        "node_id": "box_5",
+        "node_type": "decision",
+        "node_text": "Is the marking contrast on the affected parts within the minimum contrast specification?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_7",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Adjust the laser power or marking speed at the marking station to restore contrast to within specification, and remark the affected parts if feasible.",
+      "edge_label_to_next": null,
+      "turn_index": 11,
+      "ground_truth": {
+        "node_id": "box_7",
+        "node_type": "process",
+        "node_text": "Adjust the laser power or marking speed at the marking station to restore contrast to within specification. remark the affected parts if feasible."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_7",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "increased laser power by fifteen percent remarked three test parts contrast now within spec",
+      "edge_label_to_next": "",
+      "turn_index": 12,
+      "ground_truth": {
+        "node_id": "box_7",
+        "node_type": "process",
+        "node_text": "Adjust the laser power or marking speed at the marking station to restore contrast to within specification. remark the affected parts if feasible."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_9",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Inspect the code reader lens surface for dust, oil, or condensation. Also verify that the reader housing cover is intact and that no stray light enters the reading field.",
+      "edge_label_to_next": null,
+      "turn_index": 13,
+      "ground_truth": {
+        "node_id": "box_9",
+        "node_type": "process",
+        "node_text": "Inspect the code reader lens surface for dust, oil, or condensation. Verify that the reader housing cover is intact and that no stray light enters the reading field."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_9",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "completed inspection housing secure but can see some oil residue on lens suface",
+      "edge_label_to_next": null,
+      "turn_index": 14,
+      "ground_truth": {
+        "node_id": "box_9",
+        "node_type": "process",
+        "node_text": "Inspect the code reader lens surface for dust, oil, or condensation. Verify that the reader housing cover is intact and that no stray light enters the reading field."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the code reader lens clean and free of contamination?",
+      "edge_label_to_next": null,
+      "turn_index": 15,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "decision",
+        "node_text": "Is the code reader lens clean and free of contamination?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "The lens looks clean, but I'm noticing the infrared illuminator LEDs around the lens aren't lighting up at all when the scanner tries to read.",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "undocumented_malfunction",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no contamination present lens has oil residue needs cleaning",
+      "edge_label_to_next": "No",
+      "turn_index": 16,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "decision",
+        "node_text": "Is the code reader lens clean and free of contamination?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_10",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Clean the code reader lens with an approved optical cleaning cloth and lens cleaner, then retest the read rate with five known good parts.",
+      "edge_label_to_next": null,
+      "turn_index": 17,
+      "ground_truth": {
+        "node_id": "box_10",
+        "node_type": "process",
+        "node_text": "Clean the code reader lens with an approved optical cleaning cloth and lens cleaner. retest the read rate with five known good parts."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_10",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "lens clean now tested five good parts all five read sucessfully",
+      "edge_label_to_next": "",
+      "turn_index": 18,
+      "ground_truth": {
+        "node_id": "box_10",
+        "node_type": "process",
+        "node_text": "Clean the code reader lens with an approved optical cleaning cloth and lens cleaner. retest the read rate with five known good parts."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_12",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Complete the following checks: read the illumination intensity from the code reader diagnostic display, compare it against the minimum specified illumination level, and check the illumination module for contamination or connector issues.",
+      "edge_label_to_next": null,
+      "turn_index": 19,
+      "ground_truth": {
+        "node_id": "box_12",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Read the illumination intensity from the code reader diagnostic display. 2. Compare against the minimum specified illumination level. 3. Check the illumination module for contamination or connector issues."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_12",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "checked diagnostic display illumination intensity at ninety-two percent above min threshold module and connectors look good",
+      "edge_label_to_next": null,
+      "turn_index": 20,
+      "ground_truth": {
+        "node_id": "box_12",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Read the illumination intensity from the code reader diagnostic display. 2. Compare against the minimum specified illumination level. 3. Check the illumination module for contamination or connector issues."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_11",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the illumination intensity at the reading position within specification?",
+      "edge_label_to_next": null,
+      "turn_index": 21,
+      "ground_truth": {
+        "node_id": "box_11",
+        "node_type": "decision",
+        "node_text": "Is the illumination intensity at the reading position within specification?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_11",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yeah illumination within spec at ninety-two percent of max",
+      "edge_label_to_next": "Yes",
+      "turn_index": 22,
+      "ground_truth": {
+        "node_id": "box_11",
+        "node_type": "decision",
+        "node_text": "Is the illumination intensity at the reading position within specification?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_14",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the code geometry, including module size, quiet zone, and aspect ratio, within the specification for this code type?",
+      "edge_label_to_next": null,
+      "turn_index": 23,
+      "ground_truth": {
+        "node_id": "box_14",
+        "node_type": "decision",
+        "node_text": "Is the code geometry (module size, quiet zone, aspect ratio) within the specification for this code type?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_14",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yes all geometry parameters within spec module size and quiet zones check out fine",
+      "edge_label_to_next": "Yes",
+      "turn_index": 24,
+      "ground_truth": {
+        "node_id": "box_14",
+        "node_type": "decision",
+        "node_text": "Is the code geometry (module size, quiet zone, aspect ratio) within the specification for this code type?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_17",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Has the read success rate returned to within the acceptable threshold after corrections?",
+      "edge_label_to_next": null,
+      "turn_index": 25,
+      "ground_truth": {
+        "node_id": "box_17",
+        "node_type": "decision",
+        "node_text": "Has the read success rate returned to within the acceptable threshold after corrections?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_17",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yes read rate back to normal now at ninety-eight percent sucess rate well within acceptable limits",
+      "edge_label_to_next": "Yes",
+      "turn_index": 26,
+      "ground_truth": {
+        "node_id": "box_17",
+        "node_type": "decision",
+        "node_text": "Has the read success rate returned to within the acceptable threshold after corrections?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_19",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Record all corrective actions and the final read success rate in the quality log, and notify the quality assurance team of the affected batch.",
+      "edge_label_to_next": null,
+      "turn_index": 27,
+      "ground_truth": {
+        "node_id": "box_19",
+        "node_type": "process",
+        "node_text": "Record all corrective actions and the final read success rate in the quality log. Notify quality assurance team of the affected batch."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_19",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Hey, before I finish up here, do you know if the forklift certification training has been rescheduled for next week? I heard it got moved but haven't seen the new date.",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "unrelated_question",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_19",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "logged all corrective actions and final ninety-eight percent read rate notified QA about batch LX-4892",
+      "edge_label_to_next": null,
+      "turn_index": 28,
+      "ground_truth": {
+        "node_id": "box_19",
+        "node_type": "process",
+        "node_text": "Record all corrective actions and the final read success rate in the quality log. Notify quality assurance team of the affected batch."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_20",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Diagnostic procedure complete. Resume production operations.",
+      "edge_label_to_next": null,
+      "turn_index": 29,
+      "ground_truth": {
+        "node_id": "box_20",
+        "node_type": "terminator",
+        "node_text": "End, resume production."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_20",
+      "node_type": "terminator",
+      "speaker": "operator",
+      "utterance": "understood resuming production now",
+      "edge_label_to_next": null,
+      "turn_index": 30,
+      "ground_truth": {
+        "node_id": "box_20",
+        "node_type": "terminator",
+        "node_text": "End, resume production."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    }
+  ],
+  "metadata": {
+    "depth": 16,
+    "num_decisions": 7,
+    "num_processes": 7,
+    "num_documents": 0,
+    "terminator_type": "procedure_complete",
+    "terminator_text": "End, resume production.",
+    "true_terminator": true,
+    "node_sequence": [
+      "box_0",
+      "box_21",
+      "box_1",
+      "box_3",
+      "box_2",
+      "box_5",
+      "box_7",
+      "box_9",
+      "box_8",
+      "box_10",
+      "box_12",
+      "box_11",
+      "box_14",
+      "box_17",
+      "box_19",
+      "box_20"
+    ],
+    "edge_labels": [
+      null,
+      null,
+      "Standard fault, continue diagnosis",
+      "",
+      null,
+      "Yes",
+      "No",
+      "",
+      null,
+      "No",
+      "",
+      null,
+      "Yes",
+      "Yes",
+      "Yes",
+      null
+    ],
+    "decision_points": [
+      {
+        "node": "box_21",
+        "label": "Standard fault, continue diagnosis",
+        "question": "Is the code read failure rate so high that part traceability cannot be maintained, requiring an immediate production stop and traceability audit?"
+      },
+      {
+        "node": "box_2",
+        "label": "Yes",
+        "question": "Is the read failure occurring on all parts or only on a fraction of the batch?"
+      },
+      {
+        "node": "box_5",
+        "label": "No",
+        "question": "Is the marking contrast on the affected parts within the minimum contrast specification?"
+      },
+      {
+        "node": "box_8",
+        "label": "No",
+        "question": "Is the code reader lens clean and free of contamination?"
+      },
+      {
+        "node": "box_11",
+        "label": "Yes",
+        "question": "Is the illumination intensity at the reading position within specification?"
+      },
+      {
+        "node": "box_14",
+        "label": "Yes",
+        "question": "Is the code geometry (module size, quiet zone, aspect ratio) within the specification for this code type?"
+      },
+      {
+        "node": "box_17",
+        "label": "Yes",
+        "question": "Has the read success rate returned to within the acceptable threshold after corrections?"
+      }
+    ],
+    "generation_model": "anthropic/claude-sonnet-4-5",
+    "verification": {
+      "variant_of": "base",
+      "base_verified": true,
+      "note": "surface-form variant; not independently verified"
+    },
+    "injection_count": 3
+  },
+  "injection_log": [
+    {
+      "position": 2,
+      "node_id": "box_21",
+      "node_text": "Is the code read failure rate so high that part traceability cannot be maintained, requiring an immediate production stop and traceability audit?",
+      "edge_labels": [
+        "Critical, immediate stop required",
+        "Standard fault, continue diagnosis"
+      ],
+      "category": "coverage_gap",
+      "utterance": "The codes are reading intermittently, but what's really concerning is the scanner is making a loud grinding noise from the motor assembly that I haven't heard before.",
+      "injection_rate": null,
+      "num_candidates": null
+    },
+    {
+      "position": 16,
+      "node_id": "box_8",
+      "node_text": "Is the code reader lens clean and free of contamination?",
+      "edge_labels": [
+        "No",
+        "Yes"
+      ],
+      "category": "undocumented_malfunction",
+      "utterance": "The lens looks clean, but I'm noticing the infrared illuminator LEDs around the lens aren't lighting up at all when the scanner tries to read.",
+      "injection_rate": null,
+      "num_candidates": null
+    },
+    {
+      "position": 28,
+      "node_id": "box_19",
+      "node_text": "Record all corrective actions and the final read success rate in the quality log. Notify quality assurance team of the affected batch.",
+      "edge_labels": [],
+      "category": "unrelated_question",
+      "utterance": "Hey, before I finish up here, do you know if the forklift certification training has been rescheduled for next week? I heard it got moved but haven't seen the new date.",
+      "injection_rate": null,
+      "num_candidates": null
+    }
+  ]
+}

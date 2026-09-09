@@ -1,0 +1,378 @@
+{
+  "conversation_id": "GRAPH16_P004_base",
+  "graph_id": "GRAPH16",
+  "path_id": "GRAPH16_P004",
+  "regime": "clean",
+  "variant": "base",
+  "robustness_axis": null,
+  "turns": [
+    {
+      "node_id": "box_0",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Starting the placing 4x part in reorientation unit diagnostic procedure.",
+      "edge_label_to_next": null,
+      "turn_index": 0,
+      "ground_truth": {
+        "node_id": "box_0",
+        "node_type": "terminator",
+        "node_text": "Start"
+      }
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Does the part meet quality assurance team product specifications?",
+      "edge_label_to_next": null,
+      "turn_index": 1,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "decision",
+        "node_text": "Does the part meet quality assurance team product specifications?"
+      }
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, I've verified the part and it meets all quality assurance specifications.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 2,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "decision",
+        "node_text": "Does the part meet quality assurance team product specifications?"
+      }
+    },
+    {
+      "node_id": "box_4",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is transferring part from reorientation mechanism to output holder rack correct?",
+      "edge_label_to_next": null,
+      "turn_index": 3,
+      "ground_truth": {
+        "node_id": "box_4",
+        "node_type": "decision",
+        "node_text": "Is transferring part from reorientation mechanism to output holder rack correct?"
+      }
+    },
+    {
+      "node_id": "box_4",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "The transfer looks good. Parts are transferring smoothly from the reorientation mechanism to the output holder rack without any issues.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 4,
+      "ground_truth": {
+        "node_id": "box_4",
+        "node_type": "decision",
+        "node_text": "Is transferring part from reorientation mechanism to output holder rack correct?"
+      }
+    },
+    {
+      "node_id": "box_7",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the lowering of the output holder rack correct?",
+      "edge_label_to_next": null,
+      "turn_index": 5,
+      "ground_truth": {
+        "node_id": "box_7",
+        "node_type": "decision",
+        "node_text": "Is the lowering of the output holder rack correct?"
+      }
+    },
+    {
+      "node_id": "box_7",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, the output holder rack is lowering correctly and evenly on both sides.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 6,
+      "ground_truth": {
+        "node_id": "box_7",
+        "node_type": "decision",
+        "node_text": "Is the lowering of the output holder rack correct?"
+      }
+    },
+    {
+      "node_id": "box_10",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Are there contaminated parts?",
+      "edge_label_to_next": null,
+      "turn_index": 7,
+      "ground_truth": {
+        "node_id": "box_10",
+        "node_type": "decision",
+        "node_text": "Are there contaminated parts?"
+      }
+    },
+    {
+      "node_id": "box_10",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "No, I don't see any contamination on the parts or components.",
+      "edge_label_to_next": "No",
+      "turn_index": 8,
+      "ground_truth": {
+        "node_id": "box_10",
+        "node_type": "decision",
+        "node_text": "Are there contaminated parts?"
+      }
+    },
+    {
+      "node_id": "box_17",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Are there electrical defects?",
+      "edge_label_to_next": null,
+      "turn_index": 9,
+      "ground_truth": {
+        "node_id": "box_17",
+        "node_type": "decision",
+        "node_text": "Are there electrical defects?"
+      }
+    },
+    {
+      "node_id": "box_17",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "No electrical defects found. All cabling, sensors, switches, and valves are functioning properly.",
+      "edge_label_to_next": "No",
+      "turn_index": 10,
+      "ground_truth": {
+        "node_id": "box_17",
+        "node_type": "decision",
+        "node_text": "Are there electrical defects?"
+      }
+    },
+    {
+      "node_id": "box_20",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Are there worn parts?",
+      "edge_label_to_next": null,
+      "turn_index": 11,
+      "ground_truth": {
+        "node_id": "box_20",
+        "node_type": "decision",
+        "node_text": "Are there worn parts?"
+      }
+    },
+    {
+      "node_id": "box_20",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, I've identified wear on some of the components during my inspection.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 12,
+      "ground_truth": {
+        "node_id": "box_20",
+        "node_type": "decision",
+        "node_text": "Are there worn parts?"
+      }
+    },
+    {
+      "node_id": "box_23",
+      "node_type": "document",
+      "speaker": "system",
+      "utterance": "Please consult the assembly robot replacement procedure for guidance on replacing the worn components.",
+      "edge_label_to_next": null,
+      "turn_index": 13,
+      "ground_truth": {
+        "node_id": "box_23",
+        "node_type": "document",
+        "node_text": "Assembly robot replacement procedure"
+      }
+    },
+    {
+      "node_id": "box_23",
+      "node_type": "document",
+      "speaker": "operator",
+      "utterance": "I've reviewed the assembly robot replacement procedure.",
+      "edge_label_to_next": null,
+      "turn_index": 14,
+      "ground_truth": {
+        "node_id": "box_23",
+        "node_type": "document",
+        "node_text": "Assembly robot replacement procedure"
+      }
+    }
+  ],
+  "metadata": {
+    "depth": 8,
+    "num_decisions": 6,
+    "num_processes": 0,
+    "num_documents": 1,
+    "terminator_type": "procedure_complete",
+    "terminator_text": "Assembly robot replacement procedure",
+    "true_terminator": false,
+    "node_sequence": [
+      "box_0",
+      "box_1",
+      "box_4",
+      "box_7",
+      "box_10",
+      "box_17",
+      "box_20",
+      "box_23"
+    ],
+    "edge_labels": [
+      null,
+      null,
+      "Yes",
+      "Yes",
+      "Yes",
+      "No",
+      "No",
+      "Yes"
+    ],
+    "decision_points": [
+      {
+        "node": "box_1",
+        "label": "Yes",
+        "question": "Does the part meet quality assurance team product specifications?"
+      },
+      {
+        "node": "box_4",
+        "label": "Yes",
+        "question": "Is transferring part from reorientation mechanism to output holder rack correct?"
+      },
+      {
+        "node": "box_7",
+        "label": "Yes",
+        "question": "Is the lowering of the output holder rack correct?"
+      },
+      {
+        "node": "box_10",
+        "label": "No",
+        "question": "Are there contaminated parts?"
+      },
+      {
+        "node": "box_17",
+        "label": "No",
+        "question": "Are there electrical defects?"
+      },
+      {
+        "node": "box_20",
+        "label": "Yes",
+        "question": "Are there worn parts?"
+      }
+    ],
+    "generation_model": "anthropic/claude-sonnet-4-5",
+    "verification": {
+      "verified": true,
+      "issues": [],
+      "corrected_turns": [
+        {
+          "node_id": "box_0",
+          "node_type": "terminator",
+          "speaker": "system",
+          "utterance": "Starting the placing 4x part in reorientation unit diagnostic procedure.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_1",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Does the part meet quality assurance team product specifications?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_1",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Yes, I've verified the part and it meets all quality assurance specifications.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_4",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is transferring part from reorientation mechanism to output holder rack correct?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_4",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "The transfer looks good. Parts are transferring smoothly from the reorientation mechanism to the output holder rack without any issues.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_7",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is the lowering of the output holder rack correct?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_7",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Yes, the output holder rack is lowering correctly and evenly on both sides.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_10",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Are there contaminated parts?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_10",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "No, I don't see any contamination on the parts or components.",
+          "edge_label_to_next": "No"
+        },
+        {
+          "node_id": "box_17",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Are there electrical defects?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_17",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "No electrical defects found. All cabling, sensors, switches, and valves are functioning properly.",
+          "edge_label_to_next": "No"
+        },
+        {
+          "node_id": "box_20",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Are there worn parts?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_20",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Yes, I've identified wear on some of the components during my inspection.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_23",
+          "node_type": "document",
+          "speaker": "system",
+          "utterance": "Please consult the assembly robot replacement procedure for guidance on replacing the worn components.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_23",
+          "node_type": "document",
+          "speaker": "operator",
+          "utterance": "I've reviewed the assembly robot replacement procedure.",
+          "edge_label_to_next": null
+        }
+      ]
+    }
+  }
+}

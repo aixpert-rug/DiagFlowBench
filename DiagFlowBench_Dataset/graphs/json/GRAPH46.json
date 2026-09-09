@@ -1,0 +1,277 @@
+{
+  "id": "GRAPH46",
+  "description": "Dowel pin fit and perpendicularity inspection — PROC-56",
+  "graph": {
+    "nodes": {
+      "box_0": {
+        "type": "terminator",
+        "text": "Start"
+      },
+      "box_1": {
+        "type": "process",
+        "text": "Complete the following checks: 1. Inspect each dowel pin nose for gouging, abrasion, or corrosion deposits. 2. Check each bore entry for raised material or swarf from previous fits. 3. Inspect the pin body for bending by rolling it on a flat surface."
+      },
+      "box_2": {
+        "type": "decision",
+        "text": "Severe pin damage, gouging, bending or corrosion?"
+      },
+      "box_3": {
+        "type": "terminator",
+        "text": "End, Escalate: replace fixture, severe pin damage"
+      },
+      "box_4": {
+        "type": "process",
+        "text": "Using a calibrated digital micrometer, measure the pin diameter at three axial positions along the working length and record the minimum and maximum values. Inspect the pin surface under a magnifier for scoring, pitting, or burring that could cause interference fit variation. Compare the minimum measured diameter against the minimum serviceable diameter specified on the pin replacement schedule."
+      },
+      "box_5": {
+        "type": "document",
+        "text": "Refer to the dowel pin tolerance specification."
+      },
+      "box_6": {
+        "type": "decision",
+        "text": "Pin diameter within H7/p6 tolerance?"
+      },
+      "box_7": {
+        "type": "process",
+        "text": "Replace out of tolerance dowel pins"
+      },
+      "box_8": {
+        "type": "decision",
+        "text": "Reverify pin diameter after replacement"
+      },
+      "box_9": {
+        "type": "terminator",
+        "text": "End, Escalate: bore reaming required, non standard pin diameter"
+      },
+      "box_10": {
+        "type": "process",
+        "text": "Measure the bore diameter at three axial positions and two perpendicular orientations at each position using a calibrated bore gauge or an air gauge. Record the maximum and minimum readings to calculate roundness error. Inspect the bore surface using a bore scope or a surface roughness probe for fretting, corrosion, or scoring that could cause uneven bearing load."
+      },
+      "box_11": {
+        "type": "decision",
+        "text": "Bore condition acceptable, no fretting or elongation?"
+      },
+      "box_12": {
+        "type": "process",
+        "text": "Complete the following steps: 1. Select the correct reamer size for the target bore diameter. 2. Apply cutting fluid and ream the bore at the specified cutting speed. 3. Clean the bore and measure the diameter at three axial positions."
+      },
+      "box_13": {
+        "type": "process",
+        "text": "Insert the pin into the bore by hand under no lubrication and record whether entry is possible by hand force alone. Connect a push pull gauge to the pin and measure the force required to extract the pin axially at a steady 5 millimetres per second. Compare both insertion and extraction forces against the minimum and maximum fit force range in the assembly specification."
+      },
+      "box_14": {
+        "type": "decision",
+        "text": "Insertion and extraction force within specified range?"
+      },
+      "box_15": {
+        "type": "process",
+        "text": "Lightly lap pin or bore to achieve correct fit"
+      },
+      "box_16": {
+        "type": "process",
+        "text": "Mount the pin in the bore assembly with its full engagement length engaged. Clamp a dial test indicator against the pin tip and apply a lateral force perpendicular to the pin axis in two orthogonal directions. Record the deflection under each direction of loading and calculate the angular deviation at the pin tip. Compare the result against the perpendicularity tolerance in the assembly drawing."
+      },
+      "box_17": {
+        "type": "document",
+        "text": "Refer to the pin perpendicularity tolerance."
+      },
+      "box_18": {
+        "type": "decision",
+        "text": "Pin perpendicularity within 0.01 mm per 100 mm?"
+      },
+      "box_19": {
+        "type": "terminator",
+        "text": "End, Escalate: fixture plate perpendicularity error, coordinate measuring machine check required"
+      },
+      "box_20": {
+        "type": "process",
+        "text": "Remove the pin and examine the reference seating surface at the pin entry for burrs, raised material, or coolant deposits using a flat scraper and a magnifier. Use a fine flat file to remove any raised burrs, working parallel to the surface and removing only the minimum necessary material. Clean the surface with an isopropyl alcohol wipe before reinserting the pin for measurement."
+      },
+      "box_21": {
+        "type": "decision",
+        "text": "All pins seat flush to reference surface?"
+      },
+      "box_22": {
+        "type": "process",
+        "text": "Reseat pins and apply correct installation torque"
+      },
+      "box_23": {
+        "type": "process",
+        "text": "Functional fit trial, mount reference workpiece"
+      },
+      "box_24": {
+        "type": "process",
+        "text": "Log measurements and update fixture service record"
+      },
+      "box_25": {
+        "type": "terminator",
+        "text": "End, Procedure complete"
+      },
+      "box_26": {
+        "type": "process",
+        "text": "Secondary pin fitting attempt: remeasure the bore diameter at three axial positions to confirm whether the bore itself is within specification. Select a pin from the next size band in the pin set to achieve a closer fit. Clean the bore thoroughly with an isopropyl alcohol wipe and allow to dry fully before fitting the new pin and returning to the diameter measurement step."
+      },
+      "box_27": {
+        "type": "document",
+        "text": "Fixture datum and locating diagnostic (GRAPH 44)"
+      }
+    },
+    "edges": [
+      {
+        "source": "box_0",
+        "target": "box_1",
+        "label": null
+      },
+      {
+        "source": "box_1",
+        "target": "box_2",
+        "label": null
+      },
+      {
+        "source": "box_2",
+        "target": "box_3",
+        "label": "Yes"
+      },
+      {
+        "source": "box_2",
+        "target": "box_6",
+        "label": "No"
+      },
+      {
+        "source": "box_4",
+        "target": "box_6",
+        "label": null
+      },
+      {
+        "source": "box_5",
+        "target": "box_6",
+        "label": null
+      },
+      {
+        "source": "box_6",
+        "target": "box_7",
+        "label": "No"
+      },
+      {
+        "source": "box_7",
+        "target": "box_8",
+        "label": null
+      },
+      {
+        "source": "box_8",
+        "target": "box_11",
+        "label": "OK"
+      },
+      {
+        "source": "box_6",
+        "target": "box_11",
+        "label": "Yes"
+      },
+      {
+        "source": "box_10",
+        "target": "box_11",
+        "label": null
+      },
+      {
+        "source": "box_11",
+        "target": "box_12",
+        "label": "No"
+      },
+      {
+        "source": "box_12",
+        "target": "box_13",
+        "label": ""
+      },
+      {
+        "source": "box_11",
+        "target": "box_14",
+        "label": "Yes"
+      },
+      {
+        "source": "box_13",
+        "target": "box_14",
+        "label": null
+      },
+      {
+        "source": "box_14",
+        "target": "box_15",
+        "label": "No"
+      },
+      {
+        "source": "box_15",
+        "target": "box_16",
+        "label": ""
+      },
+      {
+        "source": "box_14",
+        "target": "box_18",
+        "label": "Yes"
+      },
+      {
+        "source": "box_16",
+        "target": "box_18",
+        "label": null
+      },
+      {
+        "source": "box_17",
+        "target": "box_18",
+        "label": null
+      },
+      {
+        "source": "box_18",
+        "target": "box_27",
+        "label": "No"
+      },
+      {
+        "source": "box_18",
+        "target": "box_21",
+        "label": "Yes"
+      },
+      {
+        "source": "box_20",
+        "target": "box_21",
+        "label": null
+      },
+      {
+        "source": "box_21",
+        "target": "box_22",
+        "label": "No"
+      },
+      {
+        "source": "box_22",
+        "target": "box_23",
+        "label": null
+      },
+      {
+        "source": "box_21",
+        "target": "box_23",
+        "label": "Yes"
+      },
+      {
+        "source": "box_23",
+        "target": "box_24",
+        "label": null
+      },
+      {
+        "source": "box_24",
+        "target": "box_25",
+        "label": null
+      },
+      {
+        "source": "box_8",
+        "target": "box_26",
+        "label": "Still out of spec"
+      },
+      {
+        "source": "box_26",
+        "target": "box_8",
+        "label": null
+      },
+      {
+        "source": "box_8",
+        "target": "box_9",
+        "label": "Unresolvable after second attempt"
+      }
+    ]
+  }
+}

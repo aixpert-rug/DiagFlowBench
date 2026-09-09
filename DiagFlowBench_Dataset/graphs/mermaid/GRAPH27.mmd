@@ -1,0 +1,82 @@
+flowchart TD
+    box_0(["Start"])
+    box_1["Record the read failure rate (number of failed reads<br/>per hundred parts), the error type shown on the<br/>operator control interface, and the batch number of<br/>the affected parts."]
+    box_2{"Is the read failure occurring on all parts or only<br/>on a fraction of the batch?"}
+    box_3["Complete the following checks: 1. Inspect five<br/>failed parts for inconsistent marking contrast. 2.<br/>Compare with a successfully read part from the same<br/>batch."]
+    box_4["Complete the following checks: 1. Check the read<br/>history log on the code reader diagnostic display.<br/>2. Verify the failure rate is consistent across all<br/>positions on the part. 3. Check for a correlation<br/>between failures and a specific part feature."]
+    box_5{"Is the marking contrast on the affected parts within<br/>the minimum contrast specification?"}
+    box_6["Measure the optical contrast of the code marking on<br/>three failed parts using the contrast measurement<br/>tool and compare against the minimum contrast<br/>threshold."]
+    box_7["Adjust the laser power or marking speed at the<br/>marking station to restore contrast to within<br/>specification. remark the affected parts if<br/>feasible."]
+    box_8{"Is the code reader lens clean and free of<br/>contamination?"}
+    box_9["Inspect the code reader lens surface for dust, oil,<br/>or condensation. Verify that the reader housing<br/>cover is intact and that no stray light enters the<br/>reading field."]
+    box_10["Clean the code reader lens with an approved optical<br/>cleaning cloth and lens cleaner. retest the read<br/>rate with five known good parts."]
+    box_11{"Is the illumination intensity at the reading<br/>position within specification?"}
+    box_12["Complete the following checks: 1. Read the<br/>illumination intensity from the code reader<br/>diagnostic display. 2. Compare against the minimum<br/>specified illumination level. 3. Check the<br/>illumination module for contamination or connector<br/>issues."]
+    box_13["Replace the illuminator indicator light module if<br/>the output is below specification. retest the read<br/>rate after replacement."]
+    box_14{"Is the code geometry (module size, quiet zone,<br/>aspect ratio) within the specification for this code<br/>type?"}
+    box_15["Use the code reader diagnostic software to inspect<br/>the decoded code geometry parameters. Compare module<br/>size and quiet zone width against the code<br/>specification for this product."]
+    box_16["Remark the affected parts at the correct code<br/>geometry specification, or reject the batch if the<br/>marking station cannot produce the correct geometry."]
+    box_17{"Has the read success rate returned to within the<br/>acceptable threshold after corrections?"}
+    box_18["Escalate to the maintenance team: code read failures<br/>persist after all standard corrective actions;<br/>inspect the code reader mounting, focus, and trigger<br/>timing."]
+    box_19["Record all corrective actions and the final read<br/>success rate in the quality log. Notify quality<br/>assurance team of the affected batch."]
+    box_20(["End, resume production."])
+    box_21{"Is the code read failure rate so high that part<br/>traceability cannot be maintained, requiring an<br/>immediate production stop and traceability audit?"}
+    box_22(["End, production stopped immediately: traceability<br/>compromised, quarantine all unverified parts from<br/>current shift and escalate to quality assurance<br/>engineer"])
+
+    box_1 --> box_3
+    box_3 --> box_2
+    box_2 -->|"No"| box_4
+    box_2 -->|"Yes"| box_5
+    box_4 --> box_6
+    box_6 --> box_5
+    box_5 -->|"No"| box_7
+    box_5 -->|"Yes"| box_8
+    box_7 --> box_9
+    box_9 --> box_8
+    box_8 -->|"No"| box_10
+    box_8 -->|"Yes"| box_11
+    box_10 --> box_12
+    box_12 --> box_11
+    box_11 -->|"No"| box_13
+    box_11 -->|"Yes"| box_14
+    box_13 --> box_15
+    box_15 --> box_14
+    box_14 -->|"No"| box_16
+    box_14 -->|"Yes"| box_17
+    box_16 --> box_17
+    box_17 -->|"No"| box_18
+    box_17 -->|"Yes"| box_19
+    box_18 --> box_19
+    box_19 --> box_20
+    box_0 --> box_21
+    box_21 -->|"Critical, immediate stop required"| box_22
+    box_21 -->|"Standard fault, continue diagnosis"| box_1
+
+    class box_0 terminator
+    class box_1 process
+    class box_2 decision
+    class box_3 process
+    class box_4 process
+    class box_5 decision
+    class box_6 process
+    class box_7 process
+    class box_8 decision
+    class box_9 process
+    class box_10 process
+    class box_11 decision
+    class box_12 process
+    class box_13 process
+    class box_14 decision
+    class box_15 process
+    class box_16 process
+    class box_17 decision
+    class box_18 process
+    class box_19 process
+    class box_20 terminator
+    class box_21 decision
+    class box_22 terminator
+
+    classDef terminator fill:#2d4a6e,stroke:#1a3050,color:#ffffff,font-weight:bold
+    classDef process    fill:#f0f4ff,stroke:#4a6fa5,color:#1a1a2e
+    classDef decision   fill:#fff8e6,stroke:#c8922a,color:#1a1a2e
+    classDef document   fill:#f0fff4,stroke:#3a8a4a,color:#1a1a2e

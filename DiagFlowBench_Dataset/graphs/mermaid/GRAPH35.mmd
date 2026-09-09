@@ -1,0 +1,97 @@
+flowchart TD
+    box_0(["Start"])
+    box_1["Complete the following checks: 1. Inspect the<br/>encoder scale for scratches, oil, or coolant<br/>deposits. 2. Check the read head mounting for<br/>looseness or impact damage. 3. Inspect the cable and<br/>connector for chafing or corrosion."]
+    box_2{"Physical damage to encoder strip or read head?"}
+    box_3(["End, Escalate: physical damage, replace encoder<br/>assembly"])
+    box_4["Connect a digital oscilloscope to the encoder A and<br/>B channel outputs at the drive amplifier input<br/>terminals. Command slow axis movement and verify<br/>that both channels produce clean square waves with<br/>90 degree phase separation and no missing pulses.<br/>Record the peak to peak voltage and compare against<br/>the encoder data sheet specification."]
+    box_5[/"Refer to the encoder signal specification."/]
+    box_6{"Signal quality: clean waveform, no dropouts?"}
+    box_7["Clean encoder strip with lint free cloth and<br/>isopropyl alcohol"]
+    box_8{"Reverify signal quality after strip cleaning"}
+    box_9(["End, Replace encoder strip: signal quality<br/>unrecoverable"])
+    box_10["Command a homing cycle from the machine controller<br/>and observe the axis motion from the controller<br/>position display. The axis should decelerate<br/>smoothly on the home switch trigger and come to rest<br/>at the reference mark position. Confirm the<br/>displayed home offset matches the value stored in<br/>the machine parameter table."]
+    box_11{"Reference mark found during homing cycle?"}
+    box_12["Reteach home offset, adjust reference mark position"]
+    box_13["Command the axis to move to each of ten programmed<br/>reference positions distributed across the full<br/>travel, pausing two seconds at each point. At each<br/>position, record the encoder feedback value and the<br/>commanded position from the controller display.<br/>Calculate the maximum positioning error across the<br/>grid and compare against the axis accuracy<br/>specification."]
+    box_14[/"Refer to the position accuracy specification."/]
+    box_15{"Position accuracy within tolerance at all test<br/>points?"}
+    box_16["Adjust read head gap to encoder strip per<br/>specification"]
+    box_17{"Reverify position accuracy after read head<br/>adjustment"}
+    box_18(["End, Escalate: encoder calibration by metrology<br/>required"])
+    box_19[/"Refer to the thermal compensation table."/]
+    box_20{"Thermal compensation parameter active and correct?"}
+    box_21["Complete the following checks: 1. Read the thermal<br/>compensation coefficient from the controller<br/>parameter screen. 2. Compare the stored coefficient<br/>against the reference value for this machine. 3.<br/>Check whether the compensation model was modified<br/>since the last calibration."]
+    box_22["Trace the encoder cable from the read head to the<br/>drive amplifier, checking for sharp bends at conduit<br/>entries, contact with rotating parts, or unsupported<br/>lengths that can flex during high speed movement.<br/>Confirm that strain relief clamps are tight and<br/>positioned within 100 millimetres of each connector.<br/>Gently flex the cable at any suspected damage point<br/>while monitoring the encoder signal for glitches."]
+    box_23{"Cable condition and routing acceptable?"}
+    box_24["Reroute cable and fit strain relief clamps"]
+    box_25{"Final 5 point position verification cycle passed?"}
+    box_26["Log encoder service data and update maintenance<br/>record"]
+    box_27(["End, Procedure complete"])
+
+    box_0 --> box_1
+    box_1 --> box_2
+    box_2 -->|"Yes"| box_3
+    box_2 -->|"No"| box_6
+    box_4 --> box_6
+    box_5 --> box_6
+    box_6 -->|"No"| box_7
+    box_7 --> box_8
+    box_8 -->|"Still poor"| box_9
+    box_8 -->|"OK"| box_11
+    box_6 -->|"Yes"| box_11
+    box_10 --> box_11
+    box_11 -->|"No"| box_12
+    box_12 --> box_13
+    box_11 -->|"Yes"| box_15
+    box_13 --> box_15
+    box_14 --> box_15
+    box_15 -->|"No"| box_16
+    box_16 --> box_17
+    box_17 -->|"Still failing"| box_18
+    box_17 -->|"OK"| box_20
+    box_15 -->|"Yes"| box_20
+    box_19 --> box_20
+    box_20 -->|"No"| box_21
+    box_21 --> box_22
+    box_20 -->|"Yes"| box_23
+    box_22 --> box_23
+    box_23 -->|"No"| box_24
+    box_24 --> box_25
+    box_23 -->|"Yes"| box_25
+    box_25 -->|"Yes"| box_26
+    box_25 -->|"No"| box_18
+    box_26 --> box_27
+
+    class box_0 terminator
+    class box_1 process
+    class box_2 decision
+    class box_3 terminator
+    class box_4 process
+    class box_5 document
+    class box_6 decision
+    class box_7 process
+    class box_8 decision
+    class box_9 terminator
+    class box_10 process
+    class box_11 decision
+    class box_12 process
+    class box_13 process
+    class box_14 document
+    class box_15 decision
+    class box_16 process
+    class box_17 decision
+    class box_18 terminator
+    class box_19 document
+    class box_20 decision
+    class box_21 process
+    class box_22 process
+    class box_23 decision
+    class box_24 process
+    class box_25 decision
+    class box_26 process
+    class box_27 terminator
+
+    classDef terminator fill:#2d4a6e,stroke:#1a3050,color:#ffffff,font-weight:bold
+    classDef process    fill:#f0f4ff,stroke:#4a6fa5,color:#1a1a2e
+    classDef decision   fill:#fff8e6,stroke:#c8922a,color:#1a1a2e
+    classDef document   fill:#f0fff4,stroke:#3a8a4a,color:#1a1a2e

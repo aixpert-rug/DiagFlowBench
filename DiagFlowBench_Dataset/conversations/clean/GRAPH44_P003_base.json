@@ -1,0 +1,1053 @@
+{
+  "conversation_id": "GRAPH44_P003_base",
+  "graph_id": "GRAPH44",
+  "path_id": "GRAPH44_P003",
+  "regime": "clean",
+  "variant": "base",
+  "robustness_axis": null,
+  "turns": [
+    {
+      "node_id": "box_0",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Starting fixture diagnostic procedure.",
+      "edge_label_to_next": null,
+      "turn_index": 0,
+      "ground_truth": {
+        "node_id": "box_0",
+        "node_type": "terminator",
+        "node_text": "Start"
+      }
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Please complete the initial visual inspection. First, inspect the fixture base plate for any cracks or surface distortion. Next, check all locating surfaces, dowel holes, and mounting pad faces for damage. Finally, inspect each clamp body for deformation or cracked pivot pins.",
+      "edge_label_to_next": null,
+      "turn_index": 1,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Inspect the fixture base plate for cracks or surface distortion. 2. Check locating surfaces, dowel holes, and mounting pad faces for damage. 3. Inspect each clamp body for deformation or cracked pivot pins."
+      }
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Visual inspection complete. All base plate surfaces appear intact, locating surfaces are undamaged, and clamp bodies show no signs of deformation.",
+      "edge_label_to_next": null,
+      "turn_index": 2,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Inspect the fixture base plate for cracks or surface distortion. 2. Check locating surfaces, dowel holes, and mounting pad faces for damage. 3. Inspect each clamp body for deformation or cracked pivot pins."
+      }
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Base plate cracks, distortion or damaged mounting surfaces?",
+      "edge_label_to_next": null,
+      "turn_index": 3,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Base plate cracks, distortion or damaged mounting surfaces?"
+      }
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "No issues detected. The base plate and mounting surfaces are in good condition with no visible cracks or distortion.",
+      "edge_label_to_next": "No",
+      "turn_index": 4,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Base plate cracks, distortion or damaged mounting surfaces?"
+      }
+    },
+    {
+      "node_id": "box_7",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Datum A surface within flatness tolerance of 0.02 mm?",
+      "edge_label_to_next": null,
+      "turn_index": 5,
+      "ground_truth": {
+        "node_id": "box_7",
+        "node_type": "decision",
+        "node_text": "Datum A surface within flatness tolerance of 0.02 mm?"
+      }
+    },
+    {
+      "node_id": "box_7",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, the datum A surface flatness is within specification at 0.015 millimeters variation.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 6,
+      "ground_truth": {
+        "node_id": "box_7",
+        "node_type": "decision",
+        "node_text": "Datum A surface within flatness tolerance of 0.02 mm?"
+      }
+    },
+    {
+      "node_id": "box_11",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Primary locating pins within plus or minus 0.01 mm of nominal position?",
+      "edge_label_to_next": null,
+      "turn_index": 7,
+      "ground_truth": {
+        "node_id": "box_11",
+        "node_type": "decision",
+        "node_text": "Primary locating pins within ±0.01 mm of nominal position?"
+      }
+    },
+    {
+      "node_id": "box_11",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "The primary locating pins are reading 0.018 millimeters off nominal. That's outside the tolerance band.",
+      "edge_label_to_next": "No",
+      "turn_index": 8,
+      "ground_truth": {
+        "node_id": "box_11",
+        "node_type": "decision",
+        "node_text": "Primary locating pins within ±0.01 mm of nominal position?"
+      }
+    },
+    {
+      "node_id": "box_12",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Adjust the pin bore plugs and reream to correct the datum position.",
+      "edge_label_to_next": null,
+      "turn_index": 9,
+      "ground_truth": {
+        "node_id": "box_12",
+        "node_type": "process",
+        "node_text": "Adjust pin bore plugs and reream to correct datum"
+      }
+    },
+    {
+      "node_id": "box_12",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Bore adjustment complete. I've adjusted the plugs and reamed the bore to specification.",
+      "edge_label_to_next": null,
+      "turn_index": 10,
+      "ground_truth": {
+        "node_id": "box_12",
+        "node_type": "process",
+        "node_text": "Adjust pin bore plugs and reream to correct datum"
+      }
+    },
+    {
+      "node_id": "box_13",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Reverify primary pin positions after bore adjustment.",
+      "edge_label_to_next": null,
+      "turn_index": 11,
+      "ground_truth": {
+        "node_id": "box_13",
+        "node_type": "decision",
+        "node_text": "Reverify primary pin positions after bore adjustment"
+      }
+    },
+    {
+      "node_id": "box_13",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "The pins are still reading 0.012 millimeters out. We're still out of specification after the bore adjustment.",
+      "edge_label_to_next": "Still out of spec",
+      "turn_index": 12,
+      "ground_truth": {
+        "node_id": "box_13",
+        "node_type": "decision",
+        "node_text": "Reverify primary pin positions after bore adjustment"
+      }
+    },
+    {
+      "node_id": "box_48",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Perform secondary fixture datum correction. Slacken the primary locating pin retaining screws to allow fine positional adjustment. Use a precision adjusting screw to shift the pin toward nominal by half the measured error, then retorque the screws in sequence and allow two minutes settling time under full clamping load.",
+      "edge_label_to_next": null,
+      "turn_index": 13,
+      "ground_truth": {
+        "node_id": "box_48",
+        "node_type": "process",
+        "node_text": "Secondary fixture datum correction: slacken the primary locating pin retaining screws to allow fine positional adjustment. Use a precision adjusting screw to shift the pin toward the nominal position by half the measured error. Retorque the retaining screws in the prescribed sequence and allow the fixture to settle for 2 minutes under full clamping load before returning to the primary locating pin measurement step."
+      }
+    },
+    {
+      "node_id": "box_48",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Secondary correction applied. I've adjusted the pin position and retorqued the retaining screws. The fixture is now settling under load.",
+      "edge_label_to_next": null,
+      "turn_index": 14,
+      "ground_truth": {
+        "node_id": "box_48",
+        "node_type": "process",
+        "node_text": "Secondary fixture datum correction: slacken the primary locating pin retaining screws to allow fine positional adjustment. Use a precision adjusting screw to shift the pin toward the nominal position by half the measured error. Retorque the retaining screws in the prescribed sequence and allow the fixture to settle for 2 minutes under full clamping load before returning to the primary locating pin measurement step."
+      }
+    },
+    {
+      "node_id": "box_13",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Reverify primary pin positions after bore adjustment.",
+      "edge_label_to_next": null,
+      "turn_index": 15,
+      "ground_truth": {
+        "node_id": "box_13",
+        "node_type": "decision",
+        "node_text": "Reverify primary pin positions after bore adjustment"
+      }
+    },
+    {
+      "node_id": "box_13",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Still reading 0.011 millimeters deviation. The pins remain out of specification.",
+      "edge_label_to_next": "Still out of spec",
+      "turn_index": 16,
+      "ground_truth": {
+        "node_id": "box_13",
+        "node_type": "decision",
+        "node_text": "Reverify primary pin positions after bore adjustment"
+      }
+    },
+    {
+      "node_id": "box_48",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Perform secondary fixture datum correction. Slacken the primary locating pin retaining screws to allow fine positional adjustment. Use a precision adjusting screw to shift the pin toward nominal by half the measured error, then retorque the screws in sequence and allow two minutes settling time under full clamping load.",
+      "edge_label_to_next": null,
+      "turn_index": 17,
+      "ground_truth": {
+        "node_id": "box_48",
+        "node_type": "process",
+        "node_text": "Secondary fixture datum correction: slacken the primary locating pin retaining screws to allow fine positional adjustment. Use a precision adjusting screw to shift the pin toward the nominal position by half the measured error. Retorque the retaining screws in the prescribed sequence and allow the fixture to settle for 2 minutes under full clamping load before returning to the primary locating pin measurement step."
+      }
+    },
+    {
+      "node_id": "box_48",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Second fine adjustment complete. Retaining screws are torqued and the fixture has settled.",
+      "edge_label_to_next": null,
+      "turn_index": 18,
+      "ground_truth": {
+        "node_id": "box_48",
+        "node_type": "process",
+        "node_text": "Secondary fixture datum correction: slacken the primary locating pin retaining screws to allow fine positional adjustment. Use a precision adjusting screw to shift the pin toward the nominal position by half the measured error. Retorque the retaining screws in the prescribed sequence and allow the fixture to settle for 2 minutes under full clamping load before returning to the primary locating pin measurement step."
+      }
+    },
+    {
+      "node_id": "box_13",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Reverify primary pin positions after bore adjustment.",
+      "edge_label_to_next": null,
+      "turn_index": 19,
+      "ground_truth": {
+        "node_id": "box_13",
+        "node_type": "decision",
+        "node_text": "Reverify primary pin positions after bore adjustment"
+      }
+    },
+    {
+      "node_id": "box_13",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Primary pins are now reading within tolerance at 0.008 millimeters. Position is acceptable.",
+      "edge_label_to_next": "OK",
+      "turn_index": 20,
+      "ground_truth": {
+        "node_id": "box_13",
+        "node_type": "decision",
+        "node_text": "Reverify primary pin positions after bore adjustment"
+      }
+    },
+    {
+      "node_id": "box_16",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Secondary locating pins within plus or minus 0.015 mm of nominal?",
+      "edge_label_to_next": null,
+      "turn_index": 21,
+      "ground_truth": {
+        "node_id": "box_16",
+        "node_type": "decision",
+        "node_text": "Secondary locating pins within ±0.015 mm of nominal?"
+      }
+    },
+    {
+      "node_id": "box_16",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, the secondary pins are measuring 0.009 millimeters deviation, which is well within the tolerance.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 22,
+      "ground_truth": {
+        "node_id": "box_16",
+        "node_type": "decision",
+        "node_text": "Secondary locating pins within ±0.015 mm of nominal?"
+      }
+    },
+    {
+      "node_id": "box_20",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "All Z height reference pads within plus or minus 0.01 mm of each other?",
+      "edge_label_to_next": null,
+      "turn_index": 23,
+      "ground_truth": {
+        "node_id": "box_20",
+        "node_type": "decision",
+        "node_text": "All Z height reference pads within ±0.01 mm of each other?"
+      }
+    },
+    {
+      "node_id": "box_20",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Confirmed. All four reference pads are coplanar within 0.007 millimeters of each other.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 24,
+      "ground_truth": {
+        "node_id": "box_20",
+        "node_type": "decision",
+        "node_text": "All Z height reference pads within ±0.01 mm of each other?"
+      }
+    },
+    {
+      "node_id": "box_24",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Angular datum within 0.005 mm per 100 mm tolerance?",
+      "edge_label_to_next": null,
+      "turn_index": 25,
+      "ground_truth": {
+        "node_id": "box_24",
+        "node_type": "decision",
+        "node_text": "Angular datum within 0.005 mm per 100 mm tolerance?"
+      }
+    },
+    {
+      "node_id": "box_24",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "The angular datum is reading 0.003 millimeters per 100 millimeters. That's within the specified tolerance.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 26,
+      "ground_truth": {
+        "node_id": "box_24",
+        "node_type": "decision",
+        "node_text": "Angular datum within 0.005 mm per 100 mm tolerance?"
+      }
+    },
+    {
+      "node_id": "box_28",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "All clamping forces within plus or minus 8% of nominal?",
+      "edge_label_to_next": null,
+      "turn_index": 27,
+      "ground_truth": {
+        "node_id": "box_28",
+        "node_type": "decision",
+        "node_text": "All clamping forces within ±8% of nominal?"
+      }
+    },
+    {
+      "node_id": "box_28",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "I'm seeing clamp station three reading 12% below nominal force. The other stations are within tolerance, but this one is out of range.",
+      "edge_label_to_next": "No",
+      "turn_index": 28,
+      "ground_truth": {
+        "node_id": "box_28",
+        "node_type": "decision",
+        "node_text": "All clamping forces within ±8% of nominal?"
+      }
+    },
+    {
+      "node_id": "box_29",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Replace the return springs and adjust the clamp travel stops to restore proper clamping force.",
+      "edge_label_to_next": null,
+      "turn_index": 29,
+      "ground_truth": {
+        "node_id": "box_29",
+        "node_type": "process",
+        "node_text": "Replace return springs and adjust clamp travel stops"
+      }
+    },
+    {
+      "node_id": "box_29",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Return springs replaced and travel stops adjusted on the affected clamp station.",
+      "edge_label_to_next": null,
+      "turn_index": 30,
+      "ground_truth": {
+        "node_id": "box_29",
+        "node_type": "process",
+        "node_text": "Replace return springs and adjust clamp travel stops"
+      }
+    },
+    {
+      "node_id": "box_30",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Reverify clamp forces after spring replacement.",
+      "edge_label_to_next": null,
+      "turn_index": 31,
+      "ground_truth": {
+        "node_id": "box_30",
+        "node_type": "decision",
+        "node_text": "Reverify clamp forces after spring replacement"
+      }
+    },
+    {
+      "node_id": "box_30",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "All clamp forces are now within specification. Station three is reading 3% below nominal, which is acceptable.",
+      "edge_label_to_next": "OK",
+      "turn_index": 32,
+      "ground_truth": {
+        "node_id": "box_30",
+        "node_type": "decision",
+        "node_text": "Reverify clamp forces after spring replacement"
+      }
+    },
+    {
+      "node_id": "box_33",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Thermal expansion datum shift within model prediction plus or minus 0.01 mm?",
+      "edge_label_to_next": null,
+      "turn_index": 33,
+      "ground_truth": {
+        "node_id": "box_33",
+        "node_type": "decision",
+        "node_text": "Thermal expansion datum shift within model prediction ±0.01 mm?"
+      }
+    },
+    {
+      "node_id": "box_33",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "The thermal datum shift is measuring 0.006 millimeters, which matches the model prediction within tolerance.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 34,
+      "ground_truth": {
+        "node_id": "box_33",
+        "node_type": "decision",
+        "node_text": "Thermal expansion datum shift within model prediction ±0.01 mm?"
+      }
+    },
+    {
+      "node_id": "box_37",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Guide rail straightness within 0.01 mm per 300 mm?",
+      "edge_label_to_next": null,
+      "turn_index": 35,
+      "ground_truth": {
+        "node_id": "box_37",
+        "node_type": "decision",
+        "node_text": "Guide rail straightness within 0.01 mm per 300 mm?"
+      }
+    },
+    {
+      "node_id": "box_37",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Guide rails are straight. Maximum deviation measured at 0.008 millimeters over 300 millimeters, well within spec.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 36,
+      "ground_truth": {
+        "node_id": "box_37",
+        "node_type": "decision",
+        "node_text": "Guide rail straightness within 0.01 mm per 300 mm?"
+      }
+    },
+    {
+      "node_id": "box_41",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "All lubrication points serviced per schedule?",
+      "edge_label_to_next": null,
+      "turn_index": 37,
+      "ground_truth": {
+        "node_id": "box_41",
+        "node_type": "decision",
+        "node_text": "All lubrication points serviced per schedule?"
+      }
+    },
+    {
+      "node_id": "box_41",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, all lubrication points have been serviced according to the schedule. Grease applied to all bearing blocks and pivot pins.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 38,
+      "ground_truth": {
+        "node_id": "box_41",
+        "node_type": "decision",
+        "node_text": "All lubrication points serviced per schedule?"
+      }
+    },
+    {
+      "node_id": "box_44",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Reference part positioned within plus or minus 0.02 mm of nominal at all datums?",
+      "edge_label_to_next": null,
+      "turn_index": 39,
+      "ground_truth": {
+        "node_id": "box_44",
+        "node_type": "decision",
+        "node_text": "Reference part positioned within ±0.02 mm of nominal at all datums?"
+      }
+    },
+    {
+      "node_id": "box_44",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "The reference part is positioned correctly. All datum measurements are within 0.015 millimeters of nominal values.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 40,
+      "ground_truth": {
+        "node_id": "box_44",
+        "node_type": "decision",
+        "node_text": "Reference part positioned within ±0.02 mm of nominal at all datums?"
+      }
+    },
+    {
+      "node_id": "box_46",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Log the coordinate measuring machine data, clamp forces, and all service details into the maintenance record system.",
+      "edge_label_to_next": null,
+      "turn_index": 41,
+      "ground_truth": {
+        "node_id": "box_46",
+        "node_type": "process",
+        "node_text": "Log coordinate measuring machine data, clamp forces and service details"
+      }
+    },
+    {
+      "node_id": "box_46",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "All measurement data and service records have been logged in the system.",
+      "edge_label_to_next": null,
+      "turn_index": 42,
+      "ground_truth": {
+        "node_id": "box_46",
+        "node_type": "process",
+        "node_text": "Log coordinate measuring machine data, clamp forces and service details"
+      }
+    },
+    {
+      "node_id": "box_47",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Fixture diagnostic procedure complete. The fixture has passed all checks and is cleared for production use.",
+      "edge_label_to_next": null,
+      "turn_index": 43,
+      "ground_truth": {
+        "node_id": "box_47",
+        "node_type": "terminator",
+        "node_text": "End, Procedure complete"
+      }
+    },
+    {
+      "node_id": "box_47",
+      "node_type": "terminator",
+      "speaker": "operator",
+      "utterance": "Understood, procedure complete.",
+      "edge_label_to_next": null,
+      "turn_index": 44,
+      "ground_truth": {
+        "node_id": "box_47",
+        "node_type": "terminator",
+        "node_text": "End, Procedure complete"
+      }
+    }
+  ],
+  "metadata": {
+    "depth": 23,
+    "num_decisions": 15,
+    "num_processes": 6,
+    "num_documents": 0,
+    "terminator_type": "procedure_complete",
+    "terminator_text": "End, Procedure complete",
+    "true_terminator": true,
+    "node_sequence": [
+      "box_0",
+      "box_1",
+      "box_2",
+      "box_7",
+      "box_11",
+      "box_12",
+      "box_13",
+      "box_48",
+      "box_13",
+      "box_48",
+      "box_13",
+      "box_16",
+      "box_20",
+      "box_24",
+      "box_28",
+      "box_29",
+      "box_30",
+      "box_33",
+      "box_37",
+      "box_41",
+      "box_44",
+      "box_46",
+      "box_47"
+    ],
+    "edge_labels": [
+      null,
+      null,
+      null,
+      "No",
+      "Yes",
+      "No",
+      null,
+      "Still out of spec",
+      null,
+      "Still out of spec",
+      null,
+      "OK",
+      "Yes",
+      "Yes",
+      "Yes",
+      "No",
+      null,
+      "OK",
+      "Yes",
+      "Yes",
+      "Yes",
+      "Yes",
+      null
+    ],
+    "decision_points": [
+      {
+        "node": "box_2",
+        "label": "No",
+        "question": "Base plate cracks, distortion or damaged mounting surfaces?"
+      },
+      {
+        "node": "box_7",
+        "label": "Yes",
+        "question": "Datum A surface within flatness tolerance of 0.02 mm?"
+      },
+      {
+        "node": "box_11",
+        "label": "No",
+        "question": "Primary locating pins within ±0.01 mm of nominal position?"
+      },
+      {
+        "node": "box_13",
+        "label": "Still out of spec",
+        "question": "Reverify primary pin positions after bore adjustment"
+      },
+      {
+        "node": "box_13",
+        "label": "Still out of spec",
+        "question": "Reverify primary pin positions after bore adjustment"
+      },
+      {
+        "node": "box_13",
+        "label": "OK",
+        "question": "Reverify primary pin positions after bore adjustment"
+      },
+      {
+        "node": "box_16",
+        "label": "Yes",
+        "question": "Secondary locating pins within ±0.015 mm of nominal?"
+      },
+      {
+        "node": "box_20",
+        "label": "Yes",
+        "question": "All Z height reference pads within ±0.01 mm of each other?"
+      },
+      {
+        "node": "box_24",
+        "label": "Yes",
+        "question": "Angular datum within 0.005 mm per 100 mm tolerance?"
+      },
+      {
+        "node": "box_28",
+        "label": "No",
+        "question": "All clamping forces within ±8% of nominal?"
+      },
+      {
+        "node": "box_30",
+        "label": "OK",
+        "question": "Reverify clamp forces after spring replacement"
+      },
+      {
+        "node": "box_33",
+        "label": "Yes",
+        "question": "Thermal expansion datum shift within model prediction ±0.01 mm?"
+      },
+      {
+        "node": "box_37",
+        "label": "Yes",
+        "question": "Guide rail straightness within 0.01 mm per 300 mm?"
+      },
+      {
+        "node": "box_41",
+        "label": "Yes",
+        "question": "All lubrication points serviced per schedule?"
+      },
+      {
+        "node": "box_44",
+        "label": "Yes",
+        "question": "Reference part positioned within ±0.02 mm of nominal at all datums?"
+      }
+    ],
+    "generation_model": "anthropic/claude-sonnet-4-5",
+    "verification": {
+      "verified": true,
+      "issues": [],
+      "corrected_turns": [
+        {
+          "node_id": "box_0",
+          "node_type": "terminator",
+          "speaker": "system",
+          "utterance": "Starting fixture diagnostic procedure.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_1",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Please complete the initial visual inspection. First, inspect the fixture base plate for any cracks or surface distortion. Next, check all locating surfaces, dowel holes, and mounting pad faces for damage. Finally, inspect each clamp body for deformation or cracked pivot pins.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_1",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "Visual inspection complete. All base plate surfaces appear intact, locating surfaces are undamaged, and clamp bodies show no signs of deformation.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_2",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Base plate cracks, distortion or damaged mounting surfaces?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_2",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "No issues detected. The base plate and mounting surfaces are in good condition with no visible cracks or distortion.",
+          "edge_label_to_next": "No"
+        },
+        {
+          "node_id": "box_7",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Datum A surface within flatness tolerance of 0.02 mm?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_7",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Yes, the datum A surface flatness is within specification at 0.015 millimeters variation.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_11",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Primary locating pins within plus or minus 0.01 mm of nominal position?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_11",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "The primary locating pins are reading 0.018 millimeters off nominal. That's outside the tolerance band.",
+          "edge_label_to_next": "No"
+        },
+        {
+          "node_id": "box_12",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Adjust the pin bore plugs and reream to correct the datum position.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_12",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "Bore adjustment complete. I've adjusted the plugs and reamed the bore to specification.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_13",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Reverify primary pin positions after bore adjustment.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_13",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "The pins are still reading 0.012 millimeters out. We're still out of specification after the bore adjustment.",
+          "edge_label_to_next": "Still out of spec"
+        },
+        {
+          "node_id": "box_48",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Perform secondary fixture datum correction. Slacken the primary locating pin retaining screws to allow fine positional adjustment. Use a precision adjusting screw to shift the pin toward nominal by half the measured error, then retorque the screws in sequence and allow two minutes settling time under full clamping load.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_48",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "Secondary correction applied. I've adjusted the pin position and retorqued the retaining screws. The fixture is now settling under load.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_13",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Reverify primary pin positions after bore adjustment.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_13",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Still reading 0.011 millimeters deviation. The pins remain out of specification.",
+          "edge_label_to_next": "Still out of spec"
+        },
+        {
+          "node_id": "box_48",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Perform secondary fixture datum correction. Slacken the primary locating pin retaining screws to allow fine positional adjustment. Use a precision adjusting screw to shift the pin toward nominal by half the measured error, then retorque the screws in sequence and allow two minutes settling time under full clamping load.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_48",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "Second fine adjustment complete. Retaining screws are torqued and the fixture has settled.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_13",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Reverify primary pin positions after bore adjustment.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_13",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Primary pins are now reading within tolerance at 0.008 millimeters. Position is acceptable.",
+          "edge_label_to_next": "OK"
+        },
+        {
+          "node_id": "box_16",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Secondary locating pins within plus or minus 0.015 mm of nominal?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_16",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Yes, the secondary pins are measuring 0.009 millimeters deviation, which is well within the tolerance.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_20",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "All Z height reference pads within plus or minus 0.01 mm of each other?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_20",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Confirmed. All four reference pads are coplanar within 0.007 millimeters of each other.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_24",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Angular datum within 0.005 mm per 100 mm tolerance?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_24",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "The angular datum is reading 0.003 millimeters per 100 millimeters. That's within the specified tolerance.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_28",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "All clamping forces within plus or minus 8% of nominal?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_28",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "I'm seeing clamp station three reading 12% below nominal force. The other stations are within tolerance, but this one is out of range.",
+          "edge_label_to_next": "No"
+        },
+        {
+          "node_id": "box_29",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Replace the return springs and adjust the clamp travel stops to restore proper clamping force.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_29",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "Return springs replaced and travel stops adjusted on the affected clamp station.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_30",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Reverify clamp forces after spring replacement.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_30",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "All clamp forces are now within specification. Station three is reading 3% below nominal, which is acceptable.",
+          "edge_label_to_next": "OK"
+        },
+        {
+          "node_id": "box_33",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Thermal expansion datum shift within model prediction plus or minus 0.01 mm?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_33",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "The thermal datum shift is measuring 0.006 millimeters, which matches the model prediction within tolerance.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_37",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Guide rail straightness within 0.01 mm per 300 mm?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_37",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Guide rails are straight. Maximum deviation measured at 0.008 millimeters over 300 millimeters, well within spec.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_41",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "All lubrication points serviced per schedule?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_41",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Yes, all lubrication points have been serviced according to the schedule. Grease applied to all bearing blocks and pivot pins.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_44",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Reference part positioned within plus or minus 0.02 mm of nominal at all datums?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_44",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "The reference part is positioned correctly. All datum measurements are within 0.015 millimeters of nominal values.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_46",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Log the coordinate measuring machine data, clamp forces, and all service details into the maintenance record system.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_46",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "All measurement data and service records have been logged in the system.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_47",
+          "node_type": "terminator",
+          "speaker": "system",
+          "utterance": "Fixture diagnostic procedure complete. The fixture has passed all checks and is cleared for production use.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_47",
+          "node_type": "terminator",
+          "speaker": "operator",
+          "utterance": "Understood, procedure complete.",
+          "edge_label_to_next": null
+        }
+      ]
+    }
+  }
+}

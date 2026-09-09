@@ -1,0 +1,740 @@
+{
+  "conversation_id": "GRAPH11_P007_noise_perturbation_mixed",
+  "graph_id": "GRAPH11",
+  "path_id": "GRAPH11_P007",
+  "regime": "mixed",
+  "variant": "noise_perturbation",
+  "robustness_axis": "noise_perturbation",
+  "turns": [
+    {
+      "node_id": "box_0",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Starting pressing station diagnostic procedure.",
+      "edge_label_to_next": null,
+      "turn_index": 0,
+      "ground_truth": {
+        "node_id": "box_0",
+        "node_type": "terminator",
+        "node_text": "Start"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Does the input material meet quality specification?",
+      "edge_label_to_next": null,
+      "turn_index": 1,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "decision",
+        "node_text": "Does the input material meet quality specification?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yeah input material meets quality spec",
+      "edge_label_to_next": "Yes",
+      "turn_index": 2,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "decision",
+        "node_text": "Does the input material meet quality specification?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_4",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the indexing table correctly positioned?",
+      "edge_label_to_next": null,
+      "turn_index": 3,
+      "ground_truth": {
+        "node_id": "box_4",
+        "node_type": "decision",
+        "node_text": "Is the indexing table correctly positioned?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_4",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yes indexing table positioned correctly relative to part mounting insrts",
+      "edge_label_to_next": "Yes",
+      "turn_index": 4,
+      "ground_truth": {
+        "node_id": "box_4",
+        "node_type": "decision",
+        "node_text": "Is the indexing table correctly positioned?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_7",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the part correctly placed on the insert?",
+      "edge_label_to_next": null,
+      "turn_index": 5,
+      "ground_truth": {
+        "node_id": "box_7",
+        "node_type": "decision",
+        "node_text": "Is the part correctly placed on the insert?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_7",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yes part properly seated in insert no looseness or tilt",
+      "edge_label_to_next": "Yes",
+      "turn_index": 6,
+      "ground_truth": {
+        "node_id": "box_7",
+        "node_type": "decision",
+        "node_text": "Is the part correctly placed on the insert?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_10",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is part mounting correct?",
+      "edge_label_to_next": null,
+      "turn_index": 7,
+      "ground_truth": {
+        "node_id": "box_10",
+        "node_type": "decision",
+        "node_text": "Is part mounting correct?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_10",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "The mounting looks okay, but I'm seeing hydraulic fluid leaking from the actuator seal that connects to this part.",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "undocumented_malfunction",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_10",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yeah part mounted straght and high enough on fixture",
+      "edge_label_to_next": "Yes",
+      "turn_index": 8,
+      "ground_truth": {
+        "node_id": "box_10",
+        "node_type": "decision",
+        "node_text": "Is part mounting correct?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_13",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the vacuum detection tilted part control functioning correctly?",
+      "edge_label_to_next": null,
+      "turn_index": 9,
+      "ground_truth": {
+        "node_id": "box_13",
+        "node_type": "decision",
+        "node_text": "Is the vacuum detection \"tilted part control\" functioning correctly?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_13",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yes vacuum holding part securely with sufficient suction force",
+      "edge_label_to_next": "Yes",
+      "turn_index": 10,
+      "ground_truth": {
+        "node_id": "box_13",
+        "node_type": "decision",
+        "node_text": "Is the vacuum detection \"tilted part control\" functioning correctly?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_16",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Are the correct end stops mounted?",
+      "edge_label_to_next": null,
+      "turn_index": 11,
+      "ground_truth": {
+        "node_id": "box_16",
+        "node_type": "decision",
+        "node_text": "Are the correct end stops mounted?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_16",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Hey, before I check that, do you know if we're supposed to use the new lockout-tagout procedure for this equipment or is it still under the old safety protocol?",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "unrelated_question",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_16",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yes end stops match config required for this product type",
+      "edge_label_to_next": "Yes",
+      "turn_index": 12,
+      "ground_truth": {
+        "node_id": "box_16",
+        "node_type": "decision",
+        "node_text": "Are the correct end stops mounted?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_19",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Are the linear guides clean and greased?",
+      "edge_label_to_next": null,
+      "turn_index": 13,
+      "ground_truth": {
+        "node_id": "box_19",
+        "node_type": "decision",
+        "node_text": "Are the linear guides clean and greased?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_19",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yeah linear guides clean and lightly greased per manufacturer spec",
+      "edge_label_to_next": "Yes",
+      "turn_index": 14,
+      "ground_truth": {
+        "node_id": "box_19",
+        "node_type": "decision",
+        "node_text": "Are the linear guides clean and greased?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_22",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Are the sensors of the actuators functioning?",
+      "edge_label_to_next": null,
+      "turn_index": 15,
+      "ground_truth": {
+        "node_id": "box_22",
+        "node_type": "decision",
+        "node_text": "Are the sensors of the actuators functioning?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_22",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yes sensors illuminate at end position and controller inputs show no cable breaks",
+      "edge_label_to_next": "Yes",
+      "turn_index": 16,
+      "ground_truth": {
+        "node_id": "box_22",
+        "node_type": "decision",
+        "node_text": "Are the sensors of the actuators functioning?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_25",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Do the pressing heads meet the drawing?",
+      "edge_label_to_next": null,
+      "turn_index": 17,
+      "ground_truth": {
+        "node_id": "box_25",
+        "node_type": "decision",
+        "node_text": "Do the pressing heads meet the drawing?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_25",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yes pressing heads show no excessive wear and tolerances match the drawing",
+      "edge_label_to_next": "Yes",
+      "turn_index": 18,
+      "ground_truth": {
+        "node_id": "box_25",
+        "node_type": "decision",
+        "node_text": "Do the pressing heads meet the drawing?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_28",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is there play in the linear bearing?",
+      "edge_label_to_next": null,
+      "turn_index": 19,
+      "ground_truth": {
+        "node_id": "box_28",
+        "node_type": "decision",
+        "node_text": "Is there play in the linear bearing?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_28",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no lateral play within acceptable limits during unloaded state",
+      "edge_label_to_next": "No",
+      "turn_index": 20,
+      "ground_truth": {
+        "node_id": "box_28",
+        "node_type": "decision",
+        "node_text": "Is there play in the linear bearing?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_31",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the actuator leaking?",
+      "edge_label_to_next": null,
+      "turn_index": 21,
+      "ground_truth": {
+        "node_id": "box_31",
+        "node_type": "decision",
+        "node_text": "Is the actuator leaking?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_31",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no checked both positions theres no air leakage from actuator",
+      "edge_label_to_next": "No",
+      "turn_index": 22,
+      "ground_truth": {
+        "node_id": "box_31",
+        "node_type": "decision",
+        "node_text": "Is the actuator leaking?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_34",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the actuator securely fastened?",
+      "edge_label_to_next": null,
+      "turn_index": 23,
+      "ground_truth": {
+        "node_id": "box_34",
+        "node_type": "decision",
+        "node_text": "Is the actuator securely fastened?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_34",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yeah actuator securely fastened no loosness detected",
+      "edge_label_to_next": "Yes",
+      "turn_index": 24,
+      "ground_truth": {
+        "node_id": "box_34",
+        "node_type": "decision",
+        "node_text": "Is the actuator securely fastened?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_37",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Actuator speed downward correct?",
+      "edge_label_to_next": null,
+      "turn_index": 25,
+      "ground_truth": {
+        "node_id": "box_37",
+        "node_type": "decision",
+        "node_text": "Actuator speed downward correct?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_37",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yes actuator downward pressing speed at specified value",
+      "edge_label_to_next": "Yes",
+      "turn_index": 26,
+      "ground_truth": {
+        "node_id": "box_37",
+        "node_type": "decision",
+        "node_text": "Actuator speed downward correct?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_39",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "End position of pressing head relative to vacuum fixture correct?",
+      "edge_label_to_next": null,
+      "turn_index": 27,
+      "ground_truth": {
+        "node_id": "box_39",
+        "node_type": "decision",
+        "node_text": "End position of pressing head relative to vacuum fixture correct?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_39",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yes pressing head end position correct relative to vacuum fixture",
+      "edge_label_to_next": "Yes",
+      "turn_index": 28,
+      "ground_truth": {
+        "node_id": "box_39",
+        "node_type": "decision",
+        "node_text": "End position of pressing head relative to vacuum fixture correct?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_41",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Pressing time according to spec?",
+      "edge_label_to_next": null,
+      "turn_index": 29,
+      "ground_truth": {
+        "node_id": "box_41",
+        "node_type": "decision",
+        "node_text": "Pressing time according to spec?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_41",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "The pressing time looks right, but I'm noticing the hydraulic pressure is fluctuating during the press cycle—it's not holding steady like it should.",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "coverage_gap",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_41",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no pressing time doesnt match specified duration",
+      "edge_label_to_next": "No",
+      "turn_index": 30,
+      "ground_truth": {
+        "node_id": "box_41",
+        "node_type": "decision",
+        "node_text": "Pressing time according to spec?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_42",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Readjust the pressing time setting on the controller to match the specified pressing duration.",
+      "edge_label_to_next": null,
+      "turn_index": 31,
+      "ground_truth": {
+        "node_id": "box_42",
+        "node_type": "process",
+        "node_text": "Readjust the pressing time setting on the controller to match the specified pressing duration."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_42",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "ok so ive adjusted the controller and pressing time now matches spec",
+      "edge_label_to_next": null,
+      "turn_index": 32,
+      "ground_truth": {
+        "node_id": "box_42",
+        "node_type": "process",
+        "node_text": "Readjust the pressing time setting on the controller to match the specified pressing duration."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    }
+  ],
+  "metadata": {
+    "depth": 17,
+    "num_decisions": 15,
+    "num_processes": 1,
+    "num_documents": 0,
+    "terminator_type": "procedure_complete",
+    "terminator_text": "Readjust the pressing time setting on the controller to match the specified pressing duration.",
+    "true_terminator": false,
+    "node_sequence": [
+      "box_0",
+      "box_1",
+      "box_4",
+      "box_7",
+      "box_10",
+      "box_13",
+      "box_16",
+      "box_19",
+      "box_22",
+      "box_25",
+      "box_28",
+      "box_31",
+      "box_34",
+      "box_37",
+      "box_39",
+      "box_41",
+      "box_42"
+    ],
+    "edge_labels": [
+      null,
+      null,
+      "Yes",
+      "Yes",
+      "Yes",
+      "Yes",
+      "Yes",
+      "Yes",
+      "Yes",
+      "Yes",
+      "Yes",
+      "No",
+      "No",
+      "Yes",
+      "Yes",
+      "Yes",
+      "No"
+    ],
+    "decision_points": [
+      {
+        "node": "box_1",
+        "label": "Yes",
+        "question": "Does the input material meet quality specification?"
+      },
+      {
+        "node": "box_4",
+        "label": "Yes",
+        "question": "Is the indexing table correctly positioned?"
+      },
+      {
+        "node": "box_7",
+        "label": "Yes",
+        "question": "Is the part correctly placed on the insert?"
+      },
+      {
+        "node": "box_10",
+        "label": "Yes",
+        "question": "Is part mounting correct?"
+      },
+      {
+        "node": "box_13",
+        "label": "Yes",
+        "question": "Is the vacuum detection \"tilted part control\" functioning correctly?"
+      },
+      {
+        "node": "box_16",
+        "label": "Yes",
+        "question": "Are the correct end stops mounted?"
+      },
+      {
+        "node": "box_19",
+        "label": "Yes",
+        "question": "Are the linear guides clean and greased?"
+      },
+      {
+        "node": "box_22",
+        "label": "Yes",
+        "question": "Are the sensors of the actuators functioning?"
+      },
+      {
+        "node": "box_25",
+        "label": "Yes",
+        "question": "Do the pressing heads meet the drawing?"
+      },
+      {
+        "node": "box_28",
+        "label": "No",
+        "question": "Is there play in the linear bearing?"
+      },
+      {
+        "node": "box_31",
+        "label": "No",
+        "question": "Is the actuator leaking?"
+      },
+      {
+        "node": "box_34",
+        "label": "Yes",
+        "question": "Is the actuator securely fastened?"
+      },
+      {
+        "node": "box_37",
+        "label": "Yes",
+        "question": "Actuator speed downward correct?"
+      },
+      {
+        "node": "box_39",
+        "label": "Yes",
+        "question": "End position of pressing head relative to vacuum fixture correct?"
+      },
+      {
+        "node": "box_41",
+        "label": "No",
+        "question": "Pressing time according to spec?"
+      }
+    ],
+    "generation_model": "anthropic/claude-sonnet-4-5",
+    "verification": {
+      "variant_of": "base",
+      "base_verified": true,
+      "note": "surface-form variant; not independently verified"
+    },
+    "injection_count": 3
+  },
+  "injection_log": [
+    {
+      "position": 8,
+      "node_id": "box_10",
+      "node_text": "Is part mounting correct?",
+      "edge_labels": [
+        "No",
+        "Yes"
+      ],
+      "category": "undocumented_malfunction",
+      "utterance": "The mounting looks okay, but I'm seeing hydraulic fluid leaking from the actuator seal that connects to this part.",
+      "injection_rate": null,
+      "num_candidates": null
+    },
+    {
+      "position": 12,
+      "node_id": "box_16",
+      "node_text": "Are the correct end stops mounted?",
+      "edge_labels": [
+        "No",
+        "Yes"
+      ],
+      "category": "unrelated_question",
+      "utterance": "Hey, before I check that, do you know if we're supposed to use the new lockout-tagout procedure for this equipment or is it still under the old safety protocol?",
+      "injection_rate": null,
+      "num_candidates": null
+    },
+    {
+      "position": 30,
+      "node_id": "box_41",
+      "node_text": "Pressing time according to spec?",
+      "edge_labels": [
+        "No",
+        "Yes"
+      ],
+      "category": "coverage_gap",
+      "utterance": "The pressing time looks right, but I'm noticing the hydraulic pressure is fluctuating during the press cycle—it's not holding steady like it should.",
+      "injection_rate": null,
+      "num_candidates": null
+    }
+  ]
+}

@@ -1,0 +1,242 @@
+{
+  "id": "GRAPH27",
+  "description": "Diagnostic procedure for failure of the code reader to read part ID codes at the metrology station, covering marking contrast, reader optics, illumination, and code geometry.",
+  "graph": {
+    "nodes": {
+      "box_0": {
+        "type": "terminator",
+        "text": "Start"
+      },
+      "box_1": {
+        "type": "process",
+        "text": "Record the read failure rate (number of failed reads per hundred parts), the error type shown on the operator control interface, and the batch number of the affected parts."
+      },
+      "box_2": {
+        "type": "decision",
+        "text": "Is the read failure occurring on all parts or only on a fraction of the batch?"
+      },
+      "box_3": {
+        "type": "process",
+        "text": "Complete the following checks: 1. Inspect five failed parts for inconsistent marking contrast. 2. Compare with a successfully read part from the same batch."
+      },
+      "box_4": {
+        "type": "process",
+        "text": "Complete the following checks: 1. Check the read history log on the code reader diagnostic display. 2. Verify the failure rate is consistent across all positions on the part. 3. Check for a correlation between failures and a specific part feature."
+      },
+      "box_5": {
+        "type": "decision",
+        "text": "Is the marking contrast on the affected parts within the minimum contrast specification?"
+      },
+      "box_6": {
+        "type": "process",
+        "text": "Measure the optical contrast of the code marking on three failed parts using the contrast measurement tool and compare against the minimum contrast threshold."
+      },
+      "box_7": {
+        "type": "process",
+        "text": "Adjust the laser power or marking speed at the marking station to restore contrast to within specification. remark the affected parts if feasible."
+      },
+      "box_8": {
+        "type": "decision",
+        "text": "Is the code reader lens clean and free of contamination?"
+      },
+      "box_9": {
+        "type": "process",
+        "text": "Inspect the code reader lens surface for dust, oil, or condensation. Verify that the reader housing cover is intact and that no stray light enters the reading field."
+      },
+      "box_10": {
+        "type": "process",
+        "text": "Clean the code reader lens with an approved optical cleaning cloth and lens cleaner. retest the read rate with five known good parts."
+      },
+      "box_11": {
+        "type": "decision",
+        "text": "Is the illumination intensity at the reading position within specification?"
+      },
+      "box_12": {
+        "type": "process",
+        "text": "Complete the following checks: 1. Read the illumination intensity from the code reader diagnostic display. 2. Compare against the minimum specified illumination level. 3. Check the illumination module for contamination or connector issues."
+      },
+      "box_13": {
+        "type": "process",
+        "text": "Replace the illuminator indicator light module if the output is below specification. retest the read rate after replacement."
+      },
+      "box_14": {
+        "type": "decision",
+        "text": "Is the code geometry (module size, quiet zone, aspect ratio) within the specification for this code type?"
+      },
+      "box_15": {
+        "type": "process",
+        "text": "Use the code reader diagnostic software to inspect the decoded code geometry parameters. Compare module size and quiet zone width against the code specification for this product."
+      },
+      "box_16": {
+        "type": "process",
+        "text": "Remark the affected parts at the correct code geometry specification, or reject the batch if the marking station cannot produce the correct geometry."
+      },
+      "box_17": {
+        "type": "decision",
+        "text": "Has the read success rate returned to within the acceptable threshold after corrections?"
+      },
+      "box_18": {
+        "type": "process",
+        "text": "Escalate to the maintenance team: code read failures persist after all standard corrective actions; inspect the code reader mounting, focus, and trigger timing."
+      },
+      "box_19": {
+        "type": "process",
+        "text": "Record all corrective actions and the final read success rate in the quality log. Notify quality assurance team of the affected batch."
+      },
+      "box_20": {
+        "type": "terminator",
+        "text": "End, resume production."
+      },
+      "box_21": {
+        "type": "decision",
+        "text": "Is the code read failure rate so high that part traceability cannot be maintained, requiring an immediate production stop and traceability audit?"
+      },
+      "box_22": {
+        "type": "terminator",
+        "text": "End, production stopped immediately: traceability compromised, quarantine all unverified parts from current shift and escalate to quality assurance engineer"
+      }
+    },
+    "edges": [
+      {
+        "source": "box_1",
+        "target": "box_3",
+        "label": ""
+      },
+      {
+        "source": "box_3",
+        "target": "box_2",
+        "label": null
+      },
+      {
+        "source": "box_2",
+        "target": "box_4",
+        "label": "No"
+      },
+      {
+        "source": "box_2",
+        "target": "box_5",
+        "label": "Yes"
+      },
+      {
+        "source": "box_4",
+        "target": "box_6",
+        "label": ""
+      },
+      {
+        "source": "box_6",
+        "target": "box_5",
+        "label": null
+      },
+      {
+        "source": "box_5",
+        "target": "box_7",
+        "label": "No"
+      },
+      {
+        "source": "box_5",
+        "target": "box_8",
+        "label": "Yes"
+      },
+      {
+        "source": "box_7",
+        "target": "box_9",
+        "label": ""
+      },
+      {
+        "source": "box_9",
+        "target": "box_8",
+        "label": null
+      },
+      {
+        "source": "box_8",
+        "target": "box_10",
+        "label": "No"
+      },
+      {
+        "source": "box_8",
+        "target": "box_11",
+        "label": "Yes"
+      },
+      {
+        "source": "box_10",
+        "target": "box_12",
+        "label": ""
+      },
+      {
+        "source": "box_12",
+        "target": "box_11",
+        "label": null
+      },
+      {
+        "source": "box_11",
+        "target": "box_13",
+        "label": "No"
+      },
+      {
+        "source": "box_11",
+        "target": "box_14",
+        "label": "Yes"
+      },
+      {
+        "source": "box_13",
+        "target": "box_15",
+        "label": ""
+      },
+      {
+        "source": "box_15",
+        "target": "box_14",
+        "label": null
+      },
+      {
+        "source": "box_14",
+        "target": "box_16",
+        "label": "No"
+      },
+      {
+        "source": "box_14",
+        "target": "box_17",
+        "label": "Yes"
+      },
+      {
+        "source": "box_16",
+        "target": "box_17",
+        "label": null
+      },
+      {
+        "source": "box_17",
+        "target": "box_18",
+        "label": "No"
+      },
+      {
+        "source": "box_17",
+        "target": "box_19",
+        "label": "Yes"
+      },
+      {
+        "source": "box_18",
+        "target": "box_19",
+        "label": null
+      },
+      {
+        "source": "box_19",
+        "target": "box_20",
+        "label": null
+      },
+      {
+        "source": "box_0",
+        "target": "box_21",
+        "label": null
+      },
+      {
+        "source": "box_21",
+        "target": "box_22",
+        "label": "Critical, immediate stop required"
+      },
+      {
+        "source": "box_21",
+        "target": "box_1",
+        "label": "Standard fault, continue diagnosis"
+      }
+    ]
+  }
+}

@@ -1,0 +1,920 @@
+{
+  "conversation_id": "GRAPH38_P003_noise_perturbation_mixed",
+  "graph_id": "GRAPH38",
+  "path_id": "GRAPH38_P003",
+  "regime": "mixed",
+  "variant": "noise_perturbation",
+  "robustness_axis": "noise_perturbation",
+  "turns": [
+    {
+      "node_id": "box_0",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Starting spindle diagnostic procedure.",
+      "edge_label_to_next": null,
+      "turn_index": 0,
+      "ground_truth": {
+        "node_id": "box_0",
+        "node_type": "terminator",
+        "node_text": "Start"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Begin with a warm-up run. Bring the spindle up to fifty percent speed and let it run for ten minutes.",
+      "edge_label_to_next": null,
+      "turn_index": 1,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Warm up run, spindle at 50% speed for 10 minutes"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "warmup complete, spindle been running at 50 percent for ten mins",
+      "edge_label_to_next": "",
+      "turn_index": 2,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Warm up run, spindle at 50% speed for 10 minutes"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Mount a calibrated accelerometer on the front bearing housing using either a flat washer stud or magnetic base. Run the spindle at three thousand RPM with no toolholder fitted and record the RMS vibration velocity in millimeters per second. Then repeat the measurement at maximum rated speed and compare both readings against the ISO 10816 zone limits for this machine class.",
+      "edge_label_to_next": null,
+      "turn_index": 3,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "process",
+        "node_text": "Mount a calibrated accelerometer on the front bearing housing with a flat washer stud or magnetic base. Run the spindle at 3000 revolutions per minute with no toolholder fitted and record the root mean square vibration velocity in millimetres per second. Repeat at the maximum rated speed and compare both readings against the ISO 10816 zone limits for this machine class."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "acceleromter mounted and measurments taken. at 3000 rpm im reading 1.4 mm/s and at max speed 2.1 mm/s both within ISO zone limits",
+      "edge_label_to_next": null,
+      "turn_index": 4,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "process",
+        "node_text": "Mount a calibrated accelerometer on the front bearing housing with a flat washer stud or magnetic base. Run the spindle at 3000 revolutions per minute with no toolholder fitted and record the root mean square vibration velocity in millimetres per second. Repeat at the maximum rated speed and compare both readings against the ISO 10816 zone limits for this machine class."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_4",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the vibration level below the alarm limit?",
+      "edge_label_to_next": null,
+      "turn_index": 5,
+      "ground_truth": {
+        "node_id": "box_4",
+        "node_type": "decision",
+        "node_text": "Vibration level below alarm limit?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_4",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "The vibration is actually within normal range, but I'm hearing a loud grinding noise coming from the bearing housing that wasn't there before.",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "coverage_gap",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_4",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yeah both readings well below the alarm threshold",
+      "edge_label_to_next": "Yes",
+      "turn_index": 6,
+      "ground_truth": {
+        "node_id": "box_4",
+        "node_type": "decision",
+        "node_text": "Vibration level below alarm limit?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the bearing temperature within the rated operating limit?",
+      "edge_label_to_next": null,
+      "turn_index": 7,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "decision",
+        "node_text": "Bearing temperature within rated operating limit?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yes front bearing at 58 degrees and rear at 62 degrees celsius both within spec with temp rise of 20 degrees above ambient",
+      "edge_label_to_next": "Yes",
+      "turn_index": 8,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "decision",
+        "node_text": "Bearing temperature within rated operating limit?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_12",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the radial runout within two micrometer tolerance?",
+      "edge_label_to_next": null,
+      "turn_index": 9,
+      "ground_truth": {
+        "node_id": "box_12",
+        "node_type": "decision",
+        "node_text": "Radial runout within 2 µm tolerance?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_12",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yes im seeing 1.6 micrometers total indicater reading on the spindle nose taper thats within the 2 micrometer limit",
+      "edge_label_to_next": "Yes",
+      "turn_index": 10,
+      "ground_truth": {
+        "node_id": "box_12",
+        "node_type": "decision",
+        "node_text": "Radial runout within 2 µm tolerance?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_17",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the axial play within three micrometer tolerance?",
+      "edge_label_to_next": null,
+      "turn_index": 11,
+      "ground_truth": {
+        "node_id": "box_17",
+        "node_type": "decision",
+        "node_text": "Axial play within 3 µm tolerance?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_17",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Hey, before I finish this check, do you know where I can find the updated lockout-tagout forms for this equipment? Someone said they changed the procedure last month.",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "unrelated_question",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_17",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no im averaging 4.2 micrometers of axial deflection across three measurments thats over the 3 micrometer limit",
+      "edge_label_to_next": "No",
+      "turn_index": 12,
+      "ground_truth": {
+        "node_id": "box_17",
+        "node_type": "decision",
+        "node_text": "Axial play within 3 µm tolerance?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_18",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Adjust the preload spacer or shim to reduce the axial play.",
+      "edge_label_to_next": null,
+      "turn_index": 13,
+      "ground_truth": {
+        "node_id": "box_18",
+        "node_type": "process",
+        "node_text": "Adjust pre load spacer or shim to reduce axial play"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_18",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "preload spacer adjusted ive installed a thinner shim to tighten up the axial clearence",
+      "edge_label_to_next": "",
+      "turn_index": 14,
+      "ground_truth": {
+        "node_id": "box_18",
+        "node_type": "process",
+        "node_text": "Adjust pre load spacer or shim to reduce axial play"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_19",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Apply a thin even coat of engineer's blue to a clean test arbor with the correct taper angle. Insert the arbor, rotate by hand under moderate axial load, then withdraw and inspect the contact pattern. You're looking for uniform blue transfer over at least seventy percent of the taper length.",
+      "edge_label_to_next": null,
+      "turn_index": 15,
+      "ground_truth": {
+        "node_id": "box_19",
+        "node_type": "process",
+        "node_text": "Apply a thin even coat of engineer's blue to a clean test arbor with the correct taper angle for this spindle. Insert the arbor, rotate by hand under moderate axial load, then withdraw and inspect the contact pattern. The blue should transfer uniformly over at least 70% of the taper length; a spotted or narrow band pattern indicates taper bore damage or swarf contamination."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_19",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "ok so test arbor inserted and rotated im seeing good blue transfer across about 80 percent of the taper lenght nice and uniform",
+      "edge_label_to_next": null,
+      "turn_index": 16,
+      "ground_truth": {
+        "node_id": "box_19",
+        "node_type": "process",
+        "node_text": "Apply a thin even coat of engineer's blue to a clean test arbor with the correct taper angle for this spindle. Insert the arbor, rotate by hand under moderate axial load, then withdraw and inspect the contact pattern. The blue should transfer uniformly over at least 70% of the taper length; a spotted or narrow band pattern indicates taper bore damage or swarf contamination."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_20",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the taper contact pattern above eighty-five percent bearing area?",
+      "edge_label_to_next": null,
+      "turn_index": 17,
+      "ground_truth": {
+        "node_id": "box_20",
+        "node_type": "decision",
+        "node_text": "Taper contact pattern above 85% bearing area?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_20",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "The bearing area looks okay, but I'm seeing significant fretting marks around the taper interface that don't seem related to the contact pattern itself.",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "coverage_gap",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_20",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no the contact patern is around 80 percent its close but not quite at the 85 percent target",
+      "edge_label_to_next": "No",
+      "turn_index": 18,
+      "ground_truth": {
+        "node_id": "box_20",
+        "node_type": "decision",
+        "node_text": "Taper contact pattern above 85% bearing area?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_21",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Clean and reinspect the taper, and check for any signs of fretting.",
+      "edge_label_to_next": null,
+      "turn_index": 19,
+      "ground_truth": {
+        "node_id": "box_21",
+        "node_type": "process",
+        "node_text": "Clean and reinspect taper, check for fretting"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_21",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "I cleaned the taper but now I'm seeing some deep scoring marks on the shaft journal that weren't mentioned in the procedure. Should I be concerned about the journal surface condition?",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "undocumented_malfunction",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_21",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "taper cleaned thorougly with solvent and reinspected no fretting visible surfaces look good",
+      "edge_label_to_next": "",
+      "turn_index": 20,
+      "ground_truth": {
+        "node_id": "box_21",
+        "node_type": "process",
+        "node_text": "Clean and reinspect taper, check for fretting"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_22",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Connect the calibrated pull stud extraction dynamometer to the toolholder retention knob. Apply a steady pull along the spindle axis and record the peak force at which the drawbar releases the toolholder. Compare the result against the minimum drawbar force in the maintenance specification.",
+      "edge_label_to_next": null,
+      "turn_index": 21,
+      "ground_truth": {
+        "node_id": "box_22",
+        "node_type": "process",
+        "node_text": "Connect the calibrated pull stud extraction dynamometer to the toolholder retention knob. Apply a steady pull along the spindle axis and record the peak force at which the drawbar releases the toolholder. Compare the result against the minimum drawbar force listed in the spindle maintenance specification; a low reading indicates disc spring wear or stacking loss."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_22",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "dynamomter connected and test complete drawbar released at 850 newtons peak force",
+      "edge_label_to_next": null,
+      "turn_index": 22,
+      "ground_truth": {
+        "node_id": "box_22",
+        "node_type": "process",
+        "node_text": "Connect the calibrated pull stud extraction dynamometer to the toolholder retention knob. Apply a steady pull along the spindle axis and record the peak force at which the drawbar releases the toolholder. Compare the result against the minimum drawbar force listed in the spindle maintenance specification; a low reading indicates disc spring wear or stacking loss."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_24",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the drawbar retention force within the rated range?",
+      "edge_label_to_next": null,
+      "turn_index": 23,
+      "ground_truth": {
+        "node_id": "box_24",
+        "node_type": "decision",
+        "node_text": "Drawbar retention force within rated range?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_24",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no the spec calls for minimum of 1000 newtons 850 is below the acceptable range",
+      "edge_label_to_next": "No",
+      "turn_index": 24,
+      "ground_truth": {
+        "node_id": "box_24",
+        "node_type": "decision",
+        "node_text": "Drawbar retention force within rated range?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_25",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Adjust the drawbar spring stack or replace the disc springs.",
+      "edge_label_to_next": null,
+      "turn_index": 25,
+      "ground_truth": {
+        "node_id": "box_25",
+        "node_type": "process",
+        "node_text": "Adjust drawbar spring stack or replace disc springs"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_25",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "ive replaced two worn disc springs in the stack and reassembled the drawbar assmbly",
+      "edge_label_to_next": "",
+      "turn_index": 26,
+      "ground_truth": {
+        "node_id": "box_25",
+        "node_type": "process",
+        "node_text": "Adjust drawbar spring stack or replace disc springs"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_26",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Mount a dial test indicator against the reference artifact clamped in the spindle at cold start. Zero the indicator and allow the spindle to run at operating speed for thirty minutes. Record the indicator displacement at ten minute intervals and note the total thermal growth at stabilization, then compare against the stored compensation value.",
+      "edge_label_to_next": null,
+      "turn_index": 27,
+      "ground_truth": {
+        "node_id": "box_26",
+        "node_type": "process",
+        "node_text": "Mount a dial test indicator against the reference artefact clamped in the spindle at cold start. Zero the indicator and allow the spindle to run at operating speed for 30 minutes. Record the indicator displacement at 10 minute intervals and note the total thermal growth value at stabilisation; compare against the growth compensation value stored in the machine thermal compensation table."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_26",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "thermal growth test complete i recorded 12 micrometers at ten mins, 18 at twenty mins and 22 micrometers at thirty mins where it stabilized that matches the compensation table value of 22 micrometers",
+      "edge_label_to_next": null,
+      "turn_index": 28,
+      "ground_truth": {
+        "node_id": "box_26",
+        "node_type": "process",
+        "node_text": "Mount a dial test indicator against the reference artefact clamped in the spindle at cold start. Zero the indicator and allow the spindle to run at operating speed for 30 minutes. Record the indicator displacement at 10 minute intervals and note the total thermal growth value at stabilisation; compare against the growth compensation value stored in the machine thermal compensation table."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_27",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the thermal growth within the compensation model tolerance?",
+      "edge_label_to_next": null,
+      "turn_index": 29,
+      "ground_truth": {
+        "node_id": "box_27",
+        "node_type": "decision",
+        "node_text": "Thermal growth within compensation model tolerance?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_27",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yeah the measured growth matches the model prediction within tolerance",
+      "edge_label_to_next": "Yes",
+      "turn_index": 30,
+      "ground_truth": {
+        "node_id": "box_27",
+        "node_type": "decision",
+        "node_text": "Thermal growth within compensation model tolerance?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_32",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the spindle speed within plus or minus zero point one percent at all test speeds?",
+      "edge_label_to_next": null,
+      "turn_index": 31,
+      "ground_truth": {
+        "node_id": "box_32",
+        "node_type": "decision",
+        "node_text": "Spindle speed within ±0.1% at all test speeds?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_32",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no im seeing 0.2 percent error at the high test speed tachomter reads 3012 rpm when commanded 3000",
+      "edge_label_to_next": "No",
+      "turn_index": 32,
+      "ground_truth": {
+        "node_id": "box_32",
+        "node_type": "decision",
+        "node_text": "Spindle speed within ±0.1% at all test speeds?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_33",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Adjust the speed reference gain in the drive parameter.",
+      "edge_label_to_next": null,
+      "turn_index": 33,
+      "ground_truth": {
+        "node_id": "box_33",
+        "node_type": "process",
+        "node_text": "Adjust speed reference gain in drive parameter"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_33",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "speed reference gain adjusted in the drive controler the calibration should be corrected now",
+      "edge_label_to_next": "",
+      "turn_index": 34,
+      "ground_truth": {
+        "node_id": "box_33",
+        "node_type": "process",
+        "node_text": "Adjust speed reference gain in drive parameter"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_34",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Run the spindle at maximum rated speed with the normal toolholder fitted for five minutes. Record the vibration velocity with the accelerometer on the front bearing housing and compare against the baseline measurement from the most recent full service.",
+      "edge_label_to_next": null,
+      "turn_index": 35,
+      "ground_truth": {
+        "node_id": "box_34",
+        "node_type": "process",
+        "node_text": "Run the spindle at maximum rated speed with the normal toolholder fitted for five minutes. Record vibration velocity with the accelerometer on the front bearing housing and compare against the baseline vibration measurement taken at the same speed during the most recent full service. An increase of more than 30% above baseline requires bearing assessment before releasing the spindle to production."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_34",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Hey, before I continue with this test, do you know if the new lubrication schedule for the coolant pumps has been finalized yet? I heard there was a meeting about it last week.",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "unrelated_question",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_34",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "final vibration test complete at max speed with toolholder im reading 2.3 mm/s which is only 15 percent above the baseline of 2.0",
+      "edge_label_to_next": null,
+      "turn_index": 36,
+      "ground_truth": {
+        "node_id": "box_34",
+        "node_type": "process",
+        "node_text": "Run the spindle at maximum rated speed with the normal toolholder fitted for five minutes. Record vibration velocity with the accelerometer on the front bearing housing and compare against the baseline vibration measurement taken at the same speed during the most recent full service. An increase of more than 30% above baseline requires bearing assessment before releasing the spindle to production."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_35",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the final vibration within the warning limit at full speed?",
+      "edge_label_to_next": null,
+      "turn_index": 37,
+      "ground_truth": {
+        "node_id": "box_35",
+        "node_type": "decision",
+        "node_text": "Final vibration within warning limit at full speed?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_35",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yes its well within limits the increase is only 15 percent far below the 30 percent warning threshold",
+      "edge_label_to_next": "Yes",
+      "turn_index": 38,
+      "ground_truth": {
+        "node_id": "box_35",
+        "node_type": "decision",
+        "node_text": "Final vibration within warning limit at full speed?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_36",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Log all measurements and update the spindle maintenance record.",
+      "edge_label_to_next": null,
+      "turn_index": 39,
+      "ground_truth": {
+        "node_id": "box_36",
+        "node_type": "process",
+        "node_text": "Log all measurements and update spindle maintenance record"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_36",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "all measurments logged and maintenance record updated in the system",
+      "edge_label_to_next": null,
+      "turn_index": 40,
+      "ground_truth": {
+        "node_id": "box_36",
+        "node_type": "process",
+        "node_text": "Log all measurements and update spindle maintenance record"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_37",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Procedure complete. The spindle has passed all diagnostic checks and is cleared for production use. Document the completed procedure in the shift log.",
+      "edge_label_to_next": null,
+      "turn_index": 41,
+      "ground_truth": {
+        "node_id": "box_37",
+        "node_type": "terminator",
+        "node_text": "End, Procedure complete"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_37",
+      "node_type": "terminator",
+      "speaker": "operator",
+      "utterance": "understood ill document the clearance in the shift log",
+      "edge_label_to_next": null,
+      "turn_index": 42,
+      "ground_truth": {
+        "node_id": "box_37",
+        "node_type": "terminator",
+        "node_text": "End, Procedure complete"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    }
+  ],
+  "metadata": {
+    "depth": 22,
+    "num_decisions": 9,
+    "num_processes": 11,
+    "num_documents": 0,
+    "terminator_type": "procedure_complete",
+    "terminator_text": "End, Procedure complete",
+    "true_terminator": true,
+    "node_sequence": [
+      "box_0",
+      "box_1",
+      "box_2",
+      "box_4",
+      "box_8",
+      "box_12",
+      "box_17",
+      "box_18",
+      "box_19",
+      "box_20",
+      "box_21",
+      "box_22",
+      "box_24",
+      "box_25",
+      "box_26",
+      "box_27",
+      "box_32",
+      "box_33",
+      "box_34",
+      "box_35",
+      "box_36",
+      "box_37"
+    ],
+    "edge_labels": [
+      null,
+      null,
+      "",
+      null,
+      "Yes",
+      "Yes",
+      "Yes",
+      "No",
+      "",
+      null,
+      "No",
+      "",
+      null,
+      "No",
+      "",
+      null,
+      "Yes",
+      "No",
+      "",
+      null,
+      "Yes",
+      null
+    ],
+    "decision_points": [
+      {
+        "node": "box_4",
+        "label": "Yes",
+        "question": "Vibration level below alarm limit?"
+      },
+      {
+        "node": "box_8",
+        "label": "Yes",
+        "question": "Bearing temperature within rated operating limit?"
+      },
+      {
+        "node": "box_12",
+        "label": "Yes",
+        "question": "Radial runout within 2 µm tolerance?"
+      },
+      {
+        "node": "box_17",
+        "label": "No",
+        "question": "Axial play within 3 µm tolerance?"
+      },
+      {
+        "node": "box_20",
+        "label": "No",
+        "question": "Taper contact pattern above 85% bearing area?"
+      },
+      {
+        "node": "box_24",
+        "label": "No",
+        "question": "Drawbar retention force within rated range?"
+      },
+      {
+        "node": "box_27",
+        "label": "Yes",
+        "question": "Thermal growth within compensation model tolerance?"
+      },
+      {
+        "node": "box_32",
+        "label": "No",
+        "question": "Spindle speed within ±0.1% at all test speeds?"
+      },
+      {
+        "node": "box_35",
+        "label": "Yes",
+        "question": "Final vibration within warning limit at full speed?"
+      }
+    ],
+    "generation_model": "anthropic/claude-sonnet-4-5",
+    "verification": {
+      "variant_of": "base",
+      "base_verified": true,
+      "note": "surface-form variant; not independently verified"
+    },
+    "injection_count": 5
+  },
+  "injection_log": [
+    {
+      "position": 6,
+      "node_id": "box_4",
+      "node_text": "Vibration level below alarm limit?",
+      "edge_labels": [
+        "No",
+        "Yes"
+      ],
+      "category": "coverage_gap",
+      "utterance": "The vibration is actually within normal range, but I'm hearing a loud grinding noise coming from the bearing housing that wasn't there before.",
+      "injection_rate": null,
+      "num_candidates": null
+    },
+    {
+      "position": 12,
+      "node_id": "box_17",
+      "node_text": "Axial play within 3 µm tolerance?",
+      "edge_labels": [
+        "No",
+        "Yes"
+      ],
+      "category": "unrelated_question",
+      "utterance": "Hey, before I finish this check, do you know where I can find the updated lockout-tagout forms for this equipment? Someone said they changed the procedure last month.",
+      "injection_rate": null,
+      "num_candidates": null
+    },
+    {
+      "position": 18,
+      "node_id": "box_20",
+      "node_text": "Taper contact pattern above 85% bearing area?",
+      "edge_labels": [
+        "No",
+        "Yes"
+      ],
+      "category": "coverage_gap",
+      "utterance": "The bearing area looks okay, but I'm seeing significant fretting marks around the taper interface that don't seem related to the contact pattern itself.",
+      "injection_rate": null,
+      "num_candidates": null
+    },
+    {
+      "position": 20,
+      "node_id": "box_21",
+      "node_text": "Clean and reinspect taper, check for fretting",
+      "edge_labels": [],
+      "category": "undocumented_malfunction",
+      "utterance": "I cleaned the taper but now I'm seeing some deep scoring marks on the shaft journal that weren't mentioned in the procedure. Should I be concerned about the journal surface condition?",
+      "injection_rate": null,
+      "num_candidates": null
+    },
+    {
+      "position": 36,
+      "node_id": "box_34",
+      "node_text": "Run the spindle at maximum rated speed with the normal toolholder fitted for five minutes. Record vibration velocity with the accelerometer on the front bearing housing and compare against the baseline vibration measurement taken at the same speed during the most recent full service. An increase of more than 30% above baseline requires bearing assessment before releasing the spindle to production.",
+      "edge_labels": [],
+      "category": "unrelated_question",
+      "utterance": "Hey, before I continue with this test, do you know if the new lubrication schedule for the coolant pumps has been finalized yet? I heard there was a meeting about it last week.",
+      "injection_rate": null,
+      "num_candidates": null
+    }
+  ]
+}

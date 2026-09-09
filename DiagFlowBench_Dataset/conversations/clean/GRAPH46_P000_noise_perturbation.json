@@ -1,0 +1,267 @@
+{
+  "conversation_id": "GRAPH46_P000_noise_perturbation",
+  "graph_id": "GRAPH46",
+  "path_id": "GRAPH46_P000",
+  "regime": "clean",
+  "variant": "noise_perturbation",
+  "robustness_axis": "noise_perturbation",
+  "turns": [
+    {
+      "node_id": "box_0",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Starting dowel pin and bore diagnostic procedure.",
+      "edge_label_to_next": null,
+      "turn_index": 0,
+      "ground_truth": {
+        "node_id": "box_0",
+        "node_type": "terminator",
+        "node_text": "Start"
+      }
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Please complete the following checks: First, inspect each dowel pin nose for gouging, abrasion, or corrosion deposits. Second, check each bore entry for raised material or swarf from previous fits. Third, inspect the pin body for bending by rolling it on a flat surface.",
+      "edge_label_to_next": null,
+      "turn_index": 1,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Inspect each dowel pin nose for gouging, abrasion, or corrosion deposits. 2. Check each bore entry for raised material or swarf from previous fits. 3. Inspect the pin body for bending by rolling it on a flat surface."
+      }
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "ok all three checks done pin noses look clean, bore entries clear of raised material and the pins roll staight on the surface plate",
+      "edge_label_to_next": null,
+      "turn_index": 2,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Inspect each dowel pin nose for gouging, abrasion, or corrosion deposits. 2. Check each bore entry for raised material or swarf from previous fits. 3. Inspect the pin body for bending by rolling it on a flat surface."
+      }
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Are you seeing severe pin damage, gouging, bending, or corrosion?",
+      "edge_label_to_next": null,
+      "turn_index": 3,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Severe pin damage, gouging, bending or corrosion?"
+      }
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no pins are in good condition no severe damage or corrosoin present",
+      "edge_label_to_next": "No",
+      "turn_index": 4,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Severe pin damage, gouging, bending or corrosion?"
+      }
+    },
+    {
+      "node_id": "box_6",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the pin diameter within H7/p6 tolerance?",
+      "edge_label_to_next": null,
+      "turn_index": 5,
+      "ground_truth": {
+        "node_id": "box_6",
+        "node_type": "decision",
+        "node_text": "Pin diameter within H7/p6 tolerance?"
+      }
+    },
+    {
+      "node_id": "box_6",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yeah diameter measurements all within the H7/p6 tolerance band",
+      "edge_label_to_next": "Yes",
+      "turn_index": 6,
+      "ground_truth": {
+        "node_id": "box_6",
+        "node_type": "decision",
+        "node_text": "Pin diameter within H7/p6 tolerance?"
+      }
+    },
+    {
+      "node_id": "box_11",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the bore condition acceptable with no fretting or elongation?",
+      "edge_label_to_next": null,
+      "turn_index": 7,
+      "ground_truth": {
+        "node_id": "box_11",
+        "node_type": "decision",
+        "node_text": "Bore condition acceptable, no fretting or elongation?"
+      }
+    },
+    {
+      "node_id": "box_11",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yes bore surface looks clean no signs of frettng or elongation roundness error is minimal",
+      "edge_label_to_next": "Yes",
+      "turn_index": 8,
+      "ground_truth": {
+        "node_id": "box_11",
+        "node_type": "decision",
+        "node_text": "Bore condition acceptable, no fretting or elongation?"
+      }
+    },
+    {
+      "node_id": "box_14",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Are the insertion and extraction forces within the specified range?",
+      "edge_label_to_next": null,
+      "turn_index": 9,
+      "ground_truth": {
+        "node_id": "box_14",
+        "node_type": "decision",
+        "node_text": "Insertion and extraction force within specified range?"
+      }
+    },
+    {
+      "node_id": "box_14",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yes both insertion and extraction forces within acceptable range per assembly spec",
+      "edge_label_to_next": "Yes",
+      "turn_index": 10,
+      "ground_truth": {
+        "node_id": "box_14",
+        "node_type": "decision",
+        "node_text": "Insertion and extraction force within specified range?"
+      }
+    },
+    {
+      "node_id": "box_18",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the pin perpendicularity within 0.01 millimeters per 100 millimeters?",
+      "edge_label_to_next": null,
+      "turn_index": 11,
+      "ground_truth": {
+        "node_id": "box_18",
+        "node_type": "decision",
+        "node_text": "Pin perpendicularity within 0.01 mm per 100 mm?"
+      }
+    },
+    {
+      "node_id": "box_18",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no angular deviation at pin tip exceeds the 0.01mm per 100mm tolerance",
+      "edge_label_to_next": "No",
+      "turn_index": 12,
+      "ground_truth": {
+        "node_id": "box_18",
+        "node_type": "decision",
+        "node_text": "Pin perpendicularity within 0.01 mm per 100 mm?"
+      }
+    },
+    {
+      "node_id": "box_27",
+      "node_type": "document",
+      "speaker": "system",
+      "utterance": "Please refer to the fixture datum and locating diagnostic procedure in Graph 44.",
+      "edge_label_to_next": null,
+      "turn_index": 13,
+      "ground_truth": {
+        "node_id": "box_27",
+        "node_type": "document",
+        "node_text": "Fixture datum and locating diagnostic (GRAPH 44)"
+      }
+    },
+    {
+      "node_id": "box_27",
+      "node_type": "document",
+      "speaker": "operator",
+      "utterance": "understood consulted Graph 44 for fixture datum diagnostic",
+      "edge_label_to_next": null,
+      "turn_index": 14,
+      "ground_truth": {
+        "node_id": "box_27",
+        "node_type": "document",
+        "node_text": "Fixture datum and locating diagnostic (GRAPH 44)"
+      }
+    }
+  ],
+  "metadata": {
+    "depth": 8,
+    "num_decisions": 5,
+    "num_processes": 1,
+    "num_documents": 1,
+    "terminator_type": "procedure_complete",
+    "terminator_text": "Fixture datum and locating diagnostic (GRAPH 44)",
+    "true_terminator": false,
+    "node_sequence": [
+      "box_0",
+      "box_1",
+      "box_2",
+      "box_6",
+      "box_11",
+      "box_14",
+      "box_18",
+      "box_27"
+    ],
+    "edge_labels": [
+      null,
+      null,
+      null,
+      "No",
+      "Yes",
+      "Yes",
+      "Yes",
+      "No"
+    ],
+    "decision_points": [
+      {
+        "node": "box_2",
+        "label": "No",
+        "question": "Severe pin damage, gouging, bending or corrosion?"
+      },
+      {
+        "node": "box_6",
+        "label": "Yes",
+        "question": "Pin diameter within H7/p6 tolerance?"
+      },
+      {
+        "node": "box_11",
+        "label": "Yes",
+        "question": "Bore condition acceptable, no fretting or elongation?"
+      },
+      {
+        "node": "box_14",
+        "label": "Yes",
+        "question": "Insertion and extraction force within specified range?"
+      },
+      {
+        "node": "box_18",
+        "label": "No",
+        "question": "Pin perpendicularity within 0.01 mm per 100 mm?"
+      }
+    ],
+    "generation_model": "anthropic/claude-sonnet-4-5",
+    "verification": {
+      "variant_of": "base",
+      "base_verified": true,
+      "note": "surface-form variant; not independently verified"
+    }
+  }
+}

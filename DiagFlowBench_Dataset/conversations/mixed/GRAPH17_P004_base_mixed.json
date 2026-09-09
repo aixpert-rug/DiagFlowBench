@@ -1,0 +1,449 @@
+{
+  "conversation_id": "GRAPH17_P004_base_mixed",
+  "graph_id": "GRAPH17",
+  "path_id": "GRAPH17_P004",
+  "regime": "mixed",
+  "variant": "base",
+  "robustness_axis": null,
+  "turns": [
+    {
+      "node_id": "box_0",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Starting input slide part pickup diagnostic procedure.",
+      "edge_label_to_next": null,
+      "turn_index": 0,
+      "ground_truth": {
+        "node_id": "box_0",
+        "node_type": "terminator",
+        "node_text": "Start"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Does the part meet quality assurance team product specifications?",
+      "edge_label_to_next": null,
+      "turn_index": 1,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "decision",
+        "node_text": "Does the part meet quality assurance team product specifications?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, the part meets all quality assurance specifications.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 2,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "decision",
+        "node_text": "Does the part meet quality assurance team product specifications?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_4",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the positioning of the input slide working correctly?",
+      "edge_label_to_next": null,
+      "turn_index": 3,
+      "ground_truth": {
+        "node_id": "box_4",
+        "node_type": "decision",
+        "node_text": "Is the positioning of the input slide working correctly?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_4",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, the input slide is positioning properly and reaching its end position correctly.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 4,
+      "ground_truth": {
+        "node_id": "box_4",
+        "node_type": "decision",
+        "node_text": "Is the positioning of the input slide working correctly?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_7",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Are there contaminated parts?",
+      "edge_label_to_next": null,
+      "turn_index": 5,
+      "ground_truth": {
+        "node_id": "box_7",
+        "node_type": "decision",
+        "node_text": "Are there contaminated parts?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_7",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "No, I don't see any contamination on the parts.",
+      "edge_label_to_next": "No",
+      "turn_index": 6,
+      "ground_truth": {
+        "node_id": "box_7",
+        "node_type": "decision",
+        "node_text": "Are there contaminated parts?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_11",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Are there electrical defects?",
+      "edge_label_to_next": null,
+      "turn_index": 7,
+      "ground_truth": {
+        "node_id": "box_11",
+        "node_type": "decision",
+        "node_text": "Are there electrical defects?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_11",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "No, all electrical components appear to be functioning normally.",
+      "edge_label_to_next": "No",
+      "turn_index": 8,
+      "ground_truth": {
+        "node_id": "box_11",
+        "node_type": "decision",
+        "node_text": "Are there electrical defects?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_14",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Are there worn parts?",
+      "edge_label_to_next": null,
+      "turn_index": 9,
+      "ground_truth": {
+        "node_id": "box_14",
+        "node_type": "decision",
+        "node_text": "Are there worn parts?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_14",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "No, I don't observe any significant wear on the components.",
+      "edge_label_to_next": "No",
+      "turn_index": 10,
+      "ground_truth": {
+        "node_id": "box_14",
+        "node_type": "decision",
+        "node_text": "Are there worn parts?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_18",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the vacuum switching pressure value correct?",
+      "edge_label_to_next": null,
+      "turn_index": 11,
+      "ground_truth": {
+        "node_id": "box_18",
+        "node_type": "decision",
+        "node_text": "Is the vacuum switching pressure value correct?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_18",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "The pressure reading is fluctuating wildly between 15 and 40 psi instead of holding steady. I can't tell if it's correct or not when it keeps jumping around like this.",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "coverage_gap",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_18",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "No, the vacuum switching pressure is reading outside the specified range.",
+      "edge_label_to_next": "No",
+      "turn_index": 12,
+      "ground_truth": {
+        "node_id": "box_18",
+        "node_type": "decision",
+        "node_text": "Is the vacuum switching pressure value correct?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_22",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Readjust the vacuum switch trigger pressure to the specified value for the current machine variant.",
+      "edge_label_to_next": null,
+      "turn_index": 13,
+      "ground_truth": {
+        "node_id": "box_22",
+        "node_type": "process",
+        "node_text": "Readjust the vacuum switch trigger pressure to the specified value for the current machine variant."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_22",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "I've adjusted the vacuum switch trigger pressure to the correct specification.",
+      "edge_label_to_next": null,
+      "turn_index": 14,
+      "ground_truth": {
+        "node_id": "box_22",
+        "node_type": "process",
+        "node_text": "Readjust the vacuum switch trigger pressure to the specified value for the current machine variant."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    }
+  ],
+  "metadata": {
+    "depth": 8,
+    "num_decisions": 6,
+    "num_processes": 1,
+    "num_documents": 0,
+    "terminator_type": "procedure_complete",
+    "terminator_text": "Readjust the vacuum switch trigger pressure to the specified value for the current machine variant.",
+    "true_terminator": false,
+    "node_sequence": [
+      "box_0",
+      "box_1",
+      "box_4",
+      "box_7",
+      "box_11",
+      "box_14",
+      "box_18",
+      "box_22"
+    ],
+    "edge_labels": [
+      null,
+      null,
+      "Yes",
+      "Yes",
+      "No",
+      "No",
+      "No",
+      "No"
+    ],
+    "decision_points": [
+      {
+        "node": "box_1",
+        "label": "Yes",
+        "question": "Does the part meet quality assurance team product specifications?"
+      },
+      {
+        "node": "box_4",
+        "label": "Yes",
+        "question": "Is the positioning of the input slide working correctly?"
+      },
+      {
+        "node": "box_7",
+        "label": "No",
+        "question": "Are there contaminated parts?"
+      },
+      {
+        "node": "box_11",
+        "label": "No",
+        "question": "Are there electrical defects?"
+      },
+      {
+        "node": "box_14",
+        "label": "No",
+        "question": "Are there worn parts?"
+      },
+      {
+        "node": "box_18",
+        "label": "No",
+        "question": "Is the vacuum switching pressure value correct?"
+      }
+    ],
+    "generation_model": "anthropic/claude-sonnet-4-5",
+    "verification": {
+      "verified": true,
+      "issues": [],
+      "corrected_turns": [
+        {
+          "node_id": "box_0",
+          "node_type": "terminator",
+          "speaker": "system",
+          "utterance": "Starting input slide part pickup diagnostic procedure.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_1",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Does the part meet quality assurance team product specifications?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_1",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Yes, the part meets all quality assurance specifications.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_4",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is the positioning of the input slide working correctly?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_4",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Yes, the input slide is positioning properly and reaching its end position correctly.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_7",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Are there contaminated parts?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_7",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "No, I don't see any contamination on the parts.",
+          "edge_label_to_next": "No"
+        },
+        {
+          "node_id": "box_11",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Are there electrical defects?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_11",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "No, all electrical components appear to be functioning normally.",
+          "edge_label_to_next": "No"
+        },
+        {
+          "node_id": "box_14",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Are there worn parts?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_14",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "No, I don't observe any significant wear on the components.",
+          "edge_label_to_next": "No"
+        },
+        {
+          "node_id": "box_18",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is the vacuum switching pressure value correct?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_18",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "No, the vacuum switching pressure is reading outside the specified range.",
+          "edge_label_to_next": "No"
+        },
+        {
+          "node_id": "box_22",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Readjust the vacuum switch trigger pressure to the specified value for the current machine variant.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_22",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "I've adjusted the vacuum switch trigger pressure to the correct specification.",
+          "edge_label_to_next": null
+        }
+      ]
+    },
+    "injection_count": 1
+  },
+  "injection_log": [
+    {
+      "position": 12,
+      "node_id": "box_18",
+      "node_text": "Is the vacuum switching pressure value correct?",
+      "edge_labels": [
+        "No",
+        "Yes"
+      ],
+      "category": "coverage_gap",
+      "utterance": "The pressure reading is fluctuating wildly between 15 and 40 psi instead of holding steady. I can't tell if it's correct or not when it keeps jumping around like this.",
+      "injection_rate": null,
+      "num_candidates": null
+    }
+  ]
+}

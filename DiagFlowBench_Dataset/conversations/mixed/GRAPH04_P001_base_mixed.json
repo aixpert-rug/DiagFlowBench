@@ -1,0 +1,237 @@
+{
+  "conversation_id": "GRAPH04_P001_base_mixed",
+  "graph_id": "GRAPH04",
+  "path_id": "GRAPH04_P001",
+  "regime": "mixed",
+  "variant": "base",
+  "robustness_axis": null,
+  "turns": [
+    {
+      "node_id": "box_0",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Starting defective parts diagnostic procedure.",
+      "edge_label_to_next": null,
+      "turn_index": 0,
+      "ground_truth": {
+        "node_id": "box_0",
+        "node_type": "terminator",
+        "node_text": "Start"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Are the faulty or damaged parts also found in the input product?",
+      "edge_label_to_next": null,
+      "turn_index": 1,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "decision",
+        "node_text": "Are the faulty/damaged parts also found in the input product?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "I've inspected the input product and the defects are not present there. The damage is only appearing after processing.",
+      "edge_label_to_next": "No",
+      "turn_index": 2,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "decision",
+        "node_text": "Are the faulty/damaged parts also found in the input product?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_4",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Do the defects or damages come from one supply conveyor?",
+      "edge_label_to_next": null,
+      "turn_index": 3,
+      "ground_truth": {
+        "node_id": "box_4",
+        "node_type": "decision",
+        "node_text": "Do the defects/damages come from one supply conveyor?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_4",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "The defects are showing up intermittently across multiple conveyors, but they seem to correlate with temperature spikes in the processing zone rather than any specific supply line.",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "coverage_gap",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_4",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, I can see that all the damaged parts are coming from the same supply conveyor. The other conveyor's parts look fine.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 4,
+      "ground_truth": {
+        "node_id": "box_4",
+        "node_type": "decision",
+        "node_text": "Do the defects/damages come from one supply conveyor?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_6",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Empty the supply conveyor, check for deviations, then load a different batch of parts.",
+      "edge_label_to_next": null,
+      "turn_index": 5,
+      "ground_truth": {
+        "node_id": "box_6",
+        "node_type": "process",
+        "node_text": "Empty the supply conveyor, check for deviations, then load a different batch of parts."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_6",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "I've emptied the conveyor and inspected it for issues. Now loading a fresh batch of parts from a different lot.",
+      "edge_label_to_next": null,
+      "turn_index": 6,
+      "ground_truth": {
+        "node_id": "box_6",
+        "node_type": "process",
+        "node_text": "Empty the supply conveyor, check for deviations, then load a different batch of parts."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    }
+  ],
+  "metadata": {
+    "depth": 4,
+    "num_decisions": 2,
+    "num_processes": 1,
+    "num_documents": 0,
+    "terminator_type": "procedure_complete",
+    "terminator_text": "Empty the supply conveyor, check for deviations, then load a different batch of parts.",
+    "true_terminator": false,
+    "node_sequence": [
+      "box_0",
+      "box_1",
+      "box_4",
+      "box_6"
+    ],
+    "edge_labels": [
+      null,
+      null,
+      "No",
+      "Yes"
+    ],
+    "decision_points": [
+      {
+        "node": "box_1",
+        "label": "No",
+        "question": "Are the faulty/damaged parts also found in the input product?"
+      },
+      {
+        "node": "box_4",
+        "label": "Yes",
+        "question": "Do the defects/damages come from one supply conveyor?"
+      }
+    ],
+    "generation_model": "anthropic/claude-sonnet-4-5",
+    "verification": {
+      "verified": true,
+      "issues": [],
+      "corrected_turns": [
+        {
+          "node_id": "box_0",
+          "node_type": "terminator",
+          "speaker": "system",
+          "utterance": "Starting defective parts diagnostic procedure.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_1",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Are the faulty or damaged parts also found in the input product?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_1",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "I've inspected the input product and the defects are not present there. The damage is only appearing after processing.",
+          "edge_label_to_next": "No"
+        },
+        {
+          "node_id": "box_4",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Do the defects or damages come from one supply conveyor?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_4",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Yes, I can see that all the damaged parts are coming from the same supply conveyor. The other conveyor's parts look fine.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_6",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Empty the supply conveyor, check for deviations, then load a different batch of parts.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_6",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "I've emptied the conveyor and inspected it for issues. Now loading a fresh batch of parts from a different lot.",
+          "edge_label_to_next": null
+        }
+      ]
+    },
+    "injection_count": 1
+  },
+  "injection_log": [
+    {
+      "position": 4,
+      "node_id": "box_4",
+      "node_text": "Do the defects/damages come from one supply conveyor?",
+      "edge_labels": [
+        "Yes",
+        "No"
+      ],
+      "category": "coverage_gap",
+      "utterance": "The defects are showing up intermittently across multiple conveyors, but they seem to correlate with temperature spikes in the processing zone rather than any specific supply line.",
+      "injection_rate": null,
+      "num_candidates": null
+    }
+  ]
+}

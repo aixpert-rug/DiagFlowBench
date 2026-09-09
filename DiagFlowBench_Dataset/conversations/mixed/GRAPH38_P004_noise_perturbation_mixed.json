@@ -1,0 +1,387 @@
+{
+  "conversation_id": "GRAPH38_P004_noise_perturbation_mixed",
+  "graph_id": "GRAPH38",
+  "path_id": "GRAPH38_P004",
+  "regime": "mixed",
+  "variant": "noise_perturbation",
+  "robustness_axis": "noise_perturbation",
+  "turns": [
+    {
+      "node_id": "box_0",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Starting spindle diagnostic procedure.",
+      "edge_label_to_next": null,
+      "turn_index": 0,
+      "ground_truth": {
+        "node_id": "box_0",
+        "node_type": "terminator",
+        "node_text": "Start"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Begin with a warm-up run. Bring the spindle up to fifty percent speed and run it for ten minutes.",
+      "edge_label_to_next": null,
+      "turn_index": 1,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Warm up run, spindle at 50% speed for 10 minutes"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "warmup complete spindle been running at 50 percent for ten mins",
+      "edge_label_to_next": "",
+      "turn_index": 2,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Warm up run, spindle at 50% speed for 10 minutes"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Mount a calibrated accelerometer on the front bearing housing using a flat washer stud or magnetic base. Run the spindle at three thousand RPM with no toolholder fitted and record the RMS vibration velocity in millimeters per second. Then repeat the measurement at maximum rated speed and compare both readings against the ISO ten eight one six zone limits for this machine class.",
+      "edge_label_to_next": null,
+      "turn_index": 3,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "process",
+        "node_text": "Mount a calibrated accelerometer on the front bearing housing with a flat washer stud or magnetic base. Run the spindle at 3000 revolutions per minute with no toolholder fitted and record the root mean square vibration velocity in millimetres per second. Repeat at the maximum rated speed and compare both readings against the ISO 10816 zone limits for this machine class."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "ok so acceleromter mounted measurements taken at both speeds recorded the vib velocities and compared to zone limts",
+      "edge_label_to_next": null,
+      "turn_index": 4,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "process",
+        "node_text": "Mount a calibrated accelerometer on the front bearing housing with a flat washer stud or magnetic base. Run the spindle at 3000 revolutions per minute with no toolholder fitted and record the root mean square vibration velocity in millimetres per second. Repeat at the maximum rated speed and compare both readings against the ISO 10816 zone limits for this machine class."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_4",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the vibration level below the alarm limit?",
+      "edge_label_to_next": null,
+      "turn_index": 5,
+      "ground_truth": {
+        "node_id": "box_4",
+        "node_type": "decision",
+        "node_text": "Vibration level below alarm limit?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_4",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yeah both readings within acceptable zone and below alarm threshhold",
+      "edge_label_to_next": "Yes",
+      "turn_index": 6,
+      "ground_truth": {
+        "node_id": "box_4",
+        "node_type": "decision",
+        "node_text": "Vibration level below alarm limit?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the bearing temperature within the rated operating limit?",
+      "edge_label_to_next": null,
+      "turn_index": 7,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "decision",
+        "node_text": "Bearing temperature within rated operating limit?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yes bearing housings running well within spec temp rise under 25 degrees and absolute temp below 70",
+      "edge_label_to_next": "Yes",
+      "turn_index": 8,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "decision",
+        "node_text": "Bearing temperature within rated operating limit?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_12",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the radial runout within two micrometer tolerance?",
+      "edge_label_to_next": null,
+      "turn_index": 9,
+      "ground_truth": {
+        "node_id": "box_12",
+        "node_type": "decision",
+        "node_text": "Radial runout within 2 µm tolerance?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_12",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "The runout's actually fine, but I'm seeing some unusual axial play in the bearing assembly that wasn't there before—should I be concerned about that?",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "coverage_gap",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_12",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no seeing runout at 3.1 micrometers thats over the 2 micrometer limit",
+      "edge_label_to_next": "No",
+      "turn_index": 10,
+      "ground_truth": {
+        "node_id": "box_12",
+        "node_type": "decision",
+        "node_text": "Radial runout within 2 µm tolerance?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_13",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Adjust the bearing preload via the locknut in quarter-turn increments.",
+      "edge_label_to_next": null,
+      "turn_index": 11,
+      "ground_truth": {
+        "node_id": "box_13",
+        "node_type": "process",
+        "node_text": "Adjust bearing pre load via locknut, quarter turn increments"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_13",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "I'm trying to adjust the locknut but the threads are completely stripped on the shaft — I can't get it to engage at all.",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "undocumented_malfunction",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_13",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "locknut adjusted by quarter turn prelaod increased",
+      "edge_label_to_next": null,
+      "turn_index": 12,
+      "ground_truth": {
+        "node_id": "box_13",
+        "node_type": "process",
+        "node_text": "Adjust bearing pre load via locknut, quarter turn increments"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_14",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Reverify the radial runout after the preload adjustment.",
+      "edge_label_to_next": null,
+      "turn_index": 13,
+      "ground_truth": {
+        "node_id": "box_14",
+        "node_type": "decision",
+        "node_text": "Reverify radial runout after pre load adjustment"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_14",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "made second adjustment atempt and remeasured but runout still at 2.8 micrometers not coming into tolerance",
+      "edge_label_to_next": "Unresolvable after second attempt",
+      "turn_index": 14,
+      "ground_truth": {
+        "node_id": "box_14",
+        "node_type": "decision",
+        "node_text": "Reverify radial runout after pre load adjustment"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_15",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Procedure complete. The runout is unrecoverable through adjustment. Escalate this issue immediately—bearing replacement is required before this spindle can return to service.",
+      "edge_label_to_next": null,
+      "turn_index": 15,
+      "ground_truth": {
+        "node_id": "box_15",
+        "node_type": "terminator",
+        "node_text": "End, Escalate: runout unrecoverable, bearing replacement required"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_15",
+      "node_type": "terminator",
+      "speaker": "operator",
+      "utterance": "understood will escalate for bearing replacment right away",
+      "edge_label_to_next": null,
+      "turn_index": 16,
+      "ground_truth": {
+        "node_id": "box_15",
+        "node_type": "terminator",
+        "node_text": "End, Escalate: runout unrecoverable, bearing replacement required"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    }
+  ],
+  "metadata": {
+    "depth": 9,
+    "num_decisions": 4,
+    "num_processes": 3,
+    "num_documents": 0,
+    "terminator_type": "escalate",
+    "terminator_text": "End, Escalate: runout unrecoverable, bearing replacement required",
+    "true_terminator": true,
+    "node_sequence": [
+      "box_0",
+      "box_1",
+      "box_2",
+      "box_4",
+      "box_8",
+      "box_12",
+      "box_13",
+      "box_14",
+      "box_15"
+    ],
+    "edge_labels": [
+      null,
+      null,
+      "",
+      null,
+      "Yes",
+      "Yes",
+      "No",
+      null,
+      "Unresolvable after second attempt"
+    ],
+    "decision_points": [
+      {
+        "node": "box_4",
+        "label": "Yes",
+        "question": "Vibration level below alarm limit?"
+      },
+      {
+        "node": "box_8",
+        "label": "Yes",
+        "question": "Bearing temperature within rated operating limit?"
+      },
+      {
+        "node": "box_12",
+        "label": "No",
+        "question": "Radial runout within 2 µm tolerance?"
+      },
+      {
+        "node": "box_14",
+        "label": "Unresolvable after second attempt",
+        "question": "Reverify radial runout after pre load adjustment"
+      }
+    ],
+    "generation_model": "anthropic/claude-sonnet-4-5",
+    "verification": {
+      "variant_of": "base",
+      "base_verified": true,
+      "note": "surface-form variant; not independently verified"
+    },
+    "injection_count": 2
+  },
+  "injection_log": [
+    {
+      "position": 10,
+      "node_id": "box_12",
+      "node_text": "Radial runout within 2 µm tolerance?",
+      "edge_labels": [
+        "No",
+        "Yes"
+      ],
+      "category": "coverage_gap",
+      "utterance": "The runout's actually fine, but I'm seeing some unusual axial play in the bearing assembly that wasn't there before—should I be concerned about that?",
+      "injection_rate": null,
+      "num_candidates": null
+    },
+    {
+      "position": 12,
+      "node_id": "box_13",
+      "node_text": "Adjust bearing pre load via locknut, quarter turn increments",
+      "edge_labels": [],
+      "category": "undocumented_malfunction",
+      "utterance": "I'm trying to adjust the locknut but the threads are completely stripped on the shaft — I can't get it to engage at all.",
+      "injection_rate": null,
+      "num_candidates": null
+    }
+  ]
+}

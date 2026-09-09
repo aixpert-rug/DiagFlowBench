@@ -1,0 +1,793 @@
+{
+  "conversation_id": "GRAPH22_P003_base_mixed",
+  "graph_id": "GRAPH22",
+  "path_id": "GRAPH22_P003",
+  "regime": "mixed",
+  "variant": "base",
+  "robustness_axis": null,
+  "turns": [
+    {
+      "node_id": "box_0",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Starting damaged parts diagnostic procedure.",
+      "edge_label_to_next": null,
+      "turn_index": 0,
+      "ground_truth": {
+        "node_id": "box_0",
+        "node_type": "terminator",
+        "node_text": "Start"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Please store a representative sample of at least five damaged parts for quality assurance team inspection. Record the damage type, location, and the station at which damage was first observed.",
+      "edge_label_to_next": null,
+      "turn_index": 1,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Store a representative sample of at least five damaged parts for quality assurance team inspection. Record the damage type, location, and the station at which damage was first observed."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "I've collected five damaged parts and documented the damage characteristics and the station where they were first detected.",
+      "edge_label_to_next": null,
+      "turn_index": 2,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Store a representative sample of at least five damaged parts for quality assurance team inspection. Record the damage type, location, and the station at which damage was first observed."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Are the damaged parts also found in the input product, meaning the damage was present before entering the assembly line?",
+      "edge_label_to_next": null,
+      "turn_index": 3,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Are the damaged parts also found in the input product (i.e. damage present before entering the assembly line)?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "No, I've checked the incoming parts and they don't show this type of damage. The damage is occurring somewhere on our line.",
+      "edge_label_to_next": "No",
+      "turn_index": 4,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Are the damaged parts also found in the input product (i.e. damage present before entering the assembly line)?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_4",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Are there parts that have been pushed through the insert, meaning over pressed parts?",
+      "edge_label_to_next": null,
+      "turn_index": 5,
+      "ground_truth": {
+        "node_id": "box_4",
+        "node_type": "decision",
+        "node_text": "Are there parts that have been pushed through the insert (over pressed parts)?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_4",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "The insert itself looks fine, but I'm seeing metal shavings accumulating in the collection tray underneath — is that something I should be concerned about?",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "coverage_gap",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_4",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "No, the parts aren't over pressed. The inserts look properly seated without any signs of excessive force.",
+      "edge_label_to_next": "No",
+      "turn_index": 6,
+      "ground_truth": {
+        "node_id": "box_4",
+        "node_type": "decision",
+        "node_text": "Are there parts that have been pushed through the insert (over pressed parts)?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the damage pattern consistent with marking induced thermal stress?",
+      "edge_label_to_next": null,
+      "turn_index": 7,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "decision",
+        "node_text": "Is the damage pattern consistent with marking induced thermal stress?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, I can see discoloration and stress marks around the laser marking area that look like thermal damage.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 8,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "decision",
+        "node_text": "Is the damage pattern consistent with marking induced thermal stress?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_9",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Complete the following checks: Read the current laser power level from the parameter screen, compare it against the validated power setting on the process parameter sheet, and check whether the power setting was modified since the last good run.",
+      "edge_label_to_next": null,
+      "turn_index": 9,
+      "ground_truth": {
+        "node_id": "box_9",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Read the current laser power level from the parameter screen. 2. Compare against the validated power setting on the process parameter sheet. 3. Check whether the power setting was modified since the last good run."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_9",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "I've checked the laser parameters. The power level is set higher than the validated setting, and the logs show it was changed earlier today.",
+      "edge_label_to_next": null,
+      "turn_index": 10,
+      "ground_truth": {
+        "node_id": "box_9",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Read the current laser power level from the parameter screen. 2. Compare against the validated power setting on the process parameter sheet. 3. Check whether the power setting was modified since the last good run."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the damage pattern consistent with marking induced thermal stress?",
+      "edge_label_to_next": null,
+      "turn_index": 11,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "decision",
+        "node_text": "Is the damage pattern consistent with marking induced thermal stress?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Now that I've corrected the laser power, looking at the overall damage pattern, it's not exclusively thermal stress. There are other types of damage present as well.",
+      "edge_label_to_next": "No",
+      "turn_index": 12,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "decision",
+        "node_text": "Is the damage pattern consistent with marking induced thermal stress?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_10",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Have the damaged parts been measured and approved at the metrology station?",
+      "edge_label_to_next": null,
+      "turn_index": 13,
+      "ground_truth": {
+        "node_id": "box_10",
+        "node_type": "decision",
+        "node_text": "Have the damaged parts been measured and approved at the metrology station?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_10",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "The metrology station's laser calibration head is throwing error code E-47 and won't initialize, so I can't get any measurements right now.",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "undocumented_malfunction",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_10",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, these parts have already been through metrology and have measurement data recorded.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 14,
+      "ground_truth": {
+        "node_id": "box_10",
+        "node_type": "decision",
+        "node_text": "Have the damaged parts been measured and approved at the metrology station?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_12",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Do the metrology station measurements confirm the parts are within the critical dimensional tolerance limits?",
+      "edge_label_to_next": null,
+      "turn_index": 15,
+      "ground_truth": {
+        "node_id": "box_12",
+        "node_type": "decision",
+        "node_text": "Do the metrology station measurements confirm the parts are within the critical dimensional tolerance limits?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_12",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "No, the measurements show several dimensions are outside the critical tolerance limits.",
+      "edge_label_to_next": "No",
+      "turn_index": 16,
+      "ground_truth": {
+        "node_id": "box_12",
+        "node_type": "decision",
+        "node_text": "Do the metrology station measurements confirm the parts are within the critical dimensional tolerance limits?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_14",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Block and quarantine the affected parts. Notify the maintenance team and quality assurance team with the metrology data.",
+      "edge_label_to_next": null,
+      "turn_index": 17,
+      "ground_truth": {
+        "node_id": "box_14",
+        "node_type": "process",
+        "node_text": "Block and quarantine the affected parts. Notify the maintenance team and quality assurance team with the metrology data."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_14",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Parts have been quarantined and I've sent notifications to both maintenance and quality assurance with the complete metrology data.",
+      "edge_label_to_next": null,
+      "turn_index": 18,
+      "ground_truth": {
+        "node_id": "box_14",
+        "node_type": "process",
+        "node_text": "Block and quarantine the affected parts. Notify the maintenance team and quality assurance team with the metrology data."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_15",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Record all corrective actions taken, the batch number, and the final disposition of the affected parts in the quality log.",
+      "edge_label_to_next": null,
+      "turn_index": 19,
+      "ground_truth": {
+        "node_id": "box_15",
+        "node_type": "process",
+        "node_text": "Record all corrective actions taken, the batch number, and the final disposition of the affected parts in the quality log."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_15",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "All corrective actions, batch information, and disposition details have been logged in the quality system.",
+      "edge_label_to_next": null,
+      "turn_index": 20,
+      "ground_truth": {
+        "node_id": "box_15",
+        "node_type": "process",
+        "node_text": "Record all corrective actions taken, the batch number, and the final disposition of the affected parts in the quality log."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_16",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Was production running during the fault period, are there additional parts to trace?",
+      "edge_label_to_next": null,
+      "turn_index": 21,
+      "ground_truth": {
+        "node_id": "box_16",
+        "node_type": "decision",
+        "node_text": "Was production running during the fault period, are there additional parts to trace?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_16",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "No, production was halted when the issue was first detected, so there are no additional parts to trace.",
+      "edge_label_to_next": "No",
+      "turn_index": 22,
+      "ground_truth": {
+        "node_id": "box_16",
+        "node_type": "decision",
+        "node_text": "Was production running during the fault period, are there additional parts to trace?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_20",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Has the quality assurance team acknowledged the hold notice and confirmed the disposition plan?",
+      "edge_label_to_next": null,
+      "turn_index": 23,
+      "ground_truth": {
+        "node_id": "box_20",
+        "node_type": "decision",
+        "node_text": "Quality assurance team has acknowledged the hold notice and confirmed disposition plan?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_20",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Hey, before we continue, do you know if the new safety harness certifications came in yet? I need to schedule my team for the training next week.",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "unrelated_question",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_20",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, quality assurance has acknowledged and confirmed their disposition plan for the quarantined parts.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 24,
+      "ground_truth": {
+        "node_id": "box_20",
+        "node_type": "decision",
+        "node_text": "Quality assurance team has acknowledged the hold notice and confirmed disposition plan?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_22",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Hold confirmed. Quality assurance disposition is in progress. The diagnostic procedure is now complete.",
+      "edge_label_to_next": null,
+      "turn_index": 25,
+      "ground_truth": {
+        "node_id": "box_22",
+        "node_type": "terminator",
+        "node_text": "End, Hold confirmed. quality assurance disposition in progress. Procedure complete."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_22",
+      "node_type": "terminator",
+      "speaker": "operator",
+      "utterance": "Understood, procedure complete.",
+      "edge_label_to_next": null,
+      "turn_index": 26,
+      "ground_truth": {
+        "node_id": "box_22",
+        "node_type": "terminator",
+        "node_text": "End, Hold confirmed. quality assurance disposition in progress. Procedure complete."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    }
+  ],
+  "metadata": {
+    "depth": 14,
+    "num_decisions": 8,
+    "num_processes": 4,
+    "num_documents": 0,
+    "terminator_type": "production_hold",
+    "terminator_text": "End, Hold confirmed. quality assurance disposition in progress. Procedure complete.",
+    "true_terminator": true,
+    "node_sequence": [
+      "box_0",
+      "box_1",
+      "box_2",
+      "box_4",
+      "box_8",
+      "box_9",
+      "box_8",
+      "box_10",
+      "box_12",
+      "box_14",
+      "box_15",
+      "box_16",
+      "box_20",
+      "box_22"
+    ],
+    "edge_labels": [
+      null,
+      null,
+      null,
+      "No",
+      "No",
+      "Yes",
+      null,
+      "No",
+      "Yes",
+      "No",
+      null,
+      null,
+      "No",
+      "Yes"
+    ],
+    "decision_points": [
+      {
+        "node": "box_2",
+        "label": "No",
+        "question": "Are the damaged parts also found in the input product (i.e. damage present before entering the assembly line)?"
+      },
+      {
+        "node": "box_4",
+        "label": "No",
+        "question": "Are there parts that have been pushed through the insert (over pressed parts)?"
+      },
+      {
+        "node": "box_8",
+        "label": "Yes",
+        "question": "Is the damage pattern consistent with marking induced thermal stress?"
+      },
+      {
+        "node": "box_8",
+        "label": "No",
+        "question": "Is the damage pattern consistent with marking induced thermal stress?"
+      },
+      {
+        "node": "box_10",
+        "label": "Yes",
+        "question": "Have the damaged parts been measured and approved at the metrology station?"
+      },
+      {
+        "node": "box_12",
+        "label": "No",
+        "question": "Do the metrology station measurements confirm the parts are within the critical dimensional tolerance limits?"
+      },
+      {
+        "node": "box_16",
+        "label": "No",
+        "question": "Was production running during the fault period, are there additional parts to trace?"
+      },
+      {
+        "node": "box_20",
+        "label": "Yes",
+        "question": "Quality assurance team has acknowledged the hold notice and confirmed disposition plan?"
+      }
+    ],
+    "generation_model": "anthropic/claude-sonnet-4-5",
+    "verification": {
+      "verified": true,
+      "issues": [],
+      "corrected_turns": [
+        {
+          "node_id": "box_0",
+          "node_type": "terminator",
+          "speaker": "system",
+          "utterance": "Starting damaged parts diagnostic procedure.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_1",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Please store a representative sample of at least five damaged parts for quality assurance team inspection. Record the damage type, location, and the station at which damage was first observed.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_1",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "I've collected five damaged parts and documented the damage characteristics and the station where they were first detected.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_2",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Are the damaged parts also found in the input product, meaning the damage was present before entering the assembly line?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_2",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "No, I've checked the incoming parts and they don't show this type of damage. The damage is occurring somewhere on our line.",
+          "edge_label_to_next": "No"
+        },
+        {
+          "node_id": "box_4",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Are there parts that have been pushed through the insert, meaning over pressed parts?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_4",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "No, the parts aren't over pressed. The inserts look properly seated without any signs of excessive force.",
+          "edge_label_to_next": "No"
+        },
+        {
+          "node_id": "box_8",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is the damage pattern consistent with marking induced thermal stress?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_8",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Yes, I can see discoloration and stress marks around the laser marking area that look like thermal damage.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_9",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Complete the following checks: Read the current laser power level from the parameter screen, compare it against the validated power setting on the process parameter sheet, and check whether the power setting was modified since the last good run.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_9",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "I've checked the laser parameters. The power level is set higher than the validated setting, and the logs show it was changed earlier today.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_8",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is the damage pattern consistent with marking induced thermal stress?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_8",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Now that I've corrected the laser power, looking at the overall damage pattern, it's not exclusively thermal stress. There are other types of damage present as well.",
+          "edge_label_to_next": "No"
+        },
+        {
+          "node_id": "box_10",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Have the damaged parts been measured and approved at the metrology station?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_10",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Yes, these parts have already been through metrology and have measurement data recorded.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_12",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Do the metrology station measurements confirm the parts are within the critical dimensional tolerance limits?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_12",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "No, the measurements show several dimensions are outside the critical tolerance limits.",
+          "edge_label_to_next": "No"
+        },
+        {
+          "node_id": "box_14",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Block and quarantine the affected parts. Notify the maintenance team and quality assurance team with the metrology data.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_14",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "Parts have been quarantined and I've sent notifications to both maintenance and quality assurance with the complete metrology data.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_15",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Record all corrective actions taken, the batch number, and the final disposition of the affected parts in the quality log.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_15",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "All corrective actions, batch information, and disposition details have been logged in the quality system.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_16",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Was production running during the fault period, are there additional parts to trace?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_16",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "No, production was halted when the issue was first detected, so there are no additional parts to trace.",
+          "edge_label_to_next": "No"
+        },
+        {
+          "node_id": "box_20",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Has the quality assurance team acknowledged the hold notice and confirmed the disposition plan?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_20",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Yes, quality assurance has acknowledged and confirmed their disposition plan for the quarantined parts.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_22",
+          "node_type": "terminator",
+          "speaker": "system",
+          "utterance": "Hold confirmed. Quality assurance disposition is in progress. The diagnostic procedure is now complete.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_22",
+          "node_type": "terminator",
+          "speaker": "operator",
+          "utterance": "Understood, procedure complete.",
+          "edge_label_to_next": null
+        }
+      ]
+    },
+    "injection_count": 3
+  },
+  "injection_log": [
+    {
+      "position": 6,
+      "node_id": "box_4",
+      "node_text": "Are there parts that have been pushed through the insert (over pressed parts)?",
+      "edge_labels": [
+        "Yes",
+        "No"
+      ],
+      "category": "coverage_gap",
+      "utterance": "The insert itself looks fine, but I'm seeing metal shavings accumulating in the collection tray underneath — is that something I should be concerned about?",
+      "injection_rate": null,
+      "num_candidates": null
+    },
+    {
+      "position": 14,
+      "node_id": "box_10",
+      "node_text": "Have the damaged parts been measured and approved at the metrology station?",
+      "edge_labels": [
+        "Yes",
+        "No"
+      ],
+      "category": "undocumented_malfunction",
+      "utterance": "The metrology station's laser calibration head is throwing error code E-47 and won't initialize, so I can't get any measurements right now.",
+      "injection_rate": null,
+      "num_candidates": null
+    },
+    {
+      "position": 24,
+      "node_id": "box_20",
+      "node_text": "Quality assurance team has acknowledged the hold notice and confirmed disposition plan?",
+      "edge_labels": [
+        "No",
+        "Yes"
+      ],
+      "category": "unrelated_question",
+      "utterance": "Hey, before we continue, do you know if the new safety harness certifications came in yet? I need to schedule my team for the training next week.",
+      "injection_rate": null,
+      "num_candidates": null
+    }
+  ]
+}

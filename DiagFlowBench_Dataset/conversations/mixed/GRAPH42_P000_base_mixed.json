@@ -1,0 +1,833 @@
+{
+  "conversation_id": "GRAPH42_P000_base_mixed",
+  "graph_id": "GRAPH42",
+  "path_id": "GRAPH42_P000",
+  "regime": "mixed",
+  "variant": "base",
+  "robustness_axis": null,
+  "turns": [
+    {
+      "node_id": "box_0",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Starting tool changer diagnostic procedure.",
+      "edge_label_to_next": null,
+      "turn_index": 0,
+      "ground_truth": {
+        "node_id": "box_0",
+        "node_type": "terminator",
+        "node_text": "Start"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Complete the following checks: First, inspect magazine pockets for deformation, cracking, or swarf accumulation. Second, check gripper arm fingers for bending, cracking, or worn contact faces. Third, inspect the magazine drive mechanism for seized bearings or loose fasteners.",
+      "edge_label_to_next": null,
+      "turn_index": 1,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Inspect magazine pockets for deformation, cracking, or swarf accumulation. 2. Check gripper arm fingers for bending, cracking, or worn contact faces. 3. Inspect the magazine drive mechanism for seized bearings or loose fasteners."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "All checks complete. Magazine pockets are clean with no deformation. Gripper fingers show normal wear and the drive mechanism is secure with no seized bearings.",
+      "edge_label_to_next": null,
+      "turn_index": 2,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Inspect magazine pockets for deformation, cracking, or swarf accumulation. 2. Check gripper arm fingers for bending, cracking, or worn contact faces. 3. Inspect the magazine drive mechanism for seized bearings or loose fasteners."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Magazine deformation, cracked pockets or broken gripper fingers?",
+      "edge_label_to_next": null,
+      "turn_index": 3,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Magazine deformation, cracked pockets or broken gripper fingers?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "No structural damage observed. All pockets are intact and gripper fingers are in good condition.",
+      "edge_label_to_next": "No",
+      "turn_index": 4,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Magazine deformation, cracked pockets or broken gripper fingers?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_6",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Gripper finger spread within retention force tolerance?",
+      "edge_label_to_next": null,
+      "turn_index": 5,
+      "ground_truth": {
+        "node_id": "box_6",
+        "node_type": "decision",
+        "node_text": "Gripper finger spread within retention force tolerance?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_6",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, all gripper finger spread measurements are within spec and the spring return force is positive on all fingers.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 6,
+      "ground_truth": {
+        "node_id": "box_6",
+        "node_type": "decision",
+        "node_text": "Gripper finger spread within retention force tolerance?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_10",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Locating pin diameter within H6/h5 fit tolerance?",
+      "edge_label_to_next": null,
+      "turn_index": 7,
+      "ground_truth": {
+        "node_id": "box_10",
+        "node_type": "decision",
+        "node_text": "Locating pin diameter within H6/h5 fit tolerance?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_10",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "The pin diameter is within spec, but there's excessive play in the bushing itself – it's worn oval-shaped and the fit is sloppy even though the pin measures correctly.",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "coverage_gap",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_10",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Confirmed. All locating pins measure within the H6/h5 tolerance and show no surface damage or scoring.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 8,
+      "ground_truth": {
+        "node_id": "box_10",
+        "node_type": "decision",
+        "node_text": "Locating pin diameter within H6/h5 fit tolerance?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_14",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Tool retention force within rated range for all tested pockets?",
+      "edge_label_to_next": null,
+      "turn_index": 9,
+      "ground_truth": {
+        "node_id": "box_14",
+        "node_type": "decision",
+        "node_text": "Tool retention force within rated range for all tested pockets?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_14",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, retention force readings are all within the rated range across all tested pockets.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 10,
+      "ground_truth": {
+        "node_id": "box_14",
+        "node_type": "decision",
+        "node_text": "Tool retention force within rated range for all tested pockets?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_20",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "All magazine positions indexed within plus or minus zero point three seconds of nominal?",
+      "edge_label_to_next": null,
+      "turn_index": 11,
+      "ground_truth": {
+        "node_id": "box_20",
+        "node_type": "decision",
+        "node_text": "All magazine positions indexed within ±0.3 s of nominal?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_20",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, full rotation cycle time is nominal and all positions index smoothly within the specified timing window.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 12,
+      "ground_truth": {
+        "node_id": "box_20",
+        "node_type": "decision",
+        "node_text": "All magazine positions indexed within ±0.3 s of nominal?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_24",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Magazine positioning accuracy within plus or minus zero point one millimeter at all pockets?",
+      "edge_label_to_next": null,
+      "turn_index": 13,
+      "ground_truth": {
+        "node_id": "box_24",
+        "node_type": "decision",
+        "node_text": "Magazine positioning accuracy within ±0.1 mm at all pockets?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_24",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Confirmed. Dial indicator shows repeatability within zero point one millimeter at all pocket positions.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 14,
+      "ground_truth": {
+        "node_id": "box_24",
+        "node_type": "decision",
+        "node_text": "Magazine positioning accuracy within ±0.1 mm at all pockets?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_29",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "All tool present sensors trigger correctly with tool loaded?",
+      "edge_label_to_next": null,
+      "turn_index": 15,
+      "ground_truth": {
+        "node_id": "box_29",
+        "node_type": "decision",
+        "node_text": "All tool present sensors trigger correctly with tool loaded?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_29",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, all sensors are responding correctly. They activate with tools present and clear when pockets are empty.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 16,
+      "ground_truth": {
+        "node_id": "box_29",
+        "node_type": "decision",
+        "node_text": "All tool present sensors trigger correctly with tool loaded?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_32",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Tool changer safety interlocks function correctly?",
+      "edge_label_to_next": null,
+      "turn_index": 17,
+      "ground_truth": {
+        "node_id": "box_32",
+        "node_type": "decision",
+        "node_text": "Tool changer safety interlocks function correctly?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_32",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, door interlock prevents motion when open and the locking solenoid engages properly before any commanded movement.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 18,
+      "ground_truth": {
+        "node_id": "box_32",
+        "node_type": "decision",
+        "node_text": "Tool changer safety interlocks function correctly?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_36",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Arm swing speed within specified range?",
+      "edge_label_to_next": null,
+      "turn_index": 19,
+      "ground_truth": {
+        "node_id": "box_36",
+        "node_type": "decision",
+        "node_text": "Arm swing speed within specified range?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_36",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Confirmed. Arm cycle time from extend to retract is within the target specification with no indication of binding or pressure loss.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 20,
+      "ground_truth": {
+        "node_id": "box_36",
+        "node_type": "decision",
+        "node_text": "Arm swing speed within specified range?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_39",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "All ten tool changes completed without fault or alarm?",
+      "edge_label_to_next": null,
+      "turn_index": 21,
+      "ground_truth": {
+        "node_id": "box_39",
+        "node_type": "decision",
+        "node_text": "All 10 tool changes completed without fault or alarm?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_39",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "No, I observed two alarm conditions during the cycle test. One change required a retry and another generated a fault code.",
+      "edge_label_to_next": "No",
+      "turn_index": 22,
+      "ground_truth": {
+        "node_id": "box_39",
+        "node_type": "decision",
+        "node_text": "All 10 tool changes completed without fault or alarm?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_40",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Access the alarm log and filter by tool changer related alarm codes. Record the tool number, pocket number, and alarm description, then check whether the alarm pattern correlates with a specific pocket or tool.",
+      "edge_label_to_next": null,
+      "turn_index": 23,
+      "ground_truth": {
+        "node_id": "box_40",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Access the alarm log and filter by tool changer related alarm codes. 2. Record the tool number, pocket number, and alarm description. 3. Check whether the alarm pattern correlates with a specific pocket or tool."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_40",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Alarm log reviewed. Both faults occurred with the same pocket and show a tool seating verification timeout. Pattern indicates pocket-specific issue.",
+      "edge_label_to_next": null,
+      "turn_index": 24,
+      "ground_truth": {
+        "node_id": "box_40",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Access the alarm log and filter by tool changer related alarm codes. 2. Record the tool number, pocket number, and alarm description. 3. Check whether the alarm pattern correlates with a specific pocket or tool."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_41",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Reverify tool changer cycle after fault investigation.",
+      "edge_label_to_next": null,
+      "turn_index": 25,
+      "ground_truth": {
+        "node_id": "box_41",
+        "node_type": "decision",
+        "node_text": "Reverify tool changer cycle after fault investigation"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_41",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Hey, before I finish this up, do you know if we're supposed to update the PM schedule in the system after replacing hydraulic filters, or does maintenance planning handle that automatically?",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "unrelated_question",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_41",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Cycle test repeated but the same pocket continues to generate seating verification faults. Issue persists.",
+      "edge_label_to_next": "Still failing",
+      "turn_index": 26,
+      "ground_truth": {
+        "node_id": "box_41",
+        "node_type": "decision",
+        "node_text": "Reverify tool changer cycle after fault investigation"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_42",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Procedure complete. Escalate this persistent tool changer cycle fault to the maintenance engineer for advanced diagnostics.",
+      "edge_label_to_next": null,
+      "turn_index": 27,
+      "ground_truth": {
+        "node_id": "box_42",
+        "node_type": "terminator",
+        "node_text": "End, Escalate: persistent tool changer cycle fault, maintenance engineer"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_42",
+      "node_type": "terminator",
+      "speaker": "operator",
+      "utterance": "Understood, I'll contact the maintenance engineer immediately.",
+      "edge_label_to_next": null,
+      "turn_index": 28,
+      "ground_truth": {
+        "node_id": "box_42",
+        "node_type": "terminator",
+        "node_text": "End, Escalate: persistent tool changer cycle fault, maintenance engineer"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    }
+  ],
+  "metadata": {
+    "depth": 15,
+    "num_decisions": 11,
+    "num_processes": 2,
+    "num_documents": 0,
+    "terminator_type": "escalate",
+    "terminator_text": "End, Escalate: persistent tool changer cycle fault, maintenance engineer",
+    "true_terminator": true,
+    "node_sequence": [
+      "box_0",
+      "box_1",
+      "box_2",
+      "box_6",
+      "box_10",
+      "box_14",
+      "box_20",
+      "box_24",
+      "box_29",
+      "box_32",
+      "box_36",
+      "box_39",
+      "box_40",
+      "box_41",
+      "box_42"
+    ],
+    "edge_labels": [
+      null,
+      null,
+      null,
+      "No",
+      "Yes",
+      "Yes",
+      "Yes",
+      "Yes",
+      "Yes",
+      "Yes",
+      "Yes",
+      "Yes",
+      "No",
+      null,
+      "Still failing"
+    ],
+    "decision_points": [
+      {
+        "node": "box_2",
+        "label": "No",
+        "question": "Magazine deformation, cracked pockets or broken gripper fingers?"
+      },
+      {
+        "node": "box_6",
+        "label": "Yes",
+        "question": "Gripper finger spread within retention force tolerance?"
+      },
+      {
+        "node": "box_10",
+        "label": "Yes",
+        "question": "Locating pin diameter within H6/h5 fit tolerance?"
+      },
+      {
+        "node": "box_14",
+        "label": "Yes",
+        "question": "Tool retention force within rated range for all tested pockets?"
+      },
+      {
+        "node": "box_20",
+        "label": "Yes",
+        "question": "All magazine positions indexed within ±0.3 s of nominal?"
+      },
+      {
+        "node": "box_24",
+        "label": "Yes",
+        "question": "Magazine positioning accuracy within ±0.1 mm at all pockets?"
+      },
+      {
+        "node": "box_29",
+        "label": "Yes",
+        "question": "All tool present sensors trigger correctly with tool loaded?"
+      },
+      {
+        "node": "box_32",
+        "label": "Yes",
+        "question": "Tool changer safety interlocks function correctly?"
+      },
+      {
+        "node": "box_36",
+        "label": "Yes",
+        "question": "Arm swing speed within specified range?"
+      },
+      {
+        "node": "box_39",
+        "label": "No",
+        "question": "All 10 tool changes completed without fault or alarm?"
+      },
+      {
+        "node": "box_41",
+        "label": "Still failing",
+        "question": "Reverify tool changer cycle after fault investigation"
+      }
+    ],
+    "generation_model": "anthropic/claude-sonnet-4-5",
+    "verification": {
+      "verified": true,
+      "issues": [],
+      "corrected_turns": [
+        {
+          "node_id": "box_0",
+          "node_type": "terminator",
+          "speaker": "system",
+          "utterance": "Starting tool changer diagnostic procedure.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_1",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Complete the following checks: First, inspect magazine pockets for deformation, cracking, or swarf accumulation. Second, check gripper arm fingers for bending, cracking, or worn contact faces. Third, inspect the magazine drive mechanism for seized bearings or loose fasteners.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_1",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "All checks complete. Magazine pockets are clean with no deformation. Gripper fingers show normal wear and the drive mechanism is secure with no seized bearings.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_2",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Magazine deformation, cracked pockets or broken gripper fingers?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_2",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "No structural damage observed. All pockets are intact and gripper fingers are in good condition.",
+          "edge_label_to_next": "No"
+        },
+        {
+          "node_id": "box_6",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Gripper finger spread within retention force tolerance?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_6",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Yes, all gripper finger spread measurements are within spec and the spring return force is positive on all fingers.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_10",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Locating pin diameter within H6/h5 fit tolerance?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_10",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Confirmed. All locating pins measure within the H6/h5 tolerance and show no surface damage or scoring.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_14",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Tool retention force within rated range for all tested pockets?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_14",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Yes, retention force readings are all within the rated range across all tested pockets.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_20",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "All magazine positions indexed within plus or minus zero point three seconds of nominal?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_20",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Yes, full rotation cycle time is nominal and all positions index smoothly within the specified timing window.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_24",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Magazine positioning accuracy within plus or minus zero point one millimeter at all pockets?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_24",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Confirmed. Dial indicator shows repeatability within zero point one millimeter at all pocket positions.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_29",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "All tool present sensors trigger correctly with tool loaded?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_29",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Yes, all sensors are responding correctly. They activate with tools present and clear when pockets are empty.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_32",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Tool changer safety interlocks function correctly?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_32",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Yes, door interlock prevents motion when open and the locking solenoid engages properly before any commanded movement.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_36",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Arm swing speed within specified range?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_36",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Confirmed. Arm cycle time from extend to retract is within the target specification with no indication of binding or pressure loss.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_39",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "All ten tool changes completed without fault or alarm?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_39",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "No, I observed two alarm conditions during the cycle test. One change required a retry and another generated a fault code.",
+          "edge_label_to_next": "No"
+        },
+        {
+          "node_id": "box_40",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Access the alarm log and filter by tool changer related alarm codes. Record the tool number, pocket number, and alarm description, then check whether the alarm pattern correlates with a specific pocket or tool.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_40",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "Alarm log reviewed. Both faults occurred with the same pocket and show a tool seating verification timeout. Pattern indicates pocket-specific issue.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_41",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Reverify tool changer cycle after fault investigation.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_41",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Cycle test repeated but the same pocket continues to generate seating verification faults. Issue persists.",
+          "edge_label_to_next": "Still failing"
+        },
+        {
+          "node_id": "box_42",
+          "node_type": "terminator",
+          "speaker": "system",
+          "utterance": "Procedure complete. Escalate this persistent tool changer cycle fault to the maintenance engineer for advanced diagnostics.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_42",
+          "node_type": "terminator",
+          "speaker": "operator",
+          "utterance": "Understood, I'll contact the maintenance engineer immediately.",
+          "edge_label_to_next": null
+        }
+      ]
+    },
+    "injection_count": 2
+  },
+  "injection_log": [
+    {
+      "position": 8,
+      "node_id": "box_10",
+      "node_text": "Locating pin diameter within H6/h5 fit tolerance?",
+      "edge_labels": [
+        "No",
+        "Yes"
+      ],
+      "category": "coverage_gap",
+      "utterance": "The pin diameter is within spec, but there's excessive play in the bushing itself – it's worn oval-shaped and the fit is sloppy even though the pin measures correctly.",
+      "injection_rate": null,
+      "num_candidates": null
+    },
+    {
+      "position": 26,
+      "node_id": "box_41",
+      "node_text": "Reverify tool changer cycle after fault investigation",
+      "edge_labels": [
+        "Still failing",
+        "OK"
+      ],
+      "category": "unrelated_question",
+      "utterance": "Hey, before I finish this up, do you know if we're supposed to update the PM schedule in the system after replacing hydraulic filters, or does maintenance planning handle that automatically?",
+      "injection_rate": null,
+      "num_candidates": null
+    }
+  ]
+}

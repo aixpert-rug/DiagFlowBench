@@ -1,0 +1,422 @@
+{
+  "conversation_id": "GRAPH50_P000_noise_perturbation",
+  "graph_id": "GRAPH50",
+  "path_id": "GRAPH50_P000",
+  "regime": "clean",
+  "variant": "noise_perturbation",
+  "robustness_axis": "noise_perturbation",
+  "turns": [
+    {
+      "node_id": "box_0",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Starting spindle diagnostic procedure.",
+      "edge_label_to_next": null,
+      "turn_index": 0,
+      "ground_truth": {
+        "node_id": "box_0",
+        "node_type": "terminator",
+        "node_text": "Start"
+      }
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Begin the warm up cycle. Run the spindle at 500 RPM for 5 minutes, then increase to 2000 RPM for another 5 minutes.",
+      "edge_label_to_next": null,
+      "turn_index": 1,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Warm up cycle, spindle at 500 revolutions per minute for 5 min, 2000 revolutions per minute for 5 min"
+      }
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "warm up cycle complete spindle ran at 500 rpm for 5 min then 2000 rpm for 5 min",
+      "edge_label_to_next": "",
+      "turn_index": 2,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Warm up cycle, spindle at 500 revolutions per minute for 5 min, 2000 revolutions per minute for 5 min"
+      }
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Attach a triaxial accelerometer to the spindle nose using a flat washer stud or epoxy mount, aligning the sensor axes with the machine X, Y, and Z axes. Run the spindle at 3000 RPM with no toolholder and record the RMS vibration velocity in each axis. Then repeat the measurement at maximum rated speed and compare all six readings against the baseline from the previous service.",
+      "edge_label_to_next": null,
+      "turn_index": 3,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "process",
+        "node_text": "Attach a triaxial accelerometer to the spindle nose using a flat washer stud or epoxy mount with the sensor axes aligned to the machine X, Y, and Z axes. Run the spindle at 3000 revolutions per minute with no toolholder and record the root mean square vibration velocity in each axis. Repeat the measurement at the maximum rated speed and compare all six readings against the baseline vibration record from the previous service."
+      }
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "acceleromter mounted and aligned, recorded vibration velocities at 3000 rpm and max speed in all three axes all six readings logged and compared to basleine",
+      "edge_label_to_next": null,
+      "turn_index": 4,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "process",
+        "node_text": "Attach a triaxial accelerometer to the spindle nose using a flat washer stud or epoxy mount with the sensor axes aligned to the machine X, Y, and Z axes. Run the spindle at 3000 revolutions per minute with no toolholder and record the root mean square vibration velocity in each axis. Repeat the measurement at the maximum rated speed and compare all six readings against the baseline vibration record from the previous service."
+      }
+    },
+    {
+      "node_id": "box_4",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the vibration level below the alarm threshold at warm up speed?",
+      "edge_label_to_next": null,
+      "turn_index": 5,
+      "ground_truth": {
+        "node_id": "box_4",
+        "node_type": "decision",
+        "node_text": "Vibration level below alarm threshold at warm up speed?"
+      }
+    },
+    {
+      "node_id": "box_4",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yeah vibration levels well below alarm threshold at warmup speed",
+      "edge_label_to_next": "Yes",
+      "turn_index": 6,
+      "ground_truth": {
+        "node_id": "box_4",
+        "node_type": "decision",
+        "node_text": "Vibration level below alarm threshold at warm up speed?"
+      }
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the front bearing temperature within the rated limit after warm up?",
+      "edge_label_to_next": null,
+      "turn_index": 7,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "decision",
+        "node_text": "Front bearing temperature within rated limit after warm up?"
+      }
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yes front bearing temp within rated limit",
+      "edge_label_to_next": "Yes",
+      "turn_index": 8,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "decision",
+        "node_text": "Front bearing temperature within rated limit after warm up?"
+      }
+    },
+    {
+      "node_id": "box_12",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the radial runout within 1 micrometer at the spindle nose?",
+      "edge_label_to_next": null,
+      "turn_index": 9,
+      "ground_truth": {
+        "node_id": "box_12",
+        "node_type": "decision",
+        "node_text": "Radial runout within 1 µm at spindle nose?"
+      }
+    },
+    {
+      "node_id": "box_12",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yes radial runout measures 0.8 micrometers within the 1 micrometer spec",
+      "edge_label_to_next": "Yes",
+      "turn_index": 10,
+      "ground_truth": {
+        "node_id": "box_12",
+        "node_type": "decision",
+        "node_text": "Radial runout within 1 µm at spindle nose?"
+      }
+    },
+    {
+      "node_id": "box_18",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the axial play within the 2 micrometer limit?",
+      "edge_label_to_next": null,
+      "turn_index": 11,
+      "ground_truth": {
+        "node_id": "box_18",
+        "node_type": "decision",
+        "node_text": "Axial play within 2 µm limit?"
+      }
+    },
+    {
+      "node_id": "box_18",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yeah mean axial play is 1.6 micrometers within the 2 micrometer limit",
+      "edge_label_to_next": "Yes",
+      "turn_index": 12,
+      "ground_truth": {
+        "node_id": "box_18",
+        "node_type": "decision",
+        "node_text": "Axial play within 2 µm limit?"
+      }
+    },
+    {
+      "node_id": "box_22",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the taper contact pattern above 80% of the taper area?",
+      "edge_label_to_next": null,
+      "turn_index": 13,
+      "ground_truth": {
+        "node_id": "box_22",
+        "node_type": "decision",
+        "node_text": "Taper contact pattern above 80% of taper area?"
+      }
+    },
+    {
+      "node_id": "box_22",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yes prussian blue transfer shows uniform contact over approx 85% of taper area",
+      "edge_label_to_next": "Yes",
+      "turn_index": 14,
+      "ground_truth": {
+        "node_id": "box_22",
+        "node_type": "decision",
+        "node_text": "Taper contact pattern above 80% of taper area?"
+      }
+    },
+    {
+      "node_id": "box_28",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the drawbar retention force within the rated range?",
+      "edge_label_to_next": null,
+      "turn_index": 15,
+      "ground_truth": {
+        "node_id": "box_28",
+        "node_type": "decision",
+        "node_text": "Drawbar retention force within rated range?"
+      }
+    },
+    {
+      "node_id": "box_28",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yes peak extraction force within spec range for this spindle class",
+      "edge_label_to_next": "Yes",
+      "turn_index": 16,
+      "ground_truth": {
+        "node_id": "box_28",
+        "node_type": "decision",
+        "node_text": "Drawbar retention force within rated range?"
+      }
+    },
+    {
+      "node_id": "box_32",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the speed accuracy within plus or minus 0.1% at all four test speeds?",
+      "edge_label_to_next": null,
+      "turn_index": 17,
+      "ground_truth": {
+        "node_id": "box_32",
+        "node_type": "decision",
+        "node_text": "Speed accuracy within ±0.1% at all four test speeds?"
+      }
+    },
+    {
+      "node_id": "box_32",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no seeing speed errors exceeding 0.1% at two of the four test speeds",
+      "edge_label_to_next": "No",
+      "turn_index": 18,
+      "ground_truth": {
+        "node_id": "box_32",
+        "node_type": "decision",
+        "node_text": "Speed accuracy within ±0.1% at all four test speeds?"
+      }
+    },
+    {
+      "node_id": "box_33",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Adjust the spindle motor speed reference gain in the drive parameter.",
+      "edge_label_to_next": null,
+      "turn_index": 19,
+      "ground_truth": {
+        "node_id": "box_33",
+        "node_type": "process",
+        "node_text": "Adjust spindle motor speed reference gain in drive parameter"
+      }
+    },
+    {
+      "node_id": "box_33",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "speed reference gain adjusted in drive paramter settings",
+      "edge_label_to_next": null,
+      "turn_index": 20,
+      "ground_truth": {
+        "node_id": "box_33",
+        "node_type": "process",
+        "node_text": "Adjust spindle motor speed reference gain in drive parameter"
+      }
+    },
+    {
+      "node_id": "box_34",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Reverify the speed accuracy after the gain adjustment.",
+      "edge_label_to_next": null,
+      "turn_index": 21,
+      "ground_truth": {
+        "node_id": "box_34",
+        "node_type": "decision",
+        "node_text": "Reverify speed accuracy after gain adjustment"
+      }
+    },
+    {
+      "node_id": "box_34",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "ok so speed accuracy still failing at multiple test speeds even after the adjustmnet",
+      "edge_label_to_next": "Still failing",
+      "turn_index": 22,
+      "ground_truth": {
+        "node_id": "box_34",
+        "node_type": "decision",
+        "node_text": "Reverify speed accuracy after gain adjustment"
+      }
+    },
+    {
+      "node_id": "box_35",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Procedure ending with escalation required. Speed accuracy is unrecoverable, indicating an encoder or drive fault. Place the spindle offline and escalate to the controls engineering team for encoder and drive diagnostics.",
+      "edge_label_to_next": null,
+      "turn_index": 23,
+      "ground_truth": {
+        "node_id": "box_35",
+        "node_type": "terminator",
+        "node_text": "End, Escalate: speed accuracy unrecoverable, encoder or drive fault"
+      }
+    },
+    {
+      "node_id": "box_35",
+      "node_type": "terminator",
+      "speaker": "operator",
+      "utterance": "understood will escalate this to controls engineering immediately",
+      "edge_label_to_next": null,
+      "turn_index": 24,
+      "ground_truth": {
+        "node_id": "box_35",
+        "node_type": "terminator",
+        "node_text": "End, Escalate: speed accuracy unrecoverable, encoder or drive fault"
+      }
+    }
+  ],
+  "metadata": {
+    "depth": 13,
+    "num_decisions": 8,
+    "num_processes": 3,
+    "num_documents": 0,
+    "terminator_type": "escalate",
+    "terminator_text": "End, Escalate: speed accuracy unrecoverable, encoder or drive fault",
+    "true_terminator": true,
+    "node_sequence": [
+      "box_0",
+      "box_1",
+      "box_2",
+      "box_4",
+      "box_8",
+      "box_12",
+      "box_18",
+      "box_22",
+      "box_28",
+      "box_32",
+      "box_33",
+      "box_34",
+      "box_35"
+    ],
+    "edge_labels": [
+      null,
+      null,
+      "",
+      null,
+      "Yes",
+      "Yes",
+      "Yes",
+      "Yes",
+      "Yes",
+      "Yes",
+      "No",
+      null,
+      "Still failing"
+    ],
+    "decision_points": [
+      {
+        "node": "box_4",
+        "label": "Yes",
+        "question": "Vibration level below alarm threshold at warm up speed?"
+      },
+      {
+        "node": "box_8",
+        "label": "Yes",
+        "question": "Front bearing temperature within rated limit after warm up?"
+      },
+      {
+        "node": "box_12",
+        "label": "Yes",
+        "question": "Radial runout within 1 µm at spindle nose?"
+      },
+      {
+        "node": "box_18",
+        "label": "Yes",
+        "question": "Axial play within 2 µm limit?"
+      },
+      {
+        "node": "box_22",
+        "label": "Yes",
+        "question": "Taper contact pattern above 80% of taper area?"
+      },
+      {
+        "node": "box_28",
+        "label": "Yes",
+        "question": "Drawbar retention force within rated range?"
+      },
+      {
+        "node": "box_32",
+        "label": "No",
+        "question": "Speed accuracy within ±0.1% at all four test speeds?"
+      },
+      {
+        "node": "box_34",
+        "label": "Still failing",
+        "question": "Reverify speed accuracy after gain adjustment"
+      }
+    ],
+    "generation_model": "anthropic/claude-sonnet-4-5",
+    "verification": {
+      "variant_of": "base",
+      "base_verified": true,
+      "note": "surface-form variant; not independently verified"
+    }
+  }
+}

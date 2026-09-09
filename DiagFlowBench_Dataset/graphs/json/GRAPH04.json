@@ -1,0 +1,86 @@
+{
+  "id": "GRAPH04",
+  "description": "Diagnostic flowchart for handling damaged inserts detected in input products before they enter the automated assembly process.",
+  "graph": {
+    "nodes": {
+      "box_0": {
+        "type": "terminator",
+        "text": "Start"
+      },
+      "box_1": {
+        "type": "decision",
+        "text": "Are the faulty/damaged parts also found in the input product?"
+      },
+      "box_2": {
+        "type": "process",
+        "text": "Check in both supply conveyors whether the found defects can also be found here."
+      },
+      "box_3": {
+        "type": "process",
+        "text": "Continue with a different batch and notify the quality assurance team."
+      },
+      "box_4": {
+        "type": "decision",
+        "text": "Do the defects/damages come from one supply conveyor?"
+      },
+      "box_5": {
+        "type": "process",
+        "text": "Check the indexing table regularly for faulty/damaged products"
+      },
+      "box_6": {
+        "type": "process",
+        "text": "Empty the supply conveyor, check for deviations, then load a different batch of parts."
+      },
+      "box_7": {
+        "type": "process",
+        "text": "Check the reorientation unit and discharge assembly robot for deviations."
+      },
+      "box_8": {
+        "type": "terminator",
+        "text": "Notify maintenance team and quality assurance team"
+      }
+    },
+    "edges": [
+      {
+        "source": "box_0",
+        "target": "box_1",
+        "label": null
+      },
+      {
+        "source": "box_2",
+        "target": "box_1",
+        "label": null
+      },
+      {
+        "source": "box_1",
+        "target": "box_3",
+        "label": "Yes"
+      },
+      {
+        "source": "box_1",
+        "target": "box_4",
+        "label": "No"
+      },
+      {
+        "source": "box_5",
+        "target": "box_4",
+        "label": null
+      },
+      {
+        "source": "box_4",
+        "target": "box_6",
+        "label": "Yes"
+      },
+      {
+        "source": "box_4",
+        "target": "box_7",
+        "label": "No"
+      },
+      {
+        "source": "box_7",
+        "target": "box_8",
+        "label": null
+      }
+    ]
+  }
+}

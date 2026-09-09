@@ -1,0 +1,135 @@
+{
+  "conversation_id": "GRAPH44_P014_noise_perturbation",
+  "graph_id": "GRAPH44",
+  "path_id": "GRAPH44_P014",
+  "regime": "clean",
+  "variant": "noise_perturbation",
+  "robustness_axis": "noise_perturbation",
+  "turns": [
+    {
+      "node_id": "box_0",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Starting fixture inspection and qualification diagnostic procedure.",
+      "edge_label_to_next": null,
+      "turn_index": 0,
+      "ground_truth": {
+        "node_id": "box_0",
+        "node_type": "terminator",
+        "node_text": "Start"
+      }
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Please complete the initial visual inspection. First, inspect the fixture base plate for any cracks or surface distortion. Next, check all locating surfaces, dowel holes, and mounting pad faces for damage. Finally, inspect each clamp body for deformation or cracked pivot pins.",
+      "edge_label_to_next": null,
+      "turn_index": 1,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Inspect the fixture base plate for cracks or surface distortion. 2. Check locating surfaces, dowel holes, and mounting pad faces for damage. 3. Inspect each clamp body for deformation or cracked pivot pins."
+      }
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "visual inspection complete checked the base plate locatign surfaces dowel holes mounting pads and all clamp bodies",
+      "edge_label_to_next": null,
+      "turn_index": 2,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Inspect the fixture base plate for cracks or surface distortion. 2. Check locating surfaces, dowel holes, and mounting pad faces for damage. 3. Inspect each clamp body for deformation or cracked pivot pins."
+      }
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Base plate cracks, distortion or damaged mounting surfaces?",
+      "edge_label_to_next": null,
+      "turn_index": 3,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Base plate cracks, distortion or damaged mounting surfaces?"
+      }
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yeah seeing a crack running along the base plate near the mountng area and some surface distortion",
+      "edge_label_to_next": "Yes",
+      "turn_index": 4,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Base plate cracks, distortion or damaged mounting surfaces?"
+      }
+    },
+    {
+      "node_id": "box_3",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "This fixture requires base plate replacement. Please escalate this issue to the maintenance supervisor and place the fixture on production hold immediately.",
+      "edge_label_to_next": null,
+      "turn_index": 5,
+      "ground_truth": {
+        "node_id": "box_3",
+        "node_type": "terminator",
+        "node_text": "End, Escalate: fixture base plate replacement required"
+      }
+    },
+    {
+      "node_id": "box_3",
+      "node_type": "terminator",
+      "speaker": "operator",
+      "utterance": "understood will escalate for base plate replacement and tag the fixutre as out of service",
+      "edge_label_to_next": null,
+      "turn_index": 6,
+      "ground_truth": {
+        "node_id": "box_3",
+        "node_type": "terminator",
+        "node_text": "End, Escalate: fixture base plate replacement required"
+      }
+    }
+  ],
+  "metadata": {
+    "depth": 4,
+    "num_decisions": 1,
+    "num_processes": 1,
+    "num_documents": 0,
+    "terminator_type": "escalate",
+    "terminator_text": "End, Escalate: fixture base plate replacement required",
+    "true_terminator": true,
+    "node_sequence": [
+      "box_0",
+      "box_1",
+      "box_2",
+      "box_3"
+    ],
+    "edge_labels": [
+      null,
+      null,
+      null,
+      "Yes"
+    ],
+    "decision_points": [
+      {
+        "node": "box_2",
+        "label": "Yes",
+        "question": "Base plate cracks, distortion or damaged mounting surfaces?"
+      }
+    ],
+    "generation_model": "anthropic/claude-sonnet-4-5",
+    "verification": {
+      "variant_of": "base",
+      "base_verified": true,
+      "note": "surface-form variant; not independently verified"
+    }
+  }
+}

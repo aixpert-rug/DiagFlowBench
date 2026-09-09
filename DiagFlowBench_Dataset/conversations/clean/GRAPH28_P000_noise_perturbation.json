@@ -1,0 +1,417 @@
+{
+  "conversation_id": "GRAPH28_P000_noise_perturbation",
+  "graph_id": "GRAPH28",
+  "path_id": "GRAPH28_P000",
+  "regime": "clean",
+  "variant": "noise_perturbation",
+  "robustness_axis": "noise_perturbation",
+  "turns": [
+    {
+      "node_id": "box_0",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Starting reorientation unit jam diagnostic procedure.",
+      "edge_label_to_next": null,
+      "turn_index": 0,
+      "ground_truth": {
+        "node_id": "box_0",
+        "node_type": "terminator",
+        "node_text": "Start"
+      }
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Stop the machine immediately. Manually remove the jammed part without forcing. Inspect the part and the reorientation unit interior for damage or debris, and note the jam location.",
+      "edge_label_to_next": null,
+      "turn_index": 1,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Stop the machine immediately. Manually remove the jammed part without forcing. Inspect the part and the reorientation unit interior for damage or debris. Note the jam location."
+      }
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "machine stopped removed the jamed part carefully and inspected the unit, jam location noted",
+      "edge_label_to_next": "",
+      "turn_index": 2,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Stop the machine immediately. Manually remove the jammed part without forcing. Inspect the part and the reorientation unit interior for damage or debris. Note the jam location."
+      }
+    },
+    {
+      "node_id": "box_3",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Measure the jammed part on the metrology station and record the dimensions.",
+      "edge_label_to_next": null,
+      "turn_index": 3,
+      "ground_truth": {
+        "node_id": "box_3",
+        "node_type": "process",
+        "node_text": "Measure the jammed part on the metrology station. Record dimensions."
+      }
+    },
+    {
+      "node_id": "box_3",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "measurements complete dims recorded",
+      "edge_label_to_next": null,
+      "turn_index": 4,
+      "ground_truth": {
+        "node_id": "box_3",
+        "node_type": "process",
+        "node_text": "Measure the jammed part on the metrology station. Record dimensions."
+      }
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the jammed part dimensionally non-conforming, outside the accepted dimensional range for this product type?",
+      "edge_label_to_next": null,
+      "turn_index": 5,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Is the jammed part dimensionally non conforming (outside the accepted dimensional range for this product type)?"
+      }
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "dims are within spec yeah part meets the accepted dim range",
+      "edge_label_to_next": "No",
+      "turn_index": 6,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Is the jammed part dimensionally non conforming (outside the accepted dimensional range for this product type)?"
+      }
+    },
+    {
+      "node_id": "box_5",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is there contamination or debris in the reorientation unit that could obstruct part movement?",
+      "edge_label_to_next": null,
+      "turn_index": 7,
+      "ground_truth": {
+        "node_id": "box_5",
+        "node_type": "decision",
+        "node_text": "Is there contamination or debris in the reorientation unit that could obstruct part movement?"
+      }
+    },
+    {
+      "node_id": "box_5",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "unit looks clean dont see any contamination or debirs that would obstruct movement",
+      "edge_label_to_next": "No",
+      "turn_index": 8,
+      "ground_truth": {
+        "node_id": "box_5",
+        "node_type": "decision",
+        "node_text": "Is there contamination or debris in the reorientation unit that could obstruct part movement?"
+      }
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the gripper jaw opening width correctly set for this part diameter?",
+      "edge_label_to_next": null,
+      "turn_index": 9,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "decision",
+        "node_text": "Is the gripper jaw opening width correctly set for this part diameter?"
+      }
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "gripper jaw opening set correctly matches spec for this part diameter",
+      "edge_label_to_next": "Yes",
+      "turn_index": 10,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "decision",
+        "node_text": "Is the gripper jaw opening width correctly set for this part diameter?"
+      }
+    },
+    {
+      "node_id": "box_11",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the reorientation cycle completing within the specified cycle time?",
+      "edge_label_to_next": null,
+      "turn_index": 11,
+      "ground_truth": {
+        "node_id": "box_11",
+        "node_type": "decision",
+        "node_text": "Is the reorientation cycle completing within the specified cycle time?"
+      }
+    },
+    {
+      "node_id": "box_11",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "cycles completing on time well within the specifed cycle time",
+      "edge_label_to_next": "Yes",
+      "turn_index": 12,
+      "ground_truth": {
+        "node_id": "box_11",
+        "node_type": "decision",
+        "node_text": "Is the reorientation cycle completing within the specified cycle time?"
+      }
+    },
+    {
+      "node_id": "box_14",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Has the jam fault been eliminated and ten consecutive jam-free cycles confirmed?",
+      "edge_label_to_next": null,
+      "turn_index": 13,
+      "ground_truth": {
+        "node_id": "box_14",
+        "node_type": "decision",
+        "node_text": "Has the jam fault been eliminated and ten consecutive jam free cycles confirmed?"
+      }
+    },
+    {
+      "node_id": "box_14",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "confirmed ran ten consecutive cycles with no jams fault appears to be eliminated",
+      "edge_label_to_next": "Yes",
+      "turn_index": 14,
+      "ground_truth": {
+        "node_id": "box_14",
+        "node_type": "decision",
+        "node_text": "Has the jam fault been eliminated and ten consecutive jam free cycles confirmed?"
+      }
+    },
+    {
+      "node_id": "box_16",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Record the jam event, root cause, and corrective action in the quality log. Notify the quality assurance team.",
+      "edge_label_to_next": null,
+      "turn_index": 15,
+      "ground_truth": {
+        "node_id": "box_16",
+        "node_type": "process",
+        "node_text": "Record the jam event, root cause, and corrective action in the quality log. Notify quality assurance team."
+      }
+    },
+    {
+      "node_id": "box_16",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "event logged with root cause and corrective action QA has been notifed",
+      "edge_label_to_next": null,
+      "turn_index": 16,
+      "ground_truth": {
+        "node_id": "box_16",
+        "node_type": "process",
+        "node_text": "Record the jam event, root cause, and corrective action in the quality log. Notify quality assurance team."
+      }
+    },
+    {
+      "node_id": "box_17",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Run a twenty-cycle production speed verification and monitor the reorientation unit for jam recurrence.",
+      "edge_label_to_next": null,
+      "turn_index": 17,
+      "ground_truth": {
+        "node_id": "box_17",
+        "node_type": "process",
+        "node_text": "Run 20 cycle production speed verification, monitor reorientation unit for jam recurrence."
+      }
+    },
+    {
+      "node_id": "box_17",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "ok so twenty-cycle verification run complete been monitoring closely for any recurrance",
+      "edge_label_to_next": null,
+      "turn_index": 18,
+      "ground_truth": {
+        "node_id": "box_17",
+        "node_type": "process",
+        "node_text": "Run 20 cycle production speed verification, monitor reorientation unit for jam recurrence."
+      }
+    },
+    {
+      "node_id": "box_19",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "All twenty cycles completed without jam or cycle timeout?",
+      "edge_label_to_next": null,
+      "turn_index": 19,
+      "ground_truth": {
+        "node_id": "box_19",
+        "node_type": "decision",
+        "node_text": "All 20 cycles completed without jam or cycle timeout?"
+      }
+    },
+    {
+      "node_id": "box_19",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yeah all twenty cycles ran successfully no jams and no timeouts",
+      "edge_label_to_next": "Yes",
+      "turn_index": 20,
+      "ground_truth": {
+        "node_id": "box_19",
+        "node_type": "decision",
+        "node_text": "All 20 cycles completed without jam or cycle timeout?"
+      }
+    },
+    {
+      "node_id": "box_21",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Was the jammed part damaged, and could it have been released downstream before jam detection?",
+      "edge_label_to_next": null,
+      "turn_index": 21,
+      "ground_truth": {
+        "node_id": "box_21",
+        "node_type": "decision",
+        "node_text": "Was the jammed part damaged, could it have been released downstream before jam detection?"
+      }
+    },
+    {
+      "node_id": "box_21",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "part wasnt damaged and couldnt have made it downstream jam was caught immediatley",
+      "edge_label_to_next": "No",
+      "turn_index": 22,
+      "ground_truth": {
+        "node_id": "box_21",
+        "node_type": "decision",
+        "node_text": "Was the jammed part damaged, could it have been released downstream before jam detection?"
+      }
+    },
+    {
+      "node_id": "box_23",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Procedure complete. Production may be resumed.",
+      "edge_label_to_next": null,
+      "turn_index": 23,
+      "ground_truth": {
+        "node_id": "box_23",
+        "node_type": "terminator",
+        "node_text": "End, Procedure complete. Production resumed."
+      }
+    },
+    {
+      "node_id": "box_23",
+      "node_type": "terminator",
+      "speaker": "operator",
+      "utterance": "understood resuming production now",
+      "edge_label_to_next": null,
+      "turn_index": 24,
+      "ground_truth": {
+        "node_id": "box_23",
+        "node_type": "terminator",
+        "node_text": "End, Procedure complete. Production resumed."
+      }
+    }
+  ],
+  "metadata": {
+    "depth": 13,
+    "num_decisions": 7,
+    "num_processes": 4,
+    "num_documents": 0,
+    "terminator_type": "procedure_complete",
+    "terminator_text": "End, Procedure complete. Production resumed.",
+    "true_terminator": true,
+    "node_sequence": [
+      "box_0",
+      "box_1",
+      "box_3",
+      "box_2",
+      "box_5",
+      "box_8",
+      "box_11",
+      "box_14",
+      "box_16",
+      "box_17",
+      "box_19",
+      "box_21",
+      "box_23"
+    ],
+    "edge_labels": [
+      null,
+      null,
+      "",
+      null,
+      "No",
+      "No",
+      "Yes",
+      "Yes",
+      "Yes",
+      null,
+      null,
+      "Yes",
+      "No"
+    ],
+    "decision_points": [
+      {
+        "node": "box_2",
+        "label": "No",
+        "question": "Is the jammed part dimensionally non conforming (outside the accepted dimensional range for this product type)?"
+      },
+      {
+        "node": "box_5",
+        "label": "No",
+        "question": "Is there contamination or debris in the reorientation unit that could obstruct part movement?"
+      },
+      {
+        "node": "box_8",
+        "label": "Yes",
+        "question": "Is the gripper jaw opening width correctly set for this part diameter?"
+      },
+      {
+        "node": "box_11",
+        "label": "Yes",
+        "question": "Is the reorientation cycle completing within the specified cycle time?"
+      },
+      {
+        "node": "box_14",
+        "label": "Yes",
+        "question": "Has the jam fault been eliminated and ten consecutive jam free cycles confirmed?"
+      },
+      {
+        "node": "box_19",
+        "label": "Yes",
+        "question": "All 20 cycles completed without jam or cycle timeout?"
+      },
+      {
+        "node": "box_21",
+        "label": "No",
+        "question": "Was the jammed part damaged, could it have been released downstream before jam detection?"
+      }
+    ],
+    "generation_model": "anthropic/claude-sonnet-4-5",
+    "verification": {
+      "variant_of": "base",
+      "base_verified": true,
+      "note": "surface-form variant; not independently verified"
+    }
+  }
+}

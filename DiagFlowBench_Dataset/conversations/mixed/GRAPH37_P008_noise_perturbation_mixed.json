@@ -1,0 +1,724 @@
+{
+  "conversation_id": "GRAPH37_P008_noise_perturbation_mixed",
+  "graph_id": "GRAPH37",
+  "path_id": "GRAPH37_P008",
+  "regime": "mixed",
+  "variant": "noise_perturbation",
+  "robustness_axis": "noise_perturbation",
+  "turns": [
+    {
+      "node_id": "box_0",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Starting vision system diagnostic procedure.",
+      "edge_label_to_next": null,
+      "turn_index": 0,
+      "ground_truth": {
+        "node_id": "box_0",
+        "node_type": "terminator",
+        "node_text": "Start"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Complete the following checks: First, inspect the lens front element at oblique incidence for scratches or chips. Second, check the lens housing for impact cracks or loose retaining ring. Third, inspect the lens mount face for contamination or swarf.",
+      "edge_label_to_next": null,
+      "turn_index": 1,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Inspect the lens front element at oblique incidence for scratches or chips. 2. Check the lens housing for impact cracks or loose retaining ring. 3. Inspect the lens mount face for contamination or swarf."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "all three checks done lens element clear housing intact and mount face clean",
+      "edge_label_to_next": null,
+      "turn_index": 2,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Inspect the lens front element at oblique incidence for scratches or chips. 2. Check the lens housing for impact cracks or loose retaining ring. 3. Inspect the lens mount face for contamination or swarf."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Are lens scratches, chips or contamination present?",
+      "edge_label_to_next": null,
+      "turn_index": 3,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Lens scratches, chips or contamination present?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no lens is in good conditon no visible damage or contamination",
+      "edge_label_to_next": "No",
+      "turn_index": 4,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Lens scratches, chips or contamination present?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_6",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the lighting intensity within specified range at the part plane?",
+      "edge_label_to_next": null,
+      "turn_index": 5,
+      "ground_truth": {
+        "node_id": "box_6",
+        "node_type": "decision",
+        "node_text": "Lighting intensity within specified range at part plane?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_6",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no the illuminance readings below spec at mutliple points in the inspection field",
+      "edge_label_to_next": "No",
+      "turn_index": 6,
+      "ground_truth": {
+        "node_id": "box_6",
+        "node_type": "decision",
+        "node_text": "Lighting intensity within specified range at part plane?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_7",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Adjust the lighting voltage or replace LEDs as required to bring intensity within range.",
+      "edge_label_to_next": null,
+      "turn_index": 7,
+      "ground_truth": {
+        "node_id": "box_7",
+        "node_type": "process",
+        "node_text": "Adjust lighting voltage or replace LEDs as required"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_7",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "ok so lighting voltage adjusted intensity now within spec",
+      "edge_label_to_next": "",
+      "turn_index": 8,
+      "ground_truth": {
+        "node_id": "box_7",
+        "node_type": "process",
+        "node_text": "Adjust lighting voltage or replace LEDs as required"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Blow dry compressed air across the lens surface to remove loose particles. Apply two drops of optical lens cleaner to a lint-free cloth and wipe the lens surface using a single outward spiral motion from centre to edge. Inspect the lens under oblique light after cleaning and repeat if smearing or residue is visible.",
+      "edge_label_to_next": null,
+      "turn_index": 9,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "process",
+        "node_text": "Blow dry compressed air across the lens surface to remove loose particles. Apply two drops of optical lens cleaner to a lint free cloth and wipe the lens surface using a single outward spiral motion from centre to edge. Inspect the lens under oblique light after cleaning and repeat if smearing or residue is visible."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "lens cleaning completed surface clear no smearign or residue visible",
+      "edge_label_to_next": null,
+      "turn_index": 10,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "process",
+        "node_text": "Blow dry compressed air across the lens surface to remove loose particles. Apply two drops of optical lens cleaner to a lint free cloth and wipe the lens surface using a single outward spiral motion from centre to edge. Inspect the lens under oblique light after cleaning and repeat if smearing or residue is visible."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_11",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the image sharpness within specification?",
+      "edge_label_to_next": null,
+      "turn_index": 11,
+      "ground_truth": {
+        "node_id": "box_11",
+        "node_type": "decision",
+        "node_text": "Image sharpness within sharpness specification specification?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_11",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yeah the MTF measurements all within lens acceptance criteria",
+      "edge_label_to_next": "Yes",
+      "turn_index": 12,
+      "ground_truth": {
+        "node_id": "box_11",
+        "node_type": "decision",
+        "node_text": "Image sharpness within sharpness specification specification?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_16",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is distortion within plus or minus 0.5 pixels at corner positions?",
+      "edge_label_to_next": null,
+      "turn_index": 13,
+      "ground_truth": {
+        "node_id": "box_16",
+        "node_type": "decision",
+        "node_text": "Distortion within ±0.5 px at corner positions?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_16",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no max radial distortion at corners exceeds 0.5 pixels",
+      "edge_label_to_next": "No",
+      "turn_index": 14,
+      "ground_truth": {
+        "node_id": "box_16",
+        "node_type": "decision",
+        "node_text": "Distortion within ±0.5 px at corner positions?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_17",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Apply lens distortion correction coefficients in the vision software.",
+      "edge_label_to_next": null,
+      "turn_index": 15,
+      "ground_truth": {
+        "node_id": "box_17",
+        "node_type": "process",
+        "node_text": "Apply lens distortion correction coefficients in vision software"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_17",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "correction coefficients applied succesfully",
+      "edge_label_to_next": "",
+      "turn_index": 16,
+      "ground_truth": {
+        "node_id": "box_17",
+        "node_type": "process",
+        "node_text": "Apply lens distortion correction coefficients in vision software"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_18",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Place the standard chessboard calibration target on the presentation fixture at nominal focal distance. Capture five images from five different target orientations as required by the calibration algorithm. Run the calibration routine in the vision software and record the reprojection error.",
+      "edge_label_to_next": null,
+      "turn_index": 17,
+      "ground_truth": {
+        "node_id": "box_18",
+        "node_type": "process",
+        "node_text": "Place the standard chessboard calibration target on the presentation fixture at the nominal focal distance. Capture five images from five different target orientations as required by the calibration algorithm. Run the calibration routine in the vision software and record the reprojection error; confirm the result is below the limit stated in the vision system commissioning record."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_18",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "calibration complete five images captured and routine executed succesfully",
+      "edge_label_to_next": null,
+      "turn_index": 18,
+      "ground_truth": {
+        "node_id": "box_18",
+        "node_type": "process",
+        "node_text": "Place the standard chessboard calibration target on the presentation fixture at the nominal focal distance. Capture five images from five different target orientations as required by the calibration algorithm. Run the calibration routine in the vision software and record the reprojection error; confirm the result is below the limit stated in the vision system commissioning record."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_20",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the calibration residual error within 0.1 pixel root mean square?",
+      "edge_label_to_next": null,
+      "turn_index": 19,
+      "ground_truth": {
+        "node_id": "box_20",
+        "node_type": "decision",
+        "node_text": "Calibration residual error within 0.1 px root mean square?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_20",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yes reprojection error is 0.08 pixels well below the limit",
+      "edge_label_to_next": "Yes",
+      "turn_index": 20,
+      "ground_truth": {
+        "node_id": "box_20",
+        "node_type": "decision",
+        "node_text": "Calibration residual error within 0.1 px root mean square?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_25",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the trigger delay within plus or minus 0.5 milliseconds of specification?",
+      "edge_label_to_next": null,
+      "turn_index": 21,
+      "ground_truth": {
+        "node_id": "box_25",
+        "node_type": "decision",
+        "node_text": "Trigger delay within ±0.5 ms of specification?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_25",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no measured delay is 1.2 ms outside the tolerence window",
+      "edge_label_to_next": "No",
+      "turn_index": 22,
+      "ground_truth": {
+        "node_id": "box_25",
+        "node_type": "decision",
+        "node_text": "Trigger delay within ±0.5 ms of specification?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_26",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Adjust the trigger delay in the programmable controller programme to bring it within specification.",
+      "edge_label_to_next": null,
+      "turn_index": 23,
+      "ground_truth": {
+        "node_id": "box_26",
+        "node_type": "process",
+        "node_text": "Adjust trigger delay in programmable controller programme"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_26",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "trigger delay adjusted now measuring within tolerance",
+      "edge_label_to_next": "",
+      "turn_index": 24,
+      "ground_truth": {
+        "node_id": "box_26",
+        "node_type": "process",
+        "node_text": "Adjust trigger delay in programmable controller programme"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_27",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Run 200 known good conforming parts through the inspection system in normal production conditions. Record the number flagged as reject by the system, calculate the false reject rate as a percentage, and document the part types and inspection features most frequently causing false rejections.",
+      "edge_label_to_next": null,
+      "turn_index": 25,
+      "ground_truth": {
+        "node_id": "box_27",
+        "node_type": "process",
+        "node_text": "Run 200 known good conforming parts through the inspection system in normal production conditions. Record the number flagged as reject by the system. Calculate the false reject rate as a percentage of the 200 part sample and compare against the maximum allowed false reject rate specified for the product. Document the part types and the inspection feature most frequently causing false rejections."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_27",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "test run completed all 200 parts processed results documented",
+      "edge_label_to_next": null,
+      "turn_index": 26,
+      "ground_truth": {
+        "node_id": "box_27",
+        "node_type": "process",
+        "node_text": "Run 200 known good conforming parts through the inspection system in normal production conditions. Record the number flagged as reject by the system. Calculate the false reject rate as a percentage of the 200 part sample and compare against the maximum allowed false reject rate specified for the product. Document the part types and the inspection feature most frequently causing false rejections."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_28",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the false reject rate below 0.5 percent?",
+      "edge_label_to_next": null,
+      "turn_index": 27,
+      "ground_truth": {
+        "node_id": "box_28",
+        "node_type": "decision",
+        "node_text": "False reject rate below 0.5%?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_28",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no we had 3 false rejects out of 200 giving us 1.5 percent false reject rate",
+      "edge_label_to_next": "No",
+      "turn_index": 28,
+      "ground_truth": {
+        "node_id": "box_28",
+        "node_type": "decision",
+        "node_text": "False reject rate below 0.5%?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_29",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Complete the following checks: Retrieve the stored rejection images for the last ten false accepts, confirm each retrieved image shows a visible defect, and compare the defect position against the inspection zone boundary settings.",
+      "edge_label_to_next": null,
+      "turn_index": 29,
+      "ground_truth": {
+        "node_id": "box_29",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Retrieve the stored rejection images for the last ten false accepts. 2. Confirm each retrieved image shows a visible defect. 3. Compare the defect position against the inspection zone boundary settings."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_29",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "all checks completed images retreived and defect positions compared to zone boundaries",
+      "edge_label_to_next": "",
+      "turn_index": 30,
+      "ground_truth": {
+        "node_id": "box_29",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Retrieve the stored rejection images for the last ten false accepts. 2. Confirm each retrieved image shows a visible defect. 3. Compare the defect position against the inspection zone boundary settings."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_30",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Pass 10 known non-conforming parts, each with a documented defect type, through the inspection system individually. Record whether each defect is detected and confirm that the system correctly rejects all 10 parts.",
+      "edge_label_to_next": null,
+      "turn_index": 31,
+      "ground_truth": {
+        "node_id": "box_30",
+        "node_type": "process",
+        "node_text": "Pass 10 known non conforming parts, each with a documented defect type, through the inspection system individually. Record whether each defect is detected and the system output for each part. Confirm that the system correctly rejects all 10 parts; any part that is accepted constitutes a false accept and requires immediate investigation before resuming production."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_30",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "I'm seeing condensation forming inside the camera housing on unit 3, and the lens looks a bit foggy. Should I be concerned about that affecting the readings, or do we just continue with the test?",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "coverage_gap",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_30",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "all 10 defect parts tested results recorded for each one",
+      "edge_label_to_next": null,
+      "turn_index": 32,
+      "ground_truth": {
+        "node_id": "box_30",
+        "node_type": "process",
+        "node_text": "Pass 10 known non conforming parts, each with a documented defect type, through the inspection system individually. Record whether each defect is detected and the system output for each part. Confirm that the system correctly rejects all 10 parts; any part that is accepted constitutes a false accept and requires immediate investigation before resuming production."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_31",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Were all known rejects correctly detected?",
+      "edge_label_to_next": null,
+      "turn_index": 33,
+      "ground_truth": {
+        "node_id": "box_31",
+        "node_type": "decision",
+        "node_text": "All known rejects correctly detected?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_31",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no two of the defective parts were incorectly accepted by the system",
+      "edge_label_to_next": "No",
+      "turn_index": 34,
+      "ground_truth": {
+        "node_id": "box_31",
+        "node_type": "decision",
+        "node_text": "All known rejects correctly detected?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_32",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Detection capability is insufficient. Escalate this issue for algorithm review. Do not resume production until the vision engineer has addressed the detection failures.",
+      "edge_label_to_next": null,
+      "turn_index": 35,
+      "ground_truth": {
+        "node_id": "box_32",
+        "node_type": "terminator",
+        "node_text": "End, Escalate: detection capability insufficient, algorithm review required"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_32",
+      "node_type": "terminator",
+      "speaker": "operator",
+      "utterance": "understood will escalate to vision engineer imediately",
+      "edge_label_to_next": null,
+      "turn_index": 36,
+      "ground_truth": {
+        "node_id": "box_32",
+        "node_type": "terminator",
+        "node_text": "End, Escalate: detection capability insufficient, algorithm review required"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    }
+  ],
+  "metadata": {
+    "depth": 19,
+    "num_decisions": 8,
+    "num_processes": 9,
+    "num_documents": 0,
+    "terminator_type": "escalate",
+    "terminator_text": "End, Escalate: detection capability insufficient, algorithm review required",
+    "true_terminator": true,
+    "node_sequence": [
+      "box_0",
+      "box_1",
+      "box_2",
+      "box_6",
+      "box_7",
+      "box_8",
+      "box_11",
+      "box_16",
+      "box_17",
+      "box_18",
+      "box_20",
+      "box_25",
+      "box_26",
+      "box_27",
+      "box_28",
+      "box_29",
+      "box_30",
+      "box_31",
+      "box_32"
+    ],
+    "edge_labels": [
+      null,
+      null,
+      null,
+      "No",
+      "No",
+      "",
+      null,
+      "Yes",
+      "No",
+      "",
+      null,
+      "Yes",
+      "No",
+      "",
+      null,
+      "No",
+      "",
+      null,
+      "No"
+    ],
+    "decision_points": [
+      {
+        "node": "box_2",
+        "label": "No",
+        "question": "Lens scratches, chips or contamination present?"
+      },
+      {
+        "node": "box_6",
+        "label": "No",
+        "question": "Lighting intensity within specified range at part plane?"
+      },
+      {
+        "node": "box_11",
+        "label": "Yes",
+        "question": "Image sharpness within sharpness specification specification?"
+      },
+      {
+        "node": "box_16",
+        "label": "No",
+        "question": "Distortion within ±0.5 px at corner positions?"
+      },
+      {
+        "node": "box_20",
+        "label": "Yes",
+        "question": "Calibration residual error within 0.1 px root mean square?"
+      },
+      {
+        "node": "box_25",
+        "label": "No",
+        "question": "Trigger delay within ±0.5 ms of specification?"
+      },
+      {
+        "node": "box_28",
+        "label": "No",
+        "question": "False reject rate below 0.5%?"
+      },
+      {
+        "node": "box_31",
+        "label": "No",
+        "question": "All known rejects correctly detected?"
+      }
+    ],
+    "generation_model": "anthropic/claude-sonnet-4-5",
+    "verification": {
+      "variant_of": "base",
+      "base_verified": true,
+      "note": "surface-form variant; not independently verified"
+    },
+    "injection_count": 1
+  },
+  "injection_log": [
+    {
+      "position": 32,
+      "node_id": "box_30",
+      "node_text": "Pass 10 known non conforming parts, each with a documented defect type, through the inspection system individually. Record whether each defect is detected and the system output for each part. Confirm that the system correctly rejects all 10 parts; any part that is accepted constitutes a false accept and requires immediate investigation before resuming production.",
+      "edge_labels": [],
+      "category": "coverage_gap",
+      "utterance": "I'm seeing condensation forming inside the camera housing on unit 3, and the lens looks a bit foggy. Should I be concerned about that affecting the readings, or do we just continue with the test?",
+      "injection_rate": null,
+      "num_candidates": null
+    }
+  ]
+}

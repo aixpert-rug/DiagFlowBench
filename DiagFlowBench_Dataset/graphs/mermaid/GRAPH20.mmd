@@ -1,0 +1,83 @@
+flowchart TD
+    box_0(["Start"])
+    box_1["Measure and record the positional deviation in the X<br/>and Y direction using the deviation measurement<br/>gauge; note the batch number and time of occurrence."]
+    box_2{"Is the positional deviation within the acceptable<br/>measurement range?"}
+    box_3["Deviation is within acceptable range. Record<br/>measurement in quality log and notify quality<br/>assurance team of the borderline result; continue<br/>production."]
+    box_4{"Is the positional deviation systematic and<br/>consistent in direction across multiple consecutive<br/>parts?"}
+    box_5["Measure at least five consecutive parts and record<br/>the deviation direction and magnitude for each to<br/>determine whether the pattern is systematic or<br/>random."]
+    box_6["Check that parts are correctly seated and stable in<br/>the marking fixture during the marking cycle. If<br/>parts are shifting, reseat and rerun the deviation<br/>check before proceeding."]
+    box_7{"Is the correct marking program loaded and active on<br/>the operator control interface?"}
+    box_8["Complete the following checks: 1. Read the programme<br/>ID on the operator control interface status bar. 2.<br/>Compare the displayed ID against the part number on<br/>the batch work order. 3. Verify the programme<br/>revision matches the current drawing issue."]
+    box_9["Switch the marking controller to the correct marking<br/>program for this product type and restart the<br/>marking controller."]
+    box_10{"Is the marking head at the correct reference datum<br/>position?"}
+    box_11["Jog the marking head to the programmed reference<br/>datum and verify the position readout against the<br/>setup specification."]
+    box_12["Rehome the marking head to the reference datum and<br/>reverify the position readout before continuing."]
+    box_13["Adjust the X/Y offset of the marking head to correct<br/>the measured positional deviation."]
+    box_14[/"Refer to the positional deviation correction<br/>procedure."/]
+    box_15{"Is the positional deviation within specification<br/>after the offset adjustment?"}
+    box_16["Escalate to the maintenance team: the positional<br/>deviation cannot be corrected by offset adjustment<br/>alone; investigate the marking head drive mechanism<br/>for wear or backlash."]
+    box_17["Create a non conformance record for the affected<br/>parts and record the corrected offset values in the<br/>quality log."]
+    box_18["Clean the fume extraction unit and verify that<br/>extraction airflow is within specification."]
+    box_19[/"Refer to the fume extraction cleaning procedure."/]
+    box_20["Record the completed corrective action and final<br/>deviation measurement in the quality log."]
+    box_21(["End, notify quality assurance team of the deviation<br/>event and corrective action applied."])
+    box_22{"Is the positional deviation outside the emergency<br/>tolerance, indicating risk of machine collision or a<br/>full batch scrap event?"}
+    box_23(["End, production stopped immediately: positional<br/>deviation critical, escalate to production engineer<br/>and quarantine all parts produced in current shift"])
+
+    box_1 --> box_2
+    box_2 -->|"Yes"| box_3
+    box_2 -->|"No"| box_4
+    box_5 --> box_4
+    box_4 -->|"No"| box_6
+    box_4 -->|"Yes"| box_7
+    box_6 --> box_8
+    box_8 --> box_7
+    box_7 -->|"No"| box_9
+    box_7 -->|"Yes"| box_10
+    box_9 --> box_11
+    box_11 --> box_10
+    box_10 -->|"No"| box_12
+    box_10 -->|"Yes"| box_13
+    box_12 --> box_13
+    box_14 --> box_13
+    box_13 --> box_15
+    box_15 -->|"No"| box_16
+    box_15 -->|"Yes"| box_17
+    box_16 --> box_17
+    box_17 --> box_18
+    box_19 --> box_18
+    box_18 --> box_20
+    box_20 --> box_21
+    box_0 --> box_22
+    box_22 -->|"Critical, immediate stop required"| box_23
+    box_22 -->|"Standard fault, continue diagnosis"| box_1
+
+    class box_0 terminator
+    class box_1 process
+    class box_2 decision
+    class box_3 process
+    class box_4 decision
+    class box_5 process
+    class box_6 process
+    class box_7 decision
+    class box_8 process
+    class box_9 process
+    class box_10 decision
+    class box_11 process
+    class box_12 process
+    class box_13 process
+    class box_14 document
+    class box_15 decision
+    class box_16 process
+    class box_17 process
+    class box_18 process
+    class box_19 document
+    class box_20 process
+    class box_21 terminator
+    class box_22 decision
+    class box_23 terminator
+
+    classDef terminator fill:#2d4a6e,stroke:#1a3050,color:#ffffff,font-weight:bold
+    classDef process    fill:#f0f4ff,stroke:#4a6fa5,color:#1a1a2e
+    classDef decision   fill:#fff8e6,stroke:#c8922a,color:#1a1a2e
+    classDef document   fill:#f0fff4,stroke:#3a8a4a,color:#1a1a2e

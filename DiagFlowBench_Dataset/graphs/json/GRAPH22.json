@@ -1,0 +1,242 @@
+{
+  "id": "GRAPH22",
+  "description": "Expanded procedure for diagnosing and routing damaged parts, including traceability check and QA hold issuance.",
+  "graph": {
+    "nodes": {
+      "box_0": {
+        "type": "terminator",
+        "text": "Start"
+      },
+      "box_1": {
+        "type": "process",
+        "text": "Store a representative sample of at least five damaged parts for quality assurance team inspection. Record the damage type, location, and the station at which damage was first observed."
+      },
+      "box_2": {
+        "type": "decision",
+        "text": "Are the damaged parts also found in the input product (i.e. damage present before entering the assembly line)?"
+      },
+      "box_3": {
+        "type": "process",
+        "text": "Continue with a different batch. Create a non conformance record for the defective input batch and notify the quality assurance team."
+      },
+      "box_4": {
+        "type": "decision",
+        "text": "Are there parts that have been pushed through the insert (over pressed parts)?"
+      },
+      "box_5": {
+        "type": "process",
+        "text": "Refer to the corrective action procedure introduction for examples of over pressed and correctly pressed parts to aid identification."
+      },
+      "box_6": {
+        "type": "document",
+        "text": "Refer to the corrective action procedure: over pressed part identification guide."
+      },
+      "box_7": {
+        "type": "process",
+        "text": "Follow the over pressed part corrective procedure: halt the pressing station, inspect pressing head alignment and force limit, and quarantine the affected batch."
+      },
+      "box_8": {
+        "type": "decision",
+        "text": "Is the damage pattern consistent with marking induced thermal stress?"
+      },
+      "box_9": {
+        "type": "process",
+        "text": "Complete the following checks: 1. Read the current laser power level from the parameter screen. 2. Compare against the validated power setting on the process parameter sheet. 3. Check whether the power setting was modified since the last good run."
+      },
+      "box_10": {
+        "type": "decision",
+        "text": "Have the damaged parts been measured and approved at the metrology station?"
+      },
+      "box_11": {
+        "type": "process",
+        "text": "Measure the damaged parts on the metrology station. Record insertion depth, gap, and any surface deviation outside specification."
+      },
+      "box_12": {
+        "type": "decision",
+        "text": "Do the metrology station measurements confirm the parts are within the critical dimensional tolerance limits?"
+      },
+      "box_13": {
+        "type": "process",
+        "text": "Parts are within dimensional tolerance despite surface damage. Obtain approval from the quality assurance manager before releasing or quarantining the batch."
+      },
+      "box_14": {
+        "type": "process",
+        "text": "Block and quarantine the affected parts. Notify the maintenance team and quality assurance team with the metrology data."
+      },
+      "box_15": {
+        "type": "process",
+        "text": "Record all corrective actions taken, the batch number, and the final disposition of the affected parts in the quality log."
+      },
+      "box_16": {
+        "type": "decision",
+        "text": "Was production running during the fault period, are there additional parts to trace?"
+      },
+      "box_17": {
+        "type": "process",
+        "text": "Extract all part serial numbers produced during the fault window from the production tracking system traceability log."
+      },
+      "box_18": {
+        "type": "document",
+        "text": "Refer to the production tracking system traceability extraction procedure."
+      },
+      "box_19": {
+        "type": "process",
+        "text": "Issue hold notice for all parts from the fault window pending quality assurance disposition review."
+      },
+      "box_20": {
+        "type": "decision",
+        "text": "Quality assurance team has acknowledged the hold notice and confirmed disposition plan?"
+      },
+      "box_21": {
+        "type": "terminator",
+        "text": "End, Escalate: quality assurance disposition overdue, escalate to quality assurance manager"
+      },
+      "box_22": {
+        "type": "terminator",
+        "text": "End, Hold confirmed. quality assurance disposition in progress. Procedure complete."
+      }
+    },
+    "edges": [
+      {
+        "source": "box_0",
+        "target": "box_1",
+        "label": null
+      },
+      {
+        "source": "box_1",
+        "target": "box_2",
+        "label": null
+      },
+      {
+        "source": "box_2",
+        "target": "box_3",
+        "label": "Yes"
+      },
+      {
+        "source": "box_2",
+        "target": "box_4",
+        "label": "No"
+      },
+      {
+        "source": "box_5",
+        "target": "box_4",
+        "label": null
+      },
+      {
+        "source": "box_6",
+        "target": "box_4",
+        "label": null
+      },
+      {
+        "source": "box_4",
+        "target": "box_7",
+        "label": "Yes"
+      },
+      {
+        "source": "box_4",
+        "target": "box_8",
+        "label": "No"
+      },
+      {
+        "source": "box_9",
+        "target": "box_8",
+        "label": null
+      },
+      {
+        "source": "box_8",
+        "target": "box_9",
+        "label": "Yes"
+      },
+      {
+        "source": "box_8",
+        "target": "box_10",
+        "label": "No"
+      },
+      {
+        "source": "box_11",
+        "target": "box_10",
+        "label": null
+      },
+      {
+        "source": "box_10",
+        "target": "box_12",
+        "label": "Yes"
+      },
+      {
+        "source": "box_10",
+        "target": "box_14",
+        "label": "No"
+      },
+      {
+        "source": "box_12",
+        "target": "box_13",
+        "label": "Yes"
+      },
+      {
+        "source": "box_12",
+        "target": "box_14",
+        "label": "No"
+      },
+      {
+        "source": "box_3",
+        "target": "box_15",
+        "label": null
+      },
+      {
+        "source": "box_7",
+        "target": "box_15",
+        "label": null
+      },
+      {
+        "source": "box_13",
+        "target": "box_15",
+        "label": null
+      },
+      {
+        "source": "box_14",
+        "target": "box_15",
+        "label": null
+      },
+      {
+        "source": "box_15",
+        "target": "box_16",
+        "label": null
+      },
+      {
+        "source": "box_16",
+        "target": "box_17",
+        "label": "Yes"
+      },
+      {
+        "source": "box_16",
+        "target": "box_20",
+        "label": "No"
+      },
+      {
+        "source": "box_17",
+        "target": "box_19",
+        "label": null
+      },
+      {
+        "source": "box_18",
+        "target": "box_17",
+        "label": null
+      },
+      {
+        "source": "box_19",
+        "target": "box_20",
+        "label": null
+      },
+      {
+        "source": "box_20",
+        "target": "box_21",
+        "label": "No"
+      },
+      {
+        "source": "box_20",
+        "target": "box_22",
+        "label": "Yes"
+      }
+    ]
+  }
+}

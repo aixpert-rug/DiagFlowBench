@@ -1,0 +1,166 @@
+flowchart TD
+    box_0(["Start"])
+    box_1{"Does the part meet product specifications?"}
+    box_2["Check input parts for defect types: burrs,<br/>contamination, dents, or deformation."]
+    box_3["Remove the non conforming parts from the indexing<br/>table and reload with a product batch that meets<br/>specifications."]
+    box_4{"Is the setup of the indexing table correct?"}
+    box_5[/"Indexing table setup procedure"/]
+    box_6[/"Part mounting adjustment procedure"/]
+    box_7[/"Indexing table setup procedure"/]
+    box_8[/"Assembly robot axis lubrication procedure"/]
+    box_9{"Are there contaminated parts?"}
+    box_10["Complete the following checks: 1. Check whether<br/>vacuum end effectors are contaminated. 2. Check the<br/>vacuum filters for contamination. 3. Check whether<br/>the assembly robot axes are contaminated. 4. Check<br/>whether the part holders in the indexing table are<br/>contaminated."]
+    box_11["Clean the parts, replace the vacuum filters, and<br/>replace the vacuum hose."]
+    box_12[/"Pneumatic flow measurement procedure: vacuum flow<br/>check"/]
+    box_13[/"Refer to the vacuum flow check for variant B<br/>machines (medium format parts)."/]
+    box_14[/"Refer to the vacuum flow check for variant C<br/>machines (large format parts)."/]
+    box_15{"Are there electrical defects?"}
+    box_16["Complete the following checks: 1. Check cabling and<br/>upper displacement sensors on the vacuum end<br/>effectors. 2. Check whether the valve for the vacuum<br/>generator works correctly. 3. Check system settings<br/>on the operator control interface."]
+    box_17["Replace the defective cabling and/or displacement<br/>sensor on the vacuum end effectors."]
+    box_18[/"Refer to the vacuum switch function check for<br/>variant A machines (small format parts)."/]
+    box_19[/"Refer to the vacuum switch function check for<br/>variant B machines (medium format parts)."/]
+    box_20[/"Refer to the vacuum switch function check for<br/>variant C machines (large format parts)."/]
+    box_21{"Are there worn parts?"}
+    box_22["Complete the following checks: 1. Check wear on the<br/>vacuum end effectors. 2. Check wear on the actuator<br/>grippers. 3. Check wear on the gripper pin through<br/>the aluminium block. 4. Check the assembly robot<br/>axes for wear."]
+    box_23["Replace the worn components identified in the<br/>inspection (vacuum end effectors, actuator grippers,<br/>gripper pin, and/or assembly robot axes)."]
+    box_24[/"Assembly robot replacement procedure"/]
+    box_25{"Is the part lying correctly in the holder?"}
+    box_26["Check whether the black inserts in the indexing<br/>table are magnetic."]
+    box_27["Demagnetize the black inserts in the indexing table."]
+    box_28{"Is the Z parallelism of the lower position of 4x<br/>gripper correct?"}
+    box_29[/"Refer to the Z parallelism check for gripper lower<br/>position for variant A machines (small format<br/>parts)."/]
+    box_30[/"Refer to the Z parallelism check for gripper lower<br/>position for variant B machines (medium format<br/>parts)."/]
+    box_31[/"Refer to the Z parallelism check for gripper lower<br/>position for variant C machines (large format<br/>parts)."/]
+    box_32["Adjust the Z parallelism of the 4x gripper lower<br/>positions to match the specification for the current<br/>machine variant."]
+    box_33{"Is the center to center dimension of 4x gripper<br/>relative to each other correct?"}
+    box_34[/"Refer to the center to center dimension of 4x<br/>grippers for variant A machines (small format<br/>parts)."/]
+    box_35[/"Refer to the center to center dimension of 4x<br/>grippers for variant B machines (medium format<br/>parts)."/]
+    box_36[/"Refer to the center to center dimension of 4x<br/>grippers for variant C machines (large format<br/>parts)."/]
+    box_37["Adjust the center to center spacing of the 4x<br/>grippers to match the specification for the current<br/>machine variant."]
+    box_38{"Is the Z height correct?"}
+    box_39[/"Refer to the Z height check for variant A machines<br/>(small format parts)."/]
+    box_40[/"Refer to the Z height check for variant B machines<br/>(medium format parts)."/]
+    box_41[/"Refer to the Z height check for variant C machines<br/>(large format parts)."/]
+    box_42["Adjust the Z height of the 4x gripper assembly to<br/>match the specification for the current machine<br/>variant."]
+    box_43{"Is the XY pick up position of part from indexing<br/>table correct?"}
+    box_44[/"Refer to the XY pick up position check for variant A<br/>machines (small format parts)."/]
+    box_45[/"Refer to the XY pick up position check for variant B<br/>machines (medium format parts)."/]
+    box_46[/"Refer to the XY pick up position check for variant C<br/>machines (large format parts)."/]
+    box_47[/"Pick up and placement adjustment procedure: part<br/>from indexing table"/]
+    box_48["Perform assembly robot calibrations to correct the<br/>4x gripper XY pick up position from the indexing<br/>table."]
+    box_49["Verify that the part is picked up centred and held<br/>firmly enough in the vacuum head."]
+    box_50(["Picking up 4x part from indexing table is correct"])
+    box_51["Verify that there is no play between the setup tool<br/>and the indexing table during mounting."]
+    box_52[/"Refer to the vacuum flow check for variant A<br/>machines (small format parts), standard vacuum flow<br/>parameters apply; use the general pneumatic flow<br/>measurement procedure only, no variant specific flow<br/>calibration is required for small format parts."/]
+
+    box_0 --> box_1
+    box_2 --> box_1
+    box_1 -->|"No"| box_3
+    box_1 -->|"Yes"| box_4
+    box_5 --> box_4
+    box_51 --> box_4
+    box_6 --> box_4
+    box_4 -->|"No"| box_7
+    box_4 -->|"No"| box_8
+    box_4 -->|"Yes"| box_9
+    box_10 --> box_9
+    box_12 --> box_9
+    box_13 --> box_9
+    box_14 --> box_9
+    box_9 -->|"Yes"| box_11
+    box_9 -->|"No"| box_15
+    box_16 --> box_15
+    box_18 --> box_15
+    box_19 --> box_15
+    box_20 --> box_15
+    box_15 -->|"Yes"| box_17
+    box_15 -->|"No"| box_21
+    box_22 --> box_21
+    box_21 -->|"Yes"| box_23
+    box_21 -->|"Yes"| box_24
+    box_21 -->|"No"| box_25
+    box_26 --> box_25
+    box_25 -->|"No"| box_27
+    box_25 -->|"Yes"| box_28
+    box_29 --> box_28
+    box_30 --> box_28
+    box_31 --> box_28
+    box_28 -->|"No"| box_32
+    box_28 -->|"Yes"| box_33
+    box_34 --> box_33
+    box_35 --> box_33
+    box_36 --> box_33
+    box_33 -->|"No"| box_37
+    box_33 -->|"Yes"| box_38
+    box_39 --> box_38
+    box_40 --> box_38
+    box_41 --> box_38
+    box_38 -->|"No"| box_42
+    box_38 -->|"Yes"| box_43
+    box_44 --> box_43
+    box_45 --> box_43
+    box_46 --> box_43
+    box_43 -->|"No"| box_47
+    box_43 -->|"No"| box_48
+    box_43 -->|"Yes"| box_50
+    box_49 --> box_50
+    box_52 --> box_9
+
+    class box_0 terminator
+    class box_1 decision
+    class box_2 process
+    class box_3 process
+    class box_4 decision
+    class box_5 document
+    class box_6 document
+    class box_7 document
+    class box_8 document
+    class box_9 decision
+    class box_10 process
+    class box_11 process
+    class box_12 document
+    class box_13 document
+    class box_14 document
+    class box_15 decision
+    class box_16 process
+    class box_17 process
+    class box_18 document
+    class box_19 document
+    class box_20 document
+    class box_21 decision
+    class box_22 process
+    class box_23 process
+    class box_24 document
+    class box_25 decision
+    class box_26 process
+    class box_27 process
+    class box_28 decision
+    class box_29 document
+    class box_30 document
+    class box_31 document
+    class box_32 process
+    class box_33 decision
+    class box_34 document
+    class box_35 document
+    class box_36 document
+    class box_37 process
+    class box_38 decision
+    class box_39 document
+    class box_40 document
+    class box_41 document
+    class box_42 process
+    class box_43 decision
+    class box_44 document
+    class box_45 document
+    class box_46 document
+    class box_47 document
+    class box_48 process
+    class box_49 process
+    class box_50 terminator
+    class box_51 process
+    class box_52 document
+
+    classDef terminator fill:#2d4a6e,stroke:#1a3050,color:#ffffff,font-weight:bold
+    classDef process    fill:#f0f4ff,stroke:#4a6fa5,color:#1a1a2e
+    classDef decision   fill:#fff8e6,stroke:#c8922a,color:#1a1a2e
+    classDef document   fill:#f0fff4,stroke:#3a8a4a,color:#1a1a2e

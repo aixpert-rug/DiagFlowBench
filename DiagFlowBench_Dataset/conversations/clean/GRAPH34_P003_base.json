@@ -1,0 +1,329 @@
+{
+  "conversation_id": "GRAPH34_P003_base",
+  "graph_id": "GRAPH34",
+  "path_id": "GRAPH34_P003",
+  "regime": "clean",
+  "variant": "base",
+  "robustness_axis": null,
+  "turns": [
+    {
+      "node_id": "box_0",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Starting vacuum gripper diagnostic procedure.",
+      "edge_label_to_next": null,
+      "turn_index": 0,
+      "ground_truth": {
+        "node_id": "box_0",
+        "node_type": "terminator",
+        "node_text": "Start"
+      }
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Please complete the following checks: First, inspect the suction cup sealing face for any cuts, abrasion, or permanent set. Second, check the bellows body for cracks or delamination. Third, inspect the cup mounting thread for cross threading or stripping.",
+      "edge_label_to_next": null,
+      "turn_index": 1,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Inspect the suction cup sealing face for cuts, abrasion, or permanent set. 2. Check the bellows body for cracks or delamination. 3. Inspect the cup mounting thread for cross threading or stripping."
+      }
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "All three checks completed. The sealing face looks clean with no visible damage, bellows body is intact, and the mounting threads are in good condition.",
+      "edge_label_to_next": null,
+      "turn_index": 2,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Inspect the suction cup sealing face for cuts, abrasion, or permanent set. 2. Check the bellows body for cracks or delamination. 3. Inspect the cup mounting thread for cross threading or stripping."
+      }
+    },
+    {
+      "node_id": "box_3",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the cup structural integrity acceptable?",
+      "edge_label_to_next": null,
+      "turn_index": 3,
+      "ground_truth": {
+        "node_id": "box_3",
+        "node_type": "decision",
+        "node_text": "Cup structural integrity acceptable?"
+      }
+    },
+    {
+      "node_id": "box_3",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, the cup structure is acceptable. No defects detected in any of the inspected areas.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 4,
+      "ground_truth": {
+        "node_id": "box_3",
+        "node_type": "decision",
+        "node_text": "Cup structural integrity acceptable?"
+      }
+    },
+    {
+      "node_id": "box_7",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the vacuum holding level within specification?",
+      "edge_label_to_next": null,
+      "turn_index": 5,
+      "ground_truth": {
+        "node_id": "box_7",
+        "node_type": "decision",
+        "node_text": "Vacuum holding level within specification?"
+      }
+    },
+    {
+      "node_id": "box_7",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "No, the vacuum level is reading below the minimum rated holding vacuum. It's not meeting specification.",
+      "edge_label_to_next": "No",
+      "turn_index": 6,
+      "ground_truth": {
+        "node_id": "box_7",
+        "node_type": "decision",
+        "node_text": "Vacuum holding level within specification?"
+      }
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Clean the cup seating face and replace the cup seal.",
+      "edge_label_to_next": null,
+      "turn_index": 7,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "process",
+        "node_text": "Clean cup seating face and replace cup seal"
+      }
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Seating face cleaned and new seal installed.",
+      "edge_label_to_next": null,
+      "turn_index": 8,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "process",
+        "node_text": "Clean cup seating face and replace cup seal"
+      }
+    },
+    {
+      "node_id": "box_9",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Reverify the vacuum level after seal replacement.",
+      "edge_label_to_next": null,
+      "turn_index": 9,
+      "ground_truth": {
+        "node_id": "box_9",
+        "node_type": "decision",
+        "node_text": "Reverify vacuum level after seal replacement"
+      }
+    },
+    {
+      "node_id": "box_9",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "I've retested and the vacuum level is still low. The seal replacement didn't resolve the issue.",
+      "edge_label_to_next": "Unresolvable after second attempt",
+      "turn_index": 10,
+      "ground_truth": {
+        "node_id": "box_9",
+        "node_type": "decision",
+        "node_text": "Reverify vacuum level after seal replacement"
+      }
+    },
+    {
+      "node_id": "box_10",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Procedure complete. A vacuum generator fault is suspected. Please escalate this issue to the specialist maintenance team for generator diagnostics.",
+      "edge_label_to_next": null,
+      "turn_index": 11,
+      "ground_truth": {
+        "node_id": "box_10",
+        "node_type": "terminator",
+        "node_text": "End, Escalate: vacuum generator fault suspected"
+      }
+    },
+    {
+      "node_id": "box_10",
+      "node_type": "terminator",
+      "speaker": "operator",
+      "utterance": "Understood, I'll escalate to the specialist team right away.",
+      "edge_label_to_next": null,
+      "turn_index": 12,
+      "ground_truth": {
+        "node_id": "box_10",
+        "node_type": "terminator",
+        "node_text": "End, Escalate: vacuum generator fault suspected"
+      }
+    }
+  ],
+  "metadata": {
+    "depth": 7,
+    "num_decisions": 3,
+    "num_processes": 2,
+    "num_documents": 0,
+    "terminator_type": "escalate",
+    "terminator_text": "End, Escalate: vacuum generator fault suspected",
+    "true_terminator": true,
+    "node_sequence": [
+      "box_0",
+      "box_1",
+      "box_3",
+      "box_7",
+      "box_8",
+      "box_9",
+      "box_10"
+    ],
+    "edge_labels": [
+      null,
+      null,
+      null,
+      "Yes",
+      "No",
+      null,
+      "Unresolvable after second attempt"
+    ],
+    "decision_points": [
+      {
+        "node": "box_3",
+        "label": "Yes",
+        "question": "Cup structural integrity acceptable?"
+      },
+      {
+        "node": "box_7",
+        "label": "No",
+        "question": "Vacuum holding level within specification?"
+      },
+      {
+        "node": "box_9",
+        "label": "Unresolvable after second attempt",
+        "question": "Reverify vacuum level after seal replacement"
+      }
+    ],
+    "generation_model": "anthropic/claude-sonnet-4-5",
+    "verification": {
+      "verified": false,
+      "issues": [
+        {
+          "turn_index": 10,
+          "issue_type": "STEP_LEAKAGE",
+          "original": "I've retested and the vacuum level is still low even after the second seal replacement attempt. This appears unresolvable with seal replacement alone.",
+          "corrected": "I've retested and the vacuum level is still low. The seal replacement didn't resolve the issue.",
+          "explanation": "The operator utterance mentions 'second seal replacement attempt' and 'unresolvable with seal replacement alone,' which reveals knowledge of the downstream box_23 (second seal replacement attempt) that hasn't been reached yet in the procedure. The operator should only report the current test result without implying knowledge of what has or hasn't been attempted previously in this path."
+        }
+      ],
+      "corrected_turns": [
+        {
+          "node_id": "box_0",
+          "node_type": "terminator",
+          "speaker": "system",
+          "utterance": "Starting vacuum gripper diagnostic procedure.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_1",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Please complete the following checks: First, inspect the suction cup sealing face for any cuts, abrasion, or permanent set. Second, check the bellows body for cracks or delamination. Third, inspect the cup mounting thread for cross threading or stripping.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_1",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "All three checks completed. The sealing face looks clean with no visible damage, bellows body is intact, and the mounting threads are in good condition.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_3",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is the cup structural integrity acceptable?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_3",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Yes, the cup structure is acceptable. No defects detected in any of the inspected areas.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_7",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is the vacuum holding level within specification?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_7",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "No, the vacuum level is reading below the minimum rated holding vacuum. It's not meeting specification.",
+          "edge_label_to_next": "No"
+        },
+        {
+          "node_id": "box_8",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Clean the cup seating face and replace the cup seal.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_8",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "Seating face cleaned and new seal installed.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_9",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Reverify the vacuum level after seal replacement.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_9",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "I've retested and the vacuum level is still low. The seal replacement didn't resolve the issue.",
+          "edge_label_to_next": "Unresolvable after second attempt"
+        },
+        {
+          "node_id": "box_10",
+          "node_type": "terminator",
+          "speaker": "system",
+          "utterance": "Procedure complete. A vacuum generator fault is suspected. Please escalate this issue to the specialist maintenance team for generator diagnostics.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_10",
+          "node_type": "terminator",
+          "speaker": "operator",
+          "utterance": "Understood, I'll escalate to the specialist team right away.",
+          "edge_label_to_next": null
+        }
+      ]
+    }
+  }
+}

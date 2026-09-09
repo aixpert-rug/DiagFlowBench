@@ -1,0 +1,450 @@
+{
+  "conversation_id": "GRAPH35_P002_noise_perturbation",
+  "graph_id": "GRAPH35",
+  "path_id": "GRAPH35_P002",
+  "regime": "clean",
+  "variant": "noise_perturbation",
+  "robustness_axis": "noise_perturbation",
+  "turns": [
+    {
+      "node_id": "box_0",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Starting encoder diagnostic procedure.",
+      "edge_label_to_next": null,
+      "turn_index": 0,
+      "ground_truth": {
+        "node_id": "box_0",
+        "node_type": "terminator",
+        "node_text": "Start"
+      }
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Please complete the following checks: First, inspect the encoder scale for scratches, oil, or coolant deposits. Second, check the read head mounting for looseness or impact damage. Third, inspect the cable and connector for chafing or corrosion.",
+      "edge_label_to_next": null,
+      "turn_index": 1,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Inspect the encoder scale for scratches, oil, or coolant deposits. 2. Check the read head mounting for looseness or impact damage. 3. Inspect the cable and connector for chafing or corrosion."
+      }
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "all three checks complete encoder scale is clean read head mounted securely and cable and conector show no visible damage",
+      "edge_label_to_next": null,
+      "turn_index": 2,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Inspect the encoder scale for scratches, oil, or coolant deposits. 2. Check the read head mounting for looseness or impact damage. 3. Inspect the cable and connector for chafing or corrosion."
+      }
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is there physical damage to the encoder strip or read head?",
+      "edge_label_to_next": null,
+      "turn_index": 3,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Physical damage to encoder strip or read head?"
+      }
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no physical damage observed on either component",
+      "edge_label_to_next": "No",
+      "turn_index": 4,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Physical damage to encoder strip or read head?"
+      }
+    },
+    {
+      "node_id": "box_6",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the signal quality showing a clean waveform with no dropouts?",
+      "edge_label_to_next": null,
+      "turn_index": 5,
+      "ground_truth": {
+        "node_id": "box_6",
+        "node_type": "decision",
+        "node_text": "Signal quality: clean waveform, no dropouts?"
+      }
+    },
+    {
+      "node_id": "box_6",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yeah both channels producing clean square waves with proper phase separation no missing pulses",
+      "edge_label_to_next": "Yes",
+      "turn_index": 6,
+      "ground_truth": {
+        "node_id": "box_6",
+        "node_type": "decision",
+        "node_text": "Signal quality: clean waveform, no dropouts?"
+      }
+    },
+    {
+      "node_id": "box_11",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Was the reference mark found during the homing cycle?",
+      "edge_label_to_next": null,
+      "turn_index": 7,
+      "ground_truth": {
+        "node_id": "box_11",
+        "node_type": "decision",
+        "node_text": "Reference mark found during homing cycle?"
+      }
+    },
+    {
+      "node_id": "box_11",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yes axis decelrated smoothly and came to rest at ref mark position displayed home offset matches the stored param value",
+      "edge_label_to_next": "Yes",
+      "turn_index": 8,
+      "ground_truth": {
+        "node_id": "box_11",
+        "node_type": "decision",
+        "node_text": "Reference mark found during homing cycle?"
+      }
+    },
+    {
+      "node_id": "box_15",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the position accuracy within tolerance at all test points?",
+      "edge_label_to_next": null,
+      "turn_index": 9,
+      "ground_truth": {
+        "node_id": "box_15",
+        "node_type": "decision",
+        "node_text": "Position accuracy within tolerance at all test points?"
+      }
+    },
+    {
+      "node_id": "box_15",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no seeing positioning errors at several test points that exceed the axis accuracy spec",
+      "edge_label_to_next": "No",
+      "turn_index": 10,
+      "ground_truth": {
+        "node_id": "box_15",
+        "node_type": "decision",
+        "node_text": "Position accuracy within tolerance at all test points?"
+      }
+    },
+    {
+      "node_id": "box_16",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Adjust the read head gap to the encoder strip per specification.",
+      "edge_label_to_next": null,
+      "turn_index": 11,
+      "ground_truth": {
+        "node_id": "box_16",
+        "node_type": "process",
+        "node_text": "Adjust read head gap to encoder strip per specification"
+      }
+    },
+    {
+      "node_id": "box_16",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "read head gap adjustment complete set to spec",
+      "edge_label_to_next": null,
+      "turn_index": 12,
+      "ground_truth": {
+        "node_id": "box_16",
+        "node_type": "process",
+        "node_text": "Adjust read head gap to encoder strip per specification"
+      }
+    },
+    {
+      "node_id": "box_17",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Reverify the position accuracy after the read head adjustment.",
+      "edge_label_to_next": null,
+      "turn_index": 13,
+      "ground_truth": {
+        "node_id": "box_17",
+        "node_type": "decision",
+        "node_text": "Reverify position accuracy after read head adjustment"
+      }
+    },
+    {
+      "node_id": "box_17",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "position accuracy now within tolerance across all test points",
+      "edge_label_to_next": "OK",
+      "turn_index": 14,
+      "ground_truth": {
+        "node_id": "box_17",
+        "node_type": "decision",
+        "node_text": "Reverify position accuracy after read head adjustment"
+      }
+    },
+    {
+      "node_id": "box_20",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the thermal compensation parameter active and correct?",
+      "edge_label_to_next": null,
+      "turn_index": 15,
+      "ground_truth": {
+        "node_id": "box_20",
+        "node_type": "decision",
+        "node_text": "Thermal compensation parameter active and correct?"
+      }
+    },
+    {
+      "node_id": "box_20",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yeah thermal comp coefficient matches ref value and model hasnt been modified since last calibration",
+      "edge_label_to_next": "Yes",
+      "turn_index": 16,
+      "ground_truth": {
+        "node_id": "box_20",
+        "node_type": "decision",
+        "node_text": "Thermal compensation parameter active and correct?"
+      }
+    },
+    {
+      "node_id": "box_23",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the cable condition and routing acceptable?",
+      "edge_label_to_next": null,
+      "turn_index": 17,
+      "ground_truth": {
+        "node_id": "box_23",
+        "node_type": "decision",
+        "node_text": "Cable condition and routing acceptable?"
+      }
+    },
+    {
+      "node_id": "box_23",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no found unsupported cable lenght that flexes during movement and one strain relief clamp is loose",
+      "edge_label_to_next": "No",
+      "turn_index": 18,
+      "ground_truth": {
+        "node_id": "box_23",
+        "node_type": "decision",
+        "node_text": "Cable condition and routing acceptable?"
+      }
+    },
+    {
+      "node_id": "box_24",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Reroute the cable and fit strain relief clamps properly.",
+      "edge_label_to_next": null,
+      "turn_index": 19,
+      "ground_truth": {
+        "node_id": "box_24",
+        "node_type": "process",
+        "node_text": "Reroute cable and fit strain relief clamps"
+      }
+    },
+    {
+      "node_id": "box_24",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "ok so cable rerouted with proper support all strain relief clamps tight and positioned correctly",
+      "edge_label_to_next": null,
+      "turn_index": 20,
+      "ground_truth": {
+        "node_id": "box_24",
+        "node_type": "process",
+        "node_text": "Reroute cable and fit strain relief clamps"
+      }
+    },
+    {
+      "node_id": "box_25",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Did the final five point position verification cycle pass?",
+      "edge_label_to_next": null,
+      "turn_index": 21,
+      "ground_truth": {
+        "node_id": "box_25",
+        "node_type": "decision",
+        "node_text": "Final 5 point position verification cycle passed?"
+      }
+    },
+    {
+      "node_id": "box_25",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yes all five verification points within tolerance",
+      "edge_label_to_next": "Yes",
+      "turn_index": 22,
+      "ground_truth": {
+        "node_id": "box_25",
+        "node_type": "decision",
+        "node_text": "Final 5 point position verification cycle passed?"
+      }
+    },
+    {
+      "node_id": "box_26",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Log the encoder service data and update the maintenance record.",
+      "edge_label_to_next": null,
+      "turn_index": 23,
+      "ground_truth": {
+        "node_id": "box_26",
+        "node_type": "process",
+        "node_text": "Log encoder service data and update maintenance record"
+      }
+    },
+    {
+      "node_id": "box_26",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "service data logged maintenance record updated",
+      "edge_label_to_next": null,
+      "turn_index": 24,
+      "ground_truth": {
+        "node_id": "box_26",
+        "node_type": "process",
+        "node_text": "Log encoder service data and update maintenance record"
+      }
+    },
+    {
+      "node_id": "box_27",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Encoder diagnostic procedure complete. The system is ready to return to service.",
+      "edge_label_to_next": null,
+      "turn_index": 25,
+      "ground_truth": {
+        "node_id": "box_27",
+        "node_type": "terminator",
+        "node_text": "End, Procedure complete"
+      }
+    },
+    {
+      "node_id": "box_27",
+      "node_type": "terminator",
+      "speaker": "operator",
+      "utterance": "understood procedure complete",
+      "edge_label_to_next": null,
+      "turn_index": 26,
+      "ground_truth": {
+        "node_id": "box_27",
+        "node_type": "terminator",
+        "node_text": "End, Procedure complete"
+      }
+    }
+  ],
+  "metadata": {
+    "depth": 14,
+    "num_decisions": 8,
+    "num_processes": 4,
+    "num_documents": 0,
+    "terminator_type": "procedure_complete",
+    "terminator_text": "End, Procedure complete",
+    "true_terminator": true,
+    "node_sequence": [
+      "box_0",
+      "box_1",
+      "box_2",
+      "box_6",
+      "box_11",
+      "box_15",
+      "box_16",
+      "box_17",
+      "box_20",
+      "box_23",
+      "box_24",
+      "box_25",
+      "box_26",
+      "box_27"
+    ],
+    "edge_labels": [
+      null,
+      null,
+      null,
+      "No",
+      "Yes",
+      "Yes",
+      "No",
+      null,
+      "OK",
+      "Yes",
+      "No",
+      null,
+      "Yes",
+      null
+    ],
+    "decision_points": [
+      {
+        "node": "box_2",
+        "label": "No",
+        "question": "Physical damage to encoder strip or read head?"
+      },
+      {
+        "node": "box_6",
+        "label": "Yes",
+        "question": "Signal quality: clean waveform, no dropouts?"
+      },
+      {
+        "node": "box_11",
+        "label": "Yes",
+        "question": "Reference mark found during homing cycle?"
+      },
+      {
+        "node": "box_15",
+        "label": "No",
+        "question": "Position accuracy within tolerance at all test points?"
+      },
+      {
+        "node": "box_17",
+        "label": "OK",
+        "question": "Reverify position accuracy after read head adjustment"
+      },
+      {
+        "node": "box_20",
+        "label": "Yes",
+        "question": "Thermal compensation parameter active and correct?"
+      },
+      {
+        "node": "box_23",
+        "label": "No",
+        "question": "Cable condition and routing acceptable?"
+      },
+      {
+        "node": "box_25",
+        "label": "Yes",
+        "question": "Final 5 point position verification cycle passed?"
+      }
+    ],
+    "generation_model": "anthropic/claude-sonnet-4-5",
+    "verification": {
+      "variant_of": "base",
+      "base_verified": true,
+      "note": "surface-form variant; not independently verified"
+    }
+  }
+}

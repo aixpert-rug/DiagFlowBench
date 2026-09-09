@@ -1,0 +1,554 @@
+{
+  "id": "GRAPH50",
+  "description": "CNC spindle full diagnostic and acceptance procedure — PROC-69",
+  "graph": {
+    "nodes": {
+      "box_0": {
+        "type": "terminator",
+        "text": "Start"
+      },
+      "box_1": {
+        "type": "process",
+        "text": "Warm up cycle, spindle at 500 revolutions per minute for 5 min, 2000 revolutions per minute for 5 min"
+      },
+      "box_2": {
+        "type": "process",
+        "text": "Attach a triaxial accelerometer to the spindle nose using a flat washer stud or epoxy mount with the sensor axes aligned to the machine X, Y, and Z axes. Run the spindle at 3000 revolutions per minute with no toolholder and record the root mean square vibration velocity in each axis. Repeat the measurement at the maximum rated speed and compare all six readings against the baseline vibration record from the previous service."
+      },
+      "box_3": {
+        "type": "document",
+        "text": "Refer to the spindle vibration alarm limits."
+      },
+      "box_4": {
+        "type": "decision",
+        "text": "Vibration level below alarm threshold at warm up speed?"
+      },
+      "box_5": {
+        "type": "terminator",
+        "text": "End, Escalate: vibration alarm at warm up speed, spindle offline"
+      },
+      "box_6": {
+        "type": "process",
+        "text": "Attach a calibrated thermocouple probe to the front bearing outer race housing surface using thermal paste and a retaining clip. Run the spindle at 80% of rated speed for 20 minutes and record the temperature reading. Compare against the maximum rated bearing housing temperature for this spindle class; temperatures above the rated limit require immediate bearing inspection."
+      },
+      "box_7": {
+        "type": "document",
+        "text": "Refer to the spindle bearing temperature limit."
+      },
+      "box_8": {
+        "type": "decision",
+        "text": "Front bearing temperature within rated limit after warm up?"
+      },
+      "box_9": {
+        "type": "terminator",
+        "text": "End, Escalate: bearing overtemperature after warm up, cooling check"
+      },
+      "box_10": {
+        "type": "process",
+        "text": "Mount a precision dial test indicator in the machine table with the probe tip contacting the spindle nose taper bore at the mid height of the bore. Rotate the spindle slowly by hand through one full revolution while reading the indicator. Record the total indicator reading and compare against the maximum permissible runout value for this spindle accuracy class in the machine acceptance standard."
+      },
+      "box_11": {
+        "type": "document",
+        "text": "Refer to the spindle radial runout specification."
+      },
+      "box_12": {
+        "type": "decision",
+        "text": "Radial runout within 1 µm at spindle nose?"
+      },
+      "box_13": {
+        "type": "process",
+        "text": "Adjust front bearing pre load, locknut quarter turn increments"
+      },
+      "box_14": {
+        "type": "decision",
+        "text": "Reverify radial runout after bearing pre load adjustment"
+      },
+      "box_15": {
+        "type": "terminator",
+        "text": "End, Escalate: runout unrecoverable, bearing replacement required"
+      },
+      "box_16": {
+        "type": "process",
+        "text": "Set a dial test indicator probe against the reference face at the spindle nose. Push the spindle forward by hand to take up any thrust bearing clearance and zero the indicator. Pull the spindle backward and record the deflection. Repeat three times and take the mean reading as the measured axial play; compare against the maximum axial play in the spindle bearing specification."
+      },
+      "box_17": {
+        "type": "document",
+        "text": "Refer to the spindle axial play limit."
+      },
+      "box_18": {
+        "type": "decision",
+        "text": "Axial play within 2 µm limit?"
+      },
+      "box_19": {
+        "type": "process",
+        "text": "Adjust pre load shim stack, add or remove shims as required"
+      },
+      "box_20": {
+        "type": "process",
+        "text": "Apply a thin uniform coat of Prussian blue or engineer's marking compound to the taper surface of a clean test arbor. Insert the arbor into the spindle taper bore and rotate by hand under moderate axial load for two to three turns. Withdraw the arbor and inspect the transfer pattern; uniform contact over at least 75% of the taper length is required. A patchy or one sided pattern indicates taper bore damage, swarf contamination, or arbor misalignment."
+      },
+      "box_21": {
+        "type": "document",
+        "text": "Refer to the tool taper contact specification."
+      },
+      "box_22": {
+        "type": "decision",
+        "text": "Taper contact pattern above 80% of taper area?"
+      },
+      "box_23": {
+        "type": "process",
+        "text": "Clean taper bore, lint free cloth, isopropyl alcohol, compressed air"
+      },
+      "box_24": {
+        "type": "decision",
+        "text": "Reverify taper contact after taper bore cleaning"
+      },
+      "box_25": {
+        "type": "terminator",
+        "text": "End, Escalate: taper contact insufficient after cleaning, taper regrind"
+      },
+      "box_26": {
+        "type": "process",
+        "text": "Connect the pull stud extraction dynamometer to the retention knob of a standard toolholder fitted in the spindle. Apply a steady axial pull along the spindle axis and record the peak force at the moment the drawbar releases. Compare the result against the minimum drawbar retention force specified for this spindle class; a low reading indicates disc spring pack wear or stacking loss requiring drawbar disassembly."
+      },
+      "box_27": {
+        "type": "document",
+        "text": "Refer to the drawbar retention force specification."
+      },
+      "box_28": {
+        "type": "decision",
+        "text": "Drawbar retention force within rated range?"
+      },
+      "box_29": {
+        "type": "process",
+        "text": "Replace disc spring stack and recheck retention force"
+      },
+      "box_30": {
+        "type": "process",
+        "text": "Using a calibrated non contact tachometer, direct the sensor beam at a reflective strip on the spindle nose. Command each of the four test speeds from the machine controller and record the actual speed displayed by the tachometer. Calculate the percentage speed error at each commanded speed and compare against the maximum speed accuracy tolerance in the spindle acceptance specification."
+      },
+      "box_31": {
+        "type": "document",
+        "text": "Refer to the spindle speed accuracy specification."
+      },
+      "box_32": {
+        "type": "decision",
+        "text": "Speed accuracy within ±0.1% at all four test speeds?"
+      },
+      "box_33": {
+        "type": "process",
+        "text": "Adjust spindle motor speed reference gain in drive parameter"
+      },
+      "box_34": {
+        "type": "decision",
+        "text": "Reverify speed accuracy after gain adjustment"
+      },
+      "box_35": {
+        "type": "terminator",
+        "text": "End, Escalate: speed accuracy unrecoverable, encoder or drive fault"
+      },
+      "box_36": {
+        "type": "process",
+        "text": "With the triaxial accelerometer still mounted on the spindle nose, run the spindle at full rated speed with the production toolholder fitted. Record the root mean square vibration velocity in all three axes after two minutes of running. Compare the values against the ISO 10816 alarm limit for this machine class and against the baseline values recorded at the start of this inspection."
+      },
+      "box_37": {
+        "type": "decision",
+        "text": "Vibration within warning limit at full rated speed?"
+      },
+      "box_38": {
+        "type": "process",
+        "text": "Complete the following checks: 1. Reduce spindle speed to 50% rated and monitor vibration for two minutes. 2. Check whether vibration reduces at lower speed to indicate a balance issue. 3. Inspect the spindle nose and toolholder taper for contamination or damage."
+      },
+      "box_39": {
+        "type": "process",
+        "text": "Mount a dial test indicator against a precision reference mandrel clamped in the spindle before starting the warm up cycle. Zero the indicator and record the position as the cold datum. Run the spindle at operating speed for 30 minutes and record the indicator position at five minute intervals. Note the total thermal displacement at stabilisation and compare against the thermal growth compensation value stored in the machine thermal model parameters."
+      },
+      "box_40": {
+        "type": "document",
+        "text": "Refer to the thermal growth compensation specification."
+      },
+      "box_41": {
+        "type": "decision",
+        "text": "Thermal growth within compensation model ±3 µm?"
+      },
+      "box_42": {
+        "type": "process",
+        "text": "Complete the following steps: 1. Access the thermal growth model parameter screen in the machine controller. 2. Read the current growth coefficient and reference temperature for the Z axis. 3. Compare the stored values against the reference values from the last calibration."
+      },
+      "box_43": {
+        "type": "process",
+        "text": "Command the spindle orientation to the 0 degree reference position from the machine control panel. Mount a precision angular encoder or a dial test indicator on an arm at a known radius and measure the angular error relative to the reference mark. Command orientation to 90, 180, and 270 degrees and measure the angular error at each position; compare all four readings against the spindle orientation accuracy specification."
+      },
+      "box_44": {
+        "type": "decision",
+        "text": "Spindle orientation within ±0.001° of commanded angle?"
+      },
+      "box_45": {
+        "type": "process",
+        "text": "Adjust orientation offset parameter in spindle drive"
+      },
+      "box_46": {
+        "type": "process",
+        "text": "Fit a sealed test arbor with a coolant pressure gauge and flow indicator into the spindle taper. Start the coolant through spindle circuit at the normal operating pressure. Read the pressure gauge at the spindle taper outlet and compare against the minimum required coolant through spindle pressure. Observe the flow indicator for steady flow; pulsing or absent flow indicates a blocked spindle check valve or a failing coolant pump."
+      },
+      "box_47": {
+        "type": "document",
+        "text": "Refer to the through spindle coolant specification."
+      },
+      "box_48": {
+        "type": "decision",
+        "text": "Coolant flow and pressure at spindle taper within specification?"
+      },
+      "box_49": {
+        "type": "process",
+        "text": "Complete the following checks: 1. Stop coolant flow and inspect the rotary union seal face for scoring. 2. Check the rotary union body for coolant leakage tracks or deposits. 3. Inspect the inlet and outlet port fittings for leakage or cross threading."
+      },
+      "box_50": {
+        "type": "process",
+        "text": "Load the test piece material, typically a 100 millimetre diameter aluminium or cast iron disc, into the machine work holding and run the standard spindle test machining program. The program bores a 50 millimetre diameter hole and faces the top surface. After machining, measure bore diameter at three depths and face flatness at four points using a coordinate measuring machine or precision gauges. Compare all results against the machined geometry tolerances in the spindle acceptance test plan."
+      },
+      "box_51": {
+        "type": "document",
+        "text": "Refer to the spindle acceptance test specification."
+      },
+      "box_52": {
+        "type": "decision",
+        "text": "Test piece geometry within drawing tolerance?"
+      },
+      "box_53": {
+        "type": "process",
+        "text": "Log all spindle measurements and update maintenance record"
+      },
+      "box_54": {
+        "type": "terminator",
+        "text": "End, Procedure complete"
+      },
+      "box_55": {
+        "type": "document",
+        "text": "Spindle bearing and runout diagnostic (GRAPH 38)"
+      }
+    },
+    "edges": [
+      {
+        "source": "box_0",
+        "target": "box_1",
+        "label": null
+      },
+      {
+        "source": "box_1",
+        "target": "box_2",
+        "label": ""
+      },
+      {
+        "source": "box_2",
+        "target": "box_4",
+        "label": null
+      },
+      {
+        "source": "box_3",
+        "target": "box_4",
+        "label": null
+      },
+      {
+        "source": "box_4",
+        "target": "box_55",
+        "label": "No"
+      },
+      {
+        "source": "box_4",
+        "target": "box_8",
+        "label": "Yes"
+      },
+      {
+        "source": "box_6",
+        "target": "box_8",
+        "label": null
+      },
+      {
+        "source": "box_7",
+        "target": "box_8",
+        "label": null
+      },
+      {
+        "source": "box_8",
+        "target": "box_9",
+        "label": "No"
+      },
+      {
+        "source": "box_8",
+        "target": "box_12",
+        "label": "Yes"
+      },
+      {
+        "source": "box_10",
+        "target": "box_12",
+        "label": null
+      },
+      {
+        "source": "box_11",
+        "target": "box_12",
+        "label": null
+      },
+      {
+        "source": "box_12",
+        "target": "box_13",
+        "label": "No"
+      },
+      {
+        "source": "box_13",
+        "target": "box_14",
+        "label": null
+      },
+      {
+        "source": "box_14",
+        "target": "box_15",
+        "label": "Still out of spec"
+      },
+      {
+        "source": "box_14",
+        "target": "box_18",
+        "label": "OK"
+      },
+      {
+        "source": "box_12",
+        "target": "box_18",
+        "label": "Yes"
+      },
+      {
+        "source": "box_16",
+        "target": "box_18",
+        "label": null
+      },
+      {
+        "source": "box_17",
+        "target": "box_18",
+        "label": null
+      },
+      {
+        "source": "box_18",
+        "target": "box_19",
+        "label": "No"
+      },
+      {
+        "source": "box_19",
+        "target": "box_20",
+        "label": ""
+      },
+      {
+        "source": "box_18",
+        "target": "box_22",
+        "label": "Yes"
+      },
+      {
+        "source": "box_20",
+        "target": "box_22",
+        "label": null
+      },
+      {
+        "source": "box_21",
+        "target": "box_22",
+        "label": null
+      },
+      {
+        "source": "box_22",
+        "target": "box_23",
+        "label": "No"
+      },
+      {
+        "source": "box_23",
+        "target": "box_24",
+        "label": null
+      },
+      {
+        "source": "box_24",
+        "target": "box_25",
+        "label": "Still low"
+      },
+      {
+        "source": "box_24",
+        "target": "box_28",
+        "label": "OK"
+      },
+      {
+        "source": "box_22",
+        "target": "box_28",
+        "label": "Yes"
+      },
+      {
+        "source": "box_26",
+        "target": "box_28",
+        "label": null
+      },
+      {
+        "source": "box_27",
+        "target": "box_28",
+        "label": null
+      },
+      {
+        "source": "box_28",
+        "target": "box_29",
+        "label": "No"
+      },
+      {
+        "source": "box_29",
+        "target": "box_30",
+        "label": ""
+      },
+      {
+        "source": "box_28",
+        "target": "box_32",
+        "label": "Yes"
+      },
+      {
+        "source": "box_30",
+        "target": "box_32",
+        "label": null
+      },
+      {
+        "source": "box_31",
+        "target": "box_32",
+        "label": null
+      },
+      {
+        "source": "box_32",
+        "target": "box_33",
+        "label": "No"
+      },
+      {
+        "source": "box_33",
+        "target": "box_34",
+        "label": null
+      },
+      {
+        "source": "box_34",
+        "target": "box_35",
+        "label": "Still failing"
+      },
+      {
+        "source": "box_34",
+        "target": "box_37",
+        "label": "OK"
+      },
+      {
+        "source": "box_32",
+        "target": "box_37",
+        "label": "Yes"
+      },
+      {
+        "source": "box_36",
+        "target": "box_37",
+        "label": null
+      },
+      {
+        "source": "box_37",
+        "target": "box_38",
+        "label": "No"
+      },
+      {
+        "source": "box_38",
+        "target": "box_39",
+        "label": ""
+      },
+      {
+        "source": "box_37",
+        "target": "box_41",
+        "label": "Yes"
+      },
+      {
+        "source": "box_39",
+        "target": "box_41",
+        "label": null
+      },
+      {
+        "source": "box_40",
+        "target": "box_41",
+        "label": null
+      },
+      {
+        "source": "box_41",
+        "target": "box_42",
+        "label": "No"
+      },
+      {
+        "source": "box_42",
+        "target": "box_43",
+        "label": ""
+      },
+      {
+        "source": "box_41",
+        "target": "box_44",
+        "label": "Yes"
+      },
+      {
+        "source": "box_43",
+        "target": "box_44",
+        "label": null
+      },
+      {
+        "source": "box_44",
+        "target": "box_45",
+        "label": "No"
+      },
+      {
+        "source": "box_45",
+        "target": "box_46",
+        "label": ""
+      },
+      {
+        "source": "box_44",
+        "target": "box_48",
+        "label": "Yes"
+      },
+      {
+        "source": "box_46",
+        "target": "box_48",
+        "label": null
+      },
+      {
+        "source": "box_47",
+        "target": "box_48",
+        "label": null
+      },
+      {
+        "source": "box_48",
+        "target": "box_49",
+        "label": "No"
+      },
+      {
+        "source": "box_49",
+        "target": "box_50",
+        "label": ""
+      },
+      {
+        "source": "box_48",
+        "target": "box_52",
+        "label": "Yes"
+      },
+      {
+        "source": "box_50",
+        "target": "box_52",
+        "label": null
+      },
+      {
+        "source": "box_51",
+        "target": "box_52",
+        "label": null
+      },
+      {
+        "source": "box_52",
+        "target": "box_53",
+        "label": "Yes"
+      },
+      {
+        "source": "box_52",
+        "target": "box_15",
+        "label": "No"
+      },
+      {
+        "source": "box_53",
+        "target": "box_54",
+        "label": null
+      }
+    ]
+  }
+}

@@ -1,0 +1,355 @@
+{
+  "id": "GRAPH39",
+  "description": "Pneumatic cylinder rod seal, stroke and cushion check — PROC-61",
+  "graph": {
+    "nodes": {
+      "box_0": {
+        "type": "terminator",
+        "text": "Start"
+      },
+      "box_1": {
+        "type": "process",
+        "text": "Complete the following checks: 1. Inspect the rod surface for scoring, pitting, or corrosion along full stroke. 2. Check the rod seal and wiper for extrusion or deformation. 3. Inspect the cylinder end caps and port fittings for leakage."
+      },
+      "box_2": {
+        "type": "decision",
+        "text": "Rod scoring, buckling or seal extrusion visible?"
+      },
+      "box_3": {
+        "type": "terminator",
+        "text": "End, Replace cylinder: rod or body damage confirmed"
+      },
+      "box_4": {
+        "type": "process",
+        "text": "Connect a calibrated pressure gauge to the Schrader test port at the cylinder inlet port with the pneumatic circuit energised. Read the supply pressure at rest and during extension and retraction strokes. Compare both dynamic readings against the nominal operating pressure range on the pneumatic circuit drawing and note any drop exceeding 10% of supply pressure during stroke."
+      },
+      "box_5": {
+        "type": "document",
+        "text": "Refer to the pneumatic system pressure specification."
+      },
+      "box_6": {
+        "type": "decision",
+        "text": "Supply pressure within specified range?"
+      },
+      "box_7": {
+        "type": "terminator",
+        "text": "End, Escalate: pressure supply fault, check filter regulator lubricator unit"
+      },
+      "box_8": {
+        "type": "process",
+        "text": "Close the supply isolation valve to the cylinder and monitor the inlet pressure gauge over a two minute period. Note the pressure decay in bar per minute. Repeat with the circuit pressurised on the rod side. A decay rate greater than 0.1 bar per minute indicates a piston seal leak and requires cylinder disassembly for inspection."
+      },
+      "box_9": {
+        "type": "decision",
+        "text": "Pressure decay within 0.05 bar per minute limit?"
+      },
+      "box_10": {
+        "type": "process",
+        "text": "Repack rod seal and replace O rings"
+      },
+      "box_11": {
+        "type": "decision",
+        "text": "Reverify leak down after seal repacking"
+      },
+      "box_12": {
+        "type": "terminator",
+        "text": "End, Replace cylinder: leak down unrecoverable after repack"
+      },
+      "box_13": {
+        "type": "process",
+        "text": "With the cylinder fully retracted against its stop, zero a steel rule or measuring tape at the rear end cap face. Extend the cylinder to the forward mechanical stop and record the total stroke length. Compare the measured stroke against the nominal stroke on the cylinder datasheet and confirm that end of stroke contact is square with no misalignment binding."
+      },
+      "box_14": {
+        "type": "document",
+        "text": "Refer to the cylinder stroke specification."
+      },
+      "box_15": {
+        "type": "decision",
+        "text": "Stroke length within ±0.5 mm of nominal?"
+      },
+      "box_16": {
+        "type": "process",
+        "text": "Adjust mechanical stops to correct stroke length"
+      },
+      "box_17": {
+        "type": "process",
+        "text": "With the cylinder extending under normal load, turn the cushion needle valve clockwise in quarter turn increments until the deceleration profile is smooth with no impact or bounce at the end of stroke. Repeat the adjustment on the retraction cushion. Record the final needle valve position in turns from fully closed for future reference in the maintenance log."
+      },
+      "box_18": {
+        "type": "decision",
+        "text": "Deceleration cushion distance within spec?"
+      },
+      "box_19": {
+        "type": "process",
+        "text": "Adjust cushion needle valves, one eighth turn increments"
+      },
+      "box_20": {
+        "type": "decision",
+        "text": "Reverify cushion profile after valve adjustment"
+      },
+      "box_21": {
+        "type": "terminator",
+        "text": "End, Escalate: cushion adjustment range exhausted"
+      },
+      "box_22": {
+        "type": "process",
+        "text": "Time ten consecutive extension and retraction cycles using a stopwatch or PLC timer readout. Record the mean cycle time and compare against the target cycle time from the line timing specification. Note whether extension and retraction times are balanced; an imbalance greater than 15% indicates a flow control valve may need adjustment."
+      },
+      "box_23": {
+        "type": "document",
+        "text": "Refer to the cylinder speed specification."
+      },
+      "box_24": {
+        "type": "decision",
+        "text": "Extend and retract times within specified range?"
+      },
+      "box_25": {
+        "type": "process",
+        "text": "Adjust flow control valves, both directions independently"
+      },
+      "box_26": {
+        "type": "process",
+        "text": "Move the cylinder to its fully extended position and verify that the extension proximity switch indicator light is on. Retract the cylinder fully and confirm the retract proximity switch activates. Use a digital caliper to measure the gap between the sensor face and the trigger flag at each position and compare against the sensor manufacturer's rated sensing distance."
+      },
+      "box_27": {
+        "type": "decision",
+        "text": "End position sensors trigger at correct rod positions?"
+      },
+      "box_28": {
+        "type": "process",
+        "text": "Reposition proximity switch brackets and reteach"
+      },
+      "box_29": {
+        "type": "process",
+        "text": "Cycling endurance test, 100 consecutive cycles"
+      },
+      "box_30": {
+        "type": "decision",
+        "text": "No leaks, correct stroke or timing faults after 100 cycles?"
+      },
+      "box_31": {
+        "type": "process",
+        "text": "Investigate fault symptom and repeat relevant section"
+      },
+      "box_32": {
+        "type": "process",
+        "text": "Log all measurements and update pneumatics maintenance record"
+      },
+      "box_33": {
+        "type": "terminator",
+        "text": "End, Procedure complete"
+      },
+      "box_34": {
+        "type": "process",
+        "text": "Secondary cylinder seal overhaul: fully disassemble the cylinder and replace both the piston seal set and the rod seal set with new parts from a sealed replacement kit of the correct bore diameter. Lubricate all new seals with pneumatic cylinder oil before assembly. Allow 5 minutes running time after repressurisation for the new seals to seat before returning to the leak down test step."
+      }
+    },
+    "edges": [
+      {
+        "source": "box_0",
+        "target": "box_1",
+        "label": null
+      },
+      {
+        "source": "box_1",
+        "target": "box_2",
+        "label": null
+      },
+      {
+        "source": "box_2",
+        "target": "box_3",
+        "label": "Yes"
+      },
+      {
+        "source": "box_2",
+        "target": "box_6",
+        "label": "No"
+      },
+      {
+        "source": "box_4",
+        "target": "box_6",
+        "label": null
+      },
+      {
+        "source": "box_5",
+        "target": "box_6",
+        "label": null
+      },
+      {
+        "source": "box_6",
+        "target": "box_7",
+        "label": "No"
+      },
+      {
+        "source": "box_6",
+        "target": "box_9",
+        "label": "Yes"
+      },
+      {
+        "source": "box_8",
+        "target": "box_9",
+        "label": null
+      },
+      {
+        "source": "box_9",
+        "target": "box_10",
+        "label": "No"
+      },
+      {
+        "source": "box_10",
+        "target": "box_11",
+        "label": null
+      },
+      {
+        "source": "box_11",
+        "target": "box_15",
+        "label": "OK"
+      },
+      {
+        "source": "box_9",
+        "target": "box_15",
+        "label": "Yes"
+      },
+      {
+        "source": "box_13",
+        "target": "box_15",
+        "label": null
+      },
+      {
+        "source": "box_14",
+        "target": "box_15",
+        "label": null
+      },
+      {
+        "source": "box_15",
+        "target": "box_16",
+        "label": "No"
+      },
+      {
+        "source": "box_16",
+        "target": "box_17",
+        "label": ""
+      },
+      {
+        "source": "box_15",
+        "target": "box_18",
+        "label": "Yes"
+      },
+      {
+        "source": "box_17",
+        "target": "box_18",
+        "label": null
+      },
+      {
+        "source": "box_18",
+        "target": "box_19",
+        "label": "No"
+      },
+      {
+        "source": "box_19",
+        "target": "box_20",
+        "label": null
+      },
+      {
+        "source": "box_20",
+        "target": "box_21",
+        "label": "Still out of spec"
+      },
+      {
+        "source": "box_20",
+        "target": "box_24",
+        "label": "OK"
+      },
+      {
+        "source": "box_18",
+        "target": "box_24",
+        "label": "Yes"
+      },
+      {
+        "source": "box_22",
+        "target": "box_24",
+        "label": null
+      },
+      {
+        "source": "box_23",
+        "target": "box_24",
+        "label": null
+      },
+      {
+        "source": "box_24",
+        "target": "box_25",
+        "label": "No"
+      },
+      {
+        "source": "box_25",
+        "target": "box_26",
+        "label": ""
+      },
+      {
+        "source": "box_24",
+        "target": "box_27",
+        "label": "Yes"
+      },
+      {
+        "source": "box_26",
+        "target": "box_27",
+        "label": null
+      },
+      {
+        "source": "box_27",
+        "target": "box_28",
+        "label": "No"
+      },
+      {
+        "source": "box_28",
+        "target": "box_29",
+        "label": null
+      },
+      {
+        "source": "box_27",
+        "target": "box_29",
+        "label": "Yes"
+      },
+      {
+        "source": "box_29",
+        "target": "box_30",
+        "label": null
+      },
+      {
+        "source": "box_30",
+        "target": "box_31",
+        "label": "No"
+      },
+      {
+        "source": "box_31",
+        "target": "box_32",
+        "label": null
+      },
+      {
+        "source": "box_30",
+        "target": "box_32",
+        "label": "Yes"
+      },
+      {
+        "source": "box_32",
+        "target": "box_33",
+        "label": null
+      },
+      {
+        "source": "box_11",
+        "target": "box_34",
+        "label": "Still failing"
+      },
+      {
+        "source": "box_34",
+        "target": "box_11",
+        "label": null
+      },
+      {
+        "source": "box_11",
+        "target": "box_12",
+        "label": "Unresolvable after second attempt"
+      }
+    ]
+  }
+}

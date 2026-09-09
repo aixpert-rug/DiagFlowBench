@@ -1,0 +1,898 @@
+{
+  "conversation_id": "GRAPH48_P006_noise_perturbation_mixed",
+  "graph_id": "GRAPH48",
+  "path_id": "GRAPH48_P006",
+  "regime": "mixed",
+  "variant": "noise_perturbation",
+  "robustness_axis": "noise_perturbation",
+  "turns": [
+    {
+      "node_id": "box_0",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Starting clamping unit diagnostic procedure.",
+      "edge_label_to_next": null,
+      "turn_index": 0,
+      "ground_truth": {
+        "node_id": "box_0",
+        "node_type": "terminator",
+        "node_text": "Start"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Perform a visual and mechanical inspection of the clamping arms. Inspect the arm bodies for any cracks or bending deformation, check each pivot pin boss for looseness by attempting to rock the arm, and inspect the clamping pad faces for wear beyond the minimum thickness.",
+      "edge_label_to_next": null,
+      "turn_index": 1,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Inspect the clamping arm bodies for cracks or bending deformation. 2. Check each pivot pin boss for looseness by attempting to rock the arm. 3. Inspect the clamping pad faces for wear beyond the minimum thickness."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "visual inspection done, clamping arm bodies intact no cracks or deformaton pivot pins secure and pad faces within acceptable wear limits",
+      "edge_label_to_next": null,
+      "turn_index": 2,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Inspect the clamping arm bodies for cracks or bending deformation. 2. Check each pivot pin boss for looseness by attempting to rock the arm. 3. Inspect the clamping pad faces for wear beyond the minimum thickness."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Are there any cracks, deformation, or severe wear on the clamping arms?",
+      "edge_label_to_next": null,
+      "turn_index": 3,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Cracks, deformation or severe wear on clamping arms?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no all clamping arms look structurally sound no signs of damge or excessive wear",
+      "edge_label_to_next": "No",
+      "turn_index": 4,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Cracks, deformation or severe wear on clamping arms?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_6",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the clamping force within plus or minus five percent of the rated value?",
+      "edge_label_to_next": null,
+      "turn_index": 5,
+      "ground_truth": {
+        "node_id": "box_6",
+        "node_type": "decision",
+        "node_text": "Clamping force within ±5% of rated value?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_6",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no measured clamping force reading about 8 percent below rated spec",
+      "edge_label_to_next": "No",
+      "turn_index": 6,
+      "ground_truth": {
+        "node_id": "box_6",
+        "node_type": "decision",
+        "node_text": "Clamping force within ±5% of rated value?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_7",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Replace the return springs and check the actuator seals for any signs of leakage or degradation.",
+      "edge_label_to_next": null,
+      "turn_index": 7,
+      "ground_truth": {
+        "node_id": "box_7",
+        "node_type": "process",
+        "node_text": "Replace return springs and check actuator seals"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_7",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "I've replaced the springs and checked the seals like you said, but I'm noticing the actuator mounting bracket has stress cracks and some serious corrosion around the bolt holes.",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "coverage_gap",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_7",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "ok so return springs replaced and actuator seals inspected seals appear good condition",
+      "edge_label_to_next": null,
+      "turn_index": 8,
+      "ground_truth": {
+        "node_id": "box_7",
+        "node_type": "process",
+        "node_text": "Replace return springs and check actuator seals"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Reverify the clamping force after spring replacement. Has the force returned to specification?",
+      "edge_label_to_next": null,
+      "turn_index": 9,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "decision",
+        "node_text": "Reverify clamping force after spring replacement"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "clamping force still reading low about 6 percent below spec",
+      "edge_label_to_next": "Still low",
+      "turn_index": 10,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "decision",
+        "node_text": "Reverify clamping force after spring replacement"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_33",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Perform a secondary spring set replacement. Remove all clamping springs, verify the spring seat surfaces are clean and undamaged, then install new springs from the correct specification batch. Confirm the free length of each spring matches the specification before installation, then cycle the clamp five times to allow the springs to seat.",
+      "edge_label_to_next": null,
+      "turn_index": 11,
+      "ground_truth": {
+        "node_id": "box_33",
+        "node_type": "process",
+        "node_text": "Secondary spring set replacement: remove all clamping springs and verify the spring seat surfaces are clean and undamaged before fitting. Install new springs from the correct specification batch, confirming the free length of each spring matches the specification before installation. Cycle the clamp five times after replacement to allow the springs to seat before returning to the clamping force measurement step."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_33",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Hey, I'm seeing some pretty deep scoring marks on the main pivot shaft itself where it rides in the bearing housing — looks like metal-on-metal contact has been happening for a while, but I don't see anything in the procedure about checking or replacing the shaft.",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "undocumented_malfunction",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_33",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "secondary spring set installed all springs match spec free lenght and clamp cycled 5 times",
+      "edge_label_to_next": null,
+      "turn_index": 12,
+      "ground_truth": {
+        "node_id": "box_33",
+        "node_type": "process",
+        "node_text": "Secondary spring set replacement: remove all clamping springs and verify the spring seat surfaces are clean and undamaged before fitting. Install new springs from the correct specification batch, confirming the free length of each spring matches the specification before installation. Cycle the clamp five times after replacement to allow the springs to seat before returning to the clamping force measurement step."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Reverify the clamping force after the secondary spring replacement. Has the force returned to specification?",
+      "edge_label_to_next": null,
+      "turn_index": 13,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "decision",
+        "node_text": "Reverify clamping force after spring replacement"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yeah force still measuring low approx 4 percent below rated value",
+      "edge_label_to_next": "Still low",
+      "turn_index": 14,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "decision",
+        "node_text": "Reverify clamping force after spring replacement"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_33",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Perform another secondary spring set replacement. Remove all clamping springs, verify the spring seat surfaces are clean and undamaged, then install new springs from the correct specification batch. Confirm the free length of each spring matches the specification before installation, then cycle the clamp five times to allow the springs to seat.",
+      "edge_label_to_next": null,
+      "turn_index": 15,
+      "ground_truth": {
+        "node_id": "box_33",
+        "node_type": "process",
+        "node_text": "Secondary spring set replacement: remove all clamping springs and verify the spring seat surfaces are clean and undamaged before fitting. Install new springs from the correct specification batch, confirming the free length of each spring matches the specification before installation. Cycle the clamp five times after replacement to allow the springs to seat before returning to the clamping force measurement step."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_33",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "third spring set installed with verified free lengths clamp cycled and springs seated",
+      "edge_label_to_next": null,
+      "turn_index": 16,
+      "ground_truth": {
+        "node_id": "box_33",
+        "node_type": "process",
+        "node_text": "Secondary spring set replacement: remove all clamping springs and verify the spring seat surfaces are clean and undamaged before fitting. Install new springs from the correct specification batch, confirming the free length of each spring matches the specification before installation. Cycle the clamp five times after replacement to allow the springs to seat before returning to the clamping force measurement step."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Reverify the clamping force after this replacement. Has the force returned to specification?",
+      "edge_label_to_next": null,
+      "turn_index": 17,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "decision",
+        "node_text": "Reverify clamping force after spring replacement"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yes clamping force now reading within spec about 2 percent above nominal",
+      "edge_label_to_next": "OK",
+      "turn_index": 18,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "decision",
+        "node_text": "Reverify clamping force after spring replacement"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_11",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the clamp pad surface condition acceptable?",
+      "edge_label_to_next": null,
+      "turn_index": 19,
+      "ground_truth": {
+        "node_id": "box_11",
+        "node_type": "decision",
+        "node_text": "Clamp pad surface condition acceptable?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_11",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yeah pad surface roughness and flatness measurements both within tolerance",
+      "edge_label_to_next": "Yes",
+      "turn_index": 20,
+      "ground_truth": {
+        "node_id": "box_11",
+        "node_type": "decision",
+        "node_text": "Clamp pad surface condition acceptable?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_15",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Are the open and close sensor positions within plus or minus zero point three millimeters of nominal?",
+      "edge_label_to_next": null,
+      "turn_index": 21,
+      "ground_truth": {
+        "node_id": "box_15",
+        "node_type": "decision",
+        "node_text": "Open and close sensor positions within ±0.3 mm of nominal?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_15",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Hey, before I continue with this, do you know if the PM schedule for the hydraulic pumps got updated last month? I need to check when they're due next.",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "unrelated_question",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_15",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no open position measuring about 0.5mm off nominal",
+      "edge_label_to_next": "No",
+      "turn_index": 22,
+      "ground_truth": {
+        "node_id": "box_15",
+        "node_type": "decision",
+        "node_text": "Open and close sensor positions within ±0.3 mm of nominal?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_16",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Reposition the sensors and reteach the open and close positions in the programmable controller.",
+      "edge_label_to_next": null,
+      "turn_index": 23,
+      "ground_truth": {
+        "node_id": "box_16",
+        "node_type": "process",
+        "node_text": "Reposition sensors and reteach open/close positions in programmable controller"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_16",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "I've repositioned the sensors and retaught the positions, but now the door is stopping about two inches before it fully closes. The procedure doesn't say anything about partial closure issues.",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "coverage_gap",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_16",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "sensors repositioned and controller retaught for both postions",
+      "edge_label_to_next": null,
+      "turn_index": 24,
+      "ground_truth": {
+        "node_id": "box_16",
+        "node_type": "process",
+        "node_text": "Reposition sensors and reteach open/close positions in programmable controller"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_17",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Reverify the sensor positions after reteaching. Are they now within tolerance?",
+      "edge_label_to_next": null,
+      "turn_index": 25,
+      "ground_truth": {
+        "node_id": "box_17",
+        "node_type": "decision",
+        "node_text": "Reverify sensor positions after reteach"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_17",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yes both open and close positions now reading within the 0.3mm tolerance",
+      "edge_label_to_next": "OK",
+      "turn_index": 26,
+      "ground_truth": {
+        "node_id": "box_17",
+        "node_type": "decision",
+        "node_text": "Reverify sensor positions after reteach"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_20",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the pivot pin radial clearance within the zero point zero five millimeter limit?",
+      "edge_label_to_next": null,
+      "turn_index": 27,
+      "ground_truth": {
+        "node_id": "box_20",
+        "node_type": "decision",
+        "node_text": "Pivot pin radial clearance within 0.05 mm limit?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_20",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yes all pivot pins showing clearance measurements well within limit averaging about 0.03mm",
+      "edge_label_to_next": "Yes",
+      "turn_index": 28,
+      "ground_truth": {
+        "node_id": "box_20",
+        "node_type": "decision",
+        "node_text": "Pivot pin radial clearance within 0.05 mm limit?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_24",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Are all pivot points correctly lubricated?",
+      "edge_label_to_next": null,
+      "turn_index": 29,
+      "ground_truth": {
+        "node_id": "box_24",
+        "node_type": "decision",
+        "node_text": "All pivot points correctly lubricated?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_24",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yeah all grease nipples accepted lubricant properly and specified amount applied to each pivot point",
+      "edge_label_to_next": "Yes",
+      "turn_index": 30,
+      "ground_truth": {
+        "node_id": "box_24",
+        "node_type": "decision",
+        "node_text": "All pivot points correctly lubricated?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_27",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Were all twenty cycles completed without any missed clamp or timeout?",
+      "edge_label_to_next": null,
+      "turn_index": 31,
+      "ground_truth": {
+        "node_id": "box_27",
+        "node_type": "decision",
+        "node_text": "All 20 cycles completed without missed clamp or timeout?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_27",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yes all 20 cycles completed successfully with consistent motion no faults cycle time within normal range",
+      "edge_label_to_next": "Yes",
+      "turn_index": 32,
+      "ground_truth": {
+        "node_id": "box_27",
+        "node_type": "decision",
+        "node_text": "All 20 cycles completed without missed clamp or timeout?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_29",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Load the reference part into the fixture and close the clamp to production pressure. Attempt to move the reference part by applying a lateral force by hand, then confirm whether the part moves and record the clamping force reading.",
+      "edge_label_to_next": null,
+      "turn_index": 33,
+      "ground_truth": {
+        "node_id": "box_29",
+        "node_type": "process",
+        "node_text": "Complete the following steps: 1. Load the reference part into the fixture and close the clamp to production pressure. 2. Attempt to move the reference part by applying a lateral force by hand. 3. Confirm the part does not move and record the clamping force reading."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_29",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "reference part loaded and clamped applied lateral force and part showed slight movment under hand pressure",
+      "edge_label_to_next": null,
+      "turn_index": 34,
+      "ground_truth": {
+        "node_id": "box_29",
+        "node_type": "process",
+        "node_text": "Complete the following steps: 1. Load the reference part into the fixture and close the clamp to production pressure. 2. Attempt to move the reference part by applying a lateral force by hand. 3. Confirm the part does not move and record the clamping force reading."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_30",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Was the reference part held without movement during the simulated cut?",
+      "edge_label_to_next": null,
+      "turn_index": 35,
+      "ground_truth": {
+        "node_id": "box_30",
+        "node_type": "decision",
+        "node_text": "Reference part held without movement during simulated cut?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_30",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "The reference part is moving, but I'm also noticing the spindle encoder is throwing intermittent fault codes and the motor housing is getting unusually hot to the touch.",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "undocumented_malfunction",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_30",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no there was detectable movement when i applied lateral force to simulate cutting loads",
+      "edge_label_to_next": "No",
+      "turn_index": 36,
+      "ground_truth": {
+        "node_id": "box_30",
+        "node_type": "decision",
+        "node_text": "Reference part held without movement during simulated cut?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_31",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Log the clamp force and cycle data, then update the service record with all findings from this diagnostic procedure.",
+      "edge_label_to_next": null,
+      "turn_index": 37,
+      "ground_truth": {
+        "node_id": "box_31",
+        "node_type": "process",
+        "node_text": "Log clamp force and cycle data, update service record"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_31",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "ok so all data logged and service record updated with todays findings and corrective actions",
+      "edge_label_to_next": null,
+      "turn_index": 38,
+      "ground_truth": {
+        "node_id": "box_31",
+        "node_type": "process",
+        "node_text": "Log clamp force and cycle data, update service record"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_32",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Diagnostic procedure complete. Document all findings and continue monitoring clamp performance during production.",
+      "edge_label_to_next": null,
+      "turn_index": 39,
+      "ground_truth": {
+        "node_id": "box_32",
+        "node_type": "terminator",
+        "node_text": "End, Procedure complete"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_32",
+      "node_type": "terminator",
+      "speaker": "operator",
+      "utterance": "understood procedure complete and documented",
+      "edge_label_to_next": null,
+      "turn_index": 40,
+      "ground_truth": {
+        "node_id": "box_32",
+        "node_type": "terminator",
+        "node_text": "End, Procedure complete"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    }
+  ],
+  "metadata": {
+    "depth": 21,
+    "num_decisions": 12,
+    "num_processes": 7,
+    "num_documents": 0,
+    "terminator_type": "procedure_complete",
+    "terminator_text": "End, Procedure complete",
+    "true_terminator": true,
+    "node_sequence": [
+      "box_0",
+      "box_1",
+      "box_2",
+      "box_6",
+      "box_7",
+      "box_8",
+      "box_33",
+      "box_8",
+      "box_33",
+      "box_8",
+      "box_11",
+      "box_15",
+      "box_16",
+      "box_17",
+      "box_20",
+      "box_24",
+      "box_27",
+      "box_29",
+      "box_30",
+      "box_31",
+      "box_32"
+    ],
+    "edge_labels": [
+      null,
+      null,
+      null,
+      "No",
+      "No",
+      null,
+      "Still low",
+      null,
+      "Still low",
+      null,
+      "OK",
+      "Yes",
+      "No",
+      null,
+      "OK",
+      "Yes",
+      "Yes",
+      "Yes",
+      null,
+      "No",
+      null
+    ],
+    "decision_points": [
+      {
+        "node": "box_2",
+        "label": "No",
+        "question": "Cracks, deformation or severe wear on clamping arms?"
+      },
+      {
+        "node": "box_6",
+        "label": "No",
+        "question": "Clamping force within ±5% of rated value?"
+      },
+      {
+        "node": "box_8",
+        "label": "Still low",
+        "question": "Reverify clamping force after spring replacement"
+      },
+      {
+        "node": "box_8",
+        "label": "Still low",
+        "question": "Reverify clamping force after spring replacement"
+      },
+      {
+        "node": "box_8",
+        "label": "OK",
+        "question": "Reverify clamping force after spring replacement"
+      },
+      {
+        "node": "box_11",
+        "label": "Yes",
+        "question": "Clamp pad surface condition acceptable?"
+      },
+      {
+        "node": "box_15",
+        "label": "No",
+        "question": "Open and close sensor positions within ±0.3 mm of nominal?"
+      },
+      {
+        "node": "box_17",
+        "label": "OK",
+        "question": "Reverify sensor positions after reteach"
+      },
+      {
+        "node": "box_20",
+        "label": "Yes",
+        "question": "Pivot pin radial clearance within 0.05 mm limit?"
+      },
+      {
+        "node": "box_24",
+        "label": "Yes",
+        "question": "All pivot points correctly lubricated?"
+      },
+      {
+        "node": "box_27",
+        "label": "Yes",
+        "question": "All 20 cycles completed without missed clamp or timeout?"
+      },
+      {
+        "node": "box_30",
+        "label": "No",
+        "question": "Reference part held without movement during simulated cut?"
+      }
+    ],
+    "generation_model": "anthropic/claude-sonnet-4-5",
+    "verification": {
+      "variant_of": "base",
+      "base_verified": false,
+      "note": "surface-form variant; not independently verified"
+    },
+    "injection_count": 5
+  },
+  "injection_log": [
+    {
+      "position": 8,
+      "node_id": "box_7",
+      "node_text": "Replace return springs and check actuator seals",
+      "edge_labels": [],
+      "category": "coverage_gap",
+      "utterance": "I've replaced the springs and checked the seals like you said, but I'm noticing the actuator mounting bracket has stress cracks and some serious corrosion around the bolt holes.",
+      "injection_rate": null,
+      "num_candidates": null
+    },
+    {
+      "position": 12,
+      "node_id": "box_33",
+      "node_text": "Secondary spring set replacement: remove all clamping springs and verify the spring seat surfaces are clean and undamaged before fitting. Install new springs from the correct specification batch, confirming the free length of each spring matches the specification before installation. Cycle the clamp five times after replacement to allow the springs to seat before returning to the clamping force measurement step.",
+      "edge_labels": [],
+      "category": "undocumented_malfunction",
+      "utterance": "Hey, I'm seeing some pretty deep scoring marks on the main pivot shaft itself where it rides in the bearing housing — looks like metal-on-metal contact has been happening for a while, but I don't see anything in the procedure about checking or replacing the shaft.",
+      "injection_rate": null,
+      "num_candidates": null
+    },
+    {
+      "position": 22,
+      "node_id": "box_15",
+      "node_text": "Open and close sensor positions within ±0.3 mm of nominal?",
+      "edge_labels": [
+        "No",
+        "Yes"
+      ],
+      "category": "unrelated_question",
+      "utterance": "Hey, before I continue with this, do you know if the PM schedule for the hydraulic pumps got updated last month? I need to check when they're due next.",
+      "injection_rate": null,
+      "num_candidates": null
+    },
+    {
+      "position": 24,
+      "node_id": "box_16",
+      "node_text": "Reposition sensors and reteach open/close positions in programmable controller",
+      "edge_labels": [],
+      "category": "coverage_gap",
+      "utterance": "I've repositioned the sensors and retaught the positions, but now the door is stopping about two inches before it fully closes. The procedure doesn't say anything about partial closure issues.",
+      "injection_rate": null,
+      "num_candidates": null
+    },
+    {
+      "position": 36,
+      "node_id": "box_30",
+      "node_text": "Reference part held without movement during simulated cut?",
+      "edge_labels": [
+        "Yes",
+        "No"
+      ],
+      "category": "undocumented_malfunction",
+      "utterance": "The reference part is moving, but I'm also noticing the spindle encoder is throwing intermittent fault codes and the motor housing is getting unusually hot to the touch.",
+      "injection_rate": null,
+      "num_candidates": null
+    }
+  ]
+}

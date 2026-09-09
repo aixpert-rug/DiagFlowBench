@@ -1,0 +1,26 @@
+# LLM APIs
+openai>=1.0
+anthropic>=0.34.0   # Batch API (50% token discount for generation)
+
+# Environment & Config
+python-dotenv>=1.0
+pyyaml>=6.0
+
+# NLP / Text Quality
+nltk>=3.8
+
+# Numerical / Scoring
+numpy>=1.24
+scikit-learn>=1.3
+
+# Utilities
+tqdm>=4.60
+
+# Annotation interface
+streamlit>=1.35
+gspread>=6.0
+google-auth>=2.0
+
+# Testing
+pytest>=7.0
+pytest-cov>=4.0

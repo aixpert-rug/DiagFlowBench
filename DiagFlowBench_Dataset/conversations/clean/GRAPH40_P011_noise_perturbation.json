@@ -1,0 +1,135 @@
+{
+  "conversation_id": "GRAPH40_P011_noise_perturbation",
+  "graph_id": "GRAPH40",
+  "path_id": "GRAPH40_P011",
+  "regime": "clean",
+  "variant": "noise_perturbation",
+  "robustness_axis": "noise_perturbation",
+  "turns": [
+    {
+      "node_id": "box_0",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Starting coolant system diagnostic procedure.",
+      "edge_label_to_next": null,
+      "turn_index": 0,
+      "ground_truth": {
+        "node_id": "box_0",
+        "node_type": "terminator",
+        "node_text": "Start"
+      }
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Please complete the following initial checks. First, check the coolant level against the tank minimum and maximum marks. Second, assess the coolant colour and odour for any signs of contamination. Third, check the refractometer reading against the specified concentration range.",
+      "edge_label_to_next": null,
+      "turn_index": 1,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Check the coolant level against the tank minimum and maximum marks. 2. Assess coolant colour and odour for signs of contamination. 3. Check refractometer reading against the specified concentration range."
+      }
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "all three checks done. verified level assessed apperance and smell and took refractomter reading",
+      "edge_label_to_next": null,
+      "turn_index": 2,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Check the coolant level against the tank minimum and maximum marks. 2. Assess coolant colour and odour for signs of contamination. 3. Check refractometer reading against the specified concentration range."
+      }
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Severe contamination: tramp oil, biological growth or discolouration?",
+      "edge_label_to_next": null,
+      "turn_index": 3,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Severe contamination: tramp oil, biological growth or discolouration?"
+      }
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yeah seeing significant contamination here theres visible tramp oil floating on surface and coolant has dark discoloration with foul odor indicating biological grwoth",
+      "edge_label_to_next": "Yes",
+      "turn_index": 4,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Severe contamination: tramp oil, biological growth or discolouration?"
+      }
+    },
+    {
+      "node_id": "box_3",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Procedure complete. The coolant must be drained and replaced due to severe contamination. Please follow hazardous substance disposal protocols and notify the maintenance team to schedule a full sump drain, cleaning, and refill operation.",
+      "edge_label_to_next": null,
+      "turn_index": 5,
+      "ground_truth": {
+        "node_id": "box_3",
+        "node_type": "terminator",
+        "node_text": "End, Drain and replace coolant: severe contamination, hazardous substance disposal"
+      }
+    },
+    {
+      "node_id": "box_3",
+      "node_type": "terminator",
+      "speaker": "operator",
+      "utterance": "understood ill initiate hazardous disposal process and notify team for drain and replacment",
+      "edge_label_to_next": null,
+      "turn_index": 6,
+      "ground_truth": {
+        "node_id": "box_3",
+        "node_type": "terminator",
+        "node_text": "End, Drain and replace coolant: severe contamination, hazardous substance disposal"
+      }
+    }
+  ],
+  "metadata": {
+    "depth": 4,
+    "num_decisions": 1,
+    "num_processes": 1,
+    "num_documents": 0,
+    "terminator_type": "procedure_complete",
+    "terminator_text": "End, Drain and replace coolant: severe contamination, hazardous substance disposal",
+    "true_terminator": true,
+    "node_sequence": [
+      "box_0",
+      "box_1",
+      "box_2",
+      "box_3"
+    ],
+    "edge_labels": [
+      null,
+      null,
+      null,
+      "Yes"
+    ],
+    "decision_points": [
+      {
+        "node": "box_2",
+        "label": "Yes",
+        "question": "Severe contamination: tramp oil, biological growth or discolouration?"
+      }
+    ],
+    "generation_model": "anthropic/claude-sonnet-4-5",
+    "verification": {
+      "variant_of": "base",
+      "base_verified": true,
+      "note": "surface-form variant; not independently verified"
+    }
+  }
+}

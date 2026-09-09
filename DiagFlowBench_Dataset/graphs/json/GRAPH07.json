@@ -1,0 +1,176 @@
+{
+  "id": "GRAPH07",
+  "description": "Diagnostic flowchart for investigating faint or low-contrast markings on parts produced at an automated marking station.",
+  "graph": {
+    "nodes": {
+      "box_0": {
+        "type": "terminator",
+        "text": "Start"
+      },
+      "box_1": {
+        "type": "decision",
+        "text": "Input material quality of parts OK?"
+      },
+      "box_2": {
+        "type": "process",
+        "text": "Complete the following checks: 1. Check whether different part types are mixed on the supply conveyor. 2. Check parts for material deformation, stains, damage, or injection molding defects."
+      },
+      "box_3": {
+        "type": "process",
+        "text": "Empty the supply conveyor(s), fill with the correct part type, create a non conformance record, and load a new batch."
+      },
+      "box_4": {
+        "type": "decision",
+        "text": "Positional deviation OK?"
+      },
+      "box_5": {
+        "type": "process",
+        "text": "Check the positional deviation by means of the positional deviation meter"
+      },
+      "box_6": {
+        "type": "process",
+        "text": "Adjust the positional deviation, if outside the specifications, create a non conformance record."
+      },
+      "box_7": {
+        "type": "decision",
+        "text": "Part height OK?"
+      },
+      "box_8": {
+        "type": "process",
+        "text": "Check the insertion depth by means of the depth gauge"
+      },
+      "box_9": {
+        "type": "process",
+        "text": "Have the line operator adjust the part height, if outside the specifications, create a non conformance record."
+      },
+      "box_10": {
+        "type": "decision",
+        "text": "Correct marking pattern?"
+      },
+      "box_11": {
+        "type": "process",
+        "text": "Check whether the correct program is loaded on the operator control interface and compare it with the marking controller."
+      },
+      "box_12": {
+        "type": "process",
+        "text": "Switch the machine to the correct product and restart the marking controller."
+      },
+      "box_13": {
+        "type": "decision",
+        "text": "Color / brightness of the marking unit text OK?"
+      },
+      "box_14": {
+        "type": "process",
+        "text": "Complete the following checks: 1. Verify that the parts are within specification norms. 2. Check the process fluid level of the marking unit."
+      },
+      "box_15": {
+        "type": "process",
+        "text": "If parts are outside norm, create a non conformance record. Then complete the following steps: 1. Clean the fume extraction unit (fume extraction cleaning procedure). 2. Have the line operator top up the marking unit with process fluid. 3. Have the line operator clean the filtration unit (filtration unit cleaning procedure)."
+      },
+      "box_16": {
+        "type": "decision",
+        "text": "Problem solved?"
+      },
+      "box_17": {
+        "type": "process",
+        "text": "Escalate to the maintenance team: the marking problem could not be resolved through operator level troubleshooting."
+      },
+      "box_18": {
+        "type": "terminator",
+        "text": "End"
+      }
+    },
+    "edges": [
+      {
+        "source": "box_0",
+        "target": "box_1",
+        "label": null
+      },
+      {
+        "source": "box_2",
+        "target": "box_1",
+        "label": null
+      },
+      {
+        "source": "box_1",
+        "target": "box_3",
+        "label": "No"
+      },
+      {
+        "source": "box_1",
+        "target": "box_4",
+        "label": "Yes"
+      },
+      {
+        "source": "box_5",
+        "target": "box_4",
+        "label": null
+      },
+      {
+        "source": "box_4",
+        "target": "box_6",
+        "label": "No"
+      },
+      {
+        "source": "box_4",
+        "target": "box_7",
+        "label": "Yes"
+      },
+      {
+        "source": "box_8",
+        "target": "box_7",
+        "label": null
+      },
+      {
+        "source": "box_7",
+        "target": "box_9",
+        "label": "No"
+      },
+      {
+        "source": "box_7",
+        "target": "box_10",
+        "label": "Yes"
+      },
+      {
+        "source": "box_11",
+        "target": "box_10",
+        "label": null
+      },
+      {
+        "source": "box_10",
+        "target": "box_12",
+        "label": "No"
+      },
+      {
+        "source": "box_10",
+        "target": "box_13",
+        "label": "Yes"
+      },
+      {
+        "source": "box_14",
+        "target": "box_13",
+        "label": null
+      },
+      {
+        "source": "box_13",
+        "target": "box_15",
+        "label": "No"
+      },
+      {
+        "source": "box_13",
+        "target": "box_16",
+        "label": "Yes"
+      },
+      {
+        "source": "box_16",
+        "target": "box_17",
+        "label": "No"
+      },
+      {
+        "source": "box_16",
+        "target": "box_18",
+        "label": "Yes"
+      }
+    ]
+  }
+}

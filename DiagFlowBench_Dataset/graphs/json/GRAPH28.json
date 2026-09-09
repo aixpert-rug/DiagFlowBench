@@ -1,0 +1,251 @@
+{
+  "id": "GRAPH28",
+  "description": "Fault procedure for part jam in reorientation unit, including post-clearance verification run and downstream trace.",
+  "graph": {
+    "nodes": {
+      "box_0": {
+        "type": "terminator",
+        "text": "Start"
+      },
+      "box_1": {
+        "type": "process",
+        "text": "Stop the machine immediately. Manually remove the jammed part without forcing. Inspect the part and the reorientation unit interior for damage or debris. Note the jam location."
+      },
+      "box_2": {
+        "type": "decision",
+        "text": "Is the jammed part dimensionally non conforming (outside the accepted dimensional range for this product type)?"
+      },
+      "box_3": {
+        "type": "process",
+        "text": "Measure the jammed part on the metrology station. Record dimensions."
+      },
+      "box_4": {
+        "type": "process",
+        "text": "Reject the current batch and reload from a dimensionally confirmed batch. Notify quality assurance team and create a non conformance record."
+      },
+      "box_5": {
+        "type": "decision",
+        "text": "Is there contamination or debris in the reorientation unit that could obstruct part movement?"
+      },
+      "box_6": {
+        "type": "process",
+        "text": "Inspect the reorientation unit interior, guide channels, and gripper faces for dust accumulation, adhesive residue, or foreign material."
+      },
+      "box_7": {
+        "type": "process",
+        "text": "Clean the reorientation unit interior and gripper faces with a lint free cloth and compressed air. Verify that all guide channels are clear."
+      },
+      "box_8": {
+        "type": "decision",
+        "text": "Is the gripper jaw opening width correctly set for this part diameter?"
+      },
+      "box_9": {
+        "type": "process",
+        "text": "Complete the following checks: 1. Measure gripper jaw opening width with a digital caliper. 2. Compare the measured width against the specified value for this part type. 3. Check whether the jaw stop adjuster is secure and correctly positioned."
+      },
+      "box_10": {
+        "type": "process",
+        "text": "Adjust the gripper jaw opening to the specified clearance for the current product type. reverify with a manual jog cycle before resuming."
+      },
+      "box_11": {
+        "type": "decision",
+        "text": "Is the reorientation cycle completing within the specified cycle time?"
+      },
+      "box_12": {
+        "type": "process",
+        "text": "Time three consecutive reorientation cycles using the cycle timer on the operator control interface and compare against the maximum cycle time specification."
+      },
+      "box_13": {
+        "type": "process",
+        "text": "Check the reorientation drive motor current and servomotor settings for the rotation axis. Reduce speed or increase torque limit if the drive is not completing the cycle within the specification."
+      },
+      "box_14": {
+        "type": "decision",
+        "text": "Has the jam fault been eliminated and ten consecutive jam free cycles confirmed?"
+      },
+      "box_15": {
+        "type": "process",
+        "text": "Escalate to the maintenance team: repeated jams in the reorientation unit indicate a mechanical fault requiring detailed inspection of the rotation bearing and drive mechanism."
+      },
+      "box_16": {
+        "type": "process",
+        "text": "Record the jam event, root cause, and corrective action in the quality log. Notify quality assurance team."
+      },
+      "box_17": {
+        "type": "process",
+        "text": "Run 20 cycle production speed verification, monitor reorientation unit for jam recurrence."
+      },
+      "box_18": {
+        "type": "document",
+        "text": "Refer to the reorientation unit cycle verification criteria."
+      },
+      "box_19": {
+        "type": "decision",
+        "text": "All 20 cycles completed without jam or cycle timeout?"
+      },
+      "box_20": {
+        "type": "terminator",
+        "text": "End, Escalate: jam recurring in verification run, mechanical inspection required"
+      },
+      "box_21": {
+        "type": "decision",
+        "text": "Was the jammed part damaged, could it have been released downstream before jam detection?"
+      },
+      "box_22": {
+        "type": "process",
+        "text": "Trace and quarantine any parts from the fault window in downstream stations."
+      },
+      "box_23": {
+        "type": "terminator",
+        "text": "End, Procedure complete. Production resumed."
+      }
+    },
+    "edges": [
+      {
+        "source": "box_0",
+        "target": "box_1",
+        "label": null
+      },
+      {
+        "source": "box_1",
+        "target": "box_3",
+        "label": ""
+      },
+      {
+        "source": "box_3",
+        "target": "box_2",
+        "label": null
+      },
+      {
+        "source": "box_2",
+        "target": "box_4",
+        "label": "Yes"
+      },
+      {
+        "source": "box_2",
+        "target": "box_5",
+        "label": "No"
+      },
+      {
+        "source": "box_4",
+        "target": "box_6",
+        "label": ""
+      },
+      {
+        "source": "box_6",
+        "target": "box_5",
+        "label": null
+      },
+      {
+        "source": "box_5",
+        "target": "box_7",
+        "label": "Yes"
+      },
+      {
+        "source": "box_5",
+        "target": "box_8",
+        "label": "No"
+      },
+      {
+        "source": "box_7",
+        "target": "box_9",
+        "label": ""
+      },
+      {
+        "source": "box_9",
+        "target": "box_8",
+        "label": null
+      },
+      {
+        "source": "box_8",
+        "target": "box_10",
+        "label": "No"
+      },
+      {
+        "source": "box_8",
+        "target": "box_11",
+        "label": "Yes"
+      },
+      {
+        "source": "box_10",
+        "target": "box_12",
+        "label": ""
+      },
+      {
+        "source": "box_12",
+        "target": "box_11",
+        "label": null
+      },
+      {
+        "source": "box_11",
+        "target": "box_13",
+        "label": "No"
+      },
+      {
+        "source": "box_11",
+        "target": "box_14",
+        "label": "Yes"
+      },
+      {
+        "source": "box_13",
+        "target": "box_14",
+        "label": null
+      },
+      {
+        "source": "box_14",
+        "target": "box_15",
+        "label": "No"
+      },
+      {
+        "source": "box_14",
+        "target": "box_16",
+        "label": "Yes"
+      },
+      {
+        "source": "box_15",
+        "target": "box_16",
+        "label": null
+      },
+      {
+        "source": "box_16",
+        "target": "box_17",
+        "label": null
+      },
+      {
+        "source": "box_18",
+        "target": "box_19",
+        "label": null
+      },
+      {
+        "source": "box_17",
+        "target": "box_19",
+        "label": null
+      },
+      {
+        "source": "box_19",
+        "target": "box_20",
+        "label": "No"
+      },
+      {
+        "source": "box_19",
+        "target": "box_21",
+        "label": "Yes"
+      },
+      {
+        "source": "box_21",
+        "target": "box_22",
+        "label": "Yes"
+      },
+      {
+        "source": "box_21",
+        "target": "box_23",
+        "label": "No"
+      },
+      {
+        "source": "box_22",
+        "target": "box_23",
+        "label": null
+      }
+    ]
+  }
+}

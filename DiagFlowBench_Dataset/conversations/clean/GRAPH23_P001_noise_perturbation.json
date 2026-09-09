@@ -1,0 +1,417 @@
+{
+  "conversation_id": "GRAPH23_P001_noise_perturbation",
+  "graph_id": "GRAPH23",
+  "path_id": "GRAPH23_P001",
+  "regime": "clean",
+  "variant": "noise_perturbation",
+  "robustness_axis": "noise_perturbation",
+  "turns": [
+    {
+      "node_id": "box_0",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Starting laser marking darkness diagnostic procedure.",
+      "edge_label_to_next": null,
+      "turn_index": 0,
+      "ground_truth": {
+        "node_id": "box_0",
+        "node_type": "terminator",
+        "node_text": "Start"
+      }
+    },
+    {
+      "node_id": "box_21",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the marking defect rate high enough across the current batch to indicate a systematic process failure requiring immediate production halt?",
+      "edge_label_to_next": null,
+      "turn_index": 1,
+      "ground_truth": {
+        "node_id": "box_21",
+        "node_type": "decision",
+        "node_text": "Is the marking defect rate high enough across the current batch to indicate a systematic process failure requiring immediate production halt?"
+      }
+    },
+    {
+      "node_id": "box_21",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "defect rate elevated but not critcal, looks like standard fault we can diagnose without stopping produciton",
+      "edge_label_to_next": "Standard fault, continue diagnosis",
+      "turn_index": 2,
+      "ground_truth": {
+        "node_id": "box_21",
+        "node_type": "decision",
+        "node_text": "Is the marking defect rate high enough across the current batch to indicate a systematic process failure requiring immediate production halt?"
+      }
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Record the batch number, marking darkness level, and number of affected parts. Collect three representative samples for quality assurance team reference.",
+      "edge_label_to_next": null,
+      "turn_index": 3,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Record the batch number, marking darkness level, and number of affected parts. Collect three representative samples for quality assurance team reference."
+      }
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "documented batch number darkness level and affected part count, three samples collected and labled for QA",
+      "edge_label_to_next": "",
+      "turn_index": 4,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Record the batch number, marking darkness level, and number of affected parts. Collect three representative samples for quality assurance team reference."
+      }
+    },
+    {
+      "node_id": "box_3",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Complete the following checks: verify that parts are from the correct material batch, and check the surface finish specification for the current product type.",
+      "edge_label_to_next": null,
+      "turn_index": 5,
+      "ground_truth": {
+        "node_id": "box_3",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Verify that parts are from the correct material batch. 2. Check the surface finish specification for the current product type."
+      }
+    },
+    {
+      "node_id": "box_3",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "material batch verified correct and surface finish spec matches current product type",
+      "edge_label_to_next": null,
+      "turn_index": 6,
+      "ground_truth": {
+        "node_id": "box_3",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Verify that parts are from the correct material batch. 2. Check the surface finish specification for the current product type."
+      }
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the input material surface finish within specification with no unusual reflectivity or coating variation?",
+      "edge_label_to_next": null,
+      "turn_index": 7,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Is the input material surface finish within specification (no unusual reflectivity or coating variation)?"
+      }
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yeah surface finish looks good, no unusual reflectivty or coating variations on the parts",
+      "edge_label_to_next": "Yes",
+      "turn_index": 8,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Is the input material surface finish within specification (no unusual reflectivity or coating variation)?"
+      }
+    },
+    {
+      "node_id": "box_5",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the laser power level at the correct setpoint for this product type?",
+      "edge_label_to_next": null,
+      "turn_index": 9,
+      "ground_truth": {
+        "node_id": "box_5",
+        "node_type": "decision",
+        "node_text": "Is the laser power level at the correct setpoint for this product type?"
+      }
+    },
+    {
+      "node_id": "box_5",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "laser power reading at correct setpoint per product spec",
+      "edge_label_to_next": "Yes",
+      "turn_index": 10,
+      "ground_truth": {
+        "node_id": "box_5",
+        "node_type": "decision",
+        "node_text": "Is the laser power level at the correct setpoint for this product type?"
+      }
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the marking speed within specification for this product type?",
+      "edge_label_to_next": null,
+      "turn_index": 11,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "decision",
+        "node_text": "Is the marking speed within specification for this product type?"
+      }
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "marking speed within spec range for this prodcut",
+      "edge_label_to_next": "Yes",
+      "turn_index": 12,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "decision",
+        "node_text": "Is the marking speed within specification for this product type?"
+      }
+    },
+    {
+      "node_id": "box_11",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the laser focal distance correct for the current part height?",
+      "edge_label_to_next": null,
+      "turn_index": 13,
+      "ground_truth": {
+        "node_id": "box_11",
+        "node_type": "decision",
+        "node_text": "Is the laser focal distance correct for the current part height?"
+      }
+    },
+    {
+      "node_id": "box_11",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "focal distance correct, marking head positioned at specified distance for this part height",
+      "edge_label_to_next": "Yes",
+      "turn_index": 14,
+      "ground_truth": {
+        "node_id": "box_11",
+        "node_type": "decision",
+        "node_text": "Is the laser focal distance correct for the current part height?"
+      }
+    },
+    {
+      "node_id": "box_14",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the fume extraction unit clean and operating at the correct airflow rate?",
+      "edge_label_to_next": null,
+      "turn_index": 15,
+      "ground_truth": {
+        "node_id": "box_14",
+        "node_type": "decision",
+        "node_text": "Is the fume extraction unit clean and operating at the correct airflow rate?"
+      }
+    },
+    {
+      "node_id": "box_14",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "fume extraction unit clean and airflow rate within spec",
+      "edge_label_to_next": "Yes",
+      "turn_index": 16,
+      "ground_truth": {
+        "node_id": "box_14",
+        "node_type": "decision",
+        "node_text": "Is the fume extraction unit clean and operating at the correct airflow rate?"
+      }
+    },
+    {
+      "node_id": "box_17",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the marking darkness within specification after all corrections?",
+      "edge_label_to_next": null,
+      "turn_index": 17,
+      "ground_truth": {
+        "node_id": "box_17",
+        "node_type": "decision",
+        "node_text": "Is the marking darkness within specification after all corrections?"
+      }
+    },
+    {
+      "node_id": "box_17",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "ok so marking darkness still out of spec, issue persists despite all the chekcs",
+      "edge_label_to_next": "No",
+      "turn_index": 18,
+      "ground_truth": {
+        "node_id": "box_17",
+        "node_type": "decision",
+        "node_text": "Is the marking darkness within specification after all corrections?"
+      }
+    },
+    {
+      "node_id": "box_18",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Escalate to the maintenance team. The marking darkness cannot be corrected through operating adjustments. Request inspection of laser optics and galvo mirror calibration.",
+      "edge_label_to_next": null,
+      "turn_index": 19,
+      "ground_truth": {
+        "node_id": "box_18",
+        "node_type": "process",
+        "node_text": "Escalate to the maintenance team: marking darkness cannot be corrected through operating adjustments; inspect laser optics and galvo mirror calibration."
+      }
+    },
+    {
+      "node_id": "box_18",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "escalation request submited to maintenance for laser optics and galvo mirror inspection",
+      "edge_label_to_next": null,
+      "turn_index": 20,
+      "ground_truth": {
+        "node_id": "box_18",
+        "node_type": "process",
+        "node_text": "Escalate to the maintenance team: marking darkness cannot be corrected through operating adjustments; inspect laser optics and galvo mirror calibration."
+      }
+    },
+    {
+      "node_id": "box_19",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Create a non-conformance record for the affected batch and record all corrective actions in the quality log.",
+      "edge_label_to_next": null,
+      "turn_index": 21,
+      "ground_truth": {
+        "node_id": "box_19",
+        "node_type": "process",
+        "node_text": "Create a non conformance record for the affected batch and record all corrective actions in the quality log."
+      }
+    },
+    {
+      "node_id": "box_19",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "non-conformance record created and all corrective actions documented in quality log",
+      "edge_label_to_next": null,
+      "turn_index": 22,
+      "ground_truth": {
+        "node_id": "box_19",
+        "node_type": "process",
+        "node_text": "Create a non conformance record for the affected batch and record all corrective actions in the quality log."
+      }
+    },
+    {
+      "node_id": "box_20",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Procedure complete. Notify the quality assurance team of the batch status and escalation to maintenance.",
+      "edge_label_to_next": null,
+      "turn_index": 23,
+      "ground_truth": {
+        "node_id": "box_20",
+        "node_type": "terminator",
+        "node_text": "End, notify quality assurance team."
+      }
+    },
+    {
+      "node_id": "box_20",
+      "node_type": "terminator",
+      "speaker": "operator",
+      "utterance": "understood will notify QA immediately",
+      "edge_label_to_next": null,
+      "turn_index": 24,
+      "ground_truth": {
+        "node_id": "box_20",
+        "node_type": "terminator",
+        "node_text": "End, notify quality assurance team."
+      }
+    }
+  ],
+  "metadata": {
+    "depth": 13,
+    "num_decisions": 7,
+    "num_processes": 4,
+    "num_documents": 0,
+    "terminator_type": "procedure_complete",
+    "terminator_text": "End, notify quality assurance team.",
+    "true_terminator": true,
+    "node_sequence": [
+      "box_0",
+      "box_21",
+      "box_1",
+      "box_3",
+      "box_2",
+      "box_5",
+      "box_8",
+      "box_11",
+      "box_14",
+      "box_17",
+      "box_18",
+      "box_19",
+      "box_20"
+    ],
+    "edge_labels": [
+      null,
+      null,
+      "Standard fault, continue diagnosis",
+      "",
+      null,
+      "Yes",
+      "Yes",
+      "Yes",
+      "Yes",
+      "Yes",
+      "No",
+      null,
+      null
+    ],
+    "decision_points": [
+      {
+        "node": "box_21",
+        "label": "Standard fault, continue diagnosis",
+        "question": "Is the marking defect rate high enough across the current batch to indicate a systematic process failure requiring immediate production halt?"
+      },
+      {
+        "node": "box_2",
+        "label": "Yes",
+        "question": "Is the input material surface finish within specification (no unusual reflectivity or coating variation)?"
+      },
+      {
+        "node": "box_5",
+        "label": "Yes",
+        "question": "Is the laser power level at the correct setpoint for this product type?"
+      },
+      {
+        "node": "box_8",
+        "label": "Yes",
+        "question": "Is the marking speed within specification for this product type?"
+      },
+      {
+        "node": "box_11",
+        "label": "Yes",
+        "question": "Is the laser focal distance correct for the current part height?"
+      },
+      {
+        "node": "box_14",
+        "label": "Yes",
+        "question": "Is the fume extraction unit clean and operating at the correct airflow rate?"
+      },
+      {
+        "node": "box_17",
+        "label": "No",
+        "question": "Is the marking darkness within specification after all corrections?"
+      }
+    ],
+    "generation_model": "anthropic/claude-sonnet-4-5",
+    "verification": {
+      "variant_of": "base",
+      "base_verified": true,
+      "note": "surface-form variant; not independently verified"
+    }
+  }
+}

@@ -1,0 +1,386 @@
+{
+  "id": "GRAPH49",
+  "description": "Servo drive temperature, following error and position accuracy — PROC-64",
+  "graph": {
+    "nodes": {
+      "box_0": {
+        "type": "terminator",
+        "text": "Start"
+      },
+      "box_1": {
+        "type": "process",
+        "text": "Complete the following checks: 1. Inspect the drive amplifier heatsink fins for dust or blocked ventilation slots. 2. Check the motor body for abnormal surface temperature with a contact thermometer. 3. Inspect the drive amplifier display for thermal warning or fault codes."
+      },
+      "box_2": {
+        "type": "process",
+        "text": "Hold a calibrated infrared thermometer or a contact thermocouple probe against the drive amplifier heatsink surface after the axis has been running under normal load for 20 minutes. Record the heatsink temperature and compare against the maximum permitted heatsink temperature stated in the drive amplifier datasheet. An overtemperature condition with normal ambient temperature indicates a failed cooling fan or blocked heatsink fins."
+      },
+      "box_3": {
+        "type": "document",
+        "text": "Refer to the drive thermal derating limits."
+      },
+      "box_4": {
+        "type": "decision",
+        "text": "Drive heatsink temperature within rated continuous limit?"
+      },
+      "box_5": {
+        "type": "terminator",
+        "text": "End, Escalate: drive overtemperature, check cabinet cooling"
+      },
+      "box_6": {
+        "type": "process",
+        "text": "Isolate the motor from the drive amplifier at the motor terminal block. Using a calibrated megohmeter set to 500 volts DC, measure insulation resistance phase to phase and phase to earth on all three motor windings. Record all six readings and compare against the minimum insulation resistance of 1 megaohm for a motor in service; any reading below this limit requires motor withdrawal for inspection."
+      },
+      "box_7": {
+        "type": "decision",
+        "text": "Winding resistance balanced within 2% across all phases?"
+      },
+      "box_8": {
+        "type": "process",
+        "text": "Inspect motor terminal block, tighten connections, check insulation"
+      },
+      "box_9": {
+        "type": "process",
+        "text": "Inspect the encoder read head status indicator light on the motor body or drive amplifier; green indicates a valid signal and red or flashing indicates a fault. Check the encoder cable continuity at both the motor connector and the drive connector using a continuity tester on each signal wire. Inspect the cable route for crush damage, sharp bends, or contact with hot or moving surfaces."
+      },
+      "box_10": {
+        "type": "decision",
+        "text": "Encoder hardware status normal, no fault flags in drive?"
+      },
+      "box_11": {
+        "type": "terminator",
+        "text": "End, Replace encoder: hardware fault confirmed"
+      },
+      "box_12": {
+        "type": "process",
+        "text": "Command the axis to traverse at three test speeds covering 10%, 50%, and 90% of rapid traverse rate using the machine diagnostic mode. At each speed, read the following error value from the drive diagnostic display or the CNC parameter screen. Record the following error in encoder counts and compare against the maximum following error limit programmed in the drive parameters."
+      },
+      "box_13": {
+        "type": "document",
+        "text": "Refer to the following error specification."
+      },
+      "box_14": {
+        "type": "decision",
+        "text": "Following error within specified limit at all three speeds?"
+      },
+      "box_15": {
+        "type": "process",
+        "text": "Adjust servo gain parameters, Kp, Ki within drive tuning limits"
+      },
+      "box_16": {
+        "type": "decision",
+        "text": "Reverify following error after gain adjustment"
+      },
+      "box_17": {
+        "type": "terminator",
+        "text": "End, Escalate: following error persistent, mechanical load check required"
+      },
+      "box_18": {
+        "type": "process",
+        "text": "Command the axis to move to each of ten programmed reference positions distributed across the full working travel using the machine diagnostic positioning cycle. At each position, read the position feedback value from the controller display and subtract the commanded position to obtain the position error. Record all ten errors and compare the maximum absolute error against the axis positioning accuracy specification."
+      },
+      "box_19": {
+        "type": "document",
+        "text": "Refer to the axis position accuracy specification."
+      },
+      "box_20": {
+        "type": "decision",
+        "text": "Position accuracy within ±0.005 mm at all reference positions?"
+      },
+      "box_21": {
+        "type": "process",
+        "text": "Complete the following steps: 1. Access the encoder calibration menu via the service laptop. 2. Select the encoder calibration routine and follow the on-screen procedure. 3. Record the calibration result and confirm the residual error is within tolerance."
+      },
+      "box_22": {
+        "type": "decision",
+        "text": "Reverify position accuracy after encoder recalibration"
+      },
+      "box_23": {
+        "type": "terminator",
+        "text": "End, Escalate: position accuracy unrecoverable, geometric check required"
+      },
+      "box_24": {
+        "type": "process",
+        "text": "With the motor power on and the brake released, command the axis to a mid travel position. Switch the brake on by de energising the brake coil and attempt to push the axis by hand in both directions. Attach a torque wrench to the motor shaft coupling and measure the holding torque; compare against the minimum rated brake torque in the motor datasheet."
+      },
+      "box_25": {
+        "type": "document",
+        "text": "Refer to the motor brake specification."
+      },
+      "box_26": {
+        "type": "decision",
+        "text": "Brake holding torque within rated value?"
+      },
+      "box_27": {
+        "type": "process",
+        "text": "Replace motor brake or adjust air gap"
+      },
+      "box_28": {
+        "type": "process",
+        "text": "Mount a dial test indicator against the axis slide with the probe oriented along the axis direction. Command a series of small reversals across a 5 millimetre range at slow feed rate. Read the indicator displacement at each reversal and record the maximum lost motion observed. Compare against the maximum permitted backlash value in the axis specification; if exceeded the ballscrew nut preload requires adjustment or replacement."
+      },
+      "box_29": {
+        "type": "decision",
+        "text": "Axis backlash within 0.008 mm limit?"
+      },
+      "box_30": {
+        "type": "process",
+        "text": "Adjust coupling preload or replace worn coupling element"
+      },
+      "box_31": {
+        "type": "process",
+        "text": "Command the axis to run continuously at rated speed for one minute while recording the velocity feedback signal from the drive diagnostic output. Perform a frequency spectrum analysis on the velocity trace using the drive oscilloscope function or external data acquisition. Identify any peak above 5% of the mean velocity in the 10 to 500 hertz range and compare against the baseline spectrum recorded during the previous service."
+      },
+      "box_32": {
+        "type": "decision",
+        "text": "No significant harmonic peaks in velocity frequency spectrum?"
+      },
+      "box_33": {
+        "type": "process",
+        "text": "Investigate speed ripple source, bearing or encoder pitch error"
+      },
+      "box_34": {
+        "type": "process",
+        "text": "Log all drive parameters and test data"
+      },
+      "box_35": {
+        "type": "process",
+        "text": "Update drive parameter backup and maintenance management system service record"
+      },
+      "box_36": {
+        "type": "terminator",
+        "text": "End, Procedure complete"
+      },
+      "box_37": {
+        "type": "process",
+        "text": "Secondary servo tuning attempt: access the drive parameter menu and increase the proportional velocity gain by 10% of its current value. Command a positioning move and read the following error value at the same three test speeds. If the error increases at any speed, restore the original gain value and note that mechanical resonance may be contributing, requiring a drive frequency spectrum analysis before returning to the following error measurement step."
+      },
+      "box_38": {
+        "type": "document",
+        "text": "Encoder signal diagnostic (GRAPH 35)"
+      }
+    },
+    "edges": [
+      {
+        "source": "box_0",
+        "target": "box_1",
+        "label": null
+      },
+      {
+        "source": "box_1",
+        "target": "box_2",
+        "label": ""
+      },
+      {
+        "source": "box_2",
+        "target": "box_4",
+        "label": null
+      },
+      {
+        "source": "box_3",
+        "target": "box_4",
+        "label": null
+      },
+      {
+        "source": "box_4",
+        "target": "box_5",
+        "label": "No"
+      },
+      {
+        "source": "box_4",
+        "target": "box_7",
+        "label": "Yes"
+      },
+      {
+        "source": "box_6",
+        "target": "box_7",
+        "label": null
+      },
+      {
+        "source": "box_7",
+        "target": "box_8",
+        "label": "No"
+      },
+      {
+        "source": "box_8",
+        "target": "box_9",
+        "label": ""
+      },
+      {
+        "source": "box_7",
+        "target": "box_10",
+        "label": "Yes"
+      },
+      {
+        "source": "box_9",
+        "target": "box_10",
+        "label": null
+      },
+      {
+        "source": "box_10",
+        "target": "box_38",
+        "label": "No"
+      },
+      {
+        "source": "box_10",
+        "target": "box_14",
+        "label": "Yes"
+      },
+      {
+        "source": "box_12",
+        "target": "box_14",
+        "label": null
+      },
+      {
+        "source": "box_13",
+        "target": "box_14",
+        "label": null
+      },
+      {
+        "source": "box_14",
+        "target": "box_15",
+        "label": "No"
+      },
+      {
+        "source": "box_15",
+        "target": "box_16",
+        "label": null
+      },
+      {
+        "source": "box_16",
+        "target": "box_20",
+        "label": "OK"
+      },
+      {
+        "source": "box_14",
+        "target": "box_20",
+        "label": "Yes"
+      },
+      {
+        "source": "box_18",
+        "target": "box_20",
+        "label": null
+      },
+      {
+        "source": "box_19",
+        "target": "box_20",
+        "label": null
+      },
+      {
+        "source": "box_20",
+        "target": "box_21",
+        "label": "No"
+      },
+      {
+        "source": "box_21",
+        "target": "box_22",
+        "label": null
+      },
+      {
+        "source": "box_22",
+        "target": "box_23",
+        "label": "Still failing"
+      },
+      {
+        "source": "box_22",
+        "target": "box_26",
+        "label": "OK"
+      },
+      {
+        "source": "box_20",
+        "target": "box_26",
+        "label": "Yes"
+      },
+      {
+        "source": "box_24",
+        "target": "box_26",
+        "label": null
+      },
+      {
+        "source": "box_25",
+        "target": "box_26",
+        "label": null
+      },
+      {
+        "source": "box_26",
+        "target": "box_27",
+        "label": "No"
+      },
+      {
+        "source": "box_27",
+        "target": "box_28",
+        "label": ""
+      },
+      {
+        "source": "box_26",
+        "target": "box_29",
+        "label": "Yes"
+      },
+      {
+        "source": "box_28",
+        "target": "box_29",
+        "label": null
+      },
+      {
+        "source": "box_29",
+        "target": "box_30",
+        "label": "No"
+      },
+      {
+        "source": "box_30",
+        "target": "box_31",
+        "label": ""
+      },
+      {
+        "source": "box_29",
+        "target": "box_32",
+        "label": "Yes"
+      },
+      {
+        "source": "box_31",
+        "target": "box_32",
+        "label": null
+      },
+      {
+        "source": "box_32",
+        "target": "box_33",
+        "label": "No"
+      },
+      {
+        "source": "box_33",
+        "target": "box_34",
+        "label": null
+      },
+      {
+        "source": "box_32",
+        "target": "box_34",
+        "label": "Yes"
+      },
+      {
+        "source": "box_34",
+        "target": "box_35",
+        "label": null
+      },
+      {
+        "source": "box_35",
+        "target": "box_36",
+        "label": null
+      },
+      {
+        "source": "box_16",
+        "target": "box_37",
+        "label": "Still failing"
+      },
+      {
+        "source": "box_37",
+        "target": "box_16",
+        "label": null
+      },
+      {
+        "source": "box_16",
+        "target": "box_17",
+        "label": "Unresolvable after second attempt"
+      }
+    ]
+  }
+}

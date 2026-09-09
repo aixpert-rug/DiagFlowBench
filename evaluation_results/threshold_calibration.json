@@ -1,0 +1,102 @@
+{
+  "tau_star": 0.05,
+  "tau_default": 0.15,
+  "tau_default_matches_optimum": false,
+  "populations": {
+    "in_graph": {
+      "n": 11399,
+      "min": 0.0,
+      "p10": 0.1053,
+      "p25": 0.1429,
+      "p50": 0.2,
+      "p75": 0.2778,
+      "p90": 0.3684,
+      "max": 0.7692,
+      "mean": 0.2205
+    },
+    "out_of_graph": {
+      "n": 1673,
+      "min": 0.0294,
+      "p10": 0.069,
+      "p25": 0.0794,
+      "p50": 0.0976,
+      "p75": 0.1212,
+      "p90": 0.1471,
+      "max": 0.2692,
+      "mean": 0.1038
+    }
+  },
+  "sweep": [
+    {
+      "tau": 0.05,
+      "precision": 0.8733,
+      "recall": 0.9969,
+      "f1": 0.931,
+      "accuracy": 0.8712
+    },
+    {
+      "tau": 0.1,
+      "precision": 0.9277,
+      "recall": 0.919,
+      "f1": 0.9234,
+      "accuracy": 0.867
+    },
+    {
+      "tau": 0.15,
+      "precision": 0.9823,
+      "recall": 0.7114,
+      "f1": 0.8252,
+      "accuracy": 0.7371
+    },
+    {
+      "tau": 0.2,
+      "precision": 0.9949,
+      "recall": 0.5091,
+      "f1": 0.6735,
+      "accuracy": 0.5696
+    },
+    {
+      "tau": 0.25,
+      "precision": 0.999,
+      "recall": 0.3432,
+      "f1": 0.5109,
+      "accuracy": 0.4269
+    },
+    {
+      "tau": 0.3,
+      "precision": 1.0,
+      "recall": 0.2091,
+      "f1": 0.3459,
+      "accuracy": 0.3104
+    },
+    {
+      "tau": 0.35,
+      "precision": 1.0,
+      "recall": 0.1279,
+      "f1": 0.2268,
+      "accuracy": 0.2395
+    },
+    {
+      "tau": 0.4,
+      "precision": 1.0,
+      "recall": 0.0805,
+      "f1": 0.1491,
+      "accuracy": 0.1982
+    },
+    {
+      "tau": 0.45,
+      "precision": 1.0,
+      "recall": 0.0441,
+      "f1": 0.0845,
+      "accuracy": 0.1665
+    },
+    {
+      "tau": 0.5,
+      "precision": 1.0,
+      "recall": 0.0283,
+      "f1": 0.0551,
+      "accuracy": 0.1527
+    }
+  ],
+  "note": "tau_star is the Jaccard threshold that maximises F1 on the calibration set. In-graph population: scripted operator turns from base conversations (verified paraphrases of graph nodes). Out-of-graph population: injection turns (LLM-generated, zero-temperature verified to not entail any outgoing edge). This calibration is reported in the paper appendix."
+}

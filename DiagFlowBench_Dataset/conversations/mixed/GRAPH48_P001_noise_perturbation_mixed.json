@@ -1,0 +1,372 @@
+{
+  "conversation_id": "GRAPH48_P001_noise_perturbation_mixed",
+  "graph_id": "GRAPH48",
+  "path_id": "GRAPH48_P001",
+  "regime": "mixed",
+  "variant": "noise_perturbation",
+  "robustness_axis": "noise_perturbation",
+  "turns": [
+    {
+      "node_id": "box_0",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Starting clamping unit diagnostic procedure.",
+      "edge_label_to_next": null,
+      "turn_index": 0,
+      "ground_truth": {
+        "node_id": "box_0",
+        "node_type": "terminator",
+        "node_text": "Start"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Please complete the following checks: First, inspect the clamping arm bodies for any cracks or bending deformation. Second, check each pivot pin boss for looseness by attempting to rock the arm. Finally, inspect the clamping pad faces for wear beyond the minimum thickness.",
+      "edge_label_to_next": null,
+      "turn_index": 1,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Inspect the clamping arm bodies for cracks or bending deformation. 2. Check each pivot pin boss for looseness by attempting to rock the arm. 3. Inspect the clamping pad faces for wear beyond the minimum thickness."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "completed all three checks arm bodies look good no cracks or deformaton, pivot pins are secure and pad faces within acceptable wear limits",
+      "edge_label_to_next": null,
+      "turn_index": 2,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Inspect the clamping arm bodies for cracks or bending deformation. 2. Check each pivot pin boss for looseness by attempting to rock the arm. 3. Inspect the clamping pad faces for wear beyond the minimum thickness."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Cracks, deformation or severe wear on clamping arms?",
+      "edge_label_to_next": null,
+      "turn_index": 3,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Cracks, deformation or severe wear on clamping arms?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no issues detected all clamping arms structurally sound no cracks deformation or severe wear",
+      "edge_label_to_next": "No",
+      "turn_index": 4,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Cracks, deformation or severe wear on clamping arms?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_6",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Clamping force within plus or minus five percent of rated value?",
+      "edge_label_to_next": null,
+      "turn_index": 5,
+      "ground_truth": {
+        "node_id": "box_6",
+        "node_type": "decision",
+        "node_text": "Clamping force within ±5% of rated value?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_6",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yeah checked the clamping force measurements and theyre all within the acceptable 5 percent tolerance of rated value",
+      "edge_label_to_next": "Yes",
+      "turn_index": 6,
+      "ground_truth": {
+        "node_id": "box_6",
+        "node_type": "decision",
+        "node_text": "Clamping force within ±5% of rated value?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_11",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Clamp pad surface condition acceptable?",
+      "edge_label_to_next": null,
+      "turn_index": 7,
+      "ground_truth": {
+        "node_id": "box_11",
+        "node_type": "decision",
+        "node_text": "Clamp pad surface condition acceptable?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_11",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yes clamp pad surface in good condition roughness and flatness measurements both within spec",
+      "edge_label_to_next": "Yes",
+      "turn_index": 8,
+      "ground_truth": {
+        "node_id": "box_11",
+        "node_type": "decision",
+        "node_text": "Clamp pad surface condition acceptable?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_15",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Open and close sensor positions within plus or minus zero point three millimeters of nominal?",
+      "edge_label_to_next": null,
+      "turn_index": 9,
+      "ground_truth": {
+        "node_id": "box_15",
+        "node_type": "decision",
+        "node_text": "Open and close sensor positions within ±0.3 mm of nominal?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_15",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "ok so measurements are outside the tolerance band both open and close postions are off by more than 0.3mm",
+      "edge_label_to_next": "No",
+      "turn_index": 10,
+      "ground_truth": {
+        "node_id": "box_15",
+        "node_type": "decision",
+        "node_text": "Open and close sensor positions within ±0.3 mm of nominal?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_16",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Reposition the sensors and reteach the open and close positions in the programmable controller.",
+      "edge_label_to_next": null,
+      "turn_index": 11,
+      "ground_truth": {
+        "node_id": "box_16",
+        "node_type": "process",
+        "node_text": "Reposition sensors and reteach open/close positions in programmable controller"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_16",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "repositioned both sensors and completed reteach procedure in the controler",
+      "edge_label_to_next": null,
+      "turn_index": 12,
+      "ground_truth": {
+        "node_id": "box_16",
+        "node_type": "process",
+        "node_text": "Reposition sensors and reteach open/close positions in programmable controller"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_17",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Reverify sensor positions after reteach.",
+      "edge_label_to_next": null,
+      "turn_index": 13,
+      "ground_truth": {
+        "node_id": "box_17",
+        "node_type": "decision",
+        "node_text": "Reverify sensor positions after reteach"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_17",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "The sensor positions look good now, but I'm noticing the mounting bracket has some play in it — it's loose and moving when I touch it.",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "coverage_gap",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_17",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "remeasured the positions and looks like theyre still outside tolerance sensor adjustemnts didnt bring them within spec",
+      "edge_label_to_next": "Still out of tolerance",
+      "turn_index": 14,
+      "ground_truth": {
+        "node_id": "box_17",
+        "node_type": "decision",
+        "node_text": "Reverify sensor positions after reteach"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_18",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Escalate to engineering: mechanical stop position has shifted and a datum check is required. Do not return the unit to production until this issue is resolved.",
+      "edge_label_to_next": null,
+      "turn_index": 15,
+      "ground_truth": {
+        "node_id": "box_18",
+        "node_type": "terminator",
+        "node_text": "End, Escalate: mechanical stop position shifted, datum check required"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_18",
+      "node_type": "terminator",
+      "speaker": "operator",
+      "utterance": "understood will escalate this to engineering immediately and keep the unit offline",
+      "edge_label_to_next": null,
+      "turn_index": 16,
+      "ground_truth": {
+        "node_id": "box_18",
+        "node_type": "terminator",
+        "node_text": "End, Escalate: mechanical stop position shifted, datum check required"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    }
+  ],
+  "metadata": {
+    "depth": 9,
+    "num_decisions": 5,
+    "num_processes": 2,
+    "num_documents": 0,
+    "terminator_type": "escalate",
+    "terminator_text": "End, Escalate: mechanical stop position shifted, datum check required",
+    "true_terminator": true,
+    "node_sequence": [
+      "box_0",
+      "box_1",
+      "box_2",
+      "box_6",
+      "box_11",
+      "box_15",
+      "box_16",
+      "box_17",
+      "box_18"
+    ],
+    "edge_labels": [
+      null,
+      null,
+      null,
+      "No",
+      "Yes",
+      "Yes",
+      "No",
+      null,
+      "Still out of tolerance"
+    ],
+    "decision_points": [
+      {
+        "node": "box_2",
+        "label": "No",
+        "question": "Cracks, deformation or severe wear on clamping arms?"
+      },
+      {
+        "node": "box_6",
+        "label": "Yes",
+        "question": "Clamping force within ±5% of rated value?"
+      },
+      {
+        "node": "box_11",
+        "label": "Yes",
+        "question": "Clamp pad surface condition acceptable?"
+      },
+      {
+        "node": "box_15",
+        "label": "No",
+        "question": "Open and close sensor positions within ±0.3 mm of nominal?"
+      },
+      {
+        "node": "box_17",
+        "label": "Still out of tolerance",
+        "question": "Reverify sensor positions after reteach"
+      }
+    ],
+    "generation_model": "anthropic/claude-sonnet-4-5",
+    "verification": {
+      "variant_of": "base",
+      "base_verified": true,
+      "note": "surface-form variant; not independently verified"
+    },
+    "injection_count": 1
+  },
+  "injection_log": [
+    {
+      "position": 14,
+      "node_id": "box_17",
+      "node_text": "Reverify sensor positions after reteach",
+      "edge_labels": [
+        "Still out of tolerance",
+        "OK"
+      ],
+      "category": "coverage_gap",
+      "utterance": "The sensor positions look good now, but I'm noticing the mounting bracket has some play in it — it's loose and moving when I touch it.",
+      "injection_rate": null,
+      "num_candidates": null
+    }
+  ]
+}

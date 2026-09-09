@@ -1,0 +1,550 @@
+{
+  "id": "GRAPH43",
+  "description": "Resistance spot welding electrode and weld quality assessment — PROC-67",
+  "graph": {
+    "nodes": {
+      "box_0": {
+        "type": "terminator",
+        "text": "Start"
+      },
+      "box_1": {
+        "type": "process",
+        "text": "Complete the following checks: 1. Inspect electrode cap faces for pitting deeper than 1 mm or mushrooming. 2. Check the cap shank contact surface for corrosion or mechanical damage. 3. Inspect the coolant port on each electrode arm for blockage."
+      },
+      "box_2": {
+        "type": "decision",
+        "text": "Electrode cap damage, severe pitting, mushrooming or cracking?"
+      },
+      "box_3": {
+        "type": "terminator",
+        "text": "End, Replace electrode caps and requalify weld schedule"
+      },
+      "box_4": {
+        "type": "process",
+        "text": "Using a calibrated optical comparator or digital micrometer, measure the electrode face diameter at three equally spaced points around the circumference and record the minimum diameter. Measure the cone angle at the face chamfer using a protractor or a precision angle gauge. Compare both values against the minimum serviceable electrode dimensions in the electrode change schedule."
+      },
+      "box_5": {
+        "type": "document",
+        "text": "Refer to the electrode cap geometry specification."
+      },
+      "box_6": {
+        "type": "decision",
+        "text": "Electrode face diameter within wear limit?"
+      },
+      "box_7": {
+        "type": "process",
+        "text": "Dress electrode caps to nominal geometry using electrode dresser"
+      },
+      "box_8": {
+        "type": "process",
+        "text": "With the cooling circuit running, place an inline flow meter or a timed collection vessel at the cooling water outlet from the electrode holder body. Record the flow rate in litres per minute and compare against the minimum cooling flow for this electrode size in the resistance welding machine specification. Low flow indicates a partially blocked cooling channel or a failing recirculation pump."
+      },
+      "box_9": {
+        "type": "document",
+        "text": "Refer to the cooling flow specification."
+      },
+      "box_10": {
+        "type": "decision",
+        "text": "Cooling water flow rate above minimum at both electrodes?"
+      },
+      "box_11": {
+        "type": "terminator",
+        "text": "End, Escalate: cooling flow fault, check pump and circuit"
+      },
+      "box_12": {
+        "type": "process",
+        "text": "Place a calibrated load cell between the electrode faces with the machine in the closed position at the programmed weld force setting. Record the displayed force from the load cell amplifier and compare against the target weld force in the weld schedule table. Adjust the force setting on the machine controller until the measured force is within the tolerance band."
+      },
+      "box_13": {
+        "type": "document",
+        "text": "Refer to the electrode force specification."
+      },
+      "box_14": {
+        "type": "decision",
+        "text": "Electrode force within ±5% of programmed schedule value?"
+      },
+      "box_15": {
+        "type": "process",
+        "text": "Adjust pneumatic pressure regulator on electrode arm"
+      },
+      "box_16": {
+        "type": "decision",
+        "text": "Reverify electrode force after regulator adjustment"
+      },
+      "box_17": {
+        "type": "terminator",
+        "text": "End, Escalate: electrode force unrecoverable, check actuator"
+      },
+      "box_18": {
+        "type": "process",
+        "text": "Wrap a Rogowski coil around one of the secondary conductors and connect the output to a calibrated weld monitor. Fire a test weld at the nominal schedule settings on a production material stack and record the peak weld current and the integrated current waveform. Compare the peak current and weld time against the values in the approved weld schedule and log the result."
+      },
+      "box_19": {
+        "type": "document",
+        "text": "Refer to the weld current calibration specification."
+      },
+      "box_20": {
+        "type": "decision",
+        "text": "Measured weld current within ±3% of scheduled value?"
+      },
+      "box_21": {
+        "type": "process",
+        "text": "Complete the following steps: 1. Access the weld controller parameter menu using the maintenance password. 2. Read the current correction factor for the affected welding schedule. 3. Compare the stored factor against the reference value for this material stack."
+      },
+      "box_22": {
+        "type": "decision",
+        "text": "Reverify weld current after controller correction"
+      },
+      "box_23": {
+        "type": "terminator",
+        "text": "End, Escalate: current calibration unrecoverable, transformer check"
+      },
+      "box_24": {
+        "type": "process",
+        "text": "Connect an oscilloscope to the weld contactor control signal output. Fire a test weld and measure the time from contactor close to contactor open. Compare the measured weld time in milliseconds against the programmed weld time in the schedule. A deviation greater than two milliseconds requires inspection of the timer circuit board in the weld controller."
+      },
+      "box_25": {
+        "type": "document",
+        "text": "Refer to the weld time tolerance specification."
+      },
+      "box_26": {
+        "type": "decision",
+        "text": "Weld time within ±1 cycle of scheduled value?"
+      },
+      "box_27": {
+        "type": "process",
+        "text": "Adjust weld timer setting in controller schedule"
+      },
+      "box_28": {
+        "type": "process",
+        "text": "Clean both electrode faces and place a sheet of carbon transfer paper between them. Close the electrodes at 25% of the programmed force setting and open. Inspect the carbon transfer pattern on each face; the contact impression should be concentric and cover the full electrode face area uniformly. An off centre or crescent shaped pattern indicates electrode misalignment requiring mechanical correction."
+      },
+      "box_29": {
+        "type": "decision",
+        "text": "Electrode faces parallel, contact pattern above 90% of face area?"
+      },
+      "box_30": {
+        "type": "process",
+        "text": "Adjust electrode arm tilt to achieve parallel contact"
+      },
+      "box_31": {
+        "type": "process",
+        "text": "Prepare five test specimens cut from the production material stack with the correct number of layers and thickness. Weld each specimen at the nominal schedule settings and label each with the weld number and machine setting used. Measure the weld nugget diameter visually or by ultrasonic means and record the result in the pilot weld log before proceeding to non destructive testing."
+      },
+      "box_32": {
+        "type": "document",
+        "text": "Refer to the pilot weld acceptance criteria."
+      },
+      "box_33": {
+        "type": "decision",
+        "text": "Pilot weld appearance, no spatter, expulsion or surface cracks?"
+      },
+      "box_34": {
+        "type": "process",
+        "text": "Adjust weld schedule, modify current and force for material batch"
+      },
+      "box_35": {
+        "type": "process",
+        "text": "Apply ultrasonic couplant to the electrode face side of each pilot weld coupon and scan the weld zone using an A scan ultrasonic probe. Record the reflected signal amplitude and the back wall echo attenuation. Identify the nugget boundary and measure the nugget diameter from the scan image. Compare against the minimum nugget diameter in the weld quality specification."
+      },
+      "box_36": {
+        "type": "document",
+        "text": "Refer to the weld nugget size specification."
+      },
+      "box_37": {
+        "type": "decision",
+        "text": "Weld nugget diameter meets minimum for material thickness?"
+      },
+      "box_38": {
+        "type": "terminator",
+        "text": "End, Escalate: nugget undersize, weld engineer review required"
+      },
+      "box_39": {
+        "type": "process",
+        "text": "Clamp each pilot weld coupon in a vice with the weld zone accessible. Insert a chisel behind the top sheet adjacent to the weld and strike sharply to peel the sheet back over the weld nugget. Measure the diameter of the nugget button that pulls out, using digital calipers. Record the peel mode: full button pull indicates an acceptable weld; interfacial fracture indicates insufficient fusion."
+      },
+      "box_40": {
+        "type": "decision",
+        "text": "Peel test shows button pull failure mode, no interfacial fracture?"
+      },
+      "box_41": {
+        "type": "process",
+        "text": "Revise weld schedule, increase heat input incrementally"
+      },
+      "box_42": {
+        "type": "decision",
+        "text": "Reverify peel test result after schedule revision"
+      },
+      "box_43": {
+        "type": "terminator",
+        "text": "End, Escalate: peel test failure persistent, metallurgical review"
+      },
+      "box_44": {
+        "type": "process",
+        "text": "Access the electrode wear counter display on the weld controller and record the current dress count and cap change count for each electrode. Reset the dress counter to zero after recording and update the electrode service log with the date, machine number, and cumulative weld count at time of service."
+      },
+      "box_45": {
+        "type": "process",
+        "text": "Navigate to the weld programme archive menu on the controller and select the current production schedule file. Initiate a save to server operation using the machine network connection and confirm the transfer completes without error. Check the server archive directory to verify the file timestamp is current and the file size is consistent with previous saves."
+      },
+      "box_46": {
+        "type": "decision",
+        "text": "Weld controller backup completed successfully?"
+      },
+      "box_47": {
+        "type": "process",
+        "text": "Complete the following steps: 1. Verify the marking controller is connected to the factory network. 2. Navigate to the archive menu and check that the last record was written successfully. 3. Confirm the archive path and file permissions are correctly configured."
+      },
+      "box_48": {
+        "type": "process",
+        "text": "Immerse a calibrated thermocouple probe in the cooling water return line at the point closest to the electrode holder exit. Allow the machine to complete 20 welds at production rate and record the return line temperature at steady state. Compare against the maximum allowable return temperature in the cooling system specification; excessive temperature indicates inadequate cooling flow or fouled heat exchanger plates."
+      },
+      "box_49": {
+        "type": "decision",
+        "text": "Coolant return temperature within rated range?"
+      },
+      "box_50": {
+        "type": "process",
+        "text": "Check chiller setpoint and clean condenser"
+      },
+      "box_51": {
+        "type": "process",
+        "text": "Run 20 consecutive production welds at the standard schedule settings with the machine in normal production configuration. Log the weld current, weld force, and weld time for each weld from the controller weld data output. Inspect the final five weld spots visually for consistent button size and absence of surface expulsion before signing off the qualification record."
+      },
+      "box_52": {
+        "type": "decision",
+        "text": "All production qualification welds within specification?"
+      },
+      "box_53": {
+        "type": "process",
+        "text": "Log electrode data, calibration results and qualification record"
+      },
+      "box_54": {
+        "type": "terminator",
+        "text": "End, Procedure complete"
+      }
+    },
+    "edges": [
+      {
+        "source": "box_0",
+        "target": "box_1",
+        "label": null
+      },
+      {
+        "source": "box_1",
+        "target": "box_2",
+        "label": null
+      },
+      {
+        "source": "box_2",
+        "target": "box_3",
+        "label": "Yes"
+      },
+      {
+        "source": "box_2",
+        "target": "box_6",
+        "label": "No"
+      },
+      {
+        "source": "box_4",
+        "target": "box_6",
+        "label": null
+      },
+      {
+        "source": "box_5",
+        "target": "box_6",
+        "label": null
+      },
+      {
+        "source": "box_6",
+        "target": "box_7",
+        "label": "No"
+      },
+      {
+        "source": "box_7",
+        "target": "box_8",
+        "label": ""
+      },
+      {
+        "source": "box_6",
+        "target": "box_10",
+        "label": "Yes"
+      },
+      {
+        "source": "box_8",
+        "target": "box_10",
+        "label": null
+      },
+      {
+        "source": "box_9",
+        "target": "box_10",
+        "label": null
+      },
+      {
+        "source": "box_10",
+        "target": "box_11",
+        "label": "No"
+      },
+      {
+        "source": "box_10",
+        "target": "box_14",
+        "label": "Yes"
+      },
+      {
+        "source": "box_12",
+        "target": "box_14",
+        "label": null
+      },
+      {
+        "source": "box_13",
+        "target": "box_14",
+        "label": null
+      },
+      {
+        "source": "box_14",
+        "target": "box_15",
+        "label": "No"
+      },
+      {
+        "source": "box_15",
+        "target": "box_16",
+        "label": null
+      },
+      {
+        "source": "box_16",
+        "target": "box_17",
+        "label": "Still out of range"
+      },
+      {
+        "source": "box_16",
+        "target": "box_20",
+        "label": "OK"
+      },
+      {
+        "source": "box_14",
+        "target": "box_20",
+        "label": "Yes"
+      },
+      {
+        "source": "box_18",
+        "target": "box_20",
+        "label": null
+      },
+      {
+        "source": "box_19",
+        "target": "box_20",
+        "label": null
+      },
+      {
+        "source": "box_20",
+        "target": "box_21",
+        "label": "No"
+      },
+      {
+        "source": "box_21",
+        "target": "box_22",
+        "label": null
+      },
+      {
+        "source": "box_22",
+        "target": "box_23",
+        "label": "Still failing"
+      },
+      {
+        "source": "box_22",
+        "target": "box_26",
+        "label": "OK"
+      },
+      {
+        "source": "box_20",
+        "target": "box_26",
+        "label": "Yes"
+      },
+      {
+        "source": "box_24",
+        "target": "box_26",
+        "label": null
+      },
+      {
+        "source": "box_25",
+        "target": "box_26",
+        "label": null
+      },
+      {
+        "source": "box_26",
+        "target": "box_27",
+        "label": "No"
+      },
+      {
+        "source": "box_27",
+        "target": "box_28",
+        "label": ""
+      },
+      {
+        "source": "box_26",
+        "target": "box_29",
+        "label": "Yes"
+      },
+      {
+        "source": "box_28",
+        "target": "box_29",
+        "label": null
+      },
+      {
+        "source": "box_29",
+        "target": "box_30",
+        "label": "No"
+      },
+      {
+        "source": "box_30",
+        "target": "box_31",
+        "label": ""
+      },
+      {
+        "source": "box_29",
+        "target": "box_33",
+        "label": "Yes"
+      },
+      {
+        "source": "box_31",
+        "target": "box_33",
+        "label": null
+      },
+      {
+        "source": "box_32",
+        "target": "box_33",
+        "label": null
+      },
+      {
+        "source": "box_33",
+        "target": "box_34",
+        "label": "No"
+      },
+      {
+        "source": "box_34",
+        "target": "box_35",
+        "label": ""
+      },
+      {
+        "source": "box_33",
+        "target": "box_37",
+        "label": "Yes"
+      },
+      {
+        "source": "box_35",
+        "target": "box_37",
+        "label": null
+      },
+      {
+        "source": "box_36",
+        "target": "box_37",
+        "label": null
+      },
+      {
+        "source": "box_37",
+        "target": "box_38",
+        "label": "No"
+      },
+      {
+        "source": "box_37",
+        "target": "box_40",
+        "label": "Yes"
+      },
+      {
+        "source": "box_39",
+        "target": "box_40",
+        "label": null
+      },
+      {
+        "source": "box_40",
+        "target": "box_41",
+        "label": "No"
+      },
+      {
+        "source": "box_41",
+        "target": "box_42",
+        "label": null
+      },
+      {
+        "source": "box_42",
+        "target": "box_43",
+        "label": "Still failing"
+      },
+      {
+        "source": "box_42",
+        "target": "box_46",
+        "label": "OK"
+      },
+      {
+        "source": "box_40",
+        "target": "box_46",
+        "label": "Yes"
+      },
+      {
+        "source": "box_44",
+        "target": "box_46",
+        "label": null
+      },
+      {
+        "source": "box_45",
+        "target": "box_46",
+        "label": null
+      },
+      {
+        "source": "box_46",
+        "target": "box_47",
+        "label": "No"
+      },
+      {
+        "source": "box_47",
+        "target": "box_48",
+        "label": ""
+      },
+      {
+        "source": "box_46",
+        "target": "box_49",
+        "label": "Yes"
+      },
+      {
+        "source": "box_48",
+        "target": "box_49",
+        "label": null
+      },
+      {
+        "source": "box_49",
+        "target": "box_50",
+        "label": "No"
+      },
+      {
+        "source": "box_50",
+        "target": "box_51",
+        "label": ""
+      },
+      {
+        "source": "box_49",
+        "target": "box_52",
+        "label": "Yes"
+      },
+      {
+        "source": "box_51",
+        "target": "box_52",
+        "label": null
+      },
+      {
+        "source": "box_52",
+        "target": "box_53",
+        "label": "Yes"
+      },
+      {
+        "source": "box_52",
+        "target": "box_43",
+        "label": "No"
+      },
+      {
+        "source": "box_53",
+        "target": "box_54",
+        "label": null
+      }
+    ]
+  }
+}

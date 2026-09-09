@@ -1,0 +1,237 @@
+{
+  "id": "GRAPH31",
+  "description": "Exception handling for burred parts at press-fit interface, with supplier corrective action and downstream trace.",
+  "graph": {
+    "nodes": {
+      "box_0": {
+        "type": "terminator",
+        "text": "Start"
+      },
+      "box_1": {
+        "type": "process",
+        "text": "Collect five parts with detected burrs. Inspect the burr location and orientation using a magnifier to determine whether it is at the insertion lead chamfer or on the cylindrical press fit surface."
+      },
+      "box_2": {
+        "type": "decision",
+        "text": "Is the burr present on parts before they enter the assembly process (incoming material defect)?"
+      },
+      "box_3": {
+        "type": "process",
+        "text": "Inspect parts from the supply conveyor input side before they reach the assembly station to confirm the burr is present in the incoming material."
+      },
+      "box_4": {
+        "type": "process",
+        "text": "Quarantine the current input batch. Create a non conformance record for the incoming material and notify the quality assurance team. Reload from a confirmed conforming batch."
+      },
+      "box_5": {
+        "type": "decision",
+        "text": "Is the burr present on all processed parts or only on parts from a specific pressing cycle?"
+      },
+      "box_6": {
+        "type": "process",
+        "text": "Run a slow test cycle and inspect parts at the press output for every five cycles to determine whether the burr pattern is consistent or linked to a specific machine phase."
+      },
+      "box_7": {
+        "type": "process",
+        "text": "If the burr correlates with a specific cycle phase, identify the tooling component responsible (pressing head edge, guide surface, or nest edge) and inspect it immediately."
+      },
+      "box_8": {
+        "type": "decision",
+        "text": "Does the pressing head edge have an acceptable chamfer condition (no sharp edge or chipping)?"
+      },
+      "box_9": {
+        "type": "process",
+        "text": "Inspect the pressing head leading edge under magnification for chipping, sharp transitions, or material build up that could be transferred to the part."
+      },
+      "box_10": {
+        "type": "process",
+        "text": "Replace the pressing head or have the edge repolished to the specified chamfer radius. Verify the edge condition before resuming."
+      },
+      "box_11": {
+        "type": "decision",
+        "text": "Is the press guide alignment free of lateral offset (no side loading of the pressing head against the part)?"
+      },
+      "box_12": {
+        "type": "process",
+        "text": "Check the lateral clearance of the pressing head in the guide bushing. Verify that the pressing head moves without radial contact against the guide wall during descent."
+      },
+      "box_13": {
+        "type": "process",
+        "text": "Realign the press guide bushing to eliminate lateral offset. Verify alignment with a test pressing cycle before resuming production."
+      },
+      "box_14": {
+        "type": "process",
+        "text": "Quarantine all affected parts and record the root cause and corrective action in the quality log. Notify quality assurance team with sample parts for disposition."
+      },
+      "box_15": {
+        "type": "decision",
+        "text": "Is the root cause of the burr an incoming material defect requiring a supplier corrective action?"
+      },
+      "box_16": {
+        "type": "process",
+        "text": "Complete the following steps: 1. Compile defect data for the affected batch: quantity, rejection rate, and spec limit. 2. Cross-reference rejections against the production schedule to identify the batch window. 3. Confirm whether any burred parts were released to downstream assembly."
+      },
+      "box_17": {
+        "type": "document",
+        "text": "Refer to the supplier corrective action request procedure."
+      },
+      "box_18": {
+        "type": "decision",
+        "text": "Were any burred parts released to downstream assembly or shipped before detection?"
+      },
+      "box_19": {
+        "type": "process",
+        "text": "Trace all parts from the burr fault window through downstream stations and customer delivery records. Quarantine any located parts."
+      },
+      "box_20": {
+        "type": "process",
+        "text": "Issue customer advisory notice if any burred parts reached shipment, notify quality assurance manager."
+      },
+      "box_21": {
+        "type": "terminator",
+        "text": "End, Customer advisory issued. quality assurance disposition and supplier CA monitoring required."
+      },
+      "box_22": {
+        "type": "terminator",
+        "text": "End, Notify quality assurance team and maintenance team. Procedure complete."
+      }
+    },
+    "edges": [
+      {
+        "source": "box_0",
+        "target": "box_1",
+        "label": null
+      },
+      {
+        "source": "box_1",
+        "target": "box_3",
+        "label": ""
+      },
+      {
+        "source": "box_3",
+        "target": "box_2",
+        "label": null
+      },
+      {
+        "source": "box_2",
+        "target": "box_4",
+        "label": "Yes"
+      },
+      {
+        "source": "box_2",
+        "target": "box_5",
+        "label": "No"
+      },
+      {
+        "source": "box_6",
+        "target": "box_5",
+        "label": null
+      },
+      {
+        "source": "box_5",
+        "target": "box_7",
+        "label": "No"
+      },
+      {
+        "source": "box_5",
+        "target": "box_8",
+        "label": "Yes"
+      },
+      {
+        "source": "box_7",
+        "target": "box_9",
+        "label": ""
+      },
+      {
+        "source": "box_9",
+        "target": "box_8",
+        "label": null
+      },
+      {
+        "source": "box_8",
+        "target": "box_10",
+        "label": "No"
+      },
+      {
+        "source": "box_8",
+        "target": "box_11",
+        "label": "Yes"
+      },
+      {
+        "source": "box_10",
+        "target": "box_12",
+        "label": ""
+      },
+      {
+        "source": "box_12",
+        "target": "box_11",
+        "label": null
+      },
+      {
+        "source": "box_11",
+        "target": "box_13",
+        "label": "No"
+      },
+      {
+        "source": "box_11",
+        "target": "box_14",
+        "label": "Yes"
+      },
+      {
+        "source": "box_13",
+        "target": "box_14",
+        "label": null
+      },
+      {
+        "source": "box_4",
+        "target": "box_14",
+        "label": null
+      },
+      {
+        "source": "box_14",
+        "target": "box_15",
+        "label": null
+      },
+      {
+        "source": "box_15",
+        "target": "box_16",
+        "label": "Yes"
+      },
+      {
+        "source": "box_16",
+        "target": "box_18",
+        "label": null
+      },
+      {
+        "source": "box_17",
+        "target": "box_16",
+        "label": null
+      },
+      {
+        "source": "box_15",
+        "target": "box_18",
+        "label": "No"
+      },
+      {
+        "source": "box_18",
+        "target": "box_19",
+        "label": "Yes"
+      },
+      {
+        "source": "box_18",
+        "target": "box_22",
+        "label": "No"
+      },
+      {
+        "source": "box_19",
+        "target": "box_20",
+        "label": null
+      },
+      {
+        "source": "box_20",
+        "target": "box_21",
+        "label": null
+      }
+    ]
+  }
+}

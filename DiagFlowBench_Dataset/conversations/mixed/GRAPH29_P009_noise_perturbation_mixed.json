@@ -1,0 +1,148 @@
+{
+  "conversation_id": "GRAPH29_P009_noise_perturbation_mixed",
+  "graph_id": "GRAPH29",
+  "path_id": "GRAPH29_P009",
+  "regime": "mixed",
+  "variant": "noise_perturbation",
+  "robustness_axis": "noise_perturbation",
+  "turns": [
+    {
+      "node_id": "box_0",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Starting vision system false rejection diagnostic procedure.",
+      "edge_label_to_next": null,
+      "turn_index": 0,
+      "ground_truth": {
+        "node_id": "box_0",
+        "node_type": "terminator",
+        "node_text": "Start"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_23",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Has the false rejection rate reached a level that indicates a vision system failure, where genuine conforming parts are being systematically rejected and production viability is compromised?",
+      "edge_label_to_next": null,
+      "turn_index": 1,
+      "ground_truth": {
+        "node_id": "box_23",
+        "node_type": "decision",
+        "node_text": "Has the false rejection rate reached a level that indicates a vision system failure, where genuine conforming parts are being systematically rejected and production viability is compromised?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_23",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "The rejection rate is elevated, but it's intermittent - sometimes it rejects good parts for a few cycles, then works fine for an hour, then acts up again. It's not consistent enough to call it systematic, but it's definitely affecting our throughput.",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "coverage_gap",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_23",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yeah rejection rate is critcal conforming parts getting systematically rejected and produciton not viable at this rate",
+      "edge_label_to_next": "Critical, immediate stop required",
+      "turn_index": 2,
+      "ground_truth": {
+        "node_id": "box_23",
+        "node_type": "decision",
+        "node_text": "Has the false rejection rate reached a level that indicates a vision system failure, where genuine conforming parts are being systematically rejected and production viability is compromised?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_24",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Vision system must be shut down immediately. Quarantine all parts rejected in the affected window and escalate to the vision system engineer.",
+      "edge_label_to_next": null,
+      "turn_index": 3,
+      "ground_truth": {
+        "node_id": "box_24",
+        "node_type": "terminator",
+        "node_text": "End, vision system shut down immediately: false rejection rate critical, quarantine parts rejected in the affected window and escalate to vision system engineer"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_24",
+      "node_type": "terminator",
+      "speaker": "operator",
+      "utterance": "understood shutting down vision sys now and intiating escalation",
+      "edge_label_to_next": null,
+      "turn_index": 4,
+      "ground_truth": {
+        "node_id": "box_24",
+        "node_type": "terminator",
+        "node_text": "End, vision system shut down immediately: false rejection rate critical, quarantine parts rejected in the affected window and escalate to vision system engineer"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    }
+  ],
+  "metadata": {
+    "depth": 3,
+    "num_decisions": 1,
+    "num_processes": 0,
+    "num_documents": 0,
+    "terminator_type": "escalate",
+    "terminator_text": "End, vision system shut down immediately: false rejection rate critical, quarantine parts rejected in the affected window and escalate to vision system engineer",
+    "true_terminator": true,
+    "node_sequence": [
+      "box_0",
+      "box_23",
+      "box_24"
+    ],
+    "edge_labels": [
+      null,
+      null,
+      "Critical, immediate stop required"
+    ],
+    "decision_points": [
+      {
+        "node": "box_23",
+        "label": "Critical, immediate stop required",
+        "question": "Has the false rejection rate reached a level that indicates a vision system failure, where genuine conforming parts are being systematically rejected and production viability is compromised?"
+      }
+    ],
+    "generation_model": "anthropic/claude-sonnet-4-5",
+    "verification": {
+      "variant_of": "base",
+      "base_verified": true,
+      "note": "surface-form variant; not independently verified"
+    },
+    "injection_count": 1
+  },
+  "injection_log": [
+    {
+      "position": 2,
+      "node_id": "box_23",
+      "node_text": "Has the false rejection rate reached a level that indicates a vision system failure, where genuine conforming parts are being systematically rejected and production viability is compromised?",
+      "edge_labels": [
+        "Critical, immediate stop required",
+        "Standard fault, continue diagnosis"
+      ],
+      "category": "coverage_gap",
+      "utterance": "The rejection rate is elevated, but it's intermittent - sometimes it rejects good parts for a few cycles, then works fine for an hour, then acts up again. It's not consistent enough to call it systematic, but it's definitely affecting our throughput.",
+      "injection_rate": null,
+      "num_candidates": null
+    }
+  ]
+}

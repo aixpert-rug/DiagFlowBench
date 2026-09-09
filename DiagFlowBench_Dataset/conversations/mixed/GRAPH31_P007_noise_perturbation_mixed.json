@@ -1,0 +1,416 @@
+{
+  "conversation_id": "GRAPH31_P007_noise_perturbation_mixed",
+  "graph_id": "GRAPH31",
+  "path_id": "GRAPH31_P007",
+  "regime": "mixed",
+  "variant": "noise_perturbation",
+  "robustness_axis": "noise_perturbation",
+  "turns": [
+    {
+      "node_id": "box_0",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Starting burr detection diagnostic procedure.",
+      "edge_label_to_next": null,
+      "turn_index": 0,
+      "ground_truth": {
+        "node_id": "box_0",
+        "node_type": "terminator",
+        "node_text": "Start"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Please collect five parts with detected burrs and inspect the burr location and orientation using a magnifier. Determine whether the burr is at the insertion lead chamfer or on the cylindrical press fit surface.",
+      "edge_label_to_next": null,
+      "turn_index": 1,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Collect five parts with detected burrs. Inspect the burr location and orientation using a magnifier to determine whether it is at the insertion lead chamfer or on the cylindrical press fit surface."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "I'm seeing burrs on the threading area near the mounting flange, not on the insertion lead or press fit surface. The procedure doesn't mention what to do if burrs show up in this location.",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "coverage_gap",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "collected five burred parts and inspectd under magnification, burrs are on the cylindrical press fit surface",
+      "edge_label_to_next": "",
+      "turn_index": 2,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Collect five parts with detected burrs. Inspect the burr location and orientation using a magnifier to determine whether it is at the insertion lead chamfer or on the cylindrical press fit surface."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_3",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Now inspect parts from the supply conveyor input side before they reach the assembly station to confirm whether the burr is present in the incoming material.",
+      "edge_label_to_next": null,
+      "turn_index": 3,
+      "ground_truth": {
+        "node_id": "box_3",
+        "node_type": "process",
+        "node_text": "Inspect parts from the supply conveyor input side before they reach the assembly station to confirm the burr is present in the incoming material."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_3",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "ok so checked parts from input conveyer before assembly and yeah the burrs are alredy present on incoming material",
+      "edge_label_to_next": null,
+      "turn_index": 4,
+      "ground_truth": {
+        "node_id": "box_3",
+        "node_type": "process",
+        "node_text": "Inspect parts from the supply conveyor input side before they reach the assembly station to confirm the burr is present in the incoming material."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the burr present on parts before they enter the assembly process, indicating an incoming material defect?",
+      "edge_label_to_next": null,
+      "turn_index": 5,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Is the burr present on parts before they enter the assembly process (incoming material defect)?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yes burrs definately present on incoming parts before they reach our assembly process",
+      "edge_label_to_next": "Yes",
+      "turn_index": 6,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Is the burr present on parts before they enter the assembly process (incoming material defect)?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_4",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Quarantine the current input batch, create a non-conformance record for the incoming material, and notify the quality assurance team. Then reload from a confirmed conforming batch.",
+      "edge_label_to_next": null,
+      "turn_index": 7,
+      "ground_truth": {
+        "node_id": "box_4",
+        "node_type": "process",
+        "node_text": "Quarantine the current input batch. Create a non conformance record for the incoming material and notify the quality assurance team. Reload from a confirmed conforming batch."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_4",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "quarantined the batch created non-conformance record and notifed QA, loading new conforming batch now",
+      "edge_label_to_next": null,
+      "turn_index": 8,
+      "ground_truth": {
+        "node_id": "box_4",
+        "node_type": "process",
+        "node_text": "Quarantine the current input batch. Create a non conformance record for the incoming material and notify the quality assurance team. Reload from a confirmed conforming batch."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_14",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Quarantine all affected parts and record the root cause and corrective action in the quality log. Notify the quality assurance team with sample parts for disposition.",
+      "edge_label_to_next": null,
+      "turn_index": 9,
+      "ground_truth": {
+        "node_id": "box_14",
+        "node_type": "process",
+        "node_text": "Quarantine all affected parts and record the root cause and corrective action in the quality log. Notify quality assurance team with sample parts for disposition."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_14",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "all affected parts quarantined and logged root cause as incoming material defect, QA notified with samples",
+      "edge_label_to_next": null,
+      "turn_index": 10,
+      "ground_truth": {
+        "node_id": "box_14",
+        "node_type": "process",
+        "node_text": "Quarantine all affected parts and record the root cause and corrective action in the quality log. Notify quality assurance team with sample parts for disposition."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_15",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the root cause of the burr an incoming material defect requiring a supplier corrective action?",
+      "edge_label_to_next": null,
+      "turn_index": 11,
+      "ground_truth": {
+        "node_id": "box_15",
+        "node_type": "decision",
+        "node_text": "Is the root cause of the burr an incoming material defect requiring a supplier corrective action?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_15",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "The burr is actually being caused by a cracked insert holder on the tool turret—I can see the holder is fractured and letting the insert wobble during the cut.",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "undocumented_malfunction",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_15",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yeah this is clearly a supplier issue with the incoming material needs corrective action",
+      "edge_label_to_next": "Yes",
+      "turn_index": 12,
+      "ground_truth": {
+        "node_id": "box_15",
+        "node_type": "decision",
+        "node_text": "Is the root cause of the burr an incoming material defect requiring a supplier corrective action?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_16",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Complete the following steps: compile defect data for the affected batch including quantity, rejection rate, and spec limit. Cross-reference rejections against the production schedule to identify the batch window. Then confirm whether any burred parts were released to downstream assembly.",
+      "edge_label_to_next": null,
+      "turn_index": 13,
+      "ground_truth": {
+        "node_id": "box_16",
+        "node_type": "process",
+        "node_text": "Complete the following steps: 1. Compile defect data for the affected batch: quantity, rejection rate, and spec limit. 2. Cross-reference rejections against the production schedule to identify the batch window. 3. Confirm whether any burred parts were released to downstream assembly."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_16",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "compiled all defect data and cross-refrenced with production schedule, also checked downstream assembly recods",
+      "edge_label_to_next": null,
+      "turn_index": 14,
+      "ground_truth": {
+        "node_id": "box_16",
+        "node_type": "process",
+        "node_text": "Complete the following steps: 1. Compile defect data for the affected batch: quantity, rejection rate, and spec limit. 2. Cross-reference rejections against the production schedule to identify the batch window. 3. Confirm whether any burred parts were released to downstream assembly."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_18",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Were any burred parts released to downstream assembly or shipped before detection?",
+      "edge_label_to_next": null,
+      "turn_index": 15,
+      "ground_truth": {
+        "node_id": "box_18",
+        "node_type": "decision",
+        "node_text": "Were any burred parts released to downstream assembly or shipped before detection?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_18",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no we caught this before any burred parts made it downstream or to shipment",
+      "edge_label_to_next": "No",
+      "turn_index": 16,
+      "ground_truth": {
+        "node_id": "box_18",
+        "node_type": "decision",
+        "node_text": "Were any burred parts released to downstream assembly or shipped before detection?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_22",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Procedure complete. Notify the quality assurance team and maintenance team to finalize the corrective action documentation.",
+      "edge_label_to_next": null,
+      "turn_index": 17,
+      "ground_truth": {
+        "node_id": "box_22",
+        "node_type": "terminator",
+        "node_text": "End, Notify quality assurance team and maintenance team. Procedure complete."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_22",
+      "node_type": "terminator",
+      "speaker": "operator",
+      "utterance": "understood will notify both teams now",
+      "edge_label_to_next": null,
+      "turn_index": 18,
+      "ground_truth": {
+        "node_id": "box_22",
+        "node_type": "terminator",
+        "node_text": "End, Notify quality assurance team and maintenance team. Procedure complete."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    }
+  ],
+  "metadata": {
+    "depth": 10,
+    "num_decisions": 3,
+    "num_processes": 5,
+    "num_documents": 0,
+    "terminator_type": "procedure_complete",
+    "terminator_text": "End, Notify quality assurance team and maintenance team. Procedure complete.",
+    "true_terminator": true,
+    "node_sequence": [
+      "box_0",
+      "box_1",
+      "box_3",
+      "box_2",
+      "box_4",
+      "box_14",
+      "box_15",
+      "box_16",
+      "box_18",
+      "box_22"
+    ],
+    "edge_labels": [
+      null,
+      null,
+      "",
+      null,
+      "Yes",
+      null,
+      null,
+      "Yes",
+      null,
+      "No"
+    ],
+    "decision_points": [
+      {
+        "node": "box_2",
+        "label": "Yes",
+        "question": "Is the burr present on parts before they enter the assembly process (incoming material defect)?"
+      },
+      {
+        "node": "box_15",
+        "label": "Yes",
+        "question": "Is the root cause of the burr an incoming material defect requiring a supplier corrective action?"
+      },
+      {
+        "node": "box_18",
+        "label": "No",
+        "question": "Were any burred parts released to downstream assembly or shipped before detection?"
+      }
+    ],
+    "generation_model": "anthropic/claude-sonnet-4-5",
+    "verification": {
+      "variant_of": "base",
+      "base_verified": true,
+      "note": "surface-form variant; not independently verified"
+    },
+    "injection_count": 2
+  },
+  "injection_log": [
+    {
+      "position": 2,
+      "node_id": "box_1",
+      "node_text": "Collect five parts with detected burrs. Inspect the burr location and orientation using a magnifier to determine whether it is at the insertion lead chamfer or on the cylindrical press fit surface.",
+      "edge_labels": [],
+      "category": "coverage_gap",
+      "utterance": "I'm seeing burrs on the threading area near the mounting flange, not on the insertion lead or press fit surface. The procedure doesn't mention what to do if burrs show up in this location.",
+      "injection_rate": null,
+      "num_candidates": null
+    },
+    {
+      "position": 12,
+      "node_id": "box_15",
+      "node_text": "Is the root cause of the burr an incoming material defect requiring a supplier corrective action?",
+      "edge_labels": [
+        "Yes",
+        "No"
+      ],
+      "category": "undocumented_malfunction",
+      "utterance": "The burr is actually being caused by a cracked insert holder on the tool turret—I can see the holder is fractured and letting the insert wobble during the cut.",
+      "injection_rate": null,
+      "num_candidates": null
+    }
+  ]
+}

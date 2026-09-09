@@ -1,0 +1,40 @@
+flowchart TD
+    box_0(["Start"])
+    box_1{"Are the damaged parts also found in the input<br/>product?"}
+    box_2["Store the damaged parts for possible investigation<br/>for the quality assurance team."]
+    box_3["Continue with a different batch and notify the<br/>quality assurance team."]
+    box_4{"Are there pushed through parts?"}
+    box_5["For an example of a pushed through part, see the<br/>corrective action procedure introduction."]
+    box_6["Follow the over pressed part corrective procedure."]
+    box_7{"Have the damaged parts been approved by the<br/>metrology station?"}
+    box_8["Measure the parts on the metrology station."]
+    box_9["Block the products and notify maintenance team /<br/>quality assurance team"]
+    box_10(["Continue producing, but notify quality assurance<br/>team"])
+
+    box_0 --> box_1
+    box_2 --> box_1
+    box_1 -->|"Yes"| box_3
+    box_1 -->|"No"| box_4
+    box_5 --> box_4
+    box_4 -->|"Yes"| box_6
+    box_4 -->|"No"| box_7
+    box_8 --> box_7
+    box_7 -->|"No"| box_9
+    box_7 -->|"Yes"| box_10
+
+    class box_0 terminator
+    class box_1 decision
+    class box_2 process
+    class box_3 process
+    class box_4 decision
+    class box_5 process
+    class box_6 process
+    class box_7 decision
+    class box_8 process
+    class box_9 process
+    class box_10 terminator
+
+    classDef terminator fill:#2d4a6e,stroke:#1a3050,color:#ffffff,font-weight:bold
+    classDef process    fill:#f0f4ff,stroke:#4a6fa5,color:#1a1a2e
+    classDef decision   fill:#fff8e6,stroke:#c8922a,color:#1a1a2e
+    classDef document   fill:#f0fff4,stroke:#3a8a4a,color:#1a1a2e

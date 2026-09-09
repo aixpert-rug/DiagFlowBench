@@ -1,0 +1,329 @@
+{
+  "conversation_id": "GRAPH33_P004_base",
+  "graph_id": "GRAPH33",
+  "path_id": "GRAPH33_P004",
+  "regime": "clean",
+  "variant": "base",
+  "robustness_axis": null,
+  "turns": [
+    {
+      "node_id": "box_0",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Starting gripper fixture diagnostic procedure.",
+      "edge_label_to_next": null,
+      "turn_index": 0,
+      "ground_truth": {
+        "node_id": "box_0",
+        "node_type": "terminator",
+        "node_text": "Start"
+      }
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Please complete the following structural checks: First, inspect the gripper body for any cracks, dents, or deformation at the jaw mounting faces. Next, check the actuator housing for impact damage or distortion. Finally, inspect the jaw slide channel for scoring or material loss.",
+      "edge_label_to_next": null,
+      "turn_index": 1,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Inspect the gripper body for cracks, dents, or deformation at jaw mounting faces. 2. Check the actuator housing for impact damage or distortion. 3. Inspect the jaw slide channel for scoring or material loss."
+      }
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "I've completed all three structural checks. The gripper body, actuator housing, and jaw slide channel all look clean with no visible damage.",
+      "edge_label_to_next": null,
+      "turn_index": 2,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Inspect the gripper body for cracks, dents, or deformation at jaw mounting faces. 2. Check the actuator housing for impact damage or distortion. 3. Inspect the jaw slide channel for scoring or material loss."
+      }
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is there any structural damage present on the gripper body?",
+      "edge_label_to_next": null,
+      "turn_index": 3,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Structural damage present on gripper body?"
+      }
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "No structural damage detected. All mounting faces and surfaces are intact.",
+      "edge_label_to_next": "No",
+      "turn_index": 4,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Structural damage present on gripper body?"
+      }
+    },
+    {
+      "node_id": "box_5",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the jaw insert wear within tolerance?",
+      "edge_label_to_next": null,
+      "turn_index": 5,
+      "ground_truth": {
+        "node_id": "box_5",
+        "node_type": "decision",
+        "node_text": "Jaw insert wear within tolerance?"
+      }
+    },
+    {
+      "node_id": "box_5",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "The jaw inserts are showing excessive wear. The minimum thickness measurements are below the serviceable limit specified in the jaw service spec.",
+      "edge_label_to_next": "No",
+      "turn_index": 6,
+      "ground_truth": {
+        "node_id": "box_5",
+        "node_type": "decision",
+        "node_text": "Jaw insert wear within tolerance?"
+      }
+    },
+    {
+      "node_id": "box_6",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Please replace the jaw inserts. Perform a symmetric replacement on both jaws to maintain balance.",
+      "edge_label_to_next": null,
+      "turn_index": 7,
+      "ground_truth": {
+        "node_id": "box_6",
+        "node_type": "process",
+        "node_text": "Replace jaw inserts, symmetric replacement, both jaws"
+      }
+    },
+    {
+      "node_id": "box_6",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Both jaw inserts have been replaced symmetrically. The new inserts are installed and secured.",
+      "edge_label_to_next": null,
+      "turn_index": 8,
+      "ground_truth": {
+        "node_id": "box_6",
+        "node_type": "process",
+        "node_text": "Replace jaw inserts, symmetric replacement, both jaws"
+      }
+    },
+    {
+      "node_id": "box_7",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Please reverify the jaw geometry after the insert replacement.",
+      "edge_label_to_next": null,
+      "turn_index": 9,
+      "ground_truth": {
+        "node_id": "box_7",
+        "node_type": "decision",
+        "node_text": "Reverify jaw geometry after insert replacement"
+      }
+    },
+    {
+      "node_id": "box_7",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "I've reverified the jaw geometry after the insert replacement. The measurements are still out of specification and don't meet the required tolerance.",
+      "edge_label_to_next": "Unresolvable after second attempt",
+      "turn_index": 10,
+      "ground_truth": {
+        "node_id": "box_7",
+        "node_type": "decision",
+        "node_text": "Reverify jaw geometry after insert replacement"
+      }
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Procedure complete. The jaw geometry remains non-conforming after replacement. Reject this part and remove it from service immediately.",
+      "edge_label_to_next": null,
+      "turn_index": 11,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "terminator",
+        "node_text": "End, Part rejected: jaw geometry non conforming after replacement"
+      }
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "terminator",
+      "speaker": "operator",
+      "utterance": "Understood. I'll tag the part as rejected and remove it from the production line.",
+      "edge_label_to_next": null,
+      "turn_index": 12,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "terminator",
+        "node_text": "End, Part rejected: jaw geometry non conforming after replacement"
+      }
+    }
+  ],
+  "metadata": {
+    "depth": 7,
+    "num_decisions": 3,
+    "num_processes": 2,
+    "num_documents": 0,
+    "terminator_type": "procedure_complete",
+    "terminator_text": "End, Part rejected: jaw geometry non conforming after replacement",
+    "true_terminator": true,
+    "node_sequence": [
+      "box_0",
+      "box_1",
+      "box_2",
+      "box_5",
+      "box_6",
+      "box_7",
+      "box_8"
+    ],
+    "edge_labels": [
+      null,
+      null,
+      null,
+      "No",
+      "No",
+      null,
+      "Unresolvable after second attempt"
+    ],
+    "decision_points": [
+      {
+        "node": "box_2",
+        "label": "No",
+        "question": "Structural damage present on gripper body?"
+      },
+      {
+        "node": "box_5",
+        "label": "No",
+        "question": "Jaw insert wear within tolerance?"
+      },
+      {
+        "node": "box_7",
+        "label": "Unresolvable after second attempt",
+        "question": "Reverify jaw geometry after insert replacement"
+      }
+    ],
+    "generation_model": "anthropic/claude-sonnet-4-5",
+    "verification": {
+      "verified": false,
+      "issues": [
+        {
+          "turn_index": 10,
+          "issue_type": "STEP_LEAKAGE",
+          "original": "I've attempted the geometry verification twice with adjustments, but the jaw geometry is still out of specification. The measurements remain non-conforming even after the second alignment attempt.",
+          "corrected": "I've reverified the jaw geometry after the insert replacement. The measurements are still out of specification and don't meet the required tolerance.",
+          "explanation": "The operator utterance reveals knowledge of box_24 (the second alignment attempt) which hasn't been reached yet in the procedure flow. The operator should only report the current verification result without mentioning downstream correction attempts that may or may not occur."
+        }
+      ],
+      "corrected_turns": [
+        {
+          "node_id": "box_0",
+          "node_type": "terminator",
+          "speaker": "system",
+          "utterance": "Starting gripper fixture diagnostic procedure.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_1",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Please complete the following structural checks: First, inspect the gripper body for any cracks, dents, or deformation at the jaw mounting faces. Next, check the actuator housing for impact damage or distortion. Finally, inspect the jaw slide channel for scoring or material loss.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_1",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "I've completed all three structural checks. The gripper body, actuator housing, and jaw slide channel all look clean with no visible damage.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_2",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is there any structural damage present on the gripper body?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_2",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "No structural damage detected. All mounting faces and surfaces are intact.",
+          "edge_label_to_next": "No"
+        },
+        {
+          "node_id": "box_5",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is the jaw insert wear within tolerance?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_5",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "The jaw inserts are showing excessive wear. The minimum thickness measurements are below the serviceable limit specified in the jaw service spec.",
+          "edge_label_to_next": "No"
+        },
+        {
+          "node_id": "box_6",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Please replace the jaw inserts. Perform a symmetric replacement on both jaws to maintain balance.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_6",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "Both jaw inserts have been replaced symmetrically. The new inserts are installed and secured.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_7",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Please reverify the jaw geometry after the insert replacement.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_7",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "I've reverified the jaw geometry after the insert replacement. The measurements are still out of specification and don't meet the required tolerance.",
+          "edge_label_to_next": "Unresolvable after second attempt"
+        },
+        {
+          "node_id": "box_8",
+          "node_type": "terminator",
+          "speaker": "system",
+          "utterance": "Procedure complete. The jaw geometry remains non-conforming after replacement. Reject this part and remove it from service immediately.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_8",
+          "node_type": "terminator",
+          "speaker": "operator",
+          "utterance": "Understood. I'll tag the part as rejected and remove it from the production line.",
+          "edge_label_to_next": null
+        }
+      ]
+    }
+  }
+}

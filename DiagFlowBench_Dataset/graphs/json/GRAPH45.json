@@ -1,0 +1,251 @@
+{
+  "id": "GRAPH45",
+  "description": "Troubleshooting procedure for communication loss or errors between the marking controller and the machine PLC, covering controller ready state, physical connection, connector contamination, network hardware faults, and communication parameter settings.",
+  "graph": {
+    "nodes": {
+      "box_0": {
+        "type": "terminator",
+        "text": "Start"
+      },
+      "box_1": {
+        "type": "decision",
+        "text": "Is the marking controller powered on and in the ready state (no active fault or interlock)?"
+      },
+      "box_2": {
+        "type": "process",
+        "text": "Complete the following checks: 1. Read the marking controller status display and confirm the power indicator is lit. 2. Note any fault codes and cross-reference each against the fault code index. 3. Check the controller display for communication or interlock warnings."
+      },
+      "box_3": {
+        "type": "process",
+        "text": "Power cycle the marking controller following the shutdown and startup procedure. Wait for the full startup sequence to complete before reattempting communication."
+      },
+      "box_4": {
+        "type": "document",
+        "text": "Refer to the marking controller startup procedure."
+      },
+      "box_5": {
+        "type": "decision",
+        "text": "Is the network or serial communication cable physically connected at both ends (marking controller and machine programmable controller)?"
+      },
+      "box_6": {
+        "type": "process",
+        "text": "Physically inspect the communication cable connectors at the marking controller port and at the machine programmable controller interface port. Check that both connectors are fully seated and the locking mechanism is engaged."
+      },
+      "box_7": {
+        "type": "process",
+        "text": "Reseat both connectors. If the cable is visibly damaged (kinked, crushed, or connector pins bent), replace the communication cable."
+      },
+      "box_8": {
+        "type": "decision",
+        "text": "Are there contaminated connector pins or ventilation slots on the marking controller or programmable controller interface card?"
+      },
+      "box_9": {
+        "type": "process",
+        "text": "Inspect the communication port connector pins on both devices for corrosion, dust build up, or bent pins. Check the controller ventilation slots for blockage."
+      },
+      "box_10": {
+        "type": "process",
+        "text": "Clean connector pins with a dry contact cleaner spray. Clear blocked ventilation slots with compressed air. Do not use abrasive tools on connector pins."
+      },
+      "box_11": {
+        "type": "decision",
+        "text": "Are there electrical defects in the network interface card, power supply, or ground connection?"
+      },
+      "box_12": {
+        "type": "process",
+        "text": "Complete the following checks: 1. Check the network interface card for fault indicator lights. 2. Check the marking controller internal power supply output voltage. 3. Verify that the controller fan and ventilation slots are unobstructed."
+      },
+      "box_13": {
+        "type": "process",
+        "text": "Replace the defective component identified (network interface card or power supply module). Ensure the earth ground connection is secure before power on."
+      },
+      "box_14": {
+        "type": "decision",
+        "text": "Are the communication protocol parameters (baud rate, IP address, or port number) correctly configured on both the marking controller and the machine programmable controller?"
+      },
+      "box_15": {
+        "type": "process",
+        "text": "Compare the communication parameter settings on the marking controller against the machine programmable controller configuration record. Check baud rate (or IP address and port for Ethernet), data bits, stop bits, and parity settings."
+      },
+      "box_16": {
+        "type": "process",
+        "text": "Correct any mismatched communication parameters on either device. Cycle the communication interface after making parameter changes."
+      },
+      "box_17": {
+        "type": "decision",
+        "text": "Has the communication link been restored and is the marking controller receiving and executing marking commands correctly?"
+      },
+      "box_18": {
+        "type": "process",
+        "text": "Send a test marking command from the machine programmable controller to the marking controller and verify that the marking controller acknowledges the command and executes the test mark."
+      },
+      "box_19": {
+        "type": "process",
+        "text": "Escalate to the maintenance team and marking controller supplier: the communication fault cannot be resolved through standard corrective actions."
+      },
+      "box_20": {
+        "type": "process",
+        "text": "Record all corrective actions, parameter settings, and the final communication test result in the maintenance log. Notify quality assurance team."
+      },
+      "box_21": {
+        "type": "terminator",
+        "text": "Marking controller communication is restored. End."
+      },
+      "box_22": {
+        "type": "decision",
+        "text": "Is the marking controller completely unresponsive, preventing any part marking and requiring an immediate production line stop to preserve part traceability?"
+      },
+      "box_23": {
+        "type": "terminator",
+        "text": "End, production line stopped immediately: marking controller unresponsive, no parts may proceed without marking, escalate to maintenance engineer and notify production supervisor"
+      }
+    },
+    "edges": [
+      {
+        "source": "box_2",
+        "target": "box_1",
+        "label": null
+      },
+      {
+        "source": "box_1",
+        "target": "box_3",
+        "label": "No"
+      },
+      {
+        "source": "box_1",
+        "target": "box_5",
+        "label": "Yes"
+      },
+      {
+        "source": "box_3",
+        "target": "box_6",
+        "label": ""
+      },
+      {
+        "source": "box_4",
+        "target": "box_3",
+        "label": null
+      },
+      {
+        "source": "box_6",
+        "target": "box_5",
+        "label": null
+      },
+      {
+        "source": "box_5",
+        "target": "box_7",
+        "label": "No"
+      },
+      {
+        "source": "box_5",
+        "target": "box_8",
+        "label": "Yes"
+      },
+      {
+        "source": "box_7",
+        "target": "box_9",
+        "label": ""
+      },
+      {
+        "source": "box_9",
+        "target": "box_8",
+        "label": null
+      },
+      {
+        "source": "box_8",
+        "target": "box_10",
+        "label": "Yes"
+      },
+      {
+        "source": "box_8",
+        "target": "box_11",
+        "label": "No"
+      },
+      {
+        "source": "box_10",
+        "target": "box_12",
+        "label": ""
+      },
+      {
+        "source": "box_12",
+        "target": "box_11",
+        "label": null
+      },
+      {
+        "source": "box_11",
+        "target": "box_13",
+        "label": "Yes"
+      },
+      {
+        "source": "box_11",
+        "target": "box_14",
+        "label": "No"
+      },
+      {
+        "source": "box_13",
+        "target": "box_15",
+        "label": ""
+      },
+      {
+        "source": "box_15",
+        "target": "box_14",
+        "label": null
+      },
+      {
+        "source": "box_14",
+        "target": "box_16",
+        "label": "No"
+      },
+      {
+        "source": "box_14",
+        "target": "box_17",
+        "label": "Yes"
+      },
+      {
+        "source": "box_16",
+        "target": "box_18",
+        "label": ""
+      },
+      {
+        "source": "box_18",
+        "target": "box_17",
+        "label": null
+      },
+      {
+        "source": "box_17",
+        "target": "box_19",
+        "label": "No"
+      },
+      {
+        "source": "box_17",
+        "target": "box_20",
+        "label": "Yes"
+      },
+      {
+        "source": "box_19",
+        "target": "box_20",
+        "label": null
+      },
+      {
+        "source": "box_20",
+        "target": "box_21",
+        "label": null
+      },
+      {
+        "source": "box_0",
+        "target": "box_22",
+        "label": null
+      },
+      {
+        "source": "box_22",
+        "target": "box_23",
+        "label": "Critical, immediate stop required"
+      },
+      {
+        "source": "box_22",
+        "target": "box_1",
+        "label": "Standard fault, continue diagnosis"
+      }
+    ]
+  }
+}

@@ -1,0 +1,81 @@
+flowchart TD
+    box_0(["Start"])
+    box_1["Collect five parts with detected burrs. Inspect the<br/>burr location and orientation using a magnifier to<br/>determine whether it is at the insertion lead<br/>chamfer or on the cylindrical press fit surface."]
+    box_2{"Is the burr present on parts before they enter the<br/>assembly process (incoming material defect)?"}
+    box_3["Inspect parts from the supply conveyor input side<br/>before they reach the assembly station to confirm<br/>the burr is present in the incoming material."]
+    box_4["Quarantine the current input batch. Create a non<br/>conformance record for the incoming material and<br/>notify the quality assurance team. Reload from a<br/>confirmed conforming batch."]
+    box_5{"Is the burr present on all processed parts or only<br/>on parts from a specific pressing cycle?"}
+    box_6["Run a slow test cycle and inspect parts at the press<br/>output for every five cycles to determine whether<br/>the burr pattern is consistent or linked to a<br/>specific machine phase."]
+    box_7["If the burr correlates with a specific cycle phase,<br/>identify the tooling component responsible (pressing<br/>head edge, guide surface, or nest edge) and inspect<br/>it immediately."]
+    box_8{"Does the pressing head edge have an acceptable<br/>chamfer condition (no sharp edge or chipping)?"}
+    box_9["Inspect the pressing head leading edge under<br/>magnification for chipping, sharp transitions, or<br/>material build up that could be transferred to the<br/>part."]
+    box_10["Replace the pressing head or have the edge<br/>repolished to the specified chamfer radius. Verify<br/>the edge condition before resuming."]
+    box_11{"Is the press guide alignment free of lateral offset<br/>(no side loading of the pressing head against the<br/>part)?"}
+    box_12["Check the lateral clearance of the pressing head in<br/>the guide bushing. Verify that the pressing head<br/>moves without radial contact against the guide wall<br/>during descent."]
+    box_13["Realign the press guide bushing to eliminate lateral<br/>offset. Verify alignment with a test pressing cycle<br/>before resuming production."]
+    box_14["Quarantine all affected parts and record the root<br/>cause and corrective action in the quality log.<br/>Notify quality assurance team with sample parts for<br/>disposition."]
+    box_15{"Is the root cause of the burr an incoming material<br/>defect requiring a supplier corrective action?"}
+    box_16["Complete the following steps: 1. Compile defect data<br/>for the affected batch: quantity, rejection rate,<br/>and spec limit. 2. Cross-reference rejections<br/>against the production schedule to identify the<br/>batch window. 3. Confirm whether any burred parts<br/>were released to downstream assembly."]
+    box_17[/"Refer to the supplier corrective action request<br/>procedure."/]
+    box_18{"Were any burred parts released to downstream<br/>assembly or shipped before detection?"}
+    box_19["Trace all parts from the burr fault window through<br/>downstream stations and customer delivery records.<br/>Quarantine any located parts."]
+    box_20["Issue customer advisory notice if any burred parts<br/>reached shipment, notify quality assurance manager."]
+    box_21(["End, Customer advisory issued. quality assurance<br/>disposition and supplier CA monitoring required."])
+    box_22(["End, Notify quality assurance team and maintenance<br/>team. Procedure complete."])
+
+    box_0 --> box_1
+    box_1 --> box_3
+    box_3 --> box_2
+    box_2 -->|"Yes"| box_4
+    box_2 -->|"No"| box_5
+    box_6 --> box_5
+    box_5 -->|"No"| box_7
+    box_5 -->|"Yes"| box_8
+    box_7 --> box_9
+    box_9 --> box_8
+    box_8 -->|"No"| box_10
+    box_8 -->|"Yes"| box_11
+    box_10 --> box_12
+    box_12 --> box_11
+    box_11 -->|"No"| box_13
+    box_11 -->|"Yes"| box_14
+    box_13 --> box_14
+    box_4 --> box_14
+    box_14 --> box_15
+    box_15 -->|"Yes"| box_16
+    box_16 --> box_18
+    box_17 --> box_16
+    box_15 -->|"No"| box_18
+    box_18 -->|"Yes"| box_19
+    box_18 -->|"No"| box_22
+    box_19 --> box_20
+    box_20 --> box_21
+
+    class box_0 terminator
+    class box_1 process
+    class box_2 decision
+    class box_3 process
+    class box_4 process
+    class box_5 decision
+    class box_6 process
+    class box_7 process
+    class box_8 decision
+    class box_9 process
+    class box_10 process
+    class box_11 decision
+    class box_12 process
+    class box_13 process
+    class box_14 process
+    class box_15 decision
+    class box_16 process
+    class box_17 document
+    class box_18 decision
+    class box_19 process
+    class box_20 process
+    class box_21 terminator
+    class box_22 terminator
+
+    classDef terminator fill:#2d4a6e,stroke:#1a3050,color:#ffffff,font-weight:bold
+    classDef process    fill:#f0f4ff,stroke:#4a6fa5,color:#1a1a2e
+    classDef decision   fill:#fff8e6,stroke:#c8922a,color:#1a1a2e
+    classDef document   fill:#f0fff4,stroke:#3a8a4a,color:#1a1a2e

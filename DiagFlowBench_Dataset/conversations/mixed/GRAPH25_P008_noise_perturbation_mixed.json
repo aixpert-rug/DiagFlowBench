@@ -1,0 +1,148 @@
+{
+  "conversation_id": "GRAPH25_P008_noise_perturbation_mixed",
+  "graph_id": "GRAPH25",
+  "path_id": "GRAPH25_P008",
+  "regime": "mixed",
+  "variant": "noise_perturbation",
+  "robustness_axis": "noise_perturbation",
+  "turns": [
+    {
+      "node_id": "box_0",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Starting vacuum effector dropout diagnostic procedure.",
+      "edge_label_to_next": null,
+      "turn_index": 0,
+      "ground_truth": {
+        "node_id": "box_0",
+        "node_type": "terminator",
+        "node_text": "Start"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_21",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the rate of parts dropped from the vacuum effector sufficient to indicate a system failure posing a safety hazard or causing contamination of the work cell?",
+      "edge_label_to_next": null,
+      "turn_index": 1,
+      "ground_truth": {
+        "node_id": "box_21",
+        "node_type": "decision",
+        "node_text": "Is the rate of parts dropped from the vacuum effector sufficient to indicate a system failure posing a safety hazard or causing contamination of the work cell?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_21",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "The vacuum cups are holding parts fine, but I'm noticing a lot of air leakage noise coming from somewhere in the manifold assembly—it's not dropping parts but the hissing sound is getting louder over the last hour.",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "coverage_gap",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_21",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yeah parts dropping at high rate creating signifcant safety hazard and contaminating work cell with scatterd components",
+      "edge_label_to_next": "Critical, immediate stop required",
+      "turn_index": 2,
+      "ground_truth": {
+        "node_id": "box_21",
+        "node_type": "decision",
+        "node_text": "Is the rate of parts dropped from the vacuum effector sufficient to indicate a system failure posing a safety hazard or causing contamination of the work cell?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_22",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Production must be stopped immediately due to critical vacuum effector failure. Clear the work cell, quarantine all dropped parts, and escalate to the maintenance engineer for urgent intervention.",
+      "edge_label_to_next": null,
+      "turn_index": 3,
+      "ground_truth": {
+        "node_id": "box_22",
+        "node_type": "terminator",
+        "node_text": "End, production stopped immediately: vacuum effector failure critical, clear work cell, quarantine dropped parts, and escalate to maintenance engineer"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_22",
+      "node_type": "terminator",
+      "speaker": "operator",
+      "utterance": "understood stopping production now and escalting to maintenance engineering",
+      "edge_label_to_next": null,
+      "turn_index": 4,
+      "ground_truth": {
+        "node_id": "box_22",
+        "node_type": "terminator",
+        "node_text": "End, production stopped immediately: vacuum effector failure critical, clear work cell, quarantine dropped parts, and escalate to maintenance engineer"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    }
+  ],
+  "metadata": {
+    "depth": 3,
+    "num_decisions": 1,
+    "num_processes": 0,
+    "num_documents": 0,
+    "terminator_type": "escalate",
+    "terminator_text": "End, production stopped immediately: vacuum effector failure critical, clear work cell, quarantine dropped parts, and escalate to maintenance engineer",
+    "true_terminator": true,
+    "node_sequence": [
+      "box_0",
+      "box_21",
+      "box_22"
+    ],
+    "edge_labels": [
+      null,
+      null,
+      "Critical, immediate stop required"
+    ],
+    "decision_points": [
+      {
+        "node": "box_21",
+        "label": "Critical, immediate stop required",
+        "question": "Is the rate of parts dropped from the vacuum effector sufficient to indicate a system failure posing a safety hazard or causing contamination of the work cell?"
+      }
+    ],
+    "generation_model": "anthropic/claude-sonnet-4-5",
+    "verification": {
+      "variant_of": "base",
+      "base_verified": true,
+      "note": "surface-form variant; not independently verified"
+    },
+    "injection_count": 1
+  },
+  "injection_log": [
+    {
+      "position": 2,
+      "node_id": "box_21",
+      "node_text": "Is the rate of parts dropped from the vacuum effector sufficient to indicate a system failure posing a safety hazard or causing contamination of the work cell?",
+      "edge_labels": [
+        "Critical, immediate stop required",
+        "Standard fault, continue diagnosis"
+      ],
+      "category": "coverage_gap",
+      "utterance": "The vacuum cups are holding parts fine, but I'm noticing a lot of air leakage noise coming from somewhere in the manifold assembly—it's not dropping parts but the hissing sound is getting louder over the last hour.",
+      "injection_rate": null,
+      "num_candidates": null
+    }
+  ]
+}

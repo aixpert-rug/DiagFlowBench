@@ -1,0 +1,501 @@
+{
+  "conversation_id": "GRAPH29_P006_noise_perturbation",
+  "graph_id": "GRAPH29",
+  "path_id": "GRAPH29_P006",
+  "regime": "clean",
+  "variant": "noise_perturbation",
+  "robustness_axis": "noise_perturbation",
+  "turns": [
+    {
+      "node_id": "box_0",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Starting vision system false rejection diagnostic procedure.",
+      "edge_label_to_next": null,
+      "turn_index": 0,
+      "ground_truth": {
+        "node_id": "box_0",
+        "node_type": "terminator",
+        "node_text": "Start"
+      }
+    },
+    {
+      "node_id": "box_23",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Has the false rejection rate reached a level that indicates a vision system failure, where genuine conforming parts are being systematically rejected and production viability is compromised?",
+      "edge_label_to_next": null,
+      "turn_index": 1,
+      "ground_truth": {
+        "node_id": "box_23",
+        "node_type": "decision",
+        "node_text": "Has the false rejection rate reached a level that indicates a vision system failure, where genuine conforming parts are being systematically rejected and production viability is compromised?"
+      }
+    },
+    {
+      "node_id": "box_23",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "rejection rate is elevated but we're still able to maintian production looks like a standard fault situation",
+      "edge_label_to_next": "Standard fault, continue diagnosis",
+      "turn_index": 2,
+      "ground_truth": {
+        "node_id": "box_23",
+        "node_type": "decision",
+        "node_text": "Has the false rejection rate reached a level that indicates a vision system failure, where genuine conforming parts are being systematically rejected and production viability is compromised?"
+      }
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Record the false rejection rate over the last 100 parts and note the rejection type, whether it's orientation, marking, or presence. Then compare this with the baseline false rejection rate from the last successful calibration.",
+      "edge_label_to_next": null,
+      "turn_index": 3,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Record the false rejection rate over the last 100 parts and the rejection type (orientation, marking, presence). Compare with the baseline false rejection rate from the last successful calibration."
+      }
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "ok so recorded the data false rejection rate is 8.5% over last 100 parts compared to baseline of 1.2%, rejections are mixed across all three types",
+      "edge_label_to_next": "",
+      "turn_index": 4,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Record the false rejection rate over the last 100 parts and the rejection type (orientation, marking, presence). Compare with the baseline false rejection rate from the last successful calibration."
+      }
+    },
+    {
+      "node_id": "box_3",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Access the vision rejection log and sort it by inspection module. Identify which module is producing the highest proportion of false rejects and check whether the rejections correlate with a specific part feature.",
+      "edge_label_to_next": null,
+      "turn_index": 5,
+      "ground_truth": {
+        "node_id": "box_3",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Access the vision rejection log and sort by inspection module. 2. Identify which module produces the highest proportion of false rejects. 3. Check whether the rejections correlate with a specific part feature."
+      }
+    },
+    {
+      "node_id": "box_3",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "analyzed the log false rejects are distributed across multipel modules with no single dominant source, no clear correlation with any specific part feature",
+      "edge_label_to_next": null,
+      "turn_index": 6,
+      "ground_truth": {
+        "node_id": "box_3",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Access the vision rejection log and sort by inspection module. 2. Identify which module produces the highest proportion of false rejects. 3. Check whether the rejections correlate with a specific part feature."
+      }
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the false rejection limited to one inspection type, for example only orientation rejections or only marking rejections?",
+      "edge_label_to_next": null,
+      "turn_index": 7,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Is the false rejection limited to one inspection type (e.g. only orientation rejections or only marking rejections)?"
+      }
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no the false rejections are spread across multiple inspection types not isolated to just one category",
+      "edge_label_to_next": "No",
+      "turn_index": 8,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Is the false rejection limited to one inspection type (e.g. only orientation rejections or only marking rejections)?"
+      }
+    },
+    {
+      "node_id": "box_4",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the calibration target in good condition with no surface scratches, discolouration, or contamination?",
+      "edge_label_to_next": null,
+      "turn_index": 9,
+      "ground_truth": {
+        "node_id": "box_4",
+        "node_type": "decision",
+        "node_text": "Is the calibration target in good condition (no surface scratches, discolouration, or contamination)?"
+      }
+    },
+    {
+      "node_id": "box_4",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "calibration target has visible contamination and some surface scratchs definitely not in good condition",
+      "edge_label_to_next": "No",
+      "turn_index": 10,
+      "ground_truth": {
+        "node_id": "box_4",
+        "node_type": "decision",
+        "node_text": "Is the calibration target in good condition (no surface scratches, discolouration, or contamination)?"
+      }
+    },
+    {
+      "node_id": "box_6",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Clean the calibration target with an approved optical cleaning cloth. If the target is scratched or faded beyond the acceptable condition limit, replace it.",
+      "edge_label_to_next": null,
+      "turn_index": 11,
+      "ground_truth": {
+        "node_id": "box_6",
+        "node_type": "process",
+        "node_text": "Clean the calibration target with an approved optical cleaning cloth. If the target is scratched or faded beyond the acceptable condition limit, replace it."
+      }
+    },
+    {
+      "node_id": "box_6",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "yeah cleaned the calibration target thoroughly scratches are within acceptable limits so no replacement needed",
+      "edge_label_to_next": "",
+      "turn_index": 12,
+      "ground_truth": {
+        "node_id": "box_6",
+        "node_type": "process",
+        "node_text": "Clean the calibration target with an approved optical cleaning cloth. If the target is scratched or faded beyond the acceptable condition limit, replace it."
+      }
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Inspect the camera lens for dust, oil, or condensation. Also verify that the lens protective cover is intact.",
+      "edge_label_to_next": null,
+      "turn_index": 13,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "process",
+        "node_text": "Inspect the camera lens for dust, oil, or condensation. Verify that the lens protective cover is intact."
+      }
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "inspected the lens some dust buildup and light oil residue present protective cover is intact",
+      "edge_label_to_next": null,
+      "turn_index": 14,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "process",
+        "node_text": "Inspect the camera lens for dust, oil, or condensation. Verify that the lens protective cover is intact."
+      }
+    },
+    {
+      "node_id": "box_7",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the camera lens clean and free of contamination?",
+      "edge_label_to_next": null,
+      "turn_index": 15,
+      "ground_truth": {
+        "node_id": "box_7",
+        "node_type": "decision",
+        "node_text": "Is the camera lens clean and free of contamination?"
+      }
+    },
+    {
+      "node_id": "box_7",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no lens has contamination that needs to be adressed",
+      "edge_label_to_next": "No",
+      "turn_index": 16,
+      "ground_truth": {
+        "node_id": "box_7",
+        "node_type": "decision",
+        "node_text": "Is the camera lens clean and free of contamination?"
+      }
+    },
+    {
+      "node_id": "box_9",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Clean the camera lens with an approved optical cloth and lens cleaner. Then rerun ten test inspections with known good reference parts and measure the false rejection rate.",
+      "edge_label_to_next": null,
+      "turn_index": 17,
+      "ground_truth": {
+        "node_id": "box_9",
+        "node_type": "process",
+        "node_text": "Clean the camera lens with an approved optical cloth and lens cleaner. rerun ten test inspections with known good reference parts and measure the false rejection rate."
+      }
+    },
+    {
+      "node_id": "box_9",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "lens is cleaned completed the ten test inspections false rejection rate is now at 3.8%",
+      "edge_label_to_next": "",
+      "turn_index": 18,
+      "ground_truth": {
+        "node_id": "box_9",
+        "node_type": "process",
+        "node_text": "Clean the camera lens with an approved optical cloth and lens cleaner. rerun ten test inspections with known good reference parts and measure the false rejection rate."
+      }
+    },
+    {
+      "node_id": "box_11",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Check the inspection station lighting shielding for gaps. Measure the background illumination level at the camera field using a lux meter and compare it against the maximum ambient specification.",
+      "edge_label_to_next": null,
+      "turn_index": 19,
+      "ground_truth": {
+        "node_id": "box_11",
+        "node_type": "process",
+        "node_text": "Check the inspection station lighting shielding for gaps. Measure the background illumination level at the camera field using a lux meter and compare against the maximum ambient specification."
+      }
+    },
+    {
+      "node_id": "box_11",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "checked the shielding and measured the illumination lighting is stable and within spec limits",
+      "edge_label_to_next": null,
+      "turn_index": 20,
+      "ground_truth": {
+        "node_id": "box_11",
+        "node_type": "process",
+        "node_text": "Check the inspection station lighting shielding for gaps. Measure the background illumination level at the camera field using a lux meter and compare against the maximum ambient specification."
+      }
+    },
+    {
+      "node_id": "box_10",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the ambient lighting at the inspection station stable and within the specification range?",
+      "edge_label_to_next": null,
+      "turn_index": 21,
+      "ground_truth": {
+        "node_id": "box_10",
+        "node_type": "decision",
+        "node_text": "Is the ambient lighting at the inspection station stable and within the specification range?"
+      }
+    },
+    {
+      "node_id": "box_10",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yes ambient lighting is stable and well within the acceptable range",
+      "edge_label_to_next": "Yes",
+      "turn_index": 22,
+      "ground_truth": {
+        "node_id": "box_10",
+        "node_type": "decision",
+        "node_text": "Is the ambient lighting at the inspection station stable and within the specification range?"
+      }
+    },
+    {
+      "node_id": "box_13",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the camera securely mounted with no detectable vibration induced movement?",
+      "edge_label_to_next": null,
+      "turn_index": 23,
+      "ground_truth": {
+        "node_id": "box_13",
+        "node_type": "decision",
+        "node_text": "Is the camera securely mounted with no detectable vibration induced movement?"
+      }
+    },
+    {
+      "node_id": "box_13",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yeah camera mount is secure dont detect any vibration during operation",
+      "edge_label_to_next": "Yes",
+      "turn_index": 24,
+      "ground_truth": {
+        "node_id": "box_13",
+        "node_type": "decision",
+        "node_text": "Is the camera securely mounted with no detectable vibration induced movement?"
+      }
+    },
+    {
+      "node_id": "box_16",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Has the false rejection rate returned to within the acceptable baseline threshold after corrections?",
+      "edge_label_to_next": null,
+      "turn_index": 25,
+      "ground_truth": {
+        "node_id": "box_16",
+        "node_type": "decision",
+        "node_text": "Has the false rejection rate returned to within the acceptable baseline threshold after corrections?"
+      }
+    },
+    {
+      "node_id": "box_16",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yes false rejection rate is now at 1.4% which is within the acceptable baseline threshhold",
+      "edge_label_to_next": "Yes",
+      "turn_index": 26,
+      "ground_truth": {
+        "node_id": "box_16",
+        "node_type": "decision",
+        "node_text": "Has the false rejection rate returned to within the acceptable baseline threshold after corrections?"
+      }
+    },
+    {
+      "node_id": "box_21",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Record the recalibration date, corrective actions, and final false rejection rate in the quality log. Then notify the quality assurance team.",
+      "edge_label_to_next": null,
+      "turn_index": 27,
+      "ground_truth": {
+        "node_id": "box_21",
+        "node_type": "process",
+        "node_text": "Record the recalibration date, corrective actions, and final false rejection rate in the quality log. Notify quality assurance team."
+      }
+    },
+    {
+      "node_id": "box_21",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "all information has been loged and the quality assurance team has been notified",
+      "edge_label_to_next": null,
+      "turn_index": 28,
+      "ground_truth": {
+        "node_id": "box_21",
+        "node_type": "process",
+        "node_text": "Record the recalibration date, corrective actions, and final false rejection rate in the quality log. Notify quality assurance team."
+      }
+    },
+    {
+      "node_id": "box_22",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Vision system diagnostic complete. The false rejection rate has been corrected. Resume production operations.",
+      "edge_label_to_next": null,
+      "turn_index": 29,
+      "ground_truth": {
+        "node_id": "box_22",
+        "node_type": "terminator",
+        "node_text": "End, resume production."
+      }
+    },
+    {
+      "node_id": "box_22",
+      "node_type": "terminator",
+      "speaker": "operator",
+      "utterance": "understood resuming production now",
+      "edge_label_to_next": null,
+      "turn_index": 30,
+      "ground_truth": {
+        "node_id": "box_22",
+        "node_type": "terminator",
+        "node_text": "End, resume production."
+      }
+    }
+  ],
+  "metadata": {
+    "depth": 16,
+    "num_decisions": 7,
+    "num_processes": 7,
+    "num_documents": 0,
+    "terminator_type": "procedure_complete",
+    "terminator_text": "End, resume production.",
+    "true_terminator": true,
+    "node_sequence": [
+      "box_0",
+      "box_23",
+      "box_1",
+      "box_3",
+      "box_2",
+      "box_4",
+      "box_6",
+      "box_8",
+      "box_7",
+      "box_9",
+      "box_11",
+      "box_10",
+      "box_13",
+      "box_16",
+      "box_21",
+      "box_22"
+    ],
+    "edge_labels": [
+      null,
+      null,
+      "Standard fault, continue diagnosis",
+      "",
+      null,
+      "No",
+      "No",
+      "",
+      null,
+      "No",
+      "",
+      null,
+      "Yes",
+      "Yes",
+      "Yes",
+      null
+    ],
+    "decision_points": [
+      {
+        "node": "box_23",
+        "label": "Standard fault, continue diagnosis",
+        "question": "Has the false rejection rate reached a level that indicates a vision system failure, where genuine conforming parts are being systematically rejected and production viability is compromised?"
+      },
+      {
+        "node": "box_2",
+        "label": "No",
+        "question": "Is the false rejection limited to one inspection type (e.g. only orientation rejections or only marking rejections)?"
+      },
+      {
+        "node": "box_4",
+        "label": "No",
+        "question": "Is the calibration target in good condition (no surface scratches, discolouration, or contamination)?"
+      },
+      {
+        "node": "box_7",
+        "label": "No",
+        "question": "Is the camera lens clean and free of contamination?"
+      },
+      {
+        "node": "box_10",
+        "label": "Yes",
+        "question": "Is the ambient lighting at the inspection station stable and within the specification range?"
+      },
+      {
+        "node": "box_13",
+        "label": "Yes",
+        "question": "Is the camera securely mounted with no detectable vibration induced movement?"
+      },
+      {
+        "node": "box_16",
+        "label": "Yes",
+        "question": "Has the false rejection rate returned to within the acceptable baseline threshold after corrections?"
+      }
+    ],
+    "generation_model": "anthropic/claude-sonnet-4-5",
+    "verification": {
+      "variant_of": "base",
+      "base_verified": true,
+      "note": "surface-form variant; not independently verified"
+    }
+  }
+}

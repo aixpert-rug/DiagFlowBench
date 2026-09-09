@@ -1,0 +1,68 @@
+{
+  "id": "GRAPH02",
+  "description": "Diagnostic procedure for investigating positional deviation in a marking pattern applied to assembled parts.",
+  "graph": {
+    "nodes": {
+      "box_0": {
+        "type": "terminator",
+        "text": "Start"
+      },
+      "box_1": {
+        "type": "process",
+        "text": "Record the positional deviation in X and Y direction on the inspection record."
+      },
+      "box_2": {
+        "type": "process",
+        "text": "Adjust the X/Y offset of the marking head to correct the recorded positional deviation, following the positional deviation correction procedure."
+      },
+      "box_3": {
+        "type": "document",
+        "text": "Positional deviation correction procedure"
+      },
+      "box_4": {
+        "type": "process",
+        "text": "Clean the fume extraction unit."
+      },
+      "box_5": {
+        "type": "document",
+        "text": "Fume extraction cleaning procedure"
+      },
+      "box_6": {
+        "type": "terminator",
+        "text": "End, Notify maintenance team"
+      }
+    },
+    "edges": [
+      {
+        "source": "box_0",
+        "target": "box_1",
+        "label": null
+      },
+      {
+        "source": "box_1",
+        "target": "box_2",
+        "label": null
+      },
+      {
+        "source": "box_3",
+        "target": "box_2",
+        "label": null
+      },
+      {
+        "source": "box_2",
+        "target": "box_4",
+        "label": null
+      },
+      {
+        "source": "box_5",
+        "target": "box_4",
+        "label": null
+      },
+      {
+        "source": "box_4",
+        "target": "box_6",
+        "label": null
+      }
+    ]
+  }
+}

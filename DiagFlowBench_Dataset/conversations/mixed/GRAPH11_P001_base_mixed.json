@@ -1,0 +1,1290 @@
+{
+  "conversation_id": "GRAPH11_P001_base_mixed",
+  "graph_id": "GRAPH11",
+  "path_id": "GRAPH11_P001",
+  "regime": "mixed",
+  "variant": "base",
+  "robustness_axis": null,
+  "turns": [
+    {
+      "node_id": "box_0",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Starting pressing station diagnostic procedure.",
+      "edge_label_to_next": null,
+      "turn_index": 0,
+      "ground_truth": {
+        "node_id": "box_0",
+        "node_type": "terminator",
+        "node_text": "Start"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Does the input material meet quality specification?",
+      "edge_label_to_next": null,
+      "turn_index": 1,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "decision",
+        "node_text": "Does the input material meet quality specification?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, I've checked the input material and it meets the quality spec.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 2,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "decision",
+        "node_text": "Does the input material meet quality specification?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_4",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the indexing table correctly positioned?",
+      "edge_label_to_next": null,
+      "turn_index": 3,
+      "ground_truth": {
+        "node_id": "box_4",
+        "node_type": "decision",
+        "node_text": "Is the indexing table correctly positioned?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_4",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "The indexing table is correctly positioned relative to the part mounting inserts.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 4,
+      "ground_truth": {
+        "node_id": "box_4",
+        "node_type": "decision",
+        "node_text": "Is the indexing table correctly positioned?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_7",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the part correctly placed on the insert?",
+      "edge_label_to_next": null,
+      "turn_index": 5,
+      "ground_truth": {
+        "node_id": "box_7",
+        "node_type": "decision",
+        "node_text": "Is the part correctly placed on the insert?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_7",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, the part is properly seated in the insert with no looseness or tilt.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 6,
+      "ground_truth": {
+        "node_id": "box_7",
+        "node_type": "decision",
+        "node_text": "Is the part correctly placed on the insert?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_10",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is part mounting correct?",
+      "edge_label_to_next": null,
+      "turn_index": 7,
+      "ground_truth": {
+        "node_id": "box_10",
+        "node_type": "decision",
+        "node_text": "Is part mounting correct?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_10",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "The mounting looks fine, but I'm seeing hydraulic fluid leaking from the actuator seal that connects to this part.",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "undocumented_malfunction",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_10",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "The part is mounted straight and at the correct height on the fixture.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 8,
+      "ground_truth": {
+        "node_id": "box_10",
+        "node_type": "decision",
+        "node_text": "Is part mounting correct?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_13",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the vacuum detection tilted part control functioning correctly?",
+      "edge_label_to_next": null,
+      "turn_index": 9,
+      "ground_truth": {
+        "node_id": "box_13",
+        "node_type": "decision",
+        "node_text": "Is the vacuum detection \"tilted part control\" functioning correctly?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_13",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, the vacuum is holding the part securely with adequate suction force.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 10,
+      "ground_truth": {
+        "node_id": "box_13",
+        "node_type": "decision",
+        "node_text": "Is the vacuum detection \"tilted part control\" functioning correctly?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_16",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Are the correct end stops mounted?",
+      "edge_label_to_next": null,
+      "turn_index": 11,
+      "ground_truth": {
+        "node_id": "box_16",
+        "node_type": "decision",
+        "node_text": "Are the correct end stops mounted?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_16",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "The end stops match the required configuration for this product type.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 12,
+      "ground_truth": {
+        "node_id": "box_16",
+        "node_type": "decision",
+        "node_text": "Are the correct end stops mounted?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_19",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Are the linear guides clean and greased?",
+      "edge_label_to_next": null,
+      "turn_index": 13,
+      "ground_truth": {
+        "node_id": "box_19",
+        "node_type": "decision",
+        "node_text": "Are the linear guides clean and greased?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_19",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, the linear guides are clean and lightly greased per manufacturer specs.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 14,
+      "ground_truth": {
+        "node_id": "box_19",
+        "node_type": "decision",
+        "node_text": "Are the linear guides clean and greased?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_22",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Are the sensors of the actuators functioning?",
+      "edge_label_to_next": null,
+      "turn_index": 15,
+      "ground_truth": {
+        "node_id": "box_22",
+        "node_type": "decision",
+        "node_text": "Are the sensors of the actuators functioning?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_22",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "The sensors illuminate at end position and the controller inputs show no cable breaks.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 16,
+      "ground_truth": {
+        "node_id": "box_22",
+        "node_type": "decision",
+        "node_text": "Are the sensors of the actuators functioning?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_25",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Do the pressing heads meet the drawing?",
+      "edge_label_to_next": null,
+      "turn_index": 17,
+      "ground_truth": {
+        "node_id": "box_25",
+        "node_type": "decision",
+        "node_text": "Do the pressing heads meet the drawing?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_25",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, the pressing heads show no excessive wear and are within drawing tolerances.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 18,
+      "ground_truth": {
+        "node_id": "box_25",
+        "node_type": "decision",
+        "node_text": "Do the pressing heads meet the drawing?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_28",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is there play in the linear bearing?",
+      "edge_label_to_next": null,
+      "turn_index": 19,
+      "ground_truth": {
+        "node_id": "box_28",
+        "node_type": "decision",
+        "node_text": "Is there play in the linear bearing?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_28",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "I checked the lateral play in the unloaded state and it's within acceptable limits.",
+      "edge_label_to_next": "No",
+      "turn_index": 20,
+      "ground_truth": {
+        "node_id": "box_28",
+        "node_type": "decision",
+        "node_text": "Is there play in the linear bearing?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_31",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the actuator leaking?",
+      "edge_label_to_next": null,
+      "turn_index": 21,
+      "ground_truth": {
+        "node_id": "box_31",
+        "node_type": "decision",
+        "node_text": "Is the actuator leaking?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_31",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "No air leakage detected in either position of the actuators.",
+      "edge_label_to_next": "No",
+      "turn_index": 22,
+      "ground_truth": {
+        "node_id": "box_31",
+        "node_type": "decision",
+        "node_text": "Is the actuator leaking?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_34",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the actuator securely fastened?",
+      "edge_label_to_next": null,
+      "turn_index": 23,
+      "ground_truth": {
+        "node_id": "box_34",
+        "node_type": "decision",
+        "node_text": "Is the actuator securely fastened?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_34",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, the actuator is securely fastened with no looseness.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 24,
+      "ground_truth": {
+        "node_id": "box_34",
+        "node_type": "decision",
+        "node_text": "Is the actuator securely fastened?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_37",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Actuator speed downward correct?",
+      "edge_label_to_next": null,
+      "turn_index": 25,
+      "ground_truth": {
+        "node_id": "box_37",
+        "node_type": "decision",
+        "node_text": "Actuator speed downward correct?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_37",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "The downward pressing speed matches the specified value.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 26,
+      "ground_truth": {
+        "node_id": "box_37",
+        "node_type": "decision",
+        "node_text": "Actuator speed downward correct?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_39",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "End position of pressing head relative to vacuum fixture correct?",
+      "edge_label_to_next": null,
+      "turn_index": 27,
+      "ground_truth": {
+        "node_id": "box_39",
+        "node_type": "decision",
+        "node_text": "End position of pressing head relative to vacuum fixture correct?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_39",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, the pressing head lower position is correct relative to the vacuum fixture.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 28,
+      "ground_truth": {
+        "node_id": "box_39",
+        "node_type": "decision",
+        "node_text": "End position of pressing head relative to vacuum fixture correct?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_41",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Pressing time according to spec?",
+      "edge_label_to_next": null,
+      "turn_index": 29,
+      "ground_truth": {
+        "node_id": "box_41",
+        "node_type": "decision",
+        "node_text": "Pressing time according to spec?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_41",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "The pressing duration matches the specification.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 30,
+      "ground_truth": {
+        "node_id": "box_41",
+        "node_type": "decision",
+        "node_text": "Pressing time according to spec?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_43",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Set air pressure according to norm?",
+      "edge_label_to_next": null,
+      "turn_index": 31,
+      "ground_truth": {
+        "node_id": "box_43",
+        "node_type": "decision",
+        "node_text": "Set air pressure according to norm?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_43",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, the air pressure is set to the specified operating pressure.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 32,
+      "ground_truth": {
+        "node_id": "box_43",
+        "node_type": "decision",
+        "node_text": "Set air pressure according to norm?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_45",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the XY position of the pressing head relative to the part lifter correct?",
+      "edge_label_to_next": null,
+      "turn_index": 33,
+      "ground_truth": {
+        "node_id": "box_45",
+        "node_type": "decision",
+        "node_text": "Is the XY position of the pressing head relative to the part lifter correct?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_45",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, the XY alignment looks correct.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 34,
+      "ground_truth": {
+        "node_id": "box_45",
+        "node_type": "decision",
+        "node_text": "Is the XY position of the pressing head relative to the part lifter correct?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_47",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the vertical and horizontal parallelism of the pressing head relative to the fixture correct?",
+      "edge_label_to_next": null,
+      "turn_index": 35,
+      "ground_truth": {
+        "node_id": "box_47",
+        "node_type": "decision",
+        "node_text": "Is the vertical and horizontal parallelism of the pressing head relative to the fixture correct?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_47",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Hey, before we continue, do you know where I can find the updated lockout-tagout procedures for this press? I need to verify I'm following the latest safety protocol.",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "unrelated_question",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_47",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, the parallelism is within tolerance both vertically and horizontally.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 36,
+      "ground_truth": {
+        "node_id": "box_47",
+        "node_type": "decision",
+        "node_text": "Is the vertical and horizontal parallelism of the pressing head relative to the fixture correct?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_49",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Part height OK?",
+      "edge_label_to_next": null,
+      "turn_index": 37,
+      "ground_truth": {
+        "node_id": "box_49",
+        "node_type": "decision",
+        "node_text": "Part height OK?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_49",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "The height looks fine, but I'm noticing the part has a weird tilt to it, like it's not sitting level on the base plate.",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "coverage_gap",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_49",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, the measured part height is within specification.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 38,
+      "ground_truth": {
+        "node_id": "box_49",
+        "node_type": "decision",
+        "node_text": "Part height OK?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_52",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Height measurement correct?",
+      "edge_label_to_next": null,
+      "turn_index": 39,
+      "ground_truth": {
+        "node_id": "box_52",
+        "node_type": "decision",
+        "node_text": "Height measurement correct?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_52",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, all pressing parameters are within spec and I'm ready to verify force measurement.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 40,
+      "ground_truth": {
+        "node_id": "box_52",
+        "node_type": "decision",
+        "node_text": "Height measurement correct?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_55",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Force measurement correct?",
+      "edge_label_to_next": null,
+      "turn_index": 41,
+      "ground_truth": {
+        "node_id": "box_55",
+        "node_type": "decision",
+        "node_text": "Force measurement correct?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_55",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "The force reading is outside the acceptable range.",
+      "edge_label_to_next": "No",
+      "turn_index": 42,
+      "ground_truth": {
+        "node_id": "box_55",
+        "node_type": "decision",
+        "node_text": "Force measurement correct?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_57",
+      "node_type": "document",
+      "speaker": "system",
+      "utterance": "Please consult the force sensor calibration procedure at pressing station.",
+      "edge_label_to_next": null,
+      "turn_index": 43,
+      "ground_truth": {
+        "node_id": "box_57",
+        "node_type": "document",
+        "node_text": "Force sensor calibration procedure at pressing station"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_57",
+      "node_type": "document",
+      "speaker": "operator",
+      "utterance": "I've reviewed the calibration procedure.",
+      "edge_label_to_next": null,
+      "turn_index": 44,
+      "ground_truth": {
+        "node_id": "box_57",
+        "node_type": "document",
+        "node_text": "Force sensor calibration procedure at pressing station"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    }
+  ],
+  "metadata": {
+    "depth": 23,
+    "num_decisions": 21,
+    "num_processes": 0,
+    "num_documents": 1,
+    "terminator_type": "procedure_complete",
+    "terminator_text": "Force sensor calibration procedure at pressing station",
+    "true_terminator": false,
+    "node_sequence": [
+      "box_0",
+      "box_1",
+      "box_4",
+      "box_7",
+      "box_10",
+      "box_13",
+      "box_16",
+      "box_19",
+      "box_22",
+      "box_25",
+      "box_28",
+      "box_31",
+      "box_34",
+      "box_37",
+      "box_39",
+      "box_41",
+      "box_43",
+      "box_45",
+      "box_47",
+      "box_49",
+      "box_52",
+      "box_55",
+      "box_57"
+    ],
+    "edge_labels": [
+      null,
+      null,
+      "Yes",
+      "Yes",
+      "Yes",
+      "Yes",
+      "Yes",
+      "Yes",
+      "Yes",
+      "Yes",
+      "Yes",
+      "No",
+      "No",
+      "Yes",
+      "Yes",
+      "Yes",
+      "Yes",
+      "Yes",
+      "Yes",
+      "Yes",
+      "Yes",
+      "Yes",
+      "No"
+    ],
+    "decision_points": [
+      {
+        "node": "box_1",
+        "label": "Yes",
+        "question": "Does the input material meet quality specification?"
+      },
+      {
+        "node": "box_4",
+        "label": "Yes",
+        "question": "Is the indexing table correctly positioned?"
+      },
+      {
+        "node": "box_7",
+        "label": "Yes",
+        "question": "Is the part correctly placed on the insert?"
+      },
+      {
+        "node": "box_10",
+        "label": "Yes",
+        "question": "Is part mounting correct?"
+      },
+      {
+        "node": "box_13",
+        "label": "Yes",
+        "question": "Is the vacuum detection \"tilted part control\" functioning correctly?"
+      },
+      {
+        "node": "box_16",
+        "label": "Yes",
+        "question": "Are the correct end stops mounted?"
+      },
+      {
+        "node": "box_19",
+        "label": "Yes",
+        "question": "Are the linear guides clean and greased?"
+      },
+      {
+        "node": "box_22",
+        "label": "Yes",
+        "question": "Are the sensors of the actuators functioning?"
+      },
+      {
+        "node": "box_25",
+        "label": "Yes",
+        "question": "Do the pressing heads meet the drawing?"
+      },
+      {
+        "node": "box_28",
+        "label": "No",
+        "question": "Is there play in the linear bearing?"
+      },
+      {
+        "node": "box_31",
+        "label": "No",
+        "question": "Is the actuator leaking?"
+      },
+      {
+        "node": "box_34",
+        "label": "Yes",
+        "question": "Is the actuator securely fastened?"
+      },
+      {
+        "node": "box_37",
+        "label": "Yes",
+        "question": "Actuator speed downward correct?"
+      },
+      {
+        "node": "box_39",
+        "label": "Yes",
+        "question": "End position of pressing head relative to vacuum fixture correct?"
+      },
+      {
+        "node": "box_41",
+        "label": "Yes",
+        "question": "Pressing time according to spec?"
+      },
+      {
+        "node": "box_43",
+        "label": "Yes",
+        "question": "Set air pressure according to norm?"
+      },
+      {
+        "node": "box_45",
+        "label": "Yes",
+        "question": "Is the XY position of the pressing head relative to the part lifter correct?"
+      },
+      {
+        "node": "box_47",
+        "label": "Yes",
+        "question": "Is the vertical and horizontal parallelism of the pressing head relative to the fixture correct?"
+      },
+      {
+        "node": "box_49",
+        "label": "Yes",
+        "question": "Part height OK?"
+      },
+      {
+        "node": "box_52",
+        "label": "Yes",
+        "question": "Height measurement correct?"
+      },
+      {
+        "node": "box_55",
+        "label": "No",
+        "question": "Force measurement correct?"
+      }
+    ],
+    "generation_model": "anthropic/claude-sonnet-4-5",
+    "verification": {
+      "verified": true,
+      "issues": [],
+      "corrected_turns": [
+        {
+          "node_id": "box_0",
+          "node_type": "terminator",
+          "speaker": "system",
+          "utterance": "Starting pressing station diagnostic procedure.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_1",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Does the input material meet quality specification?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_1",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Yes, I've checked the input material and it meets the quality spec.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_4",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is the indexing table correctly positioned?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_4",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "The indexing table is correctly positioned relative to the part mounting inserts.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_7",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is the part correctly placed on the insert?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_7",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Yes, the part is properly seated in the insert with no looseness or tilt.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_10",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is part mounting correct?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_10",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "The part is mounted straight and at the correct height on the fixture.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_13",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is the vacuum detection tilted part control functioning correctly?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_13",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Yes, the vacuum is holding the part securely with adequate suction force.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_16",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Are the correct end stops mounted?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_16",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "The end stops match the required configuration for this product type.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_19",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Are the linear guides clean and greased?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_19",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Yes, the linear guides are clean and lightly greased per manufacturer specs.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_22",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Are the sensors of the actuators functioning?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_22",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "The sensors illuminate at end position and the controller inputs show no cable breaks.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_25",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Do the pressing heads meet the drawing?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_25",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Yes, the pressing heads show no excessive wear and are within drawing tolerances.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_28",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is there play in the linear bearing?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_28",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "I checked the lateral play in the unloaded state and it's within acceptable limits.",
+          "edge_label_to_next": "No"
+        },
+        {
+          "node_id": "box_31",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is the actuator leaking?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_31",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "No air leakage detected in either position of the actuators.",
+          "edge_label_to_next": "No"
+        },
+        {
+          "node_id": "box_34",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is the actuator securely fastened?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_34",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Yes, the actuator is securely fastened with no looseness.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_37",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Actuator speed downward correct?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_37",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "The downward pressing speed matches the specified value.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_39",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "End position of pressing head relative to vacuum fixture correct?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_39",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Yes, the pressing head lower position is correct relative to the vacuum fixture.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_41",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Pressing time according to spec?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_41",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "The pressing duration matches the specification.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_43",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Set air pressure according to norm?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_43",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Yes, the air pressure is set to the specified operating pressure.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_45",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is the XY position of the pressing head relative to the part lifter correct?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_45",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Yes, the XY alignment looks correct.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_47",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is the vertical and horizontal parallelism of the pressing head relative to the fixture correct?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_47",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Yes, the parallelism is within tolerance both vertically and horizontally.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_49",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Part height OK?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_49",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Yes, the measured part height is within specification.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_52",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Height measurement correct?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_52",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Yes, all pressing parameters are within spec and I'm ready to verify force measurement.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_55",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Force measurement correct?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_55",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "The force reading is outside the acceptable range.",
+          "edge_label_to_next": "No"
+        },
+        {
+          "node_id": "box_57",
+          "node_type": "document",
+          "speaker": "system",
+          "utterance": "Please consult the force sensor calibration procedure at pressing station.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_57",
+          "node_type": "document",
+          "speaker": "operator",
+          "utterance": "I've reviewed the calibration procedure.",
+          "edge_label_to_next": null
+        }
+      ]
+    },
+    "injection_count": 3
+  },
+  "injection_log": [
+    {
+      "position": 8,
+      "node_id": "box_10",
+      "node_text": "Is part mounting correct?",
+      "edge_labels": [
+        "No",
+        "Yes"
+      ],
+      "category": "undocumented_malfunction",
+      "utterance": "The mounting looks fine, but I'm seeing hydraulic fluid leaking from the actuator seal that connects to this part.",
+      "injection_rate": null,
+      "num_candidates": null
+    },
+    {
+      "position": 36,
+      "node_id": "box_47",
+      "node_text": "Is the vertical and horizontal parallelism of the pressing head relative to the fixture correct?",
+      "edge_labels": [
+        "No",
+        "Yes"
+      ],
+      "category": "unrelated_question",
+      "utterance": "Hey, before we continue, do you know where I can find the updated lockout-tagout procedures for this press? I need to verify I'm following the latest safety protocol.",
+      "injection_rate": null,
+      "num_candidates": null
+    },
+    {
+      "position": 38,
+      "node_id": "box_49",
+      "node_text": "Part height OK?",
+      "edge_labels": [
+        "No",
+        "Yes"
+      ],
+      "category": "coverage_gap",
+      "utterance": "The height looks fine, but I'm noticing the part has a weird tilt to it, like it's not sitting level on the base plate.",
+      "injection_rate": null,
+      "num_candidates": null
+    }
+  ]
+}

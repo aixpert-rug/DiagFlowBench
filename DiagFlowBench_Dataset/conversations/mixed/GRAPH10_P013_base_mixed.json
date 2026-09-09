@@ -1,0 +1,181 @@
+{
+  "conversation_id": "GRAPH10_P013_base_mixed",
+  "graph_id": "GRAPH10",
+  "path_id": "GRAPH10_P013",
+  "regime": "mixed",
+  "variant": "base",
+  "robustness_axis": null,
+  "turns": [
+    {
+      "node_id": "box_0",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Starting insert placement diagnostic procedure.",
+      "edge_label_to_next": null,
+      "turn_index": 0,
+      "ground_truth": {
+        "node_id": "box_0",
+        "node_type": "terminator",
+        "node_text": "Start"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Does the product meet quality assurance team product specifications?",
+      "edge_label_to_next": null,
+      "turn_index": 1,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "decision",
+        "node_text": "Does the product meet quality assurance team product specifications?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "No, the product does not meet specifications. I can see defects on the parts.",
+      "edge_label_to_next": "No",
+      "turn_index": 2,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "decision",
+        "node_text": "Does the product meet quality assurance team product specifications?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_3",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Remove the non-conforming parts and reload with a product batch that meets quality assurance team specifications.",
+      "edge_label_to_next": null,
+      "turn_index": 3,
+      "ground_truth": {
+        "node_id": "box_3",
+        "node_type": "process",
+        "node_text": "Remove the non conforming parts and reload with a product batch that meets quality assurance team specifications."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_3",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "I've removed the bad parts, but now the hopper feed mechanism is making a grinding noise that wasn't there before—should I continue loading or is something jamming up?",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "coverage_gap",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_3",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "I've removed the non-conforming parts and reloaded with a compliant batch.",
+      "edge_label_to_next": null,
+      "turn_index": 4,
+      "ground_truth": {
+        "node_id": "box_3",
+        "node_type": "process",
+        "node_text": "Remove the non conforming parts and reload with a product batch that meets quality assurance team specifications."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    }
+  ],
+  "metadata": {
+    "depth": 3,
+    "num_decisions": 1,
+    "num_processes": 1,
+    "num_documents": 0,
+    "terminator_type": "procedure_complete",
+    "terminator_text": "Remove the non conforming parts and reload with a product batch that meets quality assurance team specifications.",
+    "true_terminator": false,
+    "node_sequence": [
+      "box_0",
+      "box_1",
+      "box_3"
+    ],
+    "edge_labels": [
+      null,
+      null,
+      "No"
+    ],
+    "decision_points": [
+      {
+        "node": "box_1",
+        "label": "No",
+        "question": "Does the product meet quality assurance team product specifications?"
+      }
+    ],
+    "generation_model": "anthropic/claude-sonnet-4-5",
+    "verification": {
+      "verified": true,
+      "issues": [],
+      "corrected_turns": [
+        {
+          "node_id": "box_0",
+          "node_type": "terminator",
+          "speaker": "system",
+          "utterance": "Starting insert placement diagnostic procedure.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_1",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Does the product meet quality assurance team product specifications?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_1",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "No, the product does not meet specifications. I can see defects on the parts.",
+          "edge_label_to_next": "No"
+        },
+        {
+          "node_id": "box_3",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Remove the non-conforming parts and reload with a product batch that meets quality assurance team specifications.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_3",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "I've removed the non-conforming parts and reloaded with a compliant batch.",
+          "edge_label_to_next": null
+        }
+      ]
+    },
+    "injection_count": 1
+  },
+  "injection_log": [
+    {
+      "position": 4,
+      "node_id": "box_3",
+      "node_text": "Remove the non conforming parts and reload with a product batch that meets quality assurance team specifications.",
+      "edge_labels": [],
+      "category": "coverage_gap",
+      "utterance": "I've removed the bad parts, but now the hopper feed mechanism is making a grinding noise that wasn't there before—should I continue loading or is something jamming up?",
+      "injection_rate": null,
+      "num_candidates": null
+    }
+  ]
+}

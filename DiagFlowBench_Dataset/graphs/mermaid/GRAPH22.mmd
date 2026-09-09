@@ -1,0 +1,82 @@
+flowchart TD
+    box_0(["Start"])
+    box_1["Store a representative sample of at least five<br/>damaged parts for quality assurance team inspection.<br/>Record the damage type, location, and the station at<br/>which damage was first observed."]
+    box_2{"Are the damaged parts also found in the input<br/>product (i.e. damage present before entering the<br/>assembly line)?"}
+    box_3["Continue with a different batch. Create a non<br/>conformance record for the defective input batch and<br/>notify the quality assurance team."]
+    box_4{"Are there parts that have been pushed through the<br/>insert (over pressed parts)?"}
+    box_5["Refer to the corrective action procedure<br/>introduction for examples of over pressed and<br/>correctly pressed parts to aid identification."]
+    box_6[/"Refer to the corrective action procedure: over<br/>pressed part identification guide."/]
+    box_7["Follow the over pressed part corrective procedure:<br/>halt the pressing station, inspect pressing head<br/>alignment and force limit, and quarantine the<br/>affected batch."]
+    box_8{"Is the damage pattern consistent with marking<br/>induced thermal stress?"}
+    box_9["Complete the following checks: 1. Read the current<br/>laser power level from the parameter screen. 2.<br/>Compare against the validated power setting on the<br/>process parameter sheet. 3. Check whether the power<br/>setting was modified since the last good run."]
+    box_10{"Have the damaged parts been measured and approved at<br/>the metrology station?"}
+    box_11["Measure the damaged parts on the metrology station.<br/>Record insertion depth, gap, and any surface<br/>deviation outside specification."]
+    box_12{"Do the metrology station measurements confirm the<br/>parts are within the critical dimensional tolerance<br/>limits?"}
+    box_13["Parts are within dimensional tolerance despite<br/>surface damage. Obtain approval from the quality<br/>assurance manager before releasing or quarantining<br/>the batch."]
+    box_14["Block and quarantine the affected parts. Notify the<br/>maintenance team and quality assurance team with the<br/>metrology data."]
+    box_15["Record all corrective actions taken, the batch<br/>number, and the final disposition of the affected<br/>parts in the quality log."]
+    box_16{"Was production running during the fault period, are<br/>there additional parts to trace?"}
+    box_17["Extract all part serial numbers produced during the<br/>fault window from the production tracking system<br/>traceability log."]
+    box_18[/"Refer to the production tracking system traceability<br/>extraction procedure."/]
+    box_19["Issue hold notice for all parts from the fault<br/>window pending quality assurance disposition review."]
+    box_20{"Quality assurance team has acknowledged the hold<br/>notice and confirmed disposition plan?"}
+    box_21(["End, Escalate: quality assurance disposition<br/>overdue, escalate to quality assurance manager"])
+    box_22(["End, Hold confirmed. quality assurance disposition<br/>in progress. Procedure complete."])
+
+    box_0 --> box_1
+    box_1 --> box_2
+    box_2 -->|"Yes"| box_3
+    box_2 -->|"No"| box_4
+    box_5 --> box_4
+    box_6 --> box_4
+    box_4 -->|"Yes"| box_7
+    box_4 -->|"No"| box_8
+    box_9 --> box_8
+    box_8 -->|"Yes"| box_9
+    box_8 -->|"No"| box_10
+    box_11 --> box_10
+    box_10 -->|"Yes"| box_12
+    box_10 -->|"No"| box_14
+    box_12 -->|"Yes"| box_13
+    box_12 -->|"No"| box_14
+    box_3 --> box_15
+    box_7 --> box_15
+    box_13 --> box_15
+    box_14 --> box_15
+    box_15 --> box_16
+    box_16 -->|"Yes"| box_17
+    box_16 -->|"No"| box_20
+    box_17 --> box_19
+    box_18 --> box_17
+    box_19 --> box_20
+    box_20 -->|"No"| box_21
+    box_20 -->|"Yes"| box_22
+
+    class box_0 terminator
+    class box_1 process
+    class box_2 decision
+    class box_3 process
+    class box_4 decision
+    class box_5 process
+    class box_6 document
+    class box_7 process
+    class box_8 decision
+    class box_9 process
+    class box_10 decision
+    class box_11 process
+    class box_12 decision
+    class box_13 process
+    class box_14 process
+    class box_15 process
+    class box_16 decision
+    class box_17 process
+    class box_18 document
+    class box_19 process
+    class box_20 decision
+    class box_21 terminator
+    class box_22 terminator
+
+    classDef terminator fill:#2d4a6e,stroke:#1a3050,color:#ffffff,font-weight:bold
+    classDef process    fill:#f0f4ff,stroke:#4a6fa5,color:#1a1a2e
+    classDef decision   fill:#fff8e6,stroke:#c8922a,color:#1a1a2e
+    classDef document   fill:#f0fff4,stroke:#3a8a4a,color:#1a1a2e

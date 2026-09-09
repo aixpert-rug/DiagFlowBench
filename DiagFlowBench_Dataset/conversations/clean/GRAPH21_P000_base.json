@@ -1,0 +1,588 @@
+{
+  "conversation_id": "GRAPH21_P000_base",
+  "graph_id": "GRAPH21",
+  "path_id": "GRAPH21_P000",
+  "regime": "clean",
+  "variant": "base",
+  "robustness_axis": null,
+  "turns": [
+    {
+      "node_id": "box_0",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Starting insert damage diagnostic procedure.",
+      "edge_label_to_next": null,
+      "turn_index": 0,
+      "ground_truth": {
+        "node_id": "box_0",
+        "node_type": "terminator",
+        "node_text": "Start"
+      }
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Please collect and visually inspect a sample of at least ten damaged inserts. Classify each by damage type—surface scratch, deformation, or crack—and note the location on each insert.",
+      "edge_label_to_next": null,
+      "turn_index": 1,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Collect and visually inspect a sample of at least ten damaged inserts. Classify each by damage type (surface scratch, deformation, crack) and location on the insert."
+      }
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "I've collected and inspected ten damaged inserts. I've classified each one by damage type and documented the location on the insert.",
+      "edge_label_to_next": null,
+      "turn_index": 2,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Collect and visually inspect a sample of at least ten damaged inserts. Classify each by damage type (surface scratch, deformation, crack) and location on the insert."
+      }
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the insert damage consistent with incoming material defects present before assembly?",
+      "edge_label_to_next": null,
+      "turn_index": 3,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Is the insert damage consistent with incoming material defects present before assembly?"
+      }
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "No, the damage doesn't match what we'd see from incoming material defects. This appears to be happening during our process.",
+      "edge_label_to_next": "No",
+      "turn_index": 4,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Is the insert damage consistent with incoming material defects present before assembly?"
+      }
+    },
+    {
+      "node_id": "box_4",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Does the damage appear only on inserts processed through one supply conveyor?",
+      "edge_label_to_next": null,
+      "turn_index": 5,
+      "ground_truth": {
+        "node_id": "box_4",
+        "node_type": "decision",
+        "node_text": "Does the damage appear only on inserts processed through one supply conveyor?"
+      }
+    },
+    {
+      "node_id": "box_4",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "No, I'm seeing damage on inserts from both conveyors. It's not isolated to a single supply line.",
+      "edge_label_to_next": "No",
+      "turn_index": 6,
+      "ground_truth": {
+        "node_id": "box_4",
+        "node_type": "decision",
+        "node_text": "Does the damage appear only on inserts processed through one supply conveyor?"
+      }
+    },
+    {
+      "node_id": "box_7",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Does the damage pattern indicate over pressing or mechanical impact at the assembly pressing station?",
+      "edge_label_to_next": null,
+      "turn_index": 7,
+      "ground_truth": {
+        "node_id": "box_7",
+        "node_type": "decision",
+        "node_text": "Does the damage pattern indicate over pressing or mechanical impact at the assembly pressing station?"
+      }
+    },
+    {
+      "node_id": "box_7",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "No, the damage pattern doesn't look like pressing marks or impact from the assembly station. It's something else.",
+      "edge_label_to_next": "No",
+      "turn_index": 8,
+      "ground_truth": {
+        "node_id": "box_7",
+        "node_type": "decision",
+        "node_text": "Does the damage pattern indicate over pressing or mechanical impact at the assembly pressing station?"
+      }
+    },
+    {
+      "node_id": "box_10",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the damage occurring at or after the reorientation unit?",
+      "edge_label_to_next": null,
+      "turn_index": 9,
+      "ground_truth": {
+        "node_id": "box_10",
+        "node_type": "decision",
+        "node_text": "Is the damage occurring at or after the reorientation unit?"
+      }
+    },
+    {
+      "node_id": "box_10",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "No, the inserts coming out of the reorientation unit look fine. The damage is happening downstream from there.",
+      "edge_label_to_next": "No",
+      "turn_index": 10,
+      "ground_truth": {
+        "node_id": "box_10",
+        "node_type": "decision",
+        "node_text": "Is the damage occurring at or after the reorientation unit?"
+      }
+    },
+    {
+      "node_id": "box_13",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Inspect the discharge robot gripper and the output holder rack slot guides for deformations or debris. Adjust or replace damaged gripper inserts as needed.",
+      "edge_label_to_next": null,
+      "turn_index": 11,
+      "ground_truth": {
+        "node_id": "box_13",
+        "node_type": "process",
+        "node_text": "Inspect the discharge robot gripper and the output holder rack slot guides for deformations or debris. Adjust or replace damaged gripper inserts."
+      }
+    },
+    {
+      "node_id": "box_13",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "I found debris in the output holder rack slots and some worn gripper inserts. I've cleaned the slots and replaced the damaged gripper inserts.",
+      "edge_label_to_next": null,
+      "turn_index": 12,
+      "ground_truth": {
+        "node_id": "box_13",
+        "node_type": "process",
+        "node_text": "Inspect the discharge robot gripper and the output holder rack slot guides for deformations or debris. Adjust or replace damaged gripper inserts."
+      }
+    },
+    {
+      "node_id": "box_14",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Run ten slow speed test cycles and inspect inserts after each station to verify the root cause has been eliminated.",
+      "edge_label_to_next": null,
+      "turn_index": 13,
+      "ground_truth": {
+        "node_id": "box_14",
+        "node_type": "process",
+        "node_text": "Run ten slow speed test cycles and inspect inserts after each station to verify the root cause has been eliminated."
+      }
+    },
+    {
+      "node_id": "box_14",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "I've completed ten slow speed test cycles and inspected inserts at each station. The damage is no longer occurring.",
+      "edge_label_to_next": null,
+      "turn_index": 14,
+      "ground_truth": {
+        "node_id": "box_14",
+        "node_type": "process",
+        "node_text": "Run ten slow speed test cycles and inspect inserts after each station to verify the root cause has been eliminated."
+      }
+    },
+    {
+      "node_id": "box_15",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Has the root cause of the insert damage been confirmed and the corrective action verified effective?",
+      "edge_label_to_next": null,
+      "turn_index": 15,
+      "ground_truth": {
+        "node_id": "box_15",
+        "node_type": "decision",
+        "node_text": "Has the root cause of the insert damage been confirmed and the corrective action verified effective?"
+      }
+    },
+    {
+      "node_id": "box_15",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, I've confirmed the root cause was the debris and worn grippers at the discharge station, and the corrective action has eliminated the problem.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 16,
+      "ground_truth": {
+        "node_id": "box_15",
+        "node_type": "decision",
+        "node_text": "Has the root cause of the insert damage been confirmed and the corrective action verified effective?"
+      }
+    },
+    {
+      "node_id": "box_16",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Record the root cause, corrective action, and affected batch numbers in the quality log. Notify the quality assurance team and restart production.",
+      "edge_label_to_next": null,
+      "turn_index": 17,
+      "ground_truth": {
+        "node_id": "box_16",
+        "node_type": "process",
+        "node_text": "Record the root cause, corrective action, and affected batch numbers in the quality log. Notify quality assurance team and restart production."
+      }
+    },
+    {
+      "node_id": "box_16",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "I've logged the root cause and corrective action with the affected batch numbers, and I've notified quality assurance. Ready to restart production.",
+      "edge_label_to_next": null,
+      "turn_index": 18,
+      "ground_truth": {
+        "node_id": "box_16",
+        "node_type": "process",
+        "node_text": "Record the root cause, corrective action, and affected batch numbers in the quality log. Notify quality assurance team and restart production."
+      }
+    },
+    {
+      "node_id": "box_18",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Access the production tracking system and filter by current work order. Set the time window from the last confirmed good inspection to now, then export the serial numbers of all inserts processed during the fault window.",
+      "edge_label_to_next": null,
+      "turn_index": 19,
+      "ground_truth": {
+        "node_id": "box_18",
+        "node_type": "process",
+        "node_text": "Complete the following steps: 1. Access the production tracking system and filter by current work order. 2. Set the time window from the last confirmed good inspection to now. 3. Export the serial numbers of all inserts processed during the fault window."
+      }
+    },
+    {
+      "node_id": "box_18",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "I've accessed the tracking system, set the time window from the last good inspection, and exported all the serial numbers from the fault period.",
+      "edge_label_to_next": null,
+      "turn_index": 20,
+      "ground_truth": {
+        "node_id": "box_18",
+        "node_type": "process",
+        "node_text": "Complete the following steps: 1. Access the production tracking system and filter by current work order. 2. Set the time window from the last confirmed good inspection to now. 3. Export the serial numbers of all inserts processed during the fault window."
+      }
+    },
+    {
+      "node_id": "box_20",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Were any inserts from the fault window released to downstream assembly or shipped to customer?",
+      "edge_label_to_next": null,
+      "turn_index": 21,
+      "ground_truth": {
+        "node_id": "box_20",
+        "node_type": "decision",
+        "node_text": "Were any inserts from the fault window released to downstream assembly or shipped to customer?"
+      }
+    },
+    {
+      "node_id": "box_20",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "No, all the inserts from the fault window are still here in our facility. Nothing has been released downstream or shipped.",
+      "edge_label_to_next": "No",
+      "turn_index": 22,
+      "ground_truth": {
+        "node_id": "box_20",
+        "node_type": "decision",
+        "node_text": "Were any inserts from the fault window released to downstream assembly or shipped to customer?"
+      }
+    },
+    {
+      "node_id": "box_23",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Procedure complete. Please notify the maintenance team and quality assurance team of the resolution.",
+      "edge_label_to_next": null,
+      "turn_index": 23,
+      "ground_truth": {
+        "node_id": "box_23",
+        "node_type": "terminator",
+        "node_text": "End, Notify maintenance team and quality assurance team. Procedure complete."
+      }
+    },
+    {
+      "node_id": "box_23",
+      "node_type": "terminator",
+      "speaker": "operator",
+      "utterance": "Understood, I'll notify both teams now.",
+      "edge_label_to_next": null,
+      "turn_index": 24,
+      "ground_truth": {
+        "node_id": "box_23",
+        "node_type": "terminator",
+        "node_text": "End, Notify maintenance team and quality assurance team. Procedure complete."
+      }
+    }
+  ],
+  "metadata": {
+    "depth": 13,
+    "num_decisions": 6,
+    "num_processes": 5,
+    "num_documents": 0,
+    "terminator_type": "procedure_complete",
+    "terminator_text": "End, Notify maintenance team and quality assurance team. Procedure complete.",
+    "true_terminator": true,
+    "node_sequence": [
+      "box_0",
+      "box_1",
+      "box_2",
+      "box_4",
+      "box_7",
+      "box_10",
+      "box_13",
+      "box_14",
+      "box_15",
+      "box_16",
+      "box_18",
+      "box_20",
+      "box_23"
+    ],
+    "edge_labels": [
+      null,
+      null,
+      null,
+      "No",
+      "No",
+      "No",
+      "No",
+      null,
+      null,
+      "Yes",
+      null,
+      null,
+      "No"
+    ],
+    "decision_points": [
+      {
+        "node": "box_2",
+        "label": "No",
+        "question": "Is the insert damage consistent with incoming material defects present before assembly?"
+      },
+      {
+        "node": "box_4",
+        "label": "No",
+        "question": "Does the damage appear only on inserts processed through one supply conveyor?"
+      },
+      {
+        "node": "box_7",
+        "label": "No",
+        "question": "Does the damage pattern indicate over pressing or mechanical impact at the assembly pressing station?"
+      },
+      {
+        "node": "box_10",
+        "label": "No",
+        "question": "Is the damage occurring at or after the reorientation unit?"
+      },
+      {
+        "node": "box_15",
+        "label": "Yes",
+        "question": "Has the root cause of the insert damage been confirmed and the corrective action verified effective?"
+      },
+      {
+        "node": "box_20",
+        "label": "No",
+        "question": "Were any inserts from the fault window released to downstream assembly or shipped to customer?"
+      }
+    ],
+    "generation_model": "anthropic/claude-sonnet-4-5",
+    "verification": {
+      "verified": true,
+      "issues": [],
+      "corrected_turns": [
+        {
+          "node_id": "box_0",
+          "node_type": "terminator",
+          "speaker": "system",
+          "utterance": "Starting insert damage diagnostic procedure.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_1",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Please collect and visually inspect a sample of at least ten damaged inserts. Classify each by damage type—surface scratch, deformation, or crack—and note the location on each insert.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_1",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "I've collected and inspected ten damaged inserts. I've classified each one by damage type and documented the location on the insert.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_2",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is the insert damage consistent with incoming material defects present before assembly?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_2",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "No, the damage doesn't match what we'd see from incoming material defects. This appears to be happening during our process.",
+          "edge_label_to_next": "No"
+        },
+        {
+          "node_id": "box_4",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Does the damage appear only on inserts processed through one supply conveyor?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_4",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "No, I'm seeing damage on inserts from both conveyors. It's not isolated to a single supply line.",
+          "edge_label_to_next": "No"
+        },
+        {
+          "node_id": "box_7",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Does the damage pattern indicate over pressing or mechanical impact at the assembly pressing station?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_7",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "No, the damage pattern doesn't look like pressing marks or impact from the assembly station. It's something else.",
+          "edge_label_to_next": "No"
+        },
+        {
+          "node_id": "box_10",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is the damage occurring at or after the reorientation unit?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_10",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "No, the inserts coming out of the reorientation unit look fine. The damage is happening downstream from there.",
+          "edge_label_to_next": "No"
+        },
+        {
+          "node_id": "box_13",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Inspect the discharge robot gripper and the output holder rack slot guides for deformations or debris. Adjust or replace damaged gripper inserts as needed.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_13",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "I found debris in the output holder rack slots and some worn gripper inserts. I've cleaned the slots and replaced the damaged gripper inserts.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_14",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Run ten slow speed test cycles and inspect inserts after each station to verify the root cause has been eliminated.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_14",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "I've completed ten slow speed test cycles and inspected inserts at each station. The damage is no longer occurring.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_15",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Has the root cause of the insert damage been confirmed and the corrective action verified effective?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_15",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Yes, I've confirmed the root cause was the debris and worn grippers at the discharge station, and the corrective action has eliminated the problem.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_16",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Record the root cause, corrective action, and affected batch numbers in the quality log. Notify the quality assurance team and restart production.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_16",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "I've logged the root cause and corrective action with the affected batch numbers, and I've notified quality assurance. Ready to restart production.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_18",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Access the production tracking system and filter by current work order. Set the time window from the last confirmed good inspection to now, then export the serial numbers of all inserts processed during the fault window.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_18",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "I've accessed the tracking system, set the time window from the last good inspection, and exported all the serial numbers from the fault period.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_20",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Were any inserts from the fault window released to downstream assembly or shipped to customer?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_20",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "No, all the inserts from the fault window are still here in our facility. Nothing has been released downstream or shipped.",
+          "edge_label_to_next": "No"
+        },
+        {
+          "node_id": "box_23",
+          "node_type": "terminator",
+          "speaker": "system",
+          "utterance": "Procedure complete. Please notify the maintenance team and quality assurance team of the resolution.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_23",
+          "node_type": "terminator",
+          "speaker": "operator",
+          "utterance": "Understood, I'll notify both teams now.",
+          "edge_label_to_next": null
+        }
+      ]
+    }
+  }
+}

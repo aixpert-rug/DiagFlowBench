@@ -1,0 +1,585 @@
+{
+  "conversation_id": "GRAPH26_P006_noise_perturbation",
+  "graph_id": "GRAPH26",
+  "path_id": "GRAPH26_P006",
+  "regime": "clean",
+  "variant": "noise_perturbation",
+  "robustness_axis": "noise_perturbation",
+  "turns": [
+    {
+      "node_id": "box_0",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Starting pressing station force spike diagnostic procedure.",
+      "edge_label_to_next": null,
+      "turn_index": 0,
+      "ground_truth": {
+        "node_id": "box_0",
+        "node_type": "terminator",
+        "node_text": "Start"
+      }
+    },
+    {
+      "node_id": "box_21",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Does the recorded force profile indicate a potential fixture collision or tooling failure requiring an immediate machine stop before further parts are damaged?",
+      "edge_label_to_next": null,
+      "turn_index": 1,
+      "ground_truth": {
+        "node_id": "box_21",
+        "node_type": "decision",
+        "node_text": "Does the recorded force profile indicate a potential fixture collision or tooling failure requiring an immediate machine stop before further parts are damaged?"
+      }
+    },
+    {
+      "node_id": "box_21",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no the force profile looks like standard fault pattern we can continue with diagnosis",
+      "edge_label_to_next": "Standard fault, continue diagnosis",
+      "turn_index": 2,
+      "ground_truth": {
+        "node_id": "box_21",
+        "node_type": "decision",
+        "node_text": "Does the recorded force profile indicate a potential fixture collision or tooling failure requiring an immediate machine stop before further parts are damaged?"
+      }
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Record the force profile from the operator control interface trend display. Capture the peak force, force at insertion start, and spike timing. Also note whether the anomaly occurs on every cycle or intermittently.",
+      "edge_label_to_next": null,
+      "turn_index": 3,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Record the force profile (peak force, force at insertion start, spike timing) from the operator control interface trend display. Note whether the anomaly occurs on every cycle or intermittently."
+      }
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "force profile recoreded. peak force 2450 newtons, insertion start force 180 newtons and spike occurs about 15mm into the stroke. seeing it intermittent not every cycle",
+      "edge_label_to_next": "",
+      "turn_index": 4,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Record the force profile (peak force, force at insertion start, spike timing) from the operator control interface trend display. Note whether the anomaly occurs on every cycle or intermittently."
+      }
+    },
+    {
+      "node_id": "box_3",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Complete the following checks: sample five consecutive parts for dimensional conformance, and check whether the force spike correlates with a specific table position.",
+      "edge_label_to_next": null,
+      "turn_index": 5,
+      "ground_truth": {
+        "node_id": "box_3",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Sample five consecutive parts for dimensional conformance. 2. Check whether the force spike correlates with a specific table position."
+      }
+    },
+    {
+      "node_id": "box_3",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "checks complete sampled five parts and measured them, spike seems to correlate with postion three on rotary table",
+      "edge_label_to_next": null,
+      "turn_index": 6,
+      "ground_truth": {
+        "node_id": "box_3",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Sample five consecutive parts for dimensional conformance. 2. Check whether the force spike correlates with a specific table position."
+      }
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the force spike intermittent, not present on every pressing cycle?",
+      "edge_label_to_next": null,
+      "turn_index": 7,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Is the force spike intermittent (not present on every pressing cycle)?"
+      }
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yeah its definitely intermittent only see the spike on some cycles not all",
+      "edge_label_to_next": "Yes",
+      "turn_index": 8,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Is the force spike intermittent (not present on every pressing cycle)?"
+      }
+    },
+    {
+      "node_id": "box_4",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Identify whether the anomaly is part dimension related or position related, then apply the relevant corrective action. If it's part dimension related, reject the non-conforming parts. If it's position related, inspect that nest.",
+      "edge_label_to_next": null,
+      "turn_index": 9,
+      "ground_truth": {
+        "node_id": "box_4",
+        "node_type": "process",
+        "node_text": "Identify whether the anomaly is part dimension related (reject the non conforming parts) or position related (inspect that nest) and apply the relevant corrective action."
+      }
+    },
+    {
+      "node_id": "box_4",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "anomaly is position related inspected nest three and found some debris on locating surface cleaned it and set those parts aside for reinspection",
+      "edge_label_to_next": "",
+      "turn_index": 10,
+      "ground_truth": {
+        "node_id": "box_4",
+        "node_type": "process",
+        "node_text": "Identify whether the anomaly is part dimension related (reject the non conforming parts) or position related (inspect that nest) and apply the relevant corrective action."
+      }
+    },
+    {
+      "node_id": "box_6",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Complete the following checks: measure the part insertion depth with the station depth gauge, compare it against the nominal value on the drawing, and check for part-to-fixture misalignment or contamination on locating surfaces.",
+      "edge_label_to_next": null,
+      "turn_index": 11,
+      "ground_truth": {
+        "node_id": "box_6",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Measure the part insertion depth with the station depth gauge. 2. Compare the measured depth against the nominal value on the drawing. 3. Check for part-to-fixture misalignment or contamination on locating surfaces."
+      }
+    },
+    {
+      "node_id": "box_6",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "ok so all checks done insertion depth measures 12.3mm matches nominal on drawing no misalignment or contamination detected on locating surfaces",
+      "edge_label_to_next": null,
+      "turn_index": 12,
+      "ground_truth": {
+        "node_id": "box_6",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Measure the part insertion depth with the station depth gauge. 2. Compare the measured depth against the nominal value on the drawing. 3. Check for part-to-fixture misalignment or contamination on locating surfaces."
+      }
+    },
+    {
+      "node_id": "box_5",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the insertion depth of parts at the press station within specification before pressing begins?",
+      "edge_label_to_next": null,
+      "turn_index": 13,
+      "ground_truth": {
+        "node_id": "box_5",
+        "node_type": "decision",
+        "node_text": "Is the insertion depth of parts at the press station within specification before pressing begins?"
+      }
+    },
+    {
+      "node_id": "box_5",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yeah insertion depth right on spec at 12.3mm",
+      "edge_label_to_next": "Yes",
+      "turn_index": 14,
+      "ground_truth": {
+        "node_id": "box_5",
+        "node_type": "decision",
+        "node_text": "Is the insertion depth of parts at the press station within specification before pressing begins?"
+      }
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the pressing head concentrically aligned with the part axis with no lateral offset?",
+      "edge_label_to_next": null,
+      "turn_index": 15,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "decision",
+        "node_text": "Is the pressing head concentrically aligned with the part axis (no lateral offset)?"
+      }
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no i can see theres lateral offset pressing head not centered on part axis",
+      "edge_label_to_next": "No",
+      "turn_index": 16,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "decision",
+        "node_text": "Is the pressing head concentrically aligned with the part axis (no lateral offset)?"
+      }
+    },
+    {
+      "node_id": "box_10",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Realign the pressing head to the part centreline. Tighten all fasteners and reverify the alignment before resuming operation.",
+      "edge_label_to_next": null,
+      "turn_index": 17,
+      "ground_truth": {
+        "node_id": "box_10",
+        "node_type": "process",
+        "node_text": "Realign the pressing head to the part centreline. Tighten all fasteners and reverify alignment before resuming."
+      }
+    },
+    {
+      "node_id": "box_10",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "pressing head realigned all fasteners tightened reverified alignment its concentric now",
+      "edge_label_to_next": "",
+      "turn_index": 18,
+      "ground_truth": {
+        "node_id": "box_10",
+        "node_type": "process",
+        "node_text": "Realign the pressing head to the part centreline. Tighten all fasteners and reverify alignment before resuming."
+      }
+    },
+    {
+      "node_id": "box_12",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Complete the following checks: read the programmed pressing speed from the press axis parameter screen, compare it against the specified speed on the validated process sheet, and check whether the speed setting was modified since the last good run.",
+      "edge_label_to_next": null,
+      "turn_index": 19,
+      "ground_truth": {
+        "node_id": "box_12",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Read the programmed pressing speed from the press axis parameter screen. 2. Compare against the specified speed on the validated process sheet. 3. Check whether the speed setting was modified since the last good run."
+      }
+    },
+    {
+      "node_id": "box_12",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "checks complete programed speed is 45mm/sec but process sheet specifies 35mm/sec looks like setting was changed two days ago",
+      "edge_label_to_next": null,
+      "turn_index": 20,
+      "ground_truth": {
+        "node_id": "box_12",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Read the programmed pressing speed from the press axis parameter screen. 2. Compare against the specified speed on the validated process sheet. 3. Check whether the speed setting was modified since the last good run."
+      }
+    },
+    {
+      "node_id": "box_11",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the pressing speed set to the specified value for this product type?",
+      "edge_label_to_next": null,
+      "turn_index": 21,
+      "ground_truth": {
+        "node_id": "box_11",
+        "node_type": "decision",
+        "node_text": "Is the pressing speed set to the specified value for this product type?"
+      }
+    },
+    {
+      "node_id": "box_11",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no speed too high currently at 45mm/sec instead of specified 35",
+      "edge_label_to_next": "No",
+      "turn_index": 22,
+      "ground_truth": {
+        "node_id": "box_11",
+        "node_type": "decision",
+        "node_text": "Is the pressing speed set to the specified value for this product type?"
+      }
+    },
+    {
+      "node_id": "box_13",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Adjust the flow control valve to bring the pressing speed to the specified value for the current product type.",
+      "edge_label_to_next": null,
+      "turn_index": 23,
+      "ground_truth": {
+        "node_id": "box_13",
+        "node_type": "process",
+        "node_text": "Adjust the flow control valve to bring the pressing speed to the specified value for the current product type."
+      }
+    },
+    {
+      "node_id": "box_13",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "flow control valve adjusted pressing speed now set to 35mm/sec as specified",
+      "edge_label_to_next": "",
+      "turn_index": 24,
+      "ground_truth": {
+        "node_id": "box_13",
+        "node_type": "process",
+        "node_text": "Adjust the flow control valve to bring the pressing speed to the specified value for the current product type."
+      }
+    },
+    {
+      "node_id": "box_15",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Check the zero load force reading and compare the calibration date against the calibration interval for this sensor. Also verify that the sensor mounting is secure.",
+      "edge_label_to_next": null,
+      "turn_index": 25,
+      "ground_truth": {
+        "node_id": "box_15",
+        "node_type": "process",
+        "node_text": "Check the zero load force reading and compare the calibration date against the calibration interval for this sensor. Verify that the sensor mounting is secure."
+      }
+    },
+    {
+      "node_id": "box_15",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "zero load reading shows 12 newtons instead of zero last calibration was 14 months ago sensor mounting secure tho",
+      "edge_label_to_next": null,
+      "turn_index": 26,
+      "ground_truth": {
+        "node_id": "box_15",
+        "node_type": "process",
+        "node_text": "Check the zero load force reading and compare the calibration date against the calibration interval for this sensor. Verify that the sensor mounting is secure."
+      }
+    },
+    {
+      "node_id": "box_14",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the force sensor zeroed and within its calibration interval?",
+      "edge_label_to_next": null,
+      "turn_index": 27,
+      "ground_truth": {
+        "node_id": "box_14",
+        "node_type": "decision",
+        "node_text": "Is the force sensor zeroed and within its calibration interval?"
+      }
+    },
+    {
+      "node_id": "box_14",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no sensor showing 12 newton offset and past calibration interval by two months",
+      "edge_label_to_next": "No",
+      "turn_index": 28,
+      "ground_truth": {
+        "node_id": "box_14",
+        "node_type": "decision",
+        "node_text": "Is the force sensor zeroed and within its calibration interval?"
+      }
+    },
+    {
+      "node_id": "box_16",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Rezero the force sensor and perform a span calibration using the reference load. If the sensor is outside the calibration interval, arrange for recalibration.",
+      "edge_label_to_next": null,
+      "turn_index": 29,
+      "ground_truth": {
+        "node_id": "box_16",
+        "node_type": "process",
+        "node_text": "Rezero the force sensor and perform a span calibration using the reference load. If the sensor is outside the calibration interval, arrange recalibration."
+      }
+    },
+    {
+      "node_id": "box_16",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "sensor rezeroed span calibration completed with reference load also submitted request for formal recalibration since were past the interval",
+      "edge_label_to_next": null,
+      "turn_index": 30,
+      "ground_truth": {
+        "node_id": "box_16",
+        "node_type": "process",
+        "node_text": "Rezero the force sensor and perform a span calibration using the reference load. If the sensor is outside the calibration interval, arrange recalibration."
+      }
+    },
+    {
+      "node_id": "box_17",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Has the force spike been eliminated after all corrective actions?",
+      "edge_label_to_next": null,
+      "turn_index": 31,
+      "ground_truth": {
+        "node_id": "box_17",
+        "node_type": "decision",
+        "node_text": "Has the force spike been eliminated after all corrective actions?"
+      }
+    },
+    {
+      "node_id": "box_17",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yeah ran ten cycles force profile smooth now no more spikes detected",
+      "edge_label_to_next": "Yes",
+      "turn_index": 32,
+      "ground_truth": {
+        "node_id": "box_17",
+        "node_type": "decision",
+        "node_text": "Has the force spike been eliminated after all corrective actions?"
+      }
+    },
+    {
+      "node_id": "box_19",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Record all measurements and corrective actions taken. Notify the quality assurance team and update the maintenance log.",
+      "edge_label_to_next": null,
+      "turn_index": 33,
+      "ground_truth": {
+        "node_id": "box_19",
+        "node_type": "process",
+        "node_text": "Record all measurements and corrective actions taken. Notify quality assurance team and update the maintenance log."
+      }
+    },
+    {
+      "node_id": "box_19",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "all documentation complete logged measurements corrective actions and notified qa of resolution",
+      "edge_label_to_next": null,
+      "turn_index": 34,
+      "ground_truth": {
+        "node_id": "box_19",
+        "node_type": "process",
+        "node_text": "Record all measurements and corrective actions taken. Notify quality assurance team and update the maintenance log."
+      }
+    },
+    {
+      "node_id": "box_20",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Diagnostic procedure complete. Notify the maintenance team of all corrective actions taken and update the shift handover notes.",
+      "edge_label_to_next": null,
+      "turn_index": 35,
+      "ground_truth": {
+        "node_id": "box_20",
+        "node_type": "terminator",
+        "node_text": "End, notify maintenance team."
+      }
+    },
+    {
+      "node_id": "box_20",
+      "node_type": "terminator",
+      "speaker": "operator",
+      "utterance": "understood ill notify maintenance and complete handover documentation",
+      "edge_label_to_next": null,
+      "turn_index": 36,
+      "ground_truth": {
+        "node_id": "box_20",
+        "node_type": "terminator",
+        "node_text": "End, notify maintenance team."
+      }
+    }
+  ],
+  "metadata": {
+    "depth": 19,
+    "num_decisions": 7,
+    "num_processes": 10,
+    "num_documents": 0,
+    "terminator_type": "procedure_complete",
+    "terminator_text": "End, notify maintenance team.",
+    "true_terminator": true,
+    "node_sequence": [
+      "box_0",
+      "box_21",
+      "box_1",
+      "box_3",
+      "box_2",
+      "box_4",
+      "box_6",
+      "box_5",
+      "box_8",
+      "box_10",
+      "box_12",
+      "box_11",
+      "box_13",
+      "box_15",
+      "box_14",
+      "box_16",
+      "box_17",
+      "box_19",
+      "box_20"
+    ],
+    "edge_labels": [
+      null,
+      null,
+      "Standard fault, continue diagnosis",
+      "",
+      null,
+      "Yes",
+      "",
+      null,
+      "Yes",
+      "No",
+      "",
+      null,
+      "No",
+      "",
+      null,
+      "No",
+      null,
+      "Yes",
+      null
+    ],
+    "decision_points": [
+      {
+        "node": "box_21",
+        "label": "Standard fault, continue diagnosis",
+        "question": "Does the recorded force profile indicate a potential fixture collision or tooling failure requiring an immediate machine stop before further parts are damaged?"
+      },
+      {
+        "node": "box_2",
+        "label": "Yes",
+        "question": "Is the force spike intermittent (not present on every pressing cycle)?"
+      },
+      {
+        "node": "box_5",
+        "label": "Yes",
+        "question": "Is the insertion depth of parts at the press station within specification before pressing begins?"
+      },
+      {
+        "node": "box_8",
+        "label": "No",
+        "question": "Is the pressing head concentrically aligned with the part axis (no lateral offset)?"
+      },
+      {
+        "node": "box_11",
+        "label": "No",
+        "question": "Is the pressing speed set to the specified value for this product type?"
+      },
+      {
+        "node": "box_14",
+        "label": "No",
+        "question": "Is the force sensor zeroed and within its calibration interval?"
+      },
+      {
+        "node": "box_17",
+        "label": "Yes",
+        "question": "Has the force spike been eliminated after all corrective actions?"
+      }
+    ],
+    "generation_model": "anthropic/claude-sonnet-4-5",
+    "verification": {
+      "variant_of": "base",
+      "base_verified": true,
+      "note": "surface-form variant; not independently verified"
+    }
+  }
+}

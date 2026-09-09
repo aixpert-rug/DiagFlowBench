@@ -1,0 +1,1146 @@
+{
+  "conversation_id": "GRAPH42_P014_base_mixed",
+  "graph_id": "GRAPH42",
+  "path_id": "GRAPH42_P014",
+  "regime": "mixed",
+  "variant": "base",
+  "robustness_axis": null,
+  "turns": [
+    {
+      "node_id": "box_0",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Starting tool changer diagnostic procedure.",
+      "edge_label_to_next": null,
+      "turn_index": 0,
+      "ground_truth": {
+        "node_id": "box_0",
+        "node_type": "terminator",
+        "node_text": "Start"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Please complete the following checks: First, inspect the magazine pockets for any deformation, cracking, or swarf accumulation. Second, check the gripper arm fingers for bending, cracking, or worn contact faces. Finally, inspect the magazine drive mechanism for seized bearings or loose fasteners.",
+      "edge_label_to_next": null,
+      "turn_index": 1,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Inspect magazine pockets for deformation, cracking, or swarf accumulation. 2. Check gripper arm fingers for bending, cracking, or worn contact faces. 3. Inspect the magazine drive mechanism for seized bearings or loose fasteners."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "I've completed all three checks. The pockets and drive mechanism look good.",
+      "edge_label_to_next": null,
+      "turn_index": 2,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Inspect magazine pockets for deformation, cracking, or swarf accumulation. 2. Check gripper arm fingers for bending, cracking, or worn contact faces. 3. Inspect the magazine drive mechanism for seized bearings or loose fasteners."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Do you see any magazine deformation, cracked pockets, or broken gripper fingers?",
+      "edge_label_to_next": null,
+      "turn_index": 3,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Magazine deformation, cracked pockets or broken gripper fingers?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "The magazine looks fine, but I'm noticing the indexing motor is making a grinding noise and seems to be running hotter than normal.",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "coverage_gap",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "No, everything looks structurally sound. No cracks or deformation visible.",
+      "edge_label_to_next": "No",
+      "turn_index": 4,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Magazine deformation, cracked pockets or broken gripper fingers?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_6",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the gripper finger spread within retention force tolerance?",
+      "edge_label_to_next": null,
+      "turn_index": 5,
+      "ground_truth": {
+        "node_id": "box_6",
+        "node_type": "decision",
+        "node_text": "Gripper finger spread within retention force tolerance?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_6",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "No, I'm seeing excessive spread on several fingers. They're beyond the worn limit.",
+      "edge_label_to_next": "No",
+      "turn_index": 6,
+      "ground_truth": {
+        "node_id": "box_6",
+        "node_type": "decision",
+        "node_text": "Gripper finger spread within retention force tolerance?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_7",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Replace the worn gripper fingers, both fingers per pocket.",
+      "edge_label_to_next": null,
+      "turn_index": 7,
+      "ground_truth": {
+        "node_id": "box_7",
+        "node_type": "process",
+        "node_text": "Replace worn gripper fingers, both fingers per pocket"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_7",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Gripper fingers replaced on all affected pockets.",
+      "edge_label_to_next": "",
+      "turn_index": 8,
+      "ground_truth": {
+        "node_id": "box_7",
+        "node_type": "process",
+        "node_text": "Replace worn gripper fingers, both fingers per pocket"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Now measure the diameter of each locating pin at both the shank and the nose using a calibrated digital micrometer. Compare the measurements against the nominal pin diameter and minimum serviceable diameter in the fixture drawing. Also inspect the pin surface under a magnifier for chipping, burring, or scoring.",
+      "edge_label_to_next": null,
+      "turn_index": 9,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "process",
+        "node_text": "Measure the diameter of each locating pin at the shank and at the nose using a calibrated digital micrometer. Compare against the nominal pin diameter and the minimum serviceable diameter in the fixture drawing. Inspect the pin surface under a magnifier for chipping, burring, or scoring; any pin showing surface damage at the locating nose should be replaced."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Measurements complete. I found some pins with diameter wear and a couple showing surface scoring at the nose.",
+      "edge_label_to_next": null,
+      "turn_index": 10,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "process",
+        "node_text": "Measure the diameter of each locating pin at the shank and at the nose using a calibrated digital micrometer. Compare against the nominal pin diameter and the minimum serviceable diameter in the fixture drawing. Inspect the pin surface under a magnifier for chipping, burring, or scoring; any pin showing surface damage at the locating nose should be replaced."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_10",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the locating pin diameter within H6/h5 fit tolerance?",
+      "edge_label_to_next": null,
+      "turn_index": 11,
+      "ground_truth": {
+        "node_id": "box_10",
+        "node_type": "decision",
+        "node_text": "Locating pin diameter within H6/h5 fit tolerance?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_10",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "No, several pins are undersized and out of tolerance.",
+      "edge_label_to_next": "No",
+      "turn_index": 12,
+      "ground_truth": {
+        "node_id": "box_10",
+        "node_type": "decision",
+        "node_text": "Locating pin diameter within H6/h5 fit tolerance?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_11",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Replace the worn locating pins and verify with the go/no go gauge after fitting.",
+      "edge_label_to_next": null,
+      "turn_index": 13,
+      "ground_truth": {
+        "node_id": "box_11",
+        "node_type": "process",
+        "node_text": "Replace worn locating pins, verify with go/no go gauge after fitting"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_11",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Pins replaced and verified with the gauge. All are passing now.",
+      "edge_label_to_next": "",
+      "turn_index": 14,
+      "ground_truth": {
+        "node_id": "box_11",
+        "node_type": "process",
+        "node_text": "Replace worn locating pins, verify with go/no go gauge after fitting"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_12",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Load a standard toolholder into the spindle and attach the pull gauge to the retention knob. Apply a steady axial pull and record the peak force at drawbar release, then compare the reading against the minimum drawbar retention force in the machine specification.",
+      "edge_label_to_next": null,
+      "turn_index": 15,
+      "ground_truth": {
+        "node_id": "box_12",
+        "node_type": "process",
+        "node_text": "Load a standard toolholder into the spindle and attach the pull gauge to the retention knob. Apply a steady axial pull and record the peak force at drawbar release. Compare the reading against the minimum drawbar retention force in the machine specification. Retention force below the minimum indicates disc spring pack degradation and requires drawbar inspection."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_12",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "I'm getting the right retention force, but the spindle is making a grinding noise during tool change and there's metal debris collecting in the spindle taper—looks like the drawbar threads might be galling.",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "undocumented_malfunction",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_12",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Pull test complete. The retention force readings are all within the acceptable range.",
+      "edge_label_to_next": null,
+      "turn_index": 16,
+      "ground_truth": {
+        "node_id": "box_12",
+        "node_type": "process",
+        "node_text": "Load a standard toolholder into the spindle and attach the pull gauge to the retention knob. Apply a steady axial pull and record the peak force at drawbar release. Compare the reading against the minimum drawbar retention force in the machine specification. Retention force below the minimum indicates disc spring pack degradation and requires drawbar inspection."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_14",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the tool retention force within rated range for all tested pockets?",
+      "edge_label_to_next": null,
+      "turn_index": 17,
+      "ground_truth": {
+        "node_id": "box_14",
+        "node_type": "decision",
+        "node_text": "Tool retention force within rated range for all tested pockets?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_14",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, all pockets are showing good retention force within spec.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 18,
+      "ground_truth": {
+        "node_id": "box_14",
+        "node_type": "decision",
+        "node_text": "Tool retention force within rated range for all tested pockets?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_20",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Are all magazine positions indexed within plus or minus 0.3 seconds of nominal?",
+      "edge_label_to_next": null,
+      "turn_index": 19,
+      "ground_truth": {
+        "node_id": "box_20",
+        "node_type": "decision",
+        "node_text": "All magazine positions indexed within ±0.3 s of nominal?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_20",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, the cycle time is consistent and all positions are indexing within the timing window.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 20,
+      "ground_truth": {
+        "node_id": "box_20",
+        "node_type": "decision",
+        "node_text": "All magazine positions indexed within ±0.3 s of nominal?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_24",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the magazine positioning accuracy within plus or minus 0.1 millimeters at all pockets?",
+      "edge_label_to_next": null,
+      "turn_index": 21,
+      "ground_truth": {
+        "node_id": "box_24",
+        "node_type": "decision",
+        "node_text": "Magazine positioning accuracy within ±0.1 mm at all pockets?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_24",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, the dial indicator shows all positions are repeating within tolerance.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 22,
+      "ground_truth": {
+        "node_id": "box_24",
+        "node_type": "decision",
+        "node_text": "Magazine positioning accuracy within ±0.1 mm at all pockets?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_29",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Do all tool present sensors trigger correctly with a tool loaded?",
+      "edge_label_to_next": null,
+      "turn_index": 23,
+      "ground_truth": {
+        "node_id": "box_29",
+        "node_type": "decision",
+        "node_text": "All tool present sensors trigger correctly with tool loaded?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_29",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "No, I'm seeing two sensors that aren't responding when tools are present in those pockets.",
+      "edge_label_to_next": "No",
+      "turn_index": 24,
+      "ground_truth": {
+        "node_id": "box_29",
+        "node_type": "decision",
+        "node_text": "All tool present sensors trigger correctly with tool loaded?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_30",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Reposition or replace the faulty tool present sensors.",
+      "edge_label_to_next": null,
+      "turn_index": 25,
+      "ground_truth": {
+        "node_id": "box_30",
+        "node_type": "process",
+        "node_text": "Reposition or replace faulty tool present sensors"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_30",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Hey, before I do that, do you know if we're supposed to log this downtime in the new maintenance system or are we still using the old paper forms?",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "unrelated_question",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_30",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Sensors repositioned and tested. They're now triggering correctly.",
+      "edge_label_to_next": "",
+      "turn_index": 26,
+      "ground_truth": {
+        "node_id": "box_30",
+        "node_type": "process",
+        "node_text": "Reposition or replace faulty tool present sensors"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_31",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Open the tool changer guard door and confirm that the machine control panel shows a door open fault preventing spindle and magazine motion. Then close the door and confirm the fault clears. Also inspect the door interlock switch actuator for damage and verify that the locking solenoid engages before motion is commanded.",
+      "edge_label_to_next": null,
+      "turn_index": 27,
+      "ground_truth": {
+        "node_id": "box_31",
+        "node_type": "process",
+        "node_text": "Open the tool changer guard door and confirm that the machine control panel shows a door open fault preventing spindle and magazine motion. Close the door and confirm the fault clears. Inspect the door interlock switch actuator for damage and verify that the locking solenoid engages before motion is commanded."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_31",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Door interlock test complete. The fault triggers and clears properly, and the actuator looks good.",
+      "edge_label_to_next": null,
+      "turn_index": 28,
+      "ground_truth": {
+        "node_id": "box_31",
+        "node_type": "process",
+        "node_text": "Open the tool changer guard door and confirm that the machine control panel shows a door open fault preventing spindle and magazine motion. Close the door and confirm the fault clears. Inspect the door interlock switch actuator for damage and verify that the locking solenoid engages before motion is commanded."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_32",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Do the tool changer safety interlocks function correctly?",
+      "edge_label_to_next": null,
+      "turn_index": 29,
+      "ground_truth": {
+        "node_id": "box_32",
+        "node_type": "decision",
+        "node_text": "Tool changer safety interlocks function correctly?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_32",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "No, the door sensor is triggering but the control isn't recognizing it properly. The fault behavior is inconsistent.",
+      "edge_label_to_next": "No",
+      "turn_index": 30,
+      "ground_truth": {
+        "node_id": "box_32",
+        "node_type": "decision",
+        "node_text": "Tool changer safety interlocks function correctly?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_33",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Access the safety controller configuration using the maintenance password. Navigate to the tool changer door sensor position parameter and read the current parameter value, then compare it against the reference setting.",
+      "edge_label_to_next": null,
+      "turn_index": 31,
+      "ground_truth": {
+        "node_id": "box_33",
+        "node_type": "process",
+        "node_text": "Complete the following steps: 1. Access the safety controller configuration using the maintenance password. 2. Navigate to the tool changer door sensor position parameter. 3. Read the current parameter value and compare against the reference setting."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_33",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Parameter checked. I've noted the current value from the safety controller.",
+      "edge_label_to_next": "",
+      "turn_index": 32,
+      "ground_truth": {
+        "node_id": "box_33",
+        "node_type": "process",
+        "node_text": "Complete the following steps: 1. Access the safety controller configuration using the maintenance password. 2. Navigate to the tool changer door sensor position parameter. 3. Read the current parameter value and compare against the reference setting."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_34",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Connect a stopwatch or use the machine cycle time display to measure the duration from arm extend command to arm retracted and locked confirmation signal. Record the measured time and compare it against the target arm swing time in the machine parameter record.",
+      "edge_label_to_next": null,
+      "turn_index": 33,
+      "ground_truth": {
+        "node_id": "box_34",
+        "node_type": "process",
+        "node_text": "Connect a stopwatch or use the machine cycle time display to measure the duration from arm extend command to arm retracted and locked confirmation signal. Record the measured time and compare against the target arm swing time in the machine parameter record. A time increase of more than 20% above target suggests hydraulic pressure loss or mechanical binding."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_34",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Arm swing time recorded. It's running slower than target by about 25 percent.",
+      "edge_label_to_next": null,
+      "turn_index": 34,
+      "ground_truth": {
+        "node_id": "box_34",
+        "node_type": "process",
+        "node_text": "Connect a stopwatch or use the machine cycle time display to measure the duration from arm extend command to arm retracted and locked confirmation signal. Record the measured time and compare against the target arm swing time in the machine parameter record. A time increase of more than 20% above target suggests hydraulic pressure loss or mechanical binding."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_36",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the arm swing speed within the specified range?",
+      "edge_label_to_next": null,
+      "turn_index": 35,
+      "ground_truth": {
+        "node_id": "box_36",
+        "node_type": "decision",
+        "node_text": "Arm swing speed within specified range?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_36",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "No, it's too slow. The cycle time is significantly above the target.",
+      "edge_label_to_next": "No",
+      "turn_index": 36,
+      "ground_truth": {
+        "node_id": "box_36",
+        "node_type": "decision",
+        "node_text": "Arm swing speed within specified range?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_37",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Adjust the hydraulic or pneumatic flow control on the tool changer arm.",
+      "edge_label_to_next": null,
+      "turn_index": 37,
+      "ground_truth": {
+        "node_id": "box_37",
+        "node_type": "process",
+        "node_text": "Adjust hydraulic or pneumatic flow control on tool changer arm"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_37",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Flow control adjusted. The arm is moving more quickly now.",
+      "edge_label_to_next": "",
+      "turn_index": 38,
+      "ground_truth": {
+        "node_id": "box_37",
+        "node_type": "process",
+        "node_text": "Adjust hydraulic or pneumatic flow control on tool changer arm"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_38",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Command ten consecutive automatic tool changes using two adjacent pockets, cycling between T1 and T2. Observe each change for smooth arm swing, positive tool seating in the spindle, and absence of toolholder drop or misalignment. Record any change cycle that generates an alarm or requires a retry.",
+      "edge_label_to_next": null,
+      "turn_index": 39,
+      "ground_truth": {
+        "node_id": "box_38",
+        "node_type": "process",
+        "node_text": "Command ten consecutive automatic tool changes using two adjacent pockets, cycling T1 to T2 and back. Observe each change for smooth arm swing, positive tool seating in the spindle, and absence of toolholder drop or misalignment. Record any change cycle that generates an alarm or requires a retry; more than one fault in ten cycles requires investigation before production release."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_38",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Ten tool changes completed. All cycles ran smoothly with no alarms or issues.",
+      "edge_label_to_next": null,
+      "turn_index": 40,
+      "ground_truth": {
+        "node_id": "box_38",
+        "node_type": "process",
+        "node_text": "Command ten consecutive automatic tool changes using two adjacent pockets, cycling T1 to T2 and back. Observe each change for smooth arm swing, positive tool seating in the spindle, and absence of toolholder drop or misalignment. Record any change cycle that generates an alarm or requires a retry; more than one fault in ten cycles requires investigation before production release."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_39",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Were all 10 tool changes completed without fault or alarm?",
+      "edge_label_to_next": null,
+      "turn_index": 41,
+      "ground_truth": {
+        "node_id": "box_39",
+        "node_type": "decision",
+        "node_text": "All 10 tool changes completed without fault or alarm?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_39",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, all ten cycles completed successfully with no faults.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 42,
+      "ground_truth": {
+        "node_id": "box_39",
+        "node_type": "decision",
+        "node_text": "All 10 tool changes completed without fault or alarm?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_45",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the tool length measurement within plus or minus 0.01 millimeters of the stored offset?",
+      "edge_label_to_next": null,
+      "turn_index": 43,
+      "ground_truth": {
+        "node_id": "box_45",
+        "node_type": "decision",
+        "node_text": "Tool length measurement within ±0.01 mm of stored offset?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_45",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "No, I'm seeing a discrepancy of about 0.025 millimeters from the stored value.",
+      "edge_label_to_next": "No",
+      "turn_index": 44,
+      "ground_truth": {
+        "node_id": "box_45",
+        "node_type": "decision",
+        "node_text": "Tool length measurement within ±0.01 mm of stored offset?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_46",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Load the reference tool and run the tool length measurement probing cycle. Read the measured tool length offset from the probing cycle result screen and compare the measured offset against the reference value in the tool library.",
+      "edge_label_to_next": null,
+      "turn_index": 45,
+      "ground_truth": {
+        "node_id": "box_46",
+        "node_type": "process",
+        "node_text": "Complete the following steps: 1. Load the reference tool and run the tool length measurement probing cycle. 2. Read the measured tool length offset from the probing cycle result screen. 3. Compare the measured offset against the reference value in the tool library."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_46",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "The probing cycle keeps giving me a 'tool deflection warning' message that I haven't seen before, and the measured values are jumping around by more than 0.005 inches between consecutive measurements.",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "coverage_gap",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_46",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Probing cycle complete and offset values compared.",
+      "edge_label_to_next": "",
+      "turn_index": 46,
+      "ground_truth": {
+        "node_id": "box_46",
+        "node_type": "process",
+        "node_text": "Complete the following steps: 1. Load the reference tool and run the tool length measurement probing cycle. 2. Read the measured tool length offset from the probing cycle result screen. 3. Compare the measured offset against the reference value in the tool library."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_47",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Apply the specified grease type to the cam follower roller and guide rail surfaces using a clean grease gun with the correct nozzle. Cycle the arm through three full extend and retract cycles to distribute the lubricant, then wipe away excess grease from the arm contact surfaces.",
+      "edge_label_to_next": null,
+      "turn_index": 47,
+      "ground_truth": {
+        "node_id": "box_47",
+        "node_type": "process",
+        "node_text": "Apply the specified grease type to the cam follower roller and to the guide rail surfaces using a clean grease gun with the correct nozzle. Cycle the arm through three full extend and retract cycles to distribute the lubricant. Wipe away excess grease from the arm contact surfaces to prevent transfer to toolholder tapers."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_47",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Lubrication applied and distributed. Excess grease cleaned off.",
+      "edge_label_to_next": null,
+      "turn_index": 48,
+      "ground_truth": {
+        "node_id": "box_47",
+        "node_type": "process",
+        "node_text": "Apply the specified grease type to the cam follower roller and to the guide rail surfaces using a clean grease gun with the correct nozzle. Cycle the arm through three full extend and retract cycles to distribute the lubricant. Wipe away excess grease from the arm contact surfaces to prevent transfer to toolholder tapers."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_49",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Have all lubrication points been serviced per specification?",
+      "edge_label_to_next": null,
+      "turn_index": 49,
+      "ground_truth": {
+        "node_id": "box_49",
+        "node_type": "decision",
+        "node_text": "All lubrication points serviced per specification?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_49",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "No, I missed a couple of points on the guide rail. Need to add grease there.",
+      "edge_label_to_next": "No",
+      "turn_index": 50,
+      "ground_truth": {
+        "node_id": "box_49",
+        "node_type": "decision",
+        "node_text": "All lubrication points serviced per specification?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_50",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Apply the missing grease and refer to the lubrication diagram.",
+      "edge_label_to_next": null,
+      "turn_index": 51,
+      "ground_truth": {
+        "node_id": "box_50",
+        "node_type": "process",
+        "node_text": "Apply missing grease, refer to lubrication diagram"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_50",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Missing lubrication points now serviced.",
+      "edge_label_to_next": null,
+      "turn_index": 52,
+      "ground_truth": {
+        "node_id": "box_50",
+        "node_type": "process",
+        "node_text": "Apply missing grease, refer to lubrication diagram"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_51",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Log all tool changer measurements and update the service record.",
+      "edge_label_to_next": null,
+      "turn_index": 53,
+      "ground_truth": {
+        "node_id": "box_51",
+        "node_type": "process",
+        "node_text": "Log all tool changer measurements and update service record"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_51",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "All measurements logged and service record updated.",
+      "edge_label_to_next": null,
+      "turn_index": 54,
+      "ground_truth": {
+        "node_id": "box_51",
+        "node_type": "process",
+        "node_text": "Log all tool changer measurements and update service record"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_52",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Procedure complete. The tool changer has passed diagnostic testing and is ready to return to service.",
+      "edge_label_to_next": null,
+      "turn_index": 55,
+      "ground_truth": {
+        "node_id": "box_52",
+        "node_type": "terminator",
+        "node_text": "End, Procedure complete"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_52",
+      "node_type": "terminator",
+      "speaker": "operator",
+      "utterance": "Understood, procedure complete.",
+      "edge_label_to_next": null,
+      "turn_index": 56,
+      "ground_truth": {
+        "node_id": "box_52",
+        "node_type": "terminator",
+        "node_text": "End, Procedure complete"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    }
+  ],
+  "metadata": {
+    "depth": 29,
+    "num_decisions": 12,
+    "num_processes": 15,
+    "num_documents": 0,
+    "terminator_type": "procedure_complete",
+    "terminator_text": "End, Procedure complete",
+    "true_terminator": true,
+    "node_sequence": [
+      "box_0",
+      "box_1",
+      "box_2",
+      "box_6",
+      "box_7",
+      "box_8",
+      "box_10",
+      "box_11",
+      "box_12",
+      "box_14",
+      "box_20",
+      "box_24",
+      "box_29",
+      "box_30",
+      "box_31",
+      "box_32",
+      "box_33",
+      "box_34",
+      "box_36",
+      "box_37",
+      "box_38",
+      "box_39",
+      "box_45",
+      "box_46",
+      "box_47",
+      "box_49",
+      "box_50",
+      "box_51",
+      "box_52"
+    ],
+    "edge_labels": [
+      null,
+      null,
+      null,
+      "No",
+      "No",
+      "",
+      null,
+      "No",
+      "",
+      null,
+      "Yes",
+      "Yes",
+      "Yes",
+      "No",
+      "",
+      null,
+      "No",
+      "",
+      null,
+      "No",
+      "",
+      null,
+      "Yes",
+      "No",
+      "",
+      null,
+      "No",
+      null,
+      null
+    ],
+    "decision_points": [
+      {
+        "node": "box_2",
+        "label": "No",
+        "question": "Magazine deformation, cracked pockets or broken gripper fingers?"
+      },
+      {
+        "node": "box_6",
+        "label": "No",
+        "question": "Gripper finger spread within retention force tolerance?"
+      },
+      {
+        "node": "box_10",
+        "label": "No",
+        "question": "Locating pin diameter within H6/h5 fit tolerance?"
+      },
+      {
+        "node": "box_14",
+        "label": "Yes",
+        "question": "Tool retention force within rated range for all tested pockets?"
+      },
+      {
+        "node": "box_20",
+        "label": "Yes",
+        "question": "All magazine positions indexed within ±0.3 s of nominal?"
+      },
+      {
+        "node": "box_24",
+        "label": "Yes",
+        "question": "Magazine positioning accuracy within ±0.1 mm at all pockets?"
+      },
+      {
+        "node": "box_29",
+        "label": "No",
+        "question": "All tool present sensors trigger correctly with tool loaded?"
+      },
+      {
+        "node": "box_32",
+        "label": "No",
+        "question": "Tool changer safety interlocks function correctly?"
+      },
+      {
+        "node": "box_36",
+        "label": "No",
+        "question": "Arm swing speed within specified range?"
+      },
+      {
+        "node": "box_39",
+        "label": "Yes",
+        "question": "All 10 tool changes completed without fault or alarm?"
+      },
+      {
+        "node": "box_45",
+        "label": "No",
+        "question": "Tool length measurement within ±0.01 mm of stored offset?"
+      },
+      {
+        "node": "box_49",
+        "label": "No",
+        "question": "All lubrication points serviced per specification?"
+      }
+    ],
+    "generation_model": "anthropic/claude-sonnet-4-5",
+    "verification": {
+      "verified": true,
+      "issues": []
+    },
+    "injection_count": 4
+  },
+  "injection_log": [
+    {
+      "position": 4,
+      "node_id": "box_2",
+      "node_text": "Magazine deformation, cracked pockets or broken gripper fingers?",
+      "edge_labels": [
+        "Yes",
+        "No"
+      ],
+      "category": "coverage_gap",
+      "utterance": "The magazine looks fine, but I'm noticing the indexing motor is making a grinding noise and seems to be running hotter than normal.",
+      "injection_rate": null,
+      "num_candidates": null
+    },
+    {
+      "position": 16,
+      "node_id": "box_12",
+      "node_text": "Load a standard toolholder into the spindle and attach the pull gauge to the retention knob. Apply a steady axial pull and record the peak force at drawbar release. Compare the reading against the minimum drawbar retention force in the machine specification. Retention force below the minimum indicates disc spring pack degradation and requires drawbar inspection.",
+      "edge_labels": [],
+      "category": "undocumented_malfunction",
+      "utterance": "I'm getting the right retention force, but the spindle is making a grinding noise during tool change and there's metal debris collecting in the spindle taper—looks like the drawbar threads might be galling.",
+      "injection_rate": null,
+      "num_candidates": null
+    },
+    {
+      "position": 26,
+      "node_id": "box_30",
+      "node_text": "Reposition or replace faulty tool present sensors",
+      "edge_labels": [],
+      "category": "unrelated_question",
+      "utterance": "Hey, before I do that, do you know if we're supposed to log this downtime in the new maintenance system or are we still using the old paper forms?",
+      "injection_rate": null,
+      "num_candidates": null
+    },
+    {
+      "position": 46,
+      "node_id": "box_46",
+      "node_text": "Complete the following steps: 1. Load the reference tool and run the tool length measurement probing cycle. 2. Read the measured tool length offset from the probing cycle result screen. 3. Compare the measured offset against the reference value in the tool library.",
+      "edge_labels": [],
+      "category": "coverage_gap",
+      "utterance": "The probing cycle keeps giving me a 'tool deflection warning' message that I haven't seen before, and the measured values are jumping around by more than 0.005 inches between consecutive measurements.",
+      "injection_rate": null,
+      "num_candidates": null
+    }
+  ]
+}

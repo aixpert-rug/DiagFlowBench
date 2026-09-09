@@ -1,0 +1,119 @@
+flowchart TD
+    box_0(["Start"])
+    box_1["Complete the following checks: 1. Inspect the<br/>clamping arm bodies for cracks or bending<br/>deformation. 2. Check each pivot pin boss for<br/>looseness by attempting to rock the arm. 3. Inspect<br/>the clamping pad faces for wear beyond the minimum<br/>thickness."]
+    box_2{"Cracks, deformation or severe wear on clamping arms?"}
+    box_3(["End, Replace clamping unit: structural failure<br/>detected"])
+    box_4["Place a calibrated load cell between the clamping<br/>pad face and a rigid reference block positioned at<br/>the nominal part contact surface height. Close the<br/>clamp to the production pressure setting and record<br/>the peak force from the load cell amplifier display.<br/>Repeat the measurement at all clamping stations and<br/>compare each reading against the minimum and maximum<br/>clamp force in the fixturing specification."]
+    box_5[/"Refer to the clamping force specification."/]
+    box_6{"Clamping force within ±5% of rated value?"}
+    box_7["Replace return springs and check actuator seals"]
+    box_8{"Reverify clamping force after spring replacement"}
+    box_9(["End, Escalate: actuator servicing required, force<br/>unrecoverable"])
+    box_10["Using a surface roughness tester, scan the clamp pad<br/>contact face in two perpendicular directions and<br/>record the Ra value. Compare against the maximum<br/>permitted roughness in the pad specification; an<br/>excessively rough pad will mark soft part materials.<br/>Using a calibrated surface plate and a dial gauge,<br/>measure flatness of the pad at four corner points<br/>and compare against the flatness tolerance."]
+    box_11{"Clamp pad surface condition acceptable?"}
+    box_12["Replace clamp pad, apply correct torque to retaining<br/>screws"]
+    box_13["Command the clamp to the fully open position and<br/>measure the gap between the pad face and the<br/>reference surface using a digital caliper; compare<br/>against the nominal open position dimension. Close<br/>the clamp fully and probe the closed position sensor<br/>at its trigger point using a feeler gauge to measure<br/>the sensor actuation gap. Both values must fall<br/>within the tolerance ranges on the clamp setup<br/>drawing."]
+    box_14[/"Refer to the clamping position tolerance."/]
+    box_15{"Open and close sensor positions within ±0.3 mm of<br/>nominal?"}
+    box_16["Reposition sensors and reteach open/close positions<br/>in programmable controller"]
+    box_17{"Reverify sensor positions after reteach"}
+    box_18(["End, Escalate: mechanical stop position shifted,<br/>datum check required"])
+    box_19["Mount a dial test indicator against the pivot pin<br/>boss with the clamp arm loaded against its return<br/>spring. Measure the lateral displacement of the pin<br/>within the bore by applying a load perpendicular to<br/>the pin axis and recording the indicator reading.<br/>Compare the measured radial play against the maximum<br/>pin to bore clearance in the clamp specification;<br/>excessive play indicates worn pin or bore requiring<br/>replacement."]
+    box_20{"Pivot pin radial clearance within 0.05 mm limit?"}
+    box_21["Replace worn pivot pins and ream bore to H7<br/>tolerance"]
+    box_22["Inspect each grease nipple on the pivot point<br/>assemblies for proper seating of the ball check<br/>valve by pressing the tip of a grease gun nozzle and<br/>confirming the nipple accepts grease. Apply two<br/>strokes of the specified grease grade to each<br/>nipple. Cycle the clamp arm through three full open<br/>and close strokes to distribute the lubricant before<br/>wiping excess from the pad face."]
+    box_23[/"Refer to the clamping unit lubrication<br/>specification."/]
+    box_24{"All pivot points correctly lubricated?"}
+    box_25["Apply grease to all pivot pin nipples, quantity per<br/>spec"]
+    box_26["Set the clamp controller to automatic cycle mode and<br/>command 20 consecutive open and close cycles at<br/>production speed. Monitor the cycle for consistent<br/>motion, absence of mechanical shock at end of<br/>stroke, and correct sensor signals at each position.<br/>Record the cycle time and compare against the target<br/>cycle time; an increase greater than 15% indicates<br/>hydraulic or pneumatic system degradation."]
+    box_27{"All 20 cycles completed without missed clamp or<br/>timeout?"}
+    box_28["Investigate cycle fault, check sensor and actuator<br/>timing"]
+    box_29["Complete the following steps: 1. Load the reference<br/>part into the fixture and close the clamp to<br/>production pressure. 2. Attempt to move the<br/>reference part by applying a lateral force by hand.<br/>3. Confirm the part does not move and record the<br/>clamping force reading."]
+    box_30{"Reference part held without movement during<br/>simulated cut?"}
+    box_31["Log clamp force and cycle data, update service<br/>record"]
+    box_32(["End, Procedure complete"])
+    box_33["Secondary spring set replacement: remove all<br/>clamping springs and verify the spring seat surfaces<br/>are clean and undamaged before fitting. Install new<br/>springs from the correct specification batch,<br/>confirming the free length of each spring matches<br/>the specification before installation. Cycle the<br/>clamp five times after replacement to allow the<br/>springs to seat before returning to the clamping<br/>force measurement step."]
+    box_34[/"Fixture datum and locating diagnostic (GRAPH 44)"/]
+
+    box_0 --> box_1
+    box_1 --> box_2
+    box_2 -->|"Yes"| box_3
+    box_2 -->|"No"| box_6
+    box_4 --> box_6
+    box_5 --> box_6
+    box_6 -->|"No"| box_7
+    box_7 --> box_8
+    box_8 -->|"OK"| box_11
+    box_6 -->|"Yes"| box_11
+    box_10 --> box_11
+    box_11 -->|"No"| box_12
+    box_12 --> box_13
+    box_11 -->|"Yes"| box_15
+    box_13 --> box_15
+    box_14 --> box_15
+    box_15 -->|"No"| box_16
+    box_16 --> box_17
+    box_17 -->|"Still out of tolerance"| box_18
+    box_17 -->|"OK"| box_20
+    box_15 -->|"Yes"| box_20
+    box_19 --> box_20
+    box_20 -->|"No"| box_21
+    box_21 --> box_22
+    box_20 -->|"Yes"| box_24
+    box_22 --> box_24
+    box_23 --> box_24
+    box_24 -->|"No"| box_25
+    box_25 --> box_26
+    box_24 -->|"Yes"| box_27
+    box_26 --> box_27
+    box_27 -->|"No"| box_28
+    box_28 --> box_29
+    box_27 -->|"Yes"| box_29
+    box_29 --> box_30
+    box_30 -->|"Yes"| box_31
+    box_30 -->|"No"| box_31
+    box_31 --> box_32
+    box_8 -->|"Still low"| box_33
+    box_33 --> box_8
+    box_8 -->|"Unresolvable after second attempt"| box_34
+
+    class box_0 terminator
+    class box_1 process
+    class box_2 decision
+    class box_3 terminator
+    class box_4 process
+    class box_5 document
+    class box_6 decision
+    class box_7 process
+    class box_8 decision
+    class box_9 terminator
+    class box_10 process
+    class box_11 decision
+    class box_12 process
+    class box_13 process
+    class box_14 document
+    class box_15 decision
+    class box_16 process
+    class box_17 decision
+    class box_18 terminator
+    class box_19 process
+    class box_20 decision
+    class box_21 process
+    class box_22 process
+    class box_23 document
+    class box_24 decision
+    class box_25 process
+    class box_26 process
+    class box_27 decision
+    class box_28 process
+    class box_29 process
+    class box_30 decision
+    class box_31 process
+    class box_32 terminator
+    class box_33 process
+    class box_34 document
+
+    classDef terminator fill:#2d4a6e,stroke:#1a3050,color:#ffffff,font-weight:bold
+    classDef process    fill:#f0f4ff,stroke:#4a6fa5,color:#1a1a2e
+    classDef decision   fill:#fff8e6,stroke:#c8922a,color:#1a1a2e
+    classDef document   fill:#f0fff4,stroke:#3a8a4a,color:#1a1a2e

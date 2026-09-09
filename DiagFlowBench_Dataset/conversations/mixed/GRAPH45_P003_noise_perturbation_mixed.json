@@ -1,0 +1,572 @@
+{
+  "conversation_id": "GRAPH45_P003_noise_perturbation_mixed",
+  "graph_id": "GRAPH45",
+  "path_id": "GRAPH45_P003",
+  "regime": "mixed",
+  "variant": "noise_perturbation",
+  "robustness_axis": "noise_perturbation",
+  "turns": [
+    {
+      "node_id": "box_0",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Starting marking controller communication diagnostic procedure.",
+      "edge_label_to_next": null,
+      "turn_index": 0,
+      "ground_truth": {
+        "node_id": "box_0",
+        "node_type": "terminator",
+        "node_text": "Start"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_22",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the marking controller completely unresponsive, preventing any part marking and requiring an immediate production line stop to preserve part traceability?",
+      "edge_label_to_next": null,
+      "turn_index": 1,
+      "ground_truth": {
+        "node_id": "box_22",
+        "node_type": "decision",
+        "node_text": "Is the marking controller completely unresponsive, preventing any part marking and requiring an immediate production line stop to preserve part traceability?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_22",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no controller responding to some inputs so we can contiune with standard troubleshooting without stopping line",
+      "edge_label_to_next": "Standard fault, continue diagnosis",
+      "turn_index": 2,
+      "ground_truth": {
+        "node_id": "box_22",
+        "node_type": "decision",
+        "node_text": "Is the marking controller completely unresponsive, preventing any part marking and requiring an immediate production line stop to preserve part traceability?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the marking controller powered on and in the ready state with no active fault or interlock?",
+      "edge_label_to_next": null,
+      "turn_index": 3,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "decision",
+        "node_text": "Is the marking controller powered on and in the ready state (no active fault or interlock)?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no, controller showing fault indicator not in ready state",
+      "edge_label_to_next": "No",
+      "turn_index": 4,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "decision",
+        "node_text": "Is the marking controller powered on and in the ready state (no active fault or interlock)?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_3",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Power cycle the marking controller following the shutdown and startup procedure. Wait for the full startup sequence to complete before reattempting communication.",
+      "edge_label_to_next": null,
+      "turn_index": 5,
+      "ground_truth": {
+        "node_id": "box_3",
+        "node_type": "process",
+        "node_text": "Power cycle the marking controller following the shutdown and startup procedure. Wait for the full startup sequence to complete before reattempting communication."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_3",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "I power cycled it like you said, but now the controller's display is showing a firmware version mismatch error that wasn't there before. What do I do about that?",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "coverage_gap",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_3",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "ok completed power cycle startup sequnce finished",
+      "edge_label_to_next": "",
+      "turn_index": 6,
+      "ground_truth": {
+        "node_id": "box_3",
+        "node_type": "process",
+        "node_text": "Power cycle the marking controller following the shutdown and startup procedure. Wait for the full startup sequence to complete before reattempting communication."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_6",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Physically inspect the communication cable connectors at the marking controller port and at the machine programmable controller interface port. Check that both connectors are fully seated and the locking mechanism is engaged.",
+      "edge_label_to_next": null,
+      "turn_index": 7,
+      "ground_truth": {
+        "node_id": "box_6",
+        "node_type": "process",
+        "node_text": "Physically inspect the communication cable connectors at the marking controller port and at the machine programmable controller interface port. Check that both connectors are fully seated and the locking mechanism is engaged."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_6",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "inspected both connectors checked locking mecahnisms",
+      "edge_label_to_next": null,
+      "turn_index": 8,
+      "ground_truth": {
+        "node_id": "box_6",
+        "node_type": "process",
+        "node_text": "Physically inspect the communication cable connectors at the marking controller port and at the machine programmable controller interface port. Check that both connectors are fully seated and the locking mechanism is engaged."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_5",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the network or serial communication cable physically connected at both ends, at the marking controller and the machine programmable controller?",
+      "edge_label_to_next": null,
+      "turn_index": 9,
+      "ground_truth": {
+        "node_id": "box_5",
+        "node_type": "decision",
+        "node_text": "Is the network or serial communication cable physically connected at both ends (marking controller and machine programmable controller)?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_5",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no one of the conectors wasnt fully seated in port",
+      "edge_label_to_next": "No",
+      "turn_index": 10,
+      "ground_truth": {
+        "node_id": "box_5",
+        "node_type": "decision",
+        "node_text": "Is the network or serial communication cable physically connected at both ends (marking controller and machine programmable controller)?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_7",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Reseat both connectors. If the cable is visibly damaged, such as kinked, crushed, or has bent connector pins, replace the communication cable.",
+      "edge_label_to_next": null,
+      "turn_index": 11,
+      "ground_truth": {
+        "node_id": "box_7",
+        "node_type": "process",
+        "node_text": "Reseat both connectors. If the cable is visibly damaged (kinked, crushed, or connector pins bent), replace the communication cable."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_7",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "yeah reseated both connectors theyre secure now cable looks fine no visible damage",
+      "edge_label_to_next": "",
+      "turn_index": 12,
+      "ground_truth": {
+        "node_id": "box_7",
+        "node_type": "process",
+        "node_text": "Reseat both connectors. If the cable is visibly damaged (kinked, crushed, or connector pins bent), replace the communication cable."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_9",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Inspect the communication port connector pins on both devices for corrosion, dust buildup, or bent pins. Also check the controller ventilation slots for blockage.",
+      "edge_label_to_next": null,
+      "turn_index": 13,
+      "ground_truth": {
+        "node_id": "box_9",
+        "node_type": "process",
+        "node_text": "Inspect the communication port connector pins on both devices for corrosion, dust build up, or bent pins. Check the controller ventilation slots for blockage."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_9",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "inspected connector pins and ventilation slots on both devicse",
+      "edge_label_to_next": null,
+      "turn_index": 14,
+      "ground_truth": {
+        "node_id": "box_9",
+        "node_type": "process",
+        "node_text": "Inspect the communication port connector pins on both devices for corrosion, dust build up, or bent pins. Check the controller ventilation slots for blockage."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Are there contaminated connector pins or ventilation slots on the marking controller or programmable controller interface card?",
+      "edge_label_to_next": null,
+      "turn_index": 15,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "decision",
+        "node_text": "Are there contaminated connector pins or ventilation slots on the marking controller or programmable controller interface card?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "The controller's power supply capacitor looks swollen and there's a burnt smell coming from the voltage regulator section, but the pins and vents look clean.",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "undocumented_malfunction",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no connector pins clean ventilation slots clear",
+      "edge_label_to_next": "No",
+      "turn_index": 16,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "decision",
+        "node_text": "Are there contaminated connector pins or ventilation slots on the marking controller or programmable controller interface card?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_11",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Are there electrical defects in the network interface card, power supply, or ground connection?",
+      "edge_label_to_next": null,
+      "turn_index": 17,
+      "ground_truth": {
+        "node_id": "box_11",
+        "node_type": "decision",
+        "node_text": "Are there electrical defects in the network interface card, power supply, or ground connection?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_11",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no network interface card shows no fault indicators power supply voltage within spec ground connection secure",
+      "edge_label_to_next": "No",
+      "turn_index": 18,
+      "ground_truth": {
+        "node_id": "box_11",
+        "node_type": "decision",
+        "node_text": "Are there electrical defects in the network interface card, power supply, or ground connection?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_14",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Are the communication protocol parameters, such as baud rate, IP address, or port number, correctly configured on both the marking controller and the machine programmable controller?",
+      "edge_label_to_next": null,
+      "turn_index": 19,
+      "ground_truth": {
+        "node_id": "box_14",
+        "node_type": "decision",
+        "node_text": "Are the communication protocol parameters (baud rate, IP address, or port number) correctly configured on both the marking controller and the machine programmable controller?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_14",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yes compared the setings they match on both devices",
+      "edge_label_to_next": "Yes",
+      "turn_index": 20,
+      "ground_truth": {
+        "node_id": "box_14",
+        "node_type": "decision",
+        "node_text": "Are the communication protocol parameters (baud rate, IP address, or port number) correctly configured on both the marking controller and the machine programmable controller?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_17",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Has the communication link been restored and is the marking controller receiving and executing marking commands correctly?",
+      "edge_label_to_next": null,
+      "turn_index": 21,
+      "ground_truth": {
+        "node_id": "box_17",
+        "node_type": "decision",
+        "node_text": "Has the communication link been restored and is the marking controller receiving and executing marking commands correctly?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_17",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yeah sent test marking command controller acknowleged it and executed test mark succesfully",
+      "edge_label_to_next": "Yes",
+      "turn_index": 22,
+      "ground_truth": {
+        "node_id": "box_17",
+        "node_type": "decision",
+        "node_text": "Has the communication link been restored and is the marking controller receiving and executing marking commands correctly?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_20",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Record all corrective actions, parameter settings, and the final communication test result in the maintenance log. Notify the quality assurance team.",
+      "edge_label_to_next": null,
+      "turn_index": 23,
+      "ground_truth": {
+        "node_id": "box_20",
+        "node_type": "process",
+        "node_text": "Record all corrective actions, parameter settings, and the final communication test result in the maintenance log. Notify quality assurance team."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_20",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "ok so documented eveything in maintenance log notified quality assurance",
+      "edge_label_to_next": null,
+      "turn_index": 24,
+      "ground_truth": {
+        "node_id": "box_20",
+        "node_type": "process",
+        "node_text": "Record all corrective actions, parameter settings, and the final communication test result in the maintenance log. Notify quality assurance team."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_21",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Marking controller communication is restored. The procedure is complete. Return the system to normal operation.",
+      "edge_label_to_next": null,
+      "turn_index": 25,
+      "ground_truth": {
+        "node_id": "box_21",
+        "node_type": "terminator",
+        "node_text": "Marking controller communication is restored. End."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_21",
+      "node_type": "terminator",
+      "speaker": "operator",
+      "utterance": "understood returning to normal operation now",
+      "edge_label_to_next": null,
+      "turn_index": 26,
+      "ground_truth": {
+        "node_id": "box_21",
+        "node_type": "terminator",
+        "node_text": "Marking controller communication is restored. End."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    }
+  ],
+  "metadata": {
+    "depth": 14,
+    "num_decisions": 7,
+    "num_processes": 5,
+    "num_documents": 0,
+    "terminator_type": "procedure_complete",
+    "terminator_text": "Marking controller communication is restored. End.",
+    "true_terminator": true,
+    "node_sequence": [
+      "box_0",
+      "box_22",
+      "box_1",
+      "box_3",
+      "box_6",
+      "box_5",
+      "box_7",
+      "box_9",
+      "box_8",
+      "box_11",
+      "box_14",
+      "box_17",
+      "box_20",
+      "box_21"
+    ],
+    "edge_labels": [
+      null,
+      null,
+      "Standard fault, continue diagnosis",
+      "No",
+      "",
+      null,
+      "No",
+      "",
+      null,
+      "No",
+      "No",
+      "Yes",
+      "Yes",
+      null
+    ],
+    "decision_points": [
+      {
+        "node": "box_22",
+        "label": "Standard fault, continue diagnosis",
+        "question": "Is the marking controller completely unresponsive, preventing any part marking and requiring an immediate production line stop to preserve part traceability?"
+      },
+      {
+        "node": "box_1",
+        "label": "No",
+        "question": "Is the marking controller powered on and in the ready state (no active fault or interlock)?"
+      },
+      {
+        "node": "box_5",
+        "label": "No",
+        "question": "Is the network or serial communication cable physically connected at both ends (marking controller and machine programmable controller)?"
+      },
+      {
+        "node": "box_8",
+        "label": "No",
+        "question": "Are there contaminated connector pins or ventilation slots on the marking controller or programmable controller interface card?"
+      },
+      {
+        "node": "box_11",
+        "label": "No",
+        "question": "Are there electrical defects in the network interface card, power supply, or ground connection?"
+      },
+      {
+        "node": "box_14",
+        "label": "Yes",
+        "question": "Are the communication protocol parameters (baud rate, IP address, or port number) correctly configured on both the marking controller and the machine programmable controller?"
+      },
+      {
+        "node": "box_17",
+        "label": "Yes",
+        "question": "Has the communication link been restored and is the marking controller receiving and executing marking commands correctly?"
+      }
+    ],
+    "generation_model": "anthropic/claude-sonnet-4-5",
+    "verification": {
+      "variant_of": "base",
+      "base_verified": true,
+      "note": "surface-form variant; not independently verified"
+    },
+    "injection_count": 2
+  },
+  "injection_log": [
+    {
+      "position": 6,
+      "node_id": "box_3",
+      "node_text": "Power cycle the marking controller following the shutdown and startup procedure. Wait for the full startup sequence to complete before reattempting communication.",
+      "edge_labels": [],
+      "category": "coverage_gap",
+      "utterance": "I power cycled it like you said, but now the controller's display is showing a firmware version mismatch error that wasn't there before. What do I do about that?",
+      "injection_rate": null,
+      "num_candidates": null
+    },
+    {
+      "position": 16,
+      "node_id": "box_8",
+      "node_text": "Are there contaminated connector pins or ventilation slots on the marking controller or programmable controller interface card?",
+      "edge_labels": [
+        "Yes",
+        "No"
+      ],
+      "category": "undocumented_malfunction",
+      "utterance": "The controller's power supply capacitor looks swollen and there's a burnt smell coming from the voltage regulator section, but the pins and vents look clean.",
+      "injection_rate": null,
+      "num_candidates": null
+    }
+  ]
+}

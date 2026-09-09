@@ -1,0 +1,496 @@
+{
+  "id": "GRAPH44",
+  "description": "Multi-axis assembly fixture datum, clamp and thermal inspection — PROC-68",
+  "graph": {
+    "nodes": {
+      "box_0": {
+        "type": "terminator",
+        "text": "Start"
+      },
+      "box_1": {
+        "type": "process",
+        "text": "Complete the following checks: 1. Inspect the fixture base plate for cracks or surface distortion. 2. Check locating surfaces, dowel holes, and mounting pad faces for damage. 3. Inspect each clamp body for deformation or cracked pivot pins."
+      },
+      "box_2": {
+        "type": "decision",
+        "text": "Base plate cracks, distortion or damaged mounting surfaces?"
+      },
+      "box_3": {
+        "type": "terminator",
+        "text": "End, Escalate: fixture base plate replacement required"
+      },
+      "box_4": {
+        "type": "process",
+        "text": "With the fixture mounted in the machine, remove all tooling and use an air line to blow chips and coolant from all locating surfaces, clamp pads, and bore surfaces. Wipe all datum faces with a clean lint free cloth. Inspect the clamp mechanisms for embedded swarf or coolant deposits that could affect subsequent measurement accuracy."
+      },
+      "box_5": {
+        "type": "process",
+        "text": "Using a dial gauge on a height stand or the machine probing cycle, measure the primary datum A surface height at four symmetrically distributed points. Record the maximum height variation across the four points and compare against the flatness tolerance for datum A in the fixture qualification record. Any reading outside tolerance requires investigation of the datum seat for swarf inclusion or surface damage."
+      },
+      "box_6": {
+        "type": "document",
+        "text": "Refer to the fixture datum tolerance specification."
+      },
+      "box_7": {
+        "type": "decision",
+        "text": "Datum A surface within flatness tolerance of 0.02 mm?"
+      },
+      "box_8": {
+        "type": "process",
+        "text": "Scrape or regrind datum A surface to restore flatness"
+      },
+      "box_9": {
+        "type": "process",
+        "text": "Locate the probe stylus against the primary locating pin at three heights along the pin axis. Record the pin position in X and Y relative to the fixture datum origin. Compare the measured position against the nominal position on the fixture design drawing; deviation greater than the tolerance stated in the process control plan requires fixture withdrawal for repair."
+      },
+      "box_10": {
+        "type": "document",
+        "text": "Refer to the locating pin position specification."
+      },
+      "box_11": {
+        "type": "decision",
+        "text": "Primary locating pins within ±0.01 mm of nominal position?"
+      },
+      "box_12": {
+        "type": "process",
+        "text": "Adjust pin bore plugs and reream to correct datum"
+      },
+      "box_13": {
+        "type": "decision",
+        "text": "Reverify primary pin positions after bore adjustment"
+      },
+      "box_14": {
+        "type": "terminator",
+        "text": "End, Escalate: primary datum shift exceeds correction range, coordinate measuring machine review"
+      },
+      "box_15": {
+        "type": "process",
+        "text": "Move the machine probe to the secondary locating pin and measure the pin position in the axis perpendicular to the primary locating direction. Record the offset from nominal and compare against the positional tolerance in the fixture qualification drawing. Check the pin for looseness by attempting to deflect it by hand; any detectable movement indicates a failed retention mechanism."
+      },
+      "box_16": {
+        "type": "decision",
+        "text": "Secondary locating pins within ±0.015 mm of nominal?"
+      },
+      "box_17": {
+        "type": "process",
+        "text": "Complete the following steps: 1. Identify the secondary locating pin bore that is out of position. 2. Loosen the bore insert retention screws and use an adjusting tool to shift the bore. 3. Retorque the retention screws and remeasure the bore position."
+      },
+      "box_18": {
+        "type": "process",
+        "text": "Using a calibrated height gauge on the machine table surface plate, measure the height of each of the four reference pads relative to the fixture base. Record all four values and calculate the height variation. A variation exceeding the flatness tolerance on the fixture drawing indicates that one or more pads has been contaminated, damaged, or that the fixture base has distorted."
+      },
+      "box_19": {
+        "type": "document",
+        "text": "Refer to the z height reference specification."
+      },
+      "box_20": {
+        "type": "decision",
+        "text": "All Z height reference pads within ±0.01 mm of each other?"
+      },
+      "box_21": {
+        "type": "process",
+        "text": "Regrind or shim low reference pads to restore coplanarity"
+      },
+      "box_22": {
+        "type": "process",
+        "text": "Place a precision spirit level on the angular datum face and record the displayed deviation from level. Set up a sine bar at the nominal fixture angle and verify the angular datum contacts the sine bar face flush with no rocking. Record the angular deviation and compare against the angular tolerance in the fixture specification."
+      },
+      "box_23": {
+        "type": "document",
+        "text": "Refer to the angular datum specification."
+      },
+      "box_24": {
+        "type": "decision",
+        "text": "Angular datum within 0.005 mm per 100 mm tolerance?"
+      },
+      "box_25": {
+        "type": "process",
+        "text": "Adjust angular datum block shims to correct inclination"
+      },
+      "box_26": {
+        "type": "process",
+        "text": "Insert a load cell between the clamping pad face and the reference surface at each clamping point in turn. Command the clamp to close at the production clamping pressure and record the force from the load cell amplifier display. Compare each reading against the minimum required clamp force in the fixturing specification and note any station that falls below the minimum."
+      },
+      "box_27": {
+        "type": "document",
+        "text": "Refer to the clamping force specification."
+      },
+      "box_28": {
+        "type": "decision",
+        "text": "All clamping forces within ±8% of nominal?"
+      },
+      "box_29": {
+        "type": "process",
+        "text": "Replace return springs and adjust clamp travel stops"
+      },
+      "box_30": {
+        "type": "decision",
+        "text": "Reverify clamp forces after spring replacement"
+      },
+      "box_31": {
+        "type": "terminator",
+        "text": "End, Escalate: clamp force non conformance after service, actuator check"
+      },
+      "box_32": {
+        "type": "process",
+        "text": "Allow the fixture to stabilise at production operating temperature by running the machine under cutting load for 30 minutes with a representative part fixtured. Reprobe the primary datum surface and primary locating pin at the same measurement points used during the cold measurement. Record the positional change and compare against the thermal growth allowance in the fixture thermal qualification record."
+      },
+      "box_33": {
+        "type": "decision",
+        "text": "Thermal expansion datum shift within model prediction ±0.01 mm?"
+      },
+      "box_34": {
+        "type": "process",
+        "text": "Complete the following steps: 1. Read the thermal compensation model coefficients from the controller. 2. Compare the stored values against the reference calibration record. 3. Check the guide rail straightness and compare against the 0.01 mm per 300 mm limit."
+      },
+      "box_35": {
+        "type": "process",
+        "text": "Slide a precision straight edge along the full length of each guide rail and use feeler gauges to measure any gap between the straight edge and the rail surface. Record the maximum gap at any point. Inspect the rail surface under a magnifier for pitting, fretting, or embedded swarf; any surface defect in the running zone requires assessment against the surface finish specification."
+      },
+      "box_36": {
+        "type": "document",
+        "text": "Refer to the guide rail straightness specification."
+      },
+      "box_37": {
+        "type": "decision",
+        "text": "Guide rail straightness within 0.01 mm per 300 mm?"
+      },
+      "box_38": {
+        "type": "process",
+        "text": "Realign guide rail and recheck straightness with precision level"
+      },
+      "box_39": {
+        "type": "process",
+        "text": "Apply the specified grease to each linear bearing block through the grease nipple using a grease gun; apply two strokes per bearing. Apply grease to each pivot pin through its dedicated lubrication point. Cycle the moving elements through their full range three times to distribute the lubricant before wiping away any excess from part contact faces."
+      },
+      "box_40": {
+        "type": "document",
+        "text": "Refer to the fixture lubrication specification."
+      },
+      "box_41": {
+        "type": "decision",
+        "text": "All lubrication points serviced per schedule?"
+      },
+      "box_42": {
+        "type": "process",
+        "text": "Apply grease to missed lubrication points"
+      },
+      "box_43": {
+        "type": "process",
+        "text": "Load the designated reference part into the fixture under normal production clamping force. Probe the part at the primary datum contact, the two secondary contact points, and the Z height reference surface using the machine probing cycle. Record all four measured values and compare against the reference part qualification certificate values; deviations outside tolerance indicate fixture datum shift requiring root cause investigation."
+      },
+      "box_44": {
+        "type": "decision",
+        "text": "Reference part positioned within ±0.02 mm of nominal at all datums?"
+      },
+      "box_45": {
+        "type": "terminator",
+        "text": "End, Escalate: functional trial failed, datum incompatibility"
+      },
+      "box_46": {
+        "type": "process",
+        "text": "Log coordinate measuring machine data, clamp forces and service details"
+      },
+      "box_47": {
+        "type": "terminator",
+        "text": "End, Procedure complete"
+      },
+      "box_48": {
+        "type": "process",
+        "text": "Secondary fixture datum correction: slacken the primary locating pin retaining screws to allow fine positional adjustment. Use a precision adjusting screw to shift the pin toward the nominal position by half the measured error. Retorque the retaining screws in the prescribed sequence and allow the fixture to settle for 2 minutes under full clamping load before returning to the primary locating pin measurement step."
+      }
+    },
+    "edges": [
+      {
+        "source": "box_0",
+        "target": "box_1",
+        "label": null
+      },
+      {
+        "source": "box_1",
+        "target": "box_2",
+        "label": null
+      },
+      {
+        "source": "box_2",
+        "target": "box_3",
+        "label": "Yes"
+      },
+      {
+        "source": "box_2",
+        "target": "box_7",
+        "label": "No"
+      },
+      {
+        "source": "box_4",
+        "target": "box_7",
+        "label": null
+      },
+      {
+        "source": "box_5",
+        "target": "box_7",
+        "label": null
+      },
+      {
+        "source": "box_6",
+        "target": "box_7",
+        "label": null
+      },
+      {
+        "source": "box_7",
+        "target": "box_8",
+        "label": "No"
+      },
+      {
+        "source": "box_8",
+        "target": "box_9",
+        "label": ""
+      },
+      {
+        "source": "box_7",
+        "target": "box_11",
+        "label": "Yes"
+      },
+      {
+        "source": "box_9",
+        "target": "box_11",
+        "label": null
+      },
+      {
+        "source": "box_10",
+        "target": "box_11",
+        "label": null
+      },
+      {
+        "source": "box_11",
+        "target": "box_12",
+        "label": "No"
+      },
+      {
+        "source": "box_12",
+        "target": "box_13",
+        "label": null
+      },
+      {
+        "source": "box_13",
+        "target": "box_16",
+        "label": "OK"
+      },
+      {
+        "source": "box_11",
+        "target": "box_16",
+        "label": "Yes"
+      },
+      {
+        "source": "box_15",
+        "target": "box_16",
+        "label": null
+      },
+      {
+        "source": "box_16",
+        "target": "box_17",
+        "label": "No"
+      },
+      {
+        "source": "box_17",
+        "target": "box_18",
+        "label": ""
+      },
+      {
+        "source": "box_16",
+        "target": "box_20",
+        "label": "Yes"
+      },
+      {
+        "source": "box_18",
+        "target": "box_20",
+        "label": null
+      },
+      {
+        "source": "box_19",
+        "target": "box_20",
+        "label": null
+      },
+      {
+        "source": "box_20",
+        "target": "box_21",
+        "label": "No"
+      },
+      {
+        "source": "box_21",
+        "target": "box_22",
+        "label": ""
+      },
+      {
+        "source": "box_20",
+        "target": "box_24",
+        "label": "Yes"
+      },
+      {
+        "source": "box_22",
+        "target": "box_24",
+        "label": null
+      },
+      {
+        "source": "box_23",
+        "target": "box_24",
+        "label": null
+      },
+      {
+        "source": "box_24",
+        "target": "box_25",
+        "label": "No"
+      },
+      {
+        "source": "box_25",
+        "target": "box_26",
+        "label": ""
+      },
+      {
+        "source": "box_24",
+        "target": "box_28",
+        "label": "Yes"
+      },
+      {
+        "source": "box_26",
+        "target": "box_28",
+        "label": null
+      },
+      {
+        "source": "box_27",
+        "target": "box_28",
+        "label": null
+      },
+      {
+        "source": "box_28",
+        "target": "box_29",
+        "label": "No"
+      },
+      {
+        "source": "box_29",
+        "target": "box_30",
+        "label": null
+      },
+      {
+        "source": "box_30",
+        "target": "box_31",
+        "label": "Still failing"
+      },
+      {
+        "source": "box_30",
+        "target": "box_33",
+        "label": "OK"
+      },
+      {
+        "source": "box_28",
+        "target": "box_33",
+        "label": "Yes"
+      },
+      {
+        "source": "box_32",
+        "target": "box_33",
+        "label": null
+      },
+      {
+        "source": "box_33",
+        "target": "box_34",
+        "label": "No"
+      },
+      {
+        "source": "box_34",
+        "target": "box_35",
+        "label": ""
+      },
+      {
+        "source": "box_33",
+        "target": "box_37",
+        "label": "Yes"
+      },
+      {
+        "source": "box_35",
+        "target": "box_37",
+        "label": null
+      },
+      {
+        "source": "box_36",
+        "target": "box_37",
+        "label": null
+      },
+      {
+        "source": "box_37",
+        "target": "box_38",
+        "label": "No"
+      },
+      {
+        "source": "box_38",
+        "target": "box_39",
+        "label": ""
+      },
+      {
+        "source": "box_37",
+        "target": "box_41",
+        "label": "Yes"
+      },
+      {
+        "source": "box_39",
+        "target": "box_41",
+        "label": null
+      },
+      {
+        "source": "box_40",
+        "target": "box_41",
+        "label": null
+      },
+      {
+        "source": "box_41",
+        "target": "box_42",
+        "label": "No"
+      },
+      {
+        "source": "box_42",
+        "target": "box_43",
+        "label": ""
+      },
+      {
+        "source": "box_41",
+        "target": "box_44",
+        "label": "Yes"
+      },
+      {
+        "source": "box_43",
+        "target": "box_44",
+        "label": null
+      },
+      {
+        "source": "box_44",
+        "target": "box_45",
+        "label": "No"
+      },
+      {
+        "source": "box_44",
+        "target": "box_46",
+        "label": "Yes"
+      },
+      {
+        "source": "box_46",
+        "target": "box_47",
+        "label": null
+      },
+      {
+        "source": "box_13",
+        "target": "box_48",
+        "label": "Still out of spec"
+      },
+      {
+        "source": "box_48",
+        "target": "box_13",
+        "label": null
+      },
+      {
+        "source": "box_13",
+        "target": "box_14",
+        "label": "Unresolvable after second attempt"
+      }
+    ]
+  }
+}

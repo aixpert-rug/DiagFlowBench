@@ -1,0 +1,338 @@
+{
+  "id": "GRAPH08",
+  "description": "Troubleshooting procedure for faults occurring during robotic ejection and placement of a part onto a nest in preparation for insert installation.",
+  "graph": {
+    "nodes": {
+      "box_0": {
+        "type": "terminator",
+        "text": "Start"
+      },
+      "box_1": {
+        "type": "decision",
+        "text": "Does the product meet quality assurance team product specifications?"
+      },
+      "box_2": {
+        "type": "process",
+        "text": "Verify that the product meets quality assurance team specifications before proceeding."
+      },
+      "box_3": {
+        "type": "process",
+        "text": "Remove the current batch, load a new batch of parts, and reverify product quality against quality assurance specifications."
+      },
+      "box_4": {
+        "type": "decision",
+        "text": "Is the part placement in the indexing table correct?"
+      },
+      "box_5": {
+        "type": "process",
+        "text": "Follow the indexing table placement diagnostic (GRAPH 18)."
+      },
+      "box_6": {
+        "type": "document",
+        "text": "Indexing table placement diagnostic (GRAPH 18)"
+      },
+      "box_7": {
+        "type": "decision",
+        "text": "Is the setup of the indexing table correct?"
+      },
+      "box_8": {
+        "type": "process",
+        "text": "Follow the indexing table setup procedure."
+      },
+      "box_9": {
+        "type": "document",
+        "text": "Indexing table setup procedure"
+      },
+      "box_10": {
+        "type": "decision",
+        "text": "Are there contaminated parts?"
+      },
+      "box_11": {
+        "type": "process",
+        "text": "Complete the following checks: 1. Check the actuator guide for contamination. 2. Check the mounting heads for contamination."
+      },
+      "box_12": {
+        "type": "document",
+        "text": "Pneumatic flow measurement procedure: vacuum flow check"
+      },
+      "box_13": {
+        "type": "process",
+        "text": "Clean the parts and lubricate the actuator guide."
+      },
+      "box_14": {
+        "type": "decision",
+        "text": "Are there electrical defects?"
+      },
+      "box_15": {
+        "type": "process",
+        "text": "Complete the following checks in order: 1. Check the vacuum generator for correct operation. 2. Check the input/output signal configuration on the operator control interface. 3. Check the electrical valve actuator control. 4. Check the proximity sensors."
+      },
+      "box_16": {
+        "type": "process",
+        "text": "Replace the vacuum generator."
+      },
+      "box_17": {
+        "type": "decision",
+        "text": "Are there worn parts?"
+      },
+      "box_18": {
+        "type": "process",
+        "text": "Complete the following checks: 1. Check the actuator guide for wear. 2. Check the mounting heads for wear."
+      },
+      "box_19": {
+        "type": "process",
+        "text": "Replace the worn actuator components identified in the inspection (guide and/or mounting heads)."
+      },
+      "box_20": {
+        "type": "decision",
+        "text": "Is the mounting speed correct?"
+      },
+      "box_21": {
+        "type": "document",
+        "text": "Refer to the mounting speed specification for variant A machines (small format parts)."
+      },
+      "box_22": {
+        "type": "document",
+        "text": "Refer to the mounting speed specification for variant B machines (medium format parts)."
+      },
+      "box_23": {
+        "type": "document",
+        "text": "Refer to the mounting speed specification for variant C machines (large format parts)."
+      },
+      "box_24": {
+        "type": "process",
+        "text": "Readjust the speed with the flow control valve"
+      },
+      "box_25": {
+        "type": "decision",
+        "text": "Is the height of the part lifter relative to the indexing table correct?"
+      },
+      "box_26": {
+        "type": "document",
+        "text": "Refer to the part lifter height check relative to indexing table for variant A machines (small format parts)."
+      },
+      "box_27": {
+        "type": "document",
+        "text": "Refer to the part lifter height check relative to indexing table for variant B machines (medium format parts)."
+      },
+      "box_28": {
+        "type": "document",
+        "text": "Refer to the part lifter height check relative to indexing table for variant C machines (large format parts)."
+      },
+      "box_29": {
+        "type": "process",
+        "text": "Adjust the height of the part lifter relative to the indexing table to match the specified value."
+      },
+      "box_30": {
+        "type": "decision",
+        "text": "Is the X/Y position relative to the indexing table correct?"
+      },
+      "box_31": {
+        "type": "document",
+        "text": "Refer to the x/y position check relative to indexing table with setup tool for variant A machines (small format parts)."
+      },
+      "box_32": {
+        "type": "document",
+        "text": "Refer to the x/y position check relative to indexing table with setup tool for variant B machines (medium format parts)."
+      },
+      "box_33": {
+        "type": "document",
+        "text": "Refer to the x/y position check relative to indexing table with setup tool for variant C machines (large format parts)."
+      },
+      "box_34": {
+        "type": "process",
+        "text": "Adjust the X/Y position of the mounting unit relative to the indexing table to the correct position using the setup tool."
+      },
+      "box_35": {
+        "type": "process",
+        "text": "Verify that the part is mounted centred and straight from the indexing table, all actuators have reached their end positions, and all part lifters are at equal height."
+      },
+      "box_36": {
+        "type": "terminator",
+        "text": "Part mounting for insert placement is correct"
+      }
+    },
+    "edges": [
+      {
+        "source": "box_0",
+        "target": "box_1",
+        "label": null
+      },
+      {
+        "source": "box_2",
+        "target": "box_1",
+        "label": null
+      },
+      {
+        "source": "box_1",
+        "target": "box_3",
+        "label": "No"
+      },
+      {
+        "source": "box_1",
+        "target": "box_4",
+        "label": "Yes"
+      },
+      {
+        "source": "box_5",
+        "target": "box_4",
+        "label": null
+      },
+      {
+        "source": "box_4",
+        "target": "box_6",
+        "label": "No"
+      },
+      {
+        "source": "box_4",
+        "target": "box_7",
+        "label": "Yes"
+      },
+      {
+        "source": "box_8",
+        "target": "box_7",
+        "label": null
+      },
+      {
+        "source": "box_7",
+        "target": "box_9",
+        "label": "No"
+      },
+      {
+        "source": "box_7",
+        "target": "box_10",
+        "label": "Yes"
+      },
+      {
+        "source": "box_11",
+        "target": "box_10",
+        "label": null
+      },
+      {
+        "source": "box_12",
+        "target": "box_10",
+        "label": null
+      },
+      {
+        "source": "box_10",
+        "target": "box_13",
+        "label": "Yes"
+      },
+      {
+        "source": "box_10",
+        "target": "box_14",
+        "label": "No"
+      },
+      {
+        "source": "box_15",
+        "target": "box_14",
+        "label": null
+      },
+      {
+        "source": "box_14",
+        "target": "box_16",
+        "label": "Yes"
+      },
+      {
+        "source": "box_14",
+        "target": "box_17",
+        "label": "No"
+      },
+      {
+        "source": "box_18",
+        "target": "box_17",
+        "label": null
+      },
+      {
+        "source": "box_17",
+        "target": "box_19",
+        "label": "Yes"
+      },
+      {
+        "source": "box_17",
+        "target": "box_20",
+        "label": "No"
+      },
+      {
+        "source": "box_21",
+        "target": "box_20",
+        "label": null
+      },
+      {
+        "source": "box_22",
+        "target": "box_20",
+        "label": null
+      },
+      {
+        "source": "box_23",
+        "target": "box_20",
+        "label": null
+      },
+      {
+        "source": "box_20",
+        "target": "box_24",
+        "label": "No"
+      },
+      {
+        "source": "box_20",
+        "target": "box_25",
+        "label": "Yes"
+      },
+      {
+        "source": "box_26",
+        "target": "box_25",
+        "label": null
+      },
+      {
+        "source": "box_27",
+        "target": "box_25",
+        "label": null
+      },
+      {
+        "source": "box_28",
+        "target": "box_25",
+        "label": null
+      },
+      {
+        "source": "box_25",
+        "target": "box_29",
+        "label": "No"
+      },
+      {
+        "source": "box_25",
+        "target": "box_30",
+        "label": "Yes"
+      },
+      {
+        "source": "box_31",
+        "target": "box_30",
+        "label": null
+      },
+      {
+        "source": "box_32",
+        "target": "box_30",
+        "label": null
+      },
+      {
+        "source": "box_33",
+        "target": "box_30",
+        "label": null
+      },
+      {
+        "source": "box_30",
+        "target": "box_34",
+        "label": "No"
+      },
+      {
+        "source": "box_30",
+        "target": "box_35",
+        "label": "Yes"
+      },
+      {
+        "source": "box_35",
+        "target": "box_36",
+        "label": null
+      }
+    ]
+  }
+}

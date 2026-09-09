@@ -1,0 +1,242 @@
+{
+  "id": "GRAPH30",
+  "description": "Troubleshooting flowchart for part insertion depth measurements outside the specified range, covering part material batch conformance, press depth setting, pressing head contact, and depth gauge calibration.",
+  "graph": {
+    "nodes": {
+      "box_0": {
+        "type": "terminator",
+        "text": "Start"
+      },
+      "box_1": {
+        "type": "process",
+        "text": "Record the measured insertion depth values, the direction of deviation (too shallow or too deep), and the batch number. Collect five representative parts for reference."
+      },
+      "box_2": {
+        "type": "decision",
+        "text": "Is the insertion depth deviation consistent and in one direction (all too shallow or all too deep)?"
+      },
+      "box_3": {
+        "type": "process",
+        "text": "Complete the following steps: 1. Record insertion depth readings for ten consecutive parts. 2. Calculate the mean depth and compare against the nominal target. 3. Check whether the deviation is consistent or varies between parts."
+      },
+      "box_4": {
+        "type": "process",
+        "text": "If the depth deviation is random, check part to part dimensional variation in the batch. Sample five parts for dimensional measurement."
+      },
+      "box_5": {
+        "type": "decision",
+        "text": "Is the part material batch dimensionally within the specification for this product type?"
+      },
+      "box_6": {
+        "type": "process",
+        "text": "Measure the outer diameter and top surface geometry of five parts from the current batch and compare against the incoming material specification."
+      },
+      "box_7": {
+        "type": "process",
+        "text": "Reject the current batch as dimensionally non conforming. Reload from a batch with confirmed dimensional conformance. Create a non conformance record."
+      },
+      "box_8": {
+        "type": "decision",
+        "text": "Is the press depth setting (lower position setpoint) correct for this product type?"
+      },
+      "box_9": {
+        "type": "process",
+        "text": "Complete the following checks: 1. Read the lower position setpoint from the press depth parameter screen. 2. Compare the stored setpoint against the value on the validated process sheet. 3. Check whether the setpoint was changed since the last confirmed good run."
+      },
+      "box_10": {
+        "type": "process",
+        "text": "Adjust the press depth setting to the specified value for this product type and rerun a test pressing cycle. Verify the corrected depth."
+      },
+      "box_11": {
+        "type": "decision",
+        "text": "Is the pressing head making full, flat contact with the top surface of the part at the lower position?"
+      },
+      "box_12": {
+        "type": "process",
+        "text": "Jog the pressing head to the lower position and visually inspect the contact between the pressing head face and the part top surface. Check for tilt or partial contact."
+      },
+      "box_13": {
+        "type": "process",
+        "text": "Realign the pressing head perpendicular to the part axis and verify that full flat contact is achieved across the entire contact surface."
+      },
+      "box_14": {
+        "type": "decision",
+        "text": "Is the depth measurement gauge reading correctly (validated against the reference block)?"
+      },
+      "box_15": {
+        "type": "process",
+        "text": "Place the reference calibration block under the depth gauge and verify that the readout matches the reference block value within the specified gauge tolerance."
+      },
+      "box_16": {
+        "type": "process",
+        "text": "Rezero the depth gauge using the reference block and repeat the calibration check. Replace the depth gauge if the offset exceeds the acceptable correction range."
+      },
+      "box_17": {
+        "type": "decision",
+        "text": "Is the insertion depth within specification after all corrections?"
+      },
+      "box_18": {
+        "type": "process",
+        "text": "Escalate to the maintenance team: insertion depth is outside specification despite all standard corrective actions; inspect the pressing station mechanical stops and actuator condition."
+      },
+      "box_19": {
+        "type": "process",
+        "text": "Record corrective actions and the verified insertion depth measurements in the quality log. Notify quality assurance team."
+      },
+      "box_20": {
+        "type": "terminator",
+        "text": "End, notify quality assurance team."
+      },
+      "box_21": {
+        "type": "decision",
+        "text": "Is the insertion depth deviation large enough to indicate a part to fixture mismatch or a tooling failure that would cause damaged parts if production continues?"
+      },
+      "box_22": {
+        "type": "terminator",
+        "text": "End, production stopped immediately: insertion depth deviation critical, quarantine all parts produced since last good measurement and escalate to process engineer"
+      }
+    },
+    "edges": [
+      {
+        "source": "box_1",
+        "target": "box_3",
+        "label": ""
+      },
+      {
+        "source": "box_3",
+        "target": "box_2",
+        "label": null
+      },
+      {
+        "source": "box_2",
+        "target": "box_4",
+        "label": "No"
+      },
+      {
+        "source": "box_2",
+        "target": "box_5",
+        "label": "Yes"
+      },
+      {
+        "source": "box_4",
+        "target": "box_6",
+        "label": ""
+      },
+      {
+        "source": "box_6",
+        "target": "box_5",
+        "label": null
+      },
+      {
+        "source": "box_5",
+        "target": "box_7",
+        "label": "No"
+      },
+      {
+        "source": "box_5",
+        "target": "box_8",
+        "label": "Yes"
+      },
+      {
+        "source": "box_7",
+        "target": "box_9",
+        "label": ""
+      },
+      {
+        "source": "box_9",
+        "target": "box_8",
+        "label": null
+      },
+      {
+        "source": "box_8",
+        "target": "box_10",
+        "label": "No"
+      },
+      {
+        "source": "box_8",
+        "target": "box_11",
+        "label": "Yes"
+      },
+      {
+        "source": "box_10",
+        "target": "box_12",
+        "label": ""
+      },
+      {
+        "source": "box_12",
+        "target": "box_11",
+        "label": null
+      },
+      {
+        "source": "box_11",
+        "target": "box_13",
+        "label": "No"
+      },
+      {
+        "source": "box_11",
+        "target": "box_14",
+        "label": "Yes"
+      },
+      {
+        "source": "box_13",
+        "target": "box_15",
+        "label": ""
+      },
+      {
+        "source": "box_15",
+        "target": "box_14",
+        "label": null
+      },
+      {
+        "source": "box_14",
+        "target": "box_16",
+        "label": "No"
+      },
+      {
+        "source": "box_14",
+        "target": "box_17",
+        "label": "Yes"
+      },
+      {
+        "source": "box_16",
+        "target": "box_17",
+        "label": null
+      },
+      {
+        "source": "box_17",
+        "target": "box_18",
+        "label": "No"
+      },
+      {
+        "source": "box_17",
+        "target": "box_19",
+        "label": "Yes"
+      },
+      {
+        "source": "box_18",
+        "target": "box_19",
+        "label": null
+      },
+      {
+        "source": "box_19",
+        "target": "box_20",
+        "label": null
+      },
+      {
+        "source": "box_0",
+        "target": "box_21",
+        "label": null
+      },
+      {
+        "source": "box_21",
+        "target": "box_22",
+        "label": "Critical, immediate stop required"
+      },
+      {
+        "source": "box_21",
+        "target": "box_1",
+        "label": "Standard fault, continue diagnosis"
+      }
+    ]
+  }
+}

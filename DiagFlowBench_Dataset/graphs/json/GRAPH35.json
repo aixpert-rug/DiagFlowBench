@@ -1,0 +1,287 @@
+{
+  "id": "GRAPH35",
+  "description": "Linear encoder signal and position verification — PROC-55",
+  "graph": {
+    "nodes": {
+      "box_0": {
+        "type": "terminator",
+        "text": "Start"
+      },
+      "box_1": {
+        "type": "process",
+        "text": "Complete the following checks: 1. Inspect the encoder scale for scratches, oil, or coolant deposits. 2. Check the read head mounting for looseness or impact damage. 3. Inspect the cable and connector for chafing or corrosion."
+      },
+      "box_2": {
+        "type": "decision",
+        "text": "Physical damage to encoder strip or read head?"
+      },
+      "box_3": {
+        "type": "terminator",
+        "text": "End, Escalate: physical damage, replace encoder assembly"
+      },
+      "box_4": {
+        "type": "process",
+        "text": "Connect a digital oscilloscope to the encoder A and B channel outputs at the drive amplifier input terminals. Command slow axis movement and verify that both channels produce clean square waves with 90 degree phase separation and no missing pulses. Record the peak to peak voltage and compare against the encoder data sheet specification."
+      },
+      "box_5": {
+        "type": "document",
+        "text": "Refer to the encoder signal specification."
+      },
+      "box_6": {
+        "type": "decision",
+        "text": "Signal quality: clean waveform, no dropouts?"
+      },
+      "box_7": {
+        "type": "process",
+        "text": "Clean encoder strip with lint free cloth and isopropyl alcohol"
+      },
+      "box_8": {
+        "type": "decision",
+        "text": "Reverify signal quality after strip cleaning"
+      },
+      "box_9": {
+        "type": "terminator",
+        "text": "End, Replace encoder strip: signal quality unrecoverable"
+      },
+      "box_10": {
+        "type": "process",
+        "text": "Command a homing cycle from the machine controller and observe the axis motion from the controller position display. The axis should decelerate smoothly on the home switch trigger and come to rest at the reference mark position. Confirm the displayed home offset matches the value stored in the machine parameter table."
+      },
+      "box_11": {
+        "type": "decision",
+        "text": "Reference mark found during homing cycle?"
+      },
+      "box_12": {
+        "type": "process",
+        "text": "Reteach home offset, adjust reference mark position"
+      },
+      "box_13": {
+        "type": "process",
+        "text": "Command the axis to move to each of ten programmed reference positions distributed across the full travel, pausing two seconds at each point. At each position, record the encoder feedback value and the commanded position from the controller display. Calculate the maximum positioning error across the grid and compare against the axis accuracy specification."
+      },
+      "box_14": {
+        "type": "document",
+        "text": "Refer to the position accuracy specification."
+      },
+      "box_15": {
+        "type": "decision",
+        "text": "Position accuracy within tolerance at all test points?"
+      },
+      "box_16": {
+        "type": "process",
+        "text": "Adjust read head gap to encoder strip per specification"
+      },
+      "box_17": {
+        "type": "decision",
+        "text": "Reverify position accuracy after read head adjustment"
+      },
+      "box_18": {
+        "type": "terminator",
+        "text": "End, Escalate: encoder calibration by metrology required"
+      },
+      "box_19": {
+        "type": "document",
+        "text": "Refer to the thermal compensation table."
+      },
+      "box_20": {
+        "type": "decision",
+        "text": "Thermal compensation parameter active and correct?"
+      },
+      "box_21": {
+        "type": "process",
+        "text": "Complete the following checks: 1. Read the thermal compensation coefficient from the controller parameter screen. 2. Compare the stored coefficient against the reference value for this machine. 3. Check whether the compensation model was modified since the last calibration."
+      },
+      "box_22": {
+        "type": "process",
+        "text": "Trace the encoder cable from the read head to the drive amplifier, checking for sharp bends at conduit entries, contact with rotating parts, or unsupported lengths that can flex during high speed movement. Confirm that strain relief clamps are tight and positioned within 100 millimetres of each connector. Gently flex the cable at any suspected damage point while monitoring the encoder signal for glitches."
+      },
+      "box_23": {
+        "type": "decision",
+        "text": "Cable condition and routing acceptable?"
+      },
+      "box_24": {
+        "type": "process",
+        "text": "Reroute cable and fit strain relief clamps"
+      },
+      "box_25": {
+        "type": "decision",
+        "text": "Final 5 point position verification cycle passed?"
+      },
+      "box_26": {
+        "type": "process",
+        "text": "Log encoder service data and update maintenance record"
+      },
+      "box_27": {
+        "type": "terminator",
+        "text": "End, Procedure complete"
+      }
+    },
+    "edges": [
+      {
+        "source": "box_0",
+        "target": "box_1",
+        "label": null
+      },
+      {
+        "source": "box_1",
+        "target": "box_2",
+        "label": null
+      },
+      {
+        "source": "box_2",
+        "target": "box_3",
+        "label": "Yes"
+      },
+      {
+        "source": "box_2",
+        "target": "box_6",
+        "label": "No"
+      },
+      {
+        "source": "box_4",
+        "target": "box_6",
+        "label": null
+      },
+      {
+        "source": "box_5",
+        "target": "box_6",
+        "label": null
+      },
+      {
+        "source": "box_6",
+        "target": "box_7",
+        "label": "No"
+      },
+      {
+        "source": "box_7",
+        "target": "box_8",
+        "label": null
+      },
+      {
+        "source": "box_8",
+        "target": "box_9",
+        "label": "Still poor"
+      },
+      {
+        "source": "box_8",
+        "target": "box_11",
+        "label": "OK"
+      },
+      {
+        "source": "box_6",
+        "target": "box_11",
+        "label": "Yes"
+      },
+      {
+        "source": "box_10",
+        "target": "box_11",
+        "label": null
+      },
+      {
+        "source": "box_11",
+        "target": "box_12",
+        "label": "No"
+      },
+      {
+        "source": "box_12",
+        "target": "box_13",
+        "label": ""
+      },
+      {
+        "source": "box_11",
+        "target": "box_15",
+        "label": "Yes"
+      },
+      {
+        "source": "box_13",
+        "target": "box_15",
+        "label": null
+      },
+      {
+        "source": "box_14",
+        "target": "box_15",
+        "label": null
+      },
+      {
+        "source": "box_15",
+        "target": "box_16",
+        "label": "No"
+      },
+      {
+        "source": "box_16",
+        "target": "box_17",
+        "label": null
+      },
+      {
+        "source": "box_17",
+        "target": "box_18",
+        "label": "Still failing"
+      },
+      {
+        "source": "box_17",
+        "target": "box_20",
+        "label": "OK"
+      },
+      {
+        "source": "box_15",
+        "target": "box_20",
+        "label": "Yes"
+      },
+      {
+        "source": "box_19",
+        "target": "box_20",
+        "label": null
+      },
+      {
+        "source": "box_20",
+        "target": "box_21",
+        "label": "No"
+      },
+      {
+        "source": "box_21",
+        "target": "box_22",
+        "label": ""
+      },
+      {
+        "source": "box_20",
+        "target": "box_23",
+        "label": "Yes"
+      },
+      {
+        "source": "box_22",
+        "target": "box_23",
+        "label": null
+      },
+      {
+        "source": "box_23",
+        "target": "box_24",
+        "label": "No"
+      },
+      {
+        "source": "box_24",
+        "target": "box_25",
+        "label": null
+      },
+      {
+        "source": "box_23",
+        "target": "box_25",
+        "label": "Yes"
+      },
+      {
+        "source": "box_25",
+        "target": "box_26",
+        "label": "Yes"
+      },
+      {
+        "source": "box_25",
+        "target": "box_18",
+        "label": "No"
+      },
+      {
+        "source": "box_26",
+        "target": "box_27",
+        "label": null
+      }
+    ]
+  }
+}

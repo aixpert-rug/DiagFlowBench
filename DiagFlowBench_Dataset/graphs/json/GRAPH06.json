@@ -1,0 +1,113 @@
+{
+  "id": "GRAPH06",
+  "description": "Troubleshooting procedure for diagnosing the detection of an incorrect marking pattern on assembled parts.",
+  "graph": {
+    "nodes": {
+      "box_0": {
+        "type": "terminator",
+        "text": "Start"
+      },
+      "box_1": {
+        "type": "decision",
+        "text": "Were the parts with the wrong marking pattern made during regular production?"
+      },
+      "box_2": {
+        "type": "process",
+        "text": "Read out the part ID code of the relevant parts."
+      },
+      "box_3": {
+        "type": "process",
+        "text": "Notify the quality assurance team and remove all parts with the wrong marking pattern if necessary."
+      },
+      "box_4": {
+        "type": "decision",
+        "text": "Is the vision inspection system on?"
+      },
+      "box_5": {
+        "type": "process",
+        "text": "Check in the deselection menu on the operator control interface whether the vision inspection system is still enabled."
+      },
+      "box_6": {
+        "type": "process",
+        "text": "Turn on vision inspection system."
+      },
+      "box_7": {
+        "type": "decision",
+        "text": "Is the vision inspection system still properly set?"
+      },
+      "box_8": {
+        "type": "process",
+        "text": "Have maintenance team check the vision inspection system for pattern recognition"
+      },
+      "box_9": {
+        "type": "process",
+        "text": "Have maintenance team retrain the inspection model."
+      },
+      "box_10": {
+        "type": "terminator",
+        "text": "Notify quality assurance team and engineering team"
+      },
+      "box_11": {
+        "type": "process",
+        "text": "Proceed with the non conformance notification procedure."
+      }
+    },
+    "edges": [
+      {
+        "source": "box_0",
+        "target": "box_1",
+        "label": null
+      },
+      {
+        "source": "box_2",
+        "target": "box_1",
+        "label": null
+      },
+      {
+        "source": "box_1",
+        "target": "box_4",
+        "label": "Yes"
+      },
+      {
+        "source": "box_1",
+        "target": "box_3",
+        "label": "No"
+      },
+      {
+        "source": "box_5",
+        "target": "box_4",
+        "label": null
+      },
+      {
+        "source": "box_4",
+        "target": "box_7",
+        "label": "Yes"
+      },
+      {
+        "source": "box_4",
+        "target": "box_6",
+        "label": "No"
+      },
+      {
+        "source": "box_8",
+        "target": "box_7",
+        "label": null
+      },
+      {
+        "source": "box_7",
+        "target": "box_9",
+        "label": "No"
+      },
+      {
+        "source": "box_7",
+        "target": "box_11",
+        "label": "Yes"
+      },
+      {
+        "source": "box_11",
+        "target": "box_10",
+        "label": null
+      }
+    ]
+  }
+}

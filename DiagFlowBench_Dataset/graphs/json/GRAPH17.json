@@ -1,0 +1,397 @@
+{
+  "id": "GRAPH17",
+  "description": "Diagnostic flowchart for faults in robotic pickup of individual parts from an input slide.",
+  "graph": {
+    "nodes": {
+      "box_0": {
+        "type": "terminator",
+        "text": "Start"
+      },
+      "box_1": {
+        "type": "decision",
+        "text": "Does the part meet quality assurance team product specifications?"
+      },
+      "box_2": {
+        "type": "process",
+        "text": "Check product dimensions and inspect for static charge and contamination."
+      },
+      "box_3": {
+        "type": "process",
+        "text": "Remove the non conforming parts and reload with a product batch that meets quality assurance team specifications."
+      },
+      "box_4": {
+        "type": "decision",
+        "text": "Is the positioning of the input slide working correctly?"
+      },
+      "box_5": {
+        "type": "process",
+        "text": "Complete the following checks: 1. Verify that all parts lie flat and centred on the mounting plate and that the input slide has reached its end position. 2. Verify that the input slide is positioned to match the pick up position. 3. Check whether the end damping works correctly."
+      },
+      "box_6": {
+        "type": "document",
+        "text": "Input slide positioning procedure: position input slide to part pick up position."
+      },
+      "box_7": {
+        "type": "decision",
+        "text": "Are there contaminated parts?"
+      },
+      "box_8": {
+        "type": "process",
+        "text": "Complete the following checks: 1. Check whether the vacuum end effectors are contaminated. 2. Check the vacuum filters for contamination. 3. Check whether the assembly robot axes are contaminated. 4. Check actuators for contamination. 5. Check guide axes of vacuum fixtures for contamination."
+      },
+      "box_9": {
+        "type": "process",
+        "text": "Clean the parts, replace the vacuum filter if necessary, and clean the guide of the actuators."
+      },
+      "box_10": {
+        "type": "document",
+        "text": "Assembly robot axis lubrication procedure"
+      },
+      "box_11": {
+        "type": "decision",
+        "text": "Are there electrical defects?"
+      },
+      "box_12": {
+        "type": "process",
+        "text": "Complete the following checks: 1. Check connectors for secure fastening. 2. Check cabling and upper displacement sensors on the vacuum end effectors, these must be lit and must not turn off when the cabling is moved. 3. Check whether the vacuum switches work correctly. 4. Check whether the coil/valve for the vacuum generator works correctly. 5. Check system settings on the operator control interface."
+      },
+      "box_13": {
+        "type": "process",
+        "text": "Fasten the connector and replace the defective cabling and/or sensor."
+      },
+      "box_14": {
+        "type": "decision",
+        "text": "Are there worn parts?"
+      },
+      "box_15": {
+        "type": "process",
+        "text": "Complete the following checks: 1. Check wear on the vacuum end effectors. 2. Check wear on the actuator grippers. 3. Check wear on the guide axis gripper through the aluminium block. 4. Check the assembly robot axes for wear."
+      },
+      "box_16": {
+        "type": "process",
+        "text": "Replace the worn components identified in the inspection (vacuum end effectors, actuator grippers, guide axis gripper, and/or assembly robot axes)."
+      },
+      "box_17": {
+        "type": "document",
+        "text": "Assembly robot replacement procedure"
+      },
+      "box_18": {
+        "type": "decision",
+        "text": "Is the vacuum switching pressure value correct?"
+      },
+      "box_19": {
+        "type": "document",
+        "text": "Refer to the vacuum switch switching pressure check for variant A machines (small format parts)."
+      },
+      "box_20": {
+        "type": "document",
+        "text": "Refer to the vacuum switch switching pressure check for variant B machines (medium format parts)."
+      },
+      "box_21": {
+        "type": "document",
+        "text": "Refer to the vacuum switch switching pressure check for variant C machines (large format parts)."
+      },
+      "box_22": {
+        "type": "process",
+        "text": "Readjust the vacuum switch trigger pressure to the specified value for the current machine variant."
+      },
+      "box_23": {
+        "type": "decision",
+        "text": "Is the vacuum flow correct?"
+      },
+      "box_24": {
+        "type": "document",
+        "text": "Check vacuum flow (pneumatic flow measurement procedure)"
+      },
+      "box_25": {
+        "type": "document",
+        "text": "Refer to the vacuum flow check for variant A machines (small format parts)."
+      },
+      "box_26": {
+        "type": "document",
+        "text": "Refer to the vacuum flow check for variant B machines (medium format parts)."
+      },
+      "box_27": {
+        "type": "document",
+        "text": "Refer to the vacuum flow check for variant C machines (large format parts)."
+      },
+      "box_28": {
+        "type": "process",
+        "text": "Readjust the vacuum flow rate to the specified value for the current machine variant."
+      },
+      "box_29": {
+        "type": "decision",
+        "text": "Is the z parallelism of the lower position of 4x gripper relative to each other correct?"
+      },
+      "box_30": {
+        "type": "document",
+        "text": "Refer to the Z parallelism check for variant A machines (small format parts)."
+      },
+      "box_31": {
+        "type": "document",
+        "text": "Refer to the Z parallelism check for variant B machines (medium format parts)."
+      },
+      "box_32": {
+        "type": "document",
+        "text": "Refer to the Z parallelism check for variant C machines (large format parts)."
+      },
+      "box_33": {
+        "type": "process",
+        "text": "Readjust the Z parallelism of the 4x gripper lower positions to the specified tolerance for the current machine variant."
+      },
+      "box_34": {
+        "type": "decision",
+        "text": "Is the part pick up position from the input table correct?"
+      },
+      "box_35": {
+        "type": "document",
+        "text": "Refer to the x/y/z pick up position check and trial run for variant A machines (small format parts)."
+      },
+      "box_36": {
+        "type": "document",
+        "text": "Refer to the x/y/z pick up position check and trial run for variant B machines (medium format parts)."
+      },
+      "box_37": {
+        "type": "document",
+        "text": "Refer to the x/y/z pick up position check and trial run for variant C machines (large format parts)."
+      },
+      "box_38": {
+        "type": "process",
+        "text": "Verify that parts are centred under the vacuum end effectors and are not dropped during transport."
+      },
+      "box_39": {
+        "type": "document",
+        "text": "Assembly robot pickup position adjustment procedure"
+      },
+      "box_40": {
+        "type": "document",
+        "text": "Assembly robot tool offset calibration"
+      },
+      "box_41": {
+        "type": "process",
+        "text": "Teach assembly robot positions from the gripper position list."
+      },
+      "box_42": {
+        "type": "terminator",
+        "text": "Picking up part from input slide is correct"
+      }
+    },
+    "edges": [
+      {
+        "source": "box_0",
+        "target": "box_1",
+        "label": null
+      },
+      {
+        "source": "box_2",
+        "target": "box_1",
+        "label": null
+      },
+      {
+        "source": "box_1",
+        "target": "box_3",
+        "label": "No"
+      },
+      {
+        "source": "box_1",
+        "target": "box_4",
+        "label": "Yes"
+      },
+      {
+        "source": "box_5",
+        "target": "box_4",
+        "label": null
+      },
+      {
+        "source": "box_4",
+        "target": "box_6",
+        "label": "No"
+      },
+      {
+        "source": "box_4",
+        "target": "box_7",
+        "label": "Yes"
+      },
+      {
+        "source": "box_8",
+        "target": "box_7",
+        "label": null
+      },
+      {
+        "source": "box_7",
+        "target": "box_9",
+        "label": "Yes"
+      },
+      {
+        "source": "box_7",
+        "target": "box_10",
+        "label": "Yes"
+      },
+      {
+        "source": "box_7",
+        "target": "box_11",
+        "label": "No"
+      },
+      {
+        "source": "box_12",
+        "target": "box_11",
+        "label": null
+      },
+      {
+        "source": "box_11",
+        "target": "box_13",
+        "label": "Yes"
+      },
+      {
+        "source": "box_11",
+        "target": "box_14",
+        "label": "No"
+      },
+      {
+        "source": "box_15",
+        "target": "box_14",
+        "label": null
+      },
+      {
+        "source": "box_14",
+        "target": "box_16",
+        "label": "Yes"
+      },
+      {
+        "source": "box_14",
+        "target": "box_17",
+        "label": "Yes"
+      },
+      {
+        "source": "box_14",
+        "target": "box_18",
+        "label": "No"
+      },
+      {
+        "source": "box_19",
+        "target": "box_18",
+        "label": null
+      },
+      {
+        "source": "box_20",
+        "target": "box_18",
+        "label": null
+      },
+      {
+        "source": "box_21",
+        "target": "box_18",
+        "label": null
+      },
+      {
+        "source": "box_18",
+        "target": "box_22",
+        "label": "No"
+      },
+      {
+        "source": "box_18",
+        "target": "box_23",
+        "label": "Yes"
+      },
+      {
+        "source": "box_24",
+        "target": "box_23",
+        "label": null
+      },
+      {
+        "source": "box_25",
+        "target": "box_23",
+        "label": null
+      },
+      {
+        "source": "box_26",
+        "target": "box_23",
+        "label": null
+      },
+      {
+        "source": "box_27",
+        "target": "box_23",
+        "label": null
+      },
+      {
+        "source": "box_23",
+        "target": "box_28",
+        "label": "No"
+      },
+      {
+        "source": "box_23",
+        "target": "box_29",
+        "label": "Yes"
+      },
+      {
+        "source": "box_30",
+        "target": "box_29",
+        "label": null
+      },
+      {
+        "source": "box_31",
+        "target": "box_29",
+        "label": null
+      },
+      {
+        "source": "box_32",
+        "target": "box_29",
+        "label": null
+      },
+      {
+        "source": "box_29",
+        "target": "box_33",
+        "label": "No"
+      },
+      {
+        "source": "box_29",
+        "target": "box_34",
+        "label": "Yes"
+      },
+      {
+        "source": "box_35",
+        "target": "box_34",
+        "label": null
+      },
+      {
+        "source": "box_36",
+        "target": "box_34",
+        "label": null
+      },
+      {
+        "source": "box_37",
+        "target": "box_34",
+        "label": null
+      },
+      {
+        "source": "box_34",
+        "target": "box_38",
+        "label": "Yes"
+      },
+      {
+        "source": "box_38",
+        "target": "box_42",
+        "label": null
+      },
+      {
+        "source": "box_34",
+        "target": "box_39",
+        "label": "No"
+      },
+      {
+        "source": "box_34",
+        "target": "box_40",
+        "label": "No"
+      },
+      {
+        "source": "box_40",
+        "target": "box_41",
+        "label": null
+      },
+      {
+        "source": "box_34",
+        "target": "box_41",
+        "label": "No"
+      }
+    ]
+  }
+}

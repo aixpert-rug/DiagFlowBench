@@ -1,0 +1,132 @@
+flowchart TD
+    box_0(["Start"])
+    box_1["Warm up run, spindle at 50% speed for 10 minutes"]
+    box_2["Mount a calibrated accelerometer on the front<br/>bearing housing with a flat washer stud or magnetic<br/>base. Run the spindle at 3000 revolutions per minute<br/>with no toolholder fitted and record the root mean<br/>square vibration velocity in millimetres per second.<br/>Repeat at the maximum rated speed and compare both<br/>readings against the ISO 10816 zone limits for this<br/>machine class."]
+    box_3[/"Refer to the spindle vibration alarm limits."/]
+    box_4{"Vibration level below alarm limit?"}
+    box_5(["End, Escalate: critical vibration, spindle offline<br/>immediately"])
+    box_6["Attach calibrated thermocouples or probe the<br/>temperature sensor against the front and rear<br/>bearing housings after 20 minutes of continuous<br/>spindle running at 80% of rated speed. Record both<br/>temperatures and calculate the rise above ambient.<br/>Temperature rise exceeding 25 degrees Celsius above<br/>ambient or absolute housing temperature above 70<br/>degrees Celsius requires immediate investigation<br/>before further running."]
+    box_7[/"Refer to the spindle temperature limits."/]
+    box_8{"Bearing temperature within rated operating limit?"}
+    box_9(["End, Escalate: bearing overtemperature, cooling<br/>circuit check"])
+    box_10["Clamp a dial test indicator in the machine table<br/>with the probe tip contacting the spindle nose taper<br/>bore. Rotate the spindle by hand through one full<br/>revolution and record the total indicator reading.<br/>Compare the measured runout against the maximum<br/>permitted value in the machine acceptance<br/>specification for the spindle class."]
+    box_11[/"Refer to the spindle runout specification."/]
+    box_12{"Radial runout within 2 µm tolerance?"}
+    box_13["Adjust bearing pre load via locknut, quarter turn<br/>increments"]
+    box_14{"Reverify radial runout after pre load adjustment"}
+    box_15(["End, Escalate: runout unrecoverable, bearing<br/>replacement required"])
+    box_16["Mount a dial test indicator with the probe tip<br/>touching the spindle nose reference face. Push the<br/>spindle forward by hand against its thrust bearing<br/>and zero the indicator, then pull backward and<br/>record the deflection. Repeat three times and<br/>average the results; compare the mean axial play<br/>against the maximum permissible value from the<br/>spindle bearing preload specification."]
+    box_17{"Axial play within 3 µm tolerance?"}
+    box_18["Adjust pre load spacer or shim to reduce axial play"]
+    box_19["Apply a thin even coat of engineer's blue to a clean<br/>test arbor with the correct taper angle for this<br/>spindle. Insert the arbor, rotate by hand under<br/>moderate axial load, then withdraw and inspect the<br/>contact pattern. The blue should transfer uniformly<br/>over at least 70% of the taper length; a spotted or<br/>narrow band pattern indicates taper bore damage or<br/>swarf contamination."]
+    box_20{"Taper contact pattern above 85% bearing area?"}
+    box_21["Clean and reinspect taper, check for fretting"]
+    box_22["Connect the calibrated pull stud extraction<br/>dynamometer to the toolholder retention knob. Apply<br/>a steady pull along the spindle axis and record the<br/>peak force at which the drawbar releases the<br/>toolholder. Compare the result against the minimum<br/>drawbar force listed in the spindle maintenance<br/>specification; a low reading indicates disc spring<br/>wear or stacking loss."]
+    box_23[/"Refer to the drawbar force specification."/]
+    box_24{"Drawbar retention force within rated range?"}
+    box_25["Adjust drawbar spring stack or replace disc springs"]
+    box_26["Mount a dial test indicator against the reference<br/>artefact clamped in the spindle at cold start. Zero<br/>the indicator and allow the spindle to run at<br/>operating speed for 30 minutes. Record the indicator<br/>displacement at 10 minute intervals and note the<br/>total thermal growth value at stabilisation; compare<br/>against the growth compensation value stored in the<br/>machine thermal compensation table."]
+    box_27{"Thermal growth within compensation model tolerance?"}
+    box_28["Complete the following checks: 1. Read the thermal<br/>compensation growth coefficient from the controller.<br/>2. Compare the stored values against the reference<br/>values for this spindle. 3. Check whether the<br/>compensation parameters were modified since last<br/>service."]
+    box_29{"Reverify thermal compensation after parameter update"}
+    box_30(["End, Escalate: thermal model divergence, metrology<br/>review"])
+    box_31["Using a calibrated non contact tachometer, direct<br/>the sensor at a reflective tape mark on the spindle<br/>nose. Command each of the three test speeds from the<br/>machine controller and record the actual speed from<br/>the tachometer display. Calculate the error as a<br/>percentage of commanded speed and compare against<br/>the maximum speed accuracy specification."]
+    box_32{"Spindle speed within ±0.1% at all test speeds?"}
+    box_33["Adjust speed reference gain in drive parameter"]
+    box_34["Run the spindle at maximum rated speed with the<br/>normal toolholder fitted for five minutes. Record<br/>vibration velocity with the accelerometer on the<br/>front bearing housing and compare against the<br/>baseline vibration measurement taken at the same<br/>speed during the most recent full service. An<br/>increase of more than 30% above baseline requires<br/>bearing assessment before releasing the spindle to<br/>production."]
+    box_35{"Final vibration within warning limit at full speed?"}
+    box_36["Log all measurements and update spindle maintenance<br/>record"]
+    box_37(["End, Procedure complete"])
+    box_38["Supplementary bearing preload correction:<br/>disassemble the spindle nose bearing housing, remove<br/>the preload spacer, and replace it with a spacer<br/>from the next shim increment in the bearing service<br/>kit. Reassemble the housing to the specified torque<br/>and run the spindle at 1000 revolutions per minute<br/>for 10 minutes to allow bearings to seat before<br/>returning to the runout measurement step."]
+
+    box_0 --> box_1
+    box_1 --> box_2
+    box_2 --> box_4
+    box_3 --> box_4
+    box_4 -->|"No"| box_5
+    box_4 -->|"Yes"| box_8
+    box_6 --> box_8
+    box_7 --> box_8
+    box_8 -->|"No"| box_9
+    box_8 -->|"Yes"| box_12
+    box_10 --> box_12
+    box_11 --> box_12
+    box_12 -->|"No"| box_13
+    box_13 --> box_14
+    box_14 -->|"OK"| box_17
+    box_12 -->|"Yes"| box_17
+    box_16 --> box_17
+    box_17 -->|"No"| box_18
+    box_18 --> box_19
+    box_17 -->|"Yes"| box_20
+    box_19 --> box_20
+    box_20 -->|"No"| box_21
+    box_21 --> box_22
+    box_20 -->|"Yes"| box_24
+    box_22 --> box_24
+    box_23 --> box_24
+    box_24 -->|"No"| box_25
+    box_25 --> box_26
+    box_24 -->|"Yes"| box_27
+    box_26 --> box_27
+    box_27 -->|"No"| box_28
+    box_28 --> box_29
+    box_29 -->|"Still diverging"| box_30
+    box_29 -->|"OK"| box_32
+    box_27 -->|"Yes"| box_32
+    box_31 --> box_32
+    box_32 -->|"No"| box_33
+    box_33 --> box_34
+    box_32 -->|"Yes"| box_35
+    box_34 --> box_35
+    box_35 -->|"Yes"| box_36
+    box_35 -->|"No"| box_36
+    box_36 --> box_37
+    box_14 -->|"Still out of spec"| box_38
+    box_38 --> box_14
+    box_14 -->|"Unresolvable after second attempt"| box_15
+
+    class box_0 terminator
+    class box_1 process
+    class box_2 process
+    class box_3 document
+    class box_4 decision
+    class box_5 terminator
+    class box_6 process
+    class box_7 document
+    class box_8 decision
+    class box_9 terminator
+    class box_10 process
+    class box_11 document
+    class box_12 decision
+    class box_13 process
+    class box_14 decision
+    class box_15 terminator
+    class box_16 process
+    class box_17 decision
+    class box_18 process
+    class box_19 process
+    class box_20 decision
+    class box_21 process
+    class box_22 process
+    class box_23 document
+    class box_24 decision
+    class box_25 process
+    class box_26 process
+    class box_27 decision
+    class box_28 process
+    class box_29 decision
+    class box_30 terminator
+    class box_31 process
+    class box_32 decision
+    class box_33 process
+    class box_34 process
+    class box_35 decision
+    class box_36 process
+    class box_37 terminator
+    class box_38 process
+
+    classDef terminator fill:#2d4a6e,stroke:#1a3050,color:#ffffff,font-weight:bold
+    classDef process    fill:#f0f4ff,stroke:#4a6fa5,color:#1a1a2e
+    classDef decision   fill:#fff8e6,stroke:#c8922a,color:#1a1a2e
+    classDef document   fill:#f0fff4,stroke:#3a8a4a,color:#1a1a2e

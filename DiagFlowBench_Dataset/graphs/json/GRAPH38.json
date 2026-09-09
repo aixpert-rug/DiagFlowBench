@@ -1,0 +1,396 @@
+{
+  "id": "GRAPH38",
+  "description": "Spindle bearing runout and thermal compensation inspection — PROC-60",
+  "graph": {
+    "nodes": {
+      "box_0": {
+        "type": "terminator",
+        "text": "Start"
+      },
+      "box_1": {
+        "type": "process",
+        "text": "Warm up run, spindle at 50% speed for 10 minutes"
+      },
+      "box_2": {
+        "type": "process",
+        "text": "Mount a calibrated accelerometer on the front bearing housing with a flat washer stud or magnetic base. Run the spindle at 3000 revolutions per minute with no toolholder fitted and record the root mean square vibration velocity in millimetres per second. Repeat at the maximum rated speed and compare both readings against the ISO 10816 zone limits for this machine class."
+      },
+      "box_3": {
+        "type": "document",
+        "text": "Refer to the spindle vibration alarm limits."
+      },
+      "box_4": {
+        "type": "decision",
+        "text": "Vibration level below alarm limit?"
+      },
+      "box_5": {
+        "type": "terminator",
+        "text": "End, Escalate: critical vibration, spindle offline immediately"
+      },
+      "box_6": {
+        "type": "process",
+        "text": "Attach calibrated thermocouples or probe the temperature sensor against the front and rear bearing housings after 20 minutes of continuous spindle running at 80% of rated speed. Record both temperatures and calculate the rise above ambient. Temperature rise exceeding 25 degrees Celsius above ambient or absolute housing temperature above 70 degrees Celsius requires immediate investigation before further running."
+      },
+      "box_7": {
+        "type": "document",
+        "text": "Refer to the spindle temperature limits."
+      },
+      "box_8": {
+        "type": "decision",
+        "text": "Bearing temperature within rated operating limit?"
+      },
+      "box_9": {
+        "type": "terminator",
+        "text": "End, Escalate: bearing overtemperature, cooling circuit check"
+      },
+      "box_10": {
+        "type": "process",
+        "text": "Clamp a dial test indicator in the machine table with the probe tip contacting the spindle nose taper bore. Rotate the spindle by hand through one full revolution and record the total indicator reading. Compare the measured runout against the maximum permitted value in the machine acceptance specification for the spindle class."
+      },
+      "box_11": {
+        "type": "document",
+        "text": "Refer to the spindle runout specification."
+      },
+      "box_12": {
+        "type": "decision",
+        "text": "Radial runout within 2 µm tolerance?"
+      },
+      "box_13": {
+        "type": "process",
+        "text": "Adjust bearing pre load via locknut, quarter turn increments"
+      },
+      "box_14": {
+        "type": "decision",
+        "text": "Reverify radial runout after pre load adjustment"
+      },
+      "box_15": {
+        "type": "terminator",
+        "text": "End, Escalate: runout unrecoverable, bearing replacement required"
+      },
+      "box_16": {
+        "type": "process",
+        "text": "Mount a dial test indicator with the probe tip touching the spindle nose reference face. Push the spindle forward by hand against its thrust bearing and zero the indicator, then pull backward and record the deflection. Repeat three times and average the results; compare the mean axial play against the maximum permissible value from the spindle bearing preload specification."
+      },
+      "box_17": {
+        "type": "decision",
+        "text": "Axial play within 3 µm tolerance?"
+      },
+      "box_18": {
+        "type": "process",
+        "text": "Adjust pre load spacer or shim to reduce axial play"
+      },
+      "box_19": {
+        "type": "process",
+        "text": "Apply a thin even coat of engineer's blue to a clean test arbor with the correct taper angle for this spindle. Insert the arbor, rotate by hand under moderate axial load, then withdraw and inspect the contact pattern. The blue should transfer uniformly over at least 70% of the taper length; a spotted or narrow band pattern indicates taper bore damage or swarf contamination."
+      },
+      "box_20": {
+        "type": "decision",
+        "text": "Taper contact pattern above 85% bearing area?"
+      },
+      "box_21": {
+        "type": "process",
+        "text": "Clean and reinspect taper, check for fretting"
+      },
+      "box_22": {
+        "type": "process",
+        "text": "Connect the calibrated pull stud extraction dynamometer to the toolholder retention knob. Apply a steady pull along the spindle axis and record the peak force at which the drawbar releases the toolholder. Compare the result against the minimum drawbar force listed in the spindle maintenance specification; a low reading indicates disc spring wear or stacking loss."
+      },
+      "box_23": {
+        "type": "document",
+        "text": "Refer to the drawbar force specification."
+      },
+      "box_24": {
+        "type": "decision",
+        "text": "Drawbar retention force within rated range?"
+      },
+      "box_25": {
+        "type": "process",
+        "text": "Adjust drawbar spring stack or replace disc springs"
+      },
+      "box_26": {
+        "type": "process",
+        "text": "Mount a dial test indicator against the reference artefact clamped in the spindle at cold start. Zero the indicator and allow the spindle to run at operating speed for 30 minutes. Record the indicator displacement at 10 minute intervals and note the total thermal growth value at stabilisation; compare against the growth compensation value stored in the machine thermal compensation table."
+      },
+      "box_27": {
+        "type": "decision",
+        "text": "Thermal growth within compensation model tolerance?"
+      },
+      "box_28": {
+        "type": "process",
+        "text": "Complete the following checks: 1. Read the thermal compensation growth coefficient from the controller. 2. Compare the stored values against the reference values for this spindle. 3. Check whether the compensation parameters were modified since last service."
+      },
+      "box_29": {
+        "type": "decision",
+        "text": "Reverify thermal compensation after parameter update"
+      },
+      "box_30": {
+        "type": "terminator",
+        "text": "End, Escalate: thermal model divergence, metrology review"
+      },
+      "box_31": {
+        "type": "process",
+        "text": "Using a calibrated non contact tachometer, direct the sensor at a reflective tape mark on the spindle nose. Command each of the three test speeds from the machine controller and record the actual speed from the tachometer display. Calculate the error as a percentage of commanded speed and compare against the maximum speed accuracy specification."
+      },
+      "box_32": {
+        "type": "decision",
+        "text": "Spindle speed within ±0.1% at all test speeds?"
+      },
+      "box_33": {
+        "type": "process",
+        "text": "Adjust speed reference gain in drive parameter"
+      },
+      "box_34": {
+        "type": "process",
+        "text": "Run the spindle at maximum rated speed with the normal toolholder fitted for five minutes. Record vibration velocity with the accelerometer on the front bearing housing and compare against the baseline vibration measurement taken at the same speed during the most recent full service. An increase of more than 30% above baseline requires bearing assessment before releasing the spindle to production."
+      },
+      "box_35": {
+        "type": "decision",
+        "text": "Final vibration within warning limit at full speed?"
+      },
+      "box_36": {
+        "type": "process",
+        "text": "Log all measurements and update spindle maintenance record"
+      },
+      "box_37": {
+        "type": "terminator",
+        "text": "End, Procedure complete"
+      },
+      "box_38": {
+        "type": "process",
+        "text": "Supplementary bearing preload correction: disassemble the spindle nose bearing housing, remove the preload spacer, and replace it with a spacer from the next shim increment in the bearing service kit. Reassemble the housing to the specified torque and run the spindle at 1000 revolutions per minute for 10 minutes to allow bearings to seat before returning to the runout measurement step."
+      }
+    },
+    "edges": [
+      {
+        "source": "box_0",
+        "target": "box_1",
+        "label": null
+      },
+      {
+        "source": "box_1",
+        "target": "box_2",
+        "label": ""
+      },
+      {
+        "source": "box_2",
+        "target": "box_4",
+        "label": null
+      },
+      {
+        "source": "box_3",
+        "target": "box_4",
+        "label": null
+      },
+      {
+        "source": "box_4",
+        "target": "box_5",
+        "label": "No"
+      },
+      {
+        "source": "box_4",
+        "target": "box_8",
+        "label": "Yes"
+      },
+      {
+        "source": "box_6",
+        "target": "box_8",
+        "label": null
+      },
+      {
+        "source": "box_7",
+        "target": "box_8",
+        "label": null
+      },
+      {
+        "source": "box_8",
+        "target": "box_9",
+        "label": "No"
+      },
+      {
+        "source": "box_8",
+        "target": "box_12",
+        "label": "Yes"
+      },
+      {
+        "source": "box_10",
+        "target": "box_12",
+        "label": null
+      },
+      {
+        "source": "box_11",
+        "target": "box_12",
+        "label": null
+      },
+      {
+        "source": "box_12",
+        "target": "box_13",
+        "label": "No"
+      },
+      {
+        "source": "box_13",
+        "target": "box_14",
+        "label": null
+      },
+      {
+        "source": "box_14",
+        "target": "box_17",
+        "label": "OK"
+      },
+      {
+        "source": "box_12",
+        "target": "box_17",
+        "label": "Yes"
+      },
+      {
+        "source": "box_16",
+        "target": "box_17",
+        "label": null
+      },
+      {
+        "source": "box_17",
+        "target": "box_18",
+        "label": "No"
+      },
+      {
+        "source": "box_18",
+        "target": "box_19",
+        "label": ""
+      },
+      {
+        "source": "box_17",
+        "target": "box_20",
+        "label": "Yes"
+      },
+      {
+        "source": "box_19",
+        "target": "box_20",
+        "label": null
+      },
+      {
+        "source": "box_20",
+        "target": "box_21",
+        "label": "No"
+      },
+      {
+        "source": "box_21",
+        "target": "box_22",
+        "label": ""
+      },
+      {
+        "source": "box_20",
+        "target": "box_24",
+        "label": "Yes"
+      },
+      {
+        "source": "box_22",
+        "target": "box_24",
+        "label": null
+      },
+      {
+        "source": "box_23",
+        "target": "box_24",
+        "label": null
+      },
+      {
+        "source": "box_24",
+        "target": "box_25",
+        "label": "No"
+      },
+      {
+        "source": "box_25",
+        "target": "box_26",
+        "label": ""
+      },
+      {
+        "source": "box_24",
+        "target": "box_27",
+        "label": "Yes"
+      },
+      {
+        "source": "box_26",
+        "target": "box_27",
+        "label": null
+      },
+      {
+        "source": "box_27",
+        "target": "box_28",
+        "label": "No"
+      },
+      {
+        "source": "box_28",
+        "target": "box_29",
+        "label": null
+      },
+      {
+        "source": "box_29",
+        "target": "box_30",
+        "label": "Still diverging"
+      },
+      {
+        "source": "box_29",
+        "target": "box_32",
+        "label": "OK"
+      },
+      {
+        "source": "box_27",
+        "target": "box_32",
+        "label": "Yes"
+      },
+      {
+        "source": "box_31",
+        "target": "box_32",
+        "label": null
+      },
+      {
+        "source": "box_32",
+        "target": "box_33",
+        "label": "No"
+      },
+      {
+        "source": "box_33",
+        "target": "box_34",
+        "label": ""
+      },
+      {
+        "source": "box_32",
+        "target": "box_35",
+        "label": "Yes"
+      },
+      {
+        "source": "box_34",
+        "target": "box_35",
+        "label": null
+      },
+      {
+        "source": "box_35",
+        "target": "box_36",
+        "label": "Yes"
+      },
+      {
+        "source": "box_35",
+        "target": "box_36",
+        "label": "No"
+      },
+      {
+        "source": "box_36",
+        "target": "box_37",
+        "label": null
+      },
+      {
+        "source": "box_14",
+        "target": "box_38",
+        "label": "Still out of spec"
+      },
+      {
+        "source": "box_38",
+        "target": "box_14",
+        "label": null
+      },
+      {
+        "source": "box_14",
+        "target": "box_15",
+        "label": "Unresolvable after second attempt"
+      }
+    ]
+  }
+}

@@ -1,0 +1,81 @@
+flowchart TD
+    box_0(["Start"])
+    box_1["Record the batch number, marking darkness level, and<br/>number of affected parts. Collect three<br/>representative samples for quality assurance team<br/>reference."]
+    box_2{"Is the input material surface finish within<br/>specification (no unusual reflectivity or coating<br/>variation)?"}
+    box_3["Complete the following checks: 1. Verify that parts<br/>are from the correct material batch. 2. Check the<br/>surface finish specification for the current product<br/>type."]
+    box_4["Reject the current batch and reload parts from a<br/>confirmed correct material batch. Create a non<br/>conformance record."]
+    box_5{"Is the laser power level at the correct setpoint for<br/>this product type?"}
+    box_6["Check the laser power reading on the marking<br/>controller against the product specification. Verify<br/>that no power ramp up or drift has occurred since<br/>the last calibration."]
+    box_7["Reduce the laser power level to the specified<br/>setpoint and rerun a test mark. Verify the marking<br/>darkness against the reference sample."]
+    box_8{"Is the marking speed within specification for this<br/>product type?"}
+    box_9["Complete the following checks: 1. Read the marking<br/>speed from the active programme parameter screen. 2.<br/>Compare against the minimum and maximum speed range<br/>on the validated process sheet. 3. Check whether the<br/>speed setting was modified since the last good run."]
+    box_10["Increase the marking speed to the specified value to<br/>reduce energy deposition per unit area. rerun a test<br/>mark and compare with the reference sample."]
+    box_11{"Is the laser focal distance correct for the current<br/>part height?"}
+    box_12["Complete the following checks: 1. Measure the<br/>distance from the marking head reference face to the<br/>part surface. 2. Compare against the focal distance<br/>specified on the laser system datasheet. 3. Check<br/>the focal distance adjustment mechanism for play or<br/>slippage."]
+    box_13["Adjust the marking head height to achieve the<br/>specified focal distance. rerun a test mark and<br/>verify darkness level."]
+    box_14{"Is the fume extraction unit clean and operating at<br/>the correct airflow rate?"}
+    box_15["Complete the following checks: 1. Inspect the fume<br/>extraction filter cartridge for colour and loading.<br/>2. Measure air velocity at the extraction inlet with<br/>an anemometer. 3. Compare volumetric flow rate<br/>against the minimum specification."]
+    box_16["Clean or replace the fume extraction filter and<br/>verify airflow returns to specification. Excessive<br/>fume build up can cause secondary marking darkening."]
+    box_17{"Is the marking darkness within specification after<br/>all corrections?"}
+    box_18["Escalate to the maintenance team: marking darkness<br/>cannot be corrected through operating adjustments;<br/>inspect laser optics and galvo mirror calibration."]
+    box_19["Create a non conformance record for the affected<br/>batch and record all corrective actions in the<br/>quality log."]
+    box_20(["End, notify quality assurance team."])
+    box_21{"Is the marking defect rate high enough across the<br/>current batch to indicate a systematic process<br/>failure requiring immediate production halt?"}
+    box_22(["End, production halted immediately: batch marking<br/>failure critical, quarantine current batch and<br/>escalate to process engineer for root cause<br/>investigation"])
+
+    box_1 --> box_3
+    box_3 --> box_2
+    box_2 -->|"No"| box_4
+    box_2 -->|"Yes"| box_5
+    box_6 --> box_5
+    box_5 -->|"No"| box_7
+    box_5 -->|"Yes"| box_8
+    box_7 --> box_9
+    box_9 --> box_8
+    box_8 -->|"No"| box_10
+    box_8 -->|"Yes"| box_11
+    box_10 --> box_12
+    box_12 --> box_11
+    box_11 -->|"No"| box_13
+    box_11 -->|"Yes"| box_14
+    box_13 --> box_15
+    box_15 --> box_14
+    box_14 -->|"No"| box_16
+    box_14 -->|"Yes"| box_17
+    box_16 --> box_17
+    box_17 -->|"No"| box_18
+    box_17 -->|"Yes"| box_19
+    box_18 --> box_19
+    box_19 --> box_20
+    box_0 --> box_21
+    box_21 -->|"Critical, immediate stop required"| box_22
+    box_21 -->|"Standard fault, continue diagnosis"| box_1
+
+    class box_0 terminator
+    class box_1 process
+    class box_2 decision
+    class box_3 process
+    class box_4 process
+    class box_5 decision
+    class box_6 process
+    class box_7 process
+    class box_8 decision
+    class box_9 process
+    class box_10 process
+    class box_11 decision
+    class box_12 process
+    class box_13 process
+    class box_14 decision
+    class box_15 process
+    class box_16 process
+    class box_17 decision
+    class box_18 process
+    class box_19 process
+    class box_20 terminator
+    class box_21 decision
+    class box_22 terminator
+
+    classDef terminator fill:#2d4a6e,stroke:#1a3050,color:#ffffff,font-weight:bold
+    classDef process    fill:#f0f4ff,stroke:#4a6fa5,color:#1a1a2e
+    classDef decision   fill:#fff8e6,stroke:#c8922a,color:#1a1a2e
+    classDef document   fill:#f0fff4,stroke:#3a8a4a,color:#1a1a2e

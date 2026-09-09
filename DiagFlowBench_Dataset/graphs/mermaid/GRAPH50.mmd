@@ -1,0 +1,184 @@
+flowchart TD
+    box_0(["Start"])
+    box_1["Warm up cycle, spindle at 500 revolutions per minute<br/>for 5 min, 2000 revolutions per minute for 5 min"]
+    box_2["Attach a triaxial accelerometer to the spindle nose<br/>using a flat washer stud or epoxy mount with the<br/>sensor axes aligned to the machine X, Y, and Z axes.<br/>Run the spindle at 3000 revolutions per minute with<br/>no toolholder and record the root mean square<br/>vibration velocity in each axis. Repeat the<br/>measurement at the maximum rated speed and compare<br/>all six readings against the baseline vibration<br/>record from the previous service."]
+    box_3[/"Refer to the spindle vibration alarm limits."/]
+    box_4{"Vibration level below alarm threshold at warm up<br/>speed?"}
+    box_5(["End, Escalate: vibration alarm at warm up speed,<br/>spindle offline"])
+    box_6["Attach a calibrated thermocouple probe to the front<br/>bearing outer race housing surface using thermal<br/>paste and a retaining clip. Run the spindle at 80%<br/>of rated speed for 20 minutes and record the<br/>temperature reading. Compare against the maximum<br/>rated bearing housing temperature for this spindle<br/>class; temperatures above the rated limit require<br/>immediate bearing inspection."]
+    box_7[/"Refer to the spindle bearing temperature limit."/]
+    box_8{"Front bearing temperature within rated limit after<br/>warm up?"}
+    box_9(["End, Escalate: bearing overtemperature after warm<br/>up, cooling check"])
+    box_10["Mount a precision dial test indicator in the machine<br/>table with the probe tip contacting the spindle nose<br/>taper bore at the mid height of the bore. Rotate the<br/>spindle slowly by hand through one full revolution<br/>while reading the indicator. Record the total<br/>indicator reading and compare against the maximum<br/>permissible runout value for this spindle accuracy<br/>class in the machine acceptance standard."]
+    box_11[/"Refer to the spindle radial runout specification."/]
+    box_12{"Radial runout within 1 µm at spindle nose?"}
+    box_13["Adjust front bearing pre load, locknut quarter turn<br/>increments"]
+    box_14{"Reverify radial runout after bearing pre load<br/>adjustment"}
+    box_15(["End, Escalate: runout unrecoverable, bearing<br/>replacement required"])
+    box_16["Set a dial test indicator probe against the<br/>reference face at the spindle nose. Push the spindle<br/>forward by hand to take up any thrust bearing<br/>clearance and zero the indicator. Pull the spindle<br/>backward and record the deflection. Repeat three<br/>times and take the mean reading as the measured<br/>axial play; compare against the maximum axial play<br/>in the spindle bearing specification."]
+    box_17[/"Refer to the spindle axial play limit."/]
+    box_18{"Axial play within 2 µm limit?"}
+    box_19["Adjust pre load shim stack, add or remove shims as<br/>required"]
+    box_20["Apply a thin uniform coat of Prussian blue or<br/>engineer's marking compound to the taper surface of<br/>a clean test arbor. Insert the arbor into the<br/>spindle taper bore and rotate by hand under moderate<br/>axial load for two to three turns. Withdraw the<br/>arbor and inspect the transfer pattern; uniform<br/>contact over at least 75% of the taper length is<br/>required. A patchy or one sided pattern indicates<br/>taper bore damage, swarf contamination, or arbor<br/>misalignment."]
+    box_21[/"Refer to the tool taper contact specification."/]
+    box_22{"Taper contact pattern above 80% of taper area?"}
+    box_23["Clean taper bore, lint free cloth, isopropyl<br/>alcohol, compressed air"]
+    box_24{"Reverify taper contact after taper bore cleaning"}
+    box_25(["End, Escalate: taper contact insufficient after<br/>cleaning, taper regrind"])
+    box_26["Connect the pull stud extraction dynamometer to the<br/>retention knob of a standard toolholder fitted in<br/>the spindle. Apply a steady axial pull along the<br/>spindle axis and record the peak force at the moment<br/>the drawbar releases. Compare the result against the<br/>minimum drawbar retention force specified for this<br/>spindle class; a low reading indicates disc spring<br/>pack wear or stacking loss requiring drawbar<br/>disassembly."]
+    box_27[/"Refer to the drawbar retention force specification."/]
+    box_28{"Drawbar retention force within rated range?"}
+    box_29["Replace disc spring stack and recheck retention<br/>force"]
+    box_30["Using a calibrated non contact tachometer, direct<br/>the sensor beam at a reflective strip on the spindle<br/>nose. Command each of the four test speeds from the<br/>machine controller and record the actual speed<br/>displayed by the tachometer. Calculate the<br/>percentage speed error at each commanded speed and<br/>compare against the maximum speed accuracy tolerance<br/>in the spindle acceptance specification."]
+    box_31[/"Refer to the spindle speed accuracy specification."/]
+    box_32{"Speed accuracy within ±0.1% at all four test speeds?"}
+    box_33["Adjust spindle motor speed reference gain in drive<br/>parameter"]
+    box_34{"Reverify speed accuracy after gain adjustment"}
+    box_35(["End, Escalate: speed accuracy unrecoverable, encoder<br/>or drive fault"])
+    box_36["With the triaxial accelerometer still mounted on the<br/>spindle nose, run the spindle at full rated speed<br/>with the production toolholder fitted. Record the<br/>root mean square vibration velocity in all three<br/>axes after two minutes of running. Compare the<br/>values against the ISO 10816 alarm limit for this<br/>machine class and against the baseline values<br/>recorded at the start of this inspection."]
+    box_37{"Vibration within warning limit at full rated speed?"}
+    box_38["Complete the following checks: 1. Reduce spindle<br/>speed to 50% rated and monitor vibration for two<br/>minutes. 2. Check whether vibration reduces at lower<br/>speed to indicate a balance issue. 3. Inspect the<br/>spindle nose and toolholder taper for contamination<br/>or damage."]
+    box_39["Mount a dial test indicator against a precision<br/>reference mandrel clamped in the spindle before<br/>starting the warm up cycle. Zero the indicator and<br/>record the position as the cold datum. Run the<br/>spindle at operating speed for 30 minutes and record<br/>the indicator position at five minute intervals.<br/>Note the total thermal displacement at stabilisation<br/>and compare against the thermal growth compensation<br/>value stored in the machine thermal model<br/>parameters."]
+    box_40[/"Refer to the thermal growth compensation<br/>specification."/]
+    box_41{"Thermal growth within compensation model ±3 µm?"}
+    box_42["Complete the following steps: 1. Access the thermal<br/>growth model parameter screen in the machine<br/>controller. 2. Read the current growth coefficient<br/>and reference temperature for the Z axis. 3. Compare<br/>the stored values against the reference values from<br/>the last calibration."]
+    box_43["Command the spindle orientation to the 0 degree<br/>reference position from the machine control panel.<br/>Mount a precision angular encoder or a dial test<br/>indicator on an arm at a known radius and measure<br/>the angular error relative to the reference mark.<br/>Command orientation to 90, 180, and 270 degrees and<br/>measure the angular error at each position; compare<br/>all four readings against the spindle orientation<br/>accuracy specification."]
+    box_44{"Spindle orientation within ±0.001° of commanded<br/>angle?"}
+    box_45["Adjust orientation offset parameter in spindle drive"]
+    box_46["Fit a sealed test arbor with a coolant pressure<br/>gauge and flow indicator into the spindle taper.<br/>Start the coolant through spindle circuit at the<br/>normal operating pressure. Read the pressure gauge<br/>at the spindle taper outlet and compare against the<br/>minimum required coolant through spindle pressure.<br/>Observe the flow indicator for steady flow; pulsing<br/>or absent flow indicates a blocked spindle check<br/>valve or a failing coolant pump."]
+    box_47[/"Refer to the through spindle coolant specification."/]
+    box_48{"Coolant flow and pressure at spindle taper within<br/>specification?"}
+    box_49["Complete the following checks: 1. Stop coolant flow<br/>and inspect the rotary union seal face for scoring.<br/>2. Check the rotary union body for coolant leakage<br/>tracks or deposits. 3. Inspect the inlet and outlet<br/>port fittings for leakage or cross threading."]
+    box_50["Load the test piece material, typically a 100<br/>millimetre diameter aluminium or cast iron disc,<br/>into the machine work holding and run the standard<br/>spindle test machining program. The program bores a<br/>50 millimetre diameter hole and faces the top<br/>surface. After machining, measure bore diameter at<br/>three depths and face flatness at four points using<br/>a coordinate measuring machine or precision gauges.<br/>Compare all results against the machined geometry<br/>tolerances in the spindle acceptance test plan."]
+    box_51[/"Refer to the spindle acceptance test specification."/]
+    box_52{"Test piece geometry within drawing tolerance?"}
+    box_53["Log all spindle measurements and update maintenance<br/>record"]
+    box_54(["End, Procedure complete"])
+    box_55[/"Spindle bearing and runout diagnostic (GRAPH 38)"/]
+
+    box_0 --> box_1
+    box_1 --> box_2
+    box_2 --> box_4
+    box_3 --> box_4
+    box_4 -->|"No"| box_55
+    box_4 -->|"Yes"| box_8
+    box_6 --> box_8
+    box_7 --> box_8
+    box_8 -->|"No"| box_9
+    box_8 -->|"Yes"| box_12
+    box_10 --> box_12
+    box_11 --> box_12
+    box_12 -->|"No"| box_13
+    box_13 --> box_14
+    box_14 -->|"Still out of spec"| box_15
+    box_14 -->|"OK"| box_18
+    box_12 -->|"Yes"| box_18
+    box_16 --> box_18
+    box_17 --> box_18
+    box_18 -->|"No"| box_19
+    box_19 --> box_20
+    box_18 -->|"Yes"| box_22
+    box_20 --> box_22
+    box_21 --> box_22
+    box_22 -->|"No"| box_23
+    box_23 --> box_24
+    box_24 -->|"Still low"| box_25
+    box_24 -->|"OK"| box_28
+    box_22 -->|"Yes"| box_28
+    box_26 --> box_28
+    box_27 --> box_28
+    box_28 -->|"No"| box_29
+    box_29 --> box_30
+    box_28 -->|"Yes"| box_32
+    box_30 --> box_32
+    box_31 --> box_32
+    box_32 -->|"No"| box_33
+    box_33 --> box_34
+    box_34 -->|"Still failing"| box_35
+    box_34 -->|"OK"| box_37
+    box_32 -->|"Yes"| box_37
+    box_36 --> box_37
+    box_37 -->|"No"| box_38
+    box_38 --> box_39
+    box_37 -->|"Yes"| box_41
+    box_39 --> box_41
+    box_40 --> box_41
+    box_41 -->|"No"| box_42
+    box_42 --> box_43
+    box_41 -->|"Yes"| box_44
+    box_43 --> box_44
+    box_44 -->|"No"| box_45
+    box_45 --> box_46
+    box_44 -->|"Yes"| box_48
+    box_46 --> box_48
+    box_47 --> box_48
+    box_48 -->|"No"| box_49
+    box_49 --> box_50
+    box_48 -->|"Yes"| box_52
+    box_50 --> box_52
+    box_51 --> box_52
+    box_52 -->|"Yes"| box_53
+    box_52 -->|"No"| box_15
+    box_53 --> box_54
+
+    class box_0 terminator
+    class box_1 process
+    class box_2 process
+    class box_3 document
+    class box_4 decision
+    class box_5 terminator
+    class box_6 process
+    class box_7 document
+    class box_8 decision
+    class box_9 terminator
+    class box_10 process
+    class box_11 document
+    class box_12 decision
+    class box_13 process
+    class box_14 decision
+    class box_15 terminator
+    class box_16 process
+    class box_17 document
+    class box_18 decision
+    class box_19 process
+    class box_20 process
+    class box_21 document
+    class box_22 decision
+    class box_23 process
+    class box_24 decision
+    class box_25 terminator
+    class box_26 process
+    class box_27 document
+    class box_28 decision
+    class box_29 process
+    class box_30 process
+    class box_31 document
+    class box_32 decision
+    class box_33 process
+    class box_34 decision
+    class box_35 terminator
+    class box_36 process
+    class box_37 decision
+    class box_38 process
+    class box_39 process
+    class box_40 document
+    class box_41 decision
+    class box_42 process
+    class box_43 process
+    class box_44 decision
+    class box_45 process
+    class box_46 process
+    class box_47 document
+    class box_48 decision
+    class box_49 process
+    class box_50 process
+    class box_51 document
+    class box_52 decision
+    class box_53 process
+    class box_54 terminator
+    class box_55 document
+
+    classDef terminator fill:#2d4a6e,stroke:#1a3050,color:#ffffff,font-weight:bold
+    classDef process    fill:#f0f4ff,stroke:#4a6fa5,color:#1a1a2e
+    classDef decision   fill:#fff8e6,stroke:#c8922a,color:#1a1a2e
+    classDef document   fill:#f0fff4,stroke:#3a8a4a,color:#1a1a2e

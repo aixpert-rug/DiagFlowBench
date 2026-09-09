@@ -1,0 +1,524 @@
+{
+  "conversation_id": "GRAPH32_P005_noise_perturbation",
+  "graph_id": "GRAPH32",
+  "path_id": "GRAPH32_P005",
+  "regime": "clean",
+  "variant": "noise_perturbation",
+  "robustness_axis": "noise_perturbation",
+  "turns": [
+    {
+      "node_id": "box_0",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Starting rejection rate diagnostic procedure.",
+      "edge_label_to_next": null,
+      "turn_index": 0,
+      "ground_truth": {
+        "node_id": "box_0",
+        "node_type": "terminator",
+        "node_text": "Start"
+      }
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Please record the current rejection rate, the breakdown by rejection type including orientation, marking quality, insertion depth, and presence, as well as the time window over which the rate increased.",
+      "edge_label_to_next": null,
+      "turn_index": 1,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Record the current rejection rate, rejection type breakdown (orientation, marking quality, insertion depth, presence), and the time window over which the rate increased."
+      }
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "documented rejection rate at 8.2%, orientation failures 35%, marking quality 28%, inserton depth 22%, presence 15%. rate increased over last 4 hrs",
+      "edge_label_to_next": "",
+      "turn_index": 2,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Record the current rejection rate, rejection type breakdown (orientation, marking quality, insertion depth, presence), and the time window over which the rate increased."
+      }
+    },
+    {
+      "node_id": "box_3",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Verify that the correct product program is loaded for the current batch and confirm that all inspection thresholds have been correctly transferred for this product type.",
+      "edge_label_to_next": null,
+      "turn_index": 3,
+      "ground_truth": {
+        "node_id": "box_3",
+        "node_type": "process",
+        "node_text": "Verify that the correct product program is loaded for the current batch. Check that all inspection thresholds have been correctly transferred for this product type."
+      }
+    },
+    {
+      "node_id": "box_3",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "yeah checked the system, product program matches curent batch requirements",
+      "edge_label_to_next": null,
+      "turn_index": 4,
+      "ground_truth": {
+        "node_id": "box_3",
+        "node_type": "process",
+        "node_text": "Verify that the correct product program is loaded for the current batch. Check that all inspection thresholds have been correctly transferred for this product type."
+      }
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Did the rejection rate increase coincide with a batch changeover or product type change?",
+      "edge_label_to_next": null,
+      "turn_index": 5,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Did the rejection rate increase coincide with a batch changeover or product type change?"
+      }
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yes we switched to new product type about 4 hours ago right when rejection rate started climbing",
+      "edge_label_to_next": "Yes",
+      "turn_index": 6,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Did the rejection rate increase coincide with a batch changeover or product type change?"
+      }
+    },
+    {
+      "node_id": "box_4",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Switch to the correct product program and reset all inspection parameters to the validated baseline for this product type, then rerun a test sequence.",
+      "edge_label_to_next": null,
+      "turn_index": 7,
+      "ground_truth": {
+        "node_id": "box_4",
+        "node_type": "process",
+        "node_text": "Switch to the correct product program and reset all inspection parameters to the validated baseline for this product type. rerun a test sequence."
+      }
+    },
+    {
+      "node_id": "box_4",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "loaded correct program, reset inspection params and completed test sequnce",
+      "edge_label_to_next": "",
+      "turn_index": 8,
+      "ground_truth": {
+        "node_id": "box_4",
+        "node_type": "process",
+        "node_text": "Switch to the correct product program and reset all inspection parameters to the validated baseline for this product type. rerun a test sequence."
+      }
+    },
+    {
+      "node_id": "box_6",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Compare the current threshold settings on the operator control interface against the last validated baseline values recorded in the product setup record.",
+      "edge_label_to_next": null,
+      "turn_index": 9,
+      "ground_truth": {
+        "node_id": "box_6",
+        "node_type": "process",
+        "node_text": "Compare the current threshold settings on the operator control interface against the last validated baseline values recorded in the product setup record."
+      }
+    },
+    {
+      "node_id": "box_6",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "ok so completed the comparison between current settings and baseline values from setup record",
+      "edge_label_to_next": null,
+      "turn_index": 10,
+      "ground_truth": {
+        "node_id": "box_6",
+        "node_type": "process",
+        "node_text": "Compare the current threshold settings on the operator control interface against the last validated baseline values recorded in the product setup record."
+      }
+    },
+    {
+      "node_id": "box_5",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Are the inspection threshold settings at their validated baseline values for this product type?",
+      "edge_label_to_next": null,
+      "turn_index": 11,
+      "ground_truth": {
+        "node_id": "box_5",
+        "node_type": "decision",
+        "node_text": "Are the inspection threshold settings at their validated baseline values for this product type?"
+      }
+    },
+    {
+      "node_id": "box_5",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no found several thresholds dont match baseline, particularly for orientation and marking quality",
+      "edge_label_to_next": "No",
+      "turn_index": 12,
+      "ground_truth": {
+        "node_id": "box_5",
+        "node_type": "decision",
+        "node_text": "Are the inspection threshold settings at their validated baseline values for this product type?"
+      }
+    },
+    {
+      "node_id": "box_7",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Restore all inspection thresholds to the validated baseline values and document which thresholds were found out of specification.",
+      "edge_label_to_next": null,
+      "turn_index": 13,
+      "ground_truth": {
+        "node_id": "box_7",
+        "node_type": "process",
+        "node_text": "Restore all inspection thresholds to the validated baseline values. Document which thresholds were found out of specification."
+      }
+    },
+    {
+      "node_id": "box_7",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "all thresholds restored to baseline, documented the out-of-spec values for orientation tolerance and marking contrast",
+      "edge_label_to_next": null,
+      "turn_index": 14,
+      "ground_truth": {
+        "node_id": "box_7",
+        "node_type": "process",
+        "node_text": "Restore all inspection thresholds to the validated baseline values. Document which thresholds were found out of specification."
+      }
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the rejection dominated by a single inspection type, with more than 70% from one category?",
+      "edge_label_to_next": null,
+      "turn_index": 15,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "decision",
+        "node_text": "Is the rejection dominated by a single inspection type (more than 70% from one category)?"
+      }
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no rejections are fairly distributed across multiple categories, orientation at 35% is highest but not dominant",
+      "edge_label_to_next": "No",
+      "turn_index": 16,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "decision",
+        "node_text": "Is the rejection dominated by a single inspection type (more than 70% from one category)?"
+      }
+    },
+    {
+      "node_id": "box_10",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is any scheduled maintenance interval overdue for the inspection stations or assembly stations?",
+      "edge_label_to_next": null,
+      "turn_index": 17,
+      "ground_truth": {
+        "node_id": "box_10",
+        "node_type": "decision",
+        "node_text": "Is any scheduled maintenance interval overdue for the inspection stations or assembly stations?"
+      }
+    },
+    {
+      "node_id": "box_10",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yeah checked maintenance records and station 3 camera calibration overdue by 200 cycles",
+      "edge_label_to_next": "Yes",
+      "turn_index": 18,
+      "ground_truth": {
+        "node_id": "box_10",
+        "node_type": "decision",
+        "node_text": "Is any scheduled maintenance interval overdue for the inspection stations or assembly stations?"
+      }
+    },
+    {
+      "node_id": "box_12",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Perform all overdue maintenance tasks before resuming full production and record completion in the maintenance log.",
+      "edge_label_to_next": null,
+      "turn_index": 19,
+      "ground_truth": {
+        "node_id": "box_12",
+        "node_type": "process",
+        "node_text": "Perform all overdue maintenance tasks before resuming full production. Record completion in the maintenance log."
+      }
+    },
+    {
+      "node_id": "box_12",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "completed camera calibration and lens cleaning on station 3, logged maintenace completion",
+      "edge_label_to_next": null,
+      "turn_index": 20,
+      "ground_truth": {
+        "node_id": "box_12",
+        "node_type": "process",
+        "node_text": "Perform all overdue maintenance tasks before resuming full production. Record completion in the maintenance log."
+      }
+    },
+    {
+      "node_id": "box_13",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Has the rejection rate returned to within the acceptable threshold after all corrective actions?",
+      "edge_label_to_next": null,
+      "turn_index": 21,
+      "ground_truth": {
+        "node_id": "box_13",
+        "node_type": "decision",
+        "node_text": "Has the rejection rate returned to within the acceptable threshold after all corrective actions?"
+      }
+    },
+    {
+      "node_id": "box_13",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no rejection rate still at 7.8% which is above our acceptable threshold of 3%",
+      "edge_label_to_next": "No",
+      "turn_index": 22,
+      "ground_truth": {
+        "node_id": "box_13",
+        "node_type": "decision",
+        "node_text": "Has the rejection rate returned to within the acceptable threshold after all corrective actions?"
+      }
+    },
+    {
+      "node_id": "box_14",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Escalate to the maintenance team and engineering team, indicating that the rejection rate cannot be resolved through standard corrective actions and a detailed line audit is required.",
+      "edge_label_to_next": null,
+      "turn_index": 23,
+      "ground_truth": {
+        "node_id": "box_14",
+        "node_type": "process",
+        "node_text": "Escalate to the maintenance team and engineering team: the rejection rate cannot be resolved through standard corrective actions; a detailed line audit is required."
+      }
+    },
+    {
+      "node_id": "box_14",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "escalated to both teams with detailed summary of all corrective actions taken and the persistant high rejection rate",
+      "edge_label_to_next": null,
+      "turn_index": 24,
+      "ground_truth": {
+        "node_id": "box_14",
+        "node_type": "process",
+        "node_text": "Escalate to the maintenance team and engineering team: the rejection rate cannot be resolved through standard corrective actions; a detailed line audit is required."
+      }
+    },
+    {
+      "node_id": "box_16",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Complete the following steps: export the rejection log for the fault window from the vision system, sort the data by rejection code and count occurrences per station, then identify whether one station accounts for more than 60% of rejections.",
+      "edge_label_to_next": null,
+      "turn_index": 25,
+      "ground_truth": {
+        "node_id": "box_16",
+        "node_type": "process",
+        "node_text": "Complete the following steps: 1. Export the rejection log for the fault window from the vision system. 2. Sort the data by rejection code and count the occurrences per station. 3. Identify whether one station accounts for more than 60% of rejections."
+      }
+    },
+    {
+      "node_id": "box_16",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "exported and analyzed rejection log sorted by station and rejection code",
+      "edge_label_to_next": null,
+      "turn_index": 26,
+      "ground_truth": {
+        "node_id": "box_16",
+        "node_type": "process",
+        "node_text": "Complete the following steps: 1. Export the rejection log for the fault window from the vision system. 2. Sort the data by rejection code and count the occurrences per station. 3. Identify whether one station accounts for more than 60% of rejections."
+      }
+    },
+    {
+      "node_id": "box_18",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is a specific station responsible for more than 60% of rejections during the fault window?",
+      "edge_label_to_next": null,
+      "turn_index": 27,
+      "ground_truth": {
+        "node_id": "box_18",
+        "node_type": "decision",
+        "node_text": "Is a specific station responsible for more than 60% of rejections during the fault window?"
+      }
+    },
+    {
+      "node_id": "box_18",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yes station 3 generating 68% of all rejections during this perod",
+      "edge_label_to_next": "Yes",
+      "turn_index": 28,
+      "ground_truth": {
+        "node_id": "box_18",
+        "node_type": "decision",
+        "node_text": "Is a specific station responsible for more than 60% of rejections during the fault window?"
+      }
+    },
+    {
+      "node_id": "box_19",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Issue targeted corrective action for the identified station and assign to the maintenance team with a 24-hour response requirement.",
+      "edge_label_to_next": null,
+      "turn_index": 29,
+      "ground_truth": {
+        "node_id": "box_19",
+        "node_type": "process",
+        "node_text": "Issue targeted corrective action for the identified station, assign to maintenance team with 24 hour response requirement."
+      }
+    },
+    {
+      "node_id": "box_19",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "issued corrective action work order for station 3 with priority status and 24hr deadline to maintenance team",
+      "edge_label_to_next": null,
+      "turn_index": 30,
+      "ground_truth": {
+        "node_id": "box_19",
+        "node_type": "process",
+        "node_text": "Issue targeted corrective action for the identified station, assign to maintenance team with 24 hour response requirement."
+      }
+    },
+    {
+      "node_id": "box_21",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Corrective action has been issued. Quality assurance monitoring rate will be increased to hourly for the next 48 hours.",
+      "edge_label_to_next": null,
+      "turn_index": 31,
+      "ground_truth": {
+        "node_id": "box_21",
+        "node_type": "terminator",
+        "node_text": "End, corrective action issued. quality assurance monitoring rate increased to hourly for 48 hours."
+      }
+    },
+    {
+      "node_id": "box_21",
+      "node_type": "terminator",
+      "speaker": "operator",
+      "utterance": "understood will coordinate with QA on the increased monitoring schedule",
+      "edge_label_to_next": null,
+      "turn_index": 32,
+      "ground_truth": {
+        "node_id": "box_21",
+        "node_type": "terminator",
+        "node_text": "End, corrective action issued. quality assurance monitoring rate increased to hourly for 48 hours."
+      }
+    }
+  ],
+  "metadata": {
+    "depth": 17,
+    "num_decisions": 6,
+    "num_processes": 9,
+    "num_documents": 0,
+    "terminator_type": "procedure_complete",
+    "terminator_text": "End, corrective action issued. quality assurance monitoring rate increased to hourly for 48 hours.",
+    "true_terminator": true,
+    "node_sequence": [
+      "box_0",
+      "box_1",
+      "box_3",
+      "box_2",
+      "box_4",
+      "box_6",
+      "box_5",
+      "box_7",
+      "box_8",
+      "box_10",
+      "box_12",
+      "box_13",
+      "box_14",
+      "box_16",
+      "box_18",
+      "box_19",
+      "box_21"
+    ],
+    "edge_labels": [
+      null,
+      null,
+      "",
+      null,
+      "Yes",
+      "",
+      null,
+      "No",
+      null,
+      "No",
+      "Yes",
+      null,
+      "No",
+      null,
+      null,
+      "Yes",
+      null
+    ],
+    "decision_points": [
+      {
+        "node": "box_2",
+        "label": "Yes",
+        "question": "Did the rejection rate increase coincide with a batch changeover or product type change?"
+      },
+      {
+        "node": "box_5",
+        "label": "No",
+        "question": "Are the inspection threshold settings at their validated baseline values for this product type?"
+      },
+      {
+        "node": "box_8",
+        "label": "No",
+        "question": "Is the rejection dominated by a single inspection type (more than 70% from one category)?"
+      },
+      {
+        "node": "box_10",
+        "label": "Yes",
+        "question": "Is any scheduled maintenance interval overdue for the inspection stations or assembly stations?"
+      },
+      {
+        "node": "box_13",
+        "label": "No",
+        "question": "Has the rejection rate returned to within the acceptable threshold after all corrective actions?"
+      },
+      {
+        "node": "box_18",
+        "label": "Yes",
+        "question": "Is a specific station responsible for more than 60% of rejections during the fault window?"
+      }
+    ],
+    "generation_model": "anthropic/claude-sonnet-4-5",
+    "verification": {
+      "variant_of": "base",
+      "base_verified": true,
+      "note": "surface-form variant; not independently verified"
+    }
+  }
+}

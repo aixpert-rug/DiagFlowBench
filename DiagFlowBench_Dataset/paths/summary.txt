@@ -1,0 +1,77 @@
+DIAGFLOWBENCH — Path Enumeration Summary
+==================================================
+
+Total graphs:          50
+Total nodes:           1567
+Total edges:           1723
+Total decision nodes:  421
+Total process nodes:   709
+Total terminator nodes:179
+Total document nodes:  258
+
+Size distribution:
+  Small  (≤14 nodes):  6 graphs
+  Medium (15–30 nodes): 21 graphs
+  Large  (>30 nodes):  23 graphs
+
+Total root-to-terminator paths: 507
+Robustness multiplier:          ×1
+Total conversations:            1014
+Max loop iterations:            2
+
+Per-graph breakdown:
+--------------------------------------------------------------------------------
+Graph       Nodes  Edges  Dec Size      Paths  Convs  BrCov Loops 
+--------------------------------------------------------------------------------
+GRAPH01        14     13    4 small         4      8   1.00 no    
+GRAPH02         7      6    0 small         1      2   1.00 no    
+GRAPH03        13     12    4 small         5     10   1.00 no    
+GRAPH04         9      8    2 small         3      6   1.00 no    
+GRAPH05        11     10    3 small         4      8   1.00 no    
+GRAPH06        12     11    3 small         4      8   1.00 no    
+GRAPH07        19     18    6 medium        7     14   1.00 no    
+GRAPH08        37     36    9 large        10     20   1.00 no    
+GRAPH09        39     38   10 large        12     24   1.00 no    
+GRAPH10        56     55   12 large        14     28   1.00 no    
+GRAPH11        60     59   21 large        22     44   1.00 no    
+GRAPH12        42     41   12 large        13     26   1.00 no    
+GRAPH13        21     20    6 medium        7     14   1.00 no    
+GRAPH14        53     52   10 large        12     24   1.00 no    
+GRAPH15        38     37    9 large        11     22   1.00 no    
+GRAPH16        41     40    9 large        11     22   1.00 no    
+GRAPH17        43     43    9 large        11     22   1.00 no    
+GRAPH18        38     37    9 large        11     22   1.00 no    
+GRAPH19        35     34    9 large         9     18   1.00 no    
+GRAPH20        24     27    6 medium        8     16   1.00 no    
+GRAPH21        24     28    6 medium        8     16   1.00 no    
+GRAPH22        23     28    7 medium        9     18   1.00 yes   
+GRAPH23        23     27    7 medium        9     18   1.00 no    
+GRAPH24        23     27    6 medium        8     16   1.00 no    
+GRAPH25        23     28    7 medium        9     18   1.00 no    
+GRAPH26        23     28    7 medium        9     18   1.00 no    
+GRAPH27        23     28    7 medium        9     18   1.00 no    
+GRAPH28        24     29    7 medium        9     18   1.00 no    
+GRAPH29        26     32    8 medium       10     20   1.00 no    
+GRAPH30        23     28    7 medium        9     18   1.00 no    
+GRAPH31        23     27    6 medium        8     16   1.00 no    
+GRAPH32        23     29    6 medium        8     16   1.00 yes   
+GRAPH33        25     29    7 medium        9     18   1.00 yes   
+GRAPH34        24     28    6 medium        8     16   1.00 yes   
+GRAPH35        28     33    9 medium       11     22   1.00 no    
+GRAPH36        34     40   10 large        12     24   1.00 yes   
+GRAPH37        37     43   10 large        12     24   1.00 yes   
+GRAPH38        39     46   11 large        13     26   1.00 yes   
+GRAPH39        35     41   10 large        12     24   1.00 yes   
+GRAPH40        36     43   10 large        12     24   1.00 yes   
+GRAPH41        50     58   14 large        16     32   1.00 no    
+GRAPH42        54     64   15 large        17     34   1.00 yes   
+GRAPH43        55     64   16 large        18     36   1.00 no    
+GRAPH44        49     58   13 large        15     30   1.00 yes   
+GRAPH45        24     29    7 medium        9     18   1.00 no    
+GRAPH46        28     31    7 medium        9     18   1.00 yes   
+GRAPH47        26     31    7 medium        9     18   1.00 yes   
+GRAPH48        35     41   10 large        12     24   1.00 yes   
+GRAPH49        39     44   10 large        12     24   1.00 yes   
+GRAPH50        56     64   15 large        17     34   1.00 no    
+--------------------------------------------------------------------------------
+TOTAL        1567   1723  421             507   1014

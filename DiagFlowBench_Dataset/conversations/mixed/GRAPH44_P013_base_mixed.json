@@ -1,0 +1,1078 @@
+{
+  "conversation_id": "GRAPH44_P013_base_mixed",
+  "graph_id": "GRAPH44",
+  "path_id": "GRAPH44_P013",
+  "regime": "mixed",
+  "variant": "base",
+  "robustness_axis": null,
+  "turns": [
+    {
+      "node_id": "box_0",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Starting fixture diagnostic troubleshooting procedure.",
+      "edge_label_to_next": null,
+      "turn_index": 0,
+      "ground_truth": {
+        "node_id": "box_0",
+        "node_type": "terminator",
+        "node_text": "Start"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Complete the following checks: First, inspect the fixture base plate for cracks or surface distortion. Second, check locating surfaces, dowel holes, and mounting pad faces for damage. Third, inspect each clamp body for deformation or cracked pivot pins.",
+      "edge_label_to_next": null,
+      "turn_index": 1,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Inspect the fixture base plate for cracks or surface distortion. 2. Check locating surfaces, dowel holes, and mounting pad faces for damage. 3. Inspect each clamp body for deformation or cracked pivot pins."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Visual inspection complete. The base plate looks good with no cracks or distortion, locating surfaces are clean, and all clamp bodies are intact.",
+      "edge_label_to_next": null,
+      "turn_index": 2,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Inspect the fixture base plate for cracks or surface distortion. 2. Check locating surfaces, dowel holes, and mounting pad faces for damage. 3. Inspect each clamp body for deformation or cracked pivot pins."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Base plate cracks, distortion or damaged mounting surfaces?",
+      "edge_label_to_next": null,
+      "turn_index": 3,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Base plate cracks, distortion or damaged mounting surfaces?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "No damage detected. The base plate and mounting surfaces are in good condition.",
+      "edge_label_to_next": "No",
+      "turn_index": 4,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Base plate cracks, distortion or damaged mounting surfaces?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_7",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Datum A surface within flatness tolerance of 0.02 mm?",
+      "edge_label_to_next": null,
+      "turn_index": 5,
+      "ground_truth": {
+        "node_id": "box_7",
+        "node_type": "decision",
+        "node_text": "Datum A surface within flatness tolerance of 0.02 mm?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_7",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "The flatness reading is showing 0.035 millimeters variation, which exceeds the tolerance.",
+      "edge_label_to_next": "No",
+      "turn_index": 6,
+      "ground_truth": {
+        "node_id": "box_7",
+        "node_type": "decision",
+        "node_text": "Datum A surface within flatness tolerance of 0.02 mm?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Scrape or regrind datum A surface to restore flatness within specification.",
+      "edge_label_to_next": null,
+      "turn_index": 7,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "process",
+        "node_text": "Scrape or regrind datum A surface to restore flatness"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "I've restored the flatness on datum A, but now I'm noticing significant pitting and corrosion on the surface that scraping didn't address. Should I be concerned about the structural integrity here?",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "coverage_gap",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Datum A surface has been reground and the flatness is now restored.",
+      "edge_label_to_next": "",
+      "turn_index": 8,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "process",
+        "node_text": "Scrape or regrind datum A surface to restore flatness"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_9",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Locate the probe stylus against the primary locating pin at three heights along the pin axis. Record the pin position in X and Y relative to the fixture datum origin and compare against the nominal position on the fixture design drawing.",
+      "edge_label_to_next": null,
+      "turn_index": 9,
+      "ground_truth": {
+        "node_id": "box_9",
+        "node_type": "process",
+        "node_text": "Locate the probe stylus against the primary locating pin at three heights along the pin axis. Record the pin position in X and Y relative to the fixture datum origin. Compare the measured position against the nominal position on the fixture design drawing; deviation greater than the tolerance stated in the process control plan requires fixture withdrawal for repair."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_9",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "The CMM probe keeps giving me a 'stylus qualification failed' error and won't let me take any measurements at all - I've never seen this error code before.",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "undocumented_malfunction",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_9",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Primary pin measurements recorded at all three heights. I'm seeing a deviation from nominal position.",
+      "edge_label_to_next": null,
+      "turn_index": 10,
+      "ground_truth": {
+        "node_id": "box_9",
+        "node_type": "process",
+        "node_text": "Locate the probe stylus against the primary locating pin at three heights along the pin axis. Record the pin position in X and Y relative to the fixture datum origin. Compare the measured position against the nominal position on the fixture design drawing; deviation greater than the tolerance stated in the process control plan requires fixture withdrawal for repair."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_11",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Primary locating pins within plus or minus 0.01 mm of nominal position?",
+      "edge_label_to_next": null,
+      "turn_index": 11,
+      "ground_truth": {
+        "node_id": "box_11",
+        "node_type": "decision",
+        "node_text": "Primary locating pins within ±0.01 mm of nominal position?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_11",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "The primary pins are out by 0.018 millimeters, outside the acceptable range.",
+      "edge_label_to_next": "No",
+      "turn_index": 12,
+      "ground_truth": {
+        "node_id": "box_11",
+        "node_type": "decision",
+        "node_text": "Primary locating pins within ±0.01 mm of nominal position?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_12",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Adjust pin bore plugs and reream to correct datum position.",
+      "edge_label_to_next": null,
+      "turn_index": 13,
+      "ground_truth": {
+        "node_id": "box_12",
+        "node_type": "process",
+        "node_text": "Adjust pin bore plugs and reream to correct datum"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_12",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Bore plugs adjusted and reaming operation completed.",
+      "edge_label_to_next": null,
+      "turn_index": 14,
+      "ground_truth": {
+        "node_id": "box_12",
+        "node_type": "process",
+        "node_text": "Adjust pin bore plugs and reream to correct datum"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_13",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Reverify primary pin positions after bore adjustment.",
+      "edge_label_to_next": null,
+      "turn_index": 15,
+      "ground_truth": {
+        "node_id": "box_13",
+        "node_type": "decision",
+        "node_text": "Reverify primary pin positions after bore adjustment"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_13",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Remeasured the primary pins and they're now within specification.",
+      "edge_label_to_next": "OK",
+      "turn_index": 16,
+      "ground_truth": {
+        "node_id": "box_13",
+        "node_type": "decision",
+        "node_text": "Reverify primary pin positions after bore adjustment"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_16",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Secondary locating pins within plus or minus 0.015 mm of nominal?",
+      "edge_label_to_next": null,
+      "turn_index": 17,
+      "ground_truth": {
+        "node_id": "box_16",
+        "node_type": "decision",
+        "node_text": "Secondary locating pins within ±0.015 mm of nominal?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_16",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Hey, quick question - do we need to fill out a separate work order if we're also replacing the coolant filters while we're in here, or can we just note it on this one?",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "unrelated_question",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_16",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Secondary pins are reading within tolerance at 0.009 millimeters deviation.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 18,
+      "ground_truth": {
+        "node_id": "box_16",
+        "node_type": "decision",
+        "node_text": "Secondary locating pins within ±0.015 mm of nominal?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_20",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "All Z height reference pads within plus or minus 0.01 mm of each other?",
+      "edge_label_to_next": null,
+      "turn_index": 19,
+      "ground_truth": {
+        "node_id": "box_20",
+        "node_type": "decision",
+        "node_text": "All Z height reference pads within ±0.01 mm of each other?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_20",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "All four reference pads measured and the maximum variation is 0.007 millimeters, well within tolerance.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 20,
+      "ground_truth": {
+        "node_id": "box_20",
+        "node_type": "decision",
+        "node_text": "All Z height reference pads within ±0.01 mm of each other?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_24",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Angular datum within 0.005 mm per 100 mm tolerance?",
+      "edge_label_to_next": null,
+      "turn_index": 21,
+      "ground_truth": {
+        "node_id": "box_24",
+        "node_type": "decision",
+        "node_text": "Angular datum within 0.005 mm per 100 mm tolerance?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_24",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "The spirit level is showing excessive deviation. The angular datum is reading 0.008 millimeters per 100 millimeters.",
+      "edge_label_to_next": "No",
+      "turn_index": 22,
+      "ground_truth": {
+        "node_id": "box_24",
+        "node_type": "decision",
+        "node_text": "Angular datum within 0.005 mm per 100 mm tolerance?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_25",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Adjust angular datum block shims to correct inclination to within specification.",
+      "edge_label_to_next": null,
+      "turn_index": 23,
+      "ground_truth": {
+        "node_id": "box_25",
+        "node_type": "process",
+        "node_text": "Adjust angular datum block shims to correct inclination"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_25",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Shims adjusted and the angular datum is now corrected.",
+      "edge_label_to_next": "",
+      "turn_index": 24,
+      "ground_truth": {
+        "node_id": "box_25",
+        "node_type": "process",
+        "node_text": "Adjust angular datum block shims to correct inclination"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_26",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Insert a load cell between the clamping pad face and the reference surface at each clamping point. Command the clamp to close at production clamping pressure and record the force from the load cell amplifier display.",
+      "edge_label_to_next": null,
+      "turn_index": 25,
+      "ground_truth": {
+        "node_id": "box_26",
+        "node_type": "process",
+        "node_text": "Insert a load cell between the clamping pad face and the reference surface at each clamping point in turn. Command the clamp to close at the production clamping pressure and record the force from the load cell amplifier display. Compare each reading against the minimum required clamp force in the fixturing specification and note any station that falls below the minimum."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_26",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Clamp force measurements completed at all stations. All readings have been recorded.",
+      "edge_label_to_next": null,
+      "turn_index": 26,
+      "ground_truth": {
+        "node_id": "box_26",
+        "node_type": "process",
+        "node_text": "Insert a load cell between the clamping pad face and the reference surface at each clamping point in turn. Command the clamp to close at the production clamping pressure and record the force from the load cell amplifier display. Compare each reading against the minimum required clamp force in the fixturing specification and note any station that falls below the minimum."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_28",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "All clamping forces within plus or minus 8% of nominal?",
+      "edge_label_to_next": null,
+      "turn_index": 27,
+      "ground_truth": {
+        "node_id": "box_28",
+        "node_type": "decision",
+        "node_text": "All clamping forces within ±8% of nominal?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_28",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, all clamp forces are within the acceptable range, varying between 3 and 7 percent of nominal.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 28,
+      "ground_truth": {
+        "node_id": "box_28",
+        "node_type": "decision",
+        "node_text": "All clamping forces within ±8% of nominal?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_33",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Thermal expansion datum shift within model prediction plus or minus 0.01 mm?",
+      "edge_label_to_next": null,
+      "turn_index": 29,
+      "ground_truth": {
+        "node_id": "box_33",
+        "node_type": "decision",
+        "node_text": "Thermal expansion datum shift within model prediction ±0.01 mm?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_33",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "The thermal shift is measuring 0.023 millimeters, which exceeds the predicted model by a significant margin.",
+      "edge_label_to_next": "No",
+      "turn_index": 30,
+      "ground_truth": {
+        "node_id": "box_33",
+        "node_type": "decision",
+        "node_text": "Thermal expansion datum shift within model prediction ±0.01 mm?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_34",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Complete the following steps: Read the thermal compensation model coefficients from the controller, compare the stored values against the reference calibration record, and check the guide rail straightness against the 0.01 mm per 300 mm limit.",
+      "edge_label_to_next": null,
+      "turn_index": 31,
+      "ground_truth": {
+        "node_id": "box_34",
+        "node_type": "process",
+        "node_text": "Complete the following steps: 1. Read the thermal compensation model coefficients from the controller. 2. Compare the stored values against the reference calibration record. 3. Check the guide rail straightness and compare against the 0.01 mm per 300 mm limit."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_34",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Thermal coefficients verified against calibration records and guide rail straightness check is ready.",
+      "edge_label_to_next": "",
+      "turn_index": 32,
+      "ground_truth": {
+        "node_id": "box_34",
+        "node_type": "process",
+        "node_text": "Complete the following steps: 1. Read the thermal compensation model coefficients from the controller. 2. Compare the stored values against the reference calibration record. 3. Check the guide rail straightness and compare against the 0.01 mm per 300 mm limit."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_35",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Slide a precision straight edge along the full length of each guide rail and use feeler gauges to measure any gap. Record the maximum gap at any point and inspect the rail surface under magnification for defects.",
+      "edge_label_to_next": null,
+      "turn_index": 33,
+      "ground_truth": {
+        "node_id": "box_35",
+        "node_type": "process",
+        "node_text": "Slide a precision straight edge along the full length of each guide rail and use feeler gauges to measure any gap between the straight edge and the rail surface. Record the maximum gap at any point. Inspect the rail surface under a magnifier for pitting, fretting, or embedded swarf; any surface defect in the running zone requires assessment against the surface finish specification."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_35",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Straight edge measurements completed on all rails. I found some gaps that need to be assessed.",
+      "edge_label_to_next": null,
+      "turn_index": 34,
+      "ground_truth": {
+        "node_id": "box_35",
+        "node_type": "process",
+        "node_text": "Slide a precision straight edge along the full length of each guide rail and use feeler gauges to measure any gap between the straight edge and the rail surface. Record the maximum gap at any point. Inspect the rail surface under a magnifier for pitting, fretting, or embedded swarf; any surface defect in the running zone requires assessment against the surface finish specification."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_37",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Guide rail straightness within 0.01 mm per 300 mm?",
+      "edge_label_to_next": null,
+      "turn_index": 35,
+      "ground_truth": {
+        "node_id": "box_37",
+        "node_type": "decision",
+        "node_text": "Guide rail straightness within 0.01 mm per 300 mm?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_37",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "The maximum gap I'm measuring is 0.014 millimeters over 300 millimeters, which is out of spec.",
+      "edge_label_to_next": "No",
+      "turn_index": 36,
+      "ground_truth": {
+        "node_id": "box_37",
+        "node_type": "decision",
+        "node_text": "Guide rail straightness within 0.01 mm per 300 mm?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_38",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Realign guide rail and recheck straightness with precision level.",
+      "edge_label_to_next": null,
+      "turn_index": 37,
+      "ground_truth": {
+        "node_id": "box_38",
+        "node_type": "process",
+        "node_text": "Realign guide rail and recheck straightness with precision level"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_38",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Guide rail realignment complete and straightness has been rechecked.",
+      "edge_label_to_next": "",
+      "turn_index": 38,
+      "ground_truth": {
+        "node_id": "box_38",
+        "node_type": "process",
+        "node_text": "Realign guide rail and recheck straightness with precision level"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_39",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Apply the specified grease to each linear bearing block through the grease nipple using a grease gun, applying two strokes per bearing. Apply grease to each pivot pin and cycle the moving elements through their full range three times.",
+      "edge_label_to_next": null,
+      "turn_index": 39,
+      "ground_truth": {
+        "node_id": "box_39",
+        "node_type": "process",
+        "node_text": "Apply the specified grease to each linear bearing block through the grease nipple using a grease gun; apply two strokes per bearing. Apply grease to each pivot pin through its dedicated lubrication point. Cycle the moving elements through their full range three times to distribute the lubricant before wiping away any excess from part contact faces."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_39",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "All bearing blocks and pivot pins have been greased and cycled. Excess lubricant wiped clean.",
+      "edge_label_to_next": null,
+      "turn_index": 40,
+      "ground_truth": {
+        "node_id": "box_39",
+        "node_type": "process",
+        "node_text": "Apply the specified grease to each linear bearing block through the grease nipple using a grease gun; apply two strokes per bearing. Apply grease to each pivot pin through its dedicated lubrication point. Cycle the moving elements through their full range three times to distribute the lubricant before wiping away any excess from part contact faces."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_41",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "All lubrication points serviced per schedule?",
+      "edge_label_to_next": null,
+      "turn_index": 41,
+      "ground_truth": {
+        "node_id": "box_41",
+        "node_type": "decision",
+        "node_text": "All lubrication points serviced per schedule?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_41",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "I missed two lubrication points on the rear pivot assembly.",
+      "edge_label_to_next": "No",
+      "turn_index": 42,
+      "ground_truth": {
+        "node_id": "box_41",
+        "node_type": "decision",
+        "node_text": "All lubrication points serviced per schedule?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_42",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Apply grease to missed lubrication points.",
+      "edge_label_to_next": null,
+      "turn_index": 43,
+      "ground_truth": {
+        "node_id": "box_42",
+        "node_type": "process",
+        "node_text": "Apply grease to missed lubrication points"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_42",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "The missed lubrication points have now been serviced.",
+      "edge_label_to_next": "",
+      "turn_index": 44,
+      "ground_truth": {
+        "node_id": "box_42",
+        "node_type": "process",
+        "node_text": "Apply grease to missed lubrication points"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_43",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Load the designated reference part into the fixture under normal production clamping force. Probe the part at the primary datum contact, the two secondary contact points, and the Z height reference surface using the machine probing cycle.",
+      "edge_label_to_next": null,
+      "turn_index": 45,
+      "ground_truth": {
+        "node_id": "box_43",
+        "node_type": "process",
+        "node_text": "Load the designated reference part into the fixture under normal production clamping force. Probe the part at the primary datum contact, the two secondary contact points, and the Z height reference surface using the machine probing cycle. Record all four measured values and compare against the reference part qualification certificate values; deviations outside tolerance indicate fixture datum shift requiring root cause investigation."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_43",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Reference part loaded and all four datum points probed. Values recorded for comparison.",
+      "edge_label_to_next": null,
+      "turn_index": 46,
+      "ground_truth": {
+        "node_id": "box_43",
+        "node_type": "process",
+        "node_text": "Load the designated reference part into the fixture under normal production clamping force. Probe the part at the primary datum contact, the two secondary contact points, and the Z height reference surface using the machine probing cycle. Record all four measured values and compare against the reference part qualification certificate values; deviations outside tolerance indicate fixture datum shift requiring root cause investigation."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_44",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Reference part positioned within plus or minus 0.02 mm of nominal at all datums?",
+      "edge_label_to_next": null,
+      "turn_index": 47,
+      "ground_truth": {
+        "node_id": "box_44",
+        "node_type": "decision",
+        "node_text": "Reference part positioned within ±0.02 mm of nominal at all datums?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_44",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "All datum measurements are within tolerance. Maximum deviation is 0.015 millimeters.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 48,
+      "ground_truth": {
+        "node_id": "box_44",
+        "node_type": "decision",
+        "node_text": "Reference part positioned within ±0.02 mm of nominal at all datums?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_46",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Log coordinate measuring machine data, clamp forces and service details into the maintenance record system.",
+      "edge_label_to_next": null,
+      "turn_index": 49,
+      "ground_truth": {
+        "node_id": "box_46",
+        "node_type": "process",
+        "node_text": "Log coordinate measuring machine data, clamp forces and service details"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_46",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "I'm seeing some unusual vibration patterns during the measurement cycle that seem to correlate with the clamp activation, but I'm not sure where to document that or if it's something we should investigate further.",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "coverage_gap",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_46",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "All data logged in the system including CMM measurements, clamp force readings, and service actions performed.",
+      "edge_label_to_next": null,
+      "turn_index": 50,
+      "ground_truth": {
+        "node_id": "box_46",
+        "node_type": "process",
+        "node_text": "Log coordinate measuring machine data, clamp forces and service details"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_47",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Procedure complete. The fixture has passed all diagnostic checks and is cleared for production use.",
+      "edge_label_to_next": null,
+      "turn_index": 51,
+      "ground_truth": {
+        "node_id": "box_47",
+        "node_type": "terminator",
+        "node_text": "End, Procedure complete"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_47",
+      "node_type": "terminator",
+      "speaker": "operator",
+      "utterance": "Acknowledged. Returning fixture to production status.",
+      "edge_label_to_next": null,
+      "turn_index": 52,
+      "ground_truth": {
+        "node_id": "box_47",
+        "node_type": "terminator",
+        "node_text": "End, Procedure complete"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    }
+  ],
+  "metadata": {
+    "depth": 27,
+    "num_decisions": 12,
+    "num_processes": 13,
+    "num_documents": 0,
+    "terminator_type": "procedure_complete",
+    "terminator_text": "End, Procedure complete",
+    "true_terminator": true,
+    "node_sequence": [
+      "box_0",
+      "box_1",
+      "box_2",
+      "box_7",
+      "box_8",
+      "box_9",
+      "box_11",
+      "box_12",
+      "box_13",
+      "box_16",
+      "box_20",
+      "box_24",
+      "box_25",
+      "box_26",
+      "box_28",
+      "box_33",
+      "box_34",
+      "box_35",
+      "box_37",
+      "box_38",
+      "box_39",
+      "box_41",
+      "box_42",
+      "box_43",
+      "box_44",
+      "box_46",
+      "box_47"
+    ],
+    "edge_labels": [
+      null,
+      null,
+      null,
+      "No",
+      "No",
+      "",
+      null,
+      "No",
+      null,
+      "OK",
+      "Yes",
+      "Yes",
+      "No",
+      "",
+      null,
+      "Yes",
+      "No",
+      "",
+      null,
+      "No",
+      "",
+      null,
+      "No",
+      "",
+      null,
+      "Yes",
+      null
+    ],
+    "decision_points": [
+      {
+        "node": "box_2",
+        "label": "No",
+        "question": "Base plate cracks, distortion or damaged mounting surfaces?"
+      },
+      {
+        "node": "box_7",
+        "label": "No",
+        "question": "Datum A surface within flatness tolerance of 0.02 mm?"
+      },
+      {
+        "node": "box_11",
+        "label": "No",
+        "question": "Primary locating pins within ±0.01 mm of nominal position?"
+      },
+      {
+        "node": "box_13",
+        "label": "OK",
+        "question": "Reverify primary pin positions after bore adjustment"
+      },
+      {
+        "node": "box_16",
+        "label": "Yes",
+        "question": "Secondary locating pins within ±0.015 mm of nominal?"
+      },
+      {
+        "node": "box_20",
+        "label": "Yes",
+        "question": "All Z height reference pads within ±0.01 mm of each other?"
+      },
+      {
+        "node": "box_24",
+        "label": "No",
+        "question": "Angular datum within 0.005 mm per 100 mm tolerance?"
+      },
+      {
+        "node": "box_28",
+        "label": "Yes",
+        "question": "All clamping forces within ±8% of nominal?"
+      },
+      {
+        "node": "box_33",
+        "label": "No",
+        "question": "Thermal expansion datum shift within model prediction ±0.01 mm?"
+      },
+      {
+        "node": "box_37",
+        "label": "No",
+        "question": "Guide rail straightness within 0.01 mm per 300 mm?"
+      },
+      {
+        "node": "box_41",
+        "label": "No",
+        "question": "All lubrication points serviced per schedule?"
+      },
+      {
+        "node": "box_44",
+        "label": "Yes",
+        "question": "Reference part positioned within ±0.02 mm of nominal at all datums?"
+      }
+    ],
+    "generation_model": "anthropic/claude-sonnet-4-5",
+    "verification": {
+      "verified": true,
+      "issues": []
+    },
+    "injection_count": 4
+  },
+  "injection_log": [
+    {
+      "position": 8,
+      "node_id": "box_8",
+      "node_text": "Scrape or regrind datum A surface to restore flatness",
+      "edge_labels": [],
+      "category": "coverage_gap",
+      "utterance": "I've restored the flatness on datum A, but now I'm noticing significant pitting and corrosion on the surface that scraping didn't address. Should I be concerned about the structural integrity here?",
+      "injection_rate": null,
+      "num_candidates": null
+    },
+    {
+      "position": 10,
+      "node_id": "box_9",
+      "node_text": "Locate the probe stylus against the primary locating pin at three heights along the pin axis. Record the pin position in X and Y relative to the fixture datum origin. Compare the measured position against the nominal position on the fixture design drawing; deviation greater than the tolerance stated in the process control plan requires fixture withdrawal for repair.",
+      "edge_labels": [],
+      "category": "undocumented_malfunction",
+      "utterance": "The CMM probe keeps giving me a 'stylus qualification failed' error and won't let me take any measurements at all - I've never seen this error code before.",
+      "injection_rate": null,
+      "num_candidates": null
+    },
+    {
+      "position": 18,
+      "node_id": "box_16",
+      "node_text": "Secondary locating pins within ±0.015 mm of nominal?",
+      "edge_labels": [
+        "No",
+        "Yes"
+      ],
+      "category": "unrelated_question",
+      "utterance": "Hey, quick question - do we need to fill out a separate work order if we're also replacing the coolant filters while we're in here, or can we just note it on this one?",
+      "injection_rate": null,
+      "num_candidates": null
+    },
+    {
+      "position": 50,
+      "node_id": "box_46",
+      "node_text": "Log coordinate measuring machine data, clamp forces and service details",
+      "edge_labels": [],
+      "category": "coverage_gap",
+      "utterance": "I'm seeing some unusual vibration patterns during the measurement cycle that seem to correlate with the clamp activation, but I'm not sure where to document that or if it's something we should investigate further.",
+      "injection_rate": null,
+      "num_candidates": null
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+flowchart TD
+    box_0(["Start"])
+    box_1{"Does the part meet quality assurance team product<br/>specifications?"}
+    box_2["Check product dimensions and inspect for<br/>contamination."]
+    box_3["Remove the non conforming parts and reload with a<br/>product batch that meets quality assurance team<br/>specifications."]
+    box_4{"Is picking up part from input slide correct?"}
+    box_5["Verification: parts must be centred under the vacuum<br/>end effectors and must not be dropped during<br/>transport. See input slide pickup diagnostic (GRAPH<br/>17) if needed."]
+    box_6[/"Input slide pickup diagnostic (GRAPH 17)"/]
+    box_7{"Is picking up part from reorientation mechanism<br/>correct?"}
+    box_8["Verification: parts must be centred under the vacuum<br/>end effectors and must not be dropped during<br/>transport. See reorientation mechanism placement<br/>diagnostic (GRAPH 19) if needed."]
+    box_9[/"Reorientation mechanism placement diagnostic (GRAPH<br/>19)"/]
+    box_10{"Is the setup of the indexing table correct?"}
+    box_11["Verify that there is no play between the setup tool<br/>and the indexing table during mounting (refer to the<br/>part mounting adjustment procedure). Then refer to<br/>the indexing table setup procedure."]
+    box_12[/"Indexing table setup procedure"/]
+    box_13{"Are there contaminated parts?"}
+    box_14["Complete the following checks: 1. Check whether the<br/>vacuum end effectors are contaminated. 2. Check the<br/>vacuum filters for contamination. 3. Check whether<br/>the assembly robot axes are contaminated."]
+    box_15[/"Pneumatic flow measurement procedure: vacuum flow<br/>check"/]
+    box_16["Clean the parts, replace the vacuum filters, and<br/>replace the vacuum hose."]
+    box_17[/"Assembly robot axis lubrication procedure"/]
+    box_18{"Are there electrical defects?"}
+    box_19["Complete the following checks: 1. Check cabling and<br/>upper displacement sensors on the vacuum end<br/>effectors. 2. Check whether the vacuum switches work<br/>correctly. 3. Check whether the valve for the vacuum<br/>generator works correctly. 4. Check system settings<br/>on the operator control interface."]
+    box_20["Replace the defective cabling and/or displacement<br/>sensor on the vacuum end effectors."]
+    box_21{"Are there worn parts?"}
+    box_22["Complete the following checks: 1. Check wear on the<br/>vacuum end effectors. 2. Check wear on the actuator<br/>grippers. 3. Check wear on the gripper pin through<br/>the aluminium block. 4. Check the assembly robot<br/>axes for wear."]
+    box_23["Replace the worn components identified in the<br/>inspection (vacuum end effectors, actuator grippers,<br/>gripper pin, and/or assembly robot axes)."]
+    box_24[/"Assembly robot replacement procedure"/]
+    box_25{"Is the z parallelism of the lower position of 4x<br/>gripper relative to each other correct?"}
+    box_26[/"Refer to the Z parallelism check for variant A<br/>machines (small format parts)."/]
+    box_27[/"Refer to the Z parallelism check for variant B<br/>machines (medium format parts)."/]
+    box_28[/"Refer to the Z parallelism check for variant C<br/>machines (large format parts)."/]
+    box_29["Readjust the Z parallelism of the 4x gripper lower<br/>positions to the specified tolerance."]
+    box_30{"Is the part placement position in the indexing table<br/>correct?"}
+    box_31[/"Refer to the Z height and XY placement position<br/>check for variant A machines (small format parts)."/]
+    box_32[/"Refer to the Z height and XY placement position<br/>check for variant B machines (medium format parts)."/]
+    box_33[/"Refer to the Z height and XY placement position<br/>check for variant C machines (large format parts)."/]
+    box_34[/"Pick up and placement adjustment procedure: part in<br/>indexing table"/]
+    box_35["Perform assembly robot calibrations to correct the Z<br/>height and XY placement position into the indexing<br/>table fixture."]
+    box_36["Restart this diagnostic procedure from the<br/>beginning."]
+    box_37(["Placing part in indexing table is correct"])
+
+    box_0 --> box_1
+    box_2 --> box_1
+    box_1 -->|"No"| box_3
+    box_1 -->|"Yes"| box_4
+    box_5 --> box_4
+    box_4 -->|"No"| box_6
+    box_4 -->|"Yes"| box_7
+    box_8 --> box_7
+    box_7 -->|"No"| box_9
+    box_7 -->|"Yes"| box_10
+    box_11 --> box_10
+    box_10 -->|"No"| box_12
+    box_10 -->|"Yes"| box_13
+    box_14 --> box_13
+    box_15 --> box_13
+    box_13 -->|"Yes"| box_16
+    box_13 -->|"Yes"| box_17
+    box_13 -->|"No"| box_18
+    box_19 --> box_18
+    box_18 -->|"Yes"| box_20
+    box_18 -->|"No"| box_21
+    box_22 --> box_21
+    box_21 -->|"Yes"| box_23
+    box_21 -->|"Yes"| box_24
+    box_21 -->|"No"| box_25
+    box_26 --> box_25
+    box_27 --> box_25
+    box_28 --> box_25
+    box_25 -->|"No"| box_29
+    box_25 -->|"Yes"| box_30
+    box_31 --> box_30
+    box_32 --> box_30
+    box_33 --> box_30
+    box_36 --> box_37
+    box_30 -->|"No"| box_34
+    box_30 -->|"No"| box_35
+    box_30 -->|"Yes"| box_37
+
+    class box_0 terminator
+    class box_1 decision
+    class box_2 process
+    class box_3 process
+    class box_4 decision
+    class box_5 process
+    class box_6 document
+    class box_7 decision
+    class box_8 process
+    class box_9 document
+    class box_10 decision
+    class box_11 process
+    class box_12 document
+    class box_13 decision
+    class box_14 process
+    class box_15 document
+    class box_16 process
+    class box_17 document
+    class box_18 decision
+    class box_19 process
+    class box_20 process
+    class box_21 decision
+    class box_22 process
+    class box_23 process
+    class box_24 document
+    class box_25 decision
+    class box_26 document
+    class box_27 document
+    class box_28 document
+    class box_29 process
+    class box_30 decision
+    class box_31 document
+    class box_32 document
+    class box_33 document
+    class box_34 document
+    class box_35 process
+    class box_36 process
+    class box_37 terminator
+
+    classDef terminator fill:#2d4a6e,stroke:#1a3050,color:#ffffff,font-weight:bold
+    classDef process    fill:#f0f4ff,stroke:#4a6fa5,color:#1a1a2e
+    classDef decision   fill:#fff8e6,stroke:#c8922a,color:#1a1a2e
+    classDef document   fill:#f0fff4,stroke:#3a8a4a,color:#1a1a2e

@@ -1,0 +1,182 @@
+flowchart TD
+    box_0(["Start"])
+    box_1["Complete the following checks: 1. Inspect electrode<br/>cap faces for pitting deeper than 1 mm or<br/>mushrooming. 2. Check the cap shank contact surface<br/>for corrosion or mechanical damage. 3. Inspect the<br/>coolant port on each electrode arm for blockage."]
+    box_2{"Electrode cap damage, severe pitting, mushrooming or<br/>cracking?"}
+    box_3(["End, Replace electrode caps and requalify weld<br/>schedule"])
+    box_4["Using a calibrated optical comparator or digital<br/>micrometer, measure the electrode face diameter at<br/>three equally spaced points around the circumference<br/>and record the minimum diameter. Measure the cone<br/>angle at the face chamfer using a protractor or a<br/>precision angle gauge. Compare both values against<br/>the minimum serviceable electrode dimensions in the<br/>electrode change schedule."]
+    box_5[/"Refer to the electrode cap geometry specification."/]
+    box_6{"Electrode face diameter within wear limit?"}
+    box_7["Dress electrode caps to nominal geometry using<br/>electrode dresser"]
+    box_8["With the cooling circuit running, place an inline<br/>flow meter or a timed collection vessel at the<br/>cooling water outlet from the electrode holder body.<br/>Record the flow rate in litres per minute and<br/>compare against the minimum cooling flow for this<br/>electrode size in the resistance welding machine<br/>specification. Low flow indicates a partially<br/>blocked cooling channel or a failing recirculation<br/>pump."]
+    box_9[/"Refer to the cooling flow specification."/]
+    box_10{"Cooling water flow rate above minimum at both<br/>electrodes?"}
+    box_11(["End, Escalate: cooling flow fault, check pump and<br/>circuit"])
+    box_12["Place a calibrated load cell between the electrode<br/>faces with the machine in the closed position at the<br/>programmed weld force setting. Record the displayed<br/>force from the load cell amplifier and compare<br/>against the target weld force in the weld schedule<br/>table. Adjust the force setting on the machine<br/>controller until the measured force is within the<br/>tolerance band."]
+    box_13[/"Refer to the electrode force specification."/]
+    box_14{"Electrode force within ±5% of programmed schedule<br/>value?"}
+    box_15["Adjust pneumatic pressure regulator on electrode arm"]
+    box_16{"Reverify electrode force after regulator adjustment"}
+    box_17(["End, Escalate: electrode force unrecoverable, check<br/>actuator"])
+    box_18["Wrap a Rogowski coil around one of the secondary<br/>conductors and connect the output to a calibrated<br/>weld monitor. Fire a test weld at the nominal<br/>schedule settings on a production material stack and<br/>record the peak weld current and the integrated<br/>current waveform. Compare the peak current and weld<br/>time against the values in the approved weld<br/>schedule and log the result."]
+    box_19[/"Refer to the weld current calibration specification."/]
+    box_20{"Measured weld current within ±3% of scheduled value?"}
+    box_21["Complete the following steps: 1. Access the weld<br/>controller parameter menu using the maintenance<br/>password. 2. Read the current correction factor for<br/>the affected welding schedule. 3. Compare the stored<br/>factor against the reference value for this material<br/>stack."]
+    box_22{"Reverify weld current after controller correction"}
+    box_23(["End, Escalate: current calibration unrecoverable,<br/>transformer check"])
+    box_24["Connect an oscilloscope to the weld contactor<br/>control signal output. Fire a test weld and measure<br/>the time from contactor close to contactor open.<br/>Compare the measured weld time in milliseconds<br/>against the programmed weld time in the schedule. A<br/>deviation greater than two milliseconds requires<br/>inspection of the timer circuit board in the weld<br/>controller."]
+    box_25[/"Refer to the weld time tolerance specification."/]
+    box_26{"Weld time within ±1 cycle of scheduled value?"}
+    box_27["Adjust weld timer setting in controller schedule"]
+    box_28["Clean both electrode faces and place a sheet of<br/>carbon transfer paper between them. Close the<br/>electrodes at 25% of the programmed force setting<br/>and open. Inspect the carbon transfer pattern on<br/>each face; the contact impression should be<br/>concentric and cover the full electrode face area<br/>uniformly. An off centre or crescent shaped pattern<br/>indicates electrode misalignment requiring<br/>mechanical correction."]
+    box_29{"Electrode faces parallel, contact pattern above 90%<br/>of face area?"}
+    box_30["Adjust electrode arm tilt to achieve parallel<br/>contact"]
+    box_31["Prepare five test specimens cut from the production<br/>material stack with the correct number of layers and<br/>thickness. Weld each specimen at the nominal<br/>schedule settings and label each with the weld<br/>number and machine setting used. Measure the weld<br/>nugget diameter visually or by ultrasonic means and<br/>record the result in the pilot weld log before<br/>proceeding to non destructive testing."]
+    box_32[/"Refer to the pilot weld acceptance criteria."/]
+    box_33{"Pilot weld appearance, no spatter, expulsion or<br/>surface cracks?"}
+    box_34["Adjust weld schedule, modify current and force for<br/>material batch"]
+    box_35["Apply ultrasonic couplant to the electrode face side<br/>of each pilot weld coupon and scan the weld zone<br/>using an A scan ultrasonic probe. Record the<br/>reflected signal amplitude and the back wall echo<br/>attenuation. Identify the nugget boundary and<br/>measure the nugget diameter from the scan image.<br/>Compare against the minimum nugget diameter in the<br/>weld quality specification."]
+    box_36[/"Refer to the weld nugget size specification."/]
+    box_37{"Weld nugget diameter meets minimum for material<br/>thickness?"}
+    box_38(["End, Escalate: nugget undersize, weld engineer<br/>review required"])
+    box_39["Clamp each pilot weld coupon in a vice with the weld<br/>zone accessible. Insert a chisel behind the top<br/>sheet adjacent to the weld and strike sharply to<br/>peel the sheet back over the weld nugget. Measure<br/>the diameter of the nugget button that pulls out,<br/>using digital calipers. Record the peel mode: full<br/>button pull indicates an acceptable weld;<br/>interfacial fracture indicates insufficient fusion."]
+    box_40{"Peel test shows button pull failure mode, no<br/>interfacial fracture?"}
+    box_41["Revise weld schedule, increase heat input<br/>incrementally"]
+    box_42{"Reverify peel test result after schedule revision"}
+    box_43(["End, Escalate: peel test failure persistent,<br/>metallurgical review"])
+    box_44["Access the electrode wear counter display on the<br/>weld controller and record the current dress count<br/>and cap change count for each electrode. Reset the<br/>dress counter to zero after recording and update the<br/>electrode service log with the date, machine number,<br/>and cumulative weld count at time of service."]
+    box_45["Navigate to the weld programme archive menu on the<br/>controller and select the current production<br/>schedule file. Initiate a save to server operation<br/>using the machine network connection and confirm the<br/>transfer completes without error. Check the server<br/>archive directory to verify the file timestamp is<br/>current and the file size is consistent with<br/>previous saves."]
+    box_46{"Weld controller backup completed successfully?"}
+    box_47["Complete the following steps: 1. Verify the marking<br/>controller is connected to the factory network. 2.<br/>Navigate to the archive menu and check that the last<br/>record was written successfully. 3. Confirm the<br/>archive path and file permissions are correctly<br/>configured."]
+    box_48["Immerse a calibrated thermocouple probe in the<br/>cooling water return line at the point closest to<br/>the electrode holder exit. Allow the machine to<br/>complete 20 welds at production rate and record the<br/>return line temperature at steady state. Compare<br/>against the maximum allowable return temperature in<br/>the cooling system specification; excessive<br/>temperature indicates inadequate cooling flow or<br/>fouled heat exchanger plates."]
+    box_49{"Coolant return temperature within rated range?"}
+    box_50["Check chiller setpoint and clean condenser"]
+    box_51["Run 20 consecutive production welds at the standard<br/>schedule settings with the machine in normal<br/>production configuration. Log the weld current, weld<br/>force, and weld time for each weld from the<br/>controller weld data output. Inspect the final five<br/>weld spots visually for consistent button size and<br/>absence of surface expulsion before signing off the<br/>qualification record."]
+    box_52{"All production qualification welds within<br/>specification?"}
+    box_53["Log electrode data, calibration results and<br/>qualification record"]
+    box_54(["End, Procedure complete"])
+
+    box_0 --> box_1
+    box_1 --> box_2
+    box_2 -->|"Yes"| box_3
+    box_2 -->|"No"| box_6
+    box_4 --> box_6
+    box_5 --> box_6
+    box_6 -->|"No"| box_7
+    box_7 --> box_8
+    box_6 -->|"Yes"| box_10
+    box_8 --> box_10
+    box_9 --> box_10
+    box_10 -->|"No"| box_11
+    box_10 -->|"Yes"| box_14
+    box_12 --> box_14
+    box_13 --> box_14
+    box_14 -->|"No"| box_15
+    box_15 --> box_16
+    box_16 -->|"Still out of range"| box_17
+    box_16 -->|"OK"| box_20
+    box_14 -->|"Yes"| box_20
+    box_18 --> box_20
+    box_19 --> box_20
+    box_20 -->|"No"| box_21
+    box_21 --> box_22
+    box_22 -->|"Still failing"| box_23
+    box_22 -->|"OK"| box_26
+    box_20 -->|"Yes"| box_26
+    box_24 --> box_26
+    box_25 --> box_26
+    box_26 -->|"No"| box_27
+    box_27 --> box_28
+    box_26 -->|"Yes"| box_29
+    box_28 --> box_29
+    box_29 -->|"No"| box_30
+    box_30 --> box_31
+    box_29 -->|"Yes"| box_33
+    box_31 --> box_33
+    box_32 --> box_33
+    box_33 -->|"No"| box_34
+    box_34 --> box_35
+    box_33 -->|"Yes"| box_37
+    box_35 --> box_37
+    box_36 --> box_37
+    box_37 -->|"No"| box_38
+    box_37 -->|"Yes"| box_40
+    box_39 --> box_40
+    box_40 -->|"No"| box_41
+    box_41 --> box_42
+    box_42 -->|"Still failing"| box_43
+    box_42 -->|"OK"| box_46
+    box_40 -->|"Yes"| box_46
+    box_44 --> box_46
+    box_45 --> box_46
+    box_46 -->|"No"| box_47
+    box_47 --> box_48
+    box_46 -->|"Yes"| box_49
+    box_48 --> box_49
+    box_49 -->|"No"| box_50
+    box_50 --> box_51
+    box_49 -->|"Yes"| box_52
+    box_51 --> box_52
+    box_52 -->|"Yes"| box_53
+    box_52 -->|"No"| box_43
+    box_53 --> box_54
+
+    class box_0 terminator
+    class box_1 process
+    class box_2 decision
+    class box_3 terminator
+    class box_4 process
+    class box_5 document
+    class box_6 decision
+    class box_7 process
+    class box_8 process
+    class box_9 document
+    class box_10 decision
+    class box_11 terminator
+    class box_12 process
+    class box_13 document
+    class box_14 decision
+    class box_15 process
+    class box_16 decision
+    class box_17 terminator
+    class box_18 process
+    class box_19 document
+    class box_20 decision
+    class box_21 process
+    class box_22 decision
+    class box_23 terminator
+    class box_24 process
+    class box_25 document
+    class box_26 decision
+    class box_27 process
+    class box_28 process
+    class box_29 decision
+    class box_30 process
+    class box_31 process
+    class box_32 document
+    class box_33 decision
+    class box_34 process
+    class box_35 process
+    class box_36 document
+    class box_37 decision
+    class box_38 terminator
+    class box_39 process
+    class box_40 decision
+    class box_41 process
+    class box_42 decision
+    class box_43 terminator
+    class box_44 process
+    class box_45 process
+    class box_46 decision
+    class box_47 process
+    class box_48 process
+    class box_49 decision
+    class box_50 process
+    class box_51 process
+    class box_52 decision
+    class box_53 process
+    class box_54 terminator
+
+    classDef terminator fill:#2d4a6e,stroke:#1a3050,color:#ffffff,font-weight:bold
+    classDef process    fill:#f0f4ff,stroke:#4a6fa5,color:#1a1a2e
+    classDef decision   fill:#fff8e6,stroke:#c8922a,color:#1a1a2e
+    classDef document   fill:#f0fff4,stroke:#3a8a4a,color:#1a1a2e

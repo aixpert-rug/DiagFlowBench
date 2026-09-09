@@ -1,0 +1,546 @@
+{
+  "id": "GRAPH42",
+  "description": "Automatic tool changer full mechanical and cycle inspection — PROC-66",
+  "graph": {
+    "nodes": {
+      "box_0": {
+        "type": "terminator",
+        "text": "Start"
+      },
+      "box_1": {
+        "type": "process",
+        "text": "Complete the following checks: 1. Inspect magazine pockets for deformation, cracking, or swarf accumulation. 2. Check gripper arm fingers for bending, cracking, or worn contact faces. 3. Inspect the magazine drive mechanism for seized bearings or loose fasteners."
+      },
+      "box_2": {
+        "type": "decision",
+        "text": "Magazine deformation, cracked pockets or broken gripper fingers?"
+      },
+      "box_3": {
+        "type": "terminator",
+        "text": "End, Escalate: magazine structural damage, station offline"
+      },
+      "box_4": {
+        "type": "process",
+        "text": "Measure the spread distance between opposing gripper finger tips with a digital caliper and compare against the nominal jaw opening in the tool changer specification. Test the return spring force by compressing each finger by hand and confirming the return is positive with no sticking. Replace any finger whose spread dimension exceeds the maximum worn limit or whose spring shows free play."
+      },
+      "box_5": {
+        "type": "document",
+        "text": "Refer to the gripper finger specification."
+      },
+      "box_6": {
+        "type": "decision",
+        "text": "Gripper finger spread within retention force tolerance?"
+      },
+      "box_7": {
+        "type": "process",
+        "text": "Replace worn gripper fingers, both fingers per pocket"
+      },
+      "box_8": {
+        "type": "process",
+        "text": "Measure the diameter of each locating pin at the shank and at the nose using a calibrated digital micrometer. Compare against the nominal pin diameter and the minimum serviceable diameter in the fixture drawing. Inspect the pin surface under a magnifier for chipping, burring, or scoring; any pin showing surface damage at the locating nose should be replaced."
+      },
+      "box_9": {
+        "type": "document",
+        "text": "Refer to the locating pin tolerance specification."
+      },
+      "box_10": {
+        "type": "decision",
+        "text": "Locating pin diameter within H6/h5 fit tolerance?"
+      },
+      "box_11": {
+        "type": "process",
+        "text": "Replace worn locating pins, verify with go/no go gauge after fitting"
+      },
+      "box_12": {
+        "type": "process",
+        "text": "Load a standard toolholder into the spindle and attach the pull gauge to the retention knob. Apply a steady axial pull and record the peak force at drawbar release. Compare the reading against the minimum drawbar retention force in the machine specification. Retention force below the minimum indicates disc spring pack degradation and requires drawbar inspection."
+      },
+      "box_13": {
+        "type": "document",
+        "text": "Refer to the tool retention force specification."
+      },
+      "box_14": {
+        "type": "decision",
+        "text": "Tool retention force within rated range for all tested pockets?"
+      },
+      "box_15": {
+        "type": "process",
+        "text": "Adjust drawbar clamping pressure or replace Belleville washers"
+      },
+      "box_16": {
+        "type": "decision",
+        "text": "Reverify tool retention force after adjustment"
+      },
+      "box_17": {
+        "type": "terminator",
+        "text": "End, Escalate: retention force unrecoverable, spindle drawbar service"
+      },
+      "box_18": {
+        "type": "process",
+        "text": "Command the magazine to index through all pocket positions from the machine control panel. Monitor the magazine motion for smooth deceleration at each pocket position and absence of mechanical shock. Record the time for a full rotation cycle and compare against the nominal cycle time; a significant increase indicates bearing drag or encoder slip."
+      },
+      "box_19": {
+        "type": "document",
+        "text": "Refer to the magazine rotation cycle time specification."
+      },
+      "box_20": {
+        "type": "decision",
+        "text": "All magazine positions indexed within ±0.3 s of nominal?"
+      },
+      "box_21": {
+        "type": "terminator",
+        "text": "End, Escalate: magazine rotation fault, check cam and drive belt"
+      },
+      "box_22": {
+        "type": "process",
+        "text": "Mount a dial test indicator on a magnetic base with the probe contacting the inner face of the reference pocket stop. Index the magazine through one complete rotation and return to the reference pocket. Record the indicator displacement at each return to verify repeatability. Compare the worst case deviation against the maximum pocket positioning tolerance in the magazine specification."
+      },
+      "box_23": {
+        "type": "document",
+        "text": "Refer to the magazine position accuracy specification."
+      },
+      "box_24": {
+        "type": "decision",
+        "text": "Magazine positioning accuracy within ±0.1 mm at all pockets?"
+      },
+      "box_25": {
+        "type": "process",
+        "text": "Adjust index home offset parameter in tool changer controller"
+      },
+      "box_26": {
+        "type": "decision",
+        "text": "Reverify positioning accuracy after offset adjustment"
+      },
+      "box_27": {
+        "type": "terminator",
+        "text": "End, Escalate: systematic positioning error, cam follower wear"
+      },
+      "box_28": {
+        "type": "process",
+        "text": "Step the magazine to each pocket position individually and observe the pocket sensor indicator on the machine control display. Verify that the sensor signal goes active when a toolholder is present and inactive when the pocket is empty. Use a steel rule to check the distance from sensor face to toolholder flange and confirm it is within the sensor sensing range."
+      },
+      "box_29": {
+        "type": "decision",
+        "text": "All tool present sensors trigger correctly with tool loaded?"
+      },
+      "box_30": {
+        "type": "process",
+        "text": "Reposition or replace faulty tool present sensors"
+      },
+      "box_31": {
+        "type": "process",
+        "text": "Open the tool changer guard door and confirm that the machine control panel shows a door open fault preventing spindle and magazine motion. Close the door and confirm the fault clears. Inspect the door interlock switch actuator for damage and verify that the locking solenoid engages before motion is commanded."
+      },
+      "box_32": {
+        "type": "decision",
+        "text": "Tool changer safety interlocks function correctly?"
+      },
+      "box_33": {
+        "type": "process",
+        "text": "Complete the following steps: 1. Access the safety controller configuration using the maintenance password. 2. Navigate to the tool changer door sensor position parameter. 3. Read the current parameter value and compare against the reference setting."
+      },
+      "box_34": {
+        "type": "process",
+        "text": "Connect a stopwatch or use the machine cycle time display to measure the duration from arm extend command to arm retracted and locked confirmation signal. Record the measured time and compare against the target arm swing time in the machine parameter record. A time increase of more than 20% above target suggests hydraulic pressure loss or mechanical binding."
+      },
+      "box_35": {
+        "type": "document",
+        "text": "Refer to the tool changer arm speed specification."
+      },
+      "box_36": {
+        "type": "decision",
+        "text": "Arm swing speed within specified range?"
+      },
+      "box_37": {
+        "type": "process",
+        "text": "Adjust hydraulic or pneumatic flow control on tool changer arm"
+      },
+      "box_38": {
+        "type": "process",
+        "text": "Command ten consecutive automatic tool changes using two adjacent pockets, cycling T1 to T2 and back. Observe each change for smooth arm swing, positive tool seating in the spindle, and absence of toolholder drop or misalignment. Record any change cycle that generates an alarm or requires a retry; more than one fault in ten cycles requires investigation before production release."
+      },
+      "box_39": {
+        "type": "decision",
+        "text": "All 10 tool changes completed without fault or alarm?"
+      },
+      "box_40": {
+        "type": "process",
+        "text": "Complete the following checks: 1. Access the alarm log and filter by tool changer related alarm codes. 2. Record the tool number, pocket number, and alarm description. 3. Check whether the alarm pattern correlates with a specific pocket or tool."
+      },
+      "box_41": {
+        "type": "decision",
+        "text": "Reverify tool changer cycle after fault investigation"
+      },
+      "box_42": {
+        "type": "terminator",
+        "text": "End, Escalate: persistent tool changer cycle fault, maintenance engineer"
+      },
+      "box_43": {
+        "type": "process",
+        "text": "Load the reference tool into the spindle and measure the tool length from the spindle gauge line to the tool tip using the machine probing cycle or a presetter. Compare the measured offset against the stored tool length offset in the controller tool table. A discrepancy greater than 0.02 millimetres requires offset correction and investigation of the drawbar retention result."
+      },
+      "box_44": {
+        "type": "document",
+        "text": "Refer to the tool length offset tolerance."
+      },
+      "box_45": {
+        "type": "decision",
+        "text": "Tool length measurement within ±0.01 mm of stored offset?"
+      },
+      "box_46": {
+        "type": "process",
+        "text": "Complete the following steps: 1. Load the reference tool and run the tool length measurement probing cycle. 2. Read the measured tool length offset from the probing cycle result screen. 3. Compare the measured offset against the reference value in the tool library."
+      },
+      "box_47": {
+        "type": "process",
+        "text": "Apply the specified grease type to the cam follower roller and to the guide rail surfaces using a clean grease gun with the correct nozzle. Cycle the arm through three full extend and retract cycles to distribute the lubricant. Wipe away excess grease from the arm contact surfaces to prevent transfer to toolholder tapers."
+      },
+      "box_48": {
+        "type": "document",
+        "text": "Refer to the tool changer lubrication specification."
+      },
+      "box_49": {
+        "type": "decision",
+        "text": "All lubrication points serviced per specification?"
+      },
+      "box_50": {
+        "type": "process",
+        "text": "Apply missing grease, refer to lubrication diagram"
+      },
+      "box_51": {
+        "type": "process",
+        "text": "Log all tool changer measurements and update service record"
+      },
+      "box_52": {
+        "type": "terminator",
+        "text": "End, Procedure complete"
+      },
+      "box_53": {
+        "type": "process",
+        "text": "Secondary drawbar overhaul: extend the drawbar to expose the disc spring stack and inspect each spring for cracking, deformation, or dimensional out of specification. Replace the complete spring stack with new springs from the correct part number kit. Reset the drawbar preload to the specification value using a compression gauge before returning to the tool retention force measurement step."
+      }
+    },
+    "edges": [
+      {
+        "source": "box_0",
+        "target": "box_1",
+        "label": null
+      },
+      {
+        "source": "box_1",
+        "target": "box_2",
+        "label": null
+      },
+      {
+        "source": "box_2",
+        "target": "box_3",
+        "label": "Yes"
+      },
+      {
+        "source": "box_2",
+        "target": "box_6",
+        "label": "No"
+      },
+      {
+        "source": "box_4",
+        "target": "box_6",
+        "label": null
+      },
+      {
+        "source": "box_5",
+        "target": "box_6",
+        "label": null
+      },
+      {
+        "source": "box_6",
+        "target": "box_7",
+        "label": "No"
+      },
+      {
+        "source": "box_7",
+        "target": "box_8",
+        "label": ""
+      },
+      {
+        "source": "box_6",
+        "target": "box_10",
+        "label": "Yes"
+      },
+      {
+        "source": "box_8",
+        "target": "box_10",
+        "label": null
+      },
+      {
+        "source": "box_9",
+        "target": "box_10",
+        "label": null
+      },
+      {
+        "source": "box_10",
+        "target": "box_11",
+        "label": "No"
+      },
+      {
+        "source": "box_11",
+        "target": "box_12",
+        "label": ""
+      },
+      {
+        "source": "box_10",
+        "target": "box_14",
+        "label": "Yes"
+      },
+      {
+        "source": "box_12",
+        "target": "box_14",
+        "label": null
+      },
+      {
+        "source": "box_13",
+        "target": "box_14",
+        "label": null
+      },
+      {
+        "source": "box_14",
+        "target": "box_15",
+        "label": "No"
+      },
+      {
+        "source": "box_15",
+        "target": "box_16",
+        "label": null
+      },
+      {
+        "source": "box_16",
+        "target": "box_20",
+        "label": "OK"
+      },
+      {
+        "source": "box_14",
+        "target": "box_20",
+        "label": "Yes"
+      },
+      {
+        "source": "box_18",
+        "target": "box_20",
+        "label": null
+      },
+      {
+        "source": "box_19",
+        "target": "box_20",
+        "label": null
+      },
+      {
+        "source": "box_20",
+        "target": "box_21",
+        "label": "No"
+      },
+      {
+        "source": "box_20",
+        "target": "box_24",
+        "label": "Yes"
+      },
+      {
+        "source": "box_22",
+        "target": "box_24",
+        "label": null
+      },
+      {
+        "source": "box_23",
+        "target": "box_24",
+        "label": null
+      },
+      {
+        "source": "box_24",
+        "target": "box_25",
+        "label": "No"
+      },
+      {
+        "source": "box_25",
+        "target": "box_26",
+        "label": null
+      },
+      {
+        "source": "box_26",
+        "target": "box_27",
+        "label": "Still out of spec"
+      },
+      {
+        "source": "box_26",
+        "target": "box_29",
+        "label": "OK"
+      },
+      {
+        "source": "box_24",
+        "target": "box_29",
+        "label": "Yes"
+      },
+      {
+        "source": "box_28",
+        "target": "box_29",
+        "label": null
+      },
+      {
+        "source": "box_29",
+        "target": "box_30",
+        "label": "No"
+      },
+      {
+        "source": "box_30",
+        "target": "box_31",
+        "label": ""
+      },
+      {
+        "source": "box_29",
+        "target": "box_32",
+        "label": "Yes"
+      },
+      {
+        "source": "box_31",
+        "target": "box_32",
+        "label": null
+      },
+      {
+        "source": "box_32",
+        "target": "box_33",
+        "label": "No"
+      },
+      {
+        "source": "box_33",
+        "target": "box_34",
+        "label": ""
+      },
+      {
+        "source": "box_32",
+        "target": "box_36",
+        "label": "Yes"
+      },
+      {
+        "source": "box_34",
+        "target": "box_36",
+        "label": null
+      },
+      {
+        "source": "box_35",
+        "target": "box_36",
+        "label": null
+      },
+      {
+        "source": "box_36",
+        "target": "box_37",
+        "label": "No"
+      },
+      {
+        "source": "box_37",
+        "target": "box_38",
+        "label": ""
+      },
+      {
+        "source": "box_36",
+        "target": "box_39",
+        "label": "Yes"
+      },
+      {
+        "source": "box_38",
+        "target": "box_39",
+        "label": null
+      },
+      {
+        "source": "box_39",
+        "target": "box_40",
+        "label": "No"
+      },
+      {
+        "source": "box_40",
+        "target": "box_41",
+        "label": null
+      },
+      {
+        "source": "box_41",
+        "target": "box_42",
+        "label": "Still failing"
+      },
+      {
+        "source": "box_41",
+        "target": "box_45",
+        "label": "OK"
+      },
+      {
+        "source": "box_39",
+        "target": "box_45",
+        "label": "Yes"
+      },
+      {
+        "source": "box_43",
+        "target": "box_45",
+        "label": null
+      },
+      {
+        "source": "box_44",
+        "target": "box_45",
+        "label": null
+      },
+      {
+        "source": "box_45",
+        "target": "box_46",
+        "label": "No"
+      },
+      {
+        "source": "box_46",
+        "target": "box_47",
+        "label": ""
+      },
+      {
+        "source": "box_45",
+        "target": "box_49",
+        "label": "Yes"
+      },
+      {
+        "source": "box_47",
+        "target": "box_49",
+        "label": null
+      },
+      {
+        "source": "box_48",
+        "target": "box_49",
+        "label": null
+      },
+      {
+        "source": "box_49",
+        "target": "box_50",
+        "label": "No"
+      },
+      {
+        "source": "box_50",
+        "target": "box_51",
+        "label": null
+      },
+      {
+        "source": "box_49",
+        "target": "box_51",
+        "label": "Yes"
+      },
+      {
+        "source": "box_51",
+        "target": "box_52",
+        "label": null
+      },
+      {
+        "source": "box_16",
+        "target": "box_53",
+        "label": "Still low"
+      },
+      {
+        "source": "box_53",
+        "target": "box_16",
+        "label": null
+      },
+      {
+        "source": "box_16",
+        "target": "box_17",
+        "label": "Unresolvable after second attempt"
+      }
+    ]
+  }
+}

@@ -1,0 +1,247 @@
+{
+  "id": "GRAPH32",
+  "description": "Procedure triggered when rejection rate exceeds alarm threshold, including CAPA issuance and QA monitoring escalation.",
+  "graph": {
+    "nodes": {
+      "box_0": {
+        "type": "terminator",
+        "text": "Start"
+      },
+      "box_1": {
+        "type": "process",
+        "text": "Record the current rejection rate, rejection type breakdown (orientation, marking quality, insertion depth, presence), and the time window over which the rate increased."
+      },
+      "box_2": {
+        "type": "decision",
+        "text": "Did the rejection rate increase coincide with a batch changeover or product type change?"
+      },
+      "box_3": {
+        "type": "process",
+        "text": "Verify that the correct product program is loaded for the current batch. Check that all inspection thresholds have been correctly transferred for this product type."
+      },
+      "box_4": {
+        "type": "process",
+        "text": "Switch to the correct product program and reset all inspection parameters to the validated baseline for this product type. rerun a test sequence."
+      },
+      "box_5": {
+        "type": "decision",
+        "text": "Are the inspection threshold settings at their validated baseline values for this product type?"
+      },
+      "box_6": {
+        "type": "process",
+        "text": "Compare the current threshold settings on the operator control interface against the last validated baseline values recorded in the product setup record."
+      },
+      "box_7": {
+        "type": "process",
+        "text": "Restore all inspection thresholds to the validated baseline values. Document which thresholds were found out of specification."
+      },
+      "box_8": {
+        "type": "decision",
+        "text": "Is the rejection dominated by a single inspection type (more than 70% from one category)?"
+      },
+      "box_9": {
+        "type": "process",
+        "text": "Identify the dominant rejection type and follow the specific fault procedure for that inspection system."
+      },
+      "box_10": {
+        "type": "decision",
+        "text": "Is any scheduled maintenance interval overdue for the inspection stations or assembly stations?"
+      },
+      "box_11": {
+        "type": "process",
+        "text": "Complete the following checks: 1. Open the maintenance record and filter by station asset number. 2. Compare the current cycle count against the scheduled maintenance interval. 3. Check whether any maintenance task is overdue at the affected station."
+      },
+      "box_12": {
+        "type": "process",
+        "text": "Perform all overdue maintenance tasks before resuming full production. Record completion in the maintenance log."
+      },
+      "box_13": {
+        "type": "decision",
+        "text": "Has the rejection rate returned to within the acceptable threshold after all corrective actions?"
+      },
+      "box_14": {
+        "type": "process",
+        "text": "Escalate to the maintenance team and engineering team: the rejection rate cannot be resolved through standard corrective actions; a detailed line audit is required."
+      },
+      "box_15": {
+        "type": "process",
+        "text": "Record all corrective actions taken, the before and after correction rejection rates, and the root cause in the quality log. Notify quality assurance team."
+      },
+      "box_16": {
+        "type": "process",
+        "text": "Complete the following steps: 1. Export the rejection log for the fault window from the vision system. 2. Sort the data by rejection code and count the occurrences per station. 3. Identify whether one station accounts for more than 60% of rejections."
+      },
+      "box_17": {
+        "type": "document",
+        "text": "Refer to the rejection rate corrective action procedure."
+      },
+      "box_18": {
+        "type": "decision",
+        "text": "Is a specific station responsible for more than 60% of rejections during the fault window?"
+      },
+      "box_19": {
+        "type": "process",
+        "text": "Issue targeted corrective action for the identified station, assign to maintenance team with 24 hour response requirement."
+      },
+      "box_20": {
+        "type": "process",
+        "text": "Issue line wide corrective action covering all contributing stations, assign to engineering team."
+      },
+      "box_21": {
+        "type": "terminator",
+        "text": "End, corrective action issued. quality assurance monitoring rate increased to hourly for 48 hours."
+      },
+      "box_22": {
+        "type": "terminator",
+        "text": "End, quality assurance notified, corrective actions recorded. Procedure complete."
+      }
+    },
+    "edges": [
+      {
+        "source": "box_0",
+        "target": "box_1",
+        "label": null
+      },
+      {
+        "source": "box_1",
+        "target": "box_3",
+        "label": ""
+      },
+      {
+        "source": "box_3",
+        "target": "box_2",
+        "label": null
+      },
+      {
+        "source": "box_2",
+        "target": "box_4",
+        "label": "Yes"
+      },
+      {
+        "source": "box_2",
+        "target": "box_5",
+        "label": "No"
+      },
+      {
+        "source": "box_4",
+        "target": "box_6",
+        "label": ""
+      },
+      {
+        "source": "box_6",
+        "target": "box_5",
+        "label": null
+      },
+      {
+        "source": "box_5",
+        "target": "box_7",
+        "label": "No"
+      },
+      {
+        "source": "box_5",
+        "target": "box_8",
+        "label": "Yes"
+      },
+      {
+        "source": "box_7",
+        "target": "box_8",
+        "label": null
+      },
+      {
+        "source": "box_9",
+        "target": "box_8",
+        "label": null
+      },
+      {
+        "source": "box_8",
+        "target": "box_9",
+        "label": "Yes"
+      },
+      {
+        "source": "box_8",
+        "target": "box_10",
+        "label": "No"
+      },
+      {
+        "source": "box_9",
+        "target": "box_11",
+        "label": ""
+      },
+      {
+        "source": "box_11",
+        "target": "box_10",
+        "label": null
+      },
+      {
+        "source": "box_10",
+        "target": "box_12",
+        "label": "Yes"
+      },
+      {
+        "source": "box_10",
+        "target": "box_13",
+        "label": "No"
+      },
+      {
+        "source": "box_12",
+        "target": "box_13",
+        "label": null
+      },
+      {
+        "source": "box_13",
+        "target": "box_14",
+        "label": "No"
+      },
+      {
+        "source": "box_13",
+        "target": "box_15",
+        "label": "Yes"
+      },
+      {
+        "source": "box_14",
+        "target": "box_16",
+        "label": null
+      },
+      {
+        "source": "box_15",
+        "target": "box_16",
+        "label": null
+      },
+      {
+        "source": "box_17",
+        "target": "box_16",
+        "label": null
+      },
+      {
+        "source": "box_16",
+        "target": "box_18",
+        "label": null
+      },
+      {
+        "source": "box_18",
+        "target": "box_19",
+        "label": "Yes"
+      },
+      {
+        "source": "box_18",
+        "target": "box_20",
+        "label": "No"
+      },
+      {
+        "source": "box_19",
+        "target": "box_21",
+        "label": null
+      },
+      {
+        "source": "box_20",
+        "target": "box_21",
+        "label": null
+      },
+      {
+        "source": "box_13",
+        "target": "box_22",
+        "label": "Yes"
+      }
+    ]
+  }
+}

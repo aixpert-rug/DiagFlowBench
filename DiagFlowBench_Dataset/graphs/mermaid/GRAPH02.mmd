@@ -1,0 +1,28 @@
+flowchart TD
+    box_0(["Start"])
+    box_1["Record the positional deviation in X and Y direction<br/>on the inspection record."]
+    box_2["Adjust the X/Y offset of the marking head to correct<br/>the recorded positional deviation, following the<br/>positional deviation correction procedure."]
+    box_3[/"Positional deviation correction procedure"/]
+    box_4["Clean the fume extraction unit."]
+    box_5[/"Fume extraction cleaning procedure"/]
+    box_6(["End, Notify maintenance team"])
+
+    box_0 --> box_1
+    box_1 --> box_2
+    box_3 --> box_2
+    box_2 --> box_4
+    box_5 --> box_4
+    box_4 --> box_6
+
+    class box_0 terminator
+    class box_1 process
+    class box_2 process
+    class box_3 document
+    class box_4 process
+    class box_5 document
+    class box_6 terminator
+
+    classDef terminator fill:#2d4a6e,stroke:#1a3050,color:#ffffff,font-weight:bold
+    classDef process    fill:#f0f4ff,stroke:#4a6fa5,color:#1a1a2e
+    classDef decision   fill:#fff8e6,stroke:#c8922a,color:#1a1a2e
+    classDef document   fill:#f0fff4,stroke:#3a8a4a,color:#1a1a2e

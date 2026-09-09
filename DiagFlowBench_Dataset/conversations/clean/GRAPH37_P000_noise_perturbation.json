@@ -1,0 +1,328 @@
+{
+  "conversation_id": "GRAPH37_P000_noise_perturbation",
+  "graph_id": "GRAPH37",
+  "path_id": "GRAPH37_P000",
+  "regime": "clean",
+  "variant": "noise_perturbation",
+  "robustness_axis": "noise_perturbation",
+  "turns": [
+    {
+      "node_id": "box_0",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Starting vision system diagnostic procedure.",
+      "edge_label_to_next": null,
+      "turn_index": 0,
+      "ground_truth": {
+        "node_id": "box_0",
+        "node_type": "terminator",
+        "node_text": "Start"
+      }
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Complete the following checks: First, inspect the lens front element at oblique incidence for scratches or chips. Second, check the lens housing for impact cracks or loose retaining ring. Third, inspect the lens mount face for contamination or swarf.",
+      "edge_label_to_next": null,
+      "turn_index": 1,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Inspect the lens front element at oblique incidence for scratches or chips. 2. Check the lens housing for impact cracks or loose retaining ring. 3. Inspect the lens mount face for contamination or swarf."
+      }
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "all three checks done lens element clear housing intact and mount face clean",
+      "edge_label_to_next": null,
+      "turn_index": 2,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Inspect the lens front element at oblique incidence for scratches or chips. 2. Check the lens housing for impact cracks or loose retaining ring. 3. Inspect the lens mount face for contamination or swarf."
+      }
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Are lens scratches, chips or contamination present?",
+      "edge_label_to_next": null,
+      "turn_index": 3,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Lens scratches, chips or contamination present?"
+      }
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no lens is good condition no visable damage or contamination",
+      "edge_label_to_next": "No",
+      "turn_index": 4,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Lens scratches, chips or contamination present?"
+      }
+    },
+    {
+      "node_id": "box_6",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the lighting intensity within specified range at the part plane?",
+      "edge_label_to_next": null,
+      "turn_index": 5,
+      "ground_truth": {
+        "node_id": "box_6",
+        "node_type": "decision",
+        "node_text": "Lighting intensity within specified range at part plane?"
+      }
+    },
+    {
+      "node_id": "box_6",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yeah illuminance readings all within spec at center and corners",
+      "edge_label_to_next": "Yes",
+      "turn_index": 6,
+      "ground_truth": {
+        "node_id": "box_6",
+        "node_type": "decision",
+        "node_text": "Lighting intensity within specified range at part plane?"
+      }
+    },
+    {
+      "node_id": "box_11",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is image sharpness within the sharpness specification?",
+      "edge_label_to_next": null,
+      "turn_index": 7,
+      "ground_truth": {
+        "node_id": "box_11",
+        "node_type": "decision",
+        "node_text": "Image sharpness within sharpness specification specification?"
+      }
+    },
+    {
+      "node_id": "box_11",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yes the mtf values meet lens acceptance criteria across all quadrents",
+      "edge_label_to_next": "Yes",
+      "turn_index": 8,
+      "ground_truth": {
+        "node_id": "box_11",
+        "node_type": "decision",
+        "node_text": "Image sharpness within sharpness specification specification?"
+      }
+    },
+    {
+      "node_id": "box_16",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is distortion within plus or minus zero point five pixels at corner positions?",
+      "edge_label_to_next": null,
+      "turn_index": 9,
+      "ground_truth": {
+        "node_id": "box_16",
+        "node_type": "decision",
+        "node_text": "Distortion within ±0.5 px at corner positions?"
+      }
+    },
+    {
+      "node_id": "box_16",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yes max distortion at corners within tolerance",
+      "edge_label_to_next": "Yes",
+      "turn_index": 10,
+      "ground_truth": {
+        "node_id": "box_16",
+        "node_type": "decision",
+        "node_text": "Distortion within ±0.5 px at corner positions?"
+      }
+    },
+    {
+      "node_id": "box_20",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the calibration residual error within zero point one pixels root mean square?",
+      "edge_label_to_next": null,
+      "turn_index": 11,
+      "ground_truth": {
+        "node_id": "box_20",
+        "node_type": "decision",
+        "node_text": "Calibration residual error within 0.1 px root mean square?"
+      }
+    },
+    {
+      "node_id": "box_20",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no reprojection error reading 0.13 pixels wich exceeds the limit",
+      "edge_label_to_next": "No",
+      "turn_index": 12,
+      "ground_truth": {
+        "node_id": "box_20",
+        "node_type": "decision",
+        "node_text": "Calibration residual error within 0.1 px root mean square?"
+      }
+    },
+    {
+      "node_id": "box_21",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Rerun calibration with new target images, using a minimum of twenty poses.",
+      "edge_label_to_next": null,
+      "turn_index": 13,
+      "ground_truth": {
+        "node_id": "box_21",
+        "node_type": "process",
+        "node_text": "Rerun calibration with new target images, 20 poses minimum"
+      }
+    },
+    {
+      "node_id": "box_21",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "ok so calibration rerun complete with 22 target poses captured and proccessed",
+      "edge_label_to_next": null,
+      "turn_index": 14,
+      "ground_truth": {
+        "node_id": "box_21",
+        "node_type": "process",
+        "node_text": "Rerun calibration with new target images, 20 poses minimum"
+      }
+    },
+    {
+      "node_id": "box_22",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Reverify the calibration residual after recalibration.",
+      "edge_label_to_next": null,
+      "turn_index": 15,
+      "ground_truth": {
+        "node_id": "box_22",
+        "node_type": "decision",
+        "node_text": "Reverify calibration residual after recalibration"
+      }
+    },
+    {
+      "node_id": "box_22",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "looks like error still at 0.12 pixels calibration residual remains above spec",
+      "edge_label_to_next": "Still failing",
+      "turn_index": 16,
+      "ground_truth": {
+        "node_id": "box_22",
+        "node_type": "decision",
+        "node_text": "Reverify calibration residual after recalibration"
+      }
+    },
+    {
+      "node_id": "box_23",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Procedure complete. Calibration residual is persistent and unresolvable. Escalate this issue and contact the vision engineer for further investigation.",
+      "edge_label_to_next": null,
+      "turn_index": 17,
+      "ground_truth": {
+        "node_id": "box_23",
+        "node_type": "terminator",
+        "node_text": "End, Escalate: calibration residual persistent, contact vision engineer"
+      }
+    },
+    {
+      "node_id": "box_23",
+      "node_type": "terminator",
+      "speaker": "operator",
+      "utterance": "understood will escalate to vision engineer immediatley",
+      "edge_label_to_next": null,
+      "turn_index": 18,
+      "ground_truth": {
+        "node_id": "box_23",
+        "node_type": "terminator",
+        "node_text": "End, Escalate: calibration residual persistent, contact vision engineer"
+      }
+    }
+  ],
+  "metadata": {
+    "depth": 10,
+    "num_decisions": 6,
+    "num_processes": 2,
+    "num_documents": 0,
+    "terminator_type": "escalate",
+    "terminator_text": "End, Escalate: calibration residual persistent, contact vision engineer",
+    "true_terminator": true,
+    "node_sequence": [
+      "box_0",
+      "box_1",
+      "box_2",
+      "box_6",
+      "box_11",
+      "box_16",
+      "box_20",
+      "box_21",
+      "box_22",
+      "box_23"
+    ],
+    "edge_labels": [
+      null,
+      null,
+      null,
+      "No",
+      "Yes",
+      "Yes",
+      "Yes",
+      "No",
+      null,
+      "Still failing"
+    ],
+    "decision_points": [
+      {
+        "node": "box_2",
+        "label": "No",
+        "question": "Lens scratches, chips or contamination present?"
+      },
+      {
+        "node": "box_6",
+        "label": "Yes",
+        "question": "Lighting intensity within specified range at part plane?"
+      },
+      {
+        "node": "box_11",
+        "label": "Yes",
+        "question": "Image sharpness within sharpness specification specification?"
+      },
+      {
+        "node": "box_16",
+        "label": "Yes",
+        "question": "Distortion within ±0.5 px at corner positions?"
+      },
+      {
+        "node": "box_20",
+        "label": "No",
+        "question": "Calibration residual error within 0.1 px root mean square?"
+      },
+      {
+        "node": "box_22",
+        "label": "Still failing",
+        "question": "Reverify calibration residual after recalibration"
+      }
+    ],
+    "generation_model": "anthropic/claude-sonnet-4-5",
+    "verification": {
+      "variant_of": "base",
+      "base_verified": true,
+      "note": "surface-form variant; not independently verified"
+    }
+  }
+}

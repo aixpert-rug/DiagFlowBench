@@ -1,0 +1,46 @@
+flowchart TD
+    box_0(["Start"])
+    box_1{"Do all 8 parts fit correctly in or on the fixtures?"}
+    box_2[/"Reference: play and burr inspection, part to fixture<br/>fit."/]
+    box_3["Identify and replace the faulty fixture on the<br/>indexing table that is causing the incorrect part<br/>fit."]
+    box_4{"Are the 8 fixtures themselves securely fastened?"}
+    box_5["Fasten all fixtures securely to eliminate play in<br/>their seating on the indexing table."]
+    box_6{"Is the height measurement at station 8 or 11<br/>properly adjusted?"}
+    box_7[/"Station height measurement adjustment procedure"/]
+    box_8["Measure the part gap dimensions at the relevant<br/>station using a caliper to determine the extent of<br/>the deviation."]
+    box_9["Complete the following steps: 1. Remove all parts<br/>from the current batch. 2. Introduce a replacement<br/>input batch and perform a new full sample<br/>measurement. 3. Report non conforming parts via the<br/>team leader for escalation to the quality assurance<br/>team at shift handover."]
+    box_10{"Gap now OK?"}
+    box_11(["Notify quality assurance manager"])
+    box_12(["Notify maintenance team / engineering team"])
+
+    box_0 --> box_1
+    box_2 --> box_1
+    box_1 -->|"No"| box_3
+    box_1 -->|"Yes"| box_4
+    box_4 -->|"No"| box_5
+    box_4 -->|"Yes"| box_6
+    box_7 --> box_6
+    box_6 -->|"No"| box_8
+    box_6 -->|"Yes"| box_9
+    box_9 --> box_10
+    box_10 -->|"Yes"| box_11
+    box_10 -->|"No"| box_12
+
+    class box_0 terminator
+    class box_1 decision
+    class box_2 document
+    class box_3 process
+    class box_4 decision
+    class box_5 process
+    class box_6 decision
+    class box_7 document
+    class box_8 process
+    class box_9 process
+    class box_10 decision
+    class box_11 terminator
+    class box_12 terminator
+
+    classDef terminator fill:#2d4a6e,stroke:#1a3050,color:#ffffff,font-weight:bold
+    classDef process    fill:#f0f4ff,stroke:#4a6fa5,color:#1a1a2e
+    classDef decision   fill:#fff8e6,stroke:#c8922a,color:#1a1a2e
+    classDef document   fill:#f0fff4,stroke:#3a8a4a,color:#1a1a2e

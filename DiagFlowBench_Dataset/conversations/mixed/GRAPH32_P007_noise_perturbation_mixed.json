@@ -1,0 +1,725 @@
+{
+  "conversation_id": "GRAPH32_P007_noise_perturbation_mixed",
+  "graph_id": "GRAPH32",
+  "path_id": "GRAPH32_P007",
+  "regime": "mixed",
+  "variant": "noise_perturbation",
+  "robustness_axis": "noise_perturbation",
+  "turns": [
+    {
+      "node_id": "box_0",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Starting rejection rate diagnostic procedure.",
+      "edge_label_to_next": null,
+      "turn_index": 0,
+      "ground_truth": {
+        "node_id": "box_0",
+        "node_type": "terminator",
+        "node_text": "Start"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Please record the current rejection rate, the breakdown by rejection type including orientation, marking quality, insertion depth, and presence, along with the time window over which the rate increased.",
+      "edge_label_to_next": null,
+      "turn_index": 1,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Record the current rejection rate, rejection type breakdown (orientation, marking quality, insertion depth, presence), and the time window over which the rate increased."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "recorded all rejection data current rate 8.2% orientation at 35%, marking quality 28%, insertion depth 22% and presense at 15%. increase occured over last 90 min",
+      "edge_label_to_next": "",
+      "turn_index": 2,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Record the current rejection rate, rejection type breakdown (orientation, marking quality, insertion depth, presence), and the time window over which the rate increased."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_3",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Verify that the correct product program is loaded for the current batch and check that all inspection thresholds have been correctly transferred for this product type.",
+      "edge_label_to_next": null,
+      "turn_index": 3,
+      "ground_truth": {
+        "node_id": "box_3",
+        "node_type": "process",
+        "node_text": "Verify that the correct product program is loaded for the current batch. Check that all inspection thresholds have been correctly transferred for this product type."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_3",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "The program loaded matches the batch number, but I'm seeing that the temperature compensation coefficients aren't showing up in the parameter list at all. There's no field for them on this screen.",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "coverage_gap",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_3",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "yeah checked the program and thresholds product program matches batch documentation",
+      "edge_label_to_next": null,
+      "turn_index": 4,
+      "ground_truth": {
+        "node_id": "box_3",
+        "node_type": "process",
+        "node_text": "Verify that the correct product program is loaded for the current batch. Check that all inspection thresholds have been correctly transferred for this product type."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Did the rejection rate increase coincide with a batch changeover or product type change?",
+      "edge_label_to_next": null,
+      "turn_index": 5,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Did the rejection rate increase coincide with a batch changeover or product type change?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yes we switched to new product type about 2 hrs ago right before rate started climbing",
+      "edge_label_to_next": "Yes",
+      "turn_index": 6,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Did the rejection rate increase coincide with a batch changeover or product type change?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_4",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Switch to the correct product program and reset all inspection parameters to the validated baseline for this product type, then rerun a test sequence.",
+      "edge_label_to_next": null,
+      "turn_index": 7,
+      "ground_truth": {
+        "node_id": "box_4",
+        "node_type": "process",
+        "node_text": "Switch to the correct product program and reset all inspection parameters to the validated baseline for this product type. rerun a test sequence."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_4",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "loaded correct program and reset parameters to baseline running test sequnce now",
+      "edge_label_to_next": "",
+      "turn_index": 8,
+      "ground_truth": {
+        "node_id": "box_4",
+        "node_type": "process",
+        "node_text": "Switch to the correct product program and reset all inspection parameters to the validated baseline for this product type. rerun a test sequence."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_6",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Compare the current threshold settings on the operator control interface against the last validated baseline values recorded in the product setup record.",
+      "edge_label_to_next": null,
+      "turn_index": 9,
+      "ground_truth": {
+        "node_id": "box_6",
+        "node_type": "process",
+        "node_text": "Compare the current threshold settings on the operator control interface against the last validated baseline values recorded in the product setup record."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_6",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "ok so compared settings against baseline record verification complete",
+      "edge_label_to_next": null,
+      "turn_index": 10,
+      "ground_truth": {
+        "node_id": "box_6",
+        "node_type": "process",
+        "node_text": "Compare the current threshold settings on the operator control interface against the last validated baseline values recorded in the product setup record."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_5",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Are the inspection threshold settings at their validated baseline values for this product type?",
+      "edge_label_to_next": null,
+      "turn_index": 11,
+      "ground_truth": {
+        "node_id": "box_5",
+        "node_type": "decision",
+        "node_text": "Are the inspection threshold settings at their validated baseline values for this product type?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_5",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no seeing several thresholds dont match baseline orientation tolerance and marking contrast thresholds both off",
+      "edge_label_to_next": "No",
+      "turn_index": 12,
+      "ground_truth": {
+        "node_id": "box_5",
+        "node_type": "decision",
+        "node_text": "Are the inspection threshold settings at their validated baseline values for this product type?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_7",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Restore all inspection thresholds to the validated baseline values and document which thresholds were found out of specification.",
+      "edge_label_to_next": null,
+      "turn_index": 13,
+      "ground_truth": {
+        "node_id": "box_7",
+        "node_type": "process",
+        "node_text": "Restore all inspection thresholds to the validated baseline values. Document which thresholds were found out of specification."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_7",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "all thresholds restored to baseline documented that orientation tolerance was at 2.5 deg instead of 1.8 and marking contrast at 45% instead of 52%",
+      "edge_label_to_next": null,
+      "turn_index": 14,
+      "ground_truth": {
+        "node_id": "box_7",
+        "node_type": "process",
+        "node_text": "Restore all inspection thresholds to the validated baseline values. Document which thresholds were found out of specification."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the rejection dominated by a single inspection type, with more than 70% from one category?",
+      "edge_label_to_next": null,
+      "turn_index": 15,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "decision",
+        "node_text": "Is the rejection dominated by a single inspection type (more than 70% from one category)?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yeah looks like orientation rejections accounting for 74% of all failures",
+      "edge_label_to_next": "Yes",
+      "turn_index": 16,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "decision",
+        "node_text": "Is the rejection dominated by a single inspection type (more than 70% from one category)?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_9",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Identify the dominant rejection type and follow the specific fault procedure for that inspection system.",
+      "edge_label_to_next": null,
+      "turn_index": 17,
+      "ground_truth": {
+        "node_id": "box_9",
+        "node_type": "process",
+        "node_text": "Identify the dominant rejection type and follow the specific fault procedure for that inspection system."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_9",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "identified orientation as dominant type completed orientation inspection system fault procedrue",
+      "edge_label_to_next": null,
+      "turn_index": 18,
+      "ground_truth": {
+        "node_id": "box_9",
+        "node_type": "process",
+        "node_text": "Identify the dominant rejection type and follow the specific fault procedure for that inspection system."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the rejection dominated by a single inspection type, with more than 70% from one category?",
+      "edge_label_to_next": null,
+      "turn_index": 19,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "decision",
+        "node_text": "Is the rejection dominated by a single inspection type (more than 70% from one category)?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yes orientation still primary issue representing 76% of rejections",
+      "edge_label_to_next": "Yes",
+      "turn_index": 20,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "decision",
+        "node_text": "Is the rejection dominated by a single inspection type (more than 70% from one category)?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_9",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Identify the dominant rejection type and follow the specific fault procedure for that inspection system.",
+      "edge_label_to_next": null,
+      "turn_index": 21,
+      "ground_truth": {
+        "node_id": "box_9",
+        "node_type": "process",
+        "node_text": "Identify the dominant rejection type and follow the specific fault procedure for that inspection system."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_9",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Hey, before we continue with this, do you know if the PM schedule for the upstream conveyor system got pushed back to next week? I need to coordinate with second shift.",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "unrelated_question",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_9",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "reran orientation inspection system procedure performed additional calibration checks",
+      "edge_label_to_next": null,
+      "turn_index": 22,
+      "ground_truth": {
+        "node_id": "box_9",
+        "node_type": "process",
+        "node_text": "Identify the dominant rejection type and follow the specific fault procedure for that inspection system."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the rejection dominated by a single inspection type, with more than 70% from one category?",
+      "edge_label_to_next": null,
+      "turn_index": 23,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "decision",
+        "node_text": "Is the rejection dominated by a single inspection type (more than 70% from one category)?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yes orientation failures still at 72% which is above threshhold",
+      "edge_label_to_next": "Yes",
+      "turn_index": 24,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "decision",
+        "node_text": "Is the rejection dominated by a single inspection type (more than 70% from one category)?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_9",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Identify the dominant rejection type and follow the specific fault procedure for that inspection system.",
+      "edge_label_to_next": null,
+      "turn_index": 25,
+      "ground_truth": {
+        "node_id": "box_9",
+        "node_type": "process",
+        "node_text": "Identify the dominant rejection type and follow the specific fault procedure for that inspection system."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_9",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "I'm seeing intermittent rejections that don't fit any single category - sometimes it's size, sometimes it's seal integrity, but the pattern seems random and none of the individual fault procedures address this kind of mixed rejection behavior.",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "coverage_gap",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_9",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "completed orientation system procedure third time including camera alignment verificaton",
+      "edge_label_to_next": "",
+      "turn_index": 26,
+      "ground_truth": {
+        "node_id": "box_9",
+        "node_type": "process",
+        "node_text": "Identify the dominant rejection type and follow the specific fault procedure for that inspection system."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_11",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Complete the following checks: open the maintenance record and filter by station asset number, compare the current cycle count against the scheduled maintenance interval, and check whether any maintenance task is overdue at the affected station.",
+      "edge_label_to_next": null,
+      "turn_index": 27,
+      "ground_truth": {
+        "node_id": "box_11",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Open the maintenance record and filter by station asset number. 2. Compare the current cycle count against the scheduled maintenance interval. 3. Check whether any maintenance task is overdue at the affected station."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_11",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "ok completed all maintenace checks cycle counts within schedule no tasks overdue",
+      "edge_label_to_next": null,
+      "turn_index": 28,
+      "ground_truth": {
+        "node_id": "box_11",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Open the maintenance record and filter by station asset number. 2. Compare the current cycle count against the scheduled maintenance interval. 3. Check whether any maintenance task is overdue at the affected station."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_10",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is any scheduled maintenance interval overdue for the inspection stations or assembly stations?",
+      "edge_label_to_next": null,
+      "turn_index": 29,
+      "ground_truth": {
+        "node_id": "box_10",
+        "node_type": "decision",
+        "node_text": "Is any scheduled maintenance interval overdue for the inspection stations or assembly stations?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_10",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no all maintenance current everything within scheduled intervals",
+      "edge_label_to_next": "No",
+      "turn_index": 30,
+      "ground_truth": {
+        "node_id": "box_10",
+        "node_type": "decision",
+        "node_text": "Is any scheduled maintenance interval overdue for the inspection stations or assembly stations?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_13",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Has the rejection rate returned to within the acceptable threshold after all corrective actions?",
+      "edge_label_to_next": null,
+      "turn_index": 31,
+      "ground_truth": {
+        "node_id": "box_13",
+        "node_type": "decision",
+        "node_text": "Has the rejection rate returned to within the acceptable threshold after all corrective actions?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_13",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yeah rejection rate dropped back to 2.1% which is within acceptable range",
+      "edge_label_to_next": "Yes",
+      "turn_index": 32,
+      "ground_truth": {
+        "node_id": "box_13",
+        "node_type": "decision",
+        "node_text": "Has the rejection rate returned to within the acceptable threshold after all corrective actions?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_22",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Quality assurance has been notified and all corrective actions have been recorded. The procedure is now complete.",
+      "edge_label_to_next": null,
+      "turn_index": 33,
+      "ground_truth": {
+        "node_id": "box_22",
+        "node_type": "terminator",
+        "node_text": "End, quality assurance notified, corrective actions recorded. Procedure complete."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_22",
+      "node_type": "terminator",
+      "speaker": "operator",
+      "utterance": "acknowledged procedure complete",
+      "edge_label_to_next": null,
+      "turn_index": 34,
+      "ground_truth": {
+        "node_id": "box_22",
+        "node_type": "terminator",
+        "node_text": "End, quality assurance notified, corrective actions recorded. Procedure complete."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    }
+  ],
+  "metadata": {
+    "depth": 18,
+    "num_decisions": 7,
+    "num_processes": 9,
+    "num_documents": 0,
+    "terminator_type": "procedure_complete",
+    "terminator_text": "End, quality assurance notified, corrective actions recorded. Procedure complete.",
+    "true_terminator": true,
+    "node_sequence": [
+      "box_0",
+      "box_1",
+      "box_3",
+      "box_2",
+      "box_4",
+      "box_6",
+      "box_5",
+      "box_7",
+      "box_8",
+      "box_9",
+      "box_8",
+      "box_9",
+      "box_8",
+      "box_9",
+      "box_11",
+      "box_10",
+      "box_13",
+      "box_22"
+    ],
+    "edge_labels": [
+      null,
+      null,
+      "",
+      null,
+      "Yes",
+      "",
+      null,
+      "No",
+      null,
+      "Yes",
+      null,
+      "Yes",
+      null,
+      "Yes",
+      "",
+      null,
+      "No",
+      "Yes"
+    ],
+    "decision_points": [
+      {
+        "node": "box_2",
+        "label": "Yes",
+        "question": "Did the rejection rate increase coincide with a batch changeover or product type change?"
+      },
+      {
+        "node": "box_5",
+        "label": "No",
+        "question": "Are the inspection threshold settings at their validated baseline values for this product type?"
+      },
+      {
+        "node": "box_8",
+        "label": "Yes",
+        "question": "Is the rejection dominated by a single inspection type (more than 70% from one category)?"
+      },
+      {
+        "node": "box_8",
+        "label": "Yes",
+        "question": "Is the rejection dominated by a single inspection type (more than 70% from one category)?"
+      },
+      {
+        "node": "box_8",
+        "label": "Yes",
+        "question": "Is the rejection dominated by a single inspection type (more than 70% from one category)?"
+      },
+      {
+        "node": "box_10",
+        "label": "No",
+        "question": "Is any scheduled maintenance interval overdue for the inspection stations or assembly stations?"
+      },
+      {
+        "node": "box_13",
+        "label": "Yes",
+        "question": "Has the rejection rate returned to within the acceptable threshold after all corrective actions?"
+      }
+    ],
+    "generation_model": "anthropic/claude-sonnet-4-5",
+    "verification": {
+      "variant_of": "base",
+      "base_verified": true,
+      "note": "surface-form variant; not independently verified"
+    },
+    "injection_count": 3
+  },
+  "injection_log": [
+    {
+      "position": 4,
+      "node_id": "box_3",
+      "node_text": "Verify that the correct product program is loaded for the current batch. Check that all inspection thresholds have been correctly transferred for this product type.",
+      "edge_labels": [],
+      "category": "coverage_gap",
+      "utterance": "The program loaded matches the batch number, but I'm seeing that the temperature compensation coefficients aren't showing up in the parameter list at all. There's no field for them on this screen.",
+      "injection_rate": null,
+      "num_candidates": null
+    },
+    {
+      "position": 22,
+      "node_id": "box_9",
+      "node_text": "Identify the dominant rejection type and follow the specific fault procedure for that inspection system.",
+      "edge_labels": [],
+      "category": "unrelated_question",
+      "utterance": "Hey, before we continue with this, do you know if the PM schedule for the upstream conveyor system got pushed back to next week? I need to coordinate with second shift.",
+      "injection_rate": null,
+      "num_candidates": null
+    },
+    {
+      "position": 26,
+      "node_id": "box_9",
+      "node_text": "Identify the dominant rejection type and follow the specific fault procedure for that inspection system.",
+      "edge_labels": [],
+      "category": "coverage_gap",
+      "utterance": "I'm seeing intermittent rejections that don't fit any single category - sometimes it's size, sometimes it's seal integrity, but the pattern seems random and none of the individual fault procedures address this kind of mixed rejection behavior.",
+      "injection_rate": null,
+      "num_candidates": null
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+flowchart TD
+    box_0(["Start"])
+    box_1["Record the orientation error type (rotation angle,<br/>flipped, lateral offset) and the indexing table<br/>position at which the error was detected. Collect<br/>three mis oriented parts for reference."]
+    box_2{"Is the orientation error occurring on parts from all<br/>indexing table positions or only from specific<br/>positions?"}
+    box_3["Complete the following checks: 1. Inspect the<br/>affected nest position for contamination or damage.<br/>2. Check whether the ejector pin height at that<br/>position matches the others."]
+    box_4["Clean the affected nest position and verify ejector<br/>pin height. rerun a single position test cycle to<br/>confirm the fix."]
+    box_5{"Is the part feed orientation from the supply<br/>conveyor correct?"}
+    box_6["Check the supply conveyor exit orientation by<br/>running a slow jog cycle and observing the part<br/>orientation as it exits the conveyor onto the<br/>indexing table."]
+    box_7["Adjust the conveyor exit guide or the part<br/>singulation geometry to ensure parts arrive in the<br/>correct orientation. rerun the orientation check."]
+    box_8{"Is the reorientation mechanism completing a full<br/>rotation cycle to the correct angle?"}
+    box_9["Jog the reorientation mechanism through one full<br/>cycle and verify the rotation angle against the<br/>specification using a protractor or the encoder<br/>readout on the operator control interface."]
+    box_10["Reteach the reorientation mechanism rotation<br/>setpoint to the correct angle. Verify with five<br/>consecutive test cycles before resuming production."]
+    box_11{"Is the vision system detecting part orientation<br/>correctly when tested with known good reference<br/>parts?"}
+    box_12["Test the vision system by manually placing three<br/>known good correctly oriented parts in the<br/>inspection position and checking that all three are<br/>accepted without orientation errors."]
+    box_13["Complete the following steps: 1. Load the<br/>orientation calibration target into the<br/>reorientation unit fixture. 2. Run the orientation<br/>detection calibration routine from the vision system<br/>menu. 3. Capture the required number of target<br/>images at different angular positions."]
+    box_14{"Is the orientation error rate within the acceptable<br/>limit after corrections?"}
+    box_15["Escalate to the maintenance team: systematic<br/>orientation errors persist after all standard<br/>corrective actions have been applied."]
+    box_16["Record all corrective actions and the confirmed root<br/>cause in the quality log. Notify quality assurance<br/>team."]
+    box_17["Run 20 part production verification cycle at full<br/>speed, log orientation result for every part."]
+    box_18[/"Refer to the orientation verification acceptance<br/>criteria."/]
+    box_19{"All 20 verification parts correctly oriented, zero<br/>orientation faults?"}
+    box_20(["End, Escalate: orientation fault recurring in<br/>verification run, systematic mechanism fault"])
+    box_21["Check production tracking system for any mis<br/>oriented parts released to downstream assembly<br/>during fault window."]
+    box_22(["End, Procedure complete. quality assurance notified,<br/>production resumed."])
+
+    box_0 --> box_1
+    box_1 --> box_3
+    box_3 --> box_2
+    box_2 -->|"No"| box_4
+    box_2 -->|"Yes"| box_5
+    box_4 --> box_6
+    box_6 --> box_5
+    box_5 -->|"No"| box_7
+    box_5 -->|"Yes"| box_8
+    box_7 --> box_9
+    box_9 --> box_8
+    box_8 -->|"No"| box_10
+    box_8 -->|"Yes"| box_11
+    box_10 --> box_12
+    box_12 --> box_11
+    box_11 -->|"No"| box_13
+    box_11 -->|"Yes"| box_14
+    box_13 --> box_14
+    box_14 -->|"No"| box_15
+    box_14 -->|"Yes"| box_16
+    box_15 --> box_16
+    box_16 --> box_17
+    box_18 --> box_19
+    box_17 --> box_19
+    box_19 -->|"No"| box_20
+    box_19 -->|"Yes"| box_21
+    box_21 --> box_22
+
+    class box_0 terminator
+    class box_1 process
+    class box_2 decision
+    class box_3 process
+    class box_4 process
+    class box_5 decision
+    class box_6 process
+    class box_7 process
+    class box_8 decision
+    class box_9 process
+    class box_10 process
+    class box_11 decision
+    class box_12 process
+    class box_13 process
+    class box_14 decision
+    class box_15 process
+    class box_16 process
+    class box_17 process
+    class box_18 document
+    class box_19 decision
+    class box_20 terminator
+    class box_21 process
+    class box_22 terminator
+
+    classDef terminator fill:#2d4a6e,stroke:#1a3050,color:#ffffff,font-weight:bold
+    classDef process    fill:#f0f4ff,stroke:#4a6fa5,color:#1a1a2e
+    classDef decision   fill:#fff8e6,stroke:#c8922a,color:#1a1a2e
+    classDef document   fill:#f0fff4,stroke:#3a8a4a,color:#1a1a2e

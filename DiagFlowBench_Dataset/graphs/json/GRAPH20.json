@@ -1,0 +1,241 @@
+{
+  "id": "GRAPH20",
+  "description": "Expanded diagnostic for out-of-specification positional deviation of the applied marking pattern, covering systematic vs. random deviation, program verification, marking head referencing, and offset correction.",
+  "graph": {
+    "nodes": {
+      "box_0": {
+        "type": "terminator",
+        "text": "Start"
+      },
+      "box_1": {
+        "type": "process",
+        "text": "Measure and record the positional deviation in the X and Y direction using the deviation measurement gauge; note the batch number and time of occurrence."
+      },
+      "box_2": {
+        "type": "decision",
+        "text": "Is the positional deviation within the acceptable measurement range?"
+      },
+      "box_3": {
+        "type": "process",
+        "text": "Deviation is within acceptable range. Record measurement in quality log and notify quality assurance team of the borderline result; continue production."
+      },
+      "box_4": {
+        "type": "decision",
+        "text": "Is the positional deviation systematic and consistent in direction across multiple consecutive parts?"
+      },
+      "box_5": {
+        "type": "process",
+        "text": "Measure at least five consecutive parts and record the deviation direction and magnitude for each to determine whether the pattern is systematic or random."
+      },
+      "box_6": {
+        "type": "process",
+        "text": "Check that parts are correctly seated and stable in the marking fixture during the marking cycle. If parts are shifting, reseat and rerun the deviation check before proceeding."
+      },
+      "box_7": {
+        "type": "decision",
+        "text": "Is the correct marking program loaded and active on the operator control interface?"
+      },
+      "box_8": {
+        "type": "process",
+        "text": "Complete the following checks: 1. Read the programme ID on the operator control interface status bar. 2. Compare the displayed ID against the part number on the batch work order. 3. Verify the programme revision matches the current drawing issue."
+      },
+      "box_9": {
+        "type": "process",
+        "text": "Switch the marking controller to the correct marking program for this product type and restart the marking controller."
+      },
+      "box_10": {
+        "type": "decision",
+        "text": "Is the marking head at the correct reference datum position?"
+      },
+      "box_11": {
+        "type": "process",
+        "text": "Jog the marking head to the programmed reference datum and verify the position readout against the setup specification."
+      },
+      "box_12": {
+        "type": "process",
+        "text": "Rehome the marking head to the reference datum and reverify the position readout before continuing."
+      },
+      "box_13": {
+        "type": "process",
+        "text": "Adjust the X/Y offset of the marking head to correct the measured positional deviation."
+      },
+      "box_14": {
+        "type": "document",
+        "text": "Refer to the positional deviation correction procedure."
+      },
+      "box_15": {
+        "type": "decision",
+        "text": "Is the positional deviation within specification after the offset adjustment?"
+      },
+      "box_16": {
+        "type": "process",
+        "text": "Escalate to the maintenance team: the positional deviation cannot be corrected by offset adjustment alone; investigate the marking head drive mechanism for wear or backlash."
+      },
+      "box_17": {
+        "type": "process",
+        "text": "Create a non conformance record for the affected parts and record the corrected offset values in the quality log."
+      },
+      "box_18": {
+        "type": "process",
+        "text": "Clean the fume extraction unit and verify that extraction airflow is within specification."
+      },
+      "box_19": {
+        "type": "document",
+        "text": "Refer to the fume extraction cleaning procedure."
+      },
+      "box_20": {
+        "type": "process",
+        "text": "Record the completed corrective action and final deviation measurement in the quality log."
+      },
+      "box_21": {
+        "type": "terminator",
+        "text": "End, notify quality assurance team of the deviation event and corrective action applied."
+      },
+      "box_22": {
+        "type": "decision",
+        "text": "Is the positional deviation outside the emergency tolerance, indicating risk of machine collision or a full batch scrap event?"
+      },
+      "box_23": {
+        "type": "terminator",
+        "text": "End, production stopped immediately: positional deviation critical, escalate to production engineer and quarantine all parts produced in current shift"
+      }
+    },
+    "edges": [
+      {
+        "source": "box_1",
+        "target": "box_2",
+        "label": null
+      },
+      {
+        "source": "box_2",
+        "target": "box_3",
+        "label": "Yes"
+      },
+      {
+        "source": "box_2",
+        "target": "box_4",
+        "label": "No"
+      },
+      {
+        "source": "box_5",
+        "target": "box_4",
+        "label": null
+      },
+      {
+        "source": "box_4",
+        "target": "box_6",
+        "label": "No"
+      },
+      {
+        "source": "box_4",
+        "target": "box_7",
+        "label": "Yes"
+      },
+      {
+        "source": "box_6",
+        "target": "box_8",
+        "label": ""
+      },
+      {
+        "source": "box_8",
+        "target": "box_7",
+        "label": null
+      },
+      {
+        "source": "box_7",
+        "target": "box_9",
+        "label": "No"
+      },
+      {
+        "source": "box_7",
+        "target": "box_10",
+        "label": "Yes"
+      },
+      {
+        "source": "box_9",
+        "target": "box_11",
+        "label": ""
+      },
+      {
+        "source": "box_11",
+        "target": "box_10",
+        "label": null
+      },
+      {
+        "source": "box_10",
+        "target": "box_12",
+        "label": "No"
+      },
+      {
+        "source": "box_10",
+        "target": "box_13",
+        "label": "Yes"
+      },
+      {
+        "source": "box_12",
+        "target": "box_13",
+        "label": null
+      },
+      {
+        "source": "box_14",
+        "target": "box_13",
+        "label": null
+      },
+      {
+        "source": "box_13",
+        "target": "box_15",
+        "label": null
+      },
+      {
+        "source": "box_15",
+        "target": "box_16",
+        "label": "No"
+      },
+      {
+        "source": "box_15",
+        "target": "box_17",
+        "label": "Yes"
+      },
+      {
+        "source": "box_16",
+        "target": "box_17",
+        "label": null
+      },
+      {
+        "source": "box_17",
+        "target": "box_18",
+        "label": null
+      },
+      {
+        "source": "box_19",
+        "target": "box_18",
+        "label": null
+      },
+      {
+        "source": "box_18",
+        "target": "box_20",
+        "label": null
+      },
+      {
+        "source": "box_20",
+        "target": "box_21",
+        "label": null
+      },
+      {
+        "source": "box_0",
+        "target": "box_22",
+        "label": null
+      },
+      {
+        "source": "box_22",
+        "target": "box_23",
+        "label": "Critical, immediate stop required"
+      },
+      {
+        "source": "box_22",
+        "target": "box_1",
+        "label": "Standard fault, continue diagnosis"
+      }
+    ]
+  }
+}

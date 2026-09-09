@@ -1,0 +1,897 @@
+{
+  "conversation_id": "GRAPH38_P002_base",
+  "graph_id": "GRAPH38",
+  "path_id": "GRAPH38_P002",
+  "regime": "clean",
+  "variant": "base",
+  "robustness_axis": null,
+  "turns": [
+    {
+      "node_id": "box_0",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Starting spindle diagnostic procedure.",
+      "edge_label_to_next": null,
+      "turn_index": 0,
+      "ground_truth": {
+        "node_id": "box_0",
+        "node_type": "terminator",
+        "node_text": "Start"
+      }
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Run the spindle at fifty percent speed for ten minutes to warm it up.",
+      "edge_label_to_next": null,
+      "turn_index": 1,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Warm up run, spindle at 50% speed for 10 minutes"
+      }
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Warm up run complete, spindle has been running at fifty percent for ten minutes.",
+      "edge_label_to_next": "",
+      "turn_index": 2,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Warm up run, spindle at 50% speed for 10 minutes"
+      }
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Mount a calibrated accelerometer on the front bearing housing using a flat washer stud or magnetic base. Run the spindle at three thousand RPM with no toolholder, then record the RMS vibration velocity. Repeat at maximum rated speed and compare both readings against the ISO 10816 zone limits.",
+      "edge_label_to_next": null,
+      "turn_index": 3,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "process",
+        "node_text": "Mount a calibrated accelerometer on the front bearing housing with a flat washer stud or magnetic base. Run the spindle at 3000 revolutions per minute with no toolholder fitted and record the root mean square vibration velocity in millimetres per second. Repeat at the maximum rated speed and compare both readings against the ISO 10816 zone limits for this machine class."
+      }
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Accelerometer mounted and vibration measurements recorded at both speeds. I've compared them against the ISO limits.",
+      "edge_label_to_next": null,
+      "turn_index": 4,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "process",
+        "node_text": "Mount a calibrated accelerometer on the front bearing housing with a flat washer stud or magnetic base. Run the spindle at 3000 revolutions per minute with no toolholder fitted and record the root mean square vibration velocity in millimetres per second. Repeat at the maximum rated speed and compare both readings against the ISO 10816 zone limits for this machine class."
+      }
+    },
+    {
+      "node_id": "box_4",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the vibration level below the alarm limit?",
+      "edge_label_to_next": null,
+      "turn_index": 5,
+      "ground_truth": {
+        "node_id": "box_4",
+        "node_type": "decision",
+        "node_text": "Vibration level below alarm limit?"
+      }
+    },
+    {
+      "node_id": "box_4",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, both readings are well within acceptable range and below the alarm threshold.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 6,
+      "ground_truth": {
+        "node_id": "box_4",
+        "node_type": "decision",
+        "node_text": "Vibration level below alarm limit?"
+      }
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the bearing temperature within the rated operating limit?",
+      "edge_label_to_next": null,
+      "turn_index": 7,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "decision",
+        "node_text": "Bearing temperature within rated operating limit?"
+      }
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Affirmative, bearing temperatures are normal and within specification.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 8,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "decision",
+        "node_text": "Bearing temperature within rated operating limit?"
+      }
+    },
+    {
+      "node_id": "box_12",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the radial runout within two micrometer tolerance?",
+      "edge_label_to_next": null,
+      "turn_index": 9,
+      "ground_truth": {
+        "node_id": "box_12",
+        "node_type": "decision",
+        "node_text": "Radial runout within 2 µm tolerance?"
+      }
+    },
+    {
+      "node_id": "box_12",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, the total indicator reading shows runout is one point seven micrometers, well within the two micrometer spec.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 10,
+      "ground_truth": {
+        "node_id": "box_12",
+        "node_type": "decision",
+        "node_text": "Radial runout within 2 µm tolerance?"
+      }
+    },
+    {
+      "node_id": "box_17",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the axial play within three micrometer tolerance?",
+      "edge_label_to_next": null,
+      "turn_index": 11,
+      "ground_truth": {
+        "node_id": "box_17",
+        "node_type": "decision",
+        "node_text": "Axial play within 3 µm tolerance?"
+      }
+    },
+    {
+      "node_id": "box_17",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "No, I'm seeing an average deflection of four point two micrometers across the three measurements, which exceeds the limit.",
+      "edge_label_to_next": "No",
+      "turn_index": 12,
+      "ground_truth": {
+        "node_id": "box_17",
+        "node_type": "decision",
+        "node_text": "Axial play within 3 µm tolerance?"
+      }
+    },
+    {
+      "node_id": "box_18",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Adjust the preload spacer or shim to reduce the axial play.",
+      "edge_label_to_next": null,
+      "turn_index": 13,
+      "ground_truth": {
+        "node_id": "box_18",
+        "node_type": "process",
+        "node_text": "Adjust pre load spacer or shim to reduce axial play"
+      }
+    },
+    {
+      "node_id": "box_18",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Preload spacer adjusted, I've reduced the axial play by shimming.",
+      "edge_label_to_next": "",
+      "turn_index": 14,
+      "ground_truth": {
+        "node_id": "box_18",
+        "node_type": "process",
+        "node_text": "Adjust pre load spacer or shim to reduce axial play"
+      }
+    },
+    {
+      "node_id": "box_19",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Apply a thin even coat of engineer's blue to a clean test arbor with the correct taper angle. Insert the arbor, rotate it by hand under moderate axial load, then withdraw and inspect the contact pattern.",
+      "edge_label_to_next": null,
+      "turn_index": 15,
+      "ground_truth": {
+        "node_id": "box_19",
+        "node_type": "process",
+        "node_text": "Apply a thin even coat of engineer's blue to a clean test arbor with the correct taper angle for this spindle. Insert the arbor, rotate by hand under moderate axial load, then withdraw and inspect the contact pattern. The blue should transfer uniformly over at least 70% of the taper length; a spotted or narrow band pattern indicates taper bore damage or swarf contamination."
+      }
+    },
+    {
+      "node_id": "box_19",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Test arbor blued and contact pattern checked. I can see the blue transfer on the taper.",
+      "edge_label_to_next": null,
+      "turn_index": 16,
+      "ground_truth": {
+        "node_id": "box_19",
+        "node_type": "process",
+        "node_text": "Apply a thin even coat of engineer's blue to a clean test arbor with the correct taper angle for this spindle. Insert the arbor, rotate by hand under moderate axial load, then withdraw and inspect the contact pattern. The blue should transfer uniformly over at least 70% of the taper length; a spotted or narrow band pattern indicates taper bore damage or swarf contamination."
+      }
+    },
+    {
+      "node_id": "box_20",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the taper contact pattern above eighty-five percent bearing area?",
+      "edge_label_to_next": null,
+      "turn_index": 17,
+      "ground_truth": {
+        "node_id": "box_20",
+        "node_type": "decision",
+        "node_text": "Taper contact pattern above 85% bearing area?"
+      }
+    },
+    {
+      "node_id": "box_20",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "No, I'm seeing only about seventy-five percent coverage with some spotting near the small end.",
+      "edge_label_to_next": "No",
+      "turn_index": 18,
+      "ground_truth": {
+        "node_id": "box_20",
+        "node_type": "decision",
+        "node_text": "Taper contact pattern above 85% bearing area?"
+      }
+    },
+    {
+      "node_id": "box_21",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Clean and reinspect the taper, and check for fretting.",
+      "edge_label_to_next": null,
+      "turn_index": 19,
+      "ground_truth": {
+        "node_id": "box_21",
+        "node_type": "process",
+        "node_text": "Clean and reinspect taper, check for fretting"
+      }
+    },
+    {
+      "node_id": "box_21",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Taper cleaned and reinspected, no fretting detected.",
+      "edge_label_to_next": "",
+      "turn_index": 20,
+      "ground_truth": {
+        "node_id": "box_21",
+        "node_type": "process",
+        "node_text": "Clean and reinspect taper, check for fretting"
+      }
+    },
+    {
+      "node_id": "box_22",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Connect the calibrated pull stud extraction dynamometer to the toolholder retention knob. Apply a steady pull along the spindle axis and record the peak force at which the drawbar releases the toolholder.",
+      "edge_label_to_next": null,
+      "turn_index": 21,
+      "ground_truth": {
+        "node_id": "box_22",
+        "node_type": "process",
+        "node_text": "Connect the calibrated pull stud extraction dynamometer to the toolholder retention knob. Apply a steady pull along the spindle axis and record the peak force at which the drawbar releases the toolholder. Compare the result against the minimum drawbar force listed in the spindle maintenance specification; a low reading indicates disc spring wear or stacking loss."
+      }
+    },
+    {
+      "node_id": "box_22",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Dynamometer connected and drawbar release force measured. I've recorded the peak force value.",
+      "edge_label_to_next": null,
+      "turn_index": 22,
+      "ground_truth": {
+        "node_id": "box_22",
+        "node_type": "process",
+        "node_text": "Connect the calibrated pull stud extraction dynamometer to the toolholder retention knob. Apply a steady pull along the spindle axis and record the peak force at which the drawbar releases the toolholder. Compare the result against the minimum drawbar force listed in the spindle maintenance specification; a low reading indicates disc spring wear or stacking loss."
+      }
+    },
+    {
+      "node_id": "box_24",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the drawbar retention force within the rated range?",
+      "edge_label_to_next": null,
+      "turn_index": 23,
+      "ground_truth": {
+        "node_id": "box_24",
+        "node_type": "decision",
+        "node_text": "Drawbar retention force within rated range?"
+      }
+    },
+    {
+      "node_id": "box_24",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, the measured force is within specification according to the maintenance manual.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 24,
+      "ground_truth": {
+        "node_id": "box_24",
+        "node_type": "decision",
+        "node_text": "Drawbar retention force within rated range?"
+      }
+    },
+    {
+      "node_id": "box_27",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the thermal growth within compensation model tolerance?",
+      "edge_label_to_next": null,
+      "turn_index": 25,
+      "ground_truth": {
+        "node_id": "box_27",
+        "node_type": "decision",
+        "node_text": "Thermal growth within compensation model tolerance?"
+      }
+    },
+    {
+      "node_id": "box_27",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, the measured thermal displacement matches the compensation table values closely.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 26,
+      "ground_truth": {
+        "node_id": "box_27",
+        "node_type": "decision",
+        "node_text": "Thermal growth within compensation model tolerance?"
+      }
+    },
+    {
+      "node_id": "box_32",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the spindle speed within plus or minus zero point one percent at all test speeds?",
+      "edge_label_to_next": null,
+      "turn_index": 27,
+      "ground_truth": {
+        "node_id": "box_32",
+        "node_type": "decision",
+        "node_text": "Spindle speed within ±0.1% at all test speeds?"
+      }
+    },
+    {
+      "node_id": "box_32",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "No, I'm seeing a point two percent error at the highest test speed, outside the tolerance band.",
+      "edge_label_to_next": "No",
+      "turn_index": 28,
+      "ground_truth": {
+        "node_id": "box_32",
+        "node_type": "decision",
+        "node_text": "Spindle speed within ±0.1% at all test speeds?"
+      }
+    },
+    {
+      "node_id": "box_33",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Adjust the speed reference gain in the drive parameter.",
+      "edge_label_to_next": null,
+      "turn_index": 29,
+      "ground_truth": {
+        "node_id": "box_33",
+        "node_type": "process",
+        "node_text": "Adjust speed reference gain in drive parameter"
+      }
+    },
+    {
+      "node_id": "box_33",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Speed reference gain adjusted in the controller parameters.",
+      "edge_label_to_next": "",
+      "turn_index": 30,
+      "ground_truth": {
+        "node_id": "box_33",
+        "node_type": "process",
+        "node_text": "Adjust speed reference gain in drive parameter"
+      }
+    },
+    {
+      "node_id": "box_34",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Run the spindle at maximum rated speed with the normal toolholder fitted for five minutes. Record vibration velocity with the accelerometer on the front bearing housing and compare it against the baseline measurement from the most recent full service.",
+      "edge_label_to_next": null,
+      "turn_index": 31,
+      "ground_truth": {
+        "node_id": "box_34",
+        "node_type": "process",
+        "node_text": "Run the spindle at maximum rated speed with the normal toolholder fitted for five minutes. Record vibration velocity with the accelerometer on the front bearing housing and compare against the baseline vibration measurement taken at the same speed during the most recent full service. An increase of more than 30% above baseline requires bearing assessment before releasing the spindle to production."
+      }
+    },
+    {
+      "node_id": "box_34",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Full speed run completed with toolholder installed. Vibration measurement recorded and compared to baseline.",
+      "edge_label_to_next": null,
+      "turn_index": 32,
+      "ground_truth": {
+        "node_id": "box_34",
+        "node_type": "process",
+        "node_text": "Run the spindle at maximum rated speed with the normal toolholder fitted for five minutes. Record vibration velocity with the accelerometer on the front bearing housing and compare against the baseline vibration measurement taken at the same speed during the most recent full service. An increase of more than 30% above baseline requires bearing assessment before releasing the spindle to production."
+      }
+    },
+    {
+      "node_id": "box_35",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the final vibration within the warning limit at full speed?",
+      "edge_label_to_next": null,
+      "turn_index": 33,
+      "ground_truth": {
+        "node_id": "box_35",
+        "node_type": "decision",
+        "node_text": "Final vibration within warning limit at full speed?"
+      }
+    },
+    {
+      "node_id": "box_35",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, vibration is within limits and only fifteen percent above baseline.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 34,
+      "ground_truth": {
+        "node_id": "box_35",
+        "node_type": "decision",
+        "node_text": "Final vibration within warning limit at full speed?"
+      }
+    },
+    {
+      "node_id": "box_36",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Log all measurements and update the spindle maintenance record.",
+      "edge_label_to_next": null,
+      "turn_index": 35,
+      "ground_truth": {
+        "node_id": "box_36",
+        "node_type": "process",
+        "node_text": "Log all measurements and update spindle maintenance record"
+      }
+    },
+    {
+      "node_id": "box_36",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "All measurements logged and maintenance record updated in the system.",
+      "edge_label_to_next": null,
+      "turn_index": 36,
+      "ground_truth": {
+        "node_id": "box_36",
+        "node_type": "process",
+        "node_text": "Log all measurements and update spindle maintenance record"
+      }
+    },
+    {
+      "node_id": "box_37",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Procedure complete. The spindle has passed all diagnostic checks and is cleared for production use.",
+      "edge_label_to_next": null,
+      "turn_index": 37,
+      "ground_truth": {
+        "node_id": "box_37",
+        "node_type": "terminator",
+        "node_text": "End, Procedure complete"
+      }
+    },
+    {
+      "node_id": "box_37",
+      "node_type": "terminator",
+      "speaker": "operator",
+      "utterance": "Understood, spindle is ready for production.",
+      "edge_label_to_next": null,
+      "turn_index": 38,
+      "ground_truth": {
+        "node_id": "box_37",
+        "node_type": "terminator",
+        "node_text": "End, Procedure complete"
+      }
+    }
+  ],
+  "metadata": {
+    "depth": 20,
+    "num_decisions": 9,
+    "num_processes": 9,
+    "num_documents": 0,
+    "terminator_type": "procedure_complete",
+    "terminator_text": "End, Procedure complete",
+    "true_terminator": true,
+    "node_sequence": [
+      "box_0",
+      "box_1",
+      "box_2",
+      "box_4",
+      "box_8",
+      "box_12",
+      "box_17",
+      "box_18",
+      "box_19",
+      "box_20",
+      "box_21",
+      "box_22",
+      "box_24",
+      "box_27",
+      "box_32",
+      "box_33",
+      "box_34",
+      "box_35",
+      "box_36",
+      "box_37"
+    ],
+    "edge_labels": [
+      null,
+      null,
+      "",
+      null,
+      "Yes",
+      "Yes",
+      "Yes",
+      "No",
+      "",
+      null,
+      "No",
+      "",
+      null,
+      "Yes",
+      "Yes",
+      "No",
+      "",
+      null,
+      "Yes",
+      null
+    ],
+    "decision_points": [
+      {
+        "node": "box_4",
+        "label": "Yes",
+        "question": "Vibration level below alarm limit?"
+      },
+      {
+        "node": "box_8",
+        "label": "Yes",
+        "question": "Bearing temperature within rated operating limit?"
+      },
+      {
+        "node": "box_12",
+        "label": "Yes",
+        "question": "Radial runout within 2 µm tolerance?"
+      },
+      {
+        "node": "box_17",
+        "label": "No",
+        "question": "Axial play within 3 µm tolerance?"
+      },
+      {
+        "node": "box_20",
+        "label": "No",
+        "question": "Taper contact pattern above 85% bearing area?"
+      },
+      {
+        "node": "box_24",
+        "label": "Yes",
+        "question": "Drawbar retention force within rated range?"
+      },
+      {
+        "node": "box_27",
+        "label": "Yes",
+        "question": "Thermal growth within compensation model tolerance?"
+      },
+      {
+        "node": "box_32",
+        "label": "No",
+        "question": "Spindle speed within ±0.1% at all test speeds?"
+      },
+      {
+        "node": "box_35",
+        "label": "Yes",
+        "question": "Final vibration within warning limit at full speed?"
+      }
+    ],
+    "generation_model": "anthropic/claude-sonnet-4-5",
+    "verification": {
+      "verified": true,
+      "issues": [],
+      "corrected_turns": [
+        {
+          "node_id": "box_0",
+          "node_type": "terminator",
+          "speaker": "system",
+          "utterance": "Starting spindle diagnostic procedure.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_1",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Run the spindle at fifty percent speed for ten minutes to warm it up.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_1",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "Warm up run complete, spindle has been running at fifty percent for ten minutes.",
+          "edge_label_to_next": ""
+        },
+        {
+          "node_id": "box_2",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Mount a calibrated accelerometer on the front bearing housing using a flat washer stud or magnetic base. Run the spindle at three thousand RPM with no toolholder, then record the RMS vibration velocity. Repeat at maximum rated speed and compare both readings against the ISO 10816 zone limits.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_2",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "Accelerometer mounted and vibration measurements recorded at both speeds. I've compared them against the ISO limits.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_4",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is the vibration level below the alarm limit?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_4",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Yes, both readings are well within acceptable range and below the alarm threshold.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_8",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is the bearing temperature within the rated operating limit?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_8",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Affirmative, bearing temperatures are normal and within specification.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_12",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is the radial runout within two micrometer tolerance?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_12",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Yes, the total indicator reading shows runout is one point seven micrometers, well within the two micrometer spec.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_17",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is the axial play within three micrometer tolerance?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_17",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "No, I'm seeing an average deflection of four point two micrometers across the three measurements, which exceeds the limit.",
+          "edge_label_to_next": "No"
+        },
+        {
+          "node_id": "box_18",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Adjust the preload spacer or shim to reduce the axial play.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_18",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "Preload spacer adjusted, I've reduced the axial play by shimming.",
+          "edge_label_to_next": ""
+        },
+        {
+          "node_id": "box_19",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Apply a thin even coat of engineer's blue to a clean test arbor with the correct taper angle. Insert the arbor, rotate it by hand under moderate axial load, then withdraw and inspect the contact pattern.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_19",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "Test arbor blued and contact pattern checked. I can see the blue transfer on the taper.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_20",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is the taper contact pattern above eighty-five percent bearing area?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_20",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "No, I'm seeing only about seventy-five percent coverage with some spotting near the small end.",
+          "edge_label_to_next": "No"
+        },
+        {
+          "node_id": "box_21",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Clean and reinspect the taper, and check for fretting.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_21",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "Taper cleaned and reinspected, no fretting detected.",
+          "edge_label_to_next": ""
+        },
+        {
+          "node_id": "box_22",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Connect the calibrated pull stud extraction dynamometer to the toolholder retention knob. Apply a steady pull along the spindle axis and record the peak force at which the drawbar releases the toolholder.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_22",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "Dynamometer connected and drawbar release force measured. I've recorded the peak force value.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_24",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is the drawbar retention force within the rated range?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_24",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Yes, the measured force is within specification according to the maintenance manual.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_27",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is the thermal growth within compensation model tolerance?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_27",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Yes, the measured thermal displacement matches the compensation table values closely.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_32",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is the spindle speed within plus or minus zero point one percent at all test speeds?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_32",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "No, I'm seeing a point two percent error at the highest test speed, outside the tolerance band.",
+          "edge_label_to_next": "No"
+        },
+        {
+          "node_id": "box_33",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Adjust the speed reference gain in the drive parameter.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_33",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "Speed reference gain adjusted in the controller parameters.",
+          "edge_label_to_next": ""
+        },
+        {
+          "node_id": "box_34",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Run the spindle at maximum rated speed with the normal toolholder fitted for five minutes. Record vibration velocity with the accelerometer on the front bearing housing and compare it against the baseline measurement from the most recent full service.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_34",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "Full speed run completed with toolholder installed. Vibration measurement recorded and compared to baseline.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_35",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is the final vibration within the warning limit at full speed?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_35",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Yes, vibration is within limits and only fifteen percent above baseline.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_36",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Log all measurements and update the spindle maintenance record.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_36",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "All measurements logged and maintenance record updated in the system.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_37",
+          "node_type": "terminator",
+          "speaker": "system",
+          "utterance": "Procedure complete. The spindle has passed all diagnostic checks and is cleared for production use.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_37",
+          "node_type": "terminator",
+          "speaker": "operator",
+          "utterance": "Understood, spindle is ready for production.",
+          "edge_label_to_next": null
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,545 @@
+{
+  "id": "GRAPH11",
+  "description": "Diagnostic procedure for faults occurring during press-fitting of an insert into a part at a dedicated pressing station.",
+  "graph": {
+    "nodes": {
+      "box_0": {
+        "type": "terminator",
+        "text": "Start"
+      },
+      "box_1": {
+        "type": "decision",
+        "text": "Does the input material meet quality specification?"
+      },
+      "box_2": {
+        "type": "process",
+        "text": "Check the quality of input material against the quality specification."
+      },
+      "box_3": {
+        "type": "process",
+        "text": "Remove the non conforming input material and reload with a batch that meets quality assurance team quality requirements."
+      },
+      "box_4": {
+        "type": "decision",
+        "text": "Is the indexing table correctly positioned?"
+      },
+      "box_5": {
+        "type": "process",
+        "text": "Check relative to \"part mounting inserts\" whether the indexing table has not been rotated too far."
+      },
+      "box_6": {
+        "type": "document",
+        "text": "Indexing table setup procedure"
+      },
+      "box_7": {
+        "type": "decision",
+        "text": "Is the part correctly placed on the insert?"
+      },
+      "box_8": {
+        "type": "process",
+        "text": "Verify that the part is lightly pressed into the insert and is seated without looseness or tilt."
+      },
+      "box_9": {
+        "type": "document",
+        "text": "Insert placement diagnostic (GRAPH 10)"
+      },
+      "box_10": {
+        "type": "decision",
+        "text": "Is part mounting correct?"
+      },
+      "box_11": {
+        "type": "process",
+        "text": "Verify that the part is mounted straight and high enough: it must not be tilted on the fixture or still resting in the indexing table."
+      },
+      "box_12": {
+        "type": "document",
+        "text": "Insert placement pickup diagnostic (GRAPH 08)"
+      },
+      "box_13": {
+        "type": "decision",
+        "text": "Is the vacuum detection \"tilted part control\" functioning correctly?"
+      },
+      "box_14": {
+        "type": "process",
+        "text": "Verify that the vacuum holds the mounted part securely; if not, check whether the suction force is insufficient."
+      },
+      "box_15": {
+        "type": "document",
+        "text": "Vacuum part present detection diagnostic"
+      },
+      "box_16": {
+        "type": "decision",
+        "text": "Are the correct end stops mounted?"
+      },
+      "box_17": {
+        "type": "process",
+        "text": "Identify which of the three end stop configurations is required."
+      },
+      "box_18": {
+        "type": "process",
+        "text": "Identify and mount the correct end stop configuration for the current product type."
+      },
+      "box_19": {
+        "type": "decision",
+        "text": "Are the linear guides clean and greased?"
+      },
+      "box_20": {
+        "type": "process",
+        "text": "Confirm that the linear guides are lightly greased according to manufacturer specifications."
+      },
+      "box_21": {
+        "type": "process",
+        "text": "Clean the linear guides and apply light grease according to the manufacturer's lubrication specification."
+      },
+      "box_22": {
+        "type": "decision",
+        "text": "Are the sensors of the actuators functioning?"
+      },
+      "box_23": {
+        "type": "process",
+        "text": "Complete the following checks: 1. Verify that the sensor illuminates when the actuator reaches its end position. 2. Check controller inputs for cable breaks."
+      },
+      "box_24": {
+        "type": "process",
+        "text": "Replace the faulty actuator end position sensor."
+      },
+      "box_25": {
+        "type": "decision",
+        "text": "Do the pressing heads meet the drawing?"
+      },
+      "box_26": {
+        "type": "process",
+        "text": "Check for wear marks and check tolerances according to drawing"
+      },
+      "box_27": {
+        "type": "process",
+        "text": "Replace the pressing heads with new ones that meet the dimensional tolerances specified in the drawing."
+      },
+      "box_28": {
+        "type": "decision",
+        "text": "Is there play in the linear bearing?"
+      },
+      "box_29": {
+        "type": "process",
+        "text": "Check the lateral play during unloaded state of actuator"
+      },
+      "box_30": {
+        "type": "process",
+        "text": "Replace the linear bearing showing excessive lateral play."
+      },
+      "box_31": {
+        "type": "decision",
+        "text": "Is the actuator leaking?"
+      },
+      "box_32": {
+        "type": "process",
+        "text": "Check the actuators for air leakage in both positions."
+      },
+      "box_33": {
+        "type": "process",
+        "text": "Replace the leaking actuator."
+      },
+      "box_34": {
+        "type": "decision",
+        "text": "Is the actuator securely fastened?"
+      },
+      "box_35": {
+        "type": "process",
+        "text": "Check for secure fastening of actuator"
+      },
+      "box_36": {
+        "type": "process",
+        "text": "Refasten the actuator to eliminate looseness, using the specified torque setting."
+      },
+      "box_37": {
+        "type": "decision",
+        "text": "Actuator speed downward correct?"
+      },
+      "box_38": {
+        "type": "process",
+        "text": "Adjust the flow control valve to bring the actuator downward pressing speed to the specified value."
+      },
+      "box_39": {
+        "type": "decision",
+        "text": "End position of pressing head relative to vacuum fixture correct?"
+      },
+      "box_40": {
+        "type": "process",
+        "text": "Readjust the end position of the pressing head to achieve the correct lower position relative to the vacuum fixture."
+      },
+      "box_41": {
+        "type": "decision",
+        "text": "Pressing time according to spec?"
+      },
+      "box_42": {
+        "type": "process",
+        "text": "Readjust the pressing time setting on the controller to match the specified pressing duration."
+      },
+      "box_43": {
+        "type": "decision",
+        "text": "Set air pressure according to norm?"
+      },
+      "box_44": {
+        "type": "process",
+        "text": "Readjust the air pressure supply to the pressing station to match the specified operating pressure."
+      },
+      "box_45": {
+        "type": "decision",
+        "text": "Is the XY position of the pressing head relative to the part lifter correct?"
+      },
+      "box_46": {
+        "type": "process",
+        "text": "Notify the maintenance technician to realign the XY position of the pressing head relative to the part lifter."
+      },
+      "box_47": {
+        "type": "decision",
+        "text": "Is the vertical and horizontal parallelism of the pressing head relative to the fixture correct?"
+      },
+      "box_48": {
+        "type": "process",
+        "text": "Notify the maintenance technician to correct the vertical and horizontal parallelism of the pressing head relative to the fixture."
+      },
+      "box_49": {
+        "type": "decision",
+        "text": "Part height OK?"
+      },
+      "box_50": {
+        "type": "process",
+        "text": "Measure the part height using a depth gauge and compare against the specification."
+      },
+      "box_51": {
+        "type": "document",
+        "text": "Part height adjustment procedure"
+      },
+      "box_52": {
+        "type": "decision",
+        "text": "Height measurement correct?"
+      },
+      "box_53": {
+        "type": "process",
+        "text": "Confirm that all pressing parameters are within specification and proceed to force measurement verification."
+      },
+      "box_54": {
+        "type": "document",
+        "text": "Height gauge zeroing procedure"
+      },
+      "box_55": {
+        "type": "decision",
+        "text": "Force measurement correct?"
+      },
+      "box_56": {
+        "type": "process",
+        "text": "Replace signal cable between gauge and amplifier."
+      },
+      "box_57": {
+        "type": "document",
+        "text": "Force sensor calibration procedure at pressing station"
+      },
+      "box_58": {
+        "type": "process",
+        "text": "Repeat the diagnostic procedure from the beginning."
+      },
+      "box_59": {
+        "type": "terminator",
+        "text": "Pressing part is correct"
+      }
+    },
+    "edges": [
+      {
+        "source": "box_0",
+        "target": "box_1",
+        "label": null
+      },
+      {
+        "source": "box_2",
+        "target": "box_1",
+        "label": null
+      },
+      {
+        "source": "box_1",
+        "target": "box_3",
+        "label": "No"
+      },
+      {
+        "source": "box_1",
+        "target": "box_4",
+        "label": "Yes"
+      },
+      {
+        "source": "box_5",
+        "target": "box_4",
+        "label": null
+      },
+      {
+        "source": "box_4",
+        "target": "box_6",
+        "label": "No"
+      },
+      {
+        "source": "box_4",
+        "target": "box_7",
+        "label": "Yes"
+      },
+      {
+        "source": "box_8",
+        "target": "box_7",
+        "label": null
+      },
+      {
+        "source": "box_7",
+        "target": "box_9",
+        "label": "No"
+      },
+      {
+        "source": "box_7",
+        "target": "box_10",
+        "label": "Yes"
+      },
+      {
+        "source": "box_11",
+        "target": "box_10",
+        "label": null
+      },
+      {
+        "source": "box_10",
+        "target": "box_12",
+        "label": "No"
+      },
+      {
+        "source": "box_10",
+        "target": "box_13",
+        "label": "Yes"
+      },
+      {
+        "source": "box_14",
+        "target": "box_13",
+        "label": null
+      },
+      {
+        "source": "box_13",
+        "target": "box_15",
+        "label": "No"
+      },
+      {
+        "source": "box_13",
+        "target": "box_16",
+        "label": "Yes"
+      },
+      {
+        "source": "box_17",
+        "target": "box_16",
+        "label": null
+      },
+      {
+        "source": "box_16",
+        "target": "box_18",
+        "label": "No"
+      },
+      {
+        "source": "box_16",
+        "target": "box_19",
+        "label": "Yes"
+      },
+      {
+        "source": "box_20",
+        "target": "box_19",
+        "label": null
+      },
+      {
+        "source": "box_19",
+        "target": "box_21",
+        "label": "No"
+      },
+      {
+        "source": "box_19",
+        "target": "box_22",
+        "label": "Yes"
+      },
+      {
+        "source": "box_23",
+        "target": "box_22",
+        "label": null
+      },
+      {
+        "source": "box_22",
+        "target": "box_24",
+        "label": "No"
+      },
+      {
+        "source": "box_22",
+        "target": "box_25",
+        "label": "Yes"
+      },
+      {
+        "source": "box_26",
+        "target": "box_25",
+        "label": null
+      },
+      {
+        "source": "box_25",
+        "target": "box_27",
+        "label": "No"
+      },
+      {
+        "source": "box_25",
+        "target": "box_28",
+        "label": "Yes"
+      },
+      {
+        "source": "box_29",
+        "target": "box_28",
+        "label": null
+      },
+      {
+        "source": "box_28",
+        "target": "box_30",
+        "label": "Yes"
+      },
+      {
+        "source": "box_28",
+        "target": "box_31",
+        "label": "No"
+      },
+      {
+        "source": "box_32",
+        "target": "box_31",
+        "label": null
+      },
+      {
+        "source": "box_31",
+        "target": "box_33",
+        "label": "Yes"
+      },
+      {
+        "source": "box_31",
+        "target": "box_34",
+        "label": "No"
+      },
+      {
+        "source": "box_35",
+        "target": "box_34",
+        "label": null
+      },
+      {
+        "source": "box_34",
+        "target": "box_36",
+        "label": "No"
+      },
+      {
+        "source": "box_34",
+        "target": "box_37",
+        "label": "Yes"
+      },
+      {
+        "source": "box_37",
+        "target": "box_38",
+        "label": "No"
+      },
+      {
+        "source": "box_37",
+        "target": "box_39",
+        "label": "Yes"
+      },
+      {
+        "source": "box_39",
+        "target": "box_40",
+        "label": "No"
+      },
+      {
+        "source": "box_39",
+        "target": "box_41",
+        "label": "Yes"
+      },
+      {
+        "source": "box_41",
+        "target": "box_42",
+        "label": "No"
+      },
+      {
+        "source": "box_41",
+        "target": "box_43",
+        "label": "Yes"
+      },
+      {
+        "source": "box_43",
+        "target": "box_44",
+        "label": "No"
+      },
+      {
+        "source": "box_43",
+        "target": "box_45",
+        "label": "Yes"
+      },
+      {
+        "source": "box_45",
+        "target": "box_46",
+        "label": "No"
+      },
+      {
+        "source": "box_45",
+        "target": "box_47",
+        "label": "Yes"
+      },
+      {
+        "source": "box_47",
+        "target": "box_48",
+        "label": "No"
+      },
+      {
+        "source": "box_47",
+        "target": "box_49",
+        "label": "Yes"
+      },
+      {
+        "source": "box_50",
+        "target": "box_49",
+        "label": null
+      },
+      {
+        "source": "box_49",
+        "target": "box_51",
+        "label": "No"
+      },
+      {
+        "source": "box_49",
+        "target": "box_52",
+        "label": "Yes"
+      },
+      {
+        "source": "box_53",
+        "target": "box_52",
+        "label": null
+      },
+      {
+        "source": "box_52",
+        "target": "box_54",
+        "label": "No"
+      },
+      {
+        "source": "box_52",
+        "target": "box_55",
+        "label": "Yes"
+      },
+      {
+        "source": "box_56",
+        "target": "box_55",
+        "label": null
+      },
+      {
+        "source": "box_55",
+        "target": "box_57",
+        "label": "No"
+      },
+      {
+        "source": "box_55",
+        "target": "box_59",
+        "label": "Yes"
+      },
+      {
+        "source": "box_58",
+        "target": "box_59",
+        "label": null
+      }
+    ]
+  }
+}

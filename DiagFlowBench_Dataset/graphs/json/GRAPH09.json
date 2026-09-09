@@ -1,0 +1,356 @@
+{
+  "id": "GRAPH09",
+  "description": "Diagnostic flowchart for faults in robotic pickup of parts from a supply conveyor.",
+  "graph": {
+    "nodes": {
+      "box_0": {
+        "type": "terminator",
+        "text": "Start"
+      },
+      "box_1": {
+        "type": "decision",
+        "text": "Does the part meet quality assurance team product specifications?"
+      },
+      "box_2": {
+        "type": "process",
+        "text": "Check product dimensions and inspect for static charge and contamination."
+      },
+      "box_3": {
+        "type": "process",
+        "text": "Remove the non conforming parts from the supply and reload with a product batch that meets quality assurance team specifications."
+      },
+      "box_4": {
+        "type": "decision",
+        "text": "Is the part supply from the hopper correct?"
+      },
+      "box_5": {
+        "type": "process",
+        "text": "Complete the following checks: 1. Check whether parts exit the hopper evenly. 2. Check the feed opening for too many or too few parts. 3. Check whether parts are undamaged on exit from the hopper."
+      },
+      "box_6": {
+        "type": "document",
+        "text": "Hopper part supply diagnostic procedure"
+      },
+      "box_7": {
+        "type": "decision",
+        "text": "Is the part supply to the assembly robot gripper correct?"
+      },
+      "box_8": {
+        "type": "process",
+        "text": "Complete the following checks: 1. Check whether parts are evenly distributed across the belt. 2. Check whether the supply belt runs stably without jerky movements. 3. Check that parts do not shift during belt transport (use a high speed camera if necessary)."
+      },
+      "box_9": {
+        "type": "document",
+        "text": "Part supply belt diagnostic procedure"
+      },
+      "box_10": {
+        "type": "decision",
+        "text": "Is the vision working correctly?"
+      },
+      "box_11": {
+        "type": "process",
+        "text": "Complete the following steps: 1. Check in the vision system application whether products are correctly recognised. 2. If recalibration is needed, refer to the vision coordinate assignment procedure."
+      },
+      "box_12": {
+        "type": "document",
+        "text": "Vision coordinate assignment procedure (verify camera lens is secure)"
+      },
+      "box_13": {
+        "type": "decision",
+        "text": "Are there contaminated parts?"
+      },
+      "box_14": {
+        "type": "process",
+        "text": "Complete the following checks: 1. Check whether the vacuum head is contaminated. 2. Check the vacuum filter for contamination. 3. Check vacuum for leakage (see pneumatic flow measurement procedure for values). 4. Check whether the assembly robot axes are contaminated. 5. Check the centering sleeve for contamination relative to the vacuum tube."
+      },
+      "box_15": {
+        "type": "process",
+        "text": "Clean the parts and clean or replace the vacuum filter as needed."
+      },
+      "box_16": {
+        "type": "document",
+        "text": "Assembly robot axis lubrication procedure"
+      },
+      "box_17": {
+        "type": "decision",
+        "text": "Are there electrical defects?"
+      },
+      "box_18": {
+        "type": "process",
+        "text": "Complete the following checks: 1. Check the cabling and proximity sensor actuator. 2. Check whether the vacuum generator works correctly. 3. Check system settings on the operator control interface."
+      },
+      "box_19": {
+        "type": "process",
+        "text": "Replace the defective cabling and/or sensor, and the generator if faulty."
+      },
+      "box_20": {
+        "type": "decision",
+        "text": "Are there worn parts?"
+      },
+      "box_21": {
+        "type": "process",
+        "text": "Complete the following checks: 1. Check wear on the vacuum tube. 2. Check wear on the actuator centering sleeve. 3. Check the assembly robot axes for wear. 4. Check smooth movement of the centering sleeve relative to the vacuum tube (by disconnecting the actuator)."
+      },
+      "box_22": {
+        "type": "process",
+        "text": "Replace the worn components identified in the inspection (vacuum tube, centering sleeve, and/or assembly robot axes)."
+      },
+      "box_23": {
+        "type": "document",
+        "text": "Assembly robot replacement procedure"
+      },
+      "box_24": {
+        "type": "decision",
+        "text": "Is the extended position of the centering sleeve relative to the vacuum tube correct?"
+      },
+      "box_25": {
+        "type": "document",
+        "text": "Refer to the centering sleeve extended position check for variant A machines (small format parts)."
+      },
+      "box_26": {
+        "type": "document",
+        "text": "Refer to the centering sleeve extended position check for variant B machines (medium format parts)."
+      },
+      "box_27": {
+        "type": "document",
+        "text": "Refer to the centering sleeve extended position check for variant C machines (large format parts)."
+      },
+      "box_28": {
+        "type": "process",
+        "text": "Adjust the actuator end stop to set the correct extended position of the centering sleeve relative to the vacuum tube."
+      },
+      "box_29": {
+        "type": "decision",
+        "text": "Height of centering sleeve relative to supply belt correct?"
+      },
+      "box_30": {
+        "type": "document",
+        "text": "Refer to the centering sleeve height relative to supply belt for variant A machines (small format parts)."
+      },
+      "box_31": {
+        "type": "document",
+        "text": "Refer to the centering sleeve height relative to supply belt for variant B machines (medium format parts)."
+      },
+      "box_32": {
+        "type": "document",
+        "text": "Refer to the centering sleeve height relative to supply belt for variant C machines (large format parts)."
+      },
+      "box_33": {
+        "type": "process",
+        "text": "Set the Z height of the assembly robot to position the centering sleeve at the correct height relative to the supply belt."
+      },
+      "box_34": {
+        "type": "decision",
+        "text": "Part pick up position from supply conveyor correct?"
+      },
+      "box_35": {
+        "type": "process",
+        "text": "Complete the following checks: 1. Check x/y/z pickup position(s) using a high speed camera (see assembly robot supply pickup adjustment procedure). 2. Verify the part is correctly centred under the vacuum head. 3. Monitor the number of retry attempts."
+      },
+      "box_36": {
+        "type": "process",
+        "text": "Complete the following checks: 1. Using jogging mode, verify that picking up the part from the supply conveyor is correct and that the part is correctly aligned under the vacuum head. 2. Check whether the assembly robot produces excessive retries when picking up the part."
+      },
+      "box_37": {
+        "type": "document",
+        "text": "Robot vision supply integration adjustment procedure"
+      },
+      "box_38": {
+        "type": "terminator",
+        "text": "Picking up part from supply conveyor is correct"
+      }
+    },
+    "edges": [
+      {
+        "source": "box_0",
+        "target": "box_1",
+        "label": null
+      },
+      {
+        "source": "box_2",
+        "target": "box_1",
+        "label": null
+      },
+      {
+        "source": "box_1",
+        "target": "box_3",
+        "label": "No"
+      },
+      {
+        "source": "box_1",
+        "target": "box_4",
+        "label": "Yes"
+      },
+      {
+        "source": "box_5",
+        "target": "box_4",
+        "label": null
+      },
+      {
+        "source": "box_4",
+        "target": "box_6",
+        "label": "No"
+      },
+      {
+        "source": "box_4",
+        "target": "box_7",
+        "label": "Yes"
+      },
+      {
+        "source": "box_8",
+        "target": "box_7",
+        "label": null
+      },
+      {
+        "source": "box_7",
+        "target": "box_9",
+        "label": "No"
+      },
+      {
+        "source": "box_7",
+        "target": "box_10",
+        "label": "Yes"
+      },
+      {
+        "source": "box_11",
+        "target": "box_10",
+        "label": null
+      },
+      {
+        "source": "box_10",
+        "target": "box_12",
+        "label": "No"
+      },
+      {
+        "source": "box_10",
+        "target": "box_13",
+        "label": "Yes"
+      },
+      {
+        "source": "box_14",
+        "target": "box_13",
+        "label": null
+      },
+      {
+        "source": "box_13",
+        "target": "box_15",
+        "label": "Yes"
+      },
+      {
+        "source": "box_13",
+        "target": "box_16",
+        "label": "Yes"
+      },
+      {
+        "source": "box_13",
+        "target": "box_17",
+        "label": "No"
+      },
+      {
+        "source": "box_18",
+        "target": "box_17",
+        "label": null
+      },
+      {
+        "source": "box_17",
+        "target": "box_19",
+        "label": "Yes"
+      },
+      {
+        "source": "box_17",
+        "target": "box_20",
+        "label": "No"
+      },
+      {
+        "source": "box_21",
+        "target": "box_20",
+        "label": null
+      },
+      {
+        "source": "box_20",
+        "target": "box_22",
+        "label": "Yes"
+      },
+      {
+        "source": "box_20",
+        "target": "box_23",
+        "label": "Yes"
+      },
+      {
+        "source": "box_20",
+        "target": "box_24",
+        "label": "No"
+      },
+      {
+        "source": "box_25",
+        "target": "box_24",
+        "label": null
+      },
+      {
+        "source": "box_26",
+        "target": "box_24",
+        "label": null
+      },
+      {
+        "source": "box_27",
+        "target": "box_24",
+        "label": null
+      },
+      {
+        "source": "box_24",
+        "target": "box_28",
+        "label": "No"
+      },
+      {
+        "source": "box_24",
+        "target": "box_29",
+        "label": "Yes"
+      },
+      {
+        "source": "box_30",
+        "target": "box_29",
+        "label": null
+      },
+      {
+        "source": "box_31",
+        "target": "box_29",
+        "label": null
+      },
+      {
+        "source": "box_32",
+        "target": "box_29",
+        "label": null
+      },
+      {
+        "source": "box_29",
+        "target": "box_33",
+        "label": "No"
+      },
+      {
+        "source": "box_29",
+        "target": "box_34",
+        "label": "Yes"
+      },
+      {
+        "source": "box_35",
+        "target": "box_34",
+        "label": null
+      },
+      {
+        "source": "box_36",
+        "target": "box_38",
+        "label": null
+      },
+      {
+        "source": "box_34",
+        "target": "box_37",
+        "label": "No"
+      },
+      {
+        "source": "box_34",
+        "target": "box_38",
+        "label": "Yes"
+      }
+    ]
+  }
+}

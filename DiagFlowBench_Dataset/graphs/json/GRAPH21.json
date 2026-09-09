@@ -1,0 +1,246 @@
+{
+  "id": "GRAPH21",
+  "description": "Expanded procedure for tracing the root cause of damaged inserts detected during production, with downstream quarantine step.",
+  "graph": {
+    "nodes": {
+      "box_0": {
+        "type": "terminator",
+        "text": "Start"
+      },
+      "box_1": {
+        "type": "process",
+        "text": "Collect and visually inspect a sample of at least ten damaged inserts. Classify each by damage type (surface scratch, deformation, crack) and location on the insert."
+      },
+      "box_2": {
+        "type": "decision",
+        "text": "Is the insert damage consistent with incoming material defects present before assembly?"
+      },
+      "box_3": {
+        "type": "process",
+        "text": "Continue production with a different batch of inserts. Create a non conformance record for the affected batch and notify quality assurance team of the incoming material defect."
+      },
+      "box_4": {
+        "type": "decision",
+        "text": "Does the damage appear only on inserts processed through one supply conveyor?"
+      },
+      "box_5": {
+        "type": "process",
+        "text": "Inspect inserts from each supply conveyor separately and compare the damage rate and pattern to identify whether one conveyor is the source."
+      },
+      "box_6": {
+        "type": "process",
+        "text": "Empty the affected supply conveyor, inspect the conveyor guide rail and end stop for sharp edges or debris, and reload with undamaged inserts."
+      },
+      "box_7": {
+        "type": "decision",
+        "text": "Does the damage pattern indicate over pressing or mechanical impact at the assembly pressing station?"
+      },
+      "box_8": {
+        "type": "process",
+        "text": "Complete the following checks: 1. Collect damaged inserts from three consecutive assembly cycles. 2. Note the damage location relative to the insert geometry. 3. Identify the station at which each damaged insert was processed."
+      },
+      "box_9": {
+        "type": "process",
+        "text": "Check the pressing head alignment, pressing speed, and force limit. Adjust to specification and rerun a test cycle."
+      },
+      "box_10": {
+        "type": "decision",
+        "text": "Is the damage occurring at or after the reorientation unit?"
+      },
+      "box_11": {
+        "type": "process",
+        "text": "Jog the reorientation unit through one full cycle at slow speed and inspect inserts before and after the reorientation step for damage onset."
+      },
+      "box_12": {
+        "type": "process",
+        "text": "Inspect the reorientation unit gripper contact surfaces for burrs or incorrect clamping force. Replace gripper pads or adjust clamping pressure to specification."
+      },
+      "box_13": {
+        "type": "process",
+        "text": "Inspect the discharge robot gripper and the output holder rack slot guides for deformations or debris. Adjust or replace damaged gripper inserts."
+      },
+      "box_14": {
+        "type": "process",
+        "text": "Run ten slow speed test cycles and inspect inserts after each station to verify the root cause has been eliminated."
+      },
+      "box_15": {
+        "type": "decision",
+        "text": "Has the root cause of the insert damage been confirmed and the corrective action verified effective?"
+      },
+      "box_16": {
+        "type": "process",
+        "text": "Record the root cause, corrective action, and affected batch numbers in the quality log. Notify quality assurance team and restart production."
+      },
+      "box_17": {
+        "type": "process",
+        "text": "Escalate to the maintenance team with the damage characterisation sample for further investigation. Halt production on the affected line."
+      },
+      "box_18": {
+        "type": "process",
+        "text": "Complete the following steps: 1. Access the production tracking system and filter by current work order. 2. Set the time window from the last confirmed good inspection to now. 3. Export the serial numbers of all inserts processed during the fault window."
+      },
+      "box_19": {
+        "type": "document",
+        "text": "Refer to the production tracking system batch traceability procedure."
+      },
+      "box_20": {
+        "type": "decision",
+        "text": "Were any inserts from the fault window released to downstream assembly or shipped to customer?"
+      },
+      "box_21": {
+        "type": "process",
+        "text": "Issue downstream quarantine notification and quarantine all suspect inserts from the fault window."
+      },
+      "box_22": {
+        "type": "terminator",
+        "text": "End, Quarantine issued: quality assurance disposition and customer notification required"
+      },
+      "box_23": {
+        "type": "terminator",
+        "text": "End, Notify maintenance team and quality assurance team. Procedure complete."
+      }
+    },
+    "edges": [
+      {
+        "source": "box_0",
+        "target": "box_1",
+        "label": null
+      },
+      {
+        "source": "box_1",
+        "target": "box_2",
+        "label": null
+      },
+      {
+        "source": "box_2",
+        "target": "box_3",
+        "label": "Yes"
+      },
+      {
+        "source": "box_2",
+        "target": "box_4",
+        "label": "No"
+      },
+      {
+        "source": "box_5",
+        "target": "box_4",
+        "label": null
+      },
+      {
+        "source": "box_4",
+        "target": "box_6",
+        "label": "Yes"
+      },
+      {
+        "source": "box_4",
+        "target": "box_7",
+        "label": "No"
+      },
+      {
+        "source": "box_8",
+        "target": "box_7",
+        "label": null
+      },
+      {
+        "source": "box_7",
+        "target": "box_9",
+        "label": "Yes"
+      },
+      {
+        "source": "box_7",
+        "target": "box_10",
+        "label": "No"
+      },
+      {
+        "source": "box_11",
+        "target": "box_10",
+        "label": null
+      },
+      {
+        "source": "box_10",
+        "target": "box_12",
+        "label": "Yes"
+      },
+      {
+        "source": "box_10",
+        "target": "box_13",
+        "label": "No"
+      },
+      {
+        "source": "box_9",
+        "target": "box_14",
+        "label": null
+      },
+      {
+        "source": "box_12",
+        "target": "box_14",
+        "label": null
+      },
+      {
+        "source": "box_13",
+        "target": "box_14",
+        "label": null
+      },
+      {
+        "source": "box_6",
+        "target": "box_14",
+        "label": null
+      },
+      {
+        "source": "box_14",
+        "target": "box_15",
+        "label": null
+      },
+      {
+        "source": "box_15",
+        "target": "box_16",
+        "label": "Yes"
+      },
+      {
+        "source": "box_15",
+        "target": "box_17",
+        "label": "No"
+      },
+      {
+        "source": "box_16",
+        "target": "box_18",
+        "label": null
+      },
+      {
+        "source": "box_17",
+        "target": "box_23",
+        "label": null
+      },
+      {
+        "source": "box_18",
+        "target": "box_20",
+        "label": null
+      },
+      {
+        "source": "box_19",
+        "target": "box_20",
+        "label": null
+      },
+      {
+        "source": "box_20",
+        "target": "box_21",
+        "label": "Yes"
+      },
+      {
+        "source": "box_20",
+        "target": "box_23",
+        "label": "No"
+      },
+      {
+        "source": "box_21",
+        "target": "box_22",
+        "label": null
+      },
+      {
+        "source": "box_3",
+        "target": "box_18",
+        "label": null
+      }
+    ]
+  }
+}

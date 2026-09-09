@@ -1,0 +1,761 @@
+{
+  "conversation_id": "GRAPH32_P004_base",
+  "graph_id": "GRAPH32",
+  "path_id": "GRAPH32_P004",
+  "regime": "clean",
+  "variant": "base",
+  "robustness_axis": null,
+  "turns": [
+    {
+      "node_id": "box_0",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Starting rejection rate diagnostic procedure.",
+      "edge_label_to_next": null,
+      "turn_index": 0,
+      "ground_truth": {
+        "node_id": "box_0",
+        "node_type": "terminator",
+        "node_text": "Start"
+      }
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Please record the current rejection rate, the rejection type breakdown including orientation, marking quality, insertion depth, and presence, as well as the time window over which the rate increased.",
+      "edge_label_to_next": null,
+      "turn_index": 1,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Record the current rejection rate, rejection type breakdown (orientation, marking quality, insertion depth, presence), and the time window over which the rate increased."
+      }
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "I've documented the rejection rate at 8.3% with the breakdown across all categories, and the increase started about two hours ago during second shift.",
+      "edge_label_to_next": "",
+      "turn_index": 2,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Record the current rejection rate, rejection type breakdown (orientation, marking quality, insertion depth, presence), and the time window over which the rate increased."
+      }
+    },
+    {
+      "node_id": "box_3",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Verify that the correct product program is loaded for the current batch and confirm that all inspection thresholds have been correctly transferred for this product type.",
+      "edge_label_to_next": null,
+      "turn_index": 3,
+      "ground_truth": {
+        "node_id": "box_3",
+        "node_type": "process",
+        "node_text": "Verify that the correct product program is loaded for the current batch. Check that all inspection thresholds have been correctly transferred for this product type."
+      }
+    },
+    {
+      "node_id": "box_3",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "I've checked the control panel and confirmed the product program and inspection thresholds for the current batch.",
+      "edge_label_to_next": null,
+      "turn_index": 4,
+      "ground_truth": {
+        "node_id": "box_3",
+        "node_type": "process",
+        "node_text": "Verify that the correct product program is loaded for the current batch. Check that all inspection thresholds have been correctly transferred for this product type."
+      }
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Did the rejection rate increase coincide with a batch changeover or product type change?",
+      "edge_label_to_next": null,
+      "turn_index": 5,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Did the rejection rate increase coincide with a batch changeover or product type change?"
+      }
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, we switched from product line A to product line B about two and a half hours ago, right before the rejection rate started climbing.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 6,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Did the rejection rate increase coincide with a batch changeover or product type change?"
+      }
+    },
+    {
+      "node_id": "box_4",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Switch to the correct product program and reset all inspection parameters to the validated baseline for this product type, then rerun a test sequence.",
+      "edge_label_to_next": null,
+      "turn_index": 7,
+      "ground_truth": {
+        "node_id": "box_4",
+        "node_type": "process",
+        "node_text": "Switch to the correct product program and reset all inspection parameters to the validated baseline for this product type. rerun a test sequence."
+      }
+    },
+    {
+      "node_id": "box_4",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "I've loaded the correct program, reset the inspection parameters to baseline, and the test sequence is running now.",
+      "edge_label_to_next": "",
+      "turn_index": 8,
+      "ground_truth": {
+        "node_id": "box_4",
+        "node_type": "process",
+        "node_text": "Switch to the correct product program and reset all inspection parameters to the validated baseline for this product type. rerun a test sequence."
+      }
+    },
+    {
+      "node_id": "box_6",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Compare the current threshold settings on the operator control interface against the last validated baseline values recorded in the product setup record.",
+      "edge_label_to_next": null,
+      "turn_index": 9,
+      "ground_truth": {
+        "node_id": "box_6",
+        "node_type": "process",
+        "node_text": "Compare the current threshold settings on the operator control interface against the last validated baseline values recorded in the product setup record."
+      }
+    },
+    {
+      "node_id": "box_6",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "I've compared the settings and they match the validated baseline values in the setup record.",
+      "edge_label_to_next": null,
+      "turn_index": 10,
+      "ground_truth": {
+        "node_id": "box_6",
+        "node_type": "process",
+        "node_text": "Compare the current threshold settings on the operator control interface against the last validated baseline values recorded in the product setup record."
+      }
+    },
+    {
+      "node_id": "box_5",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Are the inspection threshold settings at their validated baseline values for this product type?",
+      "edge_label_to_next": null,
+      "turn_index": 11,
+      "ground_truth": {
+        "node_id": "box_5",
+        "node_type": "decision",
+        "node_text": "Are the inspection threshold settings at their validated baseline values for this product type?"
+      }
+    },
+    {
+      "node_id": "box_5",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, all the thresholds are exactly at the validated baseline values for this product.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 12,
+      "ground_truth": {
+        "node_id": "box_5",
+        "node_type": "decision",
+        "node_text": "Are the inspection threshold settings at their validated baseline values for this product type?"
+      }
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the rejection dominated by a single inspection type, with more than 70% from one category?",
+      "edge_label_to_next": null,
+      "turn_index": 13,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "decision",
+        "node_text": "Is the rejection dominated by a single inspection type (more than 70% from one category)?"
+      }
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, marking quality rejections are accounting for about 78% of all failures.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 14,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "decision",
+        "node_text": "Is the rejection dominated by a single inspection type (more than 70% from one category)?"
+      }
+    },
+    {
+      "node_id": "box_9",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Identify the dominant rejection type and follow the specific fault procedure for that inspection system.",
+      "edge_label_to_next": null,
+      "turn_index": 15,
+      "ground_truth": {
+        "node_id": "box_9",
+        "node_type": "process",
+        "node_text": "Identify the dominant rejection type and follow the specific fault procedure for that inspection system."
+      }
+    },
+    {
+      "node_id": "box_9",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "I've identified marking quality as the dominant type and I'm following the marking inspection fault procedure now.",
+      "edge_label_to_next": null,
+      "turn_index": 16,
+      "ground_truth": {
+        "node_id": "box_9",
+        "node_type": "process",
+        "node_text": "Identify the dominant rejection type and follow the specific fault procedure for that inspection system."
+      }
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the rejection dominated by a single inspection type, with more than 70% from one category?",
+      "edge_label_to_next": null,
+      "turn_index": 17,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "decision",
+        "node_text": "Is the rejection dominated by a single inspection type (more than 70% from one category)?"
+      }
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, it's still primarily marking quality issues at around 75% of the total rejections.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 18,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "decision",
+        "node_text": "Is the rejection dominated by a single inspection type (more than 70% from one category)?"
+      }
+    },
+    {
+      "node_id": "box_9",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Identify the dominant rejection type and follow the specific fault procedure for that inspection system.",
+      "edge_label_to_next": null,
+      "turn_index": 19,
+      "ground_truth": {
+        "node_id": "box_9",
+        "node_type": "process",
+        "node_text": "Identify the dominant rejection type and follow the specific fault procedure for that inspection system."
+      }
+    },
+    {
+      "node_id": "box_9",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "I've completed the marking system fault procedure and recalibrated the vision sensor.",
+      "edge_label_to_next": null,
+      "turn_index": 20,
+      "ground_truth": {
+        "node_id": "box_9",
+        "node_type": "process",
+        "node_text": "Identify the dominant rejection type and follow the specific fault procedure for that inspection system."
+      }
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the rejection dominated by a single inspection type, with more than 70% from one category?",
+      "edge_label_to_next": null,
+      "turn_index": 21,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "decision",
+        "node_text": "Is the rejection dominated by a single inspection type (more than 70% from one category)?"
+      }
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, marking quality is still the dominant issue at 72% of rejections.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 22,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "decision",
+        "node_text": "Is the rejection dominated by a single inspection type (more than 70% from one category)?"
+      }
+    },
+    {
+      "node_id": "box_9",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Identify the dominant rejection type and follow the specific fault procedure for that inspection system.",
+      "edge_label_to_next": null,
+      "turn_index": 23,
+      "ground_truth": {
+        "node_id": "box_9",
+        "node_type": "process",
+        "node_text": "Identify the dominant rejection type and follow the specific fault procedure for that inspection system."
+      }
+    },
+    {
+      "node_id": "box_9",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "I've gone through the marking inspection procedure again and verified the lighting and camera alignment.",
+      "edge_label_to_next": "",
+      "turn_index": 24,
+      "ground_truth": {
+        "node_id": "box_9",
+        "node_type": "process",
+        "node_text": "Identify the dominant rejection type and follow the specific fault procedure for that inspection system."
+      }
+    },
+    {
+      "node_id": "box_11",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Complete the following checks: open the maintenance record and filter by station asset number, compare the current cycle count against the scheduled maintenance interval, and check whether any maintenance task is overdue at the affected station.",
+      "edge_label_to_next": null,
+      "turn_index": 25,
+      "ground_truth": {
+        "node_id": "box_11",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Open the maintenance record and filter by station asset number. 2. Compare the current cycle count against the scheduled maintenance interval. 3. Check whether any maintenance task is overdue at the affected station."
+      }
+    },
+    {
+      "node_id": "box_11",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "I've reviewed the maintenance records and compared the cycle counts, and all scheduled maintenance is current with no overdue tasks.",
+      "edge_label_to_next": null,
+      "turn_index": 26,
+      "ground_truth": {
+        "node_id": "box_11",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Open the maintenance record and filter by station asset number. 2. Compare the current cycle count against the scheduled maintenance interval. 3. Check whether any maintenance task is overdue at the affected station."
+      }
+    },
+    {
+      "node_id": "box_10",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is any scheduled maintenance interval overdue for the inspection stations or assembly stations?",
+      "edge_label_to_next": null,
+      "turn_index": 27,
+      "ground_truth": {
+        "node_id": "box_10",
+        "node_type": "decision",
+        "node_text": "Is any scheduled maintenance interval overdue for the inspection stations or assembly stations?"
+      }
+    },
+    {
+      "node_id": "box_10",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "No, all maintenance is up to date and within the scheduled intervals.",
+      "edge_label_to_next": "No",
+      "turn_index": 28,
+      "ground_truth": {
+        "node_id": "box_10",
+        "node_type": "decision",
+        "node_text": "Is any scheduled maintenance interval overdue for the inspection stations or assembly stations?"
+      }
+    },
+    {
+      "node_id": "box_13",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Has the rejection rate returned to within the acceptable threshold after all corrective actions?",
+      "edge_label_to_next": null,
+      "turn_index": 29,
+      "ground_truth": {
+        "node_id": "box_13",
+        "node_type": "decision",
+        "node_text": "Has the rejection rate returned to within the acceptable threshold after all corrective actions?"
+      }
+    },
+    {
+      "node_id": "box_13",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Yes, the rejection rate has dropped back down to 2.1%, which is within our acceptable range.",
+      "edge_label_to_next": "Yes",
+      "turn_index": 30,
+      "ground_truth": {
+        "node_id": "box_13",
+        "node_type": "decision",
+        "node_text": "Has the rejection rate returned to within the acceptable threshold after all corrective actions?"
+      }
+    },
+    {
+      "node_id": "box_22",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Quality assurance has been notified and all corrective actions have been recorded. The procedure is now complete.",
+      "edge_label_to_next": null,
+      "turn_index": 31,
+      "ground_truth": {
+        "node_id": "box_22",
+        "node_type": "terminator",
+        "node_text": "End, quality assurance notified, corrective actions recorded. Procedure complete."
+      }
+    },
+    {
+      "node_id": "box_22",
+      "node_type": "terminator",
+      "speaker": "operator",
+      "utterance": "Understood, I've confirmed the documentation is complete.",
+      "edge_label_to_next": null,
+      "turn_index": 32,
+      "ground_truth": {
+        "node_id": "box_22",
+        "node_type": "terminator",
+        "node_text": "End, quality assurance notified, corrective actions recorded. Procedure complete."
+      }
+    }
+  ],
+  "metadata": {
+    "depth": 17,
+    "num_decisions": 7,
+    "num_processes": 8,
+    "num_documents": 0,
+    "terminator_type": "procedure_complete",
+    "terminator_text": "End, quality assurance notified, corrective actions recorded. Procedure complete.",
+    "true_terminator": true,
+    "node_sequence": [
+      "box_0",
+      "box_1",
+      "box_3",
+      "box_2",
+      "box_4",
+      "box_6",
+      "box_5",
+      "box_8",
+      "box_9",
+      "box_8",
+      "box_9",
+      "box_8",
+      "box_9",
+      "box_11",
+      "box_10",
+      "box_13",
+      "box_22"
+    ],
+    "edge_labels": [
+      null,
+      null,
+      "",
+      null,
+      "Yes",
+      "",
+      null,
+      "Yes",
+      "Yes",
+      null,
+      "Yes",
+      null,
+      "Yes",
+      "",
+      null,
+      "No",
+      "Yes"
+    ],
+    "decision_points": [
+      {
+        "node": "box_2",
+        "label": "Yes",
+        "question": "Did the rejection rate increase coincide with a batch changeover or product type change?"
+      },
+      {
+        "node": "box_5",
+        "label": "Yes",
+        "question": "Are the inspection threshold settings at their validated baseline values for this product type?"
+      },
+      {
+        "node": "box_8",
+        "label": "Yes",
+        "question": "Is the rejection dominated by a single inspection type (more than 70% from one category)?"
+      },
+      {
+        "node": "box_8",
+        "label": "Yes",
+        "question": "Is the rejection dominated by a single inspection type (more than 70% from one category)?"
+      },
+      {
+        "node": "box_8",
+        "label": "Yes",
+        "question": "Is the rejection dominated by a single inspection type (more than 70% from one category)?"
+      },
+      {
+        "node": "box_10",
+        "label": "No",
+        "question": "Is any scheduled maintenance interval overdue for the inspection stations or assembly stations?"
+      },
+      {
+        "node": "box_13",
+        "label": "Yes",
+        "question": "Has the rejection rate returned to within the acceptable threshold after all corrective actions?"
+      }
+    ],
+    "generation_model": "anthropic/claude-sonnet-4-5",
+    "verification": {
+      "verified": true,
+      "issues": [],
+      "corrected_turns": [
+        {
+          "node_id": "box_0",
+          "node_type": "terminator",
+          "speaker": "system",
+          "utterance": "Starting rejection rate diagnostic procedure.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_1",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Please record the current rejection rate, the rejection type breakdown including orientation, marking quality, insertion depth, and presence, as well as the time window over which the rate increased.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_1",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "I've documented the rejection rate at 8.3% with the breakdown across all categories, and the increase started about two hours ago during second shift.",
+          "edge_label_to_next": ""
+        },
+        {
+          "node_id": "box_3",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Verify that the correct product program is loaded for the current batch and confirm that all inspection thresholds have been correctly transferred for this product type.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_3",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "I've checked the control panel and confirmed the product program and inspection thresholds for the current batch.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_2",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Did the rejection rate increase coincide with a batch changeover or product type change?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_2",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Yes, we switched from product line A to product line B about two and a half hours ago, right before the rejection rate started climbing.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_4",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Switch to the correct product program and reset all inspection parameters to the validated baseline for this product type, then rerun a test sequence.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_4",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "I've loaded the correct program, reset the inspection parameters to baseline, and the test sequence is running now.",
+          "edge_label_to_next": ""
+        },
+        {
+          "node_id": "box_6",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Compare the current threshold settings on the operator control interface against the last validated baseline values recorded in the product setup record.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_6",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "I've compared the settings and they match the validated baseline values in the setup record.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_5",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Are the inspection threshold settings at their validated baseline values for this product type?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_5",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Yes, all the thresholds are exactly at the validated baseline values for this product.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_8",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is the rejection dominated by a single inspection type, with more than 70% from one category?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_8",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Yes, marking quality rejections are accounting for about 78% of all failures.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_9",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Identify the dominant rejection type and follow the specific fault procedure for that inspection system.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_9",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "I've identified marking quality as the dominant type and I'm following the marking inspection fault procedure now.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_8",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is the rejection dominated by a single inspection type, with more than 70% from one category?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_8",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Yes, it's still primarily marking quality issues at around 75% of the total rejections.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_9",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Identify the dominant rejection type and follow the specific fault procedure for that inspection system.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_9",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "I've completed the marking system fault procedure and recalibrated the vision sensor.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_8",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is the rejection dominated by a single inspection type, with more than 70% from one category?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_8",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Yes, marking quality is still the dominant issue at 72% of rejections.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_9",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Identify the dominant rejection type and follow the specific fault procedure for that inspection system.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_9",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "I've gone through the marking inspection procedure again and verified the lighting and camera alignment.",
+          "edge_label_to_next": ""
+        },
+        {
+          "node_id": "box_11",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Complete the following checks: open the maintenance record and filter by station asset number, compare the current cycle count against the scheduled maintenance interval, and check whether any maintenance task is overdue at the affected station.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_11",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "I've reviewed the maintenance records and compared the cycle counts, and all scheduled maintenance is current with no overdue tasks.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_10",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is any scheduled maintenance interval overdue for the inspection stations or assembly stations?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_10",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "No, all maintenance is up to date and within the scheduled intervals.",
+          "edge_label_to_next": "No"
+        },
+        {
+          "node_id": "box_13",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Has the rejection rate returned to within the acceptable threshold after all corrective actions?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_13",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Yes, the rejection rate has dropped back down to 2.1%, which is within our acceptable range.",
+          "edge_label_to_next": "Yes"
+        },
+        {
+          "node_id": "box_22",
+          "node_type": "terminator",
+          "speaker": "system",
+          "utterance": "Quality assurance has been notified and all corrective actions have been recorded. The procedure is now complete.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_22",
+          "node_type": "terminator",
+          "speaker": "operator",
+          "utterance": "Understood, I've confirmed the documentation is complete.",
+          "edge_label_to_next": null
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,504 @@
+{
+  "conversation_id": "GRAPH25_P000_noise_perturbation_mixed",
+  "graph_id": "GRAPH25",
+  "path_id": "GRAPH25_P000",
+  "regime": "mixed",
+  "variant": "noise_perturbation",
+  "robustness_axis": "noise_perturbation",
+  "turns": [
+    {
+      "node_id": "box_0",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Starting vacuum effector part dropout diagnostic procedure.",
+      "edge_label_to_next": null,
+      "turn_index": 0,
+      "ground_truth": {
+        "node_id": "box_0",
+        "node_type": "terminator",
+        "node_text": "Start"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_21",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the rate of parts dropped from the vacuum effector sufficient to indicate a system failure posing a safety hazard or causing contamination of the work cell?",
+      "edge_label_to_next": null,
+      "turn_index": 1,
+      "ground_truth": {
+        "node_id": "box_21",
+        "node_type": "decision",
+        "node_text": "Is the rate of parts dropped from the vacuum effector sufficient to indicate a system failure posing a safety hazard or causing contamination of the work cell?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_21",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "dropout rate elevated but managable, no immediate safety concenrs or work cell contamination observed looks like standard fault condition",
+      "edge_label_to_next": "Standard fault, continue diagnosis",
+      "turn_index": 2,
+      "ground_truth": {
+        "node_id": "box_21",
+        "node_type": "decision",
+        "node_text": "Is the rate of parts dropped from the vacuum effector sufficient to indicate a system failure posing a safety hazard or causing contamination of the work cell?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Note the position in the transfer cycle at which parts are dropped and whether the dropout is occurring on every cycle or intermittently. Collect the dropped part if undamaged for inspection.",
+      "edge_label_to_next": null,
+      "turn_index": 3,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Note the position in the transfer cycle at which parts are dropped and whether the dropout is occurring on every cycle or intermittently. Collect the dropped part if undamaged for inspection."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "The parts aren't dropping at all actually, they're getting stuck halfway through the transfer and just vibrating in place until the cycle times out.",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "coverage_gap",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "ok so observed dropout patern and collected undamged part. drops occuring intermittently during mid-transfer phase",
+      "edge_label_to_next": "",
+      "turn_index": 4,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Note the position in the transfer cycle at which parts are dropped and whether the dropout is occurring on every cycle or intermittently. Collect the dropped part if undamaged for inspection."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_3",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Check the vacuum pressure gauge reading at the end effector connection point. Verify that the pressure holds steady during the full transfer cycle using the operator control interface diagnostic screen.",
+      "edge_label_to_next": null,
+      "turn_index": 5,
+      "ground_truth": {
+        "node_id": "box_3",
+        "node_type": "process",
+        "node_text": "Check the vacuum pressure gauge reading at the end effector connection point. Verify that the pressure holds steady during the full transfer cycle using the operator control interface diagnostic screen."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_3",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "checked gauge and monitored diagnostic screen thru complete cycle pressure reading stable throughout transfer",
+      "edge_label_to_next": null,
+      "turn_index": 6,
+      "ground_truth": {
+        "node_id": "box_3",
+        "node_type": "process",
+        "node_text": "Check the vacuum pressure gauge reading at the end effector connection point. Verify that the pressure holds steady during the full transfer cycle using the operator control interface diagnostic screen."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the vacuum pressure at the end effector within the specified holding range during the transfer phase?",
+      "edge_label_to_next": null,
+      "turn_index": 7,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Is the vacuum pressure at the end effector within the specified holding range during the transfer phase?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yeah vacuum pressure holding within spec range throughout entire tranfer phase",
+      "edge_label_to_next": "Yes",
+      "turn_index": 8,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Is the vacuum pressure at the end effector within the specified holding range during the transfer phase?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_5",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the vacuum cup sealing surface clean and free of contamination?",
+      "edge_label_to_next": null,
+      "turn_index": 9,
+      "ground_truth": {
+        "node_id": "box_5",
+        "node_type": "decision",
+        "node_text": "Is the vacuum cup sealing surface clean and free of contamination?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_5",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yes inspected vacuum cup and sealing surface clean no contamination cup lip intact and properly seated",
+      "edge_label_to_next": "Yes",
+      "turn_index": 10,
+      "ground_truth": {
+        "node_id": "box_5",
+        "node_type": "decision",
+        "node_text": "Is the vacuum cup sealing surface clean and free of contamination?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the vacuum filter element clean and within its replacement interval?",
+      "edge_label_to_next": null,
+      "turn_index": 11,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "decision",
+        "node_text": "Is the vacuum filter element clean and within its replacement interval?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "The filter element looks okay, but I'm seeing oil leaking from the vacuum pump seal itself—there's a puddle forming underneath and it wasn't there yesterday.",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "undocumented_malfunction",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yeah filter element looks clean and according to maintennace log its well within replacement interval",
+      "edge_label_to_next": "Yes",
+      "turn_index": 12,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "decision",
+        "node_text": "Is the vacuum filter element clean and within its replacement interval?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_11",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the part pick up position correctly centred under the vacuum cup with no lateral offset at pick up?",
+      "edge_label_to_next": null,
+      "turn_index": 13,
+      "ground_truth": {
+        "node_id": "box_11",
+        "node_type": "decision",
+        "node_text": "Is the part pick up position correctly centred under the vacuum cup (no lateral offset at pick up)?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_11",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yes pickup position correctly centred verified with reference part alignment within tolerance",
+      "edge_label_to_next": "Yes",
+      "turn_index": 14,
+      "ground_truth": {
+        "node_id": "box_11",
+        "node_type": "decision",
+        "node_text": "Is the part pick up position correctly centred under the vacuum cup (no lateral offset at pick up)?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_14",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the transfer acceleration and deceleration profile within the specified limits?",
+      "edge_label_to_next": null,
+      "turn_index": 15,
+      "ground_truth": {
+        "node_id": "box_14",
+        "node_type": "decision",
+        "node_text": "Is the transfer acceleration and deceleration profile within the specified limits?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_14",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "checked controller settings both accel and decel values within spec for this part type",
+      "edge_label_to_next": "Yes",
+      "turn_index": 16,
+      "ground_truth": {
+        "node_id": "box_14",
+        "node_type": "decision",
+        "node_text": "Is the transfer acceleration and deceleration profile within the specified limits?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_17",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Has the dropout fault been eliminated after corrective action?",
+      "edge_label_to_next": null,
+      "turn_index": 17,
+      "ground_truth": {
+        "node_id": "box_17",
+        "node_type": "decision",
+        "node_text": "Has the dropout fault been eliminated after corrective action?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_17",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yes dropout fault eliminated ran multiple test cycles all parts transfering successfully",
+      "edge_label_to_next": "Yes",
+      "turn_index": 18,
+      "ground_truth": {
+        "node_id": "box_17",
+        "node_type": "decision",
+        "node_text": "Has the dropout fault been eliminated after corrective action?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_19",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Record the root cause and corrective action in the quality log. Notify the quality assurance team.",
+      "edge_label_to_next": null,
+      "turn_index": 19,
+      "ground_truth": {
+        "node_id": "box_19",
+        "node_type": "process",
+        "node_text": "Record the root cause and corrective action in the quality log. Notify quality assurance team."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_19",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "documented in quality log and qa team notified of resolution",
+      "edge_label_to_next": null,
+      "turn_index": 20,
+      "ground_truth": {
+        "node_id": "box_19",
+        "node_type": "process",
+        "node_text": "Record the root cause and corrective action in the quality log. Notify quality assurance team."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_20",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Diagnostic procedure complete. Resume production operations.",
+      "edge_label_to_next": null,
+      "turn_index": 21,
+      "ground_truth": {
+        "node_id": "box_20",
+        "node_type": "terminator",
+        "node_text": "End, resume production."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_20",
+      "node_type": "terminator",
+      "speaker": "operator",
+      "utterance": "understood resuming production now",
+      "edge_label_to_next": null,
+      "turn_index": 22,
+      "ground_truth": {
+        "node_id": "box_20",
+        "node_type": "terminator",
+        "node_text": "End, resume production."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    }
+  ],
+  "metadata": {
+    "depth": 12,
+    "num_decisions": 7,
+    "num_processes": 3,
+    "num_documents": 0,
+    "terminator_type": "procedure_complete",
+    "terminator_text": "End, resume production.",
+    "true_terminator": true,
+    "node_sequence": [
+      "box_0",
+      "box_21",
+      "box_1",
+      "box_3",
+      "box_2",
+      "box_5",
+      "box_8",
+      "box_11",
+      "box_14",
+      "box_17",
+      "box_19",
+      "box_20"
+    ],
+    "edge_labels": [
+      null,
+      null,
+      "Standard fault, continue diagnosis",
+      "",
+      null,
+      "Yes",
+      "Yes",
+      "Yes",
+      "Yes",
+      "Yes",
+      "Yes",
+      null
+    ],
+    "decision_points": [
+      {
+        "node": "box_21",
+        "label": "Standard fault, continue diagnosis",
+        "question": "Is the rate of parts dropped from the vacuum effector sufficient to indicate a system failure posing a safety hazard or causing contamination of the work cell?"
+      },
+      {
+        "node": "box_2",
+        "label": "Yes",
+        "question": "Is the vacuum pressure at the end effector within the specified holding range during the transfer phase?"
+      },
+      {
+        "node": "box_5",
+        "label": "Yes",
+        "question": "Is the vacuum cup sealing surface clean and free of contamination?"
+      },
+      {
+        "node": "box_8",
+        "label": "Yes",
+        "question": "Is the vacuum filter element clean and within its replacement interval?"
+      },
+      {
+        "node": "box_11",
+        "label": "Yes",
+        "question": "Is the part pick up position correctly centred under the vacuum cup (no lateral offset at pick up)?"
+      },
+      {
+        "node": "box_14",
+        "label": "Yes",
+        "question": "Is the transfer acceleration and deceleration profile within the specified limits?"
+      },
+      {
+        "node": "box_17",
+        "label": "Yes",
+        "question": "Has the dropout fault been eliminated after corrective action?"
+      }
+    ],
+    "generation_model": "anthropic/claude-sonnet-4-5",
+    "verification": {
+      "variant_of": "base",
+      "base_verified": false,
+      "note": "surface-form variant; not independently verified"
+    },
+    "injection_count": 2
+  },
+  "injection_log": [
+    {
+      "position": 4,
+      "node_id": "box_1",
+      "node_text": "Note the position in the transfer cycle at which parts are dropped and whether the dropout is occurring on every cycle or intermittently. Collect the dropped part if undamaged for inspection.",
+      "edge_labels": [],
+      "category": "coverage_gap",
+      "utterance": "The parts aren't dropping at all actually, they're getting stuck halfway through the transfer and just vibrating in place until the cycle times out.",
+      "injection_rate": null,
+      "num_candidates": null
+    },
+    {
+      "position": 12,
+      "node_id": "box_8",
+      "node_text": "Is the vacuum filter element clean and within its replacement interval?",
+      "edge_labels": [
+        "No",
+        "Yes"
+      ],
+      "category": "undocumented_malfunction",
+      "utterance": "The filter element looks okay, but I'm seeing oil leaking from the vacuum pump seal itself—there's a puddle forming underneath and it wasn't there yesterday.",
+      "injection_rate": null,
+      "num_candidates": null
+    }
+  ]
+}

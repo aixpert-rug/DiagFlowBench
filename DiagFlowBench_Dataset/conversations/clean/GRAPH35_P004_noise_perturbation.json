@@ -1,0 +1,295 @@
+{
+  "conversation_id": "GRAPH35_P004_noise_perturbation",
+  "graph_id": "GRAPH35",
+  "path_id": "GRAPH35_P004",
+  "regime": "clean",
+  "variant": "noise_perturbation",
+  "robustness_axis": "noise_perturbation",
+  "turns": [
+    {
+      "node_id": "box_0",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Starting encoder diagnostic procedure.",
+      "edge_label_to_next": null,
+      "turn_index": 0,
+      "ground_truth": {
+        "node_id": "box_0",
+        "node_type": "terminator",
+        "node_text": "Start"
+      }
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Please complete the following checks: First, inspect the encoder scale for scratches, oil, or coolant deposits. Second, check the read head mounting for looseness or impact damage. Third, inspect the cable and connector for chafing or corrosion.",
+      "edge_label_to_next": null,
+      "turn_index": 1,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Inspect the encoder scale for scratches, oil, or coolant deposits. 2. Check the read head mounting for looseness or impact damage. 3. Inspect the cable and connector for chafing or corrosion."
+      }
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "ok so all three checks done encoder scale looks clean read head mounted securely and cable and connectors look intact no visable damage",
+      "edge_label_to_next": null,
+      "turn_index": 2,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Inspect the encoder scale for scratches, oil, or coolant deposits. 2. Check the read head mounting for looseness or impact damage. 3. Inspect the cable and connector for chafing or corrosion."
+      }
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Physical damage to encoder strip or read head?",
+      "edge_label_to_next": null,
+      "turn_index": 3,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Physical damage to encoder strip or read head?"
+      }
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no physical damage detected both encoder strip and read head in good condition",
+      "edge_label_to_next": "No",
+      "turn_index": 4,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Physical damage to encoder strip or read head?"
+      }
+    },
+    {
+      "node_id": "box_6",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Signal quality: clean waveform, no dropouts?",
+      "edge_label_to_next": null,
+      "turn_index": 5,
+      "ground_truth": {
+        "node_id": "box_6",
+        "node_type": "decision",
+        "node_text": "Signal quality: clean waveform, no dropouts?"
+      }
+    },
+    {
+      "node_id": "box_6",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yeah waveforms clean with proper 90 degree phase seperation no missing pulses signal amplitude within spec",
+      "edge_label_to_next": "Yes",
+      "turn_index": 6,
+      "ground_truth": {
+        "node_id": "box_6",
+        "node_type": "decision",
+        "node_text": "Signal quality: clean waveform, no dropouts?"
+      }
+    },
+    {
+      "node_id": "box_11",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Reference mark found during homing cycle?",
+      "edge_label_to_next": null,
+      "turn_index": 7,
+      "ground_truth": {
+        "node_id": "box_11",
+        "node_type": "decision",
+        "node_text": "Reference mark found during homing cycle?"
+      }
+    },
+    {
+      "node_id": "box_11",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yes axis decelrated smoothly and stopped at ref mark home offset displayed matches parameter table value",
+      "edge_label_to_next": "Yes",
+      "turn_index": 8,
+      "ground_truth": {
+        "node_id": "box_11",
+        "node_type": "decision",
+        "node_text": "Reference mark found during homing cycle?"
+      }
+    },
+    {
+      "node_id": "box_15",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Position accuracy within tolerance at all test points?",
+      "edge_label_to_next": null,
+      "turn_index": 9,
+      "ground_truth": {
+        "node_id": "box_15",
+        "node_type": "decision",
+        "node_text": "Position accuracy within tolerance at all test points?"
+      }
+    },
+    {
+      "node_id": "box_15",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no max positioning error exceeds axis accuracy spec several test points show deviations outside tolerance",
+      "edge_label_to_next": "No",
+      "turn_index": 10,
+      "ground_truth": {
+        "node_id": "box_15",
+        "node_type": "decision",
+        "node_text": "Position accuracy within tolerance at all test points?"
+      }
+    },
+    {
+      "node_id": "box_16",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Adjust read head gap to encoder strip per specification.",
+      "edge_label_to_next": null,
+      "turn_index": 11,
+      "ground_truth": {
+        "node_id": "box_16",
+        "node_type": "process",
+        "node_text": "Adjust read head gap to encoder strip per specification"
+      }
+    },
+    {
+      "node_id": "box_16",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "read head gap adjusted to spec and mounting hardware torqued properly",
+      "edge_label_to_next": null,
+      "turn_index": 12,
+      "ground_truth": {
+        "node_id": "box_16",
+        "node_type": "process",
+        "node_text": "Adjust read head gap to encoder strip per specification"
+      }
+    },
+    {
+      "node_id": "box_17",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Reverify position accuracy after read head adjustment.",
+      "edge_label_to_next": null,
+      "turn_index": 13,
+      "ground_truth": {
+        "node_id": "box_17",
+        "node_type": "decision",
+        "node_text": "Reverify position accuracy after read head adjustment"
+      }
+    },
+    {
+      "node_id": "box_17",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "position errors still present and exceeding tolerance limits the adjustmnet did not resolve the accuracy issue",
+      "edge_label_to_next": "Still failing",
+      "turn_index": 14,
+      "ground_truth": {
+        "node_id": "box_17",
+        "node_type": "decision",
+        "node_text": "Reverify position accuracy after read head adjustment"
+      }
+    },
+    {
+      "node_id": "box_18",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Procedure complete. Escalate this issue for encoder calibration by the metrology team. The encoder requires specialized calibration that is beyond field adjustment capability.",
+      "edge_label_to_next": null,
+      "turn_index": 15,
+      "ground_truth": {
+        "node_id": "box_18",
+        "node_type": "terminator",
+        "node_text": "End, Escalate: encoder calibration by metrology required"
+      }
+    },
+    {
+      "node_id": "box_18",
+      "node_type": "terminator",
+      "speaker": "operator",
+      "utterance": "understood will escalate to metrology for encoder calibration",
+      "edge_label_to_next": null,
+      "turn_index": 16,
+      "ground_truth": {
+        "node_id": "box_18",
+        "node_type": "terminator",
+        "node_text": "End, Escalate: encoder calibration by metrology required"
+      }
+    }
+  ],
+  "metadata": {
+    "depth": 9,
+    "num_decisions": 5,
+    "num_processes": 2,
+    "num_documents": 0,
+    "terminator_type": "escalate",
+    "terminator_text": "End, Escalate: encoder calibration by metrology required",
+    "true_terminator": true,
+    "node_sequence": [
+      "box_0",
+      "box_1",
+      "box_2",
+      "box_6",
+      "box_11",
+      "box_15",
+      "box_16",
+      "box_17",
+      "box_18"
+    ],
+    "edge_labels": [
+      null,
+      null,
+      null,
+      "No",
+      "Yes",
+      "Yes",
+      "No",
+      null,
+      "Still failing"
+    ],
+    "decision_points": [
+      {
+        "node": "box_2",
+        "label": "No",
+        "question": "Physical damage to encoder strip or read head?"
+      },
+      {
+        "node": "box_6",
+        "label": "Yes",
+        "question": "Signal quality: clean waveform, no dropouts?"
+      },
+      {
+        "node": "box_11",
+        "label": "Yes",
+        "question": "Reference mark found during homing cycle?"
+      },
+      {
+        "node": "box_15",
+        "label": "No",
+        "question": "Position accuracy within tolerance at all test points?"
+      },
+      {
+        "node": "box_17",
+        "label": "Still failing",
+        "question": "Reverify position accuracy after read head adjustment"
+      }
+    ],
+    "generation_model": "anthropic/claude-sonnet-4-5",
+    "verification": {
+      "variant_of": "base",
+      "base_verified": true,
+      "note": "surface-form variant; not independently verified"
+    }
+  }
+}

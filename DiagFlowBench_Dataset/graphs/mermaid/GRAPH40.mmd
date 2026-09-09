@@ -1,0 +1,123 @@
+flowchart TD
+    box_0(["Start"])
+    box_1["Complete the following checks: 1. Check the coolant<br/>level against the tank minimum and maximum marks. 2.<br/>Assess coolant colour and odour for signs of<br/>contamination. 3. Check refractometer reading<br/>against the specified concentration range."]
+    box_2{"Severe contamination: tramp oil, biological growth<br/>or discolouration?"}
+    box_3(["End, Drain and replace coolant: severe<br/>contamination, hazardous substance disposal"])
+    box_4["Draw a 10 millilitre sample of coolant from the sump<br/>using a clean pipette and place two drops on the<br/>refractometer prism. Close the cover and read the<br/>coolant concentration from the refractometer scale<br/>under a light source. Multiply the reading by the<br/>specific correction factor for this coolant brand<br/>and compare the calculated concentration against the<br/>target range in the coolant specification."]
+    box_5[/"Refer to the coolant concentration specification."/]
+    box_6{"Concentration within specified Brix range?"}
+    box_7["Top up with concentrate or deionised water to<br/>correct concentration"]
+    box_8{"Reverify concentration after top up"}
+    box_9(["End, Escalate: concentration drift rate excessive,<br/>check mixing system"])
+    box_10["Immerse the calibrated pH meter probe in the coolant<br/>sump to a depth of at least 50 millimetres and wait<br/>for the reading to stabilise for 30 seconds. Record<br/>the pH value. Coolant pH below 8.5 indicates<br/>accelerated corrosion risk; above 9.5 indicates risk<br/>of skin sensitisation and requires immediate<br/>corrective dilution or biocide treatment."]
+    box_11[/"Refer to the coolant pH specification."/]
+    box_12{"pH within acceptable range?"}
+    box_13["Add pH correction agent per dosing table"]
+    box_14["Read the inline flow meter display with the coolant<br/>pump running at normal operating speed. Record the<br/>flow rate in litres per minute and compare against<br/>the minimum required flow rate for the machine<br/>specification. If no inline meter is fitted, use the<br/>timed bucket method at the main return line and<br/>calculate flow rate from volume and elapsed time."]
+    box_15[/"Refer to the coolant flow rate specification."/]
+    box_16{"Coolant flow rate within specified range?"}
+    box_17["Replace coolant filter element and clean strainer<br/>basket"]
+    box_18{"Reverify flow rate after filter replacement"}
+    box_19(["End, Escalate: pump cavitation or blockage suspected"])
+    box_20["Immerse a calibrated thermocouple probe or a<br/>calibrated thermometer in the main coolant return<br/>line at the sump entry point after the machine has<br/>been running under cutting load for at least 15<br/>minutes. Record the coolant temperature and compare<br/>against the maximum permitted sump temperature in<br/>the machine specification; temperatures above 35<br/>degrees Celsius degrade coolant life and reduce<br/>cutting performance."]
+    box_21{"Coolant return temperature within operating range?"}
+    box_22["Complete the following checks: 1. Inspect the heat<br/>exchanger coil surfaces for dust or scale deposits.<br/>2. Check the coolant pump outlet pressure against<br/>the rated value. 3. Verify all coolant nozzles are<br/>unobstructed and correctly directed."]
+    box_23["Shut off coolant flow and remove each nozzle from<br/>the manifold. Hold each nozzle against a light<br/>source and inspect the orifice for swarf blockage or<br/>mineral deposits. Blocked nozzles should be soaked<br/>in descaler for 10 minutes then cleared with a wire<br/>of the correct gauge. Replace nozzles where the<br/>orifice shows erosion or enlargement beyond the<br/>nominal drill size."]
+    box_24{"All coolant nozzles unobstructed and correctly<br/>directed?"}
+    box_25["Unblock or replace blocked coolant nozzles"]
+    box_26["With the coolant pump running, observe the chip<br/>conveyor return flow inlet at the sump end. Coolant<br/>should be flowing visibly back to the sump through<br/>the return channel. Absence of return flow indicates<br/>a blocked return strainer or a conveyor drive fault;<br/>check the return strainer basket and clear any<br/>accumulated chip material."]
+    box_27{"Coolant recovery from chip conveyor operating<br/>correctly?"}
+    box_28["Clear chip conveyor return tray and check drain<br/>ports"]
+    box_29["Use a clean dipstick or graduated probe to measure<br/>the depth of settled sediment at three points in the<br/>sump: near the pump inlet, at the centre, and at the<br/>far end from the pump. Record the maximum reading<br/>and compare against the maximum permitted sediment<br/>depth in the sump cleaning schedule. Sediment<br/>exceeding 25 millimetres requires immediate sump<br/>pump out and cleaning."]
+    box_30{"Sump sediment depth below 20 mm?"}
+    box_31["Schedule sump clean, drain, scrub and refill"]
+    box_32["System function test, run machine cycle, verify<br/>coolant delivery"]
+    box_33["Log coolant data, refractometer reading and update<br/>service record"]
+    box_34(["End, Procedure complete"])
+    box_35["Secondary coolant correction: drain 20% of the sump<br/>volume using the sump pump and discard the drained<br/>coolant. Refill the sump with clean water to the<br/>previous level, then add the calculated volume of<br/>coolant concentrate to reach the target<br/>concentration. Run the circulation pump for 5<br/>minutes to mix thoroughly before returning to the<br/>refractometer concentration measurement step."]
+
+    box_0 --> box_1
+    box_1 --> box_2
+    box_2 -->|"Yes"| box_3
+    box_2 -->|"No"| box_6
+    box_4 --> box_6
+    box_5 --> box_6
+    box_6 -->|"No"| box_7
+    box_7 --> box_8
+    box_8 -->|"OK"| box_12
+    box_6 -->|"Yes"| box_12
+    box_10 --> box_12
+    box_11 --> box_12
+    box_12 -->|"No"| box_13
+    box_13 --> box_14
+    box_12 -->|"Yes"| box_16
+    box_14 --> box_16
+    box_15 --> box_16
+    box_16 -->|"No"| box_17
+    box_17 --> box_18
+    box_18 -->|"Still low"| box_19
+    box_18 -->|"OK"| box_21
+    box_16 -->|"Yes"| box_21
+    box_20 --> box_21
+    box_21 -->|"No"| box_22
+    box_22 --> box_23
+    box_21 -->|"Yes"| box_24
+    box_23 --> box_24
+    box_24 -->|"No"| box_25
+    box_25 --> box_26
+    box_24 -->|"Yes"| box_27
+    box_26 --> box_27
+    box_27 -->|"No"| box_28
+    box_28 --> box_29
+    box_27 -->|"Yes"| box_30
+    box_29 --> box_30
+    box_30 -->|"No"| box_31
+    box_31 --> box_32
+    box_30 -->|"Yes"| box_32
+    box_32 --> box_33
+    box_33 --> box_34
+    box_8 -->|"Still out of range"| box_35
+    box_35 --> box_8
+    box_8 -->|"Unresolvable after second attempt"| box_9
+
+    class box_0 terminator
+    class box_1 process
+    class box_2 decision
+    class box_3 terminator
+    class box_4 process
+    class box_5 document
+    class box_6 decision
+    class box_7 process
+    class box_8 decision
+    class box_9 terminator
+    class box_10 process
+    class box_11 document
+    class box_12 decision
+    class box_13 process
+    class box_14 process
+    class box_15 document
+    class box_16 decision
+    class box_17 process
+    class box_18 decision
+    class box_19 terminator
+    class box_20 process
+    class box_21 decision
+    class box_22 process
+    class box_23 process
+    class box_24 decision
+    class box_25 process
+    class box_26 process
+    class box_27 decision
+    class box_28 process
+    class box_29 process
+    class box_30 decision
+    class box_31 process
+    class box_32 process
+    class box_33 process
+    class box_34 terminator
+    class box_35 process
+
+    classDef terminator fill:#2d4a6e,stroke:#1a3050,color:#ffffff,font-weight:bold
+    classDef process    fill:#f0f4ff,stroke:#4a6fa5,color:#1a1a2e
+    classDef decision   fill:#fff8e6,stroke:#c8922a,color:#1a1a2e
+    classDef document   fill:#f0fff4,stroke:#3a8a4a,color:#1a1a2e

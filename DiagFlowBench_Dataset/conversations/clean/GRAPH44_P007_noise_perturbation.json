@@ -1,0 +1,717 @@
+{
+  "conversation_id": "GRAPH44_P007_noise_perturbation",
+  "graph_id": "GRAPH44",
+  "path_id": "GRAPH44_P007",
+  "regime": "clean",
+  "variant": "noise_perturbation",
+  "robustness_axis": "noise_perturbation",
+  "turns": [
+    {
+      "node_id": "box_0",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Starting fixture diagnostic procedure.",
+      "edge_label_to_next": null,
+      "turn_index": 0,
+      "ground_truth": {
+        "node_id": "box_0",
+        "node_type": "terminator",
+        "node_text": "Start"
+      }
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Complete the following checks: First, inspect the fixture base plate for cracks or surface distortion. Second, check locating surfaces, dowel holes, and mounting pad faces for damage. Third, inspect each clamp body for deformation or cracked pivot pins.",
+      "edge_label_to_next": null,
+      "turn_index": 1,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Inspect the fixture base plate for cracks or surface distortion. 2. Check locating surfaces, dowel holes, and mounting pad faces for damage. 3. Inspect each clamp body for deformation or cracked pivot pins."
+      }
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "ok completed all three checks base plate looks good no cracks or distorion, locating surfaces and dowel holes undamaged and all clamp bodies intact",
+      "edge_label_to_next": null,
+      "turn_index": 2,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Inspect the fixture base plate for cracks or surface distortion. 2. Check locating surfaces, dowel holes, and mounting pad faces for damage. 3. Inspect each clamp body for deformation or cracked pivot pins."
+      }
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Are there any base plate cracks, distortion, or damaged mounting surfaces?",
+      "edge_label_to_next": null,
+      "turn_index": 3,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Base plate cracks, distortion or damaged mounting surfaces?"
+      }
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no everythings in good condition no visible damage",
+      "edge_label_to_next": "No",
+      "turn_index": 4,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Base plate cracks, distortion or damaged mounting surfaces?"
+      }
+    },
+    {
+      "node_id": "box_7",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the datum A surface within flatness tolerance of 0.02 millimeters?",
+      "edge_label_to_next": null,
+      "turn_index": 5,
+      "ground_truth": {
+        "node_id": "box_7",
+        "node_type": "decision",
+        "node_text": "Datum A surface within flatness tolerance of 0.02 mm?"
+      }
+    },
+    {
+      "node_id": "box_7",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no flatness measurement shows its outside the tol limit",
+      "edge_label_to_next": "No",
+      "turn_index": 6,
+      "ground_truth": {
+        "node_id": "box_7",
+        "node_type": "decision",
+        "node_text": "Datum A surface within flatness tolerance of 0.02 mm?"
+      }
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Scrape or regrind the datum A surface to restore flatness.",
+      "edge_label_to_next": null,
+      "turn_index": 7,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "process",
+        "node_text": "Scrape or regrind datum A surface to restore flatness"
+      }
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "reground datum A surface now restored to proper flatness",
+      "edge_label_to_next": "",
+      "turn_index": 8,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "process",
+        "node_text": "Scrape or regrind datum A surface to restore flatness"
+      }
+    },
+    {
+      "node_id": "box_9",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Locate the probe stylus against the primary locating pin at three heights along the pin axis. Record the pin position in X and Y relative to the fixture datum origin and compare against the nominal position on the fixture design drawing.",
+      "edge_label_to_next": null,
+      "turn_index": 9,
+      "ground_truth": {
+        "node_id": "box_9",
+        "node_type": "process",
+        "node_text": "Locate the probe stylus against the primary locating pin at three heights along the pin axis. Record the pin position in X and Y relative to the fixture datum origin. Compare the measured position against the nominal position on the fixture design drawing; deviation greater than the tolerance stated in the process control plan requires fixture withdrawal for repair."
+      }
+    },
+    {
+      "node_id": "box_9",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "yeah probed primary locating pin at three hieghts and recorded X and Y positions measurements documented",
+      "edge_label_to_next": null,
+      "turn_index": 10,
+      "ground_truth": {
+        "node_id": "box_9",
+        "node_type": "process",
+        "node_text": "Locate the probe stylus against the primary locating pin at three heights along the pin axis. Record the pin position in X and Y relative to the fixture datum origin. Compare the measured position against the nominal position on the fixture design drawing; deviation greater than the tolerance stated in the process control plan requires fixture withdrawal for repair."
+      }
+    },
+    {
+      "node_id": "box_11",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Are the primary locating pins within plus or minus 0.01 millimeters of nominal position?",
+      "edge_label_to_next": null,
+      "turn_index": 11,
+      "ground_truth": {
+        "node_id": "box_11",
+        "node_type": "decision",
+        "node_text": "Primary locating pins within ±0.01 mm of nominal position?"
+      }
+    },
+    {
+      "node_id": "box_11",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yes all measurments fall within the tol band",
+      "edge_label_to_next": "Yes",
+      "turn_index": 12,
+      "ground_truth": {
+        "node_id": "box_11",
+        "node_type": "decision",
+        "node_text": "Primary locating pins within ±0.01 mm of nominal position?"
+      }
+    },
+    {
+      "node_id": "box_16",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Are the secondary locating pins within plus or minus 0.015 millimeters of nominal?",
+      "edge_label_to_next": null,
+      "turn_index": 13,
+      "ground_truth": {
+        "node_id": "box_16",
+        "node_type": "decision",
+        "node_text": "Secondary locating pins within ±0.015 mm of nominal?"
+      }
+    },
+    {
+      "node_id": "box_16",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no secondary pin reading outside the tol range",
+      "edge_label_to_next": "No",
+      "turn_index": 14,
+      "ground_truth": {
+        "node_id": "box_16",
+        "node_type": "decision",
+        "node_text": "Secondary locating pins within ±0.015 mm of nominal?"
+      }
+    },
+    {
+      "node_id": "box_17",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Complete the following steps: Identify the secondary locating pin bore that is out of position, loosen the bore insert retention screws and use an adjusting tool to shift the bore, then retorque the retention screws and remeasure the bore position.",
+      "edge_label_to_next": null,
+      "turn_index": 15,
+      "ground_truth": {
+        "node_id": "box_17",
+        "node_type": "process",
+        "node_text": "Complete the following steps: 1. Identify the secondary locating pin bore that is out of position. 2. Loosen the bore insert retention screws and use an adjusting tool to shift the bore. 3. Retorque the retention screws and remeasure the bore position."
+      }
+    },
+    {
+      "node_id": "box_17",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "adjusted secondary pin bore retorqued screws and remeasured position corrected",
+      "edge_label_to_next": "",
+      "turn_index": 16,
+      "ground_truth": {
+        "node_id": "box_17",
+        "node_type": "process",
+        "node_text": "Complete the following steps: 1. Identify the secondary locating pin bore that is out of position. 2. Loosen the bore insert retention screws and use an adjusting tool to shift the bore. 3. Retorque the retention screws and remeasure the bore position."
+      }
+    },
+    {
+      "node_id": "box_18",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Using a calibrated height gauge on the machine table surface plate, measure the height of each of the four reference pads relative to the fixture base. Record all four values and calculate the height variation.",
+      "edge_label_to_next": null,
+      "turn_index": 17,
+      "ground_truth": {
+        "node_id": "box_18",
+        "node_type": "process",
+        "node_text": "Using a calibrated height gauge on the machine table surface plate, measure the height of each of the four reference pads relative to the fixture base. Record all four values and calculate the height variation. A variation exceeding the flatness tolerance on the fixture drawing indicates that one or more pads has been contaminated, damaged, or that the fixture base has distorted."
+      }
+    },
+    {
+      "node_id": "box_18",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "measured all four reference pad hieghts and calculated variation between them",
+      "edge_label_to_next": null,
+      "turn_index": 18,
+      "ground_truth": {
+        "node_id": "box_18",
+        "node_type": "process",
+        "node_text": "Using a calibrated height gauge on the machine table surface plate, measure the height of each of the four reference pads relative to the fixture base. Record all four values and calculate the height variation. A variation exceeding the flatness tolerance on the fixture drawing indicates that one or more pads has been contaminated, damaged, or that the fixture base has distorted."
+      }
+    },
+    {
+      "node_id": "box_20",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Are all Z height reference pads within plus or minus 0.01 millimeters of each other?",
+      "edge_label_to_next": null,
+      "turn_index": 19,
+      "ground_truth": {
+        "node_id": "box_20",
+        "node_type": "decision",
+        "node_text": "All Z height reference pads within ±0.01 mm of each other?"
+      }
+    },
+    {
+      "node_id": "box_20",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no one pad showing height diff beyond the tol",
+      "edge_label_to_next": "No",
+      "turn_index": 20,
+      "ground_truth": {
+        "node_id": "box_20",
+        "node_type": "decision",
+        "node_text": "All Z height reference pads within ±0.01 mm of each other?"
+      }
+    },
+    {
+      "node_id": "box_21",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Regrind or shim the low reference pads to restore coplanarity.",
+      "edge_label_to_next": null,
+      "turn_index": 21,
+      "ground_truth": {
+        "node_id": "box_21",
+        "node_type": "process",
+        "node_text": "Regrind or shim low reference pads to restore coplanarity"
+      }
+    },
+    {
+      "node_id": "box_21",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "shimmed the low pad verified coplanarity restored",
+      "edge_label_to_next": "",
+      "turn_index": 22,
+      "ground_truth": {
+        "node_id": "box_21",
+        "node_type": "process",
+        "node_text": "Regrind or shim low reference pads to restore coplanarity"
+      }
+    },
+    {
+      "node_id": "box_22",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Place a precision spirit level on the angular datum face and record the displayed deviation from level. Set up a sine bar at the nominal fixture angle and verify the angular datum contacts the sine bar face flush with no rocking.",
+      "edge_label_to_next": null,
+      "turn_index": 23,
+      "ground_truth": {
+        "node_id": "box_22",
+        "node_type": "process",
+        "node_text": "Place a precision spirit level on the angular datum face and record the displayed deviation from level. Set up a sine bar at the nominal fixture angle and verify the angular datum contacts the sine bar face flush with no rocking. Record the angular deviation and compare against the angular tolerance in the fixture specification."
+      }
+    },
+    {
+      "node_id": "box_22",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "ok so checked angular datum with both spirit level and sine bar readings recorded contact is flush",
+      "edge_label_to_next": null,
+      "turn_index": 24,
+      "ground_truth": {
+        "node_id": "box_22",
+        "node_type": "process",
+        "node_text": "Place a precision spirit level on the angular datum face and record the displayed deviation from level. Set up a sine bar at the nominal fixture angle and verify the angular datum contacts the sine bar face flush with no rocking. Record the angular deviation and compare against the angular tolerance in the fixture specification."
+      }
+    },
+    {
+      "node_id": "box_24",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the angular datum within 0.005 millimeters per 100 millimeters tolerance?",
+      "edge_label_to_next": null,
+      "turn_index": 25,
+      "ground_truth": {
+        "node_id": "box_24",
+        "node_type": "decision",
+        "node_text": "Angular datum within 0.005 mm per 100 mm tolerance?"
+      }
+    },
+    {
+      "node_id": "box_24",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yeah angular deviation well within spec tol",
+      "edge_label_to_next": "Yes",
+      "turn_index": 26,
+      "ground_truth": {
+        "node_id": "box_24",
+        "node_type": "decision",
+        "node_text": "Angular datum within 0.005 mm per 100 mm tolerance?"
+      }
+    },
+    {
+      "node_id": "box_28",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Are all clamping forces within plus or minus 8 percent of nominal?",
+      "edge_label_to_next": null,
+      "turn_index": 27,
+      "ground_truth": {
+        "node_id": "box_28",
+        "node_type": "decision",
+        "node_text": "All clamping forces within ±8% of nominal?"
+      }
+    },
+    {
+      "node_id": "box_28",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yes checked each clamp staion all forces within acceptable range",
+      "edge_label_to_next": "Yes",
+      "turn_index": 28,
+      "ground_truth": {
+        "node_id": "box_28",
+        "node_type": "decision",
+        "node_text": "All clamping forces within ±8% of nominal?"
+      }
+    },
+    {
+      "node_id": "box_33",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the thermal expansion datum shift within model prediction plus or minus 0.01 millimeters?",
+      "edge_label_to_next": null,
+      "turn_index": 29,
+      "ground_truth": {
+        "node_id": "box_33",
+        "node_type": "decision",
+        "node_text": "Thermal expansion datum shift within model prediction ±0.01 mm?"
+      }
+    },
+    {
+      "node_id": "box_33",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no measured thermal shift exceeds predicted range",
+      "edge_label_to_next": "No",
+      "turn_index": 30,
+      "ground_truth": {
+        "node_id": "box_33",
+        "node_type": "decision",
+        "node_text": "Thermal expansion datum shift within model prediction ±0.01 mm?"
+      }
+    },
+    {
+      "node_id": "box_34",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Complete the following steps: Read the thermal compensation model coefficients from the controller, compare the stored values against the reference calibration record, and check the guide rail straightness against the 0.01 millimeter per 300 millimeter limit.",
+      "edge_label_to_next": null,
+      "turn_index": 31,
+      "ground_truth": {
+        "node_id": "box_34",
+        "node_type": "process",
+        "node_text": "Complete the following steps: 1. Read the thermal compensation model coefficients from the controller. 2. Compare the stored values against the reference calibration record. 3. Check the guide rail straightness and compare against the 0.01 mm per 300 mm limit."
+      }
+    },
+    {
+      "node_id": "box_34",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "verified thermal comp coefficients and checked guide rail straighness as instructed",
+      "edge_label_to_next": "",
+      "turn_index": 32,
+      "ground_truth": {
+        "node_id": "box_34",
+        "node_type": "process",
+        "node_text": "Complete the following steps: 1. Read the thermal compensation model coefficients from the controller. 2. Compare the stored values against the reference calibration record. 3. Check the guide rail straightness and compare against the 0.01 mm per 300 mm limit."
+      }
+    },
+    {
+      "node_id": "box_35",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Slide a precision straight edge along the full length of each guide rail and use feeler gauges to measure any gap between the straight edge and the rail surface. Record the maximum gap at any point and inspect the rail surface under a magnifier.",
+      "edge_label_to_next": null,
+      "turn_index": 33,
+      "ground_truth": {
+        "node_id": "box_35",
+        "node_type": "process",
+        "node_text": "Slide a precision straight edge along the full length of each guide rail and use feeler gauges to measure any gap between the straight edge and the rail surface. Record the maximum gap at any point. Inspect the rail surface under a magnifier for pitting, fretting, or embedded swarf; any surface defect in the running zone requires assessment against the surface finish specification."
+      }
+    },
+    {
+      "node_id": "box_35",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "completed straightness measurment on all guide rails and inspected surfaces max gaps recorded",
+      "edge_label_to_next": null,
+      "turn_index": 34,
+      "ground_truth": {
+        "node_id": "box_35",
+        "node_type": "process",
+        "node_text": "Slide a precision straight edge along the full length of each guide rail and use feeler gauges to measure any gap between the straight edge and the rail surface. Record the maximum gap at any point. Inspect the rail surface under a magnifier for pitting, fretting, or embedded swarf; any surface defect in the running zone requires assessment against the surface finish specification."
+      }
+    },
+    {
+      "node_id": "box_37",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the guide rail straightness within 0.01 millimeters per 300 millimeters?",
+      "edge_label_to_next": null,
+      "turn_index": 35,
+      "ground_truth": {
+        "node_id": "box_37",
+        "node_type": "decision",
+        "node_text": "Guide rail straightness within 0.01 mm per 300 mm?"
+      }
+    },
+    {
+      "node_id": "box_37",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yes all guide rails meet straightness spec",
+      "edge_label_to_next": "Yes",
+      "turn_index": 36,
+      "ground_truth": {
+        "node_id": "box_37",
+        "node_type": "decision",
+        "node_text": "Guide rail straightness within 0.01 mm per 300 mm?"
+      }
+    },
+    {
+      "node_id": "box_41",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Have all lubrication points been serviced per schedule?",
+      "edge_label_to_next": null,
+      "turn_index": 37,
+      "ground_truth": {
+        "node_id": "box_41",
+        "node_type": "decision",
+        "node_text": "All lubrication points serviced per schedule?"
+      }
+    },
+    {
+      "node_id": "box_41",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yes serviced every lube point according to maintenance schedule",
+      "edge_label_to_next": "Yes",
+      "turn_index": 38,
+      "ground_truth": {
+        "node_id": "box_41",
+        "node_type": "decision",
+        "node_text": "All lubrication points serviced per schedule?"
+      }
+    },
+    {
+      "node_id": "box_44",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the reference part positioned within plus or minus 0.02 millimeters of nominal at all datums?",
+      "edge_label_to_next": null,
+      "turn_index": 39,
+      "ground_truth": {
+        "node_id": "box_44",
+        "node_type": "decision",
+        "node_text": "Reference part positioned within ±0.02 mm of nominal at all datums?"
+      }
+    },
+    {
+      "node_id": "box_44",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yeah all datum measurments on reference part within tol",
+      "edge_label_to_next": "Yes",
+      "turn_index": 40,
+      "ground_truth": {
+        "node_id": "box_44",
+        "node_type": "decision",
+        "node_text": "Reference part positioned within ±0.02 mm of nominal at all datums?"
+      }
+    },
+    {
+      "node_id": "box_46",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Log the coordinate measuring machine data, clamp forces, and service details.",
+      "edge_label_to_next": null,
+      "turn_index": 41,
+      "ground_truth": {
+        "node_id": "box_46",
+        "node_type": "process",
+        "node_text": "Log coordinate measuring machine data, clamp forces and service details"
+      }
+    },
+    {
+      "node_id": "box_46",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "logged all CMM data clamp force readings and servcie details in maintenance record",
+      "edge_label_to_next": null,
+      "turn_index": 42,
+      "ground_truth": {
+        "node_id": "box_46",
+        "node_type": "process",
+        "node_text": "Log coordinate measuring machine data, clamp forces and service details"
+      }
+    },
+    {
+      "node_id": "box_47",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Procedure complete. The fixture has passed all diagnostic checks and is cleared for production use.",
+      "edge_label_to_next": null,
+      "turn_index": 43,
+      "ground_truth": {
+        "node_id": "box_47",
+        "node_type": "terminator",
+        "node_text": "End, Procedure complete"
+      }
+    },
+    {
+      "node_id": "box_47",
+      "node_type": "terminator",
+      "speaker": "operator",
+      "utterance": "understood procedure complete",
+      "edge_label_to_next": null,
+      "turn_index": 44,
+      "ground_truth": {
+        "node_id": "box_47",
+        "node_type": "terminator",
+        "node_text": "End, Procedure complete"
+      }
+    }
+  ],
+  "metadata": {
+    "depth": 23,
+    "num_decisions": 11,
+    "num_processes": 10,
+    "num_documents": 0,
+    "terminator_type": "procedure_complete",
+    "terminator_text": "End, Procedure complete",
+    "true_terminator": true,
+    "node_sequence": [
+      "box_0",
+      "box_1",
+      "box_2",
+      "box_7",
+      "box_8",
+      "box_9",
+      "box_11",
+      "box_16",
+      "box_17",
+      "box_18",
+      "box_20",
+      "box_21",
+      "box_22",
+      "box_24",
+      "box_28",
+      "box_33",
+      "box_34",
+      "box_35",
+      "box_37",
+      "box_41",
+      "box_44",
+      "box_46",
+      "box_47"
+    ],
+    "edge_labels": [
+      null,
+      null,
+      null,
+      "No",
+      "No",
+      "",
+      null,
+      "Yes",
+      "No",
+      "",
+      null,
+      "No",
+      "",
+      null,
+      "Yes",
+      "Yes",
+      "No",
+      "",
+      null,
+      "Yes",
+      "Yes",
+      "Yes",
+      null
+    ],
+    "decision_points": [
+      {
+        "node": "box_2",
+        "label": "No",
+        "question": "Base plate cracks, distortion or damaged mounting surfaces?"
+      },
+      {
+        "node": "box_7",
+        "label": "No",
+        "question": "Datum A surface within flatness tolerance of 0.02 mm?"
+      },
+      {
+        "node": "box_11",
+        "label": "Yes",
+        "question": "Primary locating pins within ±0.01 mm of nominal position?"
+      },
+      {
+        "node": "box_16",
+        "label": "No",
+        "question": "Secondary locating pins within ±0.015 mm of nominal?"
+      },
+      {
+        "node": "box_20",
+        "label": "No",
+        "question": "All Z height reference pads within ±0.01 mm of each other?"
+      },
+      {
+        "node": "box_24",
+        "label": "Yes",
+        "question": "Angular datum within 0.005 mm per 100 mm tolerance?"
+      },
+      {
+        "node": "box_28",
+        "label": "Yes",
+        "question": "All clamping forces within ±8% of nominal?"
+      },
+      {
+        "node": "box_33",
+        "label": "No",
+        "question": "Thermal expansion datum shift within model prediction ±0.01 mm?"
+      },
+      {
+        "node": "box_37",
+        "label": "Yes",
+        "question": "Guide rail straightness within 0.01 mm per 300 mm?"
+      },
+      {
+        "node": "box_41",
+        "label": "Yes",
+        "question": "All lubrication points serviced per schedule?"
+      },
+      {
+        "node": "box_44",
+        "label": "Yes",
+        "question": "Reference part positioned within ±0.02 mm of nominal at all datums?"
+      }
+    ],
+    "generation_model": "anthropic/claude-sonnet-4-5",
+    "verification": {
+      "variant_of": "base",
+      "base_verified": true,
+      "note": "surface-form variant; not independently verified"
+    }
+  }
+}

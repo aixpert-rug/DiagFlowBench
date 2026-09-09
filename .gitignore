@@ -1,0 +1,41 @@
+# Secrets
+.env
+.envrc
+.streamlit/secrets.toml
+
+# Internal spend tracking
+DiagFlowBench_Dataset/.spend_log.json
+
+# Claude Code internals
+.claude/
+
+# Python
+__pycache__/
+*.py[codz]
+*.so
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+env/
+.pixi/
+.ruff_cache/
+.mypy_cache/
+.dmypy.json
+.pytest_cache/
+
+# macOS
+**/.DS_Store
+/data.DS_Store
+
+# Paper and internal docs
+docs/
+TODO.md
+
+# Internal evaluation caches
+
+# Internal scripts not relevant to public reproducibility
+scripts/run_counterfactual.py
+scripts/annotate_iaa.py
+scripts/sample_iaa.py

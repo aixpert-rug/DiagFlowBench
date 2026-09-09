@@ -1,0 +1,84 @@
+flowchart TD
+    box_0(["Start"])
+    box_1["Collect and visually inspect a sample of at least<br/>ten damaged inserts. Classify each by damage type<br/>(surface scratch, deformation, crack) and location<br/>on the insert."]
+    box_2{"Is the insert damage consistent with incoming<br/>material defects present before assembly?"}
+    box_3["Continue production with a different batch of<br/>inserts. Create a non conformance record for the<br/>affected batch and notify quality assurance team of<br/>the incoming material defect."]
+    box_4{"Does the damage appear only on inserts processed<br/>through one supply conveyor?"}
+    box_5["Inspect inserts from each supply conveyor separately<br/>and compare the damage rate and pattern to identify<br/>whether one conveyor is the source."]
+    box_6["Empty the affected supply conveyor, inspect the<br/>conveyor guide rail and end stop for sharp edges or<br/>debris, and reload with undamaged inserts."]
+    box_7{"Does the damage pattern indicate over pressing or<br/>mechanical impact at the assembly pressing station?"}
+    box_8["Complete the following checks: 1. Collect damaged<br/>inserts from three consecutive assembly cycles. 2.<br/>Note the damage location relative to the insert<br/>geometry. 3. Identify the station at which each<br/>damaged insert was processed."]
+    box_9["Check the pressing head alignment, pressing speed,<br/>and force limit. Adjust to specification and rerun a<br/>test cycle."]
+    box_10{"Is the damage occurring at or after the<br/>reorientation unit?"}
+    box_11["Jog the reorientation unit through one full cycle at<br/>slow speed and inspect inserts before and after the<br/>reorientation step for damage onset."]
+    box_12["Inspect the reorientation unit gripper contact<br/>surfaces for burrs or incorrect clamping force.<br/>Replace gripper pads or adjust clamping pressure to<br/>specification."]
+    box_13["Inspect the discharge robot gripper and the output<br/>holder rack slot guides for deformations or debris.<br/>Adjust or replace damaged gripper inserts."]
+    box_14["Run ten slow speed test cycles and inspect inserts<br/>after each station to verify the root cause has been<br/>eliminated."]
+    box_15{"Has the root cause of the insert damage been<br/>confirmed and the corrective action verified<br/>effective?"}
+    box_16["Record the root cause, corrective action, and<br/>affected batch numbers in the quality log. Notify<br/>quality assurance team and restart production."]
+    box_17["Escalate to the maintenance team with the damage<br/>characterisation sample for further investigation.<br/>Halt production on the affected line."]
+    box_18["Complete the following steps: 1. Access the<br/>production tracking system and filter by current<br/>work order. 2. Set the time window from the last<br/>confirmed good inspection to now. 3. Export the<br/>serial numbers of all inserts processed during the<br/>fault window."]
+    box_19[/"Refer to the production tracking system batch<br/>traceability procedure."/]
+    box_20{"Were any inserts from the fault window released to<br/>downstream assembly or shipped to customer?"}
+    box_21["Issue downstream quarantine notification and<br/>quarantine all suspect inserts from the fault<br/>window."]
+    box_22(["End, Quarantine issued: quality assurance<br/>disposition and customer notification required"])
+    box_23(["End, Notify maintenance team and quality assurance<br/>team. Procedure complete."])
+
+    box_0 --> box_1
+    box_1 --> box_2
+    box_2 -->|"Yes"| box_3
+    box_2 -->|"No"| box_4
+    box_5 --> box_4
+    box_4 -->|"Yes"| box_6
+    box_4 -->|"No"| box_7
+    box_8 --> box_7
+    box_7 -->|"Yes"| box_9
+    box_7 -->|"No"| box_10
+    box_11 --> box_10
+    box_10 -->|"Yes"| box_12
+    box_10 -->|"No"| box_13
+    box_9 --> box_14
+    box_12 --> box_14
+    box_13 --> box_14
+    box_6 --> box_14
+    box_14 --> box_15
+    box_15 -->|"Yes"| box_16
+    box_15 -->|"No"| box_17
+    box_16 --> box_18
+    box_17 --> box_23
+    box_18 --> box_20
+    box_19 --> box_20
+    box_20 -->|"Yes"| box_21
+    box_20 -->|"No"| box_23
+    box_21 --> box_22
+    box_3 --> box_18
+
+    class box_0 terminator
+    class box_1 process
+    class box_2 decision
+    class box_3 process
+    class box_4 decision
+    class box_5 process
+    class box_6 process
+    class box_7 decision
+    class box_8 process
+    class box_9 process
+    class box_10 decision
+    class box_11 process
+    class box_12 process
+    class box_13 process
+    class box_14 process
+    class box_15 decision
+    class box_16 process
+    class box_17 process
+    class box_18 process
+    class box_19 document
+    class box_20 decision
+    class box_21 process
+    class box_22 terminator
+    class box_23 terminator
+
+    classDef terminator fill:#2d4a6e,stroke:#1a3050,color:#ffffff,font-weight:bold
+    classDef process    fill:#f0f4ff,stroke:#4a6fa5,color:#1a1a2e
+    classDef decision   fill:#fff8e6,stroke:#c8922a,color:#1a1a2e
+    classDef document   fill:#f0fff4,stroke:#3a8a4a,color:#1a1a2e

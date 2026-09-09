@@ -1,0 +1,343 @@
+{
+  "conversation_id": "GRAPH21_P007_noise_perturbation_mixed",
+  "graph_id": "GRAPH21",
+  "path_id": "GRAPH21_P007",
+  "regime": "mixed",
+  "variant": "noise_perturbation",
+  "robustness_axis": "noise_perturbation",
+  "turns": [
+    {
+      "node_id": "box_0",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Starting insert damage diagnostic procedure.",
+      "edge_label_to_next": null,
+      "turn_index": 0,
+      "ground_truth": {
+        "node_id": "box_0",
+        "node_type": "terminator",
+        "node_text": "Start"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Please collect and visually inspect a sample of at least ten damaged inserts. Classify each one by damage type—whether it's a surface scratch, deformation, or crack—and note the location on each insert.",
+      "edge_label_to_next": null,
+      "turn_index": 1,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Collect and visually inspect a sample of at least ten damaged inserts. Classify each by damage type (surface scratch, deformation, crack) and location on the insert."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "sample collected and inspected, classified all ten inserts by damge type and recoreded the locations",
+      "edge_label_to_next": null,
+      "turn_index": 2,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Collect and visually inspect a sample of at least ten damaged inserts. Classify each by damage type (surface scratch, deformation, crack) and location on the insert."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the insert damage consistent with incoming material defects present before assembly?",
+      "edge_label_to_next": null,
+      "turn_index": 3,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Is the insert damage consistent with incoming material defects present before assembly?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yeah the damage patterns match defects that were alraedy present in raw material before we started assembly",
+      "edge_label_to_next": "Yes",
+      "turn_index": 4,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Is the insert damage consistent with incoming material defects present before assembly?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_3",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Continue production with a different batch of inserts. Create a non-conformance record for the affected batch and notify the quality assurance team of the incoming material defect.",
+      "edge_label_to_next": null,
+      "turn_index": 5,
+      "ground_truth": {
+        "node_id": "box_3",
+        "node_type": "process",
+        "node_text": "Continue production with a different batch of inserts. Create a non conformance record for the affected batch and notify quality assurance team of the incoming material defect."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_3",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "ok so switched to new batch and production continuing, non-conformance record created and QA notified about the material defect",
+      "edge_label_to_next": null,
+      "turn_index": 6,
+      "ground_truth": {
+        "node_id": "box_3",
+        "node_type": "process",
+        "node_text": "Continue production with a different batch of inserts. Create a non conformance record for the affected batch and notify quality assurance team of the incoming material defect."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_18",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Now access the production tracking system and filter by the current work order. Set the time window from the last confirmed good inspection to now, then export the serial numbers of all inserts processed during the fault window.",
+      "edge_label_to_next": null,
+      "turn_index": 7,
+      "ground_truth": {
+        "node_id": "box_18",
+        "node_type": "process",
+        "node_text": "Complete the following steps: 1. Access the production tracking system and filter by current work order. 2. Set the time window from the last confirmed good inspection to now. 3. Export the serial numbers of all inserts processed during the fault window."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_18",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "I've pulled up the tracking system, but there's about a 45-minute gap where the barcode scanner was offline and nothing got logged automatically. Should I try to reconstruct that window from the manual logbook entries, or is there another way to get those serial numbers?",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "coverage_gap",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_18",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "accessed the tracking system set the time windw and exported all serial numbers from fault window",
+      "edge_label_to_next": null,
+      "turn_index": 8,
+      "ground_truth": {
+        "node_id": "box_18",
+        "node_type": "process",
+        "node_text": "Complete the following steps: 1. Access the production tracking system and filter by current work order. 2. Set the time window from the last confirmed good inspection to now. 3. Export the serial numbers of all inserts processed during the fault window."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_20",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Were any inserts from the fault window released to downstream assembly or shipped to customer?",
+      "edge_label_to_next": null,
+      "turn_index": 9,
+      "ground_truth": {
+        "node_id": "box_20",
+        "node_type": "decision",
+        "node_text": "Were any inserts from the fault window released to downstream assembly or shipped to customer?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_20",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Actually, I'm seeing the barcode scanner on the inspection station isn't reading any of the serial numbers at all. Should I deal with that first?",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "undocumented_malfunction",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_20",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yes looks like some inserts from the fault window have already been releasd downstream",
+      "edge_label_to_next": "Yes",
+      "turn_index": 10,
+      "ground_truth": {
+        "node_id": "box_20",
+        "node_type": "decision",
+        "node_text": "Were any inserts from the fault window released to downstream assembly or shipped to customer?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_21",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Issue a downstream quarantine notification and quarantine all suspect inserts from the fault window.",
+      "edge_label_to_next": null,
+      "turn_index": 11,
+      "ground_truth": {
+        "node_id": "box_21",
+        "node_type": "process",
+        "node_text": "Issue downstream quarantine notification and quarantine all suspect inserts from the fault window."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_21",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "quarantine notification issued and all suspect inserts from fault window quarantined",
+      "edge_label_to_next": null,
+      "turn_index": 12,
+      "ground_truth": {
+        "node_id": "box_21",
+        "node_type": "process",
+        "node_text": "Issue downstream quarantine notification and quarantine all suspect inserts from the fault window."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_22",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Procedure complete. Quarantine has been issued. Quality assurance disposition and customer notification are now required.",
+      "edge_label_to_next": null,
+      "turn_index": 13,
+      "ground_truth": {
+        "node_id": "box_22",
+        "node_type": "terminator",
+        "node_text": "End, Quarantine issued: quality assurance disposition and customer notification required"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_22",
+      "node_type": "terminator",
+      "speaker": "operator",
+      "utterance": "understood ill ensure the customer notification process is initiated",
+      "edge_label_to_next": null,
+      "turn_index": 14,
+      "ground_truth": {
+        "node_id": "box_22",
+        "node_type": "terminator",
+        "node_text": "End, Quarantine issued: quality assurance disposition and customer notification required"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    }
+  ],
+  "metadata": {
+    "depth": 8,
+    "num_decisions": 2,
+    "num_processes": 4,
+    "num_documents": 0,
+    "terminator_type": "procedure_complete",
+    "terminator_text": "End, Quarantine issued: quality assurance disposition and customer notification required",
+    "true_terminator": true,
+    "node_sequence": [
+      "box_0",
+      "box_1",
+      "box_2",
+      "box_3",
+      "box_18",
+      "box_20",
+      "box_21",
+      "box_22"
+    ],
+    "edge_labels": [
+      null,
+      null,
+      null,
+      "Yes",
+      null,
+      null,
+      "Yes",
+      null
+    ],
+    "decision_points": [
+      {
+        "node": "box_2",
+        "label": "Yes",
+        "question": "Is the insert damage consistent with incoming material defects present before assembly?"
+      },
+      {
+        "node": "box_20",
+        "label": "Yes",
+        "question": "Were any inserts from the fault window released to downstream assembly or shipped to customer?"
+      }
+    ],
+    "generation_model": "anthropic/claude-sonnet-4-5",
+    "verification": {
+      "variant_of": "base",
+      "base_verified": true,
+      "note": "surface-form variant; not independently verified"
+    },
+    "injection_count": 2
+  },
+  "injection_log": [
+    {
+      "position": 8,
+      "node_id": "box_18",
+      "node_text": "Complete the following steps: 1. Access the production tracking system and filter by current work order. 2. Set the time window from the last confirmed good inspection to now. 3. Export the serial numbers of all inserts processed during the fault window.",
+      "edge_labels": [],
+      "category": "coverage_gap",
+      "utterance": "I've pulled up the tracking system, but there's about a 45-minute gap where the barcode scanner was offline and nothing got logged automatically. Should I try to reconstruct that window from the manual logbook entries, or is there another way to get those serial numbers?",
+      "injection_rate": null,
+      "num_candidates": null
+    },
+    {
+      "position": 10,
+      "node_id": "box_20",
+      "node_text": "Were any inserts from the fault window released to downstream assembly or shipped to customer?",
+      "edge_labels": [
+        "Yes",
+        "No"
+      ],
+      "category": "undocumented_malfunction",
+      "utterance": "Actually, I'm seeing the barcode scanner on the inspection station isn't reading any of the serial numbers at all. Should I deal with that first?",
+      "injection_rate": null,
+      "num_candidates": null
+    }
+  ]
+}

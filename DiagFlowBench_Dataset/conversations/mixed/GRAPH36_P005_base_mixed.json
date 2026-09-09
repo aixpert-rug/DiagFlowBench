@@ -1,0 +1,487 @@
+{
+  "conversation_id": "GRAPH36_P005_base_mixed",
+  "graph_id": "GRAPH36",
+  "path_id": "GRAPH36_P005",
+  "regime": "mixed",
+  "variant": "base",
+  "robustness_axis": null,
+  "turns": [
+    {
+      "node_id": "box_0",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Starting conveyor belt diagnostic procedure.",
+      "edge_label_to_next": null,
+      "turn_index": 0,
+      "ground_truth": {
+        "node_id": "box_0",
+        "node_type": "terminator",
+        "node_text": "Start"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Please complete the initial inspection. Check the belt surface for cuts, gouges, or embedded debris. Examine the splice joint for any separation or edge lifting, and inspect both pulley faces for grooving or material buildup.",
+      "edge_label_to_next": null,
+      "turn_index": 1,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Inspect the belt surface for cuts, gouges, or embedded debris. 2. Check the splice joint for separation or edge lifting. 3. Inspect both pulley faces for grooving or material buildup."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Initial inspection complete. Belt surface looks good, splice joint is intact, and pulley faces are clean with no grooving.",
+      "edge_label_to_next": null,
+      "turn_index": 2,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Inspect the belt surface for cuts, gouges, or embedded debris. 2. Check the splice joint for separation or edge lifting. 3. Inspect both pulley faces for grooving or material buildup."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Belt damage assessment: do you see splice failure or deep cuts?",
+      "edge_label_to_next": null,
+      "turn_index": 3,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Belt damage assessment, splice failure or deep cuts?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "The belt looks okay structurally, but I'm seeing significant fraying along both edges for about a ten-foot section. Not really cuts or splice damage, just the edges are coming apart.",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "coverage_gap",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "No splice failure or deep cuts observed. The belt appears to be in good structural condition.",
+      "edge_label_to_next": "No",
+      "turn_index": 4,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Belt damage assessment, splice failure or deep cuts?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_6",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the belt tracking within plus or minus 5 millimetres of centreline?",
+      "edge_label_to_next": null,
+      "turn_index": 5,
+      "ground_truth": {
+        "node_id": "box_6",
+        "node_type": "decision",
+        "node_text": "Belt tracking within ±5 mm of centreline?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_6",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "The belt is drifting about 8 millimetres toward the idler side. It's outside the acceptable range.",
+      "edge_label_to_next": "No",
+      "turn_index": 6,
+      "ground_truth": {
+        "node_id": "box_6",
+        "node_type": "decision",
+        "node_text": "Belt tracking within ±5 mm of centreline?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_7",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Adjust the tracking using the tail roller tilt in half turn increments.",
+      "edge_label_to_next": null,
+      "turn_index": 7,
+      "ground_truth": {
+        "node_id": "box_7",
+        "node_type": "process",
+        "node_text": "Adjust tracking via tail roller tilt, half turn increments"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_7",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Tail roller tilt adjusted by half turn increments. Ready to reverify.",
+      "edge_label_to_next": null,
+      "turn_index": 8,
+      "ground_truth": {
+        "node_id": "box_7",
+        "node_type": "process",
+        "node_text": "Adjust tracking via tail roller tilt, half turn increments"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Reverify the belt tracking after the tail roller adjustment.",
+      "edge_label_to_next": null,
+      "turn_index": 9,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "decision",
+        "node_text": "Reverify belt tracking after tail roller adjustment"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Belt is still drifting off-centre. The adjustment didn't bring it back into tolerance.",
+      "edge_label_to_next": "Still off-centre",
+      "turn_index": 10,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "decision",
+        "node_text": "Reverify belt tracking after tail roller adjustment"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_33",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Proceed with secondary belt tracking correction. Slacken the tail roller locking bolts and adjust the roller end opposite to the drift direction in 2 millimetre increments. Run the belt for two minutes between adjustments to let the tracking stabilize, and check frame squareness with a precision square.",
+      "edge_label_to_next": null,
+      "turn_index": 11,
+      "ground_truth": {
+        "node_id": "box_33",
+        "node_type": "process",
+        "node_text": "Secondary belt tracking correction: slacken the tail roller locking bolts and adjust the roller end that is opposite to the direction of belt drift in 2 millimetre increments. Run the belt for two minutes between each adjustment to allow the tracking response to stabilise. Check frame squareness with a precision square before returning to the belt tracking observation step."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_33",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "Secondary correction completed. I've made incremental adjustments, allowed stabilization time, and verified frame squareness.",
+      "edge_label_to_next": null,
+      "turn_index": 12,
+      "ground_truth": {
+        "node_id": "box_33",
+        "node_type": "process",
+        "node_text": "Secondary belt tracking correction: slacken the tail roller locking bolts and adjust the roller end that is opposite to the direction of belt drift in 2 millimetre increments. Run the belt for two minutes between each adjustment to allow the tracking response to stabilise. Check frame squareness with a precision square before returning to the belt tracking observation step."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Reverify the belt tracking after the tail roller adjustment.",
+      "edge_label_to_next": null,
+      "turn_index": 13,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "decision",
+        "node_text": "Reverify belt tracking after tail roller adjustment"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "The belt tracking is still not responding to adjustment. After the second attempt, it remains unresolvable.",
+      "edge_label_to_next": "Unresolvable after second attempt",
+      "turn_index": 14,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "decision",
+        "node_text": "Reverify belt tracking after tail roller adjustment"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_9",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Procedure complete. This is a chronic tracking fault requiring escalation. Place the conveyor on production hold and request a frame alignment check.",
+      "edge_label_to_next": null,
+      "turn_index": 15,
+      "ground_truth": {
+        "node_id": "box_9",
+        "node_type": "terminator",
+        "node_text": "End, Escalate: chronic tracking fault, frame alignment check required"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_9",
+      "node_type": "terminator",
+      "speaker": "operator",
+      "utterance": "Understood. I'll escalate for frame alignment check and place the unit on hold.",
+      "edge_label_to_next": null,
+      "turn_index": 16,
+      "ground_truth": {
+        "node_id": "box_9",
+        "node_type": "terminator",
+        "node_text": "End, Escalate: chronic tracking fault, frame alignment check required"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    }
+  ],
+  "metadata": {
+    "depth": 9,
+    "num_decisions": 4,
+    "num_processes": 3,
+    "num_documents": 0,
+    "terminator_type": "escalate",
+    "terminator_text": "End, Escalate: chronic tracking fault, frame alignment check required",
+    "true_terminator": true,
+    "node_sequence": [
+      "box_0",
+      "box_1",
+      "box_2",
+      "box_6",
+      "box_7",
+      "box_8",
+      "box_33",
+      "box_8",
+      "box_9"
+    ],
+    "edge_labels": [
+      null,
+      null,
+      null,
+      "No",
+      "No",
+      null,
+      "Still off-centre",
+      null,
+      "Unresolvable after second attempt"
+    ],
+    "decision_points": [
+      {
+        "node": "box_2",
+        "label": "No",
+        "question": "Belt damage assessment, splice failure or deep cuts?"
+      },
+      {
+        "node": "box_6",
+        "label": "No",
+        "question": "Belt tracking within ±5 mm of centreline?"
+      },
+      {
+        "node": "box_8",
+        "label": "Still off-centre",
+        "question": "Reverify belt tracking after tail roller adjustment"
+      },
+      {
+        "node": "box_8",
+        "label": "Unresolvable after second attempt",
+        "question": "Reverify belt tracking after tail roller adjustment"
+      }
+    ],
+    "generation_model": "anthropic/claude-sonnet-4-5",
+    "verification": {
+      "verified": true,
+      "issues": [],
+      "corrected_turns": [
+        {
+          "node_id": "box_0",
+          "node_type": "terminator",
+          "speaker": "system",
+          "utterance": "Starting conveyor belt diagnostic procedure.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_1",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Please complete the initial inspection. Check the belt surface for cuts, gouges, or embedded debris. Examine the splice joint for any separation or edge lifting, and inspect both pulley faces for grooving or material buildup.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_1",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "Initial inspection complete. Belt surface looks good, splice joint is intact, and pulley faces are clean with no grooving.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_2",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Belt damage assessment: do you see splice failure or deep cuts?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_2",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "No splice failure or deep cuts observed. The belt appears to be in good structural condition.",
+          "edge_label_to_next": "No"
+        },
+        {
+          "node_id": "box_6",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Is the belt tracking within plus or minus 5 millimetres of centreline?",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_6",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "The belt is drifting about 8 millimetres toward the idler side. It's outside the acceptable range.",
+          "edge_label_to_next": "No"
+        },
+        {
+          "node_id": "box_7",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Adjust the tracking using the tail roller tilt in half turn increments.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_7",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "Tail roller tilt adjusted by half turn increments. Ready to reverify.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_8",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Reverify the belt tracking after the tail roller adjustment.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_8",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "Belt is still drifting off-centre. The adjustment didn't bring it back into tolerance.",
+          "edge_label_to_next": "Still off-centre"
+        },
+        {
+          "node_id": "box_33",
+          "node_type": "process",
+          "speaker": "system",
+          "utterance": "Proceed with secondary belt tracking correction. Slacken the tail roller locking bolts and adjust the roller end opposite to the drift direction in 2 millimetre increments. Run the belt for two minutes between adjustments to let the tracking stabilize, and check frame squareness with a precision square.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_33",
+          "node_type": "process",
+          "speaker": "operator",
+          "utterance": "Secondary correction completed. I've made incremental adjustments, allowed stabilization time, and verified frame squareness.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_8",
+          "node_type": "decision",
+          "speaker": "system",
+          "utterance": "Reverify the belt tracking after the tail roller adjustment.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_8",
+          "node_type": "decision",
+          "speaker": "operator",
+          "utterance": "The belt tracking is still not responding to adjustment. After the second attempt, it remains unresolvable.",
+          "edge_label_to_next": "Unresolvable after second attempt"
+        },
+        {
+          "node_id": "box_9",
+          "node_type": "terminator",
+          "speaker": "system",
+          "utterance": "Procedure complete. This is a chronic tracking fault requiring escalation. Place the conveyor on production hold and request a frame alignment check.",
+          "edge_label_to_next": null
+        },
+        {
+          "node_id": "box_9",
+          "node_type": "terminator",
+          "speaker": "operator",
+          "utterance": "Understood. I'll escalate for frame alignment check and place the unit on hold.",
+          "edge_label_to_next": null
+        }
+      ]
+    },
+    "injection_count": 1
+  },
+  "injection_log": [
+    {
+      "position": 4,
+      "node_id": "box_2",
+      "node_text": "Belt damage assessment, splice failure or deep cuts?",
+      "edge_labels": [
+        "Yes",
+        "No"
+      ],
+      "category": "coverage_gap",
+      "utterance": "The belt looks okay structurally, but I'm seeing significant fraying along both edges for about a ten-foot section. Not really cuts or splice damage, just the edges are coming apart.",
+      "injection_rate": null,
+      "num_candidates": null
+    }
+  ]
+}

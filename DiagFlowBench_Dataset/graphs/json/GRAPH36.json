@@ -1,0 +1,346 @@
+{
+  "id": "GRAPH36",
+  "description": "Conveyor belt tracking, tension and drive inspection — PROC-58",
+  "graph": {
+    "nodes": {
+      "box_0": {
+        "type": "terminator",
+        "text": "Start"
+      },
+      "box_1": {
+        "type": "process",
+        "text": "Complete the following checks: 1. Inspect the belt surface for cuts, gouges, or embedded debris. 2. Check the splice joint for separation or edge lifting. 3. Inspect both pulley faces for grooving or material buildup."
+      },
+      "box_2": {
+        "type": "decision",
+        "text": "Belt damage assessment, splice failure or deep cuts?"
+      },
+      "box_3": {
+        "type": "terminator",
+        "text": "End, Escalate: belt replacement required, production hold"
+      },
+      "box_4": {
+        "type": "process",
+        "text": "Run the conveyor belt at normal operating speed with no product load. Observe belt tracking from the drive end across the full belt width. Record whether the belt drifts toward the drive side, the idler side, or remains centred. Mark any sections where the belt edge contacts the frame or guide flange."
+      },
+      "box_5": {
+        "type": "document",
+        "text": "Refer to the belt tracking specification."
+      },
+      "box_6": {
+        "type": "decision",
+        "text": "Belt tracking within ±5 mm of centreline?"
+      },
+      "box_7": {
+        "type": "process",
+        "text": "Adjust tracking via tail roller tilt, half turn increments"
+      },
+      "box_8": {
+        "type": "decision",
+        "text": "Reverify belt tracking after tail roller adjustment"
+      },
+      "box_9": {
+        "type": "terminator",
+        "text": "End, Escalate: chronic tracking fault, frame alignment check required"
+      },
+      "box_10": {
+        "type": "process",
+        "text": "Stop the belt and locate the measurement point at the centre span between the two middle idler rollers. Apply a calibrated force perpendicular to the belt surface equal to the value in the belt specification and measure the resulting deflection with a steel rule. Compare the measured deflection against the allowable range and record both figures in the maintenance log."
+      },
+      "box_11": {
+        "type": "document",
+        "text": "Refer to the belt tension specification."
+      },
+      "box_12": {
+        "type": "decision",
+        "text": "Belt tension within specified deflection range?"
+      },
+      "box_13": {
+        "type": "process",
+        "text": "Adjust take up tensioner to correct belt deflection"
+      },
+      "box_14": {
+        "type": "decision",
+        "text": "Reverify belt tension after take up adjustment"
+      },
+      "box_15": {
+        "type": "terminator",
+        "text": "End, Escalate: take up travel exhausted, belt stretch limit reached"
+      },
+      "box_16": {
+        "type": "process",
+        "text": "Spin each roller by hand and listen for roughness, rumbling, or intermittent drag indicating bearing wear. Using a dial test indicator on a magnetic base, measure radial runout at the roller face at three positions along the length. Note any rollers that show surface damage, flat spots, or material build up that could cause belt scrubbing."
+      },
+      "box_17": {
+        "type": "decision",
+        "text": "All idler rollers rotate freely with no flat spots?"
+      },
+      "box_18": {
+        "type": "process",
+        "text": "Replace seized or worn idler rollers"
+      },
+      "box_19": {
+        "type": "process",
+        "text": "With the motor running at operating speed under normal belt load, hold an infrared thermometer approximately 50 millimetres from the drive motor end cap and record the surface temperature. Wait five minutes and repeat at the opposite end cap. Compare both readings against the maximum rated housing temperature on the motor nameplate."
+      },
+      "box_20": {
+        "type": "decision",
+        "text": "Drive motor temperature within rated limit?"
+      },
+      "box_21": {
+        "type": "terminator",
+        "text": "End, Escalate: motor overtemperature, check cooling and load"
+      },
+      "box_22": {
+        "type": "process",
+        "text": "Stop the drive and hang a plumb line from a fixed pin through two corresponding link plates, then measure vertical sag at the mid span. Calculate percentage elongation against the nominal pitch length from the chain specification. Inspect the side plates for cracks and the roller surfaces for pitting, then verify that the chain is coated in the correct lubricant grade."
+      },
+      "box_23": {
+        "type": "document",
+        "text": "Refer to the drive chain wear limit."
+      },
+      "box_24": {
+        "type": "decision",
+        "text": "Drive chain elongation within wear limit?"
+      },
+      "box_25": {
+        "type": "process",
+        "text": "Replace drive chain and retension to specification"
+      },
+      "box_26": {
+        "type": "process",
+        "text": "Jog the conveyor slowly until a reference part reaches the end of line sensor and observe the sensor indicator light. Measure the distance from the part leading edge to the sensor face at the trigger point using a steel rule. Compare against the setpoint distance specified on the sensor setup drawing and adjust the bracket position if the trigger point is outside tolerance."
+      },
+      "box_27": {
+        "type": "decision",
+        "text": "End of line sensor trigger point within ±2 mm tolerance?"
+      },
+      "box_28": {
+        "type": "process",
+        "text": "Reposition sensor bracket and reteach trigger point"
+      },
+      "box_29": {
+        "type": "process",
+        "text": "Load test, run 50 parts through conveyor at production speed"
+      },
+      "box_30": {
+        "type": "decision",
+        "text": "Load test passed, no tracking deviation or jams?"
+      },
+      "box_31": {
+        "type": "process",
+        "text": "Log all measurements and update conveyor service record"
+      },
+      "box_32": {
+        "type": "terminator",
+        "text": "End, Procedure complete"
+      },
+      "box_33": {
+        "type": "process",
+        "text": "Secondary belt tracking correction: slacken the tail roller locking bolts and adjust the roller end that is opposite to the direction of belt drift in 2 millimetre increments. Run the belt for two minutes between each adjustment to allow the tracking response to stabilise. Check frame squareness with a precision square before returning to the belt tracking observation step."
+      }
+    },
+    "edges": [
+      {
+        "source": "box_0",
+        "target": "box_1",
+        "label": null
+      },
+      {
+        "source": "box_1",
+        "target": "box_2",
+        "label": null
+      },
+      {
+        "source": "box_2",
+        "target": "box_3",
+        "label": "Yes"
+      },
+      {
+        "source": "box_2",
+        "target": "box_6",
+        "label": "No"
+      },
+      {
+        "source": "box_4",
+        "target": "box_6",
+        "label": null
+      },
+      {
+        "source": "box_5",
+        "target": "box_6",
+        "label": null
+      },
+      {
+        "source": "box_6",
+        "target": "box_7",
+        "label": "No"
+      },
+      {
+        "source": "box_7",
+        "target": "box_8",
+        "label": null
+      },
+      {
+        "source": "box_8",
+        "target": "box_12",
+        "label": "OK"
+      },
+      {
+        "source": "box_6",
+        "target": "box_12",
+        "label": "Yes"
+      },
+      {
+        "source": "box_10",
+        "target": "box_12",
+        "label": null
+      },
+      {
+        "source": "box_11",
+        "target": "box_12",
+        "label": null
+      },
+      {
+        "source": "box_12",
+        "target": "box_13",
+        "label": "No"
+      },
+      {
+        "source": "box_13",
+        "target": "box_14",
+        "label": null
+      },
+      {
+        "source": "box_14",
+        "target": "box_15",
+        "label": "Still out of range"
+      },
+      {
+        "source": "box_14",
+        "target": "box_17",
+        "label": "OK"
+      },
+      {
+        "source": "box_12",
+        "target": "box_17",
+        "label": "Yes"
+      },
+      {
+        "source": "box_16",
+        "target": "box_17",
+        "label": null
+      },
+      {
+        "source": "box_17",
+        "target": "box_18",
+        "label": "No"
+      },
+      {
+        "source": "box_18",
+        "target": "box_19",
+        "label": ""
+      },
+      {
+        "source": "box_17",
+        "target": "box_20",
+        "label": "Yes"
+      },
+      {
+        "source": "box_19",
+        "target": "box_20",
+        "label": null
+      },
+      {
+        "source": "box_20",
+        "target": "box_21",
+        "label": "No"
+      },
+      {
+        "source": "box_20",
+        "target": "box_24",
+        "label": "Yes"
+      },
+      {
+        "source": "box_22",
+        "target": "box_24",
+        "label": null
+      },
+      {
+        "source": "box_23",
+        "target": "box_24",
+        "label": null
+      },
+      {
+        "source": "box_24",
+        "target": "box_25",
+        "label": "No"
+      },
+      {
+        "source": "box_25",
+        "target": "box_26",
+        "label": ""
+      },
+      {
+        "source": "box_24",
+        "target": "box_27",
+        "label": "Yes"
+      },
+      {
+        "source": "box_26",
+        "target": "box_27",
+        "label": null
+      },
+      {
+        "source": "box_27",
+        "target": "box_28",
+        "label": "No"
+      },
+      {
+        "source": "box_28",
+        "target": "box_29",
+        "label": null
+      },
+      {
+        "source": "box_27",
+        "target": "box_29",
+        "label": "Yes"
+      },
+      {
+        "source": "box_29",
+        "target": "box_30",
+        "label": null
+      },
+      {
+        "source": "box_30",
+        "target": "box_31",
+        "label": "Yes"
+      },
+      {
+        "source": "box_30",
+        "target": "box_31",
+        "label": "No"
+      },
+      {
+        "source": "box_31",
+        "target": "box_32",
+        "label": null
+      },
+      {
+        "source": "box_8",
+        "target": "box_33",
+        "label": "Still off-centre"
+      },
+      {
+        "source": "box_33",
+        "target": "box_8",
+        "label": null
+      },
+      {
+        "source": "box_8",
+        "target": "box_9",
+        "label": "Unresolvable after second attempt"
+      }
+    ]
+  }
+}

@@ -1,0 +1,137 @@
+flowchart TD
+    box_0(["Start"])
+    box_1{"Does the part meet quality assurance team product<br/>specifications?"}
+    box_2["Check product dimensions and inspect for static<br/>charge and contamination."]
+    box_3["Remove the non conforming parts and reload with a<br/>product batch that meets quality assurance team<br/>specifications."]
+    box_4{"Is the positioning of the input slide working<br/>correctly?"}
+    box_5["Complete the following checks: 1. Verify that all<br/>parts lie flat and centred on the mounting plate and<br/>that the input slide has reached its end position.<br/>2. Verify that the input slide is positioned to<br/>match the pick up position. 3. Check whether the end<br/>damping works correctly."]
+    box_6[/"Input slide positioning procedure: position input<br/>slide to part pick up position."/]
+    box_7{"Are there contaminated parts?"}
+    box_8["Complete the following checks: 1. Check whether the<br/>vacuum end effectors are contaminated. 2. Check the<br/>vacuum filters for contamination. 3. Check whether<br/>the assembly robot axes are contaminated. 4. Check<br/>actuators for contamination. 5. Check guide axes of<br/>vacuum fixtures for contamination."]
+    box_9["Clean the parts, replace the vacuum filter if<br/>necessary, and clean the guide of the actuators."]
+    box_10[/"Assembly robot axis lubrication procedure"/]
+    box_11{"Are there electrical defects?"}
+    box_12["Complete the following checks: 1. Check connectors<br/>for secure fastening. 2. Check cabling and upper<br/>displacement sensors on the vacuum end effectors,<br/>these must be lit and must not turn off when the<br/>cabling is moved. 3. Check whether the vacuum<br/>switches work correctly. 4. Check whether the<br/>coil/valve for the vacuum generator works correctly.<br/>5. Check system settings on the operator control<br/>interface."]
+    box_13["Fasten the connector and replace the defective<br/>cabling and/or sensor."]
+    box_14{"Are there worn parts?"}
+    box_15["Complete the following checks: 1. Check wear on the<br/>vacuum end effectors. 2. Check wear on the actuator<br/>grippers. 3. Check wear on the guide axis gripper<br/>through the aluminium block. 4. Check the assembly<br/>robot axes for wear."]
+    box_16["Replace the worn components identified in the<br/>inspection (vacuum end effectors, actuator grippers,<br/>guide axis gripper, and/or assembly robot axes)."]
+    box_17[/"Assembly robot replacement procedure"/]
+    box_18{"Is the vacuum switching pressure value correct?"}
+    box_19[/"Refer to the vacuum switch switching pressure check<br/>for variant A machines (small format parts)."/]
+    box_20[/"Refer to the vacuum switch switching pressure check<br/>for variant B machines (medium format parts)."/]
+    box_21[/"Refer to the vacuum switch switching pressure check<br/>for variant C machines (large format parts)."/]
+    box_22["Readjust the vacuum switch trigger pressure to the<br/>specified value for the current machine variant."]
+    box_23{"Is the vacuum flow correct?"}
+    box_24[/"Check vacuum flow (pneumatic flow measurement<br/>procedure)"/]
+    box_25[/"Refer to the vacuum flow check for variant A<br/>machines (small format parts)."/]
+    box_26[/"Refer to the vacuum flow check for variant B<br/>machines (medium format parts)."/]
+    box_27[/"Refer to the vacuum flow check for variant C<br/>machines (large format parts)."/]
+    box_28["Readjust the vacuum flow rate to the specified value<br/>for the current machine variant."]
+    box_29{"Is the z parallelism of the lower position of 4x<br/>gripper relative to each other correct?"}
+    box_30[/"Refer to the Z parallelism check for variant A<br/>machines (small format parts)."/]
+    box_31[/"Refer to the Z parallelism check for variant B<br/>machines (medium format parts)."/]
+    box_32[/"Refer to the Z parallelism check for variant C<br/>machines (large format parts)."/]
+    box_33["Readjust the Z parallelism of the 4x gripper lower<br/>positions to the specified tolerance for the current<br/>machine variant."]
+    box_34{"Is the part pick up position from the input table<br/>correct?"}
+    box_35[/"Refer to the x/y/z pick up position check and trial<br/>run for variant A machines (small format parts)."/]
+    box_36[/"Refer to the x/y/z pick up position check and trial<br/>run for variant B machines (medium format parts)."/]
+    box_37[/"Refer to the x/y/z pick up position check and trial<br/>run for variant C machines (large format parts)."/]
+    box_38["Verify that parts are centred under the vacuum end<br/>effectors and are not dropped during transport."]
+    box_39[/"Assembly robot pickup position adjustment procedure"/]
+    box_40[/"Assembly robot tool offset calibration"/]
+    box_41["Teach assembly robot positions from the gripper<br/>position list."]
+    box_42(["Picking up part from input slide is correct"])
+
+    box_0 --> box_1
+    box_2 --> box_1
+    box_1 -->|"No"| box_3
+    box_1 -->|"Yes"| box_4
+    box_5 --> box_4
+    box_4 -->|"No"| box_6
+    box_4 -->|"Yes"| box_7
+    box_8 --> box_7
+    box_7 -->|"Yes"| box_9
+    box_7 -->|"Yes"| box_10
+    box_7 -->|"No"| box_11
+    box_12 --> box_11
+    box_11 -->|"Yes"| box_13
+    box_11 -->|"No"| box_14
+    box_15 --> box_14
+    box_14 -->|"Yes"| box_16
+    box_14 -->|"Yes"| box_17
+    box_14 -->|"No"| box_18
+    box_19 --> box_18
+    box_20 --> box_18
+    box_21 --> box_18
+    box_18 -->|"No"| box_22
+    box_18 -->|"Yes"| box_23
+    box_24 --> box_23
+    box_25 --> box_23
+    box_26 --> box_23
+    box_27 --> box_23
+    box_23 -->|"No"| box_28
+    box_23 -->|"Yes"| box_29
+    box_30 --> box_29
+    box_31 --> box_29
+    box_32 --> box_29
+    box_29 -->|"No"| box_33
+    box_29 -->|"Yes"| box_34
+    box_35 --> box_34
+    box_36 --> box_34
+    box_37 --> box_34
+    box_34 -->|"Yes"| box_38
+    box_38 --> box_42
+    box_34 -->|"No"| box_39
+    box_34 -->|"No"| box_40
+    box_40 --> box_41
+    box_34 -->|"No"| box_41
+
+    class box_0 terminator
+    class box_1 decision
+    class box_2 process
+    class box_3 process
+    class box_4 decision
+    class box_5 process
+    class box_6 document
+    class box_7 decision
+    class box_8 process
+    class box_9 process
+    class box_10 document
+    class box_11 decision
+    class box_12 process
+    class box_13 process
+    class box_14 decision
+    class box_15 process
+    class box_16 process
+    class box_17 document
+    class box_18 decision
+    class box_19 document
+    class box_20 document
+    class box_21 document
+    class box_22 process
+    class box_23 decision
+    class box_24 document
+    class box_25 document
+    class box_26 document
+    class box_27 document
+    class box_28 process
+    class box_29 decision
+    class box_30 document
+    class box_31 document
+    class box_32 document
+    class box_33 process
+    class box_34 decision
+    class box_35 document
+    class box_36 document
+    class box_37 document
+    class box_38 process
+    class box_39 document
+    class box_40 document
+    class box_41 process
+    class box_42 terminator
+
+    classDef terminator fill:#2d4a6e,stroke:#1a3050,color:#ffffff,font-weight:bold
+    classDef process    fill:#f0f4ff,stroke:#4a6fa5,color:#1a1a2e
+    classDef decision   fill:#fff8e6,stroke:#c8922a,color:#1a1a2e
+    classDef document   fill:#f0fff4,stroke:#3a8a4a,color:#1a1a2e

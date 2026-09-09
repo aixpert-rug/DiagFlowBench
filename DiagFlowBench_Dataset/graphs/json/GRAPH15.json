@@ -1,0 +1,347 @@
+{
+  "id": "GRAPH15",
+  "description": "Diagnostic flowchart for faults when a four-gripper assembly robot places parts into a reorientation unit.",
+  "graph": {
+    "nodes": {
+      "box_0": {
+        "type": "terminator",
+        "text": "Start"
+      },
+      "box_1": {
+        "type": "decision",
+        "text": "Does the part meet quality assurance team product specifications?"
+      },
+      "box_2": {
+        "type": "process",
+        "text": "Check product dimensions and inspect for contamination."
+      },
+      "box_3": {
+        "type": "process",
+        "text": "Remove the non conforming parts and reload with a product batch that meets quality assurance team specifications."
+      },
+      "box_4": {
+        "type": "decision",
+        "text": "Is picking up 4x part from indexing table correct?"
+      },
+      "box_5": {
+        "type": "process",
+        "text": "Verify that the part is picked up centred and held firmly enough in the vacuum head."
+      },
+      "box_6": {
+        "type": "document",
+        "text": "Indexing table 4x pickup diagnostic (GRAPH 14)"
+      },
+      "box_7": {
+        "type": "decision",
+        "text": "Does the reorientation mechanism rotate correctly towards part placement position?"
+      },
+      "box_8": {
+        "type": "process",
+        "text": "Verify that the reorientation mechanism is level in both the X and Y axes and that all fixtures are free of contamination."
+      },
+      "box_9": {
+        "type": "document",
+        "text": "Reorientation mechanism rotation to part placement position: diagnostic procedure reference."
+      },
+      "box_10": {
+        "type": "decision",
+        "text": "Are there contaminated parts?"
+      },
+      "box_11": {
+        "type": "process",
+        "text": "Complete the following checks: 1. Check whether the vacuum end effectors are contaminated. 2. Check whether the assembly robot axes are contaminated."
+      },
+      "box_12": {
+        "type": "process",
+        "text": "Clean the contaminated vacuum end effectors and assembly robot axes."
+      },
+      "box_13": {
+        "type": "document",
+        "text": "Assembly robot axis lubrication procedure"
+      },
+      "box_14": {
+        "type": "decision",
+        "text": "Are there electrical defects?"
+      },
+      "box_15": {
+        "type": "process",
+        "text": "Complete the following checks: 1. Check cabling and upper displacement sensors on the vacuum end effectors. 2. Check whether the vacuum switches turn off vacuum when placing. 3. Check whether the valve for the vacuum generator works correctly. 4. Check system settings on the operator control interface."
+      },
+      "box_16": {
+        "type": "process",
+        "text": "Replace the defective cabling and/or displacement sensor on the vacuum end effectors."
+      },
+      "box_17": {
+        "type": "decision",
+        "text": "Are there worn parts?"
+      },
+      "box_18": {
+        "type": "process",
+        "text": "Complete the following checks: 1. Check wear on the vacuum end effectors. 2. Check wear on the actuator grippers. 3. Check wear on the guide axis through the ball recirculation bushing. 4. Check the assembly robot axes for wear."
+      },
+      "box_19": {
+        "type": "process",
+        "text": "Replace the worn components identified in the inspection (vacuum end effectors, actuator grippers, guide axis, and/or assembly robot axes)."
+      },
+      "box_20": {
+        "type": "document",
+        "text": "Assembly robot replacement procedure"
+      },
+      "box_21": {
+        "type": "decision",
+        "text": "Is the z parallelism of the lower position of 4x gripper relative to each other correct?"
+      },
+      "box_22": {
+        "type": "document",
+        "text": "Refer to the Z parallelism of 4x gripper lower position for variant A machines (small format parts)."
+      },
+      "box_23": {
+        "type": "document",
+        "text": "Refer to the Z parallelism of 4x gripper lower position for variant B machines (medium format parts)."
+      },
+      "box_24": {
+        "type": "document",
+        "text": "Refer to the Z parallelism of 4x gripper lower position for variant C machines (large format parts)."
+      },
+      "box_25": {
+        "type": "process",
+        "text": "Readjust the Z parallelism of the 4x gripper lower positions to the specified tolerance."
+      },
+      "box_26": {
+        "type": "decision",
+        "text": "Is the center to center assembly robot gripper relative to reorientation mechanism correct?"
+      },
+      "box_27": {
+        "type": "document",
+        "text": "Refer to the gripper center to center distance relative to reorientation mechanism for variant A machines (small format parts)."
+      },
+      "box_28": {
+        "type": "document",
+        "text": "Refer to the gripper center to center distance relative to reorientation mechanism for variant B machines (medium format parts)."
+      },
+      "box_29": {
+        "type": "document",
+        "text": "Refer to the gripper center to center distance relative to reorientation mechanism for variant C machines (large format parts)."
+      },
+      "box_30": {
+        "type": "process",
+        "text": "Readjust the center to center distance of the 4x gripper assembly relative to the reorientation mechanism to the specified value."
+      },
+      "box_31": {
+        "type": "decision",
+        "text": "Is the part placement position in the reorientation unit correct?"
+      },
+      "box_32": {
+        "type": "document",
+        "text": "Refer to the XYZ placement position check for variant A machines (small format parts)."
+      },
+      "box_33": {
+        "type": "document",
+        "text": "Refer to the XYZ placement position check for variant B machines (medium format parts)."
+      },
+      "box_34": {
+        "type": "document",
+        "text": "Refer to the XYZ placement position check for variant C machines (large format parts)."
+      },
+      "box_35": {
+        "type": "process",
+        "text": "Perform assembly robot calibrations to correct the XYZ part placement position in the reorientation unit."
+      },
+      "box_36": {
+        "type": "process",
+        "text": "Restart this diagnostic procedure from the beginning."
+      },
+      "box_37": {
+        "type": "terminator",
+        "text": "Placing 4x part in reorientation unit is correct"
+      }
+    },
+    "edges": [
+      {
+        "source": "box_0",
+        "target": "box_1",
+        "label": null
+      },
+      {
+        "source": "box_2",
+        "target": "box_1",
+        "label": null
+      },
+      {
+        "source": "box_1",
+        "target": "box_3",
+        "label": "No"
+      },
+      {
+        "source": "box_1",
+        "target": "box_4",
+        "label": "Yes"
+      },
+      {
+        "source": "box_5",
+        "target": "box_4",
+        "label": null
+      },
+      {
+        "source": "box_4",
+        "target": "box_6",
+        "label": "No"
+      },
+      {
+        "source": "box_4",
+        "target": "box_7",
+        "label": "Yes"
+      },
+      {
+        "source": "box_8",
+        "target": "box_7",
+        "label": null
+      },
+      {
+        "source": "box_7",
+        "target": "box_9",
+        "label": "No"
+      },
+      {
+        "source": "box_7",
+        "target": "box_10",
+        "label": "Yes"
+      },
+      {
+        "source": "box_11",
+        "target": "box_10",
+        "label": null
+      },
+      {
+        "source": "box_10",
+        "target": "box_12",
+        "label": "Yes"
+      },
+      {
+        "source": "box_10",
+        "target": "box_13",
+        "label": "Yes"
+      },
+      {
+        "source": "box_10",
+        "target": "box_14",
+        "label": "No"
+      },
+      {
+        "source": "box_15",
+        "target": "box_14",
+        "label": null
+      },
+      {
+        "source": "box_14",
+        "target": "box_16",
+        "label": "Yes"
+      },
+      {
+        "source": "box_14",
+        "target": "box_17",
+        "label": "No"
+      },
+      {
+        "source": "box_18",
+        "target": "box_17",
+        "label": null
+      },
+      {
+        "source": "box_17",
+        "target": "box_19",
+        "label": "Yes"
+      },
+      {
+        "source": "box_17",
+        "target": "box_20",
+        "label": "Yes"
+      },
+      {
+        "source": "box_17",
+        "target": "box_21",
+        "label": "No"
+      },
+      {
+        "source": "box_22",
+        "target": "box_21",
+        "label": null
+      },
+      {
+        "source": "box_23",
+        "target": "box_21",
+        "label": null
+      },
+      {
+        "source": "box_24",
+        "target": "box_21",
+        "label": null
+      },
+      {
+        "source": "box_21",
+        "target": "box_25",
+        "label": "No"
+      },
+      {
+        "source": "box_21",
+        "target": "box_26",
+        "label": "Yes"
+      },
+      {
+        "source": "box_27",
+        "target": "box_26",
+        "label": null
+      },
+      {
+        "source": "box_28",
+        "target": "box_26",
+        "label": null
+      },
+      {
+        "source": "box_29",
+        "target": "box_26",
+        "label": null
+      },
+      {
+        "source": "box_26",
+        "target": "box_30",
+        "label": "No"
+      },
+      {
+        "source": "box_26",
+        "target": "box_31",
+        "label": "Yes"
+      },
+      {
+        "source": "box_32",
+        "target": "box_31",
+        "label": null
+      },
+      {
+        "source": "box_33",
+        "target": "box_31",
+        "label": null
+      },
+      {
+        "source": "box_34",
+        "target": "box_31",
+        "label": null
+      },
+      {
+        "source": "box_31",
+        "target": "box_35",
+        "label": "No"
+      },
+      {
+        "source": "box_31",
+        "target": "box_37",
+        "label": "Yes"
+      },
+      {
+        "source": "box_36",
+        "target": "box_37",
+        "label": null
+      }
+    ]
+  }
+}

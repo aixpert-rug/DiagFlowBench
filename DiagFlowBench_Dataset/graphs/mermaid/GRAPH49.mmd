@@ -1,0 +1,130 @@
+flowchart TD
+    box_0(["Start"])
+    box_1["Complete the following checks: 1. Inspect the drive<br/>amplifier heatsink fins for dust or blocked<br/>ventilation slots. 2. Check the motor body for<br/>abnormal surface temperature with a contact<br/>thermometer. 3. Inspect the drive amplifier display<br/>for thermal warning or fault codes."]
+    box_2["Hold a calibrated infrared thermometer or a contact<br/>thermocouple probe against the drive amplifier<br/>heatsink surface after the axis has been running<br/>under normal load for 20 minutes. Record the<br/>heatsink temperature and compare against the maximum<br/>permitted heatsink temperature stated in the drive<br/>amplifier datasheet. An overtemperature condition<br/>with normal ambient temperature indicates a failed<br/>cooling fan or blocked heatsink fins."]
+    box_3[/"Refer to the drive thermal derating limits."/]
+    box_4{"Drive heatsink temperature within rated continuous<br/>limit?"}
+    box_5(["End, Escalate: drive overtemperature, check cabinet<br/>cooling"])
+    box_6["Isolate the motor from the drive amplifier at the<br/>motor terminal block. Using a calibrated megohmeter<br/>set to 500 volts DC, measure insulation resistance<br/>phase to phase and phase to earth on all three motor<br/>windings. Record all six readings and compare<br/>against the minimum insulation resistance of 1<br/>megaohm for a motor in service; any reading below<br/>this limit requires motor withdrawal for inspection."]
+    box_7{"Winding resistance balanced within 2% across all<br/>phases?"}
+    box_8["Inspect motor terminal block, tighten connections,<br/>check insulation"]
+    box_9["Inspect the encoder read head status indicator light<br/>on the motor body or drive amplifier; green<br/>indicates a valid signal and red or flashing<br/>indicates a fault. Check the encoder cable<br/>continuity at both the motor connector and the drive<br/>connector using a continuity tester on each signal<br/>wire. Inspect the cable route for crush damage,<br/>sharp bends, or contact with hot or moving surfaces."]
+    box_10{"Encoder hardware status normal, no fault flags in<br/>drive?"}
+    box_11(["End, Replace encoder: hardware fault confirmed"])
+    box_12["Command the axis to traverse at three test speeds<br/>covering 10%, 50%, and 90% of rapid traverse rate<br/>using the machine diagnostic mode. At each speed,<br/>read the following error value from the drive<br/>diagnostic display or the CNC parameter screen.<br/>Record the following error in encoder counts and<br/>compare against the maximum following error limit<br/>programmed in the drive parameters."]
+    box_13[/"Refer to the following error specification."/]
+    box_14{"Following error within specified limit at all three<br/>speeds?"}
+    box_15["Adjust servo gain parameters, Kp, Ki within drive<br/>tuning limits"]
+    box_16{"Reverify following error after gain adjustment"}
+    box_17(["End, Escalate: following error persistent,<br/>mechanical load check required"])
+    box_18["Command the axis to move to each of ten programmed<br/>reference positions distributed across the full<br/>working travel using the machine diagnostic<br/>positioning cycle. At each position, read the<br/>position feedback value from the controller display<br/>and subtract the commanded position to obtain the<br/>position error. Record all ten errors and compare<br/>the maximum absolute error against the axis<br/>positioning accuracy specification."]
+    box_19[/"Refer to the axis position accuracy specification."/]
+    box_20{"Position accuracy within ±0.005 mm at all reference<br/>positions?"}
+    box_21["Complete the following steps: 1. Access the encoder<br/>calibration menu via the service laptop. 2. Select<br/>the encoder calibration routine and follow the on-<br/>screen procedure. 3. Record the calibration result<br/>and confirm the residual error is within tolerance."]
+    box_22{"Reverify position accuracy after encoder<br/>recalibration"}
+    box_23(["End, Escalate: position accuracy unrecoverable,<br/>geometric check required"])
+    box_24["With the motor power on and the brake released,<br/>command the axis to a mid travel position. Switch<br/>the brake on by de energising the brake coil and<br/>attempt to push the axis by hand in both directions.<br/>Attach a torque wrench to the motor shaft coupling<br/>and measure the holding torque; compare against the<br/>minimum rated brake torque in the motor datasheet."]
+    box_25[/"Refer to the motor brake specification."/]
+    box_26{"Brake holding torque within rated value?"}
+    box_27["Replace motor brake or adjust air gap"]
+    box_28["Mount a dial test indicator against the axis slide<br/>with the probe oriented along the axis direction.<br/>Command a series of small reversals across a 5<br/>millimetre range at slow feed rate. Read the<br/>indicator displacement at each reversal and record<br/>the maximum lost motion observed. Compare against<br/>the maximum permitted backlash value in the axis<br/>specification; if exceeded the ballscrew nut preload<br/>requires adjustment or replacement."]
+    box_29{"Axis backlash within 0.008 mm limit?"}
+    box_30["Adjust coupling preload or replace worn coupling<br/>element"]
+    box_31["Command the axis to run continuously at rated speed<br/>for one minute while recording the velocity feedback<br/>signal from the drive diagnostic output. Perform a<br/>frequency spectrum analysis on the velocity trace<br/>using the drive oscilloscope function or external<br/>data acquisition. Identify any peak above 5% of the<br/>mean velocity in the 10 to 500 hertz range and<br/>compare against the baseline spectrum recorded<br/>during the previous service."]
+    box_32{"No significant harmonic peaks in velocity frequency<br/>spectrum?"}
+    box_33["Investigate speed ripple source, bearing or encoder<br/>pitch error"]
+    box_34["Log all drive parameters and test data"]
+    box_35["Update drive parameter backup and maintenance<br/>management system service record"]
+    box_36(["End, Procedure complete"])
+    box_37["Secondary servo tuning attempt: access the drive<br/>parameter menu and increase the proportional<br/>velocity gain by 10% of its current value. Command a<br/>positioning move and read the following error value<br/>at the same three test speeds. If the error<br/>increases at any speed, restore the original gain<br/>value and note that mechanical resonance may be<br/>contributing, requiring a drive frequency spectrum<br/>analysis before returning to the following error<br/>measurement step."]
+    box_38[/"Encoder signal diagnostic (GRAPH 35)"/]
+
+    box_0 --> box_1
+    box_1 --> box_2
+    box_2 --> box_4
+    box_3 --> box_4
+    box_4 -->|"No"| box_5
+    box_4 -->|"Yes"| box_7
+    box_6 --> box_7
+    box_7 -->|"No"| box_8
+    box_8 --> box_9
+    box_7 -->|"Yes"| box_10
+    box_9 --> box_10
+    box_10 -->|"No"| box_38
+    box_10 -->|"Yes"| box_14
+    box_12 --> box_14
+    box_13 --> box_14
+    box_14 -->|"No"| box_15
+    box_15 --> box_16
+    box_16 -->|"OK"| box_20
+    box_14 -->|"Yes"| box_20
+    box_18 --> box_20
+    box_19 --> box_20
+    box_20 -->|"No"| box_21
+    box_21 --> box_22
+    box_22 -->|"Still failing"| box_23
+    box_22 -->|"OK"| box_26
+    box_20 -->|"Yes"| box_26
+    box_24 --> box_26
+    box_25 --> box_26
+    box_26 -->|"No"| box_27
+    box_27 --> box_28
+    box_26 -->|"Yes"| box_29
+    box_28 --> box_29
+    box_29 -->|"No"| box_30
+    box_30 --> box_31
+    box_29 -->|"Yes"| box_32
+    box_31 --> box_32
+    box_32 -->|"No"| box_33
+    box_33 --> box_34
+    box_32 -->|"Yes"| box_34
+    box_34 --> box_35
+    box_35 --> box_36
+    box_16 -->|"Still failing"| box_37
+    box_37 --> box_16
+    box_16 -->|"Unresolvable after second attempt"| box_17
+
+    class box_0 terminator
+    class box_1 process
+    class box_2 process
+    class box_3 document
+    class box_4 decision
+    class box_5 terminator
+    class box_6 process
+    class box_7 decision
+    class box_8 process
+    class box_9 process
+    class box_10 decision
+    class box_11 terminator
+    class box_12 process
+    class box_13 document
+    class box_14 decision
+    class box_15 process
+    class box_16 decision
+    class box_17 terminator
+    class box_18 process
+    class box_19 document
+    class box_20 decision
+    class box_21 process
+    class box_22 decision
+    class box_23 terminator
+    class box_24 process
+    class box_25 document
+    class box_26 decision
+    class box_27 process
+    class box_28 process
+    class box_29 decision
+    class box_30 process
+    class box_31 process
+    class box_32 decision
+    class box_33 process
+    class box_34 process
+    class box_35 process
+    class box_36 terminator
+    class box_37 process
+    class box_38 document
+
+    classDef terminator fill:#2d4a6e,stroke:#1a3050,color:#ffffff,font-weight:bold
+    classDef process    fill:#f0f4ff,stroke:#4a6fa5,color:#1a1a2e
+    classDef decision   fill:#fff8e6,stroke:#c8922a,color:#1a1a2e
+    classDef document   fill:#f0fff4,stroke:#3a8a4a,color:#1a1a2e

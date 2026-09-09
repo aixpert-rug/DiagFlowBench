@@ -1,0 +1,797 @@
+{
+  "conversation_id": "GRAPH31_P005_noise_perturbation_mixed",
+  "graph_id": "GRAPH31",
+  "path_id": "GRAPH31_P005",
+  "regime": "mixed",
+  "variant": "noise_perturbation",
+  "robustness_axis": "noise_perturbation",
+  "turns": [
+    {
+      "node_id": "box_0",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Starting burr defect diagnostic procedure.",
+      "edge_label_to_next": null,
+      "turn_index": 0,
+      "ground_truth": {
+        "node_id": "box_0",
+        "node_type": "terminator",
+        "node_text": "Start"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Please collect five parts with detected burrs and inspect the burr location and orientation using a magnifier. Determine whether the burr is at the insertion lead chamfer or on the cylindrical press fit surface.",
+      "edge_label_to_next": null,
+      "turn_index": 1,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Collect five parts with detected burrs. Inspect the burr location and orientation using a magnifier to determine whether it is at the insertion lead chamfer or on the cylindrical press fit surface."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "collected five burred parts and inspected under magnification burrs are on the cylindrical press fit suface",
+      "edge_label_to_next": "",
+      "turn_index": 2,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Collect five parts with detected burrs. Inspect the burr location and orientation using a magnifier to determine whether it is at the insertion lead chamfer or on the cylindrical press fit surface."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_3",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Now inspect parts from the supply conveyor input side before they reach the assembly station to confirm whether the burr is present in the incoming material.",
+      "edge_label_to_next": null,
+      "turn_index": 3,
+      "ground_truth": {
+        "node_id": "box_3",
+        "node_type": "process",
+        "node_text": "Inspect parts from the supply conveyor input side before they reach the assembly station to confirm the burr is present in the incoming material."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_3",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "ok so inspected parts from input conveyor they look clean no burrs present",
+      "edge_label_to_next": null,
+      "turn_index": 4,
+      "ground_truth": {
+        "node_id": "box_3",
+        "node_type": "process",
+        "node_text": "Inspect parts from the supply conveyor input side before they reach the assembly station to confirm the burr is present in the incoming material."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the burr present on parts before they enter the assembly process, indicating an incoming material defect?",
+      "edge_label_to_next": null,
+      "turn_index": 5,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Is the burr present on parts before they enter the assembly process (incoming material defect)?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no incoming parts are clean burrs only showing up after parts go thru our assembly process",
+      "edge_label_to_next": "No",
+      "turn_index": 6,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Is the burr present on parts before they enter the assembly process (incoming material defect)?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_5",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the burr present on all processed parts or only on parts from a specific pressing cycle?",
+      "edge_label_to_next": null,
+      "turn_index": 7,
+      "ground_truth": {
+        "node_id": "box_5",
+        "node_type": "decision",
+        "node_text": "Is the burr present on all processed parts or only on parts from a specific pressing cycle?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_5",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yeah been tracking the patern and burr only shows up intermitently seems tied to certain pressing cycles not every part",
+      "edge_label_to_next": "No",
+      "turn_index": 8,
+      "ground_truth": {
+        "node_id": "box_5",
+        "node_type": "decision",
+        "node_text": "Is the burr present on all processed parts or only on parts from a specific pressing cycle?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_7",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Since the burr correlates with a specific cycle phase, identify the tooling component responsible, whether it's the pressing head edge, guide surface, or nest edge, and inspect it immediately.",
+      "edge_label_to_next": null,
+      "turn_index": 9,
+      "ground_truth": {
+        "node_id": "box_7",
+        "node_type": "process",
+        "node_text": "If the burr correlates with a specific cycle phase, identify the tooling component responsible (pressing head edge, guide surface, or nest edge) and inspect it immediately."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": false
+    },
+    {
+      "node_id": "box_7",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "The burr is happening randomly across all cycle phases, not correlating with any specific phase at all.",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "coverage_gap",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_7",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "correlated defect pattern with cycle timing pressing head edge is likely culprit",
+      "edge_label_to_next": "",
+      "turn_index": 10,
+      "ground_truth": {
+        "node_id": "box_7",
+        "node_type": "process",
+        "node_text": "If the burr correlates with a specific cycle phase, identify the tooling component responsible (pressing head edge, guide surface, or nest edge) and inspect it immediately."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_9",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Inspect the pressing head leading edge under magnification for chipping, sharp transitions, or material buildup that could be transferred to the part.",
+      "edge_label_to_next": null,
+      "turn_index": 11,
+      "ground_truth": {
+        "node_id": "box_9",
+        "node_type": "process",
+        "node_text": "Inspect the pressing head leading edge under magnification for chipping, sharp transitions, or material build up that could be transferred to the part."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_9",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "I'm seeing hydraulic fluid leaking from the cylinder seal on the pressing head assembly, not just surface issues on the edge itself.",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "undocumented_malfunction",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_9",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "inspected pressing head edge under magnification found visible chipping along the leadign edge",
+      "edge_label_to_next": null,
+      "turn_index": 12,
+      "ground_truth": {
+        "node_id": "box_9",
+        "node_type": "process",
+        "node_text": "Inspect the pressing head leading edge under magnification for chipping, sharp transitions, or material build up that could be transferred to the part."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Does the pressing head edge have an acceptable chamfer condition with no sharp edge or chipping?",
+      "edge_label_to_next": null,
+      "turn_index": 13,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "decision",
+        "node_text": "Does the pressing head edge have an acceptable chamfer condition (no sharp edge or chipping)?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_8",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no edge is damaged with chipping present definitely not in acceptable condition",
+      "edge_label_to_next": "No",
+      "turn_index": 14,
+      "ground_truth": {
+        "node_id": "box_8",
+        "node_type": "decision",
+        "node_text": "Does the pressing head edge have an acceptable chamfer condition (no sharp edge or chipping)?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_10",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Replace the pressing head or have the edge repolished to the specified chamfer radius. Verify the edge condition before resuming production.",
+      "edge_label_to_next": null,
+      "turn_index": 15,
+      "ground_truth": {
+        "node_id": "box_10",
+        "node_type": "process",
+        "node_text": "Replace the pressing head or have the edge repolished to the specified chamfer radius. Verify the edge condition before resuming."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_10",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "replaced pressing head with new one verified chamfer radius within spec",
+      "edge_label_to_next": "",
+      "turn_index": 16,
+      "ground_truth": {
+        "node_id": "box_10",
+        "node_type": "process",
+        "node_text": "Replace the pressing head or have the edge repolished to the specified chamfer radius. Verify the edge condition before resuming."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_12",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Check the lateral clearance of the pressing head in the guide bushing and verify that the pressing head moves without radial contact against the guide wall during descent.",
+      "edge_label_to_next": null,
+      "turn_index": 17,
+      "ground_truth": {
+        "node_id": "box_12",
+        "node_type": "process",
+        "node_text": "Check the lateral clearance of the pressing head in the guide bushing. Verify that the pressing head moves without radial contact against the guide wall during descent."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_12",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "checked clearance and observed some lateral contact during descent stoke",
+      "edge_label_to_next": null,
+      "turn_index": 18,
+      "ground_truth": {
+        "node_id": "box_12",
+        "node_type": "process",
+        "node_text": "Check the lateral clearance of the pressing head in the guide bushing. Verify that the pressing head moves without radial contact against the guide wall during descent."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_11",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the press guide alignment free of lateral offset with no side loading of the pressing head against the part?",
+      "edge_label_to_next": null,
+      "turn_index": 19,
+      "ground_truth": {
+        "node_id": "box_11",
+        "node_type": "decision",
+        "node_text": "Is the press guide alignment free of lateral offset (no side loading of the pressing head against the part)?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_11",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no theres lateral offset present pressing head making side contact with guide wall",
+      "edge_label_to_next": "No",
+      "turn_index": 20,
+      "ground_truth": {
+        "node_id": "box_11",
+        "node_type": "decision",
+        "node_text": "Is the press guide alignment free of lateral offset (no side loading of the pressing head against the part)?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_13",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Realign the press guide bushing to eliminate lateral offset and verify alignment with a test pressing cycle before resuming production.",
+      "edge_label_to_next": null,
+      "turn_index": 21,
+      "ground_truth": {
+        "node_id": "box_13",
+        "node_type": "process",
+        "node_text": "Realign the press guide bushing to eliminate lateral offset. Verify alignment with a test pressing cycle before resuming production."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_13",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "realigned guide bushing and ran test cycle pressing head now moves freely without lateral contact",
+      "edge_label_to_next": null,
+      "turn_index": 22,
+      "ground_truth": {
+        "node_id": "box_13",
+        "node_type": "process",
+        "node_text": "Realign the press guide bushing to eliminate lateral offset. Verify alignment with a test pressing cycle before resuming production."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_14",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Quarantine all affected parts and record the root cause and corrective action in the quality log. Notify the quality assurance team with sample parts for disposition.",
+      "edge_label_to_next": null,
+      "turn_index": 23,
+      "ground_truth": {
+        "node_id": "box_14",
+        "node_type": "process",
+        "node_text": "Quarantine all affected parts and record the root cause and corrective action in the quality log. Notify quality assurance team with sample parts for disposition."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_14",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "all affected parts quarantined documented damaged pressing head and misalignment as root causes in quality log QA notified with samples",
+      "edge_label_to_next": null,
+      "turn_index": 24,
+      "ground_truth": {
+        "node_id": "box_14",
+        "node_type": "process",
+        "node_text": "Quarantine all affected parts and record the root cause and corrective action in the quality log. Notify quality assurance team with sample parts for disposition."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_15",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the root cause of the burr an incoming material defect requiring a supplier corrective action?",
+      "edge_label_to_next": null,
+      "turn_index": 25,
+      "ground_truth": {
+        "node_id": "box_15",
+        "node_type": "decision",
+        "node_text": "Is the root cause of the burr an incoming material defect requiring a supplier corrective action?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_15",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yeah actually after reviewing full investigation original incoming material inspection revealed some defects that contributed to problem we need supplier corrective action",
+      "edge_label_to_next": "Yes",
+      "turn_index": 26,
+      "ground_truth": {
+        "node_id": "box_15",
+        "node_type": "decision",
+        "node_text": "Is the root cause of the burr an incoming material defect requiring a supplier corrective action?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_16",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Complete the following steps: compile defect data for the affected batch including quantity, rejection rate, and spec limit; cross-reference rejections against the production schedule to identify the batch window; and confirm whether any burred parts were released to downstream assembly.",
+      "edge_label_to_next": null,
+      "turn_index": 27,
+      "ground_truth": {
+        "node_id": "box_16",
+        "node_type": "process",
+        "node_text": "Complete the following steps: 1. Compile defect data for the affected batch: quantity, rejection rate, and spec limit. 2. Cross-reference rejections against the production schedule to identify the batch window. 3. Confirm whether any burred parts were released to downstream assembly."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_16",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "compiled defect data showing twelve percent rejection rate over batch 4472A cross-referencing schedule indicates three day production window looks like some parts may have gone donwstream",
+      "edge_label_to_next": null,
+      "turn_index": 28,
+      "ground_truth": {
+        "node_id": "box_16",
+        "node_type": "process",
+        "node_text": "Complete the following steps: 1. Compile defect data for the affected batch: quantity, rejection rate, and spec limit. 2. Cross-reference rejections against the production schedule to identify the batch window. 3. Confirm whether any burred parts were released to downstream assembly."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_18",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Were any burred parts released to downstream assembly or shipped before detection?",
+      "edge_label_to_next": null,
+      "turn_index": 29,
+      "ground_truth": {
+        "node_id": "box_18",
+        "node_type": "decision",
+        "node_text": "Were any burred parts released to downstream assembly or shipped before detection?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_18",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "Hey, before we continue, do you know if the new PPE requirements from last week's safety meeting apply to this work area or just the paint booth?",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "unrelated_question",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_18",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yes unfortunately confirmed parts from affected batch were released to downstream assembly before we caught the issue",
+      "edge_label_to_next": "Yes",
+      "turn_index": 30,
+      "ground_truth": {
+        "node_id": "box_18",
+        "node_type": "decision",
+        "node_text": "Were any burred parts released to downstream assembly or shipped before detection?"
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_19",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Trace all parts from the burr fault window through downstream stations and customer delivery records. Quarantine any located parts.",
+      "edge_label_to_next": null,
+      "turn_index": 31,
+      "ground_truth": {
+        "node_id": "box_19",
+        "node_type": "process",
+        "node_text": "Trace all parts from the burr fault window through downstream stations and customer delivery records. Quarantine any located parts."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_19",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "I'm seeing some parts that were processed during that window but they got reworked at station 7 before the burr issue was detected. The procedure doesn't say anything about how to handle parts that went through additional processing after the fault window.",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "coverage_gap",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_19",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "traced parts thru tracking system found them at two downstream stations and in one customer shipemnt all accessible parts now quarantined",
+      "edge_label_to_next": null,
+      "turn_index": 32,
+      "ground_truth": {
+        "node_id": "box_19",
+        "node_type": "process",
+        "node_text": "Trace all parts from the burr fault window through downstream stations and customer delivery records. Quarantine any located parts."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_20",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Issue a customer advisory notice since burred parts reached shipment, and notify the quality assurance manager immediately.",
+      "edge_label_to_next": null,
+      "turn_index": 33,
+      "ground_truth": {
+        "node_id": "box_20",
+        "node_type": "process",
+        "node_text": "Issue customer advisory notice if any burred parts reached shipment, notify quality assurance manager."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_20",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "The burr removal tool's carbide insert just shattered when I tried to deburr the last batch—I've never seen that happen before and I'm not sure if we need to re-inspect all the parts we already processed with it.",
+      "edge_label_to_next": null,
+      "is_injection": true,
+      "injection_category": "undocumented_malfunction",
+      "post_injection": true
+    },
+    {
+      "node_id": "box_20",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "customer advisory notice issued and QA manager notified of the shipment",
+      "edge_label_to_next": null,
+      "turn_index": 34,
+      "ground_truth": {
+        "node_id": "box_20",
+        "node_type": "process",
+        "node_text": "Issue customer advisory notice if any burred parts reached shipment, notify quality assurance manager."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_21",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Customer advisory has been issued. Quality assurance disposition and supplier corrective action monitoring are now required. Procedure complete.",
+      "edge_label_to_next": null,
+      "turn_index": 35,
+      "ground_truth": {
+        "node_id": "box_21",
+        "node_type": "terminator",
+        "node_text": "End, Customer advisory issued. quality assurance disposition and supplier CA monitoring required."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    },
+    {
+      "node_id": "box_21",
+      "node_type": "terminator",
+      "speaker": "operator",
+      "utterance": "understood will follow up on supplier corrective action tracking",
+      "edge_label_to_next": null,
+      "turn_index": 36,
+      "ground_truth": {
+        "node_id": "box_21",
+        "node_type": "terminator",
+        "node_text": "End, Customer advisory issued. quality assurance disposition and supplier CA monitoring required."
+      },
+      "is_injection": false,
+      "injection_category": null,
+      "post_injection": true
+    }
+  ],
+  "metadata": {
+    "depth": 19,
+    "num_decisions": 6,
+    "num_processes": 11,
+    "num_documents": 0,
+    "terminator_type": "procedure_complete",
+    "terminator_text": "End, Customer advisory issued. quality assurance disposition and supplier CA monitoring required.",
+    "true_terminator": true,
+    "node_sequence": [
+      "box_0",
+      "box_1",
+      "box_3",
+      "box_2",
+      "box_5",
+      "box_7",
+      "box_9",
+      "box_8",
+      "box_10",
+      "box_12",
+      "box_11",
+      "box_13",
+      "box_14",
+      "box_15",
+      "box_16",
+      "box_18",
+      "box_19",
+      "box_20",
+      "box_21"
+    ],
+    "edge_labels": [
+      null,
+      null,
+      "",
+      null,
+      "No",
+      "No",
+      "",
+      null,
+      "No",
+      "",
+      null,
+      "No",
+      null,
+      null,
+      "Yes",
+      null,
+      "Yes",
+      null,
+      null
+    ],
+    "decision_points": [
+      {
+        "node": "box_2",
+        "label": "No",
+        "question": "Is the burr present on parts before they enter the assembly process (incoming material defect)?"
+      },
+      {
+        "node": "box_5",
+        "label": "No",
+        "question": "Is the burr present on all processed parts or only on parts from a specific pressing cycle?"
+      },
+      {
+        "node": "box_8",
+        "label": "No",
+        "question": "Does the pressing head edge have an acceptable chamfer condition (no sharp edge or chipping)?"
+      },
+      {
+        "node": "box_11",
+        "label": "No",
+        "question": "Is the press guide alignment free of lateral offset (no side loading of the pressing head against the part)?"
+      },
+      {
+        "node": "box_15",
+        "label": "Yes",
+        "question": "Is the root cause of the burr an incoming material defect requiring a supplier corrective action?"
+      },
+      {
+        "node": "box_18",
+        "label": "Yes",
+        "question": "Were any burred parts released to downstream assembly or shipped before detection?"
+      }
+    ],
+    "generation_model": "anthropic/claude-sonnet-4-5",
+    "verification": {
+      "variant_of": "base",
+      "base_verified": false,
+      "note": "surface-form variant; not independently verified"
+    },
+    "injection_count": 5
+  },
+  "injection_log": [
+    {
+      "position": 10,
+      "node_id": "box_7",
+      "node_text": "If the burr correlates with a specific cycle phase, identify the tooling component responsible (pressing head edge, guide surface, or nest edge) and inspect it immediately.",
+      "edge_labels": [],
+      "category": "coverage_gap",
+      "utterance": "The burr is happening randomly across all cycle phases, not correlating with any specific phase at all.",
+      "injection_rate": null,
+      "num_candidates": null
+    },
+    {
+      "position": 12,
+      "node_id": "box_9",
+      "node_text": "Inspect the pressing head leading edge under magnification for chipping, sharp transitions, or material build up that could be transferred to the part.",
+      "edge_labels": [],
+      "category": "undocumented_malfunction",
+      "utterance": "I'm seeing hydraulic fluid leaking from the cylinder seal on the pressing head assembly, not just surface issues on the edge itself.",
+      "injection_rate": null,
+      "num_candidates": null
+    },
+    {
+      "position": 30,
+      "node_id": "box_18",
+      "node_text": "Were any burred parts released to downstream assembly or shipped before detection?",
+      "edge_labels": [
+        "Yes",
+        "No"
+      ],
+      "category": "unrelated_question",
+      "utterance": "Hey, before we continue, do you know if the new PPE requirements from last week's safety meeting apply to this work area or just the paint booth?",
+      "injection_rate": null,
+      "num_candidates": null
+    },
+    {
+      "position": 32,
+      "node_id": "box_19",
+      "node_text": "Trace all parts from the burr fault window through downstream stations and customer delivery records. Quarantine any located parts.",
+      "edge_labels": [],
+      "category": "coverage_gap",
+      "utterance": "I'm seeing some parts that were processed during that window but they got reworked at station 7 before the burr issue was detected. The procedure doesn't say anything about how to handle parts that went through additional processing after the fault window.",
+      "injection_rate": null,
+      "num_candidates": null
+    },
+    {
+      "position": 34,
+      "node_id": "box_20",
+      "node_text": "Issue customer advisory notice if any burred parts reached shipment, notify quality assurance manager.",
+      "edge_labels": [],
+      "category": "undocumented_malfunction",
+      "utterance": "The burr removal tool's carbide insert just shattered when I tried to deburr the last batch—I've never seen that happen before and I'm not sure if we need to re-inspect all the parts we already processed with it.",
+      "injection_rate": null,
+      "num_candidates": null
+    }
+  ]
+}

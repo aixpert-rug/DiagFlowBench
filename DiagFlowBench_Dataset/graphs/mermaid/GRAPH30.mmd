@@ -1,0 +1,82 @@
+flowchart TD
+    box_0(["Start"])
+    box_1["Record the measured insertion depth values, the<br/>direction of deviation (too shallow or too deep),<br/>and the batch number. Collect five representative<br/>parts for reference."]
+    box_2{"Is the insertion depth deviation consistent and in<br/>one direction (all too shallow or all too deep)?"}
+    box_3["Complete the following steps: 1. Record insertion<br/>depth readings for ten consecutive parts. 2.<br/>Calculate the mean depth and compare against the<br/>nominal target. 3. Check whether the deviation is<br/>consistent or varies between parts."]
+    box_4["If the depth deviation is random, check part to part<br/>dimensional variation in the batch. Sample five<br/>parts for dimensional measurement."]
+    box_5{"Is the part material batch dimensionally within the<br/>specification for this product type?"}
+    box_6["Measure the outer diameter and top surface geometry<br/>of five parts from the current batch and compare<br/>against the incoming material specification."]
+    box_7["Reject the current batch as dimensionally non<br/>conforming. Reload from a batch with confirmed<br/>dimensional conformance. Create a non conformance<br/>record."]
+    box_8{"Is the press depth setting (lower position setpoint)<br/>correct for this product type?"}
+    box_9["Complete the following checks: 1. Read the lower<br/>position setpoint from the press depth parameter<br/>screen. 2. Compare the stored setpoint against the<br/>value on the validated process sheet. 3. Check<br/>whether the setpoint was changed since the last<br/>confirmed good run."]
+    box_10["Adjust the press depth setting to the specified<br/>value for this product type and rerun a test<br/>pressing cycle. Verify the corrected depth."]
+    box_11{"Is the pressing head making full, flat contact with<br/>the top surface of the part at the lower position?"}
+    box_12["Jog the pressing head to the lower position and<br/>visually inspect the contact between the pressing<br/>head face and the part top surface. Check for tilt<br/>or partial contact."]
+    box_13["Realign the pressing head perpendicular to the part<br/>axis and verify that full flat contact is achieved<br/>across the entire contact surface."]
+    box_14{"Is the depth measurement gauge reading correctly<br/>(validated against the reference block)?"}
+    box_15["Place the reference calibration block under the<br/>depth gauge and verify that the readout matches the<br/>reference block value within the specified gauge<br/>tolerance."]
+    box_16["Rezero the depth gauge using the reference block and<br/>repeat the calibration check. Replace the depth<br/>gauge if the offset exceeds the acceptable<br/>correction range."]
+    box_17{"Is the insertion depth within specification after<br/>all corrections?"}
+    box_18["Escalate to the maintenance team: insertion depth is<br/>outside specification despite all standard<br/>corrective actions; inspect the pressing station<br/>mechanical stops and actuator condition."]
+    box_19["Record corrective actions and the verified insertion<br/>depth measurements in the quality log. Notify<br/>quality assurance team."]
+    box_20(["End, notify quality assurance team."])
+    box_21{"Is the insertion depth deviation large enough to<br/>indicate a part to fixture mismatch or a tooling<br/>failure that would cause damaged parts if production<br/>continues?"}
+    box_22(["End, production stopped immediately: insertion depth<br/>deviation critical, quarantine all parts produced<br/>since last good measurement and escalate to process<br/>engineer"])
+
+    box_1 --> box_3
+    box_3 --> box_2
+    box_2 -->|"No"| box_4
+    box_2 -->|"Yes"| box_5
+    box_4 --> box_6
+    box_6 --> box_5
+    box_5 -->|"No"| box_7
+    box_5 -->|"Yes"| box_8
+    box_7 --> box_9
+    box_9 --> box_8
+    box_8 -->|"No"| box_10
+    box_8 -->|"Yes"| box_11
+    box_10 --> box_12
+    box_12 --> box_11
+    box_11 -->|"No"| box_13
+    box_11 -->|"Yes"| box_14
+    box_13 --> box_15
+    box_15 --> box_14
+    box_14 -->|"No"| box_16
+    box_14 -->|"Yes"| box_17
+    box_16 --> box_17
+    box_17 -->|"No"| box_18
+    box_17 -->|"Yes"| box_19
+    box_18 --> box_19
+    box_19 --> box_20
+    box_0 --> box_21
+    box_21 -->|"Critical, immediate stop required"| box_22
+    box_21 -->|"Standard fault, continue diagnosis"| box_1
+
+    class box_0 terminator
+    class box_1 process
+    class box_2 decision
+    class box_3 process
+    class box_4 process
+    class box_5 decision
+    class box_6 process
+    class box_7 process
+    class box_8 decision
+    class box_9 process
+    class box_10 process
+    class box_11 decision
+    class box_12 process
+    class box_13 process
+    class box_14 decision
+    class box_15 process
+    class box_16 process
+    class box_17 decision
+    class box_18 process
+    class box_19 process
+    class box_20 terminator
+    class box_21 decision
+    class box_22 terminator
+
+    classDef terminator fill:#2d4a6e,stroke:#1a3050,color:#ffffff,font-weight:bold
+    classDef process    fill:#f0f4ff,stroke:#4a6fa5,color:#1a1a2e
+    classDef decision   fill:#fff8e6,stroke:#c8922a,color:#1a1a2e
+    classDef document   fill:#f0fff4,stroke:#3a8a4a,color:#1a1a2e

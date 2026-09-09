@@ -1,0 +1,82 @@
+flowchart TD
+    box_0(["Start"])
+    box_1["Record the force profile (peak force, force at<br/>insertion start, spike timing) from the operator<br/>control interface trend display. Note whether the<br/>anomaly occurs on every cycle or intermittently."]
+    box_2{"Is the force spike intermittent (not present on<br/>every pressing cycle)?"}
+    box_3["Complete the following checks: 1. Sample five<br/>consecutive parts for dimensional conformance. 2.<br/>Check whether the force spike correlates with a<br/>specific table position."]
+    box_4["Identify whether the anomaly is part dimension<br/>related (reject the non conforming parts) or<br/>position related (inspect that nest) and apply the<br/>relevant corrective action."]
+    box_5{"Is the insertion depth of parts at the press station<br/>within specification before pressing begins?"}
+    box_6["Complete the following checks: 1. Measure the part<br/>insertion depth with the station depth gauge. 2.<br/>Compare the measured depth against the nominal value<br/>on the drawing. 3. Check for part-to-fixture<br/>misalignment or contamination on locating surfaces."]
+    box_7["Adjust the part placement height at the preceding<br/>station so that parts arrive at the press station at<br/>the correct pre press insertion depth."]
+    box_8{"Is the pressing head concentrically aligned with the<br/>part axis (no lateral offset)?"}
+    box_9["Use the alignment gauge to check the lateral offset<br/>of the pressing head contact surface relative to the<br/>part centreline at the lower pressing position."]
+    box_10["Realign the pressing head to the part centreline.<br/>Tighten all fasteners and reverify alignment before<br/>resuming."]
+    box_11{"Is the pressing speed set to the specified value for<br/>this product type?"}
+    box_12["Complete the following checks: 1. Read the<br/>programmed pressing speed from the press axis<br/>parameter screen. 2. Compare against the specified<br/>speed on the validated process sheet. 3. Check<br/>whether the speed setting was modified since the<br/>last good run."]
+    box_13["Adjust the flow control valve to bring the pressing<br/>speed to the specified value for the current product<br/>type."]
+    box_14{"Is the force sensor zeroed and within its<br/>calibration interval?"}
+    box_15["Check the zero load force reading and compare the<br/>calibration date against the calibration interval<br/>for this sensor. Verify that the sensor mounting is<br/>secure."]
+    box_16["Rezero the force sensor and perform a span<br/>calibration using the reference load. If the sensor<br/>is outside the calibration interval, arrange<br/>recalibration."]
+    box_17{"Has the force spike been eliminated after all<br/>corrective actions?"}
+    box_18["Escalate to the maintenance team: the force anomaly<br/>persists; inspect the pressing station mechanical<br/>components, guide alignment, and force sensor<br/>integrity."]
+    box_19["Record all measurements and corrective actions<br/>taken. Notify quality assurance team and update the<br/>maintenance log."]
+    box_20(["End, notify maintenance team."])
+    box_21{"Does the recorded force profile indicate a potential<br/>fixture collision or tooling failure requiring an<br/>immediate machine stop before further parts are<br/>damaged?"}
+    box_22(["End, machine stopped immediately: force spike<br/>indicates collision or tooling failure, do not<br/>restart until fixture and tooling have been<br/>inspected and cleared"])
+
+    box_1 --> box_3
+    box_3 --> box_2
+    box_2 -->|"Yes"| box_4
+    box_2 -->|"No"| box_5
+    box_4 --> box_6
+    box_6 --> box_5
+    box_5 -->|"No"| box_7
+    box_5 -->|"Yes"| box_8
+    box_7 --> box_9
+    box_9 --> box_8
+    box_8 -->|"No"| box_10
+    box_8 -->|"Yes"| box_11
+    box_10 --> box_12
+    box_12 --> box_11
+    box_11 -->|"No"| box_13
+    box_11 -->|"Yes"| box_14
+    box_13 --> box_15
+    box_15 --> box_14
+    box_14 -->|"No"| box_16
+    box_14 -->|"Yes"| box_17
+    box_16 --> box_17
+    box_17 -->|"No"| box_18
+    box_17 -->|"Yes"| box_19
+    box_18 --> box_19
+    box_19 --> box_20
+    box_0 --> box_21
+    box_21 -->|"Critical, immediate stop required"| box_22
+    box_21 -->|"Standard fault, continue diagnosis"| box_1
+
+    class box_0 terminator
+    class box_1 process
+    class box_2 decision
+    class box_3 process
+    class box_4 process
+    class box_5 decision
+    class box_6 process
+    class box_7 process
+    class box_8 decision
+    class box_9 process
+    class box_10 process
+    class box_11 decision
+    class box_12 process
+    class box_13 process
+    class box_14 decision
+    class box_15 process
+    class box_16 process
+    class box_17 decision
+    class box_18 process
+    class box_19 process
+    class box_20 terminator
+    class box_21 decision
+    class box_22 terminator
+
+    classDef terminator fill:#2d4a6e,stroke:#1a3050,color:#ffffff,font-weight:bold
+    classDef process    fill:#f0f4ff,stroke:#4a6fa5,color:#1a1a2e
+    classDef decision   fill:#fff8e6,stroke:#c8922a,color:#1a1a2e
+    classDef document   fill:#f0fff4,stroke:#3a8a4a,color:#1a1a2e

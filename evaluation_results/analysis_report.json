@@ -1,0 +1,1222 @@
+{
+  "GPT-4o Mini": {
+    "model": "GPT-4o Mini",
+    "total_clean_conversations": 838,
+    "total_mixed_conversations": 838,
+    "clean": {
+      "metrics": {
+        "branch_following": 0.7541653054557335,
+        "termination_recognition": 0.3876582278481013,
+        "off_graph_rate": 0.00046180844185831715
+      },
+      "sanity_checks": {
+        "position_tracking_exact": 0.08423385979495705,
+        "position_tracking_forward": 0.693728641359564
+      },
+      "threshold_sweep": {
+        "0.05": {
+          "position_tracking_exact": 0.08423385979495705,
+          "position_tracking_forward": 0.693728641359564,
+          "branch_following": 0.7541653054557335,
+          "termination_recognition": 0.3876582278481013,
+          "off_graph_rate": 0.00046180844185831715
+        },
+        "0.1": {
+          "position_tracking_exact": 0.08303315784612543,
+          "position_tracking_forward": 0.6900341738246976,
+          "branch_following": 0.6497876510944136,
+          "termination_recognition": 0.3876582278481013,
+          "off_graph_rate": 0.0447030571718851
+        },
+        "0.15": {
+          "position_tracking_exact": 0.07213447861826915,
+          "position_tracking_forward": 0.6707305809550198,
+          "branch_following": 0.5725253185233584,
+          "termination_recognition": 0.3876582278481013,
+          "off_graph_rate": 0.10473815461346633
+        },
+        "0.2": {
+          "position_tracking_exact": 0.054678119516024755,
+          "position_tracking_forward": 0.6073704627320587,
+          "branch_following": 0.47745834694544265,
+          "termination_recognition": 0.3876582278481013,
+          "off_graph_rate": 0.200332502078138
+        },
+        "0.25": {
+          "position_tracking_exact": 0.03361965456728549,
+          "position_tracking_forward": 0.5114066685139005,
+          "branch_following": 0.3923554393988892,
+          "termination_recognition": 0.3876582278481013,
+          "off_graph_rate": 0.3352729287891383
+        },
+        "0.3": {
+          "position_tracking_exact": 0.018102890920846035,
+          "position_tracking_forward": 0.3977094301283827,
+          "branch_following": 0.291734727213329,
+          "termination_recognition": 0.3876582278481013,
+          "off_graph_rate": 0.49071765031864784
+        },
+        "0.35": {
+          "position_tracking_exact": 0.010713955851112959,
+          "position_tracking_forward": 0.3217881222868754,
+          "branch_following": 0.2285200914733747,
+          "termination_recognition": 0.3876582278481013,
+          "off_graph_rate": 0.5898217419414427
+        },
+        "0.4": {
+          "position_tracking_exact": 0.006742403251131431,
+          "position_tracking_forward": 0.2684954280964256,
+          "branch_following": 0.19095066971577915,
+          "termination_recognition": 0.3876582278481013,
+          "off_graph_rate": 0.6616791354945969
+        },
+        "0.45": {
+          "position_tracking_exact": 0.004248637665096518,
+          "position_tracking_forward": 0.21400203195714418,
+          "branch_following": 0.15125775890231952,
+          "termination_recognition": 0.3876582278481013,
+          "off_graph_rate": 0.7351990394384409
+        },
+        "0.5": {
+          "position_tracking_exact": 0.0036944675348665372,
+          "position_tracking_forward": 0.1856469936270435,
+          "branch_following": 0.13459653707938582,
+          "termination_recognition": 0.3876582278481013,
+          "off_graph_rate": 0.7712200979033896
+        }
+      }
+    },
+    "mixed": {
+      "fabrication_rate": 0.05259975816203144,
+      "forced_mapping_rate": 0.3639661426844015,
+      "correct_abstention_rate": 0.5834340991535671,
+      "abstention_redirect_rate": 0.0,
+      "forced_mapping_nearby_rate": 0.0,
+      "recovery_rate": 0.07692307692307693,
+      "inappropriate_abstention_rate": null,
+      "contamination": {
+        "pre_injection_pt_exact": 0.07456404088995791,
+        "post_injection_pt_exact": 0.09477362061435435,
+        "delta": 0.020209579724396437
+      },
+      "by_injection_category": {
+        "coverage_gap": {
+          "fabrication": 0.05635491606714628,
+          "forced_mapping": 0.5047961630695443,
+          "correct_abstention": 0.43884892086330934,
+          "inappropriate_abstention": null
+        },
+        "undocumented_malfunction": {
+          "fabrication": 0.07113821138211382,
+          "forced_mapping": 0.3638211382113821,
+          "correct_abstention": 0.5650406504065041,
+          "inappropriate_abstention": null
+        },
+        "unrelated_question": {
+          "fabrication": 0.01524390243902439,
+          "forced_mapping": 0.006097560975609756,
+          "correct_abstention": 0.9786585365853658,
+          "inappropriate_abstention": null
+        }
+      }
+    }
+  },
+  "GPT-OSS 120B": {
+    "model": "GPT-OSS 120B",
+    "total_clean_conversations": 838,
+    "total_mixed_conversations": 838,
+    "clean": {
+      "metrics": {
+        "branch_following": 0.7624959163672003,
+        "termination_recognition": 0.7436708860759493,
+        "off_graph_rate": 0.06548443705550938
+      },
+      "sanity_checks": {
+        "position_tracking_exact": 0.03657522859517872,
+        "position_tracking_forward": 0.6265816939133647
+      },
+      "threshold_sweep": {
+        "0.05": {
+          "position_tracking_exact": 0.03657522859517872,
+          "position_tracking_forward": 0.6265816939133647,
+          "branch_following": 0.7624959163672003,
+          "termination_recognition": 0.7436708860759493,
+          "off_graph_rate": 0.06548443705550938
+        },
+        "0.1": {
+          "position_tracking_exact": 0.032603675995197194,
+          "position_tracking_forward": 0.6135586958529602,
+          "branch_following": 0.6270826527278667,
+          "termination_recognition": 0.7436708860759493,
+          "off_graph_rate": 0.10233675071580309
+        },
+        "0.15": {
+          "position_tracking_exact": 0.01801052923247437,
+          "position_tracking_forward": 0.5719959360857116,
+          "branch_following": 0.5375694217575956,
+          "termination_recognition": 0.7436708860759493,
+          "off_graph_rate": 0.1866629721991318
+        },
+        "0.2": {
+          "position_tracking_exact": 0.008959083772051353,
+          "position_tracking_forward": 0.5262769003417382,
+          "branch_following": 0.4671675922901013,
+          "termination_recognition": 0.7436708860759493,
+          "off_graph_rate": 0.266463470952249
+        },
+        "0.25": {
+          "position_tracking_exact": 0.0037868292232382007,
+          "position_tracking_forward": 0.4740925464117484,
+          "branch_following": 0.3977458346945443,
+          "termination_recognition": 0.7436708860759493,
+          "off_graph_rate": 0.35069733074720605
+        },
+        "0.3": {
+          "position_tracking_exact": 0.0015701487023182783,
+          "position_tracking_forward": 0.41535051260737044,
+          "branch_following": 0.3415550473701405,
+          "termination_recognition": 0.7436708860759493,
+          "off_graph_rate": 0.44038053015609124
+        },
+        "0.35": {
+          "position_tracking_exact": 0.0002770850651149903,
+          "position_tracking_forward": 0.33933684307749146,
+          "branch_following": 0.2801372100620712,
+          "termination_recognition": 0.7436708860759493,
+          "off_graph_rate": 0.543917982820726
+        },
+        "0.4": {
+          "position_tracking_exact": 9.236168837166343e-05,
+          "position_tracking_forward": 0.26286136510575414,
+          "branch_following": 0.21577915713819013,
+          "termination_recognition": 0.7436708860759493,
+          "off_graph_rate": 0.648471414057449
+        },
+        "0.45": {
+          "position_tracking_exact": 0.0,
+          "position_tracking_forward": 0.19044980142237,
+          "branch_following": 0.1551780463900686,
+          "termination_recognition": 0.7436708860759493,
+          "off_graph_rate": 0.7490532926941904
+        },
+        "0.5": {
+          "position_tracking_exact": 0.0,
+          "position_tracking_forward": 0.13835780918075183,
+          "branch_following": 0.11613851682456713,
+          "termination_recognition": 0.7436708860759493,
+          "off_graph_rate": 0.821649579754318
+        }
+      }
+    },
+    "mixed": {
+      "fabrication_rate": 0.022370012091898428,
+      "forced_mapping_rate": 0.43107617896009676,
+      "correct_abstention_rate": 0.5465538089480049,
+      "abstention_redirect_rate": 0.0,
+      "forced_mapping_nearby_rate": 0.0,
+      "recovery_rate": 0.013333333333333334,
+      "inappropriate_abstention_rate": null,
+      "contamination": {
+        "pre_injection_pt_exact": 0.009019843656043296,
+        "post_injection_pt_exact": 0.023584218954724123,
+        "delta": 0.014564375298680828
+      },
+      "by_injection_category": {
+        "coverage_gap": {
+          "fabrication": 0.02158273381294964,
+          "forced_mapping": 0.592326139088729,
+          "correct_abstention": 0.38609112709832133,
+          "inappropriate_abstention": null
+        },
+        "undocumented_malfunction": {
+          "fabrication": 0.032520325203252036,
+          "forced_mapping": 0.4410569105691057,
+          "correct_abstention": 0.5264227642276422,
+          "inappropriate_abstention": null
+        },
+        "unrelated_question": {
+          "fabrication": 0.009146341463414634,
+          "forced_mapping": 0.006097560975609756,
+          "correct_abstention": 0.9847560975609756,
+          "inappropriate_abstention": null
+        }
+      }
+    }
+  },
+  "Gemini 2.5 Flash": {
+    "model": "Gemini 2.5 Flash",
+    "total_clean_conversations": 838,
+    "total_mixed_conversations": 838,
+    "clean": {
+      "metrics": {
+        "branch_following": 0.8402482848742241,
+        "termination_recognition": 0.7183544303797469,
+        "off_graph_rate": 0.0008312551953449709
+      },
+      "sanity_checks": {
+        "position_tracking_exact": 0.060312182506696226,
+        "position_tracking_forward": 0.7989286044148887
+      },
+      "threshold_sweep": {
+        "0.05": {
+          "position_tracking_exact": 0.060312182506696226,
+          "position_tracking_forward": 0.7989286044148887,
+          "branch_following": 0.8402482848742241,
+          "termination_recognition": 0.7183544303797469,
+          "off_graph_rate": 0.0008312551953449709
+        },
+        "0.1": {
+          "position_tracking_exact": 0.05975801237646624,
+          "position_tracking_forward": 0.7977279024660571,
+          "branch_following": 0.7234563868016988,
+          "termination_recognition": 0.7183544303797469,
+          "off_graph_rate": 0.00618823312090145
+        },
+        "0.15": {
+          "position_tracking_exact": 0.05763369354391798,
+          "position_tracking_forward": 0.7922785628521289,
+          "branch_following": 0.677719699444626,
+          "termination_recognition": 0.7183544303797469,
+          "off_graph_rate": 0.01884178442781934
+        },
+        "0.2": {
+          "position_tracking_exact": 0.04969058834395493,
+          "position_tracking_forward": 0.7729749699824513,
+          "branch_following": 0.66546880104541,
+          "termination_recognition": 0.7183544303797469,
+          "off_graph_rate": 0.044241248730026786
+        },
+        "0.25": {
+          "position_tracking_exact": 0.04682737600443336,
+          "position_tracking_forward": 0.7498845478895354,
+          "branch_following": 0.6448872917347273,
+          "termination_recognition": 0.7183544303797469,
+          "off_graph_rate": 0.07601366952987901
+        },
+        "0.3": {
+          "position_tracking_exact": 0.044610695483513436,
+          "position_tracking_forward": 0.7248545303408146,
+          "branch_following": 0.6288794511597517,
+          "termination_recognition": 0.7183544303797469,
+          "off_graph_rate": 0.11378960007388936
+        },
+        "0.35": {
+          "position_tracking_exact": 0.04036205781841692,
+          "position_tracking_forward": 0.6916043225270158,
+          "branch_following": 0.6123815746488076,
+          "termination_recognition": 0.7183544303797469,
+          "off_graph_rate": 0.15479818971090792
+        },
+        "0.4": {
+          "position_tracking_exact": 0.03934607924632862,
+          "position_tracking_forward": 0.6640805393922601,
+          "branch_following": 0.597517151257759,
+          "termination_recognition": 0.7183544303797469,
+          "off_graph_rate": 0.19054216311074165
+        },
+        "0.45": {
+          "position_tracking_exact": 0.03768356885563868,
+          "position_tracking_forward": 0.6311074166435763,
+          "branch_following": 0.5757922247631493,
+          "termination_recognition": 0.7183544303797469,
+          "off_graph_rate": 0.23376743326868016
+        },
+        "0.5": {
+          "position_tracking_exact": 0.037221760413780364,
+          "position_tracking_forward": 0.6074628244204304,
+          "branch_following": 0.5601110748121529,
+          "termination_recognition": 0.7183544303797469,
+          "off_graph_rate": 0.2641544287429574
+        }
+      }
+    },
+    "mixed": {
+      "fabrication_rate": 0.02418379685610641,
+      "forced_mapping_rate": 0.25574365175332525,
+      "correct_abstention_rate": 0.7200725513905684,
+      "abstention_redirect_rate": 0.0,
+      "forced_mapping_nearby_rate": 0.0,
+      "recovery_rate": 0.004319654427645789,
+      "inappropriate_abstention_rate": null,
+      "contamination": {
+        "pre_injection_pt_exact": 0.010222489476849068,
+        "post_injection_pt_exact": 0.013539088659193479,
+        "delta": 0.0033165991823444103
+      },
+      "by_injection_category": {
+        "coverage_gap": {
+          "fabrication": 0.013189448441247002,
+          "forced_mapping": 0.37050359712230213,
+          "correct_abstention": 0.6163069544364509,
+          "inappropriate_abstention": null
+        },
+        "undocumented_malfunction": {
+          "fabrication": 0.014227642276422764,
+          "forced_mapping": 0.16463414634146342,
+          "correct_abstention": 0.8211382113821138,
+          "inappropriate_abstention": null
+        },
+        "unrelated_question": {
+          "fabrication": 0.06707317073170732,
+          "forced_mapping": 0.10060975609756098,
+          "correct_abstention": 0.8323170731707317,
+          "inappropriate_abstention": null
+        }
+      }
+    }
+  },
+  "Llama 3.3 70B": {
+    "model": "Llama 3.3 70B",
+    "total_clean_conversations": 838,
+    "total_mixed_conversations": 838,
+    "clean": {
+      "metrics": {
+        "branch_following": 0.850375694217576,
+        "termination_recognition": 0.8338607594936709,
+        "off_graph_rate": 0.008589637018564699
+      },
+      "sanity_checks": {
+        "position_tracking_exact": 0.04608848249746005,
+        "position_tracking_forward": 0.7096148517594901
+      },
+      "threshold_sweep": {
+        "0.05": {
+          "position_tracking_exact": 0.04608848249746005,
+          "position_tracking_forward": 0.7096148517594901,
+          "branch_following": 0.850375694217576,
+          "termination_recognition": 0.8338607594936709,
+          "off_graph_rate": 0.008589637018564699
+        },
+        "0.1": {
+          "position_tracking_exact": 0.039623164311443616,
+          "position_tracking_forward": 0.6975154705828023,
+          "branch_following": 0.7415877164325384,
+          "termination_recognition": 0.8338607594936709,
+          "off_graph_rate": 0.056987161725316336
+        },
+        "0.15": {
+          "position_tracking_exact": 0.03066408053939226,
+          "position_tracking_forward": 0.6655583264062067,
+          "branch_following": 0.6471741261025808,
+          "termination_recognition": 0.8338607594936709,
+          "off_graph_rate": 0.14223700009236168
+        },
+        "0.2": {
+          "position_tracking_exact": 0.020319571441765955,
+          "position_tracking_forward": 0.5951787198669992,
+          "branch_following": 0.5650114341718393,
+          "termination_recognition": 0.8338607594936709,
+          "off_graph_rate": 0.25999815276623256
+        },
+        "0.25": {
+          "position_tracking_exact": 0.011452849358086267,
+          "position_tracking_forward": 0.5050337120162557,
+          "branch_following": 0.4825220516171186,
+          "termination_recognition": 0.8338607594936709,
+          "off_graph_rate": 0.3857024106400665
+        },
+        "0.3": {
+          "position_tracking_exact": 0.00618823312090145,
+          "position_tracking_forward": 0.4082386626027524,
+          "branch_following": 0.3921920940868997,
+          "termination_recognition": 0.8338607594936709,
+          "off_graph_rate": 0.5109448600720421
+        },
+        "0.35": {
+          "position_tracking_exact": 0.0035097441581232107,
+          "position_tracking_forward": 0.32446661124965365,
+          "branch_following": 0.3085592943482522,
+          "termination_recognition": 0.8338607594936709,
+          "off_graph_rate": 0.6143899510483052
+        },
+        "0.4": {
+          "position_tracking_exact": 0.0029555740278932297,
+          "position_tracking_forward": 0.25722730211508266,
+          "branch_following": 0.23619732113688338,
+          "termination_recognition": 0.8338607594936709,
+          "off_graph_rate": 0.6971460238293156
+        },
+        "0.45": {
+          "position_tracking_exact": 0.002124318832548259,
+          "position_tracking_forward": 0.19617622610141314,
+          "branch_following": 0.17869977131656323,
+          "termination_recognition": 0.8338607594936709,
+          "off_graph_rate": 0.7682645238754965
+        },
+        "0.5": {
+          "position_tracking_exact": 0.002124318832548259,
+          "position_tracking_forward": 0.15415165789230628,
+          "branch_following": 0.14260045736687357,
+          "termination_recognition": 0.8338607594936709,
+          "off_graph_rate": 0.8164773252055048
+        }
+      }
+    },
+    "mixed": {
+      "fabrication_rate": 0.030229746070133012,
+      "forced_mapping_rate": 0.156590084643289,
+      "correct_abstention_rate": 0.813180169286578,
+      "abstention_redirect_rate": 0.0,
+      "forced_mapping_nearby_rate": 0.0,
+      "recovery_rate": 0.04854368932038835,
+      "inappropriate_abstention_rate": null,
+      "contamination": {
+        "pre_injection_pt_exact": 0.032471437161755864,
+        "post_injection_pt_exact": 0.042364245159411854,
+        "delta": 0.009892807997655989
+      },
+      "by_injection_category": {
+        "coverage_gap": {
+          "fabrication": 0.016786570743405275,
+          "forced_mapping": 0.23980815347721823,
+          "correct_abstention": 0.7434052757793765,
+          "inappropriate_abstention": null
+        },
+        "undocumented_malfunction": {
+          "fabrication": 0.01016260162601626,
+          "forced_mapping": 0.11788617886178862,
+          "correct_abstention": 0.8719512195121951,
+          "inappropriate_abstention": null
+        },
+        "unrelated_question": {
+          "fabrication": 0.09451219512195122,
+          "forced_mapping": 0.003048780487804878,
+          "correct_abstention": 0.9024390243902439,
+          "inappropriate_abstention": null
+        }
+      }
+    }
+  },
+  "Llama 4 Maverick": {
+    "model": "Llama 4 Maverick",
+    "total_clean_conversations": 838,
+    "total_mixed_conversations": 838,
+    "clean": {
+      "metrics": {
+        "branch_following": 0.8275073505390396,
+        "termination_recognition": 0.7278481012658228,
+        "off_graph_rate": 0.0026784889627782396
+      },
+      "sanity_checks": {
+        "position_tracking_exact": 0.07813798836242726,
+        "position_tracking_forward": 0.6554909023736953
+      },
+      "threshold_sweep": {
+        "0.05": {
+          "position_tracking_exact": 0.07813798836242726,
+          "position_tracking_forward": 0.6554909023736953,
+          "branch_following": 0.8275073505390396,
+          "termination_recognition": 0.7278481012658228,
+          "off_graph_rate": 0.0026784889627782396
+        },
+        "0.1": {
+          "position_tracking_exact": 0.0714879467996675,
+          "position_tracking_forward": 0.6420060958714325,
+          "branch_following": 0.6806599150604378,
+          "termination_recognition": 0.7278481012658228,
+          "off_graph_rate": 0.04257873833933684
+        },
+        "0.15": {
+          "position_tracking_exact": 0.05763369354391798,
+          "position_tracking_forward": 0.6058926757181121,
+          "branch_following": 0.5736687357072852,
+          "termination_recognition": 0.7278481012658228,
+          "off_graph_rate": 0.11397432345063267
+        },
+        "0.2": {
+          "position_tracking_exact": 0.03565161171146208,
+          "position_tracking_forward": 0.5293248360580032,
+          "branch_following": 0.4712512250898399,
+          "termination_recognition": 0.7278481012658228,
+          "off_graph_rate": 0.22665558326406207
+        },
+        "0.25": {
+          "position_tracking_exact": 0.01856469936270435,
+          "position_tracking_forward": 0.44010344509097626,
+          "branch_following": 0.36246324730480234,
+          "termination_recognition": 0.7278481012658228,
+          "off_graph_rate": 0.3463563313937379
+        },
+        "0.3": {
+          "position_tracking_exact": 0.007850743511591391,
+          "position_tracking_forward": 0.3533758197099843,
+          "branch_following": 0.2685396929108135,
+          "termination_recognition": 0.7278481012658228,
+          "off_graph_rate": 0.46892029186293527
+        },
+        "0.35": {
+          "position_tracking_exact": 0.004156275976724855,
+          "position_tracking_forward": 0.28502817031495337,
+          "branch_following": 0.20728520091473374,
+          "termination_recognition": 0.7278481012658228,
+          "off_graph_rate": 0.5645146393276069
+        },
+        "0.4": {
+          "position_tracking_exact": 0.002586127274406576,
+          "position_tracking_forward": 0.23376743326868016,
+          "branch_following": 0.16546880104541,
+          "termination_recognition": 0.7278481012658228,
+          "off_graph_rate": 0.6404359471691142
+        },
+        "0.45": {
+          "position_tracking_exact": 0.0015701487023182783,
+          "position_tracking_forward": 0.1924817585665466,
+          "branch_following": 0.13100294021561582,
+          "termination_recognition": 0.7278481012658228,
+          "off_graph_rate": 0.705828022536252
+        },
+        "0.5": {
+          "position_tracking_exact": 0.0013854253255749516,
+          "position_tracking_forward": 0.1646808903666759,
+          "branch_following": 0.11368833714472394,
+          "termination_recognition": 0.7278481012658228,
+          "off_graph_rate": 0.7495151011360488
+        }
+      }
+    },
+    "mixed": {
+      "fabrication_rate": 0.0501813784764208,
+      "forced_mapping_rate": 0.2926239419588875,
+      "correct_abstention_rate": 0.6571946795646917,
+      "abstention_redirect_rate": 0.0,
+      "forced_mapping_nearby_rate": 0.0,
+      "recovery_rate": 0.06172839506172839,
+      "inappropriate_abstention_rate": null,
+      "contamination": {
+        "pre_injection_pt_exact": 0.03998797354179194,
+        "post_injection_pt_exact": 0.07220847284903188,
+        "delta": 0.03222049930723994
+      },
+      "by_injection_category": {
+        "coverage_gap": {
+          "fabrication": 0.03117505995203837,
+          "forced_mapping": 0.4304556354916067,
+          "correct_abstention": 0.5383693045563549,
+          "inappropriate_abstention": null
+        },
+        "undocumented_malfunction": {
+          "fabrication": 0.046747967479674794,
+          "forced_mapping": 0.23373983739837398,
+          "correct_abstention": 0.7195121951219512,
+          "inappropriate_abstention": null
+        },
+        "unrelated_question": {
+          "fabrication": 0.10365853658536585,
+          "forced_mapping": 0.03048780487804878,
+          "correct_abstention": 0.8658536585365854,
+          "inappropriate_abstention": null
+        }
+      }
+    }
+  },
+  "Llama 4 Scout": {
+    "model": "Llama 4 Scout",
+    "total_clean_conversations": 838,
+    "total_mixed_conversations": 838,
+    "clean": {
+      "metrics": {
+        "branch_following": 0.7922247631492976,
+        "termination_recognition": 0.615506329113924,
+        "off_graph_rate": 0.0019395954558049321
+      },
+      "sanity_checks": {
+        "position_tracking_exact": 0.07416643576244573,
+        "position_tracking_forward": 0.6568763276992703
+      },
+      "threshold_sweep": {
+        "0.05": {
+          "position_tracking_exact": 0.07416643576244573,
+          "position_tracking_forward": 0.6568763276992703,
+          "branch_following": 0.7922247631492976,
+          "termination_recognition": 0.615506329113924,
+          "off_graph_rate": 0.0019395954558049321
+        },
+        "0.1": {
+          "position_tracking_exact": 0.07056432991595087,
+          "position_tracking_forward": 0.6486561374341923,
+          "branch_following": 0.6545246651421104,
+          "termination_recognition": 0.615506329113924,
+          "off_graph_rate": 0.04165512145562021
+        },
+        "0.15": {
+          "position_tracking_exact": 0.05135309873464487,
+          "position_tracking_forward": 0.5992426341553524,
+          "branch_following": 0.5393662201894805,
+          "termination_recognition": 0.615506329113924,
+          "off_graph_rate": 0.15599889165973954
+        },
+        "0.2": {
+          "position_tracking_exact": 0.03131061235799391,
+          "position_tracking_forward": 0.5047566269511407,
+          "branch_following": 0.4320483502123489,
+          "termination_recognition": 0.615506329113924,
+          "off_graph_rate": 0.3035928696776577
+        },
+        "0.25": {
+          "position_tracking_exact": 0.017363997413872727,
+          "position_tracking_forward": 0.40648379052369077,
+          "branch_following": 0.3391048676902973,
+          "termination_recognition": 0.615506329113924,
+          "off_graph_rate": 0.43742495612819804
+        },
+        "0.3": {
+          "position_tracking_exact": 0.010436870785997967,
+          "position_tracking_forward": 0.31883254825898216,
+          "branch_following": 0.25890231950343023,
+          "termination_recognition": 0.615506329113924,
+          "off_graph_rate": 0.554354853606724
+        },
+        "0.35": {
+          "position_tracking_exact": 0.007296573381361411,
+          "position_tracking_forward": 0.25242449431975617,
+          "branch_following": 0.19634106501143417,
+          "termination_recognition": 0.615506329113924,
+          "off_graph_rate": 0.6442227763923525
+        },
+        "0.4": {
+          "position_tracking_exact": 0.005818786367414797,
+          "position_tracking_forward": 0.20301099104091622,
+          "branch_following": 0.15354459327017314,
+          "termination_recognition": 0.615506329113924,
+          "off_graph_rate": 0.7134016809827284
+        },
+        "0.45": {
+          "position_tracking_exact": 0.0038791909116098642,
+          "position_tracking_forward": 0.15562944490625288,
+          "branch_following": 0.11662855276053577,
+          "termination_recognition": 0.615506329113924,
+          "off_graph_rate": 0.7773159693359195
+        },
+        "0.5": {
+          "position_tracking_exact": 0.0029555740278932297,
+          "position_tracking_forward": 0.123764662418029,
+          "branch_following": 0.09212675596210389,
+          "termination_recognition": 0.615506329113924,
+          "off_graph_rate": 0.8210030479357162
+        }
+      }
+    },
+    "mixed": {
+      "fabrication_rate": 0.08645707376058041,
+      "forced_mapping_rate": 0.5193470374848851,
+      "correct_abstention_rate": 0.3941958887545345,
+      "abstention_redirect_rate": 0.0,
+      "forced_mapping_nearby_rate": 0.0,
+      "recovery_rate": 0.07784431137724551,
+      "inappropriate_abstention_rate": null,
+      "contamination": {
+        "pre_injection_pt_exact": 0.0417919422730006,
+        "post_injection_pt_exact": 0.0799242975687873,
+        "delta": 0.0381323552957867
+      },
+      "by_injection_category": {
+        "coverage_gap": {
+          "fabrication": 0.06235011990407674,
+          "forced_mapping": 0.7014388489208633,
+          "correct_abstention": 0.23621103117505995,
+          "inappropriate_abstention": null
+        },
+        "undocumented_malfunction": {
+          "fabrication": 0.11382113821138211,
+          "forced_mapping": 0.5345528455284553,
+          "correct_abstention": 0.3516260162601626,
+          "inappropriate_abstention": null
+        },
+        "unrelated_question": {
+          "fabrication": 0.10670731707317073,
+          "forced_mapping": 0.03353658536585366,
+          "correct_abstention": 0.8597560975609756,
+          "inappropriate_abstention": null
+        }
+      }
+    }
+  },
+  "Mistral Small": {
+    "model": "Mistral Small",
+    "total_clean_conversations": 838,
+    "total_mixed_conversations": 838,
+    "clean": {
+      "metrics": {
+        "branch_following": 0.7361973211368834,
+        "termination_recognition": 0.7958860759493671,
+        "off_graph_rate": 0.07545949939964902
+      },
+      "sanity_checks": {
+        "position_tracking_exact": 0.07952341368800221,
+        "position_tracking_forward": 0.6415442874295743
+      },
+      "threshold_sweep": {
+        "0.05": {
+          "position_tracking_exact": 0.07952341368800221,
+          "position_tracking_forward": 0.6415442874295743,
+          "branch_following": 0.7361973211368834,
+          "termination_recognition": 0.7958860759493671,
+          "off_graph_rate": 0.07545949939964902
+        },
+        "0.1": {
+          "position_tracking_exact": 0.07592130784150734,
+          "position_tracking_forward": 0.6346171608016995,
+          "branch_following": 0.6421104214309049,
+          "termination_recognition": 0.7958860759493671,
+          "off_graph_rate": 0.09337766694375173
+        },
+        "0.15": {
+          "position_tracking_exact": 0.07250392537175579,
+          "position_tracking_forward": 0.6229795880668698,
+          "branch_following": 0.5610911466840902,
+          "termination_recognition": 0.7958860759493671,
+          "off_graph_rate": 0.1207167267017641
+        },
+        "0.2": {
+          "position_tracking_exact": 0.06899418121363259,
+          "position_tracking_forward": 0.6013669529879007,
+          "branch_following": 0.5111074812152892,
+          "termination_recognition": 0.7958860759493671,
+          "off_graph_rate": 0.15950863581786276
+        },
+        "0.25": {
+          "position_tracking_exact": 0.06317539484621779,
+          "position_tracking_forward": 0.5610048951694837,
+          "branch_following": 0.45475334857889577,
+          "termination_recognition": 0.7958860759493671,
+          "off_graph_rate": 0.22212986053385056
+        },
+        "0.3": {
+          "position_tracking_exact": 0.059111480557864596,
+          "position_tracking_forward": 0.5110372217604138,
+          "branch_following": 0.4070565174779484,
+          "termination_recognition": 0.7958860759493671,
+          "off_graph_rate": 0.29463378590560635
+        },
+        "0.35": {
+          "position_tracking_exact": 0.056802438348573014,
+          "position_tracking_forward": 0.4706751639419969,
+          "branch_following": 0.3706305129042797,
+          "termination_recognition": 0.7958860759493671,
+          "off_graph_rate": 0.35956405283088577
+        },
+        "0.4": {
+          "position_tracking_exact": 0.05550937471136973,
+          "position_tracking_forward": 0.4344693821003048,
+          "branch_following": 0.3374714145704018,
+          "termination_recognition": 0.7958860759493671,
+          "off_graph_rate": 0.4127643853329639
+        },
+        "0.45": {
+          "position_tracking_exact": 0.05477048120439642,
+          "position_tracking_forward": 0.4014038976632493,
+          "branch_following": 0.3003920287487749,
+          "termination_recognition": 0.7958860759493671,
+          "off_graph_rate": 0.457467442504849
+        },
+        "0.5": {
+          "position_tracking_exact": 0.0543086727625381,
+          "position_tracking_forward": 0.3857024106400665,
+          "branch_following": 0.2840574975498203,
+          "termination_recognition": 0.7958860759493671,
+          "off_graph_rate": 0.48157384316985313
+        }
+      }
+    },
+    "mixed": {
+      "fabrication_rate": 0.053204353083434096,
+      "forced_mapping_rate": 0.2756952841596131,
+      "correct_abstention_rate": 0.6711003627569528,
+      "abstention_redirect_rate": 0.0,
+      "forced_mapping_nearby_rate": 0.0,
+      "recovery_rate": 0.04595588235294118,
+      "inappropriate_abstention_rate": null,
+      "contamination": {
+        "pre_injection_pt_exact": 0.06584485868911606,
+        "post_injection_pt_exact": 0.039598194788178775,
+        "delta": -0.026246663900937287
+      },
+      "by_injection_category": {
+        "coverage_gap": {
+          "fabrication": 0.04316546762589928,
+          "forced_mapping": 0.3872901678657074,
+          "correct_abstention": 0.5695443645083933,
+          "inappropriate_abstention": null
+        },
+        "undocumented_malfunction": {
+          "fabrication": 0.056910569105691054,
+          "forced_mapping": 0.24390243902439024,
+          "correct_abstention": 0.6991869918699187,
+          "inappropriate_abstention": null
+        },
+        "unrelated_question": {
+          "fabrication": 0.07317073170731707,
+          "forced_mapping": 0.039634146341463415,
+          "correct_abstention": 0.8871951219512195,
+          "inappropriate_abstention": null
+        }
+      }
+    }
+  },
+  "Nemotron 3 Super": {
+    "model": "Nemotron 3 Super",
+    "total_clean_conversations": 838,
+    "total_mixed_conversations": 838,
+    "clean": {
+      "metrics": {
+        "branch_following": 0.7032015681149951,
+        "termination_recognition": 0.8607594936708861,
+        "off_graph_rate": 0.1371571072319202
+      },
+      "sanity_checks": {
+        "position_tracking_exact": 0.06354484159970444,
+        "position_tracking_forward": 0.6309226932668329
+      },
+      "threshold_sweep": {
+        "0.05": {
+          "position_tracking_exact": 0.06354484159970444,
+          "position_tracking_forward": 0.6309226932668329,
+          "branch_following": 0.7032015681149951,
+          "termination_recognition": 0.8607594936708861,
+          "off_graph_rate": 0.1371571072319202
+        },
+        "0.1": {
+          "position_tracking_exact": 0.05190726886487485,
+          "position_tracking_forward": 0.6067239309134571,
+          "branch_following": 0.6164652074485463,
+          "termination_recognition": 0.8607594936708861,
+          "off_graph_rate": 0.21760413780363905
+        },
+        "0.15": {
+          "position_tracking_exact": 0.03999261106493027,
+          "position_tracking_forward": 0.580955019857763,
+          "branch_following": 0.5501470107807906,
+          "termination_recognition": 0.8607594936708861,
+          "off_graph_rate": 0.28068717096148516
+        },
+        "0.2": {
+          "position_tracking_exact": 0.02660016625103907,
+          "position_tracking_forward": 0.543086727625381,
+          "branch_following": 0.5022868343678536,
+          "termination_recognition": 0.8607594936708861,
+          "off_graph_rate": 0.3402604599612081
+        },
+        "0.25": {
+          "position_tracking_exact": 0.014962593516209476,
+          "position_tracking_forward": 0.5005079892860441,
+          "branch_following": 0.4629206141783731,
+          "termination_recognition": 0.8607594936708861,
+          "off_graph_rate": 0.39992611064930267
+        },
+        "0.3": {
+          "position_tracking_exact": 0.008035466888334718,
+          "position_tracking_forward": 0.4486007204211693,
+          "branch_following": 0.4109768049656975,
+          "termination_recognition": 0.8607594936708861,
+          "off_graph_rate": 0.4640251223792371
+        },
+        "0.35": {
+          "position_tracking_exact": 0.004063914288353191,
+          "position_tracking_forward": 0.3980788768818694,
+          "branch_following": 0.362953283240771,
+          "termination_recognition": 0.8607594936708861,
+          "off_graph_rate": 0.524983836704535
+        },
+        "0.4": {
+          "position_tracking_exact": 0.00323265909300822,
+          "position_tracking_forward": 0.3554077768541609,
+          "branch_following": 0.32081019274746814,
+          "termination_recognition": 0.8607594936708861,
+          "off_graph_rate": 0.5767063821926665
+        },
+        "0.45": {
+          "position_tracking_exact": 0.0020319571441765956,
+          "position_tracking_forward": 0.30848803916135586,
+          "branch_following": 0.27638026788631165,
+          "termination_recognition": 0.8607594936708861,
+          "off_graph_rate": 0.6318463101505496
+        },
+        "0.5": {
+          "position_tracking_exact": 0.0019395954558049321,
+          "position_tracking_forward": 0.27135864043594715,
+          "branch_following": 0.2406076445606011,
+          "termination_recognition": 0.8607594936708861,
+          "off_graph_rate": 0.6778424309596379
+        }
+      }
+    },
+    "mixed": {
+      "fabrication_rate": 0.04050785973397823,
+      "forced_mapping_rate": 0.22067714631197097,
+      "correct_abstention_rate": 0.7388149939540508,
+      "abstention_redirect_rate": 0.0,
+      "forced_mapping_nearby_rate": 0.0,
+      "recovery_rate": 0.03009259259259259,
+      "inappropriate_abstention_rate": null,
+      "contamination": {
+        "pre_injection_pt_exact": 0.017137702946482262,
+        "post_injection_pt_exact": 0.03188237006842335,
+        "delta": 0.014744667121941089
+      },
+      "by_injection_category": {
+        "coverage_gap": {
+          "fabrication": 0.03357314148681055,
+          "forced_mapping": 0.31414868105515587,
+          "correct_abstention": 0.6522781774580336,
+          "inappropriate_abstention": null
+        },
+        "undocumented_malfunction": {
+          "fabrication": 0.03861788617886179,
+          "forced_mapping": 0.2073170731707317,
+          "correct_abstention": 0.7540650406504065,
+          "inappropriate_abstention": null
+        },
+        "unrelated_question": {
+          "fabrication": 0.06097560975609756,
+          "forced_mapping": 0.003048780487804878,
+          "correct_abstention": 0.9359756097560976,
+          "inappropriate_abstention": null
+        }
+      }
+    }
+  },
+  "Qwen3 235B Thinking": {
+    "model": "Qwen3 235B Thinking",
+    "total_clean_conversations": 838,
+    "total_mixed_conversations": 838,
+    "clean": {
+      "metrics": {
+        "branch_following": 0.7424044429924861,
+        "termination_recognition": 0.9920886075949367,
+        "off_graph_rate": 0.061420522767156184
+      },
+      "sanity_checks": {
+        "position_tracking_exact": 0.06483790523690773,
+        "position_tracking_forward": 0.600997506234414
+      },
+      "threshold_sweep": {
+        "0.05": {
+          "position_tracking_exact": 0.06483790523690773,
+          "position_tracking_forward": 0.600997506234414,
+          "branch_following": 0.7424044429924861,
+          "termination_recognition": 0.9920886075949367,
+          "off_graph_rate": 0.061420522767156184
+        },
+        "0.1": {
+          "position_tracking_exact": 0.059850374064837904,
+          "position_tracking_forward": 0.589729380253071,
+          "branch_following": 0.5490035935968638,
+          "termination_recognition": 0.9920886075949367,
+          "off_graph_rate": 0.11000277085065115
+        },
+        "0.15": {
+          "position_tracking_exact": 0.03380437794402882,
+          "position_tracking_forward": 0.4935808626581694,
+          "branch_following": 0.3792878144397256,
+          "termination_recognition": 0.9920886075949367,
+          "off_graph_rate": 0.28530525538006835
+        },
+        "0.2": {
+          "position_tracking_exact": 0.010898679227856286,
+          "position_tracking_forward": 0.34413965087281795,
+          "branch_following": 0.2574322116955243,
+          "termination_recognition": 0.9920886075949367,
+          "off_graph_rate": 0.5030941165604508
+        },
+        "0.25": {
+          "position_tracking_exact": 0.0033250207813798837,
+          "position_tracking_forward": 0.23071949755241525,
+          "branch_following": 0.16906239790918,
+          "termination_recognition": 0.9920886075949367,
+          "off_graph_rate": 0.6685139004341
+        },
+        "0.3": {
+          "position_tracking_exact": 0.0007388935069733074,
+          "position_tracking_forward": 0.14971829685046642,
+          "branch_following": 0.10519438092126757,
+          "termination_recognition": 0.9920886075949367,
+          "off_graph_rate": 0.7862750531079709
+        },
+        "0.35": {
+          "position_tracking_exact": 9.236168837166343e-05,
+          "position_tracking_forward": 0.0990117299344232,
+          "branch_following": 0.06991179353152564,
+          "termination_recognition": 0.9920886075949367,
+          "off_graph_rate": 0.8585018934146116
+        },
+        "0.4": {
+          "position_tracking_exact": 0.0,
+          "position_tracking_forward": 0.059665650688094575,
+          "branch_following": 0.04181639986932375,
+          "termination_recognition": 0.9920886075949367,
+          "off_graph_rate": 0.9108709707213448
+        },
+        "0.45": {
+          "position_tracking_exact": 0.0,
+          "position_tracking_forward": 0.03565161171146208,
+          "branch_following": 0.023685070238484155,
+          "termination_recognition": 0.9920886075949367,
+          "off_graph_rate": 0.9452295187956036
+        },
+        "0.5": {
+          "position_tracking_exact": 0.0,
+          "position_tracking_forward": 0.02253625196268588,
+          "branch_following": 0.015027768703038223,
+          "termination_recognition": 0.9920886075949367,
+          "off_graph_rate": 0.9662879837443429
+        }
+      }
+    },
+    "mixed": {
+      "fabrication_rate": 0.06287787182587666,
+      "forced_mapping_rate": 0.2883917775090689,
+      "correct_abstention_rate": 0.6487303506650545,
+      "abstention_redirect_rate": 0.0,
+      "forced_mapping_nearby_rate": 0.0,
+      "recovery_rate": 0.04991394148020654,
+      "inappropriate_abstention_rate": null,
+      "contamination": {
+        "pre_injection_pt_exact": 0.01984365604329525,
+        "post_injection_pt_exact": 0.05066239627311108,
+        "delta": 0.03081874022981583
+      },
+      "by_injection_category": {
+        "coverage_gap": {
+          "fabrication": 0.04196642685851319,
+          "forced_mapping": 0.4148681055155875,
+          "correct_abstention": 0.5431654676258992,
+          "inappropriate_abstention": null
+        },
+        "undocumented_malfunction": {
+          "fabrication": 0.07520325203252033,
+          "forced_mapping": 0.2621951219512195,
+          "correct_abstention": 0.6626016260162602,
+          "inappropriate_abstention": null
+        },
+        "unrelated_question": {
+          "fabrication": 0.0975609756097561,
+          "forced_mapping": 0.006097560975609756,
+          "correct_abstention": 0.8963414634146342,
+          "inappropriate_abstention": null
+        }
+      }
+    }
+  },
+  "Qwen3 30B Thinking": {
+    "model": "Qwen3 30B Thinking",
+    "total_clean_conversations": 838,
+    "total_mixed_conversations": 838,
+    "clean": {
+      "metrics": {
+        "branch_following": 0.701078079059131,
+        "termination_recognition": 0.7009493670886076,
+        "off_graph_rate": 0.21529509559434745
+      },
+      "sanity_checks": {
+        "position_tracking_exact": 0.05301560912533481,
+        "position_tracking_forward": 0.6236261198854715
+      },
+      "threshold_sweep": {
+        "0.05": {
+          "position_tracking_exact": 0.05301560912533481,
+          "position_tracking_forward": 0.6236261198854715,
+          "branch_following": 0.701078079059131,
+          "termination_recognition": 0.7009493670886076,
+          "off_graph_rate": 0.21529509559434745
+        },
+        "0.1": {
+          "position_tracking_exact": 0.05181490717650319,
+          "position_tracking_forward": 0.6221483328715249,
+          "branch_following": 0.6417837308069259,
+          "termination_recognition": 0.7009493670886076,
+          "off_graph_rate": 0.2210215202733906
+        },
+        "0.15": {
+          "position_tracking_exact": 0.04276346171608017,
+          "position_tracking_forward": 0.6046919737692805,
+          "branch_following": 0.5772623325710552,
+          "termination_recognition": 0.7009493670886076,
+          "off_graph_rate": 0.2508543456174379
+        },
+        "0.2": {
+          "position_tracking_exact": 0.038237738985868665,
+          "position_tracking_forward": 0.5885286783042394,
+          "branch_following": 0.5321790264619406,
+          "termination_recognition": 0.7009493670886076,
+          "off_graph_rate": 0.28124134109171517
+        },
+        "0.25": {
+          "position_tracking_exact": 0.033527292878913824,
+          "position_tracking_forward": 0.5591576614020505,
+          "branch_following": 0.49803985625612546,
+          "termination_recognition": 0.7009493670886076,
+          "off_graph_rate": 0.3266832917705736
+        },
+        "0.3": {
+          "position_tracking_exact": 0.03010991040916228,
+          "position_tracking_forward": 0.5278470490440565,
+          "branch_following": 0.47043449852989216,
+          "termination_recognition": 0.7009493670886076,
+          "off_graph_rate": 0.3728641359564053
+        },
+        "0.35": {
+          "position_tracking_exact": 0.02872448508358733,
+          "position_tracking_forward": 0.4995843724023275,
+          "branch_following": 0.44854622672329303,
+          "termination_recognition": 0.7009493670886076,
+          "off_graph_rate": 0.41304147039807887
+        },
+        "0.4": {
+          "position_tracking_exact": 0.027246698069640713,
+          "position_tracking_forward": 0.4692897386164219,
+          "branch_following": 0.4248611564848089,
+          "termination_recognition": 0.7009493670886076,
+          "off_graph_rate": 0.45146393276069086
+        },
+        "0.45": {
+          "position_tracking_exact": 0.02632308118592408,
+          "position_tracking_forward": 0.4353006372956498,
+          "branch_following": 0.3939888925187847,
+          "termination_recognition": 0.7009493670886076,
+          "off_graph_rate": 0.49164126720236445
+        },
+        "0.5": {
+          "position_tracking_exact": 0.02613835780918075,
+          "position_tracking_forward": 0.4202456820910686,
+          "branch_following": 0.379124469127736,
+          "termination_recognition": 0.7009493670886076,
+          "off_graph_rate": 0.5111295834487855
+        }
+      }
+    },
+    "mixed": {
+      "fabrication_rate": 0.051390568319226115,
+      "forced_mapping_rate": 0.6741233373639661,
+      "correct_abstention_rate": 0.27448609431680776,
+      "abstention_redirect_rate": 0.0,
+      "forced_mapping_nearby_rate": 0.0,
+      "recovery_rate": 0.019166666666666665,
+      "inappropriate_abstention_rate": null,
+      "contamination": {
+        "pre_injection_pt_exact": 0.01232711966325917,
+        "post_injection_pt_exact": 0.020963750181977,
+        "delta": 0.008636630518717828
+      },
+      "by_injection_category": {
+        "coverage_gap": {
+          "fabrication": 0.02997601918465228,
+          "forced_mapping": 0.7817745803357314,
+          "correct_abstention": 0.1882494004796163,
+          "inappropriate_abstention": null
+        },
+        "undocumented_malfunction": {
+          "fabrication": 0.06097560975609756,
+          "forced_mapping": 0.6565040650406504,
+          "correct_abstention": 0.28252032520325204,
+          "inappropriate_abstention": null
+        },
+        "unrelated_question": {
+          "fabrication": 0.09146341463414634,
+          "forced_mapping": 0.4268292682926829,
+          "correct_abstention": 0.4817073170731707,
+          "inappropriate_abstention": null
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,124 @@
+flowchart TD
+    box_0(["Start"])
+    box_1{"Does the part meet quality assurance team product<br/>specifications?"}
+    box_2["Check product dimensions and inspect for static<br/>charge and contamination."]
+    box_3["Remove the non conforming parts from the supply and<br/>reload with a product batch that meets quality<br/>assurance team specifications."]
+    box_4{"Is the part supply from the hopper correct?"}
+    box_5["Complete the following checks: 1. Check whether<br/>parts exit the hopper evenly. 2. Check the feed<br/>opening for too many or too few parts. 3. Check<br/>whether parts are undamaged on exit from the hopper."]
+    box_6[/"Hopper part supply diagnostic procedure"/]
+    box_7{"Is the part supply to the assembly robot gripper<br/>correct?"}
+    box_8["Complete the following checks: 1. Check whether<br/>parts are evenly distributed across the belt. 2.<br/>Check whether the supply belt runs stably without<br/>jerky movements. 3. Check that parts do not shift<br/>during belt transport (use a high speed camera if<br/>necessary)."]
+    box_9[/"Part supply belt diagnostic procedure"/]
+    box_10{"Is the vision working correctly?"}
+    box_11["Complete the following steps: 1. Check in the vision<br/>system application whether products are correctly<br/>recognised. 2. If recalibration is needed, refer to<br/>the vision coordinate assignment procedure."]
+    box_12[/"Vision coordinate assignment procedure (verify<br/>camera lens is secure)"/]
+    box_13{"Are there contaminated parts?"}
+    box_14["Complete the following checks: 1. Check whether the<br/>vacuum head is contaminated. 2. Check the vacuum<br/>filter for contamination. 3. Check vacuum for<br/>leakage (see pneumatic flow measurement procedure<br/>for values). 4. Check whether the assembly robot<br/>axes are contaminated. 5. Check the centering sleeve<br/>for contamination relative to the vacuum tube."]
+    box_15["Clean the parts and clean or replace the vacuum<br/>filter as needed."]
+    box_16[/"Assembly robot axis lubrication procedure"/]
+    box_17{"Are there electrical defects?"}
+    box_18["Complete the following checks: 1. Check the cabling<br/>and proximity sensor actuator. 2. Check whether the<br/>vacuum generator works correctly. 3. Check system<br/>settings on the operator control interface."]
+    box_19["Replace the defective cabling and/or sensor, and the<br/>generator if faulty."]
+    box_20{"Are there worn parts?"}
+    box_21["Complete the following checks: 1. Check wear on the<br/>vacuum tube. 2. Check wear on the actuator centering<br/>sleeve. 3. Check the assembly robot axes for wear.<br/>4. Check smooth movement of the centering sleeve<br/>relative to the vacuum tube (by disconnecting the<br/>actuator)."]
+    box_22["Replace the worn components identified in the<br/>inspection (vacuum tube, centering sleeve, and/or<br/>assembly robot axes)."]
+    box_23[/"Assembly robot replacement procedure"/]
+    box_24{"Is the extended position of the centering sleeve<br/>relative to the vacuum tube correct?"}
+    box_25[/"Refer to the centering sleeve extended position<br/>check for variant A machines (small format parts)."/]
+    box_26[/"Refer to the centering sleeve extended position<br/>check for variant B machines (medium format parts)."/]
+    box_27[/"Refer to the centering sleeve extended position<br/>check for variant C machines (large format parts)."/]
+    box_28["Adjust the actuator end stop to set the correct<br/>extended position of the centering sleeve relative<br/>to the vacuum tube."]
+    box_29{"Height of centering sleeve relative to supply belt<br/>correct?"}
+    box_30[/"Refer to the centering sleeve height relative to<br/>supply belt for variant A machines (small format<br/>parts)."/]
+    box_31[/"Refer to the centering sleeve height relative to<br/>supply belt for variant B machines (medium format<br/>parts)."/]
+    box_32[/"Refer to the centering sleeve height relative to<br/>supply belt for variant C machines (large format<br/>parts)."/]
+    box_33["Set the Z height of the assembly robot to position<br/>the centering sleeve at the correct height relative<br/>to the supply belt."]
+    box_34{"Part pick up position from supply conveyor correct?"}
+    box_35["Complete the following checks: 1. Check x/y/z pickup<br/>position(s) using a high speed camera (see assembly<br/>robot supply pickup adjustment procedure). 2. Verify<br/>the part is correctly centred under the vacuum head.<br/>3. Monitor the number of retry attempts."]
+    box_36["Complete the following checks: 1. Using jogging<br/>mode, verify that picking up the part from the<br/>supply conveyor is correct and that the part is<br/>correctly aligned under the vacuum head. 2. Check<br/>whether the assembly robot produces excessive<br/>retries when picking up the part."]
+    box_37[/"Robot vision supply integration adjustment procedure"/]
+    box_38(["Picking up part from supply conveyor is correct"])
+
+    box_0 --> box_1
+    box_2 --> box_1
+    box_1 -->|"No"| box_3
+    box_1 -->|"Yes"| box_4
+    box_5 --> box_4
+    box_4 -->|"No"| box_6
+    box_4 -->|"Yes"| box_7
+    box_8 --> box_7
+    box_7 -->|"No"| box_9
+    box_7 -->|"Yes"| box_10
+    box_11 --> box_10
+    box_10 -->|"No"| box_12
+    box_10 -->|"Yes"| box_13
+    box_14 --> box_13
+    box_13 -->|"Yes"| box_15
+    box_13 -->|"Yes"| box_16
+    box_13 -->|"No"| box_17
+    box_18 --> box_17
+    box_17 -->|"Yes"| box_19
+    box_17 -->|"No"| box_20
+    box_21 --> box_20
+    box_20 -->|"Yes"| box_22
+    box_20 -->|"Yes"| box_23
+    box_20 -->|"No"| box_24
+    box_25 --> box_24
+    box_26 --> box_24
+    box_27 --> box_24
+    box_24 -->|"No"| box_28
+    box_24 -->|"Yes"| box_29
+    box_30 --> box_29
+    box_31 --> box_29
+    box_32 --> box_29
+    box_29 -->|"No"| box_33
+    box_29 -->|"Yes"| box_34
+    box_35 --> box_34
+    box_36 --> box_38
+    box_34 -->|"No"| box_37
+    box_34 -->|"Yes"| box_38
+
+    class box_0 terminator
+    class box_1 decision
+    class box_2 process
+    class box_3 process
+    class box_4 decision
+    class box_5 process
+    class box_6 document
+    class box_7 decision
+    class box_8 process
+    class box_9 document
+    class box_10 decision
+    class box_11 process
+    class box_12 document
+    class box_13 decision
+    class box_14 process
+    class box_15 process
+    class box_16 document
+    class box_17 decision
+    class box_18 process
+    class box_19 process
+    class box_20 decision
+    class box_21 process
+    class box_22 process
+    class box_23 document
+    class box_24 decision
+    class box_25 document
+    class box_26 document
+    class box_27 document
+    class box_28 process
+    class box_29 decision
+    class box_30 document
+    class box_31 document
+    class box_32 document
+    class box_33 process
+    class box_34 decision
+    class box_35 process
+    class box_36 process
+    class box_37 document
+    class box_38 terminator
+
+    classDef terminator fill:#2d4a6e,stroke:#1a3050,color:#ffffff,font-weight:bold
+    classDef process    fill:#f0f4ff,stroke:#4a6fa5,color:#1a1a2e
+    classDef decision   fill:#fff8e6,stroke:#c8922a,color:#1a1a2e
+    classDef document   fill:#f0fff4,stroke:#3a8a4a,color:#1a1a2e

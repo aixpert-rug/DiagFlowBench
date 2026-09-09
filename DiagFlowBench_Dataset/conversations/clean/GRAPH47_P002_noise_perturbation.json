@@ -1,0 +1,496 @@
+{
+  "conversation_id": "GRAPH47_P002_noise_perturbation",
+  "graph_id": "GRAPH47",
+  "path_id": "GRAPH47_P002",
+  "regime": "clean",
+  "variant": "noise_perturbation",
+  "robustness_axis": "noise_perturbation",
+  "turns": [
+    {
+      "node_id": "box_0",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Starting belt drive diagnostic procedure.",
+      "edge_label_to_next": null,
+      "turn_index": 0,
+      "ground_truth": {
+        "node_id": "box_0",
+        "node_type": "terminator",
+        "node_text": "Start"
+      }
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Please complete the following checks: Inspect the belt inner drive face and outer face for cracking or cord exposure. Check both pulley faces for grooving, glazing, or material buildup. Inspect the tensioner body for cracking or seized pivot.",
+      "edge_label_to_next": null,
+      "turn_index": 1,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Inspect the belt inner drive face and outer face for cracking or cord exposure. 2. Check both pulley faces for grooving, glazing, or material buildup. 3. Inspect the tensioner body for cracking or seized pivot."
+      }
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "visual inspection complete belt surfaces look good no cord exposre. pulleys show minor glazing but no significant grooving tensioner body intact no cracks",
+      "edge_label_to_next": null,
+      "turn_index": 2,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Inspect the belt inner drive face and outer face for cracking or cord exposure. 2. Check both pulley faces for grooving, glazing, or material buildup. 3. Inspect the tensioner body for cracking or seized pivot."
+      }
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is there severe belt damage, cracking, fraying or delamination?",
+      "edge_label_to_next": null,
+      "turn_index": 3,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Severe belt damage, cracking, fraying or delamination?"
+      }
+    },
+    {
+      "node_id": "box_2",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no belt is in good structural condition no delamination or signifcant damage observed",
+      "edge_label_to_next": "No",
+      "turn_index": 4,
+      "ground_truth": {
+        "node_id": "box_2",
+        "node_type": "decision",
+        "node_text": "Severe belt damage, cracking, fraying or delamination?"
+      }
+    },
+    {
+      "node_id": "box_6",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the belt tension within the specified frequency range?",
+      "edge_label_to_next": null,
+      "turn_index": 5,
+      "ground_truth": {
+        "node_id": "box_6",
+        "node_type": "decision",
+        "node_text": "Belt tension within specified frequency range?"
+      }
+    },
+    {
+      "node_id": "box_6",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yeah checked the natural freq and it falls within target tension range for this belt spec",
+      "edge_label_to_next": "Yes",
+      "turn_index": 6,
+      "ground_truth": {
+        "node_id": "box_6",
+        "node_type": "decision",
+        "node_text": "Belt tension within specified frequency range?"
+      }
+    },
+    {
+      "node_id": "box_11",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the belt tracking aligned with no lateral drift?",
+      "edge_label_to_next": null,
+      "turn_index": 7,
+      "ground_truth": {
+        "node_id": "box_11",
+        "node_type": "decision",
+        "node_text": "Belt tracking aligned, no lateral drift?"
+      }
+    },
+    {
+      "node_id": "box_11",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no seeing some lateral drift belt not tracking straigt on the pulleys",
+      "edge_label_to_next": "No",
+      "turn_index": 8,
+      "ground_truth": {
+        "node_id": "box_11",
+        "node_type": "decision",
+        "node_text": "Belt tracking aligned, no lateral drift?"
+      }
+    },
+    {
+      "node_id": "box_12",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Adjust the pulley alignment. Loosen and retorque the mounting hardware to correct the tracking issue.",
+      "edge_label_to_next": null,
+      "turn_index": 9,
+      "ground_truth": {
+        "node_id": "box_12",
+        "node_type": "process",
+        "node_text": "Adjust pulley alignment, loosen and retorque mounting"
+      }
+    },
+    {
+      "node_id": "box_12",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "alignment adjustment completed loosened the mounts repositioned pulley and retorqued to spec",
+      "edge_label_to_next": "",
+      "turn_index": 10,
+      "ground_truth": {
+        "node_id": "box_12",
+        "node_type": "process",
+        "node_text": "Adjust pulley alignment, loosen and retorque mounting"
+      }
+    },
+    {
+      "node_id": "box_13",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Spin each pulley by hand and observe for wobble. Mount a dial test indicator against the pulley rim and rotate slowly through one full revolution to measure radial runout. Also inspect the belt contact surface for ridges, corrosion, or material transfer.",
+      "edge_label_to_next": null,
+      "turn_index": 11,
+      "ground_truth": {
+        "node_id": "box_13",
+        "node_type": "process",
+        "node_text": "Spin each pulley by hand and observe the running surface for wobble, which indicates hub or bore wear. Mount a dial test indicator against the pulley rim and rotate slowly through one full revolution to measure radial runout. Inspect the belt contact surface for ridges, corrosion, or material transfer from the belt that could cause uneven belt wear."
+      }
+    },
+    {
+      "node_id": "box_13",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "ok so pulley inspection complete measured runout with dial indicator and checked for surface defects on both pulleys",
+      "edge_label_to_next": null,
+      "turn_index": 12,
+      "ground_truth": {
+        "node_id": "box_13",
+        "node_type": "process",
+        "node_text": "Spin each pulley by hand and observe the running surface for wobble, which indicates hub or bore wear. Mount a dial test indicator against the pulley rim and rotate slowly through one full revolution to measure radial runout. Inspect the belt contact surface for ridges, corrosion, or material transfer from the belt that could cause uneven belt wear."
+      }
+    },
+    {
+      "node_id": "box_14",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the pulley runout within 0.05 millimeters total indicator reading?",
+      "edge_label_to_next": null,
+      "turn_index": 13,
+      "ground_truth": {
+        "node_id": "box_14",
+        "node_type": "decision",
+        "node_text": "Pulley runout within 0.05 mm total indicator reading?"
+      }
+    },
+    {
+      "node_id": "box_14",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no reading 0.08mm on drive pulley thats above acceptable limit",
+      "edge_label_to_next": "No",
+      "turn_index": 14,
+      "ground_truth": {
+        "node_id": "box_14",
+        "node_type": "decision",
+        "node_text": "Pulley runout within 0.05 mm total indicator reading?"
+      }
+    },
+    {
+      "node_id": "box_15",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Replace the worn pulley or remachine the flange to bring it back within specification.",
+      "edge_label_to_next": null,
+      "turn_index": 15,
+      "ground_truth": {
+        "node_id": "box_15",
+        "node_type": "process",
+        "node_text": "Replace worn pulley or remachine flange"
+      }
+    },
+    {
+      "node_id": "box_15",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "pulley replaced with new unit old one showed excessive hub wear",
+      "edge_label_to_next": "",
+      "turn_index": 16,
+      "ground_truth": {
+        "node_id": "box_15",
+        "node_type": "process",
+        "node_text": "Replace worn pulley or remachine flange"
+      }
+    },
+    {
+      "node_id": "box_16",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Using a vernier caliper with a depth blade, measure the groove depth at three circumferential positions on each pulley. Record the minimum groove depth and compare against the minimum serviceable depth. Also inspect the belt edges for cracking, fraying, or cord exposure.",
+      "edge_label_to_next": null,
+      "turn_index": 17,
+      "ground_truth": {
+        "node_id": "box_16",
+        "node_type": "process",
+        "node_text": "Using a vernier caliper with a depth blade, measure the groove depth at three circumferential positions on each pulley that contacts the belt. Record the minimum groove depth and compare against the minimum serviceable depth in the drive specification. Inspect the belt edges for cracking, fraying, or cord exposure that would indicate belt replacement is required regardless of tension."
+      }
+    },
+    {
+      "node_id": "box_16",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "measurements taken at three postions on each pulley recorded min depth and checked belt edges for wear indicators",
+      "edge_label_to_next": null,
+      "turn_index": 18,
+      "ground_truth": {
+        "node_id": "box_16",
+        "node_type": "process",
+        "node_text": "Using a vernier caliper with a depth blade, measure the groove depth at three circumferential positions on each pulley that contacts the belt. Record the minimum groove depth and compare against the minimum serviceable depth in the drive specification. Inspect the belt edges for cracking, fraying, or cord exposure that would indicate belt replacement is required regardless of tension."
+      }
+    },
+    {
+      "node_id": "box_18",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the belt wear within the remaining service life limit?",
+      "edge_label_to_next": null,
+      "turn_index": 19,
+      "ground_truth": {
+        "node_id": "box_18",
+        "node_type": "decision",
+        "node_text": "Belt wear within remaining service life limit?"
+      }
+    },
+    {
+      "node_id": "box_18",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no belt exceeded wear limit groove depth measurements and edge condition indicate needs replacement",
+      "edge_label_to_next": "No",
+      "turn_index": 20,
+      "ground_truth": {
+        "node_id": "box_18",
+        "node_type": "decision",
+        "node_text": "Belt wear within remaining service life limit?"
+      }
+    },
+    {
+      "node_id": "box_19",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Replace the belt and reset the service interval counter.",
+      "edge_label_to_next": null,
+      "turn_index": 21,
+      "ground_truth": {
+        "node_id": "box_19",
+        "node_type": "process",
+        "node_text": "Replace belt and reset service interval counter"
+      }
+    },
+    {
+      "node_id": "box_19",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "new belt installed service interval counter reset to zero",
+      "edge_label_to_next": null,
+      "turn_index": 22,
+      "ground_truth": {
+        "node_id": "box_19",
+        "node_type": "process",
+        "node_text": "Replace belt and reset service interval counter"
+      }
+    },
+    {
+      "node_id": "box_20",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Complete the following checks: Run the drive under load for five minutes and check for abnormal heat radiation. Listen for squealing, rumbling, or slapping noise from the belt drive. Check pulley alignment with a straight edge across both pulley faces.",
+      "edge_label_to_next": null,
+      "turn_index": 23,
+      "ground_truth": {
+        "node_id": "box_20",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Run the drive under load for five minutes and check for abnormal heat radiation. 2. Listen for squealing, rumbling, or slapping noise from the belt drive. 3. Check pulley alignment with a straight edge across both pulley faces."
+      }
+    },
+    {
+      "node_id": "box_20",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "five min load test completed monitored temp listened for abnormal sounds and verified alignment with straight edge",
+      "edge_label_to_next": null,
+      "turn_index": 24,
+      "ground_truth": {
+        "node_id": "box_20",
+        "node_type": "process",
+        "node_text": "Complete the following checks: 1. Run the drive under load for five minutes and check for abnormal heat radiation. 2. Listen for squealing, rumbling, or slapping noise from the belt drive. 3. Check pulley alignment with a straight edge across both pulley faces."
+      }
+    },
+    {
+      "node_id": "box_21",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Were there no abnormal noise or temperature rise observed during the test?",
+      "edge_label_to_next": null,
+      "turn_index": 25,
+      "ground_truth": {
+        "node_id": "box_21",
+        "node_type": "decision",
+        "node_text": "No abnormal noise or temperature rise observed?"
+      }
+    },
+    {
+      "node_id": "box_21",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "correct everything ran smoothly no unusual noise no excessive heat alignment remained stable thruout the test",
+      "edge_label_to_next": "Yes",
+      "turn_index": 26,
+      "ground_truth": {
+        "node_id": "box_21",
+        "node_type": "decision",
+        "node_text": "No abnormal noise or temperature rise observed?"
+      }
+    },
+    {
+      "node_id": "box_22",
+      "node_type": "process",
+      "speaker": "system",
+      "utterance": "Log the belt service data and update the maintenance management system with today's work.",
+      "edge_label_to_next": null,
+      "turn_index": 27,
+      "ground_truth": {
+        "node_id": "box_22",
+        "node_type": "process",
+        "node_text": "Log belt service data and update maintenance management system"
+      }
+    },
+    {
+      "node_id": "box_22",
+      "node_type": "process",
+      "speaker": "operator",
+      "utterance": "service data logged maintenance mgmt system updated with all replacement parts and measurements",
+      "edge_label_to_next": null,
+      "turn_index": 28,
+      "ground_truth": {
+        "node_id": "box_22",
+        "node_type": "process",
+        "node_text": "Log belt service data and update maintenance management system"
+      }
+    },
+    {
+      "node_id": "box_23",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Procedure complete. The belt drive system has been fully inspected, repaired, and verified. Return the equipment to service.",
+      "edge_label_to_next": null,
+      "turn_index": 29,
+      "ground_truth": {
+        "node_id": "box_23",
+        "node_type": "terminator",
+        "node_text": "End, Procedure complete"
+      }
+    },
+    {
+      "node_id": "box_23",
+      "node_type": "terminator",
+      "speaker": "operator",
+      "utterance": "understood marking unit ready for production",
+      "edge_label_to_next": null,
+      "turn_index": 30,
+      "ground_truth": {
+        "node_id": "box_23",
+        "node_type": "terminator",
+        "node_text": "End, Procedure complete"
+      }
+    }
+  ],
+  "metadata": {
+    "depth": 16,
+    "num_decisions": 6,
+    "num_processes": 8,
+    "num_documents": 0,
+    "terminator_type": "procedure_complete",
+    "terminator_text": "End, Procedure complete",
+    "true_terminator": true,
+    "node_sequence": [
+      "box_0",
+      "box_1",
+      "box_2",
+      "box_6",
+      "box_11",
+      "box_12",
+      "box_13",
+      "box_14",
+      "box_15",
+      "box_16",
+      "box_18",
+      "box_19",
+      "box_20",
+      "box_21",
+      "box_22",
+      "box_23"
+    ],
+    "edge_labels": [
+      null,
+      null,
+      null,
+      "No",
+      "Yes",
+      "No",
+      "",
+      null,
+      "No",
+      "",
+      null,
+      "No",
+      null,
+      null,
+      "Yes",
+      null
+    ],
+    "decision_points": [
+      {
+        "node": "box_2",
+        "label": "No",
+        "question": "Severe belt damage, cracking, fraying or delamination?"
+      },
+      {
+        "node": "box_6",
+        "label": "Yes",
+        "question": "Belt tension within specified frequency range?"
+      },
+      {
+        "node": "box_11",
+        "label": "No",
+        "question": "Belt tracking aligned, no lateral drift?"
+      },
+      {
+        "node": "box_14",
+        "label": "No",
+        "question": "Pulley runout within 0.05 mm total indicator reading?"
+      },
+      {
+        "node": "box_18",
+        "label": "No",
+        "question": "Belt wear within remaining service life limit?"
+      },
+      {
+        "node": "box_21",
+        "label": "Yes",
+        "question": "No abnormal noise or temperature rise observed?"
+      }
+    ],
+    "generation_model": "anthropic/claude-sonnet-4-5",
+    "verification": {
+      "variant_of": "base",
+      "base_verified": true,
+      "note": "surface-form variant; not independently verified"
+    }
+  }
+}

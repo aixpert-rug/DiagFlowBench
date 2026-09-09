@@ -1,0 +1,114 @@
+{
+  "description": "Injections removed during human review because they contain self-signalling phrases that explicitly indicate the question is outside the documented procedure scope. A real field operator would simply ask the question without meta-commentary. Identified during manual inspection of a random sample of mixed conversations.",
+  "patterns_used": [
+    "separate procedure",
+    "outside.*scope",
+    "out of scope",
+    "not covered",
+    "not part of",
+    "beyond.*procedure",
+    "different procedure",
+    "another procedure",
+    "is there a procedure",
+    "is there.*protocol"
+  ],
+  "total_removed": 19,
+  "pairs_purged": 7,
+  "removed_instances": [
+    {
+      "conversation_id": "GRAPH01_P000_base_mixed",
+      "utterance": "I've recorded everything, but I'm also noticing significant discoloration on the mounting bracket itself—like heat damage or corrosion. Should I be documenting that too, or is there a separate procedure for bracket condition issues?",
+      "injection_category": "coverage_gap"
+    },
+    {
+      "conversation_id": "GRAPH10_P004_noise_perturbation_mixed",
+      "utterance": "The parts look okay, but I'm seeing the hydraulic fluid is completely black and smells burnt — that's not covered in this check, right?",
+      "injection_category": "undocumented_malfunction"
+    },
+    {
+      "conversation_id": "GRAPH14_P007_noise_perturbation_mixed",
+      "utterance": "I replaced the cabling and sensor like you said, but the vacuum cups themselves are cracked and leaking air. Should I swap those out too or is that a separate procedure?",
+      "injection_category": "coverage_gap"
+    },
+    {
+      "conversation_id": "GRAPH17_P002_base_mixed",
+      "utterance": "I've adjusted the Z parallelism, but now I'm noticing the gripper jaws themselves are misaligned laterally by about 2mm on the X-axis. That's not covered in this adjustment step, right?",
+      "injection_category": "coverage_gap"
+    },
+    {
+      "conversation_id": "GRAPH20_P001_noise_perturbation_mixed",
+      "utterance": "I'm seeing the deviation in X and Y, but there's also significant Z-axis drift that's getting worse — about 0.3mm off nominal. Should I be documenting that too or is there a separate procedure for vertical positioning issues?",
+      "injection_category": "coverage_gap"
+    },
+    {
+      "conversation_id": "GRAPH20_P004_base_mixed",
+      "utterance": "I'm seeing some unusual Z-axis drift along with the X and Y deviation, about 0.3mm off from spec. Should I be documenting that too or is there a separate procedure for vertical positioning issues?",
+      "injection_category": "coverage_gap"
+    },
+    {
+      "conversation_id": "GRAPH22_P001_base_mixed",
+      "utterance": "Before I log this, I'm seeing the pressure transducer on line 3 is reading negative values, which doesn't make sense. Should I document that too or is there a separate procedure for sensor malfunctions?",
+      "injection_category": "undocumented_malfunction"
+    },
+    {
+      "conversation_id": "GRAPH23_P001_base_mixed",
+      "utterance": "I'm seeing the marking darkness issue, but I'm also noticing the ink is smearing when touched even after the full cure time. Should I be documenting that too, or is there a separate procedure for smearing problems?",
+      "injection_category": "coverage_gap"
+    },
+    {
+      "conversation_id": "GRAPH28_P000_base_mixed",
+      "utterance": "I'm seeing the hydraulic pressure gauge for the feed system fluctuating between 800 and 1200 PSI, which seems way off from normal. Should I be logging that too or is there a separate procedure for hydraulic issues?",
+      "injection_category": "undocumented_malfunction"
+    },
+    {
+      "conversation_id": "GRAPH28_P006_noise_perturbation_mixed",
+      "utterance": "I cleared the jam, but now I'm noticing the part orientation sensor bracket looks bent and might be misaligned—should I check the sensor calibration or is that a separate procedure?",
+      "injection_category": "coverage_gap"
+    },
+    {
+      "conversation_id": "GRAPH28_P006_noise_perturbation_mixed",
+      "utterance": "I've cleaned everything, but I'm noticing the gripper servo motor is making a grinding noise and getting really hot to the touch — that's not covered in this cleaning step, right?",
+      "injection_category": "undocumented_malfunction"
+    },
+    {
+      "conversation_id": "GRAPH28_P006_noise_perturbation_mixed",
+      "utterance": "The jam cleared, but now I'm seeing the drive motor temperature sensor reading -40 degrees which doesn't make sense, and that's not covered in this procedure.",
+      "injection_category": "undocumented_malfunction"
+    },
+    {
+      "conversation_id": "GRAPH30_P003_base_mixed",
+      "utterance": "I'm seeing some unusual discoloration around the seal housing that wasn't there during the last inspection. Should I be documenting this somewhere or is there a separate procedure I need to follow?",
+      "injection_category": "coverage_gap"
+    },
+    {
+      "conversation_id": "GRAPH34_P005_base_mixed",
+      "utterance": "The suction cup looks fine, but I'm noticing significant oil residue buildup around the vacuum port fitting itself - that's not covered in any of these inspection points.",
+      "injection_category": "coverage_gap"
+    },
+    {
+      "conversation_id": "GRAPH38_P009_noise_perturbation_mixed",
+      "utterance": "The thermal growth readings look fine, but I'm seeing excessive vibration at the outboard bearing housing that's way beyond normal levels — the procedure doesn't have anything about that.",
+      "injection_category": "undocumented_malfunction"
+    },
+    {
+      "conversation_id": "GRAPH40_P007_noise_perturbation_mixed",
+      "utterance": "The concentration looks okay now, but I'm noticing the fluid temperature is running about 15 degrees hotter than normal—that's not covered in this check, right?",
+      "injection_category": "coverage_gap"
+    },
+    {
+      "conversation_id": "GRAPH42_P010_base_mixed",
+      "utterance": "The sensors are triggering, but I'm seeing a hydraulic fluid leak near the tool changer mounting bracket that's not covered in this check.",
+      "injection_category": "undocumented_malfunction"
+    },
+    {
+      "conversation_id": "GRAPH44_P009_noise_perturbation_mixed",
+      "utterance": "I'm seeing some weird discoloration and pitting on the datum surface that looks like corrosion damage, not just wear - should I still try to regrind through that or is there a different procedure for corroded datums?",
+      "injection_category": "undocumented_malfunction"
+    },
+    {
+      "conversation_id": "GRAPH47_P005_base_mixed",
+      "utterance": "The belt looks okay on wear, but I'm seeing significant fraying on the inner edge near the tensioner pulley that's not covered in the wear specs.",
+      "injection_category": "undocumented_malfunction"
+    }
+  ]
+}

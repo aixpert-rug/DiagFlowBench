@@ -1,0 +1,237 @@
+{
+  "id": "GRAPH24",
+  "description": "Fault procedure for parts in incorrect orientation, including 20-cycle production verification run.",
+  "graph": {
+    "nodes": {
+      "box_0": {
+        "type": "terminator",
+        "text": "Start"
+      },
+      "box_1": {
+        "type": "process",
+        "text": "Record the orientation error type (rotation angle, flipped, lateral offset) and the indexing table position at which the error was detected. Collect three mis oriented parts for reference."
+      },
+      "box_2": {
+        "type": "decision",
+        "text": "Is the orientation error occurring on parts from all indexing table positions or only from specific positions?"
+      },
+      "box_3": {
+        "type": "process",
+        "text": "Complete the following checks: 1. Inspect the affected nest position for contamination or damage. 2. Check whether the ejector pin height at that position matches the others."
+      },
+      "box_4": {
+        "type": "process",
+        "text": "Clean the affected nest position and verify ejector pin height. rerun a single position test cycle to confirm the fix."
+      },
+      "box_5": {
+        "type": "decision",
+        "text": "Is the part feed orientation from the supply conveyor correct?"
+      },
+      "box_6": {
+        "type": "process",
+        "text": "Check the supply conveyor exit orientation by running a slow jog cycle and observing the part orientation as it exits the conveyor onto the indexing table."
+      },
+      "box_7": {
+        "type": "process",
+        "text": "Adjust the conveyor exit guide or the part singulation geometry to ensure parts arrive in the correct orientation. rerun the orientation check."
+      },
+      "box_8": {
+        "type": "decision",
+        "text": "Is the reorientation mechanism completing a full rotation cycle to the correct angle?"
+      },
+      "box_9": {
+        "type": "process",
+        "text": "Jog the reorientation mechanism through one full cycle and verify the rotation angle against the specification using a protractor or the encoder readout on the operator control interface."
+      },
+      "box_10": {
+        "type": "process",
+        "text": "Reteach the reorientation mechanism rotation setpoint to the correct angle. Verify with five consecutive test cycles before resuming production."
+      },
+      "box_11": {
+        "type": "decision",
+        "text": "Is the vision system detecting part orientation correctly when tested with known good reference parts?"
+      },
+      "box_12": {
+        "type": "process",
+        "text": "Test the vision system by manually placing three known good correctly oriented parts in the inspection position and checking that all three are accepted without orientation errors."
+      },
+      "box_13": {
+        "type": "process",
+        "text": "Complete the following steps: 1. Load the orientation calibration target into the reorientation unit fixture. 2. Run the orientation detection calibration routine from the vision system menu. 3. Capture the required number of target images at different angular positions."
+      },
+      "box_14": {
+        "type": "decision",
+        "text": "Is the orientation error rate within the acceptable limit after corrections?"
+      },
+      "box_15": {
+        "type": "process",
+        "text": "Escalate to the maintenance team: systematic orientation errors persist after all standard corrective actions have been applied."
+      },
+      "box_16": {
+        "type": "process",
+        "text": "Record all corrective actions and the confirmed root cause in the quality log. Notify quality assurance team."
+      },
+      "box_17": {
+        "type": "process",
+        "text": "Run 20 part production verification cycle at full speed, log orientation result for every part."
+      },
+      "box_18": {
+        "type": "document",
+        "text": "Refer to the orientation verification acceptance criteria."
+      },
+      "box_19": {
+        "type": "decision",
+        "text": "All 20 verification parts correctly oriented, zero orientation faults?"
+      },
+      "box_20": {
+        "type": "terminator",
+        "text": "End, Escalate: orientation fault recurring in verification run, systematic mechanism fault"
+      },
+      "box_21": {
+        "type": "process",
+        "text": "Check production tracking system for any mis oriented parts released to downstream assembly during fault window."
+      },
+      "box_22": {
+        "type": "terminator",
+        "text": "End, Procedure complete. quality assurance notified, production resumed."
+      }
+    },
+    "edges": [
+      {
+        "source": "box_0",
+        "target": "box_1",
+        "label": null
+      },
+      {
+        "source": "box_1",
+        "target": "box_3",
+        "label": ""
+      },
+      {
+        "source": "box_3",
+        "target": "box_2",
+        "label": null
+      },
+      {
+        "source": "box_2",
+        "target": "box_4",
+        "label": "No"
+      },
+      {
+        "source": "box_2",
+        "target": "box_5",
+        "label": "Yes"
+      },
+      {
+        "source": "box_4",
+        "target": "box_6",
+        "label": ""
+      },
+      {
+        "source": "box_6",
+        "target": "box_5",
+        "label": null
+      },
+      {
+        "source": "box_5",
+        "target": "box_7",
+        "label": "No"
+      },
+      {
+        "source": "box_5",
+        "target": "box_8",
+        "label": "Yes"
+      },
+      {
+        "source": "box_7",
+        "target": "box_9",
+        "label": ""
+      },
+      {
+        "source": "box_9",
+        "target": "box_8",
+        "label": null
+      },
+      {
+        "source": "box_8",
+        "target": "box_10",
+        "label": "No"
+      },
+      {
+        "source": "box_8",
+        "target": "box_11",
+        "label": "Yes"
+      },
+      {
+        "source": "box_10",
+        "target": "box_12",
+        "label": ""
+      },
+      {
+        "source": "box_12",
+        "target": "box_11",
+        "label": null
+      },
+      {
+        "source": "box_11",
+        "target": "box_13",
+        "label": "No"
+      },
+      {
+        "source": "box_11",
+        "target": "box_14",
+        "label": "Yes"
+      },
+      {
+        "source": "box_13",
+        "target": "box_14",
+        "label": null
+      },
+      {
+        "source": "box_14",
+        "target": "box_15",
+        "label": "No"
+      },
+      {
+        "source": "box_14",
+        "target": "box_16",
+        "label": "Yes"
+      },
+      {
+        "source": "box_15",
+        "target": "box_16",
+        "label": null
+      },
+      {
+        "source": "box_16",
+        "target": "box_17",
+        "label": null
+      },
+      {
+        "source": "box_18",
+        "target": "box_19",
+        "label": null
+      },
+      {
+        "source": "box_17",
+        "target": "box_19",
+        "label": null
+      },
+      {
+        "source": "box_19",
+        "target": "box_20",
+        "label": "No"
+      },
+      {
+        "source": "box_19",
+        "target": "box_21",
+        "label": "Yes"
+      },
+      {
+        "source": "box_21",
+        "target": "box_22",
+        "label": null
+      }
+    ]
+  }
+}

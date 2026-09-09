@@ -1,0 +1,373 @@
+{
+  "id": "GRAPH37",
+  "description": "Vision system lens condition and calibration verification — PROC-59",
+  "graph": {
+    "nodes": {
+      "box_0": {
+        "type": "terminator",
+        "text": "Start"
+      },
+      "box_1": {
+        "type": "process",
+        "text": "Complete the following checks: 1. Inspect the lens front element at oblique incidence for scratches or chips. 2. Check the lens housing for impact cracks or loose retaining ring. 3. Inspect the lens mount face for contamination or swarf."
+      },
+      "box_2": {
+        "type": "decision",
+        "text": "Lens scratches, chips or contamination present?"
+      },
+      "box_3": {
+        "type": "terminator",
+        "text": "End, Replace lens: optical damage detected"
+      },
+      "box_4": {
+        "type": "process",
+        "text": "Position the lux meter probe at the focal plane of the imaging lens, centred on the inspection zone, with no part present. Record illuminance in lux and compare against the minimum level in the lighting specification. Repeat at the four corners of the inspection field to check uniformity and note any zone where illuminance drops below 80% of the centre value."
+      },
+      "box_5": {
+        "type": "document",
+        "text": "Refer to the vision system lighting specification."
+      },
+      "box_6": {
+        "type": "decision",
+        "text": "Lighting intensity within specified range at part plane?"
+      },
+      "box_7": {
+        "type": "process",
+        "text": "Adjust lighting voltage or replace LEDs as required"
+      },
+      "box_8": {
+        "type": "process",
+        "text": "Blow dry compressed air across the lens surface to remove loose particles. Apply two drops of optical lens cleaner to a lint free cloth and wipe the lens surface using a single outward spiral motion from centre to edge. Inspect the lens under oblique light after cleaning and repeat if smearing or residue is visible."
+      },
+      "box_9": {
+        "type": "process",
+        "text": "Display the live image and position a high contrast resolution target at the nominal focal distance. Using the image analysis software, measure the modulation transfer function at line pairs per millimetre specified in the lens acceptance criteria. Record the sharpness value and note which quadrant of the field, if any, shows the greatest drop in contrast."
+      },
+      "box_10": {
+        "type": "document",
+        "text": "Refer to the focus target specification."
+      },
+      "box_11": {
+        "type": "decision",
+        "text": "Image sharpness within sharpness specification specification?"
+      },
+      "box_12": {
+        "type": "process",
+        "text": "Adjust focus ring or working distance to specification"
+      },
+      "box_13": {
+        "type": "decision",
+        "text": "Reverify focus after lens adjustment"
+      },
+      "box_14": {
+        "type": "terminator",
+        "text": "End, Escalate: focus unrecoverable, lens or mount fault"
+      },
+      "box_15": {
+        "type": "process",
+        "text": "Install the grid distortion target at the nominal focal distance with the grid centred on the optical axis. Capture a still image and use the vision software distortion analysis tool to measure radial distortion at the four corner grid intersections and at the field centre. Compare the maximum distortion value against the tolerance in the camera calibration specification."
+      },
+      "box_16": {
+        "type": "decision",
+        "text": "Distortion within ±0.5 px at corner positions?"
+      },
+      "box_17": {
+        "type": "process",
+        "text": "Apply lens distortion correction coefficients in vision software"
+      },
+      "box_18": {
+        "type": "process",
+        "text": "Place the standard chessboard calibration target on the presentation fixture at the nominal focal distance. Capture five images from five different target orientations as required by the calibration algorithm. Run the calibration routine in the vision software and record the reprojection error; confirm the result is below the limit stated in the vision system commissioning record."
+      },
+      "box_19": {
+        "type": "document",
+        "text": "Refer to the vision calibration procedure."
+      },
+      "box_20": {
+        "type": "decision",
+        "text": "Calibration residual error within 0.1 px root mean square?"
+      },
+      "box_21": {
+        "type": "process",
+        "text": "Rerun calibration with new target images, 20 poses minimum"
+      },
+      "box_22": {
+        "type": "decision",
+        "text": "Reverify calibration residual after recalibration"
+      },
+      "box_23": {
+        "type": "terminator",
+        "text": "End, Escalate: calibration residual persistent, contact vision engineer"
+      },
+      "box_24": {
+        "type": "process",
+        "text": "Connect an oscilloscope channel to the part arrival sensor output and a second channel to the camera trigger signal. With the conveyor running, measure the delay between sensor rising edge and camera trigger rising edge. Compare the measured delay against the target timing in the system parameter record, adjusting the trigger delay register in the vision controller until within tolerance."
+      },
+      "box_25": {
+        "type": "decision",
+        "text": "Trigger delay within ±0.5 ms of specification?"
+      },
+      "box_26": {
+        "type": "process",
+        "text": "Adjust trigger delay in programmable controller programme"
+      },
+      "box_27": {
+        "type": "process",
+        "text": "Run 200 known good conforming parts through the inspection system in normal production conditions. Record the number flagged as reject by the system. Calculate the false reject rate as a percentage of the 200 part sample and compare against the maximum allowed false reject rate specified for the product. Document the part types and the inspection feature most frequently causing false rejections."
+      },
+      "box_28": {
+        "type": "decision",
+        "text": "False reject rate below 0.5%?"
+      },
+      "box_29": {
+        "type": "process",
+        "text": "Complete the following checks: 1. Retrieve the stored rejection images for the last ten false accepts. 2. Confirm each retrieved image shows a visible defect. 3. Compare the defect position against the inspection zone boundary settings."
+      },
+      "box_30": {
+        "type": "process",
+        "text": "Pass 10 known non conforming parts, each with a documented defect type, through the inspection system individually. Record whether each defect is detected and the system output for each part. Confirm that the system correctly rejects all 10 parts; any part that is accepted constitutes a false accept and requires immediate investigation before resuming production."
+      },
+      "box_31": {
+        "type": "decision",
+        "text": "All known rejects correctly detected?"
+      },
+      "box_32": {
+        "type": "terminator",
+        "text": "End, Escalate: detection capability insufficient, algorithm review required"
+      },
+      "box_33": {
+        "type": "process",
+        "text": "Export calibration data and update vision system log"
+      },
+      "box_34": {
+        "type": "process",
+        "text": "Log all test results and update maintenance record"
+      },
+      "box_35": {
+        "type": "terminator",
+        "text": "End, Procedure complete"
+      },
+      "box_36": {
+        "type": "process",
+        "text": "Secondary lens adjustment: clean all optical surfaces with dry nitrogen and reseat the lens body firmly in the mount before tightening the retaining ring. Check the lens mount datum face for swarf or contamination that would cause tilt. Adjust the focus drive mechanism in 0.1 turn increments and allow the mount to settle before returning to the sharpness measurement step."
+      }
+    },
+    "edges": [
+      {
+        "source": "box_0",
+        "target": "box_1",
+        "label": null
+      },
+      {
+        "source": "box_1",
+        "target": "box_2",
+        "label": null
+      },
+      {
+        "source": "box_2",
+        "target": "box_3",
+        "label": "Yes"
+      },
+      {
+        "source": "box_2",
+        "target": "box_6",
+        "label": "No"
+      },
+      {
+        "source": "box_4",
+        "target": "box_6",
+        "label": null
+      },
+      {
+        "source": "box_5",
+        "target": "box_6",
+        "label": null
+      },
+      {
+        "source": "box_6",
+        "target": "box_7",
+        "label": "No"
+      },
+      {
+        "source": "box_7",
+        "target": "box_8",
+        "label": ""
+      },
+      {
+        "source": "box_6",
+        "target": "box_11",
+        "label": "Yes"
+      },
+      {
+        "source": "box_8",
+        "target": "box_11",
+        "label": null
+      },
+      {
+        "source": "box_9",
+        "target": "box_8",
+        "label": ""
+      },
+      {
+        "source": "box_10",
+        "target": "box_11",
+        "label": null
+      },
+      {
+        "source": "box_11",
+        "target": "box_12",
+        "label": "No"
+      },
+      {
+        "source": "box_12",
+        "target": "box_13",
+        "label": null
+      },
+      {
+        "source": "box_13",
+        "target": "box_16",
+        "label": "OK"
+      },
+      {
+        "source": "box_11",
+        "target": "box_16",
+        "label": "Yes"
+      },
+      {
+        "source": "box_15",
+        "target": "box_16",
+        "label": null
+      },
+      {
+        "source": "box_16",
+        "target": "box_17",
+        "label": "No"
+      },
+      {
+        "source": "box_17",
+        "target": "box_18",
+        "label": ""
+      },
+      {
+        "source": "box_16",
+        "target": "box_20",
+        "label": "Yes"
+      },
+      {
+        "source": "box_18",
+        "target": "box_20",
+        "label": null
+      },
+      {
+        "source": "box_19",
+        "target": "box_20",
+        "label": null
+      },
+      {
+        "source": "box_20",
+        "target": "box_21",
+        "label": "No"
+      },
+      {
+        "source": "box_21",
+        "target": "box_22",
+        "label": null
+      },
+      {
+        "source": "box_22",
+        "target": "box_23",
+        "label": "Still failing"
+      },
+      {
+        "source": "box_22",
+        "target": "box_25",
+        "label": "OK"
+      },
+      {
+        "source": "box_20",
+        "target": "box_25",
+        "label": "Yes"
+      },
+      {
+        "source": "box_24",
+        "target": "box_25",
+        "label": null
+      },
+      {
+        "source": "box_25",
+        "target": "box_26",
+        "label": "No"
+      },
+      {
+        "source": "box_26",
+        "target": "box_27",
+        "label": ""
+      },
+      {
+        "source": "box_25",
+        "target": "box_28",
+        "label": "Yes"
+      },
+      {
+        "source": "box_27",
+        "target": "box_28",
+        "label": null
+      },
+      {
+        "source": "box_28",
+        "target": "box_29",
+        "label": "No"
+      },
+      {
+        "source": "box_29",
+        "target": "box_30",
+        "label": ""
+      },
+      {
+        "source": "box_28",
+        "target": "box_31",
+        "label": "Yes"
+      },
+      {
+        "source": "box_30",
+        "target": "box_31",
+        "label": null
+      },
+      {
+        "source": "box_31",
+        "target": "box_32",
+        "label": "No"
+      },
+      {
+        "source": "box_31",
+        "target": "box_33",
+        "label": "Yes"
+      },
+      {
+        "source": "box_33",
+        "target": "box_34",
+        "label": null
+      },
+      {
+        "source": "box_34",
+        "target": "box_35",
+        "label": null
+      },
+      {
+        "source": "box_13",
+        "target": "box_36",
+        "label": "Still poor"
+      },
+      {
+        "source": "box_36",
+        "target": "box_13",
+        "label": null
+      },
+      {
+        "source": "box_13",
+        "target": "box_14",
+        "label": "Unresolvable after second attempt"
+      }
+    ]
+  }
+}

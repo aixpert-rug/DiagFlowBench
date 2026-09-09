@@ -1,0 +1,125 @@
+flowchart TD
+    box_0(["Start"])
+    box_1["Complete the following checks: 1. Inspect the lens<br/>front element at oblique incidence for scratches or<br/>chips. 2. Check the lens housing for impact cracks<br/>or loose retaining ring. 3. Inspect the lens mount<br/>face for contamination or swarf."]
+    box_2{"Lens scratches, chips or contamination present?"}
+    box_3(["End, Replace lens: optical damage detected"])
+    box_4["Position the lux meter probe at the focal plane of<br/>the imaging lens, centred on the inspection zone,<br/>with no part present. Record illuminance in lux and<br/>compare against the minimum level in the lighting<br/>specification. Repeat at the four corners of the<br/>inspection field to check uniformity and note any<br/>zone where illuminance drops below 80% of the centre<br/>value."]
+    box_5[/"Refer to the vision system lighting specification."/]
+    box_6{"Lighting intensity within specified range at part<br/>plane?"}
+    box_7["Adjust lighting voltage or replace LEDs as required"]
+    box_8["Blow dry compressed air across the lens surface to<br/>remove loose particles. Apply two drops of optical<br/>lens cleaner to a lint free cloth and wipe the lens<br/>surface using a single outward spiral motion from<br/>centre to edge. Inspect the lens under oblique light<br/>after cleaning and repeat if smearing or residue is<br/>visible."]
+    box_9["Display the live image and position a high contrast<br/>resolution target at the nominal focal distance.<br/>Using the image analysis software, measure the<br/>modulation transfer function at line pairs per<br/>millimetre specified in the lens acceptance<br/>criteria. Record the sharpness value and note which<br/>quadrant of the field, if any, shows the greatest<br/>drop in contrast."]
+    box_10[/"Refer to the focus target specification."/]
+    box_11{"Image sharpness within sharpness specification<br/>specification?"}
+    box_12["Adjust focus ring or working distance to<br/>specification"]
+    box_13{"Reverify focus after lens adjustment"}
+    box_14(["End, Escalate: focus unrecoverable, lens or mount<br/>fault"])
+    box_15["Install the grid distortion target at the nominal<br/>focal distance with the grid centred on the optical<br/>axis. Capture a still image and use the vision<br/>software distortion analysis tool to measure radial<br/>distortion at the four corner grid intersections and<br/>at the field centre. Compare the maximum distortion<br/>value against the tolerance in the camera<br/>calibration specification."]
+    box_16{"Distortion within ±0.5 px at corner positions?"}
+    box_17["Apply lens distortion correction coefficients in<br/>vision software"]
+    box_18["Place the standard chessboard calibration target on<br/>the presentation fixture at the nominal focal<br/>distance. Capture five images from five different<br/>target orientations as required by the calibration<br/>algorithm. Run the calibration routine in the vision<br/>software and record the reprojection error; confirm<br/>the result is below the limit stated in the vision<br/>system commissioning record."]
+    box_19[/"Refer to the vision calibration procedure."/]
+    box_20{"Calibration residual error within 0.1 px root mean<br/>square?"}
+    box_21["Rerun calibration with new target images, 20 poses<br/>minimum"]
+    box_22{"Reverify calibration residual after recalibration"}
+    box_23(["End, Escalate: calibration residual persistent,<br/>contact vision engineer"])
+    box_24["Connect an oscilloscope channel to the part arrival<br/>sensor output and a second channel to the camera<br/>trigger signal. With the conveyor running, measure<br/>the delay between sensor rising edge and camera<br/>trigger rising edge. Compare the measured delay<br/>against the target timing in the system parameter<br/>record, adjusting the trigger delay register in the<br/>vision controller until within tolerance."]
+    box_25{"Trigger delay within ±0.5 ms of specification?"}
+    box_26["Adjust trigger delay in programmable controller<br/>programme"]
+    box_27["Run 200 known good conforming parts through the<br/>inspection system in normal production conditions.<br/>Record the number flagged as reject by the system.<br/>Calculate the false reject rate as a percentage of<br/>the 200 part sample and compare against the maximum<br/>allowed false reject rate specified for the product.<br/>Document the part types and the inspection feature<br/>most frequently causing false rejections."]
+    box_28{"False reject rate below 0.5%?"}
+    box_29["Complete the following checks: 1. Retrieve the<br/>stored rejection images for the last ten false<br/>accepts. 2. Confirm each retrieved image shows a<br/>visible defect. 3. Compare the defect position<br/>against the inspection zone boundary settings."]
+    box_30["Pass 10 known non conforming parts, each with a<br/>documented defect type, through the inspection<br/>system individually. Record whether each defect is<br/>detected and the system output for each part.<br/>Confirm that the system correctly rejects all 10<br/>parts; any part that is accepted constitutes a false<br/>accept and requires immediate investigation before<br/>resuming production."]
+    box_31{"All known rejects correctly detected?"}
+    box_32(["End, Escalate: detection capability insufficient,<br/>algorithm review required"])
+    box_33["Export calibration data and update vision system log"]
+    box_34["Log all test results and update maintenance record"]
+    box_35(["End, Procedure complete"])
+    box_36["Secondary lens adjustment: clean all optical<br/>surfaces with dry nitrogen and reseat the lens body<br/>firmly in the mount before tightening the retaining<br/>ring. Check the lens mount datum face for swarf or<br/>contamination that would cause tilt. Adjust the<br/>focus drive mechanism in 0.1 turn increments and<br/>allow the mount to settle before returning to the<br/>sharpness measurement step."]
+
+    box_0 --> box_1
+    box_1 --> box_2
+    box_2 -->|"Yes"| box_3
+    box_2 -->|"No"| box_6
+    box_4 --> box_6
+    box_5 --> box_6
+    box_6 -->|"No"| box_7
+    box_7 --> box_8
+    box_6 -->|"Yes"| box_11
+    box_8 --> box_11
+    box_9 --> box_8
+    box_10 --> box_11
+    box_11 -->|"No"| box_12
+    box_12 --> box_13
+    box_13 -->|"OK"| box_16
+    box_11 -->|"Yes"| box_16
+    box_15 --> box_16
+    box_16 -->|"No"| box_17
+    box_17 --> box_18
+    box_16 -->|"Yes"| box_20
+    box_18 --> box_20
+    box_19 --> box_20
+    box_20 -->|"No"| box_21
+    box_21 --> box_22
+    box_22 -->|"Still failing"| box_23
+    box_22 -->|"OK"| box_25
+    box_20 -->|"Yes"| box_25
+    box_24 --> box_25
+    box_25 -->|"No"| box_26
+    box_26 --> box_27
+    box_25 -->|"Yes"| box_28
+    box_27 --> box_28
+    box_28 -->|"No"| box_29
+    box_29 --> box_30
+    box_28 -->|"Yes"| box_31
+    box_30 --> box_31
+    box_31 -->|"No"| box_32
+    box_31 -->|"Yes"| box_33
+    box_33 --> box_34
+    box_34 --> box_35
+    box_13 -->|"Still poor"| box_36
+    box_36 --> box_13
+    box_13 -->|"Unresolvable after second attempt"| box_14
+
+    class box_0 terminator
+    class box_1 process
+    class box_2 decision
+    class box_3 terminator
+    class box_4 process
+    class box_5 document
+    class box_6 decision
+    class box_7 process
+    class box_8 process
+    class box_9 process
+    class box_10 document
+    class box_11 decision
+    class box_12 process
+    class box_13 decision
+    class box_14 terminator
+    class box_15 process
+    class box_16 decision
+    class box_17 process
+    class box_18 process
+    class box_19 document
+    class box_20 decision
+    class box_21 process
+    class box_22 decision
+    class box_23 terminator
+    class box_24 process
+    class box_25 decision
+    class box_26 process
+    class box_27 process
+    class box_28 decision
+    class box_29 process
+    class box_30 process
+    class box_31 decision
+    class box_32 terminator
+    class box_33 process
+    class box_34 process
+    class box_35 terminator
+    class box_36 process
+
+    classDef terminator fill:#2d4a6e,stroke:#1a3050,color:#ffffff,font-weight:bold
+    classDef process    fill:#f0f4ff,stroke:#4a6fa5,color:#1a1a2e
+    classDef decision   fill:#fff8e6,stroke:#c8922a,color:#1a1a2e
+    classDef document   fill:#f0fff4,stroke:#3a8a4a,color:#1a1a2e

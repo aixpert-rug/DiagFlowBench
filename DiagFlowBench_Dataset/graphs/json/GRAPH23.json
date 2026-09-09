@@ -1,0 +1,237 @@
+{
+  "id": "GRAPH23",
+  "description": "Troubleshooting flowchart for excessively dark or overexposed applied marking on parts, covering laser power, marking speed, focal distance, and fume extraction as root causes.",
+  "graph": {
+    "nodes": {
+      "box_0": {
+        "type": "terminator",
+        "text": "Start"
+      },
+      "box_1": {
+        "type": "process",
+        "text": "Record the batch number, marking darkness level, and number of affected parts. Collect three representative samples for quality assurance team reference."
+      },
+      "box_2": {
+        "type": "decision",
+        "text": "Is the input material surface finish within specification (no unusual reflectivity or coating variation)?"
+      },
+      "box_3": {
+        "type": "process",
+        "text": "Complete the following checks: 1. Verify that parts are from the correct material batch. 2. Check the surface finish specification for the current product type."
+      },
+      "box_4": {
+        "type": "process",
+        "text": "Reject the current batch and reload parts from a confirmed correct material batch. Create a non conformance record."
+      },
+      "box_5": {
+        "type": "decision",
+        "text": "Is the laser power level at the correct setpoint for this product type?"
+      },
+      "box_6": {
+        "type": "process",
+        "text": "Check the laser power reading on the marking controller against the product specification. Verify that no power ramp up or drift has occurred since the last calibration."
+      },
+      "box_7": {
+        "type": "process",
+        "text": "Reduce the laser power level to the specified setpoint and rerun a test mark. Verify the marking darkness against the reference sample."
+      },
+      "box_8": {
+        "type": "decision",
+        "text": "Is the marking speed within specification for this product type?"
+      },
+      "box_9": {
+        "type": "process",
+        "text": "Complete the following checks: 1. Read the marking speed from the active programme parameter screen. 2. Compare against the minimum and maximum speed range on the validated process sheet. 3. Check whether the speed setting was modified since the last good run."
+      },
+      "box_10": {
+        "type": "process",
+        "text": "Increase the marking speed to the specified value to reduce energy deposition per unit area. rerun a test mark and compare with the reference sample."
+      },
+      "box_11": {
+        "type": "decision",
+        "text": "Is the laser focal distance correct for the current part height?"
+      },
+      "box_12": {
+        "type": "process",
+        "text": "Complete the following checks: 1. Measure the distance from the marking head reference face to the part surface. 2. Compare against the focal distance specified on the laser system datasheet. 3. Check the focal distance adjustment mechanism for play or slippage."
+      },
+      "box_13": {
+        "type": "process",
+        "text": "Adjust the marking head height to achieve the specified focal distance. rerun a test mark and verify darkness level."
+      },
+      "box_14": {
+        "type": "decision",
+        "text": "Is the fume extraction unit clean and operating at the correct airflow rate?"
+      },
+      "box_15": {
+        "type": "process",
+        "text": "Complete the following checks: 1. Inspect the fume extraction filter cartridge for colour and loading. 2. Measure air velocity at the extraction inlet with an anemometer. 3. Compare volumetric flow rate against the minimum specification."
+      },
+      "box_16": {
+        "type": "process",
+        "text": "Clean or replace the fume extraction filter and verify airflow returns to specification. Excessive fume build up can cause secondary marking darkening."
+      },
+      "box_17": {
+        "type": "decision",
+        "text": "Is the marking darkness within specification after all corrections?"
+      },
+      "box_18": {
+        "type": "process",
+        "text": "Escalate to the maintenance team: marking darkness cannot be corrected through operating adjustments; inspect laser optics and galvo mirror calibration."
+      },
+      "box_19": {
+        "type": "process",
+        "text": "Create a non conformance record for the affected batch and record all corrective actions in the quality log."
+      },
+      "box_20": {
+        "type": "terminator",
+        "text": "End, notify quality assurance team."
+      },
+      "box_21": {
+        "type": "decision",
+        "text": "Is the marking defect rate high enough across the current batch to indicate a systematic process failure requiring immediate production halt?"
+      },
+      "box_22": {
+        "type": "terminator",
+        "text": "End, production halted immediately: batch marking failure critical, quarantine current batch and escalate to process engineer for root cause investigation"
+      }
+    },
+    "edges": [
+      {
+        "source": "box_1",
+        "target": "box_3",
+        "label": ""
+      },
+      {
+        "source": "box_3",
+        "target": "box_2",
+        "label": null
+      },
+      {
+        "source": "box_2",
+        "target": "box_4",
+        "label": "No"
+      },
+      {
+        "source": "box_2",
+        "target": "box_5",
+        "label": "Yes"
+      },
+      {
+        "source": "box_6",
+        "target": "box_5",
+        "label": null
+      },
+      {
+        "source": "box_5",
+        "target": "box_7",
+        "label": "No"
+      },
+      {
+        "source": "box_5",
+        "target": "box_8",
+        "label": "Yes"
+      },
+      {
+        "source": "box_7",
+        "target": "box_9",
+        "label": ""
+      },
+      {
+        "source": "box_9",
+        "target": "box_8",
+        "label": null
+      },
+      {
+        "source": "box_8",
+        "target": "box_10",
+        "label": "No"
+      },
+      {
+        "source": "box_8",
+        "target": "box_11",
+        "label": "Yes"
+      },
+      {
+        "source": "box_10",
+        "target": "box_12",
+        "label": ""
+      },
+      {
+        "source": "box_12",
+        "target": "box_11",
+        "label": null
+      },
+      {
+        "source": "box_11",
+        "target": "box_13",
+        "label": "No"
+      },
+      {
+        "source": "box_11",
+        "target": "box_14",
+        "label": "Yes"
+      },
+      {
+        "source": "box_13",
+        "target": "box_15",
+        "label": ""
+      },
+      {
+        "source": "box_15",
+        "target": "box_14",
+        "label": null
+      },
+      {
+        "source": "box_14",
+        "target": "box_16",
+        "label": "No"
+      },
+      {
+        "source": "box_14",
+        "target": "box_17",
+        "label": "Yes"
+      },
+      {
+        "source": "box_16",
+        "target": "box_17",
+        "label": null
+      },
+      {
+        "source": "box_17",
+        "target": "box_18",
+        "label": "No"
+      },
+      {
+        "source": "box_17",
+        "target": "box_19",
+        "label": "Yes"
+      },
+      {
+        "source": "box_18",
+        "target": "box_19",
+        "label": null
+      },
+      {
+        "source": "box_19",
+        "target": "box_20",
+        "label": null
+      },
+      {
+        "source": "box_0",
+        "target": "box_21",
+        "label": null
+      },
+      {
+        "source": "box_21",
+        "target": "box_22",
+        "label": "Critical, immediate stop required"
+      },
+      {
+        "source": "box_21",
+        "target": "box_1",
+        "label": "Standard fault, continue diagnosis"
+      }
+    ]
+  }
+}

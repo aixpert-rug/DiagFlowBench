@@ -1,0 +1,83 @@
+flowchart TD
+    box_0(["Start"])
+    box_1["Record the current rejection rate, rejection type<br/>breakdown (orientation, marking quality, insertion<br/>depth, presence), and the time window over which the<br/>rate increased."]
+    box_2{"Did the rejection rate increase coincide with a<br/>batch changeover or product type change?"}
+    box_3["Verify that the correct product program is loaded<br/>for the current batch. Check that all inspection<br/>thresholds have been correctly transferred for this<br/>product type."]
+    box_4["Switch to the correct product program and reset all<br/>inspection parameters to the validated baseline for<br/>this product type. rerun a test sequence."]
+    box_5{"Are the inspection threshold settings at their<br/>validated baseline values for this product type?"}
+    box_6["Compare the current threshold settings on the<br/>operator control interface against the last<br/>validated baseline values recorded in the product<br/>setup record."]
+    box_7["Restore all inspection thresholds to the validated<br/>baseline values. Document which thresholds were<br/>found out of specification."]
+    box_8{"Is the rejection dominated by a single inspection<br/>type (more than 70% from one category)?"}
+    box_9["Identify the dominant rejection type and follow the<br/>specific fault procedure for that inspection system."]
+    box_10{"Is any scheduled maintenance interval overdue for<br/>the inspection stations or assembly stations?"}
+    box_11["Complete the following checks: 1. Open the<br/>maintenance record and filter by station asset<br/>number. 2. Compare the current cycle count against<br/>the scheduled maintenance interval. 3. Check whether<br/>any maintenance task is overdue at the affected<br/>station."]
+    box_12["Perform all overdue maintenance tasks before<br/>resuming full production. Record completion in the<br/>maintenance log."]
+    box_13{"Has the rejection rate returned to within the<br/>acceptable threshold after all corrective actions?"}
+    box_14["Escalate to the maintenance team and engineering<br/>team: the rejection rate cannot be resolved through<br/>standard corrective actions; a detailed line audit<br/>is required."]
+    box_15["Record all corrective actions taken, the before and<br/>after correction rejection rates, and the root cause<br/>in the quality log. Notify quality assurance team."]
+    box_16["Complete the following steps: 1. Export the<br/>rejection log for the fault window from the vision<br/>system. 2. Sort the data by rejection code and count<br/>the occurrences per station. 3. Identify whether one<br/>station accounts for more than 60% of rejections."]
+    box_17[/"Refer to the rejection rate corrective action<br/>procedure."/]
+    box_18{"Is a specific station responsible for more than 60%<br/>of rejections during the fault window?"}
+    box_19["Issue targeted corrective action for the identified<br/>station, assign to maintenance team with 24 hour<br/>response requirement."]
+    box_20["Issue line wide corrective action covering all<br/>contributing stations, assign to engineering team."]
+    box_21(["End, corrective action issued. quality assurance<br/>monitoring rate increased to hourly for 48 hours."])
+    box_22(["End, quality assurance notified, corrective actions<br/>recorded. Procedure complete."])
+
+    box_0 --> box_1
+    box_1 --> box_3
+    box_3 --> box_2
+    box_2 -->|"Yes"| box_4
+    box_2 -->|"No"| box_5
+    box_4 --> box_6
+    box_6 --> box_5
+    box_5 -->|"No"| box_7
+    box_5 -->|"Yes"| box_8
+    box_7 --> box_8
+    box_9 --> box_8
+    box_8 -->|"Yes"| box_9
+    box_8 -->|"No"| box_10
+    box_9 --> box_11
+    box_11 --> box_10
+    box_10 -->|"Yes"| box_12
+    box_10 -->|"No"| box_13
+    box_12 --> box_13
+    box_13 -->|"No"| box_14
+    box_13 -->|"Yes"| box_15
+    box_14 --> box_16
+    box_15 --> box_16
+    box_17 --> box_16
+    box_16 --> box_18
+    box_18 -->|"Yes"| box_19
+    box_18 -->|"No"| box_20
+    box_19 --> box_21
+    box_20 --> box_21
+    box_13 -->|"Yes"| box_22
+
+    class box_0 terminator
+    class box_1 process
+    class box_2 decision
+    class box_3 process
+    class box_4 process
+    class box_5 decision
+    class box_6 process
+    class box_7 process
+    class box_8 decision
+    class box_9 process
+    class box_10 decision
+    class box_11 process
+    class box_12 process
+    class box_13 decision
+    class box_14 process
+    class box_15 process
+    class box_16 process
+    class box_17 document
+    class box_18 decision
+    class box_19 process
+    class box_20 process
+    class box_21 terminator
+    class box_22 terminator
+
+    classDef terminator fill:#2d4a6e,stroke:#1a3050,color:#ffffff,font-weight:bold
+    classDef process    fill:#f0f4ff,stroke:#4a6fa5,color:#1a1a2e
+    classDef decision   fill:#fff8e6,stroke:#c8922a,color:#1a1a2e
+    classDef document   fill:#f0fff4,stroke:#3a8a4a,color:#1a1a2e

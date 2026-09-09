@@ -1,0 +1,118 @@
+flowchart TD
+    box_0(["Start"])
+    box_1{"Does the product meet quality assurance team product<br/>specifications?"}
+    box_2["Verify that the product meets quality assurance team<br/>specifications before proceeding."]
+    box_3["Remove the current batch, load a new batch of parts,<br/>and reverify product quality against quality<br/>assurance specifications."]
+    box_4{"Is the part placement in the indexing table correct?"}
+    box_5["Follow the indexing table placement diagnostic<br/>(GRAPH 18)."]
+    box_6[/"Indexing table placement diagnostic (GRAPH 18)"/]
+    box_7{"Is the setup of the indexing table correct?"}
+    box_8["Follow the indexing table setup procedure."]
+    box_9[/"Indexing table setup procedure"/]
+    box_10{"Are there contaminated parts?"}
+    box_11["Complete the following checks: 1. Check the actuator<br/>guide for contamination. 2. Check the mounting heads<br/>for contamination."]
+    box_12[/"Pneumatic flow measurement procedure: vacuum flow<br/>check"/]
+    box_13["Clean the parts and lubricate the actuator guide."]
+    box_14{"Are there electrical defects?"}
+    box_15["Complete the following checks in order: 1. Check the<br/>vacuum generator for correct operation. 2. Check the<br/>input/output signal configuration on the operator<br/>control interface. 3. Check the electrical valve<br/>actuator control. 4. Check the proximity sensors."]
+    box_16["Replace the vacuum generator."]
+    box_17{"Are there worn parts?"}
+    box_18["Complete the following checks: 1. Check the actuator<br/>guide for wear. 2. Check the mounting heads for<br/>wear."]
+    box_19["Replace the worn actuator components identified in<br/>the inspection (guide and/or mounting heads)."]
+    box_20{"Is the mounting speed correct?"}
+    box_21[/"Refer to the mounting speed specification for<br/>variant A machines (small format parts)."/]
+    box_22[/"Refer to the mounting speed specification for<br/>variant B machines (medium format parts)."/]
+    box_23[/"Refer to the mounting speed specification for<br/>variant C machines (large format parts)."/]
+    box_24["Readjust the speed with the flow control valve"]
+    box_25{"Is the height of the part lifter relative to the<br/>indexing table correct?"}
+    box_26[/"Refer to the part lifter height check relative to<br/>indexing table for variant A machines (small format<br/>parts)."/]
+    box_27[/"Refer to the part lifter height check relative to<br/>indexing table for variant B machines (medium format<br/>parts)."/]
+    box_28[/"Refer to the part lifter height check relative to<br/>indexing table for variant C machines (large format<br/>parts)."/]
+    box_29["Adjust the height of the part lifter relative to the<br/>indexing table to match the specified value."]
+    box_30{"Is the X/Y position relative to the indexing table<br/>correct?"}
+    box_31[/"Refer to the x/y position check relative to indexing<br/>table with setup tool for variant A machines (small<br/>format parts)."/]
+    box_32[/"Refer to the x/y position check relative to indexing<br/>table with setup tool for variant B machines (medium<br/>format parts)."/]
+    box_33[/"Refer to the x/y position check relative to indexing<br/>table with setup tool for variant C machines (large<br/>format parts)."/]
+    box_34["Adjust the X/Y position of the mounting unit<br/>relative to the indexing table to the correct<br/>position using the setup tool."]
+    box_35["Verify that the part is mounted centred and straight<br/>from the indexing table, all actuators have reached<br/>their end positions, and all part lifters are at<br/>equal height."]
+    box_36(["Part mounting for insert placement is correct"])
+
+    box_0 --> box_1
+    box_2 --> box_1
+    box_1 -->|"No"| box_3
+    box_1 -->|"Yes"| box_4
+    box_5 --> box_4
+    box_4 -->|"No"| box_6
+    box_4 -->|"Yes"| box_7
+    box_8 --> box_7
+    box_7 -->|"No"| box_9
+    box_7 -->|"Yes"| box_10
+    box_11 --> box_10
+    box_12 --> box_10
+    box_10 -->|"Yes"| box_13
+    box_10 -->|"No"| box_14
+    box_15 --> box_14
+    box_14 -->|"Yes"| box_16
+    box_14 -->|"No"| box_17
+    box_18 --> box_17
+    box_17 -->|"Yes"| box_19
+    box_17 -->|"No"| box_20
+    box_21 --> box_20
+    box_22 --> box_20
+    box_23 --> box_20
+    box_20 -->|"No"| box_24
+    box_20 -->|"Yes"| box_25
+    box_26 --> box_25
+    box_27 --> box_25
+    box_28 --> box_25
+    box_25 -->|"No"| box_29
+    box_25 -->|"Yes"| box_30
+    box_31 --> box_30
+    box_32 --> box_30
+    box_33 --> box_30
+    box_30 -->|"No"| box_34
+    box_30 -->|"Yes"| box_35
+    box_35 --> box_36
+
+    class box_0 terminator
+    class box_1 decision
+    class box_2 process
+    class box_3 process
+    class box_4 decision
+    class box_5 process
+    class box_6 document
+    class box_7 decision
+    class box_8 process
+    class box_9 document
+    class box_10 decision
+    class box_11 process
+    class box_12 document
+    class box_13 process
+    class box_14 decision
+    class box_15 process
+    class box_16 process
+    class box_17 decision
+    class box_18 process
+    class box_19 process
+    class box_20 decision
+    class box_21 document
+    class box_22 document
+    class box_23 document
+    class box_24 process
+    class box_25 decision
+    class box_26 document
+    class box_27 document
+    class box_28 document
+    class box_29 process
+    class box_30 decision
+    class box_31 document
+    class box_32 document
+    class box_33 document
+    class box_34 process
+    class box_35 process
+    class box_36 terminator
+
+    classDef terminator fill:#2d4a6e,stroke:#1a3050,color:#ffffff,font-weight:bold
+    classDef process    fill:#f0f4ff,stroke:#4a6fa5,color:#1a1a2e
+    classDef decision   fill:#fff8e6,stroke:#c8922a,color:#1a1a2e
+    classDef document   fill:#f0fff4,stroke:#3a8a4a,color:#1a1a2e

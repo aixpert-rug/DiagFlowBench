@@ -1,0 +1,470 @@
+{
+  "conversation_id": "GRAPH10_P000_noise_perturbation",
+  "graph_id": "GRAPH10",
+  "path_id": "GRAPH10_P000",
+  "regime": "clean",
+  "variant": "noise_perturbation",
+  "robustness_axis": "noise_perturbation",
+  "turns": [
+    {
+      "node_id": "box_0",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Starting insert placement diagnostic procedure.",
+      "edge_label_to_next": null,
+      "turn_index": 0,
+      "ground_truth": {
+        "node_id": "box_0",
+        "node_type": "terminator",
+        "node_text": "Start"
+      }
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Does the product meet quality assurance team product specifications?",
+      "edge_label_to_next": null,
+      "turn_index": 1,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "decision",
+        "node_text": "Does the product meet quality assurance team product specifications?"
+      }
+    },
+    {
+      "node_id": "box_1",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yeah product meets all quality specs",
+      "edge_label_to_next": "Yes",
+      "turn_index": 2,
+      "ground_truth": {
+        "node_id": "box_1",
+        "node_type": "decision",
+        "node_text": "Does the product meet quality assurance team product specifications?"
+      }
+    },
+    {
+      "node_id": "box_4",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is picking up part from supply conveyor correct?",
+      "edge_label_to_next": null,
+      "turn_index": 3,
+      "ground_truth": {
+        "node_id": "box_4",
+        "node_type": "decision",
+        "node_text": "Is picking up part from supply conveyor correct?"
+      }
+    },
+    {
+      "node_id": "box_4",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yes part pickup from supply conveyor workign correctly",
+      "edge_label_to_next": "Yes",
+      "turn_index": 4,
+      "ground_truth": {
+        "node_id": "box_4",
+        "node_type": "decision",
+        "node_text": "Is picking up part from supply conveyor correct?"
+      }
+    },
+    {
+      "node_id": "box_7",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is part mounting correct?",
+      "edge_label_to_next": null,
+      "turn_index": 5,
+      "ground_truth": {
+        "node_id": "box_7",
+        "node_type": "decision",
+        "node_text": "Is part mounting correct?"
+      }
+    },
+    {
+      "node_id": "box_7",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yeah part mounted correctly on indexing table",
+      "edge_label_to_next": "Yes",
+      "turn_index": 6,
+      "ground_truth": {
+        "node_id": "box_7",
+        "node_type": "decision",
+        "node_text": "Is part mounting correct?"
+      }
+    },
+    {
+      "node_id": "box_11",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is part control vacuum correct?",
+      "edge_label_to_next": null,
+      "turn_index": 7,
+      "ground_truth": {
+        "node_id": "box_11",
+        "node_type": "decision",
+        "node_text": "Is part control (vacuum) correct?"
+      }
+    },
+    {
+      "node_id": "box_11",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yes vacuum control functioning correctly pressure values witihn spec",
+      "edge_label_to_next": "Yes",
+      "turn_index": 8,
+      "ground_truth": {
+        "node_id": "box_11",
+        "node_type": "decision",
+        "node_text": "Is part control (vacuum) correct?"
+      }
+    },
+    {
+      "node_id": "box_16",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Are there contaminated parts?",
+      "edge_label_to_next": null,
+      "turn_index": 9,
+      "ground_truth": {
+        "node_id": "box_16",
+        "node_type": "decision",
+        "node_text": "Are there contaminated parts?"
+      }
+    },
+    {
+      "node_id": "box_16",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no dont see any contamination on assembly robot axes centering sleeve or vacuum tube",
+      "edge_label_to_next": "No",
+      "turn_index": 10,
+      "ground_truth": {
+        "node_id": "box_16",
+        "node_type": "decision",
+        "node_text": "Are there contaminated parts?"
+      }
+    },
+    {
+      "node_id": "box_19",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Are there electrical defects?",
+      "edge_label_to_next": null,
+      "turn_index": 11,
+      "ground_truth": {
+        "node_id": "box_19",
+        "node_type": "decision",
+        "node_text": "Are there electrical defects?"
+      }
+    },
+    {
+      "node_id": "box_19",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no proximity sensor cabling and force sensor all functioning without electrical defetcs",
+      "edge_label_to_next": "No",
+      "turn_index": 12,
+      "ground_truth": {
+        "node_id": "box_19",
+        "node_type": "decision",
+        "node_text": "Are there electrical defects?"
+      }
+    },
+    {
+      "node_id": "box_22",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Are there worn parts?",
+      "edge_label_to_next": null,
+      "turn_index": 13,
+      "ground_truth": {
+        "node_id": "box_22",
+        "node_type": "decision",
+        "node_text": "Are there worn parts?"
+      }
+    },
+    {
+      "node_id": "box_22",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "no vacuum tube centering sleeve and assembly robot axes show no signifcant wear",
+      "edge_label_to_next": "No",
+      "turn_index": 14,
+      "ground_truth": {
+        "node_id": "box_22",
+        "node_type": "decision",
+        "node_text": "Are there worn parts?"
+      }
+    },
+    {
+      "node_id": "box_25",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the blow off flow and duration correct?",
+      "edge_label_to_next": null,
+      "turn_index": 15,
+      "ground_truth": {
+        "node_id": "box_25",
+        "node_type": "decision",
+        "node_text": "Is the blow off flow (+ duration) correct?"
+      }
+    },
+    {
+      "node_id": "box_25",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yeah blow off flow and duration within specified parameters",
+      "edge_label_to_next": "Yes",
+      "turn_index": 16,
+      "ground_truth": {
+        "node_id": "box_25",
+        "node_type": "decision",
+        "node_text": "Is the blow off flow (+ duration) correct?"
+      }
+    },
+    {
+      "node_id": "box_30",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the retracted position of the centering sleeve relative to the vacuum tube correct?",
+      "edge_label_to_next": null,
+      "turn_index": 17,
+      "ground_truth": {
+        "node_id": "box_30",
+        "node_type": "decision",
+        "node_text": "Is the retracted position of the centering sleeve relative to the vacuum tube correct?"
+      }
+    },
+    {
+      "node_id": "box_30",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yes centering sleeve retracted position matches spec",
+      "edge_label_to_next": "Yes",
+      "turn_index": 18,
+      "ground_truth": {
+        "node_id": "box_30",
+        "node_type": "decision",
+        "node_text": "Is the retracted position of the centering sleeve relative to the vacuum tube correct?"
+      }
+    },
+    {
+      "node_id": "box_35",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the press down height of the vacuum tube relative to the part fixture correct?",
+      "edge_label_to_next": null,
+      "turn_index": 19,
+      "ground_truth": {
+        "node_id": "box_35",
+        "node_type": "decision",
+        "node_text": "Is the (press down) height of the vacuum tube relative to 4x part fixture correct?"
+      }
+    },
+    {
+      "node_id": "box_35",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "ok so vacuum tube press down height correct relative to part fixture",
+      "edge_label_to_next": "Yes",
+      "turn_index": 20,
+      "ground_truth": {
+        "node_id": "box_35",
+        "node_type": "decision",
+        "node_text": "Is the (press down) height of the vacuum tube relative to 4x part fixture correct?"
+      }
+    },
+    {
+      "node_id": "box_40",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the force sensor working correctly?",
+      "edge_label_to_next": null,
+      "turn_index": 21,
+      "ground_truth": {
+        "node_id": "box_40",
+        "node_type": "decision",
+        "node_text": "Is the force sensor working correctly?"
+      }
+    },
+    {
+      "node_id": "box_40",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yeah force sensor working correctly reading within pre-pressure force range",
+      "edge_label_to_next": "Yes",
+      "turn_index": 22,
+      "ground_truth": {
+        "node_id": "box_40",
+        "node_type": "decision",
+        "node_text": "Is the force sensor working correctly?"
+      }
+    },
+    {
+      "node_id": "box_45",
+      "node_type": "decision",
+      "speaker": "system",
+      "utterance": "Is the XY placement position of the assembly robot correct?",
+      "edge_label_to_next": null,
+      "turn_index": 23,
+      "ground_truth": {
+        "node_id": "box_45",
+        "node_type": "decision",
+        "node_text": "Is the XY placement position of the assembly robot correct?"
+      }
+    },
+    {
+      "node_id": "box_45",
+      "node_type": "decision",
+      "speaker": "operator",
+      "utterance": "yes assembly robot XY placemnet position correctly aligned",
+      "edge_label_to_next": "Yes",
+      "turn_index": 24,
+      "ground_truth": {
+        "node_id": "box_45",
+        "node_type": "decision",
+        "node_text": "Is the XY placement position of the assembly robot correct?"
+      }
+    },
+    {
+      "node_id": "box_53",
+      "node_type": "terminator",
+      "speaker": "system",
+      "utterance": "Placing part on insert is correct. The diagnostic procedure is complete and the assembly process is functioning within specifications.",
+      "edge_label_to_next": null,
+      "turn_index": 25,
+      "ground_truth": {
+        "node_id": "box_53",
+        "node_type": "terminator",
+        "node_text": "Placing part on insert is correct"
+      }
+    },
+    {
+      "node_id": "box_53",
+      "node_type": "terminator",
+      "speaker": "operator",
+      "utterance": "understood system operating correctly",
+      "edge_label_to_next": null,
+      "turn_index": 26,
+      "ground_truth": {
+        "node_id": "box_53",
+        "node_type": "terminator",
+        "node_text": "Placing part on insert is correct"
+      }
+    }
+  ],
+  "metadata": {
+    "depth": 14,
+    "num_decisions": 12,
+    "num_processes": 0,
+    "num_documents": 0,
+    "terminator_type": "procedure_complete",
+    "terminator_text": "Placing part on insert is correct",
+    "true_terminator": true,
+    "node_sequence": [
+      "box_0",
+      "box_1",
+      "box_4",
+      "box_7",
+      "box_11",
+      "box_16",
+      "box_19",
+      "box_22",
+      "box_25",
+      "box_30",
+      "box_35",
+      "box_40",
+      "box_45",
+      "box_53"
+    ],
+    "edge_labels": [
+      null,
+      null,
+      "Yes",
+      "Yes",
+      "Yes",
+      "Yes",
+      "No",
+      "No",
+      "No",
+      "Yes",
+      "Yes",
+      "Yes",
+      "Yes",
+      "Yes"
+    ],
+    "decision_points": [
+      {
+        "node": "box_1",
+        "label": "Yes",
+        "question": "Does the product meet quality assurance team product specifications?"
+      },
+      {
+        "node": "box_4",
+        "label": "Yes",
+        "question": "Is picking up part from supply conveyor correct?"
+      },
+      {
+        "node": "box_7",
+        "label": "Yes",
+        "question": "Is part mounting correct?"
+      },
+      {
+        "node": "box_11",
+        "label": "Yes",
+        "question": "Is part control (vacuum) correct?"
+      },
+      {
+        "node": "box_16",
+        "label": "No",
+        "question": "Are there contaminated parts?"
+      },
+      {
+        "node": "box_19",
+        "label": "No",
+        "question": "Are there electrical defects?"
+      },
+      {
+        "node": "box_22",
+        "label": "No",
+        "question": "Are there worn parts?"
+      },
+      {
+        "node": "box_25",
+        "label": "Yes",
+        "question": "Is the blow off flow (+ duration) correct?"
+      },
+      {
+        "node": "box_30",
+        "label": "Yes",
+        "question": "Is the retracted position of the centering sleeve relative to the vacuum tube correct?"
+      },
+      {
+        "node": "box_35",
+        "label": "Yes",
+        "question": "Is the (press down) height of the vacuum tube relative to 4x part fixture correct?"
+      },
+      {
+        "node": "box_40",
+        "label": "Yes",
+        "question": "Is the force sensor working correctly?"
+      },
+      {
+        "node": "box_45",
+        "label": "Yes",
+        "question": "Is the XY placement position of the assembly robot correct?"
+      }
+    ],
+    "generation_model": "anthropic/claude-sonnet-4-5",
+    "verification": {
+      "variant_of": "base",
+      "base_verified": true,
+      "note": "surface-form variant; not independently verified"
+    }
+  }
+}

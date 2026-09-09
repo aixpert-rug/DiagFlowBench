@@ -1,0 +1,274 @@
+{
+  "id": "GRAPH29",
+  "description": "Procedure for addressing a systematic increase in false rejection rate from the vision inspection system, covering calibration target condition, lens cleanliness, lighting stability, camera mounting, and recalibration.",
+  "graph": {
+    "nodes": {
+      "box_0": {
+        "type": "terminator",
+        "text": "Start"
+      },
+      "box_1": {
+        "type": "process",
+        "text": "Record the false rejection rate over the last 100 parts and the rejection type (orientation, marking, presence). Compare with the baseline false rejection rate from the last successful calibration."
+      },
+      "box_2": {
+        "type": "decision",
+        "text": "Is the false rejection limited to one inspection type (e.g. only orientation rejections or only marking rejections)?"
+      },
+      "box_3": {
+        "type": "process",
+        "text": "Complete the following checks: 1. Access the vision rejection log and sort by inspection module. 2. Identify which module produces the highest proportion of false rejects. 3. Check whether the rejections correlate with a specific part feature."
+      },
+      "box_4": {
+        "type": "decision",
+        "text": "Is the calibration target in good condition (no surface scratches, discolouration, or contamination)?"
+      },
+      "box_5": {
+        "type": "process",
+        "text": "Inspect the calibration target for surface contamination, scratches, or colour fading. Verify that the target geometry is intact and undamaged."
+      },
+      "box_6": {
+        "type": "process",
+        "text": "Clean the calibration target with an approved optical cleaning cloth. If the target is scratched or faded beyond the acceptable condition limit, replace it."
+      },
+      "box_7": {
+        "type": "decision",
+        "text": "Is the camera lens clean and free of contamination?"
+      },
+      "box_8": {
+        "type": "process",
+        "text": "Inspect the camera lens for dust, oil, or condensation. Verify that the lens protective cover is intact."
+      },
+      "box_9": {
+        "type": "process",
+        "text": "Clean the camera lens with an approved optical cloth and lens cleaner. rerun ten test inspections with known good reference parts and measure the false rejection rate."
+      },
+      "box_10": {
+        "type": "decision",
+        "text": "Is the ambient lighting at the inspection station stable and within the specification range?"
+      },
+      "box_11": {
+        "type": "process",
+        "text": "Check the inspection station lighting shielding for gaps. Measure the background illumination level at the camera field using a lux meter and compare against the maximum ambient specification."
+      },
+      "box_12": {
+        "type": "process",
+        "text": "Complete the following checks: 1. Measure the ambient light level at the inspection window with a lux meter. 2. Compare against the maximum permitted ambient illuminance. 3. Check the camera mount for looseness or detectable vibration."
+      },
+      "box_13": {
+        "type": "decision",
+        "text": "Is the camera securely mounted with no detectable vibration induced movement?"
+      },
+      "box_14": {
+        "type": "process",
+        "text": "Check the camera mounting bracket fastener torque and verify that no vibration is transmitted to the camera from the machine frame during a live production cycle."
+      },
+      "box_15": {
+        "type": "process",
+        "text": "Tighten the camera mounting fasteners and add vibration isolation if required. rerun ten inspection cycles and measure the false rejection rate."
+      },
+      "box_16": {
+        "type": "decision",
+        "text": "Has the false rejection rate returned to within the acceptable baseline threshold after corrections?"
+      },
+      "box_17": {
+        "type": "process",
+        "text": "Run the full vision system calibration procedure using the calibration target and update all calibration parameters. Notify the maintenance team."
+      },
+      "box_18": {
+        "type": "document",
+        "text": "Refer to the vision system calibration procedure."
+      },
+      "box_19": {
+        "type": "decision",
+        "text": "Is the false rejection rate within the acceptable threshold after recalibration?"
+      },
+      "box_20": {
+        "type": "process",
+        "text": "Escalate to the maintenance team: the vision system false rejection rate cannot be corrected through recalibration; inspect camera sensor and optics for physical damage."
+      },
+      "box_21": {
+        "type": "process",
+        "text": "Record the recalibration date, corrective actions, and final false rejection rate in the quality log. Notify quality assurance team."
+      },
+      "box_22": {
+        "type": "terminator",
+        "text": "End, resume production."
+      },
+      "box_23": {
+        "type": "decision",
+        "text": "Has the false rejection rate reached a level that indicates a vision system failure, where genuine conforming parts are being systematically rejected and production viability is compromised?"
+      },
+      "box_24": {
+        "type": "terminator",
+        "text": "End, vision system shut down immediately: false rejection rate critical, quarantine parts rejected in the affected window and escalate to vision system engineer"
+      },
+      "box_25": {
+        "type": "document",
+        "text": "Vision system lens and focus diagnostic (GRAPH 37)"
+      }
+    },
+    "edges": [
+      {
+        "source": "box_1",
+        "target": "box_3",
+        "label": ""
+      },
+      {
+        "source": "box_3",
+        "target": "box_2",
+        "label": null
+      },
+      {
+        "source": "box_2",
+        "target": "box_4",
+        "label": "No"
+      },
+      {
+        "source": "box_2",
+        "target": "box_4",
+        "label": "Yes"
+      },
+      {
+        "source": "box_5",
+        "target": "box_4",
+        "label": null
+      },
+      {
+        "source": "box_4",
+        "target": "box_6",
+        "label": "No"
+      },
+      {
+        "source": "box_4",
+        "target": "box_7",
+        "label": "Yes"
+      },
+      {
+        "source": "box_6",
+        "target": "box_8",
+        "label": ""
+      },
+      {
+        "source": "box_8",
+        "target": "box_7",
+        "label": null
+      },
+      {
+        "source": "box_7",
+        "target": "box_9",
+        "label": "No"
+      },
+      {
+        "source": "box_7",
+        "target": "box_10",
+        "label": "Yes"
+      },
+      {
+        "source": "box_9",
+        "target": "box_11",
+        "label": ""
+      },
+      {
+        "source": "box_11",
+        "target": "box_10",
+        "label": null
+      },
+      {
+        "source": "box_10",
+        "target": "box_12",
+        "label": "No"
+      },
+      {
+        "source": "box_10",
+        "target": "box_13",
+        "label": "Yes"
+      },
+      {
+        "source": "box_12",
+        "target": "box_14",
+        "label": ""
+      },
+      {
+        "source": "box_14",
+        "target": "box_13",
+        "label": null
+      },
+      {
+        "source": "box_13",
+        "target": "box_15",
+        "label": "No"
+      },
+      {
+        "source": "box_13",
+        "target": "box_16",
+        "label": "Yes"
+      },
+      {
+        "source": "box_15",
+        "target": "box_16",
+        "label": null
+      },
+      {
+        "source": "box_16",
+        "target": "box_17",
+        "label": "No"
+      },
+      {
+        "source": "box_17",
+        "target": "box_19",
+        "label": null
+      },
+      {
+        "source": "box_18",
+        "target": "box_17",
+        "label": null
+      },
+      {
+        "source": "box_16",
+        "target": "box_21",
+        "label": "Yes"
+      },
+      {
+        "source": "box_19",
+        "target": "box_20",
+        "label": "No"
+      },
+      {
+        "source": "box_19",
+        "target": "box_21",
+        "label": "Yes"
+      },
+      {
+        "source": "box_20",
+        "target": "box_21",
+        "label": null
+      },
+      {
+        "source": "box_21",
+        "target": "box_22",
+        "label": null
+      },
+      {
+        "source": "box_0",
+        "target": "box_23",
+        "label": null
+      },
+      {
+        "source": "box_23",
+        "target": "box_24",
+        "label": "Critical, immediate stop required"
+      },
+      {
+        "source": "box_23",
+        "target": "box_1",
+        "label": "Standard fault, continue diagnosis"
+      },
+      {
+        "source": "box_19",
+        "target": "box_25",
+        "label": "No, systematic issue"
+      }
+    ]
+  }
+}

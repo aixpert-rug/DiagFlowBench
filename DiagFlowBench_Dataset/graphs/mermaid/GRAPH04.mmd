@@ -1,0 +1,34 @@
+flowchart TD
+    box_0(["Start"])
+    box_1{"Are the faulty/damaged parts also found in the input<br/>product?"}
+    box_2["Check in both supply conveyors whether the found<br/>defects can also be found here."]
+    box_3["Continue with a different batch and notify the<br/>quality assurance team."]
+    box_4{"Do the defects/damages come from one supply<br/>conveyor?"}
+    box_5["Check the indexing table regularly for<br/>faulty/damaged products"]
+    box_6["Empty the supply conveyor, check for deviations,<br/>then load a different batch of parts."]
+    box_7["Check the reorientation unit and discharge assembly<br/>robot for deviations."]
+    box_8(["Notify maintenance team and quality assurance team"])
+
+    box_0 --> box_1
+    box_2 --> box_1
+    box_1 -->|"Yes"| box_3
+    box_1 -->|"No"| box_4
+    box_5 --> box_4
+    box_4 -->|"Yes"| box_6
+    box_4 -->|"No"| box_7
+    box_7 --> box_8
+
+    class box_0 terminator
+    class box_1 decision
+    class box_2 process
+    class box_3 process
+    class box_4 decision
+    class box_5 process
+    class box_6 process
+    class box_7 process
+    class box_8 terminator
+
+    classDef terminator fill:#2d4a6e,stroke:#1a3050,color:#ffffff,font-weight:bold
+    classDef process    fill:#f0f4ff,stroke:#4a6fa5,color:#1a1a2e
+    classDef decision   fill:#fff8e6,stroke:#c8922a,color:#1a1a2e
+    classDef document   fill:#f0fff4,stroke:#3a8a4a,color:#1a1a2e

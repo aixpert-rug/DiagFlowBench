@@ -1,0 +1,121 @@
+flowchart TD
+    box_0(["Start"])
+    box_1{"Does the part meet quality assurance team product<br/>specifications?"}
+    box_2["Check product dimensions and inspect for<br/>contamination."]
+    box_3["Remove the non conforming parts and reload with a<br/>product batch that meets quality assurance team<br/>specifications."]
+    box_4{"Is picking up 4x part from indexing table correct?"}
+    box_5["Verify that the part is picked up centred and held<br/>firmly enough in the vacuum head."]
+    box_6[/"Indexing table 4x pickup diagnostic (GRAPH 14)"/]
+    box_7{"Does the reorientation mechanism rotate correctly<br/>towards part placement position?"}
+    box_8["Verify that the reorientation mechanism is level in<br/>both the X and Y axes and that all fixtures are free<br/>of contamination."]
+    box_9[/"Reorientation mechanism rotation to part placement<br/>position: diagnostic procedure reference."/]
+    box_10{"Are there contaminated parts?"}
+    box_11["Complete the following checks: 1. Check whether the<br/>vacuum end effectors are contaminated. 2. Check<br/>whether the assembly robot axes are contaminated."]
+    box_12["Clean the contaminated vacuum end effectors and<br/>assembly robot axes."]
+    box_13[/"Assembly robot axis lubrication procedure"/]
+    box_14{"Are there electrical defects?"}
+    box_15["Complete the following checks: 1. Check cabling and<br/>upper displacement sensors on the vacuum end<br/>effectors. 2. Check whether the vacuum switches turn<br/>off vacuum when placing. 3. Check whether the valve<br/>for the vacuum generator works correctly. 4. Check<br/>system settings on the operator control interface."]
+    box_16["Replace the defective cabling and/or displacement<br/>sensor on the vacuum end effectors."]
+    box_17{"Are there worn parts?"}
+    box_18["Complete the following checks: 1. Check wear on the<br/>vacuum end effectors. 2. Check wear on the actuator<br/>grippers. 3. Check wear on the guide axis through<br/>the ball recirculation bushing. 4. Check the<br/>assembly robot axes for wear."]
+    box_19["Replace the worn components identified in the<br/>inspection (vacuum end effectors, actuator grippers,<br/>guide axis, and/or assembly robot axes)."]
+    box_20[/"Assembly robot replacement procedure"/]
+    box_21{"Is the z parallelism of the lower position of 4x<br/>gripper relative to each other correct?"}
+    box_22[/"Refer to the Z parallelism of 4x gripper lower<br/>position for variant A machines (small format<br/>parts)."/]
+    box_23[/"Refer to the Z parallelism of 4x gripper lower<br/>position for variant B machines (medium format<br/>parts)."/]
+    box_24[/"Refer to the Z parallelism of 4x gripper lower<br/>position for variant C machines (large format<br/>parts)."/]
+    box_25["Readjust the Z parallelism of the 4x gripper lower<br/>positions to the specified tolerance."]
+    box_26{"Is the center to center assembly robot gripper<br/>relative to reorientation mechanism correct?"}
+    box_27[/"Refer to the gripper center to center distance<br/>relative to reorientation mechanism for variant A<br/>machines (small format parts)."/]
+    box_28[/"Refer to the gripper center to center distance<br/>relative to reorientation mechanism for variant B<br/>machines (medium format parts)."/]
+    box_29[/"Refer to the gripper center to center distance<br/>relative to reorientation mechanism for variant C<br/>machines (large format parts)."/]
+    box_30["Readjust the center to center distance of the 4x<br/>gripper assembly relative to the reorientation<br/>mechanism to the specified value."]
+    box_31{"Is the part placement position in the reorientation<br/>unit correct?"}
+    box_32[/"Refer to the XYZ placement position check for<br/>variant A machines (small format parts)."/]
+    box_33[/"Refer to the XYZ placement position check for<br/>variant B machines (medium format parts)."/]
+    box_34[/"Refer to the XYZ placement position check for<br/>variant C machines (large format parts)."/]
+    box_35["Perform assembly robot calibrations to correct the<br/>XYZ part placement position in the reorientation<br/>unit."]
+    box_36["Restart this diagnostic procedure from the<br/>beginning."]
+    box_37(["Placing 4x part in reorientation unit is correct"])
+
+    box_0 --> box_1
+    box_2 --> box_1
+    box_1 -->|"No"| box_3
+    box_1 -->|"Yes"| box_4
+    box_5 --> box_4
+    box_4 -->|"No"| box_6
+    box_4 -->|"Yes"| box_7
+    box_8 --> box_7
+    box_7 -->|"No"| box_9
+    box_7 -->|"Yes"| box_10
+    box_11 --> box_10
+    box_10 -->|"Yes"| box_12
+    box_10 -->|"Yes"| box_13
+    box_10 -->|"No"| box_14
+    box_15 --> box_14
+    box_14 -->|"Yes"| box_16
+    box_14 -->|"No"| box_17
+    box_18 --> box_17
+    box_17 -->|"Yes"| box_19
+    box_17 -->|"Yes"| box_20
+    box_17 -->|"No"| box_21
+    box_22 --> box_21
+    box_23 --> box_21
+    box_24 --> box_21
+    box_21 -->|"No"| box_25
+    box_21 -->|"Yes"| box_26
+    box_27 --> box_26
+    box_28 --> box_26
+    box_29 --> box_26
+    box_26 -->|"No"| box_30
+    box_26 -->|"Yes"| box_31
+    box_32 --> box_31
+    box_33 --> box_31
+    box_34 --> box_31
+    box_31 -->|"No"| box_35
+    box_31 -->|"Yes"| box_37
+    box_36 --> box_37
+
+    class box_0 terminator
+    class box_1 decision
+    class box_2 process
+    class box_3 process
+    class box_4 decision
+    class box_5 process
+    class box_6 document
+    class box_7 decision
+    class box_8 process
+    class box_9 document
+    class box_10 decision
+    class box_11 process
+    class box_12 process
+    class box_13 document
+    class box_14 decision
+    class box_15 process
+    class box_16 process
+    class box_17 decision
+    class box_18 process
+    class box_19 process
+    class box_20 document
+    class box_21 decision
+    class box_22 document
+    class box_23 document
+    class box_24 document
+    class box_25 process
+    class box_26 decision
+    class box_27 document
+    class box_28 document
+    class box_29 document
+    class box_30 process
+    class box_31 decision
+    class box_32 document
+    class box_33 document
+    class box_34 document
+    class box_35 process
+    class box_36 process
+    class box_37 terminator
+
+    classDef terminator fill:#2d4a6e,stroke:#1a3050,color:#ffffff,font-weight:bold
+    classDef process    fill:#f0f4ff,stroke:#4a6fa5,color:#1a1a2e
+    classDef decision   fill:#fff8e6,stroke:#c8922a,color:#1a1a2e
+    classDef document   fill:#f0fff4,stroke:#3a8a4a,color:#1a1a2e
